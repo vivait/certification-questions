@@ -1,0 +1,10 @@
+category: Security
+questions:
+    -
+        question: 'When using HTTP basic, how does the server starts the authentication process?'
+        answers:
+            - {value: "Sending the WWW-Authenticate HTTP header with the HTTP 401 Not Authorized status code.", correct: true}
+            - {value: "Sending the status code HTTP 418 Authentication Required.",   correct: false}
+            - {value: "Redirecting the request to the port 443.",  correct: false}
+            - {value: "Rendering a login form with the fields _user and _password.",    correct: false}
+

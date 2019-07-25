@@ -1,0 +1,19 @@
+category: Routing
+questions:
+    -   question: |
+            Considering the following definition of route:
+            ```
+            use Symfony\Component\Routing\RouteCollection;
+            use Symfony\Component\Routing\Route;
+
+            $collection = new RouteCollection();
+            $collection->add('_hello', new Route('/hello/{username}', array(
+                '_controller' => 'App\Controller\DemoController:hello',
+            ), array(
+                'username' => '.+',
+            )));
+            ```
+            Will the /hello/John/Doe URI match this route?
+        answers:
+            - {value: No, correct: false}
+            - {value: Yes, correct: true}

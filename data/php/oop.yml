@@ -1,0 +1,11 @@
+category: OOP
+questions:
+    -
+        question: 'Which of the following is not a magic method?'
+        answers:
+            - {value: '__wakeup()', correct: false}
+            - {value: '__invoke()', correct: false}
+            - {value: '__get()', correct: false}
+            - {value: '__serialize()', correct: false}
+            - {value: '__wakeup()', correct: false}
+            - {value: '__set_state()', correct: true}

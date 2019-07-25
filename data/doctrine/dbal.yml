@@ -1,0 +1,14 @@
+category: DBAL
+questions:
+    -   question: "Which databases are supported out of the box by doctrine DBAL?"
+        answers:
+            - { value: Microsoft SQL Server, correct: true }
+            - { value: SQLite, correct: true }
+            - { value: Drizzle, correct: false }
+            - { value: SAP Sybase SQL Anywhere, correct: true }
+            - { value: MySQL, correct: true }
+            - { value: Microsoft Access, correct: false }
+            - { value: Firebird, correct: false }
+            - { value: DB2, correct: false }
+            - { value: Oracle, correct: true }
+            - { value: PostgreSQL, correct: true }

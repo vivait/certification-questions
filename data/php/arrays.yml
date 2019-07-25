@@ -1,0 +1,22 @@
+category: Arrays
+questions:
+    -
+        question: |
+            What is the output of the following PHP script?
+            ```
+            <?php
+
+            $values = [37, 5, '09'];
+
+            $sorted = sort($values);
+
+            foreach ($sorted as $v) {
+                echo $v;
+            }
+            ```
+        answers:
+            - {value: '50937', correct: false}
+            - {value: 'An error', correct: true}
+            - {value: '09537', correct: false}
+            - {value: '50937', correct: false}
+            - {value: '375509', correct: false}

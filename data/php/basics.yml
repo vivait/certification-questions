@@ -1,0 +1,14 @@
+category: Basics
+questions:
+    -
+        question: |
+            What will be the value of $bool and $bool2?
+            ```
+            $bool = filter_var("true", FILTER_VALIDATE_BOOLEAN);
+            $bool2 = filter_var(2, FILTER_VALIDATE_BOOLEAN);
+            ```
+        answers:
+            - {value: 'true and true', correct: false}
+            - {value: 'false and true', correct: false}
+            - {value: 'false and false', correct: false}
+            - {value: 'true and false', correct: true}
