@@ -1,6 +1,8 @@
 category: Forms
 questions:
-    -   question: "Which types are allowed for the choice_attr option of the Symfony\Component\Form\Extension\Core\Type\ChoiceType form type ?"
+    -   question: |
+           Which types are allowed for the choice_attr option of the
+           Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType form type ?"
         answers:
             - { value: array, correct: true }
             - { value: callable, correct: true }
