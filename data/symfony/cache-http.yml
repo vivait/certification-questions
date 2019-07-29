@@ -1,0 +1,9 @@
+category: HTTP Cache
+questions:
+    -
+        question: 'Which HTTP response headers are involved in the validation caching model?'
+        answers:
+            - {value: Etag, correct: true}
+            - {value: Last-Modified, correct: true}
+            - {value: "Cache-Control: s-max-age", correct: false}
+            - {value: "Cache-Control: max-age", correct: false}

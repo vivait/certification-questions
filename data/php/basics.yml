@@ -12,3 +12,67 @@ questions:
             - {value: 'false and true', correct: false}
             - {value: 'false and false', correct: false}
             - {value: 'true and false', correct: true}
+
+    -
+        question: |
+            Consider the following code snippet:
+            ```
+            class Bar
+            {
+                private $foo = 'private';
+            }
+
+            function getter()
+            {
+                return function() {
+                    return $this->foo;
+                };
+            }
+
+            ????
+            ```
+            Which statement does the ???? placeholder replace in order to make this code snippet output the string private?
+        answers:
+            - {value: 'echo getter()->bindTo(new Bar())();', correct: false}
+            - {value: 'echo getter()->bindTo(new Bar(), new Bar())();', correct: false}
+            - {value: 'This is not possible.', correct: false}
+            - {value: "echo getter()->bindTo(new Bar(), 'Bar')();", correct: true}
+            - {value: "echo getter()->bindTo('Bar', 'Bar')();", correct: false}
+            - {value: 'echo getter()->bindTo(new Bar())();', correct: false}
+
+    -
+        question: |
+            Consider the following code snippet:
+            ```
+            try {
+                try {
+                  echo 'a-';
+                  throw new exception();
+                  echo 'b-';
+                } catch (Exception $e) {
+                    echo 'caught-';
+                    throw $e;
+                } finally {
+                    echo 'finished-';
+                }
+            } catch (Exception $e) {
+                echo 'end-';
+            }
+            ```
+            What is the expected output when executing this script?
+        answers:
+            - {value: 'a-b-caught-finished-end-', correct: false}
+            - {value: 'a-b-caught-end-', correct: false}
+            - {value: 'a-caught-finished-end-', correct: true}
+            - {value: 'a-caught-end-', correct: false }
+            - {value: 'a-caught-end-finished-', correct: false }
+
+    -
+        question: "Which of the following is not a predefined PHP variable?"
+        answers:
+            - {value: $_GLOBALS, correct: true }
+            - {value: $php_errormsg, correct: false }
+            - {value: $http_response_header, correct: false }
+            - {value: $argc, correct: false }
+            - {value: $_POST, correct: false }
+

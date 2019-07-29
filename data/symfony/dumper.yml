@@ -1,0 +1,8 @@
+category: VarDumper
+questions:
+    -   question: "Which method should you call to customize the behavior of the global dump() function?"
+        answers:
+            - { value: VarDumper::setHandler($callable);, correct: true }
+            - { value: set_error_handler($callable);, correct: false }
+            - { value: trigger_error($callable);, correct: false }
+            - { value: VarDumper::setDumper($callable);, correct: false }
