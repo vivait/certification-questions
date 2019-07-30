@@ -1,0 +1,12 @@
+category: Bundles
+questions:
+    -
+        question: 'What kind of help provides the config:dump-reference command?'
+        answers:
+            - {value: Adds the default configuration of a bundle in the app/config/config.yml file, correct: false}
+            - {value: Dumps the default configuration of a bundle, correct: true}
+            - {value: Dumps the current configuration in .htaccess format using the php_value directive, correct: false}
+            - {value: Dumps the current configuration of a bundle, correct: false}
+
+
+

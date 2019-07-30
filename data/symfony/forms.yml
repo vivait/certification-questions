@@ -9,3 +9,9 @@ questions:
             - { value: string, correct: true }
             - { value: integer, correct: false }
             - { value: boolean, correct: false }
+    -
+        question: "How to customize the validation error message of the validation error caused by a TransformationFailedException ?"
+        answers:
+            - {value: "It's not possible", correct: false}
+            - {value: 'The exception message will be used as the validation error message', correct: false}
+            - {value: 'By using the invalid_message option', correct: true}

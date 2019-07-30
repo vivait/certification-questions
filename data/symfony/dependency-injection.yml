@@ -1,0 +1,10 @@
+category: Dependency Injection
+questions:
+    -
+        question: "What is the tag to register a custom service that loads translations?"
+        answers:
+            - {value: "translation_loader", correct: false}
+            - {value: 'translator_loader', correct: false}
+            - {value: 'translator.loader', correct: false}
+            - {value: 'translation.loader', correct: true}
+

@@ -7,4 +7,10 @@ questions:
             - {value: "Sending the status code HTTP 418 Authentication Required.",   correct: false}
             - {value: "Redirecting the request to the port 443.",  correct: false}
             - {value: "Rendering a login form with the fields _user and _password.",    correct: false}
-
+    -
+        question: "Which is the interface used for creating all security authentication listeners?"
+        answers:
+            - {value: "Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface", correct: false}
+            - {value: 'Sensio\Bundle\FrameworkExtraBundle\EventListener\SecurityListenerInterface', correct: false}
+            - {value: 'Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface', correct: true}
+            - {value: 'Symfony\Component\Security\Guard\GuardAuthenticatorInterface', correct: false}

@@ -20,3 +20,24 @@ questions:
             - {value: '09537', correct: false}
             - {value: '50937', correct: false}
             - {value: '375509', correct: false}
+    -
+        question: |
+            What is the output of the following PHP script?
+
+            <?php
+
+            $values = [
+                10,
+                20,
+                '0',
+                '123hello',
+                'hello123'
+            ];
+
+            echo array_sum($values);
+        answers:
+            - {value: '276', correct: false}
+            - {value: '30', correct: false}
+            - {value: '153', correct: true}
+            - {value: 'An error', correct: false}
+
