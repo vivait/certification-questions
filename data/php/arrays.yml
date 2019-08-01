@@ -41,3 +41,46 @@ questions:
             - {value: '153', correct: true}
             - {value: 'An error', correct: false}
 
+    -
+        question: |
+            What line of code should be substituted with /** line **/ to achieve an output of a?
+
+            <?php
+
+            $fruitAndVeg = [
+                'c' => 'Carrot',
+                'p' => 'Tomato',
+                'b' => 'Banana',
+                't' => 'Potato',
+                'a' => 'Apple'
+            ];
+
+            /** line **/
+
+            $keys = array_keys($fruitAndVeg);
+
+            echo $keys[0];
+        answers:
+            - {value: 'krsort($fruitAndVeg);', correct: false}
+            - {value: 'usort($fruitAndVeg);', correct: false}
+            - {value: 'sort($fruitAndVeg);', correct: false}
+            - {value: 'ksort($fruitAndVeg);', correct: true}
+
+    -
+        question: |
+            In the following code, what is the key of the element with value 25?
+
+            <?php
+
+            $myArray = [
+                'foo' => 'bar',
+                7 => 15,
+                28
+            ];
+
+            $myArray[] = 25;
+        answers:
+            - {value: '29', correct: false}
+            - {value: '8', correct: true}
+            - {value: '0', correct: false}
+            - {value: '9', correct: false}

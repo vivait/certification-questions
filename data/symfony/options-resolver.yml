@@ -1,0 +1,9 @@
+category: Options Resolver
+questions:
+    -
+        question: "When you are running a program asynchronously, it is possible to send it POSIX signals ?"
+        answers:
+            - {value: "The OptionsResolver class implements Options.", correct: true}
+            - {value: "It is an interface.", correct: true}
+            - {value: 'It is an abstract class.', correct: false}
+            - {value: 'The OptionsResolver class extends Options.', correct: false}

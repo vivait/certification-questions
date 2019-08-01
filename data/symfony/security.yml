@@ -14,3 +14,11 @@ questions:
             - {value: 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\SecurityListenerInterface', correct: false}
             - {value: 'Symfony\\Bundle\\SecurityBundle\\DependencyInjection\\Security\\Factory\\SecurityFactoryInterface', correct: true}
             - {value: 'Symfony\\Component\\Security\\Guard\\GuardAuthenticatorInterface', correct: false}
+    -
+        question: "Which command allows you to encode passwords?"
+        answers:
+            - {value: "security:encoder-password", correct: false}
+            - {value: 'security:password-encode', correct: false}
+            - {value: 'security:password-encoder', correct: false}
+            - {value: 'security:encode-password', correct: true}
+
