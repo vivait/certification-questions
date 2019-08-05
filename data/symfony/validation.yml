@@ -1,0 +1,39 @@
+category: Validation
+questions:
+    -
+        question: |
+            Is the following code correct ?
+
+            namespace Acme\User;
+
+            use Symfony\Component\Security\Core\User\UserInterface;
+            use Symfony\Component\Validator\Constraints as Assert;
+
+            /**
+             * @Assert\GroupSequence({"Default", "User"})
+             */
+            class User implements UserInterface
+            {
+                /**
+                * @Assert\NotBlank
+                */
+                private $username;
+
+                /**
+                * @Assert\NotBlank
+                */
+                private $password;
+
+                /**
+                 * @Assert\True(message="The password cannot match your username", groups={"Strict"})
+                 */
+                public function isPasswordLegal()
+                {
+                    return ($this->username !== $this->password);
+                }
+
+                // ...
+            }
+        answers:
+            - {value: Yes, correct: false}
+            - {value: No, correct: true}
