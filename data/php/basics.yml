@@ -76,3 +76,17 @@ questions:
             - {value: $argc, correct: false }
             - {value: $_POST, correct: false }
 
+    -
+        question: |
+            As of which PHP version should the following code not throw an error?
+
+            class A
+            {
+                const foo = [ /*...*/ ];
+            }
+        answers:
+            - {value: 5.6, correct: true }
+            - {value: 5.5, correct: false }
+            - {value: 7.0, correct: false }
+            - {value: 5.4, correct: false }
+
