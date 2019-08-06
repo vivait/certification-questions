@@ -1,0 +1,51 @@
+category: Yaml
+questions:
+    -
+        question: |
+            What will be the value of $yaml with the following code:
+
+            use Symfony\Component\Yaml\Yaml;
+
+            $yaml = Yaml::parse('1983-07-01');
+        answers:
+            - value: |
+                  An array
+
+                  array:1 [
+                    0 => DateTime {
+                      +"date": "1983-07-01 00:00:00.000000"
+                      +"timezone_type": 3
+                      +"timezone": "UTC"
+                    }
+                  ]
+              correct: false
+
+            -   value: |
+                    425865600
+                correct: false
+
+            -   value: |
+                    An array
+
+                    array:1 [
+                      0 => '1983-07-01'
+                    ]
+                correct: false
+
+            -   value: |
+                    1983-07-01
+                correct: false
+
+            -   value: |
+                    DateTime {
+                      +"date": "1983-07-01 00:00:00.000000"
+                      +"timezone_type": 3
+                      +"timezone": "UTC"
+                    }
+                correct: true
+
+            -   value: |
+                    array:1 [
+                      0 => 425865600
+                    ]
+                correct: false

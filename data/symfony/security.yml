@@ -22,3 +22,8 @@ questions:
             - {value: 'security:password-encoder', correct: false}
             - {value: 'security:encode-password', correct: true}
 
+    -
+        question: "Authorization is the process that makes sure that a user is who he claims to be?"
+        answers:
+            - {value: "True", correct: false}
+            - {value: "False", correct: true}

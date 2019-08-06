@@ -17,3 +17,23 @@ questions:
         answers:
             - {value: No, correct: false}
             - {value: Yes, correct: true}
+
+    -   question: |
+            According to the following definition of route, which ones are matching?
+
+            app:
+                path: /blog/{page}
+                requirements:
+                    page: \d+
+                defaults:
+                    page: 1
+        answers:
+            - {value: /blog, correct: true}
+            - {value: /blog/, correct: false}
+            - {value: /blog/1, correct: true}
+            - {value: /blog/page-1, correct: false}
+
+
+
+
+

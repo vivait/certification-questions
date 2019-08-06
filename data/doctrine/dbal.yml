@@ -22,3 +22,14 @@ questions:
         answers:
             - { value: Yes, correct: true }
             - { value: 'No, there is a missing $entityManager->persist($user);', correct: false }
+
+    -   question: "Which of the following APIs are designed to be SAFE from SQL injections?"
+        answers:
+            - { value: 'Doctrine\DBAL\Query\QueryBuilder#setFirstResult($offset)', correct: true }
+            - { value: 'Query methods on the Connection.', correct: false }
+            - { value: 'Doctrine\DBAL\Platforms\AbstractPlatform#modifyLimitQuery($sql, $limit, $offset)', correct: true= }
+            - { value: 'Doctrine\DBAL\Connection#update($table, $values, $where, $types)', correct: true }
+            - { value: 'Doctrine\DBAL\Query\QueryBuilder#setMaxResults($limit)', correct: true }
+            - { value: 'The QueryBuilder API.', correct: false }
+            - { value: 'Doctrine\DBAL\Connection#insert($table, $values, $types)', correct: true }
+            - { value: 'Doctrine\DBAL\Connection#delete($table, $where, $types)', correct: true }

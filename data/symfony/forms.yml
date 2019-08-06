@@ -39,3 +39,79 @@ questions:
             - {value: 'action', correct: false}
             - {value: 'trim', correct: false}
             - {value: 'attributes', correct: true}
+
+    -
+        question: "Which of the following snipets is valid to set the maximum and minimum value for a Symfony\\Component\\Form\\Extension\\Core\\Type\\RangeType form type ?"
+        answers:
+            - value: |
+                   $formBuilder->add('name', RangeType::class, [
+                       'min' => 5,
+                       'max' => 50
+                   ]);
+              correct: false
+            - value: |
+                  $formBuilder->add('name', RangeType::class, [
+                      'attr' => [
+                          'minimum' => 5,
+                          'maximum' => 50
+                      ]
+                  ]);
+              correct: false
+            - value: |
+                  $formBuilder->add('name', RangeType::class, [
+                      'attr' => [
+                          'min' => 5,
+                          'max' => 50
+                      ]
+                  ]);
+              correct: true
+            - value: |
+                  $formBuilder->add('name', RangeType::class, [
+                      'minimum' => 5,
+                      'maximum' => 50
+                  ]);
+              correct: false
+            - value: |
+                  $formBuilder->add('name', RangeType::class, [
+                      'min' => 5,
+                      'max' => 50
+                  ]);
+              correct: false
+
+    -
+        question: "How to get the value of title set in a form?"
+        answers:
+            - value: |
+                  $formBuilder->add('name', RangeType::class, [
+                      'min' => 5,
+                      'max' => 50
+                  ]);
+              correct: false
+            - value: |
+                  $formBuilder->add('name', RangeType::class, [
+                      'attr' => [
+                          'minimum' => 5,
+                          'maximum' => 50
+                      ]
+                  ]);
+              correct: false
+            - value: |
+                  $formBuilder->add('name', RangeType::class, [
+                      'attr' => [
+                          'min' => 5,
+                          'max' => 50
+                      ]
+                  ]);
+              correct: true
+            - value: |
+                  $formBuilder->add('name', RangeType::class, [
+                      'minimum' => 5,
+                      'maximum' => 50
+                  ]);
+              correct: false
+            - value: |
+                  $formBuilder->add('name', RangeType::class, [
+                      'min' => 5,
+                      'max' => 50
+                  ]);
+              correct: false
