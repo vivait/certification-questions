@@ -12,3 +12,13 @@ questions:
             - { value: DB2, correct: false }
             - { value: Oracle, correct: true }
             - { value: PostgreSQL, correct: true }
+
+    -   question: |
+            Will the following code update your database with the changes made to the $user object?
+
+            $user = $entityManager->find("User", 1);
+            $user->setProfession("Wizard");
+            $entityManager->flush();
+        answers:
+            - { value: Yes, correct: true }
+            - { value: 'No, there is a missing $entityManager->persist($user);', correct: false }

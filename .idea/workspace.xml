@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/symfony/cache.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/symfony/validation.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/symfony/twig.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/doctrine/dbal.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/doctrine/dbal.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +88,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1OVix7AIIqgbpXCE8Z4KULBv23M" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -98,7 +101,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="ics" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -180,7 +183,9 @@
       <workItem from="1564677108943" duration="2158000" />
       <workItem from="1564760662608" duration="154000" />
       <workItem from="1564760928102" duration="387000" />
-      <workItem from="1565020526536" duration="219000" />
+      <workItem from="1565020526536" duration="761000" />
+      <workItem from="1565076739621" duration="18000" />
+      <workItem from="1565076765671" duration="620000" />
     </task>
     <task id="LOCAL-00001" summary="a7562208-c630-4142-8cab-3d728de28c90">
       <created>1564070847740</created>
@@ -231,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565020538665</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="8e605a05-f10b-447a-8e8b-0d98e25b1e0f">
+      <created>1565020797493</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1565020797493</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +269,7 @@
     <MESSAGE value="1334c195-4e54-473a-8383-707ff2701807" />
     <MESSAGE value="Fix/1334c195-4e54-473a-8383-707ff2701807" />
     <MESSAGE value="d7e3efa5-228b-46c8-a54d-37da95e0cde1" />
-    <option name="LAST_COMMIT_MESSAGE" value="d7e3efa5-228b-46c8-a54d-37da95e0cde1" />
+    <MESSAGE value="8e605a05-f10b-447a-8e8b-0d98e25b1e0f" />
+    <option name="LAST_COMMIT_MESSAGE" value="8e605a05-f10b-447a-8e8b-0d98e25b1e0f" />
   </component>
 </project>

@@ -1,0 +1,35 @@
+category: Twig
+questions:
+    -   question: |
+            Consider the following Twig snippet:
+
+            {% if block('footer', 'common_blocks.html.twig') is defined %}
+                ...
+            {% endif %}
+
+            Which of the following statements are true?
+        answers:
+            - value: "The if condition will be false if the footer block exists in the common_blocks.html.twig template but it's empty (it doesn't have any content inside)."
+              correct: false
+
+            - value: "The code is wrong because the block() function doesn't allow to pass a second argument."
+              correct: false
+
+            - value: "The code checks if the common_blocks.html.twig template contains a Twig block called footer"
+              correct: true
+
+            - value: "The code is wrong because the is defined test cannot be used with the block() function."
+              correct: false
+
+    -   question: |
+            Consider the following Twig code snippet:
+
+            The {{ color }} car!
+
+            What will be the result of evaluating this template without passing it a color variable when the strict_variables global setting is off?
+        answers:
+            - {value: 'The template will be succesfully evaluated and the string The empty car! will be displayed in the web browser.', correct: false}
+            - {value: 'Twig will raise a Twig_Error_Runtime exception preventing the template from being evaluated.', correct: false}
+            - {value: 'The template will be succesfully evaluated and the string The car! will be displayed in the web browser.', correct: true}
+            - {value: 'The template will be partially evaluated and the string The will be displayed in the web browser.', correct: false}
+
