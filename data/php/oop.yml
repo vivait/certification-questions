@@ -9,3 +9,9 @@ questions:
             - {value: '__serialize()', correct: false}
             - {value: '__wakeup()', correct: false}
             - {value: '__set_state()', correct: true}
+
+    -
+        question: 'Is it possible to create a new instance of a class without using the special new keyword and invoking its __construct() method?'
+        answers:
+            - {value: 'No', correct: false}
+            - {value: 'Yes', correct: true}

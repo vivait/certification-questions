@@ -2,13 +2,13 @@ category: HTTP
 questions:
     -   question: 'Which HTTP verbs are idempotent ?'
         answers:
-            - { value: HEAD, correct: true }
-            - { value: POST, correct: false }
-            - { value: TRACE, correct: true }
-            - { value: PUT, correct: true }
-            - { value: OPTIONS, correct: true }
-            - { value: DELETE, correct: true }
             - { value: GET, correct: true }
-            - { value: CONNECT, correct: false }
+            - { value: HEAD, correct: true }
+            - { value: PUT, correct: true }
+            - { value: DELETE, correct: true }
+            - { value: POST, correct: false }
             - { value: PATCH, correct: false }
+            - { value: TRACE, correct: true }
+            - { value: OPTIONS, correct: true }
+            - { value: CONNECT, correct: false }
 

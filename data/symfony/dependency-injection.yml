@@ -8,3 +8,10 @@ questions:
             - {value: 'translator.loader', correct: false}
             - {value: 'translation.loader', correct: true}
 
+    -
+        question: "Which injection types are supported by the Symfony's DIC?"
+        answers:
+            - {value: "setter", correct: true}
+            - {value: 'property', correct: true}
+            - {value: 'constructor', correct: true}
+            - {value: 'getter', correct: false}

@@ -33,3 +33,24 @@ questions:
             - {value: 'The template will be succesfully evaluated and the string The car! will be displayed in the web browser.', correct: true}
             - {value: 'The template will be partially evaluated and the string The will be displayed in the web browser.', correct: false}
 
+    -   question: |
+            Consider the following typical 3-level hierarchy of Twig templates:
+              {# base.html.twig #}
+                  <head>
+                  <title>{% block title 'ACME' %}</title>
+                  </head>
+
+              {# layout.html.twig #}
+              {% extends 'base.html.twig' %}
+              {% block title 'Welcome to ACME!' %}
+
+              {# index.html.twig #}
+                {% extends 'layout.html.twig' %}
+                {% block title %}
+                {{ block('title', 'base.html.twig') }}
+              {% endblock %}
+        answers:
+            - {value: 'Welcome to ACME!', correct: false}
+            - {value: 'ACME', correct: true}
+            - {value: 'ACME Welcome to ACME!', correct: false}
+            - {value: 'This template will display an error because the block() function defines only one argument.', correct: false}

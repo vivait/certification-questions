@@ -27,3 +27,12 @@ questions:
         answers:
             - {value: "True", correct: false}
             - {value: "False", correct: true}
+
+    -
+        question: "Which role allows you to check that a user is logged in (by any means) ?"
+        answers:
+            - {value: "IS_AUTHENTICATED_REMEMBERED", correct: true}
+            - {value: "IS_AUTHENTICATED_ANONYMOUSLY", correct: false}
+            - {value: "IS_AUTHENTICATED_FULLY", correct: false}
+            - {value: "IS_FULLY_AUTHENTICATED", correct: false}
+            - {value: "IS_AUTHENTICATED", correct: false}

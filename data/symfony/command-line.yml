@@ -7,3 +7,13 @@ questions:
             - {value: "No, it's not possible.", correct: false}
             - {value: 'Yes, with the Symfony\Component\Process\Process::sendSignal method', correct: false}
             - {value: 'Yes, with the Symfony\Component\Process\Process::send method', correct: false}
+
+    -
+        question: "Which of the following are not built-in option variants ?"
+        answers:
+            - {value: "InputOption::VALUE_IS_ARRAY", correct: true}
+            - {value: "InputOption::VALUE_IS_MULTIPLE", correct: false}
+            - {value: 'InputOption::VALUE_REQUIRED', correct: true}
+            - {value: 'InputOption::VALUE_OPTIONAL', correct: true}
+            - {value: 'InputOption::VALUE_NONE', correct: true}
+            - {value: 'InputOption::VALUE_NOT_REQUIRED', correct: false}
