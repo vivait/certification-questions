@@ -12,3 +12,9 @@ questions:
             - { value: OPTIONS, correct: true }
             - { value: CONNECT, correct: false }
 
+    -   question: 'What does the 308 HTTP status code stand for?'
+        answers:
+            - { value: Found (moved temporarily), correct: false }
+            - { value: Temporary redirect, correct: false }
+            - { value: Moved permanently, correct: false }
+            - { value: Permanent redirect, correct: true }

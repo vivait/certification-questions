@@ -36,3 +36,10 @@ questions:
             - {value: "IS_AUTHENTICATED_FULLY", correct: false}
             - {value: "IS_FULLY_AUTHENTICATED", correct: false}
             - {value: "IS_AUTHENTICATED", correct: false}
+
+    -
+        question: "Which of the following is the AccessDecisionManager default strategy?"
+        answers:
+            - {value: "affirmative", correct: true}
+            - {value: "consensus", correct: false}
+            - {value: "unanimous", correct: false}

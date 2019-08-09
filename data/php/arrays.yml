@@ -84,3 +84,14 @@ questions:
             - {value: '8', correct: true}
             - {value: '0', correct: false}
             - {value: '9', correct: false}
+
+    -
+        question: 'How do you add the value 10 to an array called $myArray?'
+        answers:
+            - {value: 'array_shift($myArray, 10);', correct: false}
+            - {value: 'array_unshift($myArray, 10);', correct: true}
+            - {value: '$myArray = array_merge($myArray, [10]);', correct: true}
+            - {value: '$myArray = array_merge($myArray, 10);', correct: false}
+
+
+

@@ -10,3 +10,9 @@ questions:
             - { value: $finder->files()->in('home')->depth('> 1'), correct: false }
             - { value: $finder->files()->in('home'), correct: false }
             - { value: $finder->in('home/me'), correct: false }
+
+    -   question: "What is the default value of the directory mode argument of the Symfony\Component\Filesystem\Filesystem::mkdir method ?"
+        answers:
+            - { value: 0777, correct: true }
+            - { value: 0700, correct: false }
+            - { value: 0755, correct: false }

@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/arrays.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/arrays.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/finder.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/finder.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/serializer.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/serializer.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +128,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_34.php">
+  <component name="RunManager" selected="PHP Script.scratch_40.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -140,24 +145,24 @@
     <configuration name="scratch_34.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_34.php">
       <method v="2" />
     </configuration>
-    <configuration name="test.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/test.php">
+    <configuration name="scratch_40.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_40.php">
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHP Script.test.php" />
       <item itemvalue="PHP Script.scratch_31.php" />
       <item itemvalue="PHP Script.scratch_32.php" />
       <item itemvalue="PHP Script.scratch_33.php" />
       <item itemvalue="PHP Script.scratch_34.php" />
       <item itemvalue="PHPUnit.phpunit.xml.dist" />
+      <item itemvalue="PHP Script.scratch_40.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.scratch_40.php" />
         <item itemvalue="PHP Script.scratch_34.php" />
         <item itemvalue="PHP Script.scratch_33.php" />
         <item itemvalue="PHP Script.scratch_32.php" />
         <item itemvalue="PHP Script.scratch_31.php" />
-        <item itemvalue="PHP Script.test.php" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +193,8 @@
       <workItem from="1565164945815" duration="629000" />
       <workItem from="1565192357974" duration="1310000" />
       <workItem from="1565196391080" duration="4073000" />
-      <workItem from="1565337356511" duration="115000" />
+      <workItem from="1565337356511" duration="546000" />
+      <workItem from="1565364648897" duration="670000" />
     </task>
     <task id="LOCAL-00001" summary="a7562208-c630-4142-8cab-3d728de28c90">
       <created>1564070847740</created>
@@ -267,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565280003288</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Updates question">
+      <created>1565337840695</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1565337840695</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +310,7 @@
     <MESSAGE value="723a070d-276d-48fd-a15f-8e20f0a769d0" />
     <MESSAGE value="568d044a-81ca-411a-9441-b2e59701030d" />
     <MESSAGE value="71a18f0f-a283-418a-af28-c4db623b526b" />
-    <option name="LAST_COMMIT_MESSAGE" value="71a18f0f-a283-418a-af28-c4db623b526b" />
+    <MESSAGE value="Updates question" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates question" />
   </component>
 </project>
