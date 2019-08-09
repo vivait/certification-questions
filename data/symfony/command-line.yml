@@ -9,7 +9,7 @@ questions:
             - {value: 'Yes, with the Symfony\Component\Process\Process::send method', correct: false}
 
     -
-        question: "Which of the following are not built-in option variants ?"
+        question: "Which of the following are built-in option variants ?"
         answers:
             - {value: "InputOption::VALUE_IS_ARRAY", correct: true}
             - {value: "InputOption::VALUE_IS_MULTIPLE", correct: false}

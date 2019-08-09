@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/symfony/expression-language.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/php/oop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/oop.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/command-line.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/command-line.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/twig.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/twig.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +187,8 @@
       <workItem from="1565106071659" duration="2935000" />
       <workItem from="1565164945815" duration="629000" />
       <workItem from="1565192357974" duration="1310000" />
-      <workItem from="1565196391080" duration="3604000" />
+      <workItem from="1565196391080" duration="4073000" />
+      <workItem from="1565337356511" duration="115000" />
     </task>
     <task id="LOCAL-00001" summary="a7562208-c630-4142-8cab-3d728de28c90">
       <created>1564070847740</created>
@@ -266,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565109179323</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="71a18f0f-a283-418a-af28-c4db623b526b">
+      <created>1565280003288</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1565280003288</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +296,7 @@
     <MESSAGE value="8e605a05-f10b-447a-8e8b-0d98e25b1e0f" />
     <MESSAGE value="723a070d-276d-48fd-a15f-8e20f0a769d0" />
     <MESSAGE value="568d044a-81ca-411a-9441-b2e59701030d" />
-    <option name="LAST_COMMIT_MESSAGE" value="568d044a-81ca-411a-9441-b2e59701030d" />
+    <MESSAGE value="71a18f0f-a283-418a-af28-c4db623b526b" />
+    <option name="LAST_COMMIT_MESSAGE" value="71a18f0f-a283-418a-af28-c4db623b526b" />
   </component>
 </project>
