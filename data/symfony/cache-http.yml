@@ -7,3 +7,10 @@ questions:
             - {value: Last-Modified, correct: true}
             - {value: "Cache-Control: s-max-age", correct: false}
             - {value: "Cache-Control: max-age", correct: false}
+
+    -   question: 'Which Cache-Control directive disallows the browser and all intermediate caches from storing any version of the returned response?'
+        answers:
+            - { value: no-store, correct: true }
+            - { value: private, correct: false }
+            - { value: public, correct: false }
+            - { value: no-cache, correct: false }

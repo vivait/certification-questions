@@ -7,6 +7,3 @@ questions:
             - {value: Dumps the default configuration of a bundle, correct: true}
             - {value: Dumps the current configuration in .htaccess format using the php_value directive, correct: false}
             - {value: Dumps the current configuration of a bundle, correct: false}
-
-
-

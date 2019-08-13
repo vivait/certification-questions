@@ -1,9 +1,9 @@
 category: Options Resolver
 questions:
     -
-        question: "When you are running a program asynchronously, it is possible to send it POSIX signals ?"
+        question: "What is the correct call of setAllowedTypes to validate the value null of the my_option option?"
         answers:
-            - {value: "The OptionsResolver class implements Options.", correct: true}
-            - {value: "It is an interface.", correct: true}
-            - {value: 'It is an abstract class.', correct: false}
-            - {value: 'The OptionsResolver class extends Options.', correct: false}
+            - {value: "$resolver->setAllowedTypes('my_option', 'null');", correct: true}
+            - {value: "$resolver->setAllowedTypes('my_option', array(null));", correct: false}
+            - {value: "$resolver->setAllowedTypes('my_option', array('null'));", correct: false}
+            - {value: "$resolver->setAllowedTypes('my_option', null);", correct: false}
