@@ -16,3 +16,11 @@ questions:
             - { value: 0777, correct: true }
             - { value: 0700, correct: false }
             - { value: 0755, correct: false }
+
+    -   question: "Which exception is thrown when a directory creation has failed ?"
+        answers:
+            - { value: InvalidFileException, correct: false }
+            - { value: DirectoryException, correct: false }
+            - { value: FileSystemException, correct: false }
+            - { value: FileException, correct: false }
+            - { value: IOException, correct: true }

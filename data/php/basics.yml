@@ -90,3 +90,11 @@ questions:
             - {value: 7.0, correct: false }
             - {value: 5.4, correct: false }
 
+    -
+        question: "What SAPI does not exist in PHP ?"
+        answers:
+            - {value: apxs2, correct: false }
+            - {value: fpm, correct: false }
+            - {value: nginx, correct: true }
+            - {value: cli, correct: false }
+            - {value: cgi, correct: false }

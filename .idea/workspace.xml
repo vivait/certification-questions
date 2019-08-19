@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/doctrine/orm.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/symfony/best-practices.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/symfony/property-accessor.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/symfony/translator.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/bundles.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/bundles.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/cache-http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/cache-http.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/cache.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/cache.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/options-resolver.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/options-resolver.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/doctrine/dbal.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/doctrine/dbal.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/finder.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/finder.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/routing.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,13 +108,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data/symfony" />
-      <recent name="$PROJECT_DIR$/data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data/symfony" />
       <recent name="$PROJECT_DIR$/data/php" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/symfony" />
+      <recent name="$PROJECT_DIR$/data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -197,7 +197,9 @@
       <workItem from="1565337356511" duration="546000" />
       <workItem from="1565364648897" duration="1402000" />
       <workItem from="1565597595762" duration="173000" />
-      <workItem from="1565711051716" duration="855000" />
+      <workItem from="1565711051716" duration="1247000" />
+      <workItem from="1565796478184" duration="1435000" />
+      <workItem from="1565968572213" duration="1845000" />
     </task>
     <task id="LOCAL-00001" summary="a7562208-c630-4142-8cab-3d728de28c90">
       <created>1564070847740</created>
@@ -297,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565365733878</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="f15d4191-1d18-4f72-a3ba-13d05ec58818">
+      <created>1565711998844</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1565711998844</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +338,7 @@
     <MESSAGE value="71a18f0f-a283-418a-af28-c4db623b526b" />
     <MESSAGE value="Updates question" />
     <MESSAGE value="350f5b95-576a-4888-a8e1-398271a5de50" />
-    <option name="LAST_COMMIT_MESSAGE" value="350f5b95-576a-4888-a8e1-398271a5de50" />
+    <MESSAGE value="f15d4191-1d18-4f72-a3ba-13d05ec58818" />
+    <option name="LAST_COMMIT_MESSAGE" value="f15d4191-1d18-4f72-a3ba-13d05ec58818" />
   </component>
 </project>
