@@ -115,3 +115,11 @@ questions:
                       'max' => 50
                   ]);
               correct: false
+
+    -   question: |
+            By default, which function provides the choices of the Symfony\Component\Form\Extension\Core\Type\LanguageType form type ?
+        answers:
+            - { value: Symfony\Component\Intl\Intl::getLanguageBundle()->getLanguageNames(), correct: true }
+            - { value: Intl::getLanguages(), correct: false }
+            - { value: Symfony\Component\Locale\getDisplayLanguages(), correct: false }
+            - { value: Symfony\Component\Form\Extension\Core\Type\LanguageType::getChoices(), correct: false }

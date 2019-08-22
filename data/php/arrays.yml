@@ -93,5 +93,26 @@ questions:
             - {value: '$myArray = array_merge($myArray, [10]);', correct: true}
             - {value: '$myArray = array_merge($myArray, 10);', correct: false}
 
+    -
+        question: |
+            What is the output of the following PHP script?
+
+            <?php
+
+            $values = [37, 5, '09'];
+
+            $sorted = sort($values);
+
+            foreach ($sorted as $v) {
+                echo $v;
+            }
+        answers:
+            - {value: '50937', correct: false}
+            - {value: 'An error', correct: true}
+            - {value: '375509', correct: false}
+            - {value: '09537', correct: false}
+
+
+
 
 

@@ -98,3 +98,27 @@ questions:
             - {value: nginx, correct: true }
             - {value: cli, correct: false }
             - {value: cgi, correct: false }
+
+    -
+        question: |
+            Consider the following code snippet:
+
+            $a = 20;
+
+            function my_function($b)
+            {
+                $a = 30;
+                global $a, $c;
+
+                return $c = ($b + $a);
+            }
+
+            print my_function(40) + $c;
+
+            What does this script output when it's executed with PHP?
+        answers:
+            - {value: "An error saying something like Undefined variable: ....", correct: false }
+            - {value: 70, correct: false }
+            - {value: 60, correct: false }
+            - {value: 120, correct: true }
+            - {value: 110, correct: false }

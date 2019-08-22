@@ -1,0 +1,13 @@
+category: Event Dispatcher
+questions:
+    -   question: |
+            Is the following code correct?
+
+            use Symfony\Component\EventDispatcher\EventDispatcher;
+
+            $dispatcher = new EventDispatcher();
+
+            $dispatcher->dispatch('article.published');
+        answers:
+            - { value: Yes, correct: true }
+            - { value: No, correct: false }

@@ -15,3 +15,80 @@ questions:
             - {value: 'property', correct: true}
             - {value: 'constructor', correct: true}
             - {value: 'getter', correct: false}
+
+    -
+        question: "On a default Symfony project using symfony/form, what solutions can successfully help us retrieve the FormFactory in the signup action?"
+        answers:
+            - value: |
+                  use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
+                  class SecurityController extends AbstractController
+                  {
+                      public function signup()
+                      {
+                          $formFactory = $this->getFormFactory();
+                      }
+                  }
+              correct: false
+
+            - value: |
+                  class SecurityController
+                  {
+                      private $formFactory;
+
+                      /**
+                       * @required
+                       */
+                      public function setFormFactory(FormFactoryInterface $formfactory)
+                      {
+                          $this->formFactory = $formFactory;
+                      }
+
+                      public function signup()
+                      {
+                          $formFactory = $this->formFactory;
+                      }
+                  }
+              correct: true
+
+            - value: |
+                  use Symfony\Component\Form\FormFactoryInterface;
+
+                  class SecurityController
+                  {
+                      private $formFactory;
+
+                      public function __construct(FormFactoryInterface $formfactory)
+                      {
+                          $this->formFactory = $formFactory;
+                      }
+
+                      public function signup()
+                      {
+                          $formFactory = $this->formFactory;
+                      }
+                  }
+              correct: true
+
+            - value: |
+                  use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+                  class SecurityController extends Controller
+                  {
+                      public function signup()
+                      {
+                          $formFactory = $this->get('form.factory');
+                      }
+                  }
+              correct: true
+
+            - value: |
+                  use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+                  class SecurityController extends Controller
+                  {
+                      public function signup(FormFactoryInterface $formfactory)
+                      {
+                      }
+                  }
+              correct: true

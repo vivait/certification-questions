@@ -18,3 +18,17 @@ questions:
             - { value: Temporary redirect, correct: false }
             - { value: Moved permanently, correct: false }
             - { value: Permanent redirect, correct: true }
+
+    -   question: 'How does the browser communicate to the server what is the preferred language of the user?'
+        answers:
+            - { value: The main language is sent using the Locale header, while secondary languages are usually included in the X-Locale-Alternate header., correct: false }
+            - { value: The browser doesn’t communicate the language of the user, it’s inferred from the user IP., correct: false }
+            - { value: User language preferences are sent using the Accept-Language header, correct: true }
+            - { value: The main language is included in the User-Agent header, correct: false }
+
+
+
+
+
+
+

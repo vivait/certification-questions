@@ -37,3 +37,21 @@ questions:
         answers:
             - {value: Yes, correct: false}
             - {value: No, correct: true}
+
+    -
+        question: |
+            Assuming that the validate() method detects no violations, what will the Response object contain?
+
+            // Controller/BookController.php
+            public function indexAction(
+            {
+                $book = new Book();
+                $validator = $this->get('validator');
+                $errors = $validator->validate($book);
+                return new Response((string) $errors);
+            }
+        answers:
+            - {value: "Notice: Array to string conversion.", correct: false}
+            - {value: An empty string, correct: true}
+            - {value: False, correct: falseh}
+            - {value: "Fatal error: Object of class ConstraintViolationList could not be converted to string.", correct: false}

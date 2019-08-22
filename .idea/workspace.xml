@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/symfony/property-accessor.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/symfony/translator.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/symfony/event-dispatcher.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/doctrine/dbal.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/doctrine/dbal.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/arrays.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/arrays.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/finder.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/finder.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/forms.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/forms.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/validation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/validation.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,15 +130,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_40.php">
+  <component name="RunManager" selected="PHP Script.scratch_44.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_31.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_31.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_32.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_32.php">
       <method v="2" />
     </configuration>
     <configuration name="scratch_33.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_33.php">
@@ -149,21 +144,27 @@
     <configuration name="scratch_40.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_40.php">
       <method v="2" />
     </configuration>
+    <configuration name="scratch_43.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_43.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_44.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_44.php">
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="PHP Script.scratch_31.php" />
-      <item itemvalue="PHP Script.scratch_32.php" />
       <item itemvalue="PHP Script.scratch_33.php" />
       <item itemvalue="PHP Script.scratch_34.php" />
       <item itemvalue="PHP Script.scratch_40.php" />
       <item itemvalue="PHPUnit.phpunit.xml.dist" />
+      <item itemvalue="PHP Script.scratch_43.php" />
+      <item itemvalue="PHP Script.scratch_44.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.scratch_44.php" />
+        <item itemvalue="PHP Script.scratch_43.php" />
         <item itemvalue="PHP Script.scratch_40.php" />
         <item itemvalue="PHP Script.scratch_34.php" />
         <item itemvalue="PHP Script.scratch_33.php" />
-        <item itemvalue="PHP Script.scratch_32.php" />
-        <item itemvalue="PHP Script.scratch_31.php" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +200,11 @@
       <workItem from="1565597595762" duration="173000" />
       <workItem from="1565711051716" duration="1247000" />
       <workItem from="1565796478184" duration="1435000" />
-      <workItem from="1565968572213" duration="1845000" />
+      <workItem from="1565968572213" duration="2802000" />
+      <workItem from="1566316431292" duration="1053000" />
+      <workItem from="1566375228435" duration="910000" />
+      <workItem from="1566401460301" duration="1037000" />
+      <workItem from="1566488176402" duration="847000" />
     </task>
     <task id="LOCAL-00001" summary="a7562208-c630-4142-8cab-3d728de28c90">
       <created>1564070847740</created>
@@ -306,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565711998844</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Another">
+      <created>1566202309240</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1566202309240</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,6 +351,7 @@
     <MESSAGE value="Updates question" />
     <MESSAGE value="350f5b95-576a-4888-a8e1-398271a5de50" />
     <MESSAGE value="f15d4191-1d18-4f72-a3ba-13d05ec58818" />
-    <option name="LAST_COMMIT_MESSAGE" value="f15d4191-1d18-4f72-a3ba-13d05ec58818" />
+    <MESSAGE value="Another" />
+    <option name="LAST_COMMIT_MESSAGE" value="Another" />
   </component>
 </project>
