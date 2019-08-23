@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/symfony/event-dispatcher.yml" afterDir="false" />
+    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="2514cd7a-27d5-4c38-8897-30836aa4852f">
+      <change afterPath="$PROJECT_DIR$/data/symfony/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/php/arrays.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/arrays.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/forms.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/forms.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/finder.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/finder.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/validation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/validation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/yaml.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/yaml.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,13 +108,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data/symfony" />
-      <recent name="$PROJECT_DIR$/data/php" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data/symfony" />
       <recent name="$PROJECT_DIR$/data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/symfony" />
+      <recent name="$PROJECT_DIR$/data/php" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -154,9 +153,9 @@
       <item itemvalue="PHP Script.scratch_33.php" />
       <item itemvalue="PHP Script.scratch_34.php" />
       <item itemvalue="PHP Script.scratch_40.php" />
-      <item itemvalue="PHPUnit.phpunit.xml.dist" />
       <item itemvalue="PHP Script.scratch_43.php" />
       <item itemvalue="PHP Script.scratch_44.php" />
+      <item itemvalue="PHPUnit.phpunit.xml.dist" />
     </list>
     <recent_temporary>
       <list>
@@ -204,7 +203,8 @@
       <workItem from="1566316431292" duration="1053000" />
       <workItem from="1566375228435" duration="910000" />
       <workItem from="1566401460301" duration="1037000" />
-      <workItem from="1566488176402" duration="847000" />
+      <workItem from="1566488176402" duration="1304000" />
+      <workItem from="1566574869191" duration="836000" />
     </task>
     <task id="LOCAL-00001" summary="a7562208-c630-4142-8cab-3d728de28c90">
       <created>1564070847740</created>
@@ -318,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566202309240</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="2514cd7a-27d5-4c38-8897-30836aa4852f">
+      <created>1566489041478</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1566489041478</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,6 +359,7 @@
     <MESSAGE value="350f5b95-576a-4888-a8e1-398271a5de50" />
     <MESSAGE value="f15d4191-1d18-4f72-a3ba-13d05ec58818" />
     <MESSAGE value="Another" />
-    <option name="LAST_COMMIT_MESSAGE" value="Another" />
+    <MESSAGE value="2514cd7a-27d5-4c38-8897-30836aa4852f" />
+    <option name="LAST_COMMIT_MESSAGE" value="2514cd7a-27d5-4c38-8897-30836aa4852f" />
   </component>
 </project>

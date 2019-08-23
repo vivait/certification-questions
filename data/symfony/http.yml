@@ -26,9 +26,18 @@ questions:
             - { value: User language preferences are sent using the Accept-Language header, correct: true }
             - { value: The main language is included in the User-Agent header, correct: false }
 
+    -   question: 'What does the 308 HTTP status code stand for?'
+        answers:
+            - { value: Permanent redirect, correct: true }
+            - { value: Moved permanently, correct: false }
+            - { value: Temporary redirect, correct: false }
+            - { value: Found (moved temporarily), correct: false }
 
-
-
-
-
-
+    -   question: 'What is the HTTP status codes for Not Implemented?'
+        answers:
+            - { value: 504, correct: false }
+            - { value: 505, correct: false }
+            - { value: 500, correct: false }
+            - { value: 502, correct: false }
+            - { value: 503, correct: false }
+            - { value: 501, correct: true }

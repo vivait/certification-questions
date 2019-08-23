@@ -92,3 +92,21 @@ questions:
                       }
                   }
               correct: true
+
+    -
+        question: |
+            What will be the value of the following configuration sample?
+
+            <parameter key="mailer.transport">
+                sendmail
+            </parameter>
+        answers:
+            - value: |
+                  \n
+                  sendmail\n
+              correct: true
+            - {value: 'sendmail', correct: false}
+            - {value: 'sendmail\n', correct: false}
+            - {value: 'sendmail\n', correct: false}
+
+

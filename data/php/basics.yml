@@ -122,3 +122,33 @@ questions:
             - {value: 60, correct: false }
             - {value: 120, correct: true }
             - {value: 110, correct: false }
+
+    -
+        question: "Can PHP open and work natively with Zip file?"
+        answers:
+            - {value: "Yes", correct: false }
+            - {value: No, correct: true }
+
+    -
+        question: "Which of the following are not true about streams ?"
+        answers:
+            - {value: "Yes", correct: false }
+            - {value: No, correct: true }
+
+    -
+        question: "How would you access the file data sent to your PHP server using the PUT HTTP method ?"
+        answers:
+            - {value: Using $_PUT, correct: false }
+            - {value: Using $HTTP_PUT_VARS, correct: false }
+            - {value: It is not possible, correct: false }
+            - {value: Using the php://input stream, correct: true }
+            - {value: Using $_POST, correct: false }
+
+    -
+        question: "What are the correct ways to parse the 1983-07-01 date into an DateTime object?"
+        answers:
+            - {value: Using $_PUT, correct: false }
+            - {value: Using $HTTP_PUT_VARS, correct: false }
+            - {value: It is not possible, correct: false }
+            - {value: Using the php://input stream, correct: true }
+            - {value: Using $_POST, correct: false }

@@ -1,0 +1,10 @@
+category: Config
+questions:
+    -
+        question: |
+            What is the purpose of Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition::fixXmlConfig ?
+        answers:
+            - {value: "It ensures that single XML elements are turned into an array", correct: true}
+            - {value: "It applies a custom function to an XML element if an error occurs", correct: false}
+            - {value: 'It normalizes XML element name', correct: false}
+            - {value: 'It always applies a custom function to an XML element', correct: false}
