@@ -1,7 +1,6 @@
 category: Validation
 questions:
-    -
-        question: |
+    -   question: |
             Is the following code correct ?
 
             namespace Acme\User;
@@ -38,8 +37,7 @@ questions:
             - {value: Yes, correct: false}
             - {value: No, correct: true}
 
-    -
-        question: |
+    -   question: |
             Assuming that the validate() method detects no violations, what will the Response object contain?
 
             // Controller/BookController.php

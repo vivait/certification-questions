@@ -1,110 +1,106 @@
 category: Dependency Injection
 questions:
-    -
-        question: "What is the tag to register a custom service that loads translations?"
+    -   question: "What is the tag to register a custom service that loads translations?"
         answers:
             - {value: "translation_loader", correct: false}
             - {value: 'translator_loader', correct: false}
             - {value: 'translator.loader', correct: false}
             - {value: 'translation.loader', correct: true}
 
-    -
-        question: "Which injection types are supported by the Symfony's DIC?"
+    -   question: "Which injection types are supported by the Symfony's DIC?"
         answers:
             - {value: "setter", correct: true}
             - {value: 'property', correct: true}
             - {value: 'constructor', correct: true}
             - {value: 'getter', correct: false}
 
-    -
-        question: "On a default Symfony project using symfony/form, what solutions can successfully help us retrieve the FormFactory in the signup action?"
+    -   question: "On a default Symfony project using symfony/form, what solutions can successfully help us retrieve the FormFactory in the signup action?"
         answers:
-            - value: |
-                  use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+            -   value: |
+                    use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-                  class SecurityController extends AbstractController
-                  {
-                      public function signup()
-                      {
-                          $formFactory = $this->getFormFactory();
-                      }
-                  }
-              correct: false
+                    class SecurityController extends AbstractController
+                    {
+                        public function signup()
+                        {
+                            $formFactory = $this->getFormFactory();
+                        }
+                    }
+                correct: false
 
-            - value: |
-                  class SecurityController
-                  {
-                      private $formFactory;
+            -   value: |
+                    class SecurityController
+                    {
+                        private $formFactory;
 
-                      /**
-                       * @required
-                       */
-                      public function setFormFactory(FormFactoryInterface $formfactory)
-                      {
-                          $this->formFactory = $formFactory;
-                      }
+                        /**
+                         * @required
+                         */
+                        public function setFormFactory(FormFactoryInterface $formfactory)
+                        {
+                            $this->formFactory = $formFactory;
+                        }
 
-                      public function signup()
-                      {
-                          $formFactory = $this->formFactory;
-                      }
-                  }
-              correct: true
+                        public function signup()
+                        {
+                            $formFactory = $this->formFactory;
+                        }
+                    }
+                correct: true
 
-            - value: |
-                  use Symfony\Component\Form\FormFactoryInterface;
+            -   value: |
+                    use Symfony\Component\Form\FormFactoryInterface;
 
-                  class SecurityController
-                  {
-                      private $formFactory;
+                    class SecurityController
+                    {
+                        private $formFactory;
 
-                      public function __construct(FormFactoryInterface $formfactory)
-                      {
-                          $this->formFactory = $formFactory;
-                      }
+                        public function __construct(FormFactoryInterface $formfactory)
+                        {
+                            $this->formFactory = $formFactory;
+                        }
 
-                      public function signup()
-                      {
-                          $formFactory = $this->formFactory;
-                      }
-                  }
-              correct: true
+                        public function signup()
+                        {
+                            $formFactory = $this->formFactory;
+                        }
+                    }
+                correct: true
 
-            - value: |
-                  use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+            -   value: |
+                    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-                  class SecurityController extends Controller
-                  {
-                      public function signup()
-                      {
-                          $formFactory = $this->get('form.factory');
-                      }
-                  }
-              correct: true
+                    class SecurityController extends Controller
+                    {
+                        public function signup()
+                        {
+                            $formFactory = $this->get('form.factory');
+                        }
+                    }
+                correct: true
 
-            - value: |
-                  use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+            -   value: |
+                    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-                  class SecurityController extends Controller
-                  {
-                      public function signup(FormFactoryInterface $formfactory)
-                      {
-                      }
-                  }
-              correct: true
+                    class SecurityController extends Controller
+                    {
+                        public function signup(FormFactoryInterface $formfactory)
+                        {
+                        }
+                    }
+                correct: true
 
-    -
-        question: |
+    -   question: |
             What will be the value of the following configuration sample?
 
             <parameter key="mailer.transport">
                 sendmail
             </parameter>
         answers:
-            - value: |
-                  \n
-                  sendmail\n
-              correct: true
+            -   value: |
+                    \n
+                    sendmail\n
+                correct: true
             - {value: 'sendmail', correct: false}
             - {value: 'sendmail\n', correct: false}
             - {value: 'sendmail\n', correct: false}

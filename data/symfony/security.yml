@@ -1,35 +1,30 @@
 category: Security
 questions:
-    -
-        question: 'When using HTTP basic, how does the server starts the authentication process?'
+    -   question: 'When using HTTP basic, how does the server starts the authentication process?'
         answers:
             - {value: "Sending the WWW-Authenticate HTTP header with the HTTP 401 Not Authorized status code.", correct: true}
             - {value: "Sending the status code HTTP 418 Authentication Required.",   correct: false}
             - {value: "Redirecting the request to the port 443.",  correct: false}
             - {value: "Rendering a login form with the fields _user and _password.",    correct: false}
-    -
-        question: "Which is the interface used for creating all security authentication listeners?"
+    -   question: "Which is the interface used for creating all security authentication listeners?"
         answers:
             - {value: "Symfony\\Component\\Security\\Core\\Authentication\\AuthenticationManagerInterface", correct: false}
             - {value: 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\SecurityListenerInterface', correct: false}
             - {value: 'Symfony\\Bundle\\SecurityBundle\\DependencyInjection\\Security\\Factory\\SecurityFactoryInterface', correct: true}
             - {value: 'Symfony\\Component\\Security\\Guard\\GuardAuthenticatorInterface', correct: false}
-    -
-        question: "Which command allows you to encode passwords?"
+    -   question: "Which command allows you to encode passwords?"
         answers:
             - {value: "security:encoder-password", correct: false}
             - {value: 'security:password-encode', correct: false}
             - {value: 'security:password-encoder', correct: false}
             - {value: 'security:encode-password', correct: true}
 
-    -
-        question: "Authorization is the process that makes sure that a user is who he claims to be?"
+    -   question: "Authorization is the process that makes sure that a user is who he claims to be?"
         answers:
             - {value: "True", correct: false}
             - {value: "False", correct: true}
 
-    -
-        question: "Which role allows you to check that a user is logged in (by any means) ?"
+    -   question: "Which role allows you to check that a user is logged in (by any means) ?"
         answers:
             - {value: "IS_AUTHENTICATED_REMEMBERED", correct: true}
             - {value: "IS_AUTHENTICATED_ANONYMOUSLY", correct: false}
@@ -37,8 +32,7 @@ questions:
             - {value: "IS_FULLY_AUTHENTICATED", correct: false}
             - {value: "IS_AUTHENTICATED", correct: false}
 
-    -
-        question: "Which of the following is the AccessDecisionManager default strategy?"
+    -   question: "Which of the following is the AccessDecisionManager default strategy?"
         answers:
             - {value: "affirmative", correct: true}
             - {value: "consensus", correct: false}

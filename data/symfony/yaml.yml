@@ -1,24 +1,23 @@
 category: Yaml
 questions:
-    -
-        question: |
+    -   question: |
             What will be the value of $yaml with the following code:
 
             use Symfony\Component\Yaml\Yaml;
 
             $yaml = Yaml::parse('1983-07-01');
         answers:
-            - value: |
-                  An array
+            -   value: |
+                    An array
 
-                  array:1 [
-                    0 => DateTime {
-                      +"date": "1983-07-01 00:00:00.000000"
-                      +"timezone_type": 3
-                      +"timezone": "UTC"
-                    }
-                  ]
-              correct: false
+                    array:1 [
+                      0 => DateTime {
+                        +"date": "1983-07-01 00:00:00.000000"
+                        +"timezone_type": 3
+                        +"timezone": "UTC"
+                      }
+                    ]
+                correct: false
 
             -   value: |
                     425865600
@@ -66,25 +65,25 @@ questions:
             $yaml = Yaml::dump($string);
             echo $yaml;
         answers:
-            - value: |
-                  string: "Multiple\nLine\nString"
-              correct: true
-            - value: |
-                  string: |
-                      Multiple
-                      Line
-                      String
-                      Multiple\nLine\nString
-              correct: false
-            - value: |
-                  string: "Multiple
-                  Line
-                  String"
-              correct: false
-            - value: |
-                  string: Multiple\nLine\nString
-                      "Multiple\nLine\nString"
-              correct: false
+            -   value: |
+                    string: "Multiple\nLine\nString"
+                correct: true
+            -   value: |
+                    string: |
+                        Multiple
+                        Line
+                        String
+                        Multiple\nLine\nString
+                correct: false
+            -   value: |
+                    string: "Multiple
+                    Line
+                    String"
+                correct: false
+            -   value: |
+                    string: Multiple\nLine\nString
+                        "Multiple\nLine\nString"
+                correct: false
 
 
 

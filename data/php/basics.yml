@@ -1,7 +1,6 @@
 category: Basics
 questions:
-    -
-        question: |
+    -   question: |
             What will be the value of $bool and $bool2?
             ```
             $bool = filter_var("true", FILTER_VALIDATE_BOOLEAN);
@@ -13,8 +12,7 @@ questions:
             - {value: 'false and false', correct: false}
             - {value: 'true and false', correct: true}
 
-    -
-        question: |
+    -   question: |
             Consider the following code snippet:
             ```
             class Bar
@@ -40,8 +38,7 @@ questions:
             - {value: "echo getter()->bindTo('Bar', 'Bar')();", correct: false}
             - {value: 'echo getter()->bindTo(new Bar())();', correct: false}
 
-    -
-        question: |
+    -   question: |
             Consider the following code snippet:
             ```
             try {
@@ -67,8 +64,7 @@ questions:
             - {value: 'a-caught-end-', correct: false }
             - {value: 'a-caught-end-finished-', correct: false }
 
-    -
-        question: "Which of the following is not a predefined PHP variable?"
+    -   question: "Which of the following is not a predefined PHP variable?"
         answers:
             - {value: $_GLOBALS, correct: true }
             - {value: $php_errormsg, correct: false }
@@ -76,8 +72,7 @@ questions:
             - {value: $argc, correct: false }
             - {value: $_POST, correct: false }
 
-    -
-        question: |
+    -   question: |
             As of which PHP version should the following code not throw an error?
 
             class A
@@ -90,8 +85,7 @@ questions:
             - {value: 7.0, correct: false }
             - {value: 5.4, correct: false }
 
-    -
-        question: "What SAPI does not exist in PHP ?"
+    -   question: "What SAPI does not exist in PHP ?"
         answers:
             - {value: apxs2, correct: false }
             - {value: fpm, correct: false }
@@ -99,8 +93,7 @@ questions:
             - {value: cli, correct: false }
             - {value: cgi, correct: false }
 
-    -
-        question: |
+    -   question: |
             Consider the following code snippet:
 
             $a = 20;
@@ -123,20 +116,17 @@ questions:
             - {value: 120, correct: true }
             - {value: 110, correct: false }
 
-    -
-        question: "Can PHP open and work natively with Zip file?"
+    -   question: "Can PHP open and work natively with Zip file?"
         answers:
             - {value: "Yes", correct: false }
             - {value: No, correct: true }
 
-    -
-        question: "Which of the following are not true about streams ?"
+    -   question: "Which of the following are not true about streams ?"
         answers:
             - {value: "Yes", correct: false }
             - {value: No, correct: true }
 
-    -
-        question: "How would you access the file data sent to your PHP server using the PUT HTTP method ?"
+    -   question: "How would you access the file data sent to your PHP server using the PUT HTTP method ?"
         answers:
             - {value: Using $_PUT, correct: false }
             - {value: Using $HTTP_PUT_VARS, correct: false }
@@ -144,8 +134,7 @@ questions:
             - {value: Using the php://input stream, correct: true }
             - {value: Using $_POST, correct: false }
 
-    -
-        question: "What are the correct ways to parse the 1983-07-01 date into an DateTime object?"
+    -   question: "What are the correct ways to parse the 1983-07-01 date into an DateTime object?"
         answers:
             - {value: Using $_PUT, correct: false }
             - {value: Using $HTTP_PUT_VARS, correct: false }
@@ -154,8 +143,7 @@ questions:
             - {value: Using $_POST, correct: false }
 
 
-    -
-        question: "What is the default timeout of a PHP session cookie ?"
+    -   question: "What is the default timeout of a PHP session cookie ?"
         answers:
             - {value: Depends on the web server, correct: false }
             - {value: Until the browser is closed, correct: true }

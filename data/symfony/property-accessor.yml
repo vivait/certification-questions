@@ -23,8 +23,7 @@ questions:
             - { value: Wouter, correct: false t}
             - { value: Ryan, correct: true }
 
-    -
-        question: "What is the method to call to check if getValue can safely be called?"
+    -   question: "What is the method to call to check if getValue can safely be called?"
         answers:
             - { value: "isReadable()", correct: true }
             - { value: "canRead()", correct: false }

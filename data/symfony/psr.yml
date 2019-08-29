@@ -1,7 +1,6 @@
 category: PHP Standards Recommendations
 questions:
-    -
-        question: 'Which are the standards followed by Symfony ?'
+    -   question: 'Which are the standards followed by Symfony ?'
         answers:
             - {value: PSR-0, correct: false}
             - {value: PSR-1,   correct: true}

@@ -1,7 +1,6 @@
 category: HTTP Cache
 questions:
-    -
-        question: 'Which HTTP response headers are involved in the validation caching model?'
+    -   question: 'Which HTTP response headers are involved in the validation caching model?'
         answers:
             - {value: Etag, correct: true}
             - {value: Last-Modified, correct: true}

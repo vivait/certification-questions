@@ -1,7 +1,6 @@
 category: Config
 questions:
-    -
-        question: |
+    -   question: |
             What is the purpose of Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition::fixXmlConfig ?
         answers:
             - {value: "It ensures that single XML elements are turned into an array", correct: true}

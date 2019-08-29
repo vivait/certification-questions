@@ -9,17 +9,17 @@ questions:
 
             Which of the following statements are true?
         answers:
-            - value: "The if condition will be false if the footer block exists in the common_blocks.html.twig template but it's empty (it doesn't have any content inside)."
-              correct: false
+            -   value: "The if condition will be false if the footer block exists in the common_blocks.html.twig template but it's empty (it doesn't have any content inside)."
+                correct: false
 
-            - value: "The code is wrong because the block() function doesn't allow to pass a second argument."
-              correct: false
+            -   value: "The code is wrong because the block() function doesn't allow to pass a second argument."
+                correct: false
 
-            - value: "The code checks if the common_blocks.html.twig template contains a Twig block called footer"
-              correct: true
+            -   value: "The code checks if the common_blocks.html.twig template contains a Twig block called footer"
+                correct: true
 
-            - value: "The code is wrong because the is defined test cannot be used with the block() function."
-              correct: false
+            -   value: "The code is wrong because the is defined test cannot be used with the block() function."
+                correct: false
 
     -   question: |
             Consider the following Twig code snippet:

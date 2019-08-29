@@ -1,15 +1,13 @@
 category: Cache
 questions:
-    -
-        question: 'What is the 2nd argument of Symfony\Component\Config\ConfigCacheFactory::cache method ?'
+    -   question: 'What is the 2nd argument of Symfony\Component\Config\ConfigCacheFactory::cache method ?'
         answers:
             - { value: An array of options, correct: false}
             - { value: A boolean to set the debug mode, correct: false}
             - { value: The resource filename, correct: false}
             - { value: A callback executed if the cache has to be refreshed, correct: true}
 
-    -
-        question: 'Which of theses are the way to add the Cache-Control: public,s-maxage=900 HTTP response header on a Symfony\Component\HttpFoundation\Response object?'
+    -   question: 'Which of theses are the way to add the Cache-Control: public,s-maxage=900 HTTP response header on a Symfony\Component\HttpFoundation\Response object?'
         answers:
             - { value: $response->setShareMaxAge(900);, correct: false}
             - { value: $response->setSharedMaxAge(900);, correct: true}

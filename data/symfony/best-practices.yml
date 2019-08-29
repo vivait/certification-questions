@@ -1,7 +1,6 @@
 category: Best practices
 questions:
-    -
-        question: 'When was the Symfony BC promise introduced ?'
+    -   question: 'When was the Symfony BC promise introduced ?'
         answers:
             - {value: 2.7, correct: false}
             - {value: 2.6, correct: false}
@@ -18,8 +17,7 @@ questions:
             - {value: 2.2, correct: false}
             - {value: 2.5, correct: false}
 
-    -
-        question: 'Which of these are correct ways to create a redirection response in a controller that extends Symfony\Bundle\FrameworkBundle\Controller\Controller?'
+    -   question: 'Which of these are correct ways to create a redirection response in a controller that extends Symfony\Bundle\FrameworkBundle\Controller\Controller?'
         answers:
             - {value: $response = $this->redirect($this->generateUrl("homepage")), correct: true}
             - {value: $response = $this->redirect($this->generate("homepage")), correct: false}

@@ -9,37 +9,37 @@ questions:
 
     -   question: "How do you enable the ErrorHandler?"
         answers:
-            - value: |
-                  use Symfony\Component\Debug\Debug;
-                  use Symfony\Component\Debug\ErrorHandler;
+            -   value: |
+                    use Symfony\Component\Debug\Debug;
+                    use Symfony\Component\Debug\ErrorHandler;
 
-                  Debug::addErrorHandler(new ErrorHandler());
-              correct: false
+                    Debug::addErrorHandler(new ErrorHandler());
+                correct: false
 
-            - value: |
-                  use Symfony\Component\Debug\Debug;
+            -   value: |
+                    use Symfony\Component\Debug\Debug;
 
-                  Debug::enableErrorHandler();
-              correct: false
+                    Debug::enableErrorHandler();
+                correct: false
 
-            - value: |
-                  use Symfony\Component\Debug\ErrorHandler;
+            -   value: |
+                    use Symfony\Component\Debug\ErrorHandler;
 
-                  ErrorHandler::register();
-              correct: true
+                    ErrorHandler::register();
+                correct: true
 
-            - value: |
-                  use Symfony\Component\Debug\Debug;
-                  use Symfony\Component\Debug\ErrorHandler;
+            -   value: |
+                    use Symfony\Component\Debug\Debug;
+                    use Symfony\Component\Debug\ErrorHandler;
 
-                  Debug::setErrorHandler(new ErrorHandler());
-              correct: false
+                    Debug::setErrorHandler(new ErrorHandler());
+                correct: false
 
-            - value: |
-                  use Symfony\Component\Debug\ErrorHandler;
+            -   value: |
+                    use Symfony\Component\Debug\ErrorHandler;
 
-                  ErrorHandler::enable();
-              correct: false
+                    ErrorHandler::enable();
+                correct: false
 
 
 

@@ -1,28 +1,25 @@
 category: Forms
 questions:
     -   question: |
-           Which types are allowed for the choice_attr option of the
-           Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType form type ?"
+            Which types are allowed for the choice_attr option of the
+            Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType form type ?"
         answers:
             - { value: array, correct: true }
             - { value: callable, correct: true }
             - { value: string, correct: true }
             - { value: integer, correct: false }
             - { value: boolean, correct: false }
-    -
-        question: "How to customize the validation error message of the validation error caused by a TransformationFailedException ?"
+    -   question: "How to customize the validation error message of the validation error caused by a TransformationFailedException ?"
         answers:
             - {value: "It's not possible", correct: false}
             - {value: 'The exception message will be used as the validation error message', correct: false}
             - {value: 'By using the invalid_message option', correct: true}
-    -
-        question: 'Are Data Transformers applied on a form field which has the inherit_data option set ?'
+    -   question: 'Are Data Transformers applied on a form field which has the inherit_data option set ?'
         answers:
             - {value: 'Yes', correct: false}
             - {value: 'No', correct: true}
 
-    -
-        question: "If you need to modify the data given during pre-population or modify a form depending on the pre-populated data (adding or removing fields dynamically), to which event your code should be hooked?"
+    -   question: "If you need to modify the data given during pre-population or modify a form depending on the pre-populated data (adding or removing fields dynamically), to which event your code should be hooked?"
         answers:
             - {value: "FormEvents::POST_SET_DATA", correct: false}
             - {value: 'FormEvents::SUBMIT', correct: false}
@@ -30,8 +27,7 @@ questions:
             - {value: 'FormEvents::PRE_SUBMIT', correct: false}
             - {value: 'FormEvents::POST_SUBMIT', correct: false}
 
-    -
-        question: "Which of theses are not options available in every FormType?"
+    -   question: "Which of theses are not options available in every FormType?"
         answers:
             - {value: "is_required", correct: true}
             - {value: "compound", correct: false}
@@ -40,81 +36,79 @@ questions:
             - {value: 'trim', correct: false}
             - {value: 'attributes', correct: true}
 
-    -
-        question: "Which of the following snipets is valid to set the maximum and minimum value for a Symfony\\Component\\Form\\Extension\\Core\\Type\\RangeType form type ?"
+    -   question: "Which of the following snipets is valid to set the maximum and minimum value for a Symfony\\Component\\Form\\Extension\\Core\\Type\\RangeType form type ?"
         answers:
-            - value: |
-                   $formBuilder->add('name', RangeType::class, [
-                       'min' => 5,
-                       'max' => 50
-                   ]);
-              correct: false
-            - value: |
-                  $formBuilder->add('name', RangeType::class, [
-                      'attr' => [
-                          'minimum' => 5,
-                          'maximum' => 50
-                      ]
-                  ]);
-              correct: false
-            - value: |
-                  $formBuilder->add('name', RangeType::class, [
-                      'attr' => [
-                          'min' => 5,
-                          'max' => 50
-                      ]
-                  ]);
-              correct: true
-            - value: |
-                  $formBuilder->add('name', RangeType::class, [
-                      'minimum' => 5,
-                      'maximum' => 50
-                  ]);
-              correct: false
-            - value: |
-                  $formBuilder->add('name', RangeType::class, [
-                      'min' => 5,
-                      'max' => 50
-                  ]);
-              correct: false
+            -   value: |
+                    $formBuilder->add('name', RangeType::class, [
+                        'min' => 5,
+                        'max' => 50
+                    ]);
+                correct: false
+            -   value: |
+                    $formBuilder->add('name', RangeType::class, [
+                        'attr' => [
+                            'minimum' => 5,
+                            'maximum' => 50
+                        ]
+                    ]);
+                correct: false
+            -   value: |
+                    $formBuilder->add('name', RangeType::class, [
+                        'attr' => [
+                            'min' => 5,
+                            'max' => 50
+                        ]
+                    ]);
+                correct: true
+            -   value: |
+                    $formBuilder->add('name', RangeType::class, [
+                        'minimum' => 5,
+                        'maximum' => 50
+                    ]);
+                correct: false
+            -   value: |
+                    $formBuilder->add('name', RangeType::class, [
+                        'min' => 5,
+                        'max' => 50
+                    ]);
+                correct: false
 
-    -
-        question: "How to get the value of title set in a form?"
+    -   question: "How to get the value of title set in a form?"
         answers:
-            - value: |
-                  $formBuilder->add('name', RangeType::class, [
-                      'min' => 5,
-                      'max' => 50
-                  ]);
-              correct: false
-            - value: |
-                  $formBuilder->add('name', RangeType::class, [
-                      'attr' => [
-                          'minimum' => 5,
-                          'maximum' => 50
-                      ]
-                  ]);
-              correct: false
-            - value: |
-                  $formBuilder->add('name', RangeType::class, [
-                      'attr' => [
-                          'min' => 5,
-                          'max' => 50
-                      ]
-                  ]);
-              correct: true
-            - value: |
-                  $formBuilder->add('name', RangeType::class, [
-                      'minimum' => 5,
-                      'maximum' => 50
-                  ]);
-              correct: false
-            - value: |
-                  $formBuilder->add('name', RangeType::class, [
-                      'min' => 5,
-                      'max' => 50
-                  ]);
-              correct: false
+            -   value: |
+                    $formBuilder->add('name', RangeType::class, [
+                        'min' => 5,
+                        'max' => 50
+                    ]);
+                correct: false
+            -   value: |
+                    $formBuilder->add('name', RangeType::class, [
+                        'attr' => [
+                            'minimum' => 5,
+                            'maximum' => 50
+                        ]
+                    ]);
+                correct: false
+            -   value: |
+                    $formBuilder->add('name', RangeType::class, [
+                        'attr' => [
+                            'min' => 5,
+                            'max' => 50
+                        ]
+                    ]);
+                correct: true
+            -   value: |
+                    $formBuilder->add('name', RangeType::class, [
+                        'minimum' => 5,
+                        'maximum' => 50
+                    ]);
+                correct: false
+            -   value: |
+                    $formBuilder->add('name', RangeType::class, [
+                        'min' => 5,
+                        'max' => 50
+                    ]);
+                correct: false
 
     -   question: |
             By default, which function provides the choices of the Symfony\Component\Form\Extension\Core\Type\LanguageType form type ?

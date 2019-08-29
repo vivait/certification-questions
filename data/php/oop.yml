@@ -1,7 +1,6 @@
 category: OOP
 questions:
-    -
-        question: 'Which of the following is not a magic method?'
+    -   question: 'Which of the following is not a magic method?'
         answers:
             - {value: '__wakeup()', correct: false}
             - {value: '__invoke()', correct: false}
@@ -10,8 +9,7 @@ questions:
             - {value: '__wakeup()', correct: false}
             - {value: '__set_state()', correct: true}
 
-    -
-        question: 'Is it possible to create a new instance of a class without using the special new keyword and invoking its __construct() method?'
+    -   question: 'Is it possible to create a new instance of a class without using the special new keyword and invoking its __construct() method?'
         answers:
             - {value: 'No', correct: false}
             - {value: 'Yes', correct: true}

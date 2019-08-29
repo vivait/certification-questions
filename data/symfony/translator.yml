@@ -1,7 +1,6 @@
 category: Transalator
 questions:
-    -
-        question: |
+    -   question: |
             Which message displays these translated messages depending on a count variable.
 
             0: No result
@@ -14,16 +13,14 @@ questions:
             - {value: "{0} No result|{1,10} Some results|}10,Inf{ Too much results",    correct: false}
 
 
-    -
-        question: "What is the tag to register a custom service that extracts messages from a file?"
+    -   question: "What is the tag to register a custom service that extracts messages from a file?"
         answers:
             - { value: "translation.extractor", correct: true }
             - { value: "translator.extractor", correct: false }
             - { value: "translator_extractor", correct: false }
             - { value: "translation_extractor", correct: false }
 
-    -
-        question: "Which of the followings are not part of the built-in loaders?"
+    -   question: "Which of the followings are not part of the built-in loaders?"
         answers:
             - { value: "ArrayLoader", correct: false }
             - { value: "CsvLoader", correct: true }

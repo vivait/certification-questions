@@ -1,7 +1,6 @@
 category: Arrays
 questions:
-    -
-        question: |
+    -   question: |
             What is the output of the following PHP script?
             ```
             <?php
@@ -20,8 +19,7 @@ questions:
             - {value: '09537', correct: false}
             - {value: '50937', correct: false}
             - {value: '375509', correct: false}
-    -
-        question: |
+    -   question: |
             What is the output of the following PHP script?
 
             <?php
@@ -41,8 +39,7 @@ questions:
             - {value: '153', correct: true}
             - {value: 'An error', correct: false}
 
-    -
-        question: |
+    -   question: |
             What line of code should be substituted with /** line **/ to achieve an output of a?
 
             <?php
@@ -66,8 +63,7 @@ questions:
             - {value: 'sort($fruitAndVeg);', correct: false}
             - {value: 'ksort($fruitAndVeg);', correct: true}
 
-    -
-        question: |
+    -   question: |
             In the following code, what is the key of the element with value 25?
 
             <?php
@@ -85,16 +81,14 @@ questions:
             - {value: '0', correct: false}
             - {value: '9', correct: false}
 
-    -
-        question: 'How do you add the value 10 to an array called $myArray?'
+    -   question: 'How do you add the value 10 to an array called $myArray?'
         answers:
             - {value: 'array_shift($myArray, 10);', correct: false}
             - {value: 'array_unshift($myArray, 10);', correct: true}
             - {value: '$myArray = array_merge($myArray, [10]);', correct: true}
             - {value: '$myArray = array_merge($myArray, 10);', correct: false}
 
-    -
-        question: |
+    -   question: |
             What is the output of the following PHP script?
 
             <?php

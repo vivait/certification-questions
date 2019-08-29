@@ -1,7 +1,6 @@
 category: Options Resolver
 questions:
-    -
-        question: "What is the correct call of setAllowedTypes to validate the value null of the my_option option?"
+    -   question: "What is the correct call of setAllowedTypes to validate the value null of the my_option option?"
         answers:
             - {value: "$resolver->setAllowedTypes('my_option', 'null');", correct: true}
             - {value: "$resolver->setAllowedTypes('my_option', array(null));", correct: false}
