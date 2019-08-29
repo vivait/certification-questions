@@ -21,3 +21,16 @@ questions:
             - { value: "translator.extractor", correct: false }
             - { value: "translator_extractor", correct: false }
             - { value: "translation_extractor", correct: false }
+
+    -
+        question: "Which of the followings are not part of the built-in loaders?"
+        answers:
+            - { value: "ArrayLoader", correct: false }
+            - { value: "CsvLoader", correct: true }
+            - { value: "PoFileLoader", correct: false }
+            - { value: "PhpFileLoader", correct: false }
+            - { value: "QtFileLoader", correct: false }
+            - { value: "JsonLoader", correct: true }
+            - { value: "CsvFileLoader", correct: false }
+            - { value: "JsonFileLoader", correct: false }
+            - { value: "MoFileLoader", correct: false }

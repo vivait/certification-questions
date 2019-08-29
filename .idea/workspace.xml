@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="2514cd7a-27d5-4c38-8897-30836aa4852f">
-      <change afterPath="$PROJECT_DIR$/data/symfony/config.yml" afterDir="false" />
+    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/bundles.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/bundles.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/dumper.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dumper.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/finder.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/finder.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/yaml.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/yaml.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/property-accessor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/property-accessor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/translator.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/translator.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,12 +129,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_44.php">
+  <component name="RunManager" selected="PHP Script.scratch_45.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_33.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_33.php">
       <method v="2" />
     </configuration>
     <configuration name="scratch_34.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_34.php">
@@ -149,21 +146,25 @@
     <configuration name="scratch_44.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_44.php">
       <method v="2" />
     </configuration>
+    <configuration name="scratch_45.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_45.php">
+      <CommandLine parameters="-d memory_limit=-1" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="PHP Script.scratch_33.php" />
       <item itemvalue="PHP Script.scratch_34.php" />
       <item itemvalue="PHP Script.scratch_40.php" />
       <item itemvalue="PHP Script.scratch_43.php" />
       <item itemvalue="PHP Script.scratch_44.php" />
+      <item itemvalue="PHP Script.scratch_45.php" />
       <item itemvalue="PHPUnit.phpunit.xml.dist" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.scratch_45.php" />
         <item itemvalue="PHP Script.scratch_44.php" />
         <item itemvalue="PHP Script.scratch_43.php" />
         <item itemvalue="PHP Script.scratch_40.php" />
         <item itemvalue="PHP Script.scratch_34.php" />
-        <item itemvalue="PHP Script.scratch_33.php" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +205,9 @@
       <workItem from="1566375228435" duration="910000" />
       <workItem from="1566401460301" duration="1037000" />
       <workItem from="1566488176402" duration="1304000" />
-      <workItem from="1566574869191" duration="836000" />
+      <workItem from="1566574869191" duration="2592000" />
+      <workItem from="1567007258942" duration="777000" />
+      <workItem from="1567065665960" duration="116000" />
     </task>
     <task id="LOCAL-00001" summary="a7562208-c630-4142-8cab-3d728de28c90">
       <created>1564070847740</created>
@@ -325,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566489041478</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="4f4f1c11-3fff-4e27-9100-9ef6ed48ac5d">
+      <created>1566575907195</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1566575907195</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,6 +370,7 @@
     <MESSAGE value="f15d4191-1d18-4f72-a3ba-13d05ec58818" />
     <MESSAGE value="Another" />
     <MESSAGE value="2514cd7a-27d5-4c38-8897-30836aa4852f" />
-    <option name="LAST_COMMIT_MESSAGE" value="2514cd7a-27d5-4c38-8897-30836aa4852f" />
+    <MESSAGE value="4f4f1c11-3fff-4e27-9100-9ef6ed48ac5d" />
+    <option name="LAST_COMMIT_MESSAGE" value="4f4f1c11-3fff-4e27-9100-9ef6ed48ac5d" />
   </component>
 </project>

@@ -152,3 +152,12 @@ questions:
             - {value: It is not possible, correct: false }
             - {value: Using the php://input stream, correct: true }
             - {value: Using $_POST, correct: false }
+
+
+    -
+        question: "What is the default timeout of a PHP session cookie ?"
+        answers:
+            - {value: Depends on the web server, correct: false }
+            - {value: Until the browser is closed, correct: true }
+            - {value: 20 minutes, correct: false }
+            - {value: 10 minutes, correct: false }

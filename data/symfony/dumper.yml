@@ -6,3 +6,42 @@ questions:
             - { value: set_error_handler($callable);, correct: false }
             - { value: trigger_error($callable);, correct: false }
             - { value: VarDumper::setDumper($callable);, correct: false }
+
+    -   question: "How do you enable the ErrorHandler?"
+        answers:
+            - value: |
+                  use Symfony\Component\Debug\Debug;
+                  use Symfony\Component\Debug\ErrorHandler;
+
+                  Debug::addErrorHandler(new ErrorHandler());
+              correct: false
+
+            - value: |
+                  use Symfony\Component\Debug\Debug;
+
+                  Debug::enableErrorHandler();
+              correct: false
+
+            - value: |
+                  use Symfony\Component\Debug\ErrorHandler;
+
+                  ErrorHandler::register();
+              correct: true
+
+            - value: |
+                  use Symfony\Component\Debug\Debug;
+                  use Symfony\Component\Debug\ErrorHandler;
+
+                  Debug::setErrorHandler(new ErrorHandler());
+              correct: false
+
+            - value: |
+                  use Symfony\Component\Debug\ErrorHandler;
+
+                  ErrorHandler::enable();
+              correct: false
+
+
+
+
+

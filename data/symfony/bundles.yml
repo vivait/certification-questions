@@ -7,3 +7,11 @@ questions:
             - {value: Dumps the default configuration of a bundle, correct: true}
             - {value: Dumps the current configuration in .htaccess format using the php_value directive, correct: false}
             - {value: Dumps the current configuration of a bundle, correct: false}
+
+    -
+        question: 'What value type is returned by the Symfony\Bundle\FrameworkBundle\Controller\Controller::renderView() method?'
+        answers:
+            - {value: An instance of Symfony\Component\View\View., correct: false}
+            - {value: An instance of Symfony\Component\HttpFoundation\Response., correct: false}
+            - {value: A string., correct: true}
+            - {value: An instance of Symfony\Component\BrowserKit\Response., correct: false}
