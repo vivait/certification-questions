@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/bundles.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/bundles.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/dumper.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dumper.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/finder.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/finder.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/property-accessor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/property-accessor.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/translator.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/translator.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/yaml.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/yaml.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +93,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP&#10;TEXT" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML&#10;PHP&#10;TEXT" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/data/symfony" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs.protractor.protractor_package" value="" />
@@ -208,6 +203,7 @@
       <workItem from="1566574869191" duration="2592000" />
       <workItem from="1567007258942" duration="777000" />
       <workItem from="1567065665960" duration="116000" />
+      <workItem from="1567073392188" duration="1107000" />
     </task>
     <task id="LOCAL-00001" summary="a7562208-c630-4142-8cab-3d728de28c90">
       <created>1564070847740</created>
@@ -335,7 +331,21 @@
       <option name="project" value="LOCAL" />
       <updated>1566575907195</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Some tesst">
+      <created>1567073399354</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1567073399354</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Some tesst">
+      <created>1567073440358</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1567073440358</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,6 +381,7 @@
     <MESSAGE value="Another" />
     <MESSAGE value="2514cd7a-27d5-4c38-8897-30836aa4852f" />
     <MESSAGE value="4f4f1c11-3fff-4e27-9100-9ef6ed48ac5d" />
-    <option name="LAST_COMMIT_MESSAGE" value="4f4f1c11-3fff-4e27-9100-9ef6ed48ac5d" />
+    <MESSAGE value="Some tesst" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some tesst" />
   </component>
 </project>
