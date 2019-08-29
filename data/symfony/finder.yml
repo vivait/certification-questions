@@ -33,7 +33,7 @@ questions:
             - { value: 1, correct: false }
             - { value: false, correct: true }
 
-    -   question: "What is the Symfony\Component\Filesystem\Filesystem method to dump contents to a file?"
+    -   question: "What is the Symfony\\Component\\Filesystem\\Filesystem method to dump contents to a file?"
         answers:
             - { value: "$fs->dumpFile('file.txt', 'Hello World');", correct: true }
             - { value: "$fs->file('file.txt', 'Hello World');", correct: false }
