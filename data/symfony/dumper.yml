@@ -41,7 +41,28 @@ questions:
                     ErrorHandler::enable();
                 correct: false
 
+    -   question: |
+            What will be in $result with the following code?
 
+            use Symfony\Component\VarDumper\Cloner\VarCloner;
 
+            $cloner = new VarCloner();
+            $result = $cloner->cloneVar($myVar);
+        answers:
+            -   value: 'An array.'
+                correct: false
 
+            -   value: 'A Symfony\\Component\\VarDumper\\Cloner\\Clone object'
+                correct: false
 
+            -   value: 'A Symfony\\Component\\VarDumper\\Data object'
+                correct: false
+
+            -   value: 'A Symfony\\Component\\VarDumper\\Cloner\\CloneData object'
+                correct: false
+
+            -   value: 'A Symfony\\Component\\VarDumper\\Cloner\\Data object'
+                correct: true
+
+            -   value: 'An object of the same class of $myVar.'
+                correct: false

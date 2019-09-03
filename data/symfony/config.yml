@@ -7,3 +7,11 @@ questions:
             - {value: "It applies a custom function to an XML element if an error occurs", correct: false}
             - {value: 'It normalizes XML element name', correct: false}
             - {value: 'It always applies a custom function to an XML element', correct: false}
+
+    -   question: |
+            What is the 2nd argument of Symfony\Component\Config\ConfigCacheFactory::cache method ?
+        answers:
+            - {value: "A boolean to set the debug mode", correct: false}
+            - {value: 'An array of options', correct: false}
+            - {value: 'The resource filename', correct: false}
+            - {value: 'A callback executed if the cache has to be refreshed', correct: true}

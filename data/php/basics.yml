@@ -149,3 +149,29 @@ questions:
             - {value: Until the browser is closed, correct: true }
             - {value: 20 minutes, correct: false }
             - {value: 10 minutes, correct: false }
+
+    -   question: |
+            <?php
+            $bool = true;
+            $array = array();
+            $a = 14;
+            $a = $a + $bool - $array;
+            echo $a;
+        answers:
+            - {value: 15, correct: false }
+            - {value: An error, correct: true }
+            - {value: 14, correct: false }
+            - {value: 0, correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            echo print('hello');
+
+            What will be the output when running this script?
+        answers:
+            - {value: hellotrue, correct: false }
+            - {value: hello5, correct: false }
+            - {value: hello1, correct: true }
+            - {value: hello0, correct: false }
+            - {value: hello, correct: false }

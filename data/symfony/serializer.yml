@@ -101,3 +101,21 @@ questions:
 
                     $persons = $serializer->deserialize($data, 'Acme\Person[]', 'json', 'array');
                 correct: false
+
+    -   question: "Which of these methods are automatically detected and used by the Serializer ?"
+        answers:
+            -   value:  remove*
+                correct: true
+            -   value:  get*
+                correct: true
+            -   value:  has*
+                correct: true
+            -   value: add*
+                correct: true
+            -   value: is*
+                correct: true
+
+
+
+
+

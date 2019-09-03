@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
+    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="Formatting fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/bundles.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/bundles.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/dumper.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dumper.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/forms.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/forms.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/serializer.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/serializer.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/yaml.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/yaml.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,7 +100,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML&#10;PHP&#10;TEXT" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP&#10;Twig&#10;HTML&#10;TEXT" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/data/symfony" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs.protractor.protractor_package" value="" />
@@ -124,18 +131,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_45.php">
+  <component name="RunManager" selected="PHP Script.scratch_50.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_34.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_34.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_40.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_40.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_43.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_43.php">
       <method v="2" />
     </configuration>
     <configuration name="scratch_44.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_44.php">
@@ -145,21 +143,30 @@
       <CommandLine parameters="-d memory_limit=-1" />
       <method v="2" />
     </configuration>
+    <configuration name="scratch_47.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_47.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_48.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_48.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_50.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_50.php">
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="PHP Script.scratch_34.php" />
-      <item itemvalue="PHP Script.scratch_40.php" />
-      <item itemvalue="PHP Script.scratch_43.php" />
       <item itemvalue="PHP Script.scratch_44.php" />
       <item itemvalue="PHP Script.scratch_45.php" />
+      <item itemvalue="PHP Script.scratch_47.php" />
       <item itemvalue="PHPUnit.phpunit.xml.dist" />
+      <item itemvalue="PHP Script.scratch_48.php" />
+      <item itemvalue="PHP Script.scratch_50.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.scratch_50.php" />
+        <item itemvalue="PHP Script.scratch_48.php" />
+        <item itemvalue="PHP Script.scratch_47.php" />
         <item itemvalue="PHP Script.scratch_45.php" />
         <item itemvalue="PHP Script.scratch_44.php" />
-        <item itemvalue="PHP Script.scratch_43.php" />
-        <item itemvalue="PHP Script.scratch_40.php" />
-        <item itemvalue="PHP Script.scratch_34.php" />
       </list>
     </recent_temporary>
   </component>
@@ -204,6 +211,11 @@
       <workItem from="1567007258942" duration="777000" />
       <workItem from="1567065665960" duration="116000" />
       <workItem from="1567073392188" duration="1107000" />
+      <workItem from="1567092446053" duration="517000" />
+      <workItem from="1567177854139" duration="427000" />
+      <workItem from="1567438075890" duration="1415000" />
+      <workItem from="1567498324861" duration="76000" />
+      <workItem from="1567524633510" duration="1343000" />
     </task>
     <task id="LOCAL-00001" summary="a7562208-c630-4142-8cab-3d728de28c90">
       <created>1564070847740</created>
@@ -345,7 +357,21 @@
       <option name="project" value="LOCAL" />
       <updated>1567073440358</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Fixes">
+      <created>1567092462524</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1567092462524</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Formatting fixes">
+      <created>1567092475991</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1567092475991</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,6 +408,8 @@
     <MESSAGE value="2514cd7a-27d5-4c38-8897-30836aa4852f" />
     <MESSAGE value="4f4f1c11-3fff-4e27-9100-9ef6ed48ac5d" />
     <MESSAGE value="Some tesst" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some tesst" />
+    <MESSAGE value="Fixes" />
+    <MESSAGE value="Formatting fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formatting fixes" />
   </component>
 </project>

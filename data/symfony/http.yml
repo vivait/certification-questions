@@ -41,3 +41,10 @@ questions:
             - { value: 502, correct: false }
             - { value: 503, correct: false }
             - { value: 501, correct: true }
+
+    -   question: 'For a request to http://example.com/blog/index.php/post/hello-world what will be the value of $pathInfo in the following code?'
+        answers:
+            - { value: /post/hello-world, correct: true }
+            - { value: /blog/index.php/post/hello-world, correct: false }
+            - { value: example.com/blog/index.php/post/hello-world, correct: false }
+            - { value: /index.php/post/hello-world, correct: false }

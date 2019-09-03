@@ -13,3 +13,18 @@ questions:
             - {value: An instance of Symfony\Component\HttpFoundation\Response., correct: false}
             - {value: A string., correct: true}
             - {value: An instance of Symfony\Component\BrowserKit\Response., correct: false}
+
+    -   question: 'What is the tag to use to create a custom form type extension?'
+        answers:
+            - {value: form.type.extension, correct: false}
+            - {value: form.extension, correct: false}
+            - {value: form_extension, correct: false}
+            - {value: form.type_extension, correct: true}
+            - {value: type_extension, correct: false}
+
+    -   question: 'What is the tag to allow remember me authentication?'
+        answers:
+            - {value: security.remember_me_aware, correct: true}
+            - {value: security.remember_me_auth, correct: false}
+            - {value: security.remember_me_authentication, correct: false}
+            - {value: security.remember_me, correct: false}

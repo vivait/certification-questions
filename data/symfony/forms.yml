@@ -117,3 +117,17 @@ questions:
             - { value: Intl::getLanguages(), correct: false }
             - { value: Symfony\Component\Locale\getDisplayLanguages(), correct: false }
             - { value: Symfony\Component\Form\Extension\Core\Type\LanguageType::getChoices(), correct: false }
+
+    -   question: "According to the official Symfony Best Practices Guide, in which namespace do you need to put the form type classes?"
+        answers:
+            - { value: AppBundle\FormType\Form, correct: false }
+            - { value: AppBundle\Form, correct: true }
+            - { value: AppBundle\Form\Type, correct: false }
+            - { value: AppBundle\FormType, correct: false }
+
+    -   question: "How to add an extension MyForm to the Form component ?"
+        answers:
+            - { value: AppBundle\FormType\Form, correct: false }
+            - { value: AppBundle\Form, correct: true }
+            - { value: AppBundle\Form\Type, correct: false }
+            - { value: AppBundle\FormType, correct: false }
