@@ -48,3 +48,10 @@ questions:
             - { value: /blog/index.php/post/hello-world, correct: false }
             - { value: example.com/blog/index.php/post/hello-world, correct: false }
             - { value: /index.php/post/hello-world, correct: false }
+
+    -   question: "Which of these methods aren't mentioned in the RFC2616?"
+        answers:
+            - { value: LINK, correct: true }
+            - { value: CONNECT, correct: false }
+            - { value: TRACE, correct: false }
+            - { value: PATCH, correct: true }

@@ -37,3 +37,20 @@ questions:
             - {value: "affirmative", correct: true}
             - {value: "consensus", correct: false}
             - {value: "unanimous", correct: false}
+
+    -   question: "Which is the interface used for all security authentication listeners?"
+        answers:
+            - {value: Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface, correct: true}
+            - {value: Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface, correct: false}
+            - {value: Sensio\Bundle\FrameworkExtraBundle\EventListener\SecurityListenerInterface, correct: false}
+            - {value: Symfony\Component\Security\Guard\GuardAuthenticatorInterface, correct: false}
+
+    -   question: Which of the following "roles" are built-in ?
+        answers:
+            - {value: IS_FULLY_AUTHENTICATED, correct: false}
+            - {value: IS_AUTHENTICATED_REMEMBERED, correct: true}
+            - {value: IS_AUTHENTICATED_INTERACTIVE, correct: false}
+            - {value: IS_AUTHENTICATED_ANONYMOUSLY, correct: true}
+            - {value: IS_ANONYMOUS, correct: false}
+            - {value: IS_NOT_AUTHENTICATED, correct: false}
+            - {value: IS_AUTHENTICATED_FULLY, correct: true}

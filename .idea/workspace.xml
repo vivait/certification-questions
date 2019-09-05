@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="Formatting fixes">
+    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/bundles.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/bundles.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/dumper.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dumper.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/forms.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/forms.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/serializer.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/serializer.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/yaml.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/yaml.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/security.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -156,9 +151,9 @@
       <item itemvalue="PHP Script.scratch_44.php" />
       <item itemvalue="PHP Script.scratch_45.php" />
       <item itemvalue="PHP Script.scratch_47.php" />
-      <item itemvalue="PHPUnit.phpunit.xml.dist" />
       <item itemvalue="PHP Script.scratch_48.php" />
       <item itemvalue="PHP Script.scratch_50.php" />
+      <item itemvalue="PHPUnit.phpunit.xml.dist" />
     </list>
     <recent_temporary>
       <list>
@@ -215,7 +210,10 @@
       <workItem from="1567177854139" duration="427000" />
       <workItem from="1567438075890" duration="1415000" />
       <workItem from="1567498324861" duration="76000" />
-      <workItem from="1567524633510" duration="1343000" />
+      <workItem from="1567524633510" duration="1437000" />
+      <workItem from="1567611231276" duration="1144000" />
+      <workItem from="1567624372275" duration="68000" />
+      <workItem from="1567697432472" duration="106000" />
     </task>
     <task id="LOCAL-00001" summary="a7562208-c630-4142-8cab-3d728de28c90">
       <created>1564070847740</created>
@@ -371,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567092475991</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Questions">
+      <created>1567528304973</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1567528304973</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,6 +415,7 @@
     <MESSAGE value="Some tesst" />
     <MESSAGE value="Fixes" />
     <MESSAGE value="Formatting fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Formatting fixes" />
+    <MESSAGE value="Questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Questions" />
   </component>
 </project>
