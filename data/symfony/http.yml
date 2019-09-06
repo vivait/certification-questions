@@ -55,3 +55,12 @@ questions:
             - { value: CONNECT, correct: false }
             - { value: TRACE, correct: false }
             - { value: PATCH, correct: true }
+
+    -   question: "What is the argument passed to listeners of kernel.view?"
+        answers:
+            - { value: GetResponseForControllerResultEvent, correct: false }
+            - { value: ViewEvent, correct: true }
+            - { value: RequestViewEvent, correct: false }
+            - { value: FinishRequestEvent, correct: true }
+            - { value: ResponseEvent, correct: true }
+            - { value: ResponseViewEvent, correct: true }
