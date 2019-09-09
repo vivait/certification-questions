@@ -127,7 +127,31 @@ questions:
 
     -   question: "How to add an extension MyForm to the Form component ?"
         answers:
-            - { value: AppBundle\FormType\Form, correct: false }
-            - { value: AppBundle\Form, correct: true }
-            - { value: AppBundle\Form\Type, correct: false }
-            - { value: AppBundle\FormType, correct: false }
+            - value: |
+                  use Symfony\Component\Form\Forms;
+
+                  $formFactory = Forms::createFormFactoryBuilder()
+                  ->addExtension(new MyFormExtension())
+                  ->getFormFactory();
+              correct: true
+            - value: |
+                  use Symfony\Component\Form\Forms;
+
+                  $formFactory = Forms::createFormFactoryBuilder()
+                  ->registerExtension(new MyFormExtension())
+                  ->getFormFactory();
+              correct: false
+            - value: |
+                  use Symfony\Component\Form\Forms;
+
+                  $formFactory = Forms::createFormFactoryBuilder()
+                  ->addExtension('text', new MyFormExtension())
+                  ->getFormFactory();
+              correct: false
+            - value: |
+                  use Symfony\Component\Form\Forms;
+
+                  $formFactory = Forms::createFormFactoryBuilder()
+                  ->add(new MyFormExtension())
+                  ->getFormFactory();
+              correct: false

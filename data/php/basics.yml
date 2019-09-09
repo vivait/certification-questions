@@ -175,3 +175,53 @@ questions:
             - {value: hello1, correct: true }
             - {value: hello0, correct: false }
             - {value: hello, correct: false }
+
+
+    -   question: |
+            What will output the following code ?
+
+            $input = <<<'EOF'
+            1;PHP;Likes dollar signs
+            2;Python;Likes whitespace
+            3;Ruby;Likes blocks
+            EOF;
+
+            function input_parser($input) {
+                foreach (explode("\n", $input) as $line) {
+                    $fields = explode(';', $line);
+                    $id = array_shift($fields);
+
+                    yield $id => $fields;
+                }
+            }
+
+            foreach (input_parser($input) as $id => $fields) {
+                echo "$id:\n";
+                echo "    $fields[0]\n";
+                echo "    $fields[1]\n";
+            }
+        answers:
+            - value: |
+                  1: PHP Likes dollar signs
+                  2: Python Likes whitespace
+                  3: Ruby Likes blocks
+              correct: false
+            - value: |
+                  1;PHP;Likes dollar signs
+                  2;Python;Likes whitespace
+                  3;Ruby;Likes blocks
+              correct: false
+            - value: |
+                  1:
+                      PHP
+                      Likes dollar signs
+                  2:
+                      Python
+                      Likes whitespace
+                  3:
+                      Ruby
+                      Likes blocks
+              correct: true
+            - value: |
+                 An error
+              correct: false

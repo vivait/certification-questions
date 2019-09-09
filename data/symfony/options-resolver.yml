@@ -6,3 +6,8 @@ questions:
             - {value: "$resolver->setAllowedTypes('my_option', array(null));", correct: false}
             - {value: "$resolver->setAllowedTypes('my_option', array('null'));", correct: false}
             - {value: "$resolver->setAllowedTypes('my_option', null);", correct: false}
+
+    -   question: "Is it possible to define default values that depend on another option?"
+        answers:
+            - {value: "No", correct: false}
+            - {value: "Yes", correct: true}
