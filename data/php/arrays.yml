@@ -106,7 +106,17 @@ questions:
             - {value: '375509', correct: false}
             - {value: '09537', correct: false}
 
+    -   question: |
+            What is the output ?
 
+            <?php
+            $base_array = ['red', 'green', 'yellow', 'white'];
+            $replacements_array = [0 => 'orange', 4 => 'blue'];
 
-
-
+            $result = array_replace($base_array, $replacements_array);
+            print_r($result);
+        answers:
+            - {value: 'Array ( [0] => yellow [1] => white [2] => blue [3] => green [4] => orange )', correct: false}
+            - {value: 'Array ( [0] => orange [1] => green [2] => yellow [3] => white [4] => blue )', correct: true}
+            - {value: 'An error', correct: false}
+            - {value: 'Array ( [0] => blue [1] => white [2] => yellow [3] => green [4] => orange )', correct: false}

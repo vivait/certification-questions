@@ -54,3 +54,8 @@ questions:
             - {value: IS_ANONYMOUS, correct: false}
             - {value: IS_NOT_AUTHENTICATED, correct: false}
             - {value: IS_AUTHENTICATED_FULLY, correct: true}
+
+    -   question: Can the check_path route be behind another firewall than the main one?
+        answers:
+            - {value: Yes, correct: false}
+            - {value: No, correct: true}
