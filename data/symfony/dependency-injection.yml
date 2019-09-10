@@ -111,3 +111,10 @@ questions:
             - {value: 'An AbstractController replaces the former Controller.', correct: true}
             - {value: 'An AbstractController behaves like a Controller, but provide a restricted access to services.', correct: true}
             - {value: 'An AbstractController is ServiceSubscriberInterface.', correct: true}
+
+    -   question: What is the tag to use to register your service to be called during the cache clearing process?
+        answers:
+            - {value: 'cache_clearer', correct: false}
+            - {value: 'cache.clearer', correct: false}
+            - {value: 'kernel.cache', correct: false}
+            - {value: 'kernel.cache_clearer', correct: true}

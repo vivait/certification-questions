@@ -120,3 +120,35 @@ questions:
             - {value: 'Array ( [0] => orange [1] => green [2] => yellow [3] => white [4] => blue )', correct: true}
             - {value: 'An error', correct: false}
             - {value: 'Array ( [0] => blue [1] => white [2] => yellow [3] => green [4] => orange )', correct: false}
+
+
+    -   question: |
+            n the PHP script below, what line of code should be substituted with /** line **/ to achieve an output of eeeeee?
+
+            <?php
+            function sortByLength($a, $b)
+            {
+                $lenA = strlen($a);
+                $lenB = strlen($b);
+
+                if ($lenA == $lenB) { return 0; }
+
+                /** line **/
+            }
+
+            $values = [
+                'ccc',
+                'a',
+                'eeeeee',
+                'dddd',
+                'bb',
+                'fffff'
+            ];
+
+            usort($values, 'sortByLength');
+            echo $values[5];
+        answers:
+            - {value: 'return $lenA <=> $lenB;', correct: true}
+            - {value: 'return $lenA < $lenB ? 0 : -1;', correct: false}
+            - {value: 'return $lenB <=> $lenA;', correct: false}
+            - {value: 'return $lenA < $lenB ? 1 : -1;', correct: false}

@@ -10,3 +10,10 @@ questions:
             - {value: PSR-5, correct: false}
             - {value: PSR-6, correct: false}
             - {value: PSR-7, correct: false}
+
+    -   question: 'What is PSR-3?'
+        answers:
+            - {value: A standard way to convert fully qualified names into file paths., correct: false}
+            - {value: A common logger interface.,   correct: true}
+            - {value: A utility to convert non-namespaced PHP classes into namespaced ones,   correct: false}
+            - {value: A coding style guide.,   correct: false}

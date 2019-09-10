@@ -54,3 +54,10 @@ questions:
             - {value: 'ACME', correct: true}
             - {value: 'ACME Welcome to ACME!', correct: false}
             - {value: 'This template will display an error because the block() function defines only one argument.', correct: false}
+
+    -   question: Which of the following $options allow a Twig_Filter decide how to escape data by itself?
+        answers:
+            - {value: "['is_safe' => true]", correct: false}
+            - {value: "['is_safe' => ['html']]", correct: true}
+            - {value: "['is_safe']", correct: false}
+            - {value: "['is_safe' => 'html']", correct: false}
