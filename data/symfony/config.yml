@@ -15,3 +15,17 @@ questions:
             - {value: 'An array of options', correct: false}
             - {value: 'The resource filename', correct: false}
             - {value: 'A callback executed if the cache has to be refreshed', correct: true}
+
+    -   question: |
+            Which of the following are valid node types?
+        answers:
+            - {value: scalar, correct: true}
+            - {value: boolean, correct: true}
+            - {value: integer, correct: true}
+            - {value: float, correct: true}
+            - {value: enum, correct: true}
+            - {value: array, correct: true}
+            - {value: variable, correct: true}
+            - {value: object, correct: false}
+            - {value: number, correct: false}
+            - {value: string, correct: false}
