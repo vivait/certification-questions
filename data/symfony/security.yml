@@ -59,3 +59,20 @@ questions:
         answers:
             - {value: Yes, correct: false}
             - {value: No, correct: true}
+
+    -   question: What is the signature of the voteOnAttribute() method from Symfony\Component\Security\Core\Authorization\Voter\Voter abstract class?
+        answers:
+            - {value: voteOnAttribute($attribute, TokenInterface $token, $subject), correct: false}
+            - {value: voteOnAttribute(TokenInterface $token, $subject, $attribute), correct: false}
+            - {value: voteOnAttribute(TokenInterface $token, $attribute, $subject), correct: false}
+            - {value: voteOnAttribute($attribute, $subject, TokenInterface $token), correct: true}
+
+    -   question: Which are the constants defined in Symfony\Component\Security\Core\Security class?
+        answers:
+            - {value: WRONG_PASSWORD, correct: false}
+            - {value: AUTHENTICATION_ERROR, correct: true}
+            - {value: AUTHENTICATION_FAILURE, correct: false}
+            - {value: LAST_USERNAME, correct: true}
+            - {value: ACCESS_DENIED_ERROR, correct: true}
+            - {value: MAX_USERNAME_LENGTH, correct: true}
+            - {value: BAD_CREDENTIALS, correct: false}

@@ -64,3 +64,18 @@ questions:
             - { value: FinishRequestEvent, correct: true }
             - { value: ResponseEvent, correct: true }
             - { value: ResponseViewEvent, correct: true }
+
+    -   question: "Is there any required header in the request ?"
+        answers:
+            - { value: No, correct: false }
+            - { value: Yes, correct: true }
+
+    -   question: "What is the argument passed to listeners of kernel.view?"
+        answers:
+            - { value: 201, correct: true }
+            - { value: 301, correct: true }
+            - { value: 302, correct: true }
+            - { value: 303, correct: true }
+            - { value: 307, correct: true }
+            - { value: 308, correct: true }
+            - { value: 304, correct: false }

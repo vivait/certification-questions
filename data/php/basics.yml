@@ -225,3 +225,11 @@ questions:
             - value: |
                  An error
               correct: false
+
+    -   question: "How can you get the value of the current configuration directives (php.ini) of a PHP extension?"
+        answers:
+            - {value: With php://config stream, correct: false }
+            - {value: With ini_get_all(), correct: true }
+            - {value: With the $GLOBALS array, correct: false }
+            - {value: With the reflection API, correct: true }
+            - {value: With get_loaded_extensions(), correct: true }
