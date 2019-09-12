@@ -118,3 +118,12 @@ questions:
             - {value: 'cache.clearer', correct: false}
             - {value: 'kernel.cache', correct: false}
             - {value: 'kernel.cache_clearer', correct: true}
+
+    -   question: What is the tag to register a provider for expression language functions in routing?
+        answers:
+            - {value: 'routing.route_provider', correct: false}
+            - {value: 'routing.expression_language_provider', correct: true}
+            - {value: 'routing.provider', correct: false}
+            - {value: 'router.route_provider', correct: false}
+            - {value: 'router.expression_language_provider', correct: false}
+            - {value: 'router.provider', correct: false}
