@@ -39,3 +39,12 @@ questions:
             - { value: "$fs->file('file.txt', 'Hello World');", correct: false }
             - { value: "$fs->dump('file.txt', 'Hello World');", correct: false }
             - { value: "$fs->dumpToFile('file.txt', 'Hello World');", correct: false }
+
+    -   question: "Which of the following are Filesystem methods?"
+        answers:
+            - { value: "move", correct: false }
+            - { value: "exists", correct: true }
+            - { value: "symlink", correct: true }
+            - { value: "makePathRelative", correct: true }
+            - { value: "remove", correct: true }
+            - { value: "isAbsolutePath", correct: true }
