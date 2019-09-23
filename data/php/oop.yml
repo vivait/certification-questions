@@ -13,3 +13,18 @@ questions:
         answers:
             - {value: 'No', correct: false}
             - {value: 'Yes', correct: true}
+
+    -   question: |
+            Starting from which version of PHP is this code valid?
+
+            class A
+            {
+                const foo = 1/2;
+                const bar = 100 * self::foo;
+            }
+        answers:
+            - {value: '7.1', correct: false}
+            - {value: '5.5', correct: false}
+            - {value: '5.6', correct: true}
+            - {value: '7.0', correct: false}
+            - {value: '5.4', correct: false}

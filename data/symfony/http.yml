@@ -33,15 +33,6 @@ questions:
             - { value: Temporary redirect, correct: false }
             - { value: Found (moved temporarily), correct: false }
 
-    -   question: 'What is the HTTP status codes for Not Implemented?'
-        answers:
-            - { value: 504, correct: false }
-            - { value: 505, correct: false }
-            - { value: 500, correct: false }
-            - { value: 502, correct: false }
-            - { value: 503, correct: false }
-            - { value: 501, correct: true }
-
     -   question: 'For a request to http://example.com/blog/index.php/post/hello-world what will be the value of $pathInfo in the following code?'
         answers:
             - { value: /post/hello-world, correct: true }
@@ -72,10 +63,9 @@ questions:
 
     -   question: "What is the argument passed to listeners of kernel.view?"
         answers:
-            - { value: 201, correct: true }
-            - { value: 301, correct: true }
-            - { value: 302, correct: true }
-            - { value: 303, correct: true }
-            - { value: 307, correct: true }
-            - { value: 308, correct: true }
-            - { value: 304, correct: false }
+            - { value: ViewEvent, correct: true }
+            - { value: ResponseEvent, correct: false }
+            - { value: ResponseViewEvent, correct: false }
+            - { value: GetResponseForControllerResultEvent, correct: false }
+            - { value: RequestViewEvent, correct: false }
+            - { value: FinishRequestEvent, correct: false }
