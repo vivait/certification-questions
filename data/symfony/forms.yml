@@ -155,3 +155,18 @@ questions:
                   ->add(new MyFormExtension())
                   ->getFormFactory();
               correct: false
+
+    -   question: "What are prerequisites to create a FormExtension in a Symfony Fullstack project using FrameworkBundle?"
+        answers:
+            - value: |
+                  Extending the Symfony\Component\Form\AbstractTypeExtension
+              correct: true
+            - value: |
+                  Creating a service with the form.type_extension tag
+              correct: true
+            - value: |
+                  Putting the new MyFormExtension class in the Form\Extension namespace
+              correct: false
+            - value: |
+                  Implementing the interface Symfony\Component\Form\FormTypeExtensionInterface
+              correct: true

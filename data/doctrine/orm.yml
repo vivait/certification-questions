@@ -11,3 +11,9 @@ questions:
         answers:
             - { value: Doctrine will create a proxy of this association object., correct: false }
             - { value: Doctrine will eager load this association object., correct: true }
+
+    -   question: 'What is the default change tracking policy?'
+        answers:
+            - { value: NOTIFY, correct: false }
+            - { value: DEFERRED_EXPLICIT, correct: false }
+            - { value: DEFERRED_IMPLICIT, correct: true }
