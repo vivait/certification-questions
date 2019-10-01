@@ -13,3 +13,10 @@ questions:
             - { value: private, correct: false }
             - { value: public, correct: false }
             - { value: no-cache, correct: false }
+
+    -   question: 'Which of theses are the way to add the Cache-Control: public,s-maxage=900 HTTP response header on a Symfony\Component\HttpFoundation\Response object?'
+        answers:
+            - { value: $response->setShareMaxAge(900);, correct: false}
+            - { value: $response->setSharedMaxAge(900);, correct: true}
+            - { value: $response->setSMaxAge(900);, correct: false}
+            - { value: $response->setMaxAge(900, true);, correct: false}

@@ -121,11 +121,6 @@ questions:
             - {value: "Yes", correct: false }
             - {value: No, correct: true }
 
-    -   question: "Which of the following are not true about streams ?"
-        answers:
-            - {value: "Yes", correct: false }
-            - {value: No, correct: true }
-
     -   question: "How would you access the file data sent to your PHP server using the PUT HTTP method ?"
         answers:
             - {value: Using $_PUT, correct: false }

@@ -25,3 +25,10 @@ questions:
             - {value: $response = $this->redirectToRoute("homepage"), correct: true}
             - {value: $response = $this->redirect("/"), correct: true}
             - {value: $response = new RedirectionResponse("/"), correct: false}
+
+    -   question: 'According to the official Symfony Best Practices Guide and using the Symfony installer, which command allow you to create a blog application?'
+        answers:
+            - {value: symfony create-project blog, correct: false}
+            - {value: symfony create blog, correct: false}
+            - {value: symfony install blog, correct: false}
+            - {value: symfony new --full blog, correct: true}
