@@ -28,3 +28,28 @@ questions:
             - {value: '5.6', correct: true}
             - {value: '7.0', correct: false}
             - {value: '5.4', correct: false}
+
+    -   question: |
+            class A
+            {
+                public function get() : self
+                {
+                    return $this;
+                }
+            }
+
+            class B extends A
+            {
+                public function get() : self
+                {
+                    return parent::get();
+                }
+            }
+
+            $b = new B();
+            $b = $b->get();
+        answers:
+            - {value: '$b will be an instance of the B class', correct: false}
+            - {value: '$b will be an instance of the A class', correct: false}
+            - {value: 'PHP Fatal error: Uncaught TypeError: Return value of A::get() must be an instance of A', correct: true}
+            - {value: 'PHP Fatal error: Declaration of B::get(): B must be compatible with A::get(): A', correct: false}

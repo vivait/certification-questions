@@ -42,3 +42,12 @@ questions:
             - {value: ifNull(), correct: true}
             - {value: ifNotNull(), correct: false}
             - {value: ifTrue(), correct: true}
+
+    -   question: |
+            Which configuration file format can be used to define PHP constants as parameters?
+        answers:
+            - {value: YAML, correct: true}
+            - {value: Annotation, correct: false}
+            - {value: XML, correct: true}
+            - {value: PHP, correct: true}
+            - {value: INI, correct: false}

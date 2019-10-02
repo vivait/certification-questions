@@ -170,3 +170,16 @@ questions:
             - value: |
                   Implementing the interface Symfony\Component\Form\FormTypeExtensionInterface
               correct: true
+
+    -   question: "Which interface should be implemented when you want to set the choice_loader option of the Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType form type ?"
+        answers:
+            - value: |
+                  Symfony\Component\Form\Extension\Core\ChoiceLoaderInterface
+              correct: false
+            - value: |
+                  Symfony\Component\Form\ChoiceLoaderInterface
+              correct: false
+            - value: |
+                  Symfony\Component\Form\ChoiceList\Loader\ChoiceLoaderInterface
+              correct: true
+

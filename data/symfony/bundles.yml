@@ -28,3 +28,17 @@ questions:
             - {value: security.remember_me_auth, correct: false}
             - {value: security.remember_me_authentication, correct: false}
             - {value: security.remember_me, correct: false}
+
+    -   question: 'What is the name of the special request attribute used by the RouterListener object to know which callable to invoke through the HttpKernel engine?'
+        answers:
+            - {value: _action, correct: false}
+            - {value: _request, correct: false}
+            - {value: _route, correct: false}
+            - {value: _controller, correct: true}
+
+    -   question: 'What value type is returned by the Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller::renderView() method?'
+        answers:
+            - {value: An instance of Symfony\Component\BrowserKit\Response., correct: false}
+            - {value: A string., correct: true}
+            - {value: An instance of Symfony\Component\HttpFoundation\Response., correct: false}
+            - {value: An instance of Symfony\Component\View\View., correct: false}

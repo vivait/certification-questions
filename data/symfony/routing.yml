@@ -32,3 +32,11 @@ questions:
             - {value: /blog/, correct: false}
             - {value: /blog/1, correct: true}
             - {value: /blog/page-1, correct: false}
+
+    -   question: "Which attributes are reserved special routing parameters?"
+        answers:
+            - {value: _controller, correct: true}
+            - {value: _type, correct: false}
+            - {value: _locale, correct: true}
+            - {value: _format, correct: true}
+            - {value: _response, correct: false}
