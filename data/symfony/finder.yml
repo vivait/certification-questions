@@ -27,11 +27,11 @@ questions:
 
     -   question: "Which value a closure must return in order to exclude .txt files with Symfony\\Component\\Finder\\Finder::filter method?"
         answers:
-            - { value: true, correct: false }
-            - { value: null, correct: false }
+            - { value: 'true', correct: false }
+            - { value: 'null', correct: false }
             - { value: 0, correct: false }
             - { value: 1, correct: false }
-            - { value: false, correct: true }
+            - { value: 'false', correct: true }
 
     -   question: "What is the Symfony\\Component\\Filesystem\\Filesystem method to dump contents to a file?"
         answers:
