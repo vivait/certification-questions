@@ -15,3 +15,14 @@ questions:
             - {value: 'InputOption::VALUE_OPTIONAL', correct: true}
             - {value: 'InputOption::VALUE_NONE', correct: true}
             - {value: 'InputOption::VALUE_NOT_REQUIRED', correct: false}
+
+    -   question: "What are the console verbosity levels?"
+        answers:
+            - {value: "OutputInterface::VERBOSITY_DEBUG", correct: true}
+            - {value: "OutputInterface::VERBOSITY_NO_DEBUG", correct: false}
+            - {value: 'OutputInterface::VERBOSITY_VERY_VERY_VERBOSE', correct: false}
+            - {value: 'OutputInterface::VERBOSITY_NORMAL', correct: true}
+            - {value: 'OutputInterface::VERBOSITY_NONE', correct: false}
+            - {value: 'OutputInterface::VERBOSITY_VERBOSE', correct: true}
+            - {value: 'OutputInterface::VERBOSITY_QUIET', correct: true}
+            - {value: 'OutputInterface::VERBOSITY_VERY_VERBOSE', correct: true}
