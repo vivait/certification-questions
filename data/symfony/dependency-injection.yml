@@ -137,3 +137,26 @@ questions:
             - {value: 'router.route_provider', correct: false}
             - {value: 'router.expression_language_provider', correct: false}
             - {value: 'router.provider', correct: false}
+
+    -   question: |
+            What is the result of:
+                # config/services.yaml
+                Foo: ~
+
+                Bar:
+                    public: false
+                    decorates: Foo
+                    decoration_priority: 5
+                    arguments: ['@Bar.inner']
+
+                Baz:
+                    public: false
+                    decorates: Foo
+                    decoration_priority: 1
+                    arguments: ['@Baz.inner']
+        answers:
+            - {value: '$this->services[Foo::class] = new Baz(new Bar(new Foo()));', correct: true}
+            - {value: '$this->services[Foo::class] = new Bar(new Bar(new Foo()));', correct: false}
+            - {value: '$this->services[Foo::class] = new Baz(new Foo());', correct: false}
+            - {value: '$this->services[Foo::class] = new Bar(new Foo());', correct: false}
+            - {value: '$this->services[Foo::class] = new Foo();', correct: false}
