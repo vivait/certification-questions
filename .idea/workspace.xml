@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/finder.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/finder.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +124,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_14.php">
+  <component name="RunManager" selected="PHP Script.scratch_17.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -135,30 +135,30 @@
     <configuration name="scratch_14.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_14.php">
       <method v="2" />
     </configuration>
+    <configuration name="scratch_15.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_15.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_17.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_17.php">
+      <method v="2" />
+    </configuration>
     <configuration name="scratch_2.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.php">
       <method v="2" />
     </configuration>
-    <configuration name="scratch_66.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_66.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_68.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_68.php">
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="PHP Script.scratch_66.php" />
-      <item itemvalue="PHP Script.scratch_68.php" />
       <item itemvalue="PHP Script.scratch_2.php" />
       <item itemvalue="PHP Script.scratch_12.php" />
       <item itemvalue="PHP Script.scratch_14.php" />
+      <item itemvalue="PHP Script.scratch_15.php" />
       <item itemvalue="PHPUnit.phpunit.xml.dist" />
+      <item itemvalue="PHP Script.scratch_17.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.scratch_17.php" />
+        <item itemvalue="PHP Script.scratch_15.php" />
         <item itemvalue="PHP Script.scratch_14.php" />
         <item itemvalue="PHP Script.scratch_12.php" />
         <item itemvalue="PHP Script.scratch_2.php" />
-        <item itemvalue="PHP Script.scratch_68.php" />
-        <item itemvalue="PHP Script.scratch_66.php" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +237,10 @@
       <workItem from="1570563031683" duration="170000" />
       <workItem from="1570634529856" duration="561000" />
       <workItem from="1570801810821" duration="371000" />
-      <workItem from="1571068468123" duration="312000" />
+      <workItem from="1571068468123" duration="320000" />
+      <workItem from="1571240781404" duration="268000" />
+      <workItem from="1571299274376" duration="6000" />
+      <workItem from="1571327599383" duration="308000" />
     </task>
     <task id="LOCAL-00001" summary="a7562208-c630-4142-8cab-3d728de28c90">
       <created>1564070847740</created>
@@ -512,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570808413039</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Questions">
+      <created>1571127259206</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1571127259206</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

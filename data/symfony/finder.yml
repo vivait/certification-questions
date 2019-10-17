@@ -48,3 +48,12 @@ questions:
             - { value: "makePathRelative", correct: true }
             - { value: "remove", correct: true }
             - { value: "isAbsolutePath", correct: true }
+
+    -   question: |
+            Which exception is thrown when the origin file does not exist when you use the Symfony\Component\Filesystem\Filesystem::copy method ?
+        answers:
+            - { value: "FileException", correct: false }
+            - { value: "FileNotExistException", correct: false }
+            - { value: "FileErrorException", correct: false }
+            - { value: "FilesystemException", correct: false }
+            - { value: "FileNotFoundException", correct: true }
