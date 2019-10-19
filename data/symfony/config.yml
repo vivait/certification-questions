@@ -150,3 +150,118 @@ questions:
             - {value: 'A reference to GLOBAL_CONSTANT', correct: false}
             - {value: "Nothing, the container won't compile.", correct: false}
             - {value: '!php/const GLOBAL_CONSTANT', correct: false}
+
+    -   question: |
+            What value will the app.admin_email parameter contain?
+
+            <parameter key="app.admin_email">
+                something@example.com
+            </parameter>
+        answers:
+            - {value: "\n    something@example.com\n", correct: true}
+            - {value: 'something@example.com', correct: false}
+            - {value: "    something@example.com.", correct: false}
+
+    -   question: |
+            What value will the url_pattern parameter contain?
+
+            parameters:
+                url_pattern: 'https://symfony.com/?foo=%%s&amp;bar=%%d'
+        answers:
+            - {value: "https://symfony.com/?foo=%s&amp;bar=%d", correct: true}
+            - {value: "Nothing, there'll be an error.", correct: false}
+            - {value: "https://symfony.com/?foo=%%s&amp;bar=%%d", correct: false}
+
+    -   question: |
+            What value will the url_pattern parameter contain?
+
+            <parameters>
+                <parameter key="url_pattern">http://symfony.com/?foo=%%s&amp;bar=%%d</parameter>
+            </parameters>
+        answers:
+        - {value: "https://symfony.com/?foo=%s&amp;bar=%d", correct: true}
+        - {value: "Nothing, there'll be an error.", correct: false}
+        - {value: "https://symfony.com/?foo=%%s&amp;bar=%%d", correct: false}
+
+    -   question: |
+            What value will the url_pattern parameter contain?
+
+            $container->setParameter('url_pattern', 'http://symfony.com/?foo=%%s&amp;bar=%%d');
+        answers:
+            - {value: "https://symfony.com/?foo=%s&amp;bar=%d", correct: true}
+            - {value: "Nothing, there'll be an error.", correct: false}
+            - {value: "https://symfony.com/?foo=%%s&amp;bar=%%d", correct: false}
+
+    -   question: |
+            Is the following configuration valid?
+
+            imports:
+                - { resource: '%kernel.project_dir%/somefile.yaml' }
+        answers:
+            - {value: Yes, correct: false}
+            - {value: No, correct: true}
+
+    -   question: |
+            Is the following configuration valid?
+
+            <?xml version="1.0" encoding="UTF-8" ?>
+            <container xmlns="http://symfony.com/schema/dic/services"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://symfony.com/schema/dic/services
+                    https://symfony.com/schema/dic/services/services-1.0.xsd">
+
+                <imports>
+                    <import resource="%kernel.project_dir%/somefile.yaml"/>
+                </imports>
+            </container>
+        answers:
+            - {value: Yes, correct: false}
+            - {value: No, correct: true}
+
+    -   question: |
+            Is the following configuration valid?
+
+            $loader->import('%kernel.project_dir%/somefile.yaml');
+        answers:
+            - {value: Yes, correct: false}
+            - {value: No, correct: true}
+
+    -   question: What is the purpose of environment variable in a Symfony application.
+        answers:
+            - {value: To configure settings that are different between machines, correct: true}
+            - {value: They should be avoided in all cases, correct: false}
+            - {value: Configuring all settings in an application, correct: false}
+
+    -   question: Which of these are built-in Environment Variable Processors?
+        answers:
+            - {value: env(string:FOO), correct: true}
+            - {value: env(bool:FOO), correct: true}
+            - {value: env(int:FOO), correct: true}
+            - {value: env(float:FOO), correct: true}
+            - {value: env(const:FOO), correct: true}
+            - {value: env(file:FOO), correct: true}
+            - {value: env(object:FOO), correct: false}
+            - {value: env(reverse:FOO), correct: false}
+            - {value: env(lowercase:FOO), correct: false}
+            - {value: env(base64:FOO), correct: true}
+
+    -   question: Which of these are built-in Environment Variable Processors?
+        answers:
+            - {value: env(json:FOO), correct: true}
+            - {value: env(resolve:FOO), correct: true}
+            - {value: env(csv:FOO), correct: true}
+            - {value: env(require:FOO), correct: true}
+            - {value: env(trim:FOO), correct: true}
+            - {value: env(key:FOO:BAR), correct: true}
+            - {value: env(default:fallback_param:BAR), correct: true}
+            - {value: env(url:FOO), correct: true}
+            - {value: env(query_string:FOO), correct: true}
+            - {value: env(number:FOO), correct: false}
+            - {value: env(uppercase:FOO), correct: false}
+
+    -   question: Which interface must be implemented to add a custom Environment Variable Processors?
+        answers:
+            - {value: Symfony\Component\DependencyInjection\EnvVarProcessorInterface, correct: true}
+            - {value: Symfony\Component\Dotenv\EnvVarProcessorInterface, correct: false}
+            - {value: Symfony\Bridge\Dotenv\EnvVarProcessorInterface, correct: false}
+            - {value: Symfony\Bridge\DependencyInjection\EnvVarProcessorInterface, correct: false}
