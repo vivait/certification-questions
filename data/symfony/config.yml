@@ -46,10 +46,68 @@ questions:
           - {value: Yes, correct: false}
           - {value: No, correct: true}
 
+    - question: |
+          Assuming that the my_config_file.yaml file doesn't exists, will the following configuration generate an
+          exception?
+
+          <!-- config/services.xml -->
+          <?xml version="1.0" encoding="UTF-8" ?>
+          <container xmlns="http://symfony.com/schema/dic/services"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://symfony.com/schema/dic/services
+                  https://symfony.com/schema/dic/services/services-1.0.xsd
+                  http://symfony.com/schema/dic/symfony
+                  https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+
+              <imports>
+                  <import resource="my_config_file.yaml" ignore-errors="true"/>
+              </imports>
+
+              <!-- ... -->
+          </container>
+      answers:
+          - {value: Yes, correct: false}
+          - {value: No, correct: true}
+
+
+    - question: |
+          Assuming that the my_config_file.yaml file doesn't exists, will the following configuration generate an
+          exception?
+
+          $loader->import('my_config_file.yaml', null, true);
+      answers:
+          - {value: Yes, correct: false}
+          - {value: No, correct: true}
+
     -   question: |
             What encoding will the app.my_parameter parameter contain?
 
             app.my_parameter: !!binary VGhpcyBpcyBhIEJlbGwgY2hhciAH
+        answers:
+            - {value: Base64, correct: true}
+            - {value: Binary encoding, correct: false}
+            - {value: They'll be no encoding, correct: true}
+            - {value: Base85, correct: true}
+            - {value: PHP, correct: true}
+            - {value: XML, correct: true}
+
+    -   question: |
+            What encoding will the app.my_parameter parameter contain?
+
+            <!-- config/services.xml -->
+            <?xml version="1.0" encoding="UTF-8" ?>
+            <container xmlns="http://symfony.com/schema/dic/services"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:framework="http://symfony.com/schema/dic/symfony"
+                xsi:schemaLocation="http://symfony.com/schema/dic/services
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
+                    http://symfony.com/schema/dic/symfony
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+
+                <parameters>
+                    <parameter key="app.my_parameter" type="binary">VGhpcyBpcyBhIEJlbGwgY2hhciAH</parameter>
+                </parameters>
+            </container>
         answers:
             - {value: Base64, correct: true}
             - {value: Binary encoding, correct: false}
@@ -70,7 +128,23 @@ questions:
             - {value: '!php/const GLOBAL_CONSTANT', correct: false}
 
     -   question: |
-            What will be
+            Assuming that GLOBAL_CONSTANT is set to "Hello World" What encoding will the app.some_constant parameter
+            contain?
+
+            <!-- config/services.xml -->
+            <?xml version="1.0" encoding="UTF-8" ?>
+            <container xmlns="http://symfony.com/schema/dic/services"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:framework="http://symfony.com/schema/dic/symfony"
+                xsi:schemaLocation="http://symfony.com/schema/dic/services
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
+                    http://symfony.com/schema/dic/symfony
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+
+                <parameters>
+                    <parameter key="app.some_constant" type="constant">GLOBAL_CONSTANT</parameter>
+                </parameters>
+            </container>
         answers:
             - {value: "Hello World", correct: true}
             - {value: 'A reference to GLOBAL_CONSTANT', correct: false}
