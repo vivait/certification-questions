@@ -226,7 +226,7 @@ questions:
             - {value: Yes, correct: false}
             - {value: No, correct: true}
 
-    -   question: What is the purpose of environment variable in a Symfony application.
+    -   question: What is the purpose of environment variables in a Symfony application.
         answers:
             - {value: To configure settings that are different between machines, correct: true}
             - {value: They should be avoided in all cases, correct: false}
@@ -274,9 +274,10 @@ questions:
             - {value: Symfony\Bridge\Dotenv\EnvVarProcessorInterface, correct: false}
             - {value: Symfony\Bridge\DependencyInjection\EnvVarProcessorInterface, correct: false}
 
-    -   question: What command can be ran to improve the performance of environment variable in production?
+    -   question: What command can be ran to improve the performance of environment variables in production?
         answers:
             - {value: composer dump-env prod, correct: true}
+            - {value: composer env-dump prod, correct: true}
             - {value: composer optimize-env prod, correct: false}
             - {value: bin/console dump:env --env=prod, correct: false}
             - {value: bin/console dotenv:optimize--env=prod, correct: false}
