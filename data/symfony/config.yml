@@ -117,7 +117,7 @@ questions:
             - {value: XML, correct: true}
 
     -   question: |
-            Assuming that GLOBAL_CONSTANT is set to "Hello World" What encoding will the app.some_constant parameter
+            Assuming that GLOBAL_CONSTANT is set to "Hello World" What value will the app.some_constant parameter
             contain?
 
             app.some_constant: !php/const GLOBAL_CONSTANT
@@ -128,7 +128,7 @@ questions:
             - {value: '!php/const GLOBAL_CONSTANT', correct: false}
 
     -   question: |
-            Assuming that GLOBAL_CONSTANT is set to "Hello World" What encoding will the app.some_constant parameter
+            Assuming that GLOBAL_CONSTANT is set to "Hello World" What value will the app.some_constant parameter
             contain?
 
             <!-- config/services.xml -->
