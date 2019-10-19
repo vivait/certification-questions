@@ -1,0 +1,78 @@
+category: Config
+questions:
+    - question: |
+          Assuming that the legacy_config.php file exists, is the following configuration valid?
+
+          <?xml version="1.0" encoding="UTF-8" ?>
+          <container xmlns="http://symfony.com/schema/dic/services"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://symfony.com/schema/dic/services
+                  https://symfony.com/schema/dic/services/services-1.0.xsd
+                  http://symfony.com/schema/dic/symfony
+                  https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+
+              <imports>
+                  <import resource="legacy_config.php"/>
+              </imports>
+          </container>
+      answers:
+          - {value: Yes, correct: true}
+          - {value: No, correct: false}
+
+    - question: |
+          Assuming that the legacy_config.xml file exists, is the following configuration valid?
+
+          $loader->import('legacy_config.xml');
+      answers:
+          - {value: Yes, correct: true}
+          - {value: No, correct: false}
+
+    -   question: |
+            Assuming that the legacy_config.php file exists, is the following configuration valid?
+
+            imports:
+                - { resource: 'legacy_config.php' }
+        answers:
+            - {value: Yes, correct: true}
+            - {value: No, correct: false}
+
+    - question: |
+          Assuming that the my_config_file.xml file doesn't exists, will the following configuration generate an
+          exception?
+
+          imports:
+              - { resource: 'my_config_file.xml', ignore_errors: true }
+      answers:
+          - {value: Yes, correct: false}
+          - {value: No, correct: true}
+
+    -   question: |
+            What encoding will the app.my_parameter parameter contain?
+
+            app.my_parameter: !!binary VGhpcyBpcyBhIEJlbGwgY2hhciAH
+        answers:
+            - {value: Base64, correct: true}
+            - {value: Binary encoding, correct: false}
+            - {value: They'll be no encoding, correct: true}
+            - {value: Base85, correct: true}
+            - {value: PHP, correct: true}
+            - {value: XML, correct: true}
+
+    -   question: |
+            Assuming that GLOBAL_CONSTANT is set to "Hello World" What encoding will the app.some_constant parameter
+            contain?
+
+            app.some_constant: !php/const GLOBAL_CONSTANT
+        answers:
+            - {value: "Hello World", correct: true}
+            - {value: 'A reference to GLOBAL_CONSTANT', correct: false}
+            - {value: "Nothing, the container won't compile.", correct: false}
+            - {value: '!php/const GLOBAL_CONSTANT', correct: false}
+
+    -   question: |
+            What will be
+        answers:
+            - {value: "Hello World", correct: true}
+            - {value: 'A reference to GLOBAL_CONSTANT', correct: false}
+            - {value: "Nothing, the container won't compile.", correct: false}
+            - {value: '!php/const GLOBAL_CONSTANT', correct: false}

@@ -12,3 +12,19 @@ questions:
             - { value: CONNECT, correct: false }
             - { value: PATCH, correct: false }
 
+    -   question: "Which of these headers don't belong to the Request ?"
+        answers:
+            - { value: Accept-Charset, correct: false }
+            - { value: Accept-Language, correct: false }
+            - { value: Encoding, correct: true }
+            - { value: Vary, correct: true }
+            - { value: Accept, correct: false }
+
+    -   question: "What is the purpose of the Vary header in the response?"
+        answers:
+            - value: To inform the client about request headers that will affect the result for caching
+              correct: true
+            - value: To ensure the client changes their headers between requests
+              correct: false
+            - value: To ensure the client uses the response for a different purpose
+              correct: false

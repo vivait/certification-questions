@@ -8,3 +8,10 @@ questions:
             - {value: 'translator.loader', correct: false}
             - {value: 'translation.loader', correct: true}
 
+    -
+        question: "Which configuration format is the most efficient for the container when registering new services?"
+        answers:
+            - {value: "YAML", correct: false}
+            - {value: "None of them (they're cached and compiled PHP before running).", correct: true}
+            - {value: 'XML', correct: false}
+            - {value: 'PHP', correct: true}
