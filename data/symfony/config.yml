@@ -259,9 +259,32 @@ questions:
             - {value: env(number:FOO), correct: false}
             - {value: env(uppercase:FOO), correct: false}
 
+    -   question: Which version of Symfony were environment variable processors added?
+        answers:
+            - {value: 4.3, correct: true}
+            - {value: 4.4, correct: false}
+            - {value: 4.0, correct: false}
+            - {value: 3.2, correct: false}
+            - {value: 2.8, correct: false}
+
     -   question: Which interface must be implemented to add a custom Environment Variable Processors?
         answers:
             - {value: Symfony\Component\DependencyInjection\EnvVarProcessorInterface, correct: true}
             - {value: Symfony\Component\Dotenv\EnvVarProcessorInterface, correct: false}
             - {value: Symfony\Bridge\Dotenv\EnvVarProcessorInterface, correct: false}
             - {value: Symfony\Bridge\DependencyInjection\EnvVarProcessorInterface, correct: false}
+
+    -   question: What command can be ran to improve the performance of environment variable in production?
+        answers:
+            - {value: composer dump-env prod, correct: true}
+            - {value: composer optimize-env prod, correct: false}
+            - {value: bin/console dump:env --env=prod, correct: false}
+            - {value: bin/console dotenv:optimize--env=prod, correct: false}
+
+    -   question: Which PHP super globals or functions could expose environment variables in production?
+        answers:
+            - {value: $_SERVER, correct: true}
+            - {value: $_GLOBAL, correct: true}
+            - {value: phpinfo(), correct: true}
+            - {value: $_GET, correct: false}
+            - {value: $_SESSION, correct: false}
