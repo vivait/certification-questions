@@ -1,7 +1,6 @@
 category: OOP
 questions:
-    -
-        question: 'Which of the following is not a magic method?'
+    -   question: 'Which of the following is not a magic method?'
         answers:
             - {value: '__wakeup()', correct: false}
             - {value: '__invoke()', correct: false}
@@ -9,3 +8,48 @@ questions:
             - {value: '__serialize()', correct: false}
             - {value: '__wakeup()', correct: false}
             - {value: '__set_state()', correct: true}
+
+    -   question: 'Is it possible to create a new instance of a class without using the special new keyword and invoking its __construct() method?'
+        answers:
+            - {value: 'No', correct: false}
+            - {value: 'Yes', correct: true}
+
+    -   question: |
+            Starting from which version of PHP is this code valid?
+
+            class A
+            {
+                const foo = 1/2;
+                const bar = 100 * self::foo;
+            }
+        answers:
+            - {value: '7.1', correct: false}
+            - {value: '5.5', correct: false}
+            - {value: '5.6', correct: true}
+            - {value: '7.0', correct: false}
+            - {value: '5.4', correct: false}
+
+    -   question: |
+            class A
+            {
+                public function get() : self
+                {
+                    return $this;
+                }
+            }
+
+            class B extends A
+            {
+                public function get() : self
+                {
+                    return parent::get();
+                }
+            }
+
+            $b = new B();
+            $b = $b->get();
+        answers:
+            - {value: '$b will be an instance of the B class', correct: false}
+            - {value: '$b will be an instance of the A class', correct: false}
+            - {value: 'PHP Fatal error: Uncaught TypeError: Return value of A::get() must be an instance of A', correct: true}
+            - {value: 'PHP Fatal error: Declaration of B::get(): B must be compatible with A::get(): A', correct: false}

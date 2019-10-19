@@ -1,9 +1,28 @@
 category: The Command Line
 questions:
-    -
-        question: "When you are running a program asynchronously, it is possible to send it POSIX signals ?"
+    -   question: "When you are running a program asynchronously, it is possible to send it POSIX signals ?"
         answers:
             - {value: "Yes, with the Symfony\\Component\\Process\\Process::signal method", correct: true}
             - {value: "No, it's not possible.", correct: false}
             - {value: 'Yes, with the Symfony\Component\Process\Process::sendSignal method', correct: false}
             - {value: 'Yes, with the Symfony\Component\Process\Process::send method', correct: false}
+
+    -   question: "Which of the following are built-in option variants ?"
+        answers:
+            - {value: "InputOption::VALUE_IS_ARRAY", correct: true}
+            - {value: "InputOption::VALUE_IS_MULTIPLE", correct: false}
+            - {value: 'InputOption::VALUE_REQUIRED', correct: true}
+            - {value: 'InputOption::VALUE_OPTIONAL', correct: true}
+            - {value: 'InputOption::VALUE_NONE', correct: true}
+            - {value: 'InputOption::VALUE_NOT_REQUIRED', correct: false}
+
+    -   question: "What are the console verbosity levels?"
+        answers:
+            - {value: "OutputInterface::VERBOSITY_DEBUG", correct: true}
+            - {value: "OutputInterface::VERBOSITY_NO_DEBUG", correct: false}
+            - {value: 'OutputInterface::VERBOSITY_VERY_VERY_VERBOSE', correct: false}
+            - {value: 'OutputInterface::VERBOSITY_NORMAL', correct: true}
+            - {value: 'OutputInterface::VERBOSITY_NONE', correct: false}
+            - {value: 'OutputInterface::VERBOSITY_VERBOSE', correct: true}
+            - {value: 'OutputInterface::VERBOSITY_QUIET', correct: true}
+            - {value: 'OutputInterface::VERBOSITY_VERY_VERBOSE', correct: true}

@@ -1,0 +1,19 @@
+category: ORM
+questions:
+    -   question: 'What is true about composite primary keys?'
+        answers:
+            - { value: The @Id annotation must be used on more than one column., correct: true }
+            - { value: Composite keys must be avoided as much as possible., correct: true }
+            - { value: Composite keys must only consist of the primitives types integer and string., correct: true }
+            - { value: An auto increment strategy can be used for one of the key using the @GeneratedValue annotation., correct: false }
+
+    -   question: 'You query for an object joining on a single-valued association object that is configured LAZY.'
+        answers:
+            - { value: Doctrine will create a proxy of this association object., correct: false }
+            - { value: Doctrine will eager load this association object., correct: true }
+
+    -   question: 'What is the default change tracking policy?'
+        answers:
+            - { value: NOTIFY, correct: false }
+            - { value: DEFERRED_EXPLICIT, correct: false }
+            - { value: DEFERRED_IMPLICIT, correct: true }

@@ -1,13 +1,165 @@
 category: Dependency Injection
 questions:
-    -
-        question: "What is the tag to register a custom service that loads translations?"
+    -   question: "What is the tag to register a custom service that loads translations?"
         answers:
             - {value: "translation_loader", correct: false}
             - {value: 'translator_loader', correct: false}
             - {value: 'translator.loader', correct: false}
             - {value: 'translation.loader', correct: true}
 
+    -   question: "Which injection types are supported by the Symfony's DIC?"
+        answers:
+            - {value: "setter", correct: true}
+            - {value: 'property', correct: true}
+            - {value: 'constructor', correct: true}
+            - {value: 'getter', correct: false}
+
+    -   question: "On a default Symfony project using symfony/form, what solutions can successfully help us retrieve the FormFactory in the signup action?"
+        answers:
+            -   value: |
+                    use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
+                    class SecurityController extends AbstractController
+                    {
+                        public function signup()
+                        {
+                            $formFactory = $this->getFormFactory();
+                        }
+                    }
+                correct: false
+
+            -   value: |
+                    class SecurityController
+                    {
+                        private $formFactory;
+
+                        /**
+                         * @required
+                         */
+                        public function setFormFactory(FormFactoryInterface $formfactory)
+                        {
+                            $this->formFactory = $formFactory;
+                        }
+
+                        public function signup()
+                        {
+                            $formFactory = $this->formFactory;
+                        }
+                    }
+                correct: true
+
+            -   value: |
+                    use Symfony\Component\Form\FormFactoryInterface;
+
+                    class SecurityController
+                    {
+                        private $formFactory;
+
+                        public function __construct(FormFactoryInterface $formfactory)
+                        {
+                            $this->formFactory = $formFactory;
+                        }
+
+                        public function signup()
+                        {
+                            $formFactory = $this->formFactory;
+                        }
+                    }
+                correct: true
+
+            -   value: |
+                    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+                    class SecurityController extends Controller
+                    {
+                        public function signup()
+                        {
+                            $formFactory = $this->get('form.factory');
+                        }
+                    }
+                correct: true
+
+            -   value: |
+                    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+                    class SecurityController extends Controller
+                    {
+                        public function signup(FormFactoryInterface $formfactory)
+                        {
+                        }
+                    }
+                correct: true
+
+    -   question: |
+            What will be the value of the following configuration sample?
+
+            <parameter key="mailer.transport">
+                sendmail
+            </parameter>
+        answers:
+            -   value: |
+                    \n
+                    sendmail\n
+                correct: true
+            - {value: 'sendmail', correct: false}
+            - {value: 'sendmail\n', correct: false}
+            - {value: 'sendmail\n', correct: false}
+
+    -   question: Which statements are true about the Symfony\Bundle\FrameworkBundle\Controller\AbstractController class?
+        answers:
+            - {value: 'An AbstractController uses ControllerTrait.', correct: true}
+            - {value: 'An AbstractController replaces the former Controller.', correct: true}
+            - {value: 'An AbstractController behaves like a Controller, but provide a restricted access to services.', correct: true}
+            - {value: 'An AbstractController is ServiceSubscriberInterface.', correct: true}
+
+    -   question: What is the tag to use to register your service to be called during the cache clearing process?
+        answers:
+            - {value: 'cache_clearer', correct: false}
+            - {value: 'cache.clearer', correct: false}
+            - {value: 'kernel.cache', correct: false}
+            - {value: 'kernel.cache_clearer', correct: true}
+
+    -   question: What is the tag to register a provider for expression language functions in routing?
+        answers:
+            - {value: 'routing.route_provider', correct: false}
+            - {value: 'routing.expression_language_provider', correct: true}
+            - {value: 'routing.provider', correct: false}
+            - {value: 'router.route_provider', correct: false}
+            - {value: 'router.expression_language_provider', correct: false}
+            - {value: 'router.provider', correct: false}
+
+
+    -   question: What are the valid ways to get the Session object if the controller class inherits from the base FrameworkBundle's Controller class?
+        answers:
+            - {value: 'routing.route_provider', correct: false}
+            - {value: 'routing.expression_language_provider', correct: true}
+            - {value: 'routing.provider', correct: false}
+            - {value: 'router.route_provider', correct: false}
+            - {value: 'router.expression_language_provider', correct: false}
+            - {value: 'router.provider', correct: false}
+
+    -   question: |
+            What is the result of:
+                # config/services.yaml
+                Foo: ~
+
+                Bar:
+                    public: false
+                    decorates: Foo
+                    decoration_priority: 5
+                    arguments: ['@Bar.inner']
+
+                Baz:
+                    public: false
+                    decorates: Foo
+                    decoration_priority: 1
+                    arguments: ['@Baz.inner']
+        answers:
+            - {value: '$this->services[Foo::class] = new Baz(new Bar(new Foo()));', correct: true}
+            - {value: '$this->services[Foo::class] = new Bar(new Bar(new Foo()));', correct: false}
+            - {value: '$this->services[Foo::class] = new Baz(new Foo());', correct: false}
+            - {value: '$this->services[Foo::class] = new Bar(new Foo());', correct: false}
+            - {value: '$this->services[Foo::class] = new Foo();', correct: false}
     -
         question: "Which configuration format is the most efficient for the container when registering new services?"
         answers:

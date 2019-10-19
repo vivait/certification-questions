@@ -288,3 +288,54 @@ questions:
             - {value: phpinfo(), correct: true}
             - {value: $_GET, correct: false}
             - {value: $_SESSION, correct: false}
+    -   question: |
+            What is the purpose of Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition::fixXmlConfig ?
+        answers:
+            - {value: "It ensures that single XML elements are turned into an array", correct: true}
+            - {value: "It applies a custom function to an XML element if an error occurs", correct: false}
+            - {value: 'It normalizes XML element name', correct: false}
+            - {value: 'It always applies a custom function to an XML element', correct: false}
+
+    -   question: |
+            What is the 2nd argument of Symfony\Component\Config\ConfigCacheFactory::cache method ?
+        answers:
+            - {value: "A boolean to set the debug mode", correct: false}
+            - {value: 'An array of options', correct: false}
+            - {value: 'The resource filename', correct: false}
+            - {value: 'A callback executed if the cache has to be refreshed', correct: true}
+
+    -   question: |
+            Which of the following are valid node types?
+        answers:
+            - {value: scalar, correct: true}
+            - {value: boolean, correct: true}
+            - {value: integer, correct: true}
+            - {value: float, correct: true}
+            - {value: enum, correct: true}
+            - {value: array, correct: true}
+            - {value: variable, correct: true}
+            - {value: object, correct: false}
+            - {value: number, correct: false}
+            - {value: string, correct: false}
+
+    -   question: |
+            Which of the following are validation rules provided by Symfony\Component\Config\Definition\Builder\ExprBuilder?
+        answers:
+            - {value: ifInArray(), correct: true}
+            - {value: never(), correct: false}
+            - {value: ifNotInArray(), correct: true}
+            - {value: ifArray(), correct: true}
+            - {value: always(), correct: true}
+            - {value: ifString(), correct: true}
+            - {value: ifNull(), correct: true}
+            - {value: ifNotNull(), correct: false}
+            - {value: ifTrue(), correct: true}
+
+    -   question: |
+            Which configuration file format can be used to define PHP constants as parameters?
+        answers:
+            - {value: YAML, correct: true}
+            - {value: Annotation, correct: false}
+            - {value: XML, correct: true}
+            - {value: PHP, correct: true}
+            - {value: INI, correct: false}

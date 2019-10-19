@@ -2,15 +2,36 @@ category: HTTP
 questions:
     -   question: 'Which HTTP verbs are idempotent ?'
         answers:
-            - { value: HEAD, correct: true }
-            - { value: POST, correct: false }
-            - { value: TRACE, correct: true }
-            - { value: PUT, correct: true }
-            - { value: OPTIONS, correct: true }
-            - { value: DELETE, correct: true }
             - { value: GET, correct: true }
-            - { value: CONNECT, correct: false }
+            - { value: HEAD, correct: true }
+            - { value: PUT, correct: true }
+            - { value: DELETE, correct: true }
+            - { value: POST, correct: false }
             - { value: PATCH, correct: false }
+            - { value: TRACE, correct: true }
+            - { value: OPTIONS, correct: true }
+            - { value: CONNECT, correct: false }
+
+    -   question: 'What does the 308 HTTP status code stand for?'
+        answers:
+            - { value: Found (moved temporarily), correct: false }
+            - { value: Temporary redirect, correct: false }
+            - { value: Moved permanently, correct: false }
+            - { value: Permanent redirect, correct: true }
+
+    -   question: 'How does the browser communicate to the server what is the preferred language of the user?'
+        answers:
+            - { value: The main language is sent using the Locale header, while secondary languages are usually included in the X-Locale-Alternate header., correct: false }
+            - { value: The browser doesn’t communicate the language of the user, it’s inferred from the user IP., correct: false }
+            - { value: User language preferences are sent using the Accept-Language header, correct: true }
+            - { value: The main language is included in the User-Agent header, correct: false }
+
+    -   question: 'What does the 308 HTTP status code stand for?'
+        answers:
+            - { value: Permanent redirect, correct: true }
+            - { value: Moved permanently, correct: false }
+            - { value: Temporary redirect, correct: false }
+            - { value: Found (moved temporarily), correct: false }
 
     -   question: "Which of these headers don't belong to the Request ?"
         answers:
@@ -28,3 +49,39 @@ questions:
               correct: false
             - value: To ensure the client uses the response for a different purpose
               correct: false
+    -   question: 'For a request to http://example.com/blog/index.php/post/hello-world what will be the value of $pathInfo in the following code?'
+        answers:
+            - { value: /post/hello-world, correct: true }
+            - { value: /blog/index.php/post/hello-world, correct: false }
+            - { value: example.com/blog/index.php/post/hello-world, correct: false }
+            - { value: /index.php/post/hello-world, correct: false }
+
+    -   question: "Which of these methods aren't mentioned in the RFC2616?"
+        answers:
+            - { value: LINK, correct: true }
+            - { value: CONNECT, correct: false }
+            - { value: TRACE, correct: false }
+            - { value: PATCH, correct: true }
+
+    -   question: "What is the argument passed to listeners of kernel.view?"
+        answers:
+            - { value: GetResponseForControllerResultEvent, correct: false }
+            - { value: ViewEvent, correct: true }
+            - { value: RequestViewEvent, correct: false }
+            - { value: FinishRequestEvent, correct: true }
+            - { value: ResponseEvent, correct: true }
+            - { value: ResponseViewEvent, correct: true }
+
+    -   question: "Is there any required header in the request ?"
+        answers:
+            - { value: No, correct: false }
+            - { value: Yes, correct: true }
+
+    -   question: "What is the argument passed to listeners of kernel.view?"
+        answers:
+            - { value: ViewEvent, correct: true }
+            - { value: ResponseEvent, correct: false }
+            - { value: ResponseViewEvent, correct: false }
+            - { value: GetResponseForControllerResultEvent, correct: false }
+            - { value: RequestViewEvent, correct: false }
+            - { value: FinishRequestEvent, correct: false }

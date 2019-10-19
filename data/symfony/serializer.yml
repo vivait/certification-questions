@@ -1,0 +1,138 @@
+category: Serializer
+questions:
+    -   question: "What is the way to initialize the ClassMetadataFactory in order to use annotations for the definitions of serialization?"
+        answers:
+            -   value: |
+                    use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
+                    use Doctrine\Common\Annotations\AnnotationReader;
+                    use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
+
+                    $classMetadataFactory = new ClassMetadataFactory(new AnnotationReader(new AnnotationLoader()));
+                correct: false
+
+            -   value: |
+                    use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
+                    use Doctrine\Common\Annotations\AnnotationReader;
+                    use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
+
+                    $classMetadataFactory = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()));
+                correct: true
+
+            -   value: |
+                    use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
+                    use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
+
+                    $classMetadataFactory = new ClassMetadataFactory(new AnnotationLoader());
+                correct: false
+
+    -   question: |
+            With the following code:
+
+            use Acme\Person;
+
+            $person1 = new Person();
+            $person1->setName('foo');
+            $person1->setAge(99);
+            $person1->setSportsman(false);
+
+            $person2 = new Person();
+            $person2->setName('bar');
+            $person2->setAge(33);
+            $person2->setSportsman(true);
+
+            $persons = array($person1, $person2);
+            $data = $serializer->serialize($persons, 'json');
+            PHP
+            what is the correct way to deserialize the $data into an $persons array of Acme\Person objects?
+        answers:
+            -   value: |
+                    use Symfony\Component\Serializer\Encoder\JsonEncoder;
+                    use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
+                    use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
+                    use Symfony\Component\Serializer\Serializer;
+
+                    $serializer = new Serializer(
+                    array(new GetSetMethodNormalizer(), new ArrayDenormalizer()),
+                    array(new JsonEncoder())
+                    );
+
+                    $persons = $serializer->deserialize($data, 'Acme\Person', 'json', true);
+                correct: false
+
+            -   value: |
+                    use Symfony\Component\Serializer\Encoder\JsonEncoder;
+                    use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
+                    use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
+                    use Symfony\Component\Serializer\Serializer;
+
+                    $serializer = new Serializer(
+                    array(new GetSetMethodNormalizer(), new ArrayDenormalizer()),
+                    array(new JsonEncoder())
+                    );
+
+                    $persons = $serializer->deserialize($data, 'Acme\Person[]', 'json');
+                correct: true
+
+            -   value: |
+                    use Symfony\Component\Serializer\Encoder\JsonEncoder;
+                    use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
+                    use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
+                    use Symfony\Component\Serializer\Serializer;
+
+                    $serializer = new Serializer(
+                        array(new GetSetMethodNormalizer(), new ArrayDenormalizer()),
+                        array(new JsonEncoder())
+                    );
+
+                    $persons = array();
+                    $persons = $serializer->deserialize($data, 'Acme\Person', 'json', $persons);
+                correct: false
+
+            -   value: |
+                    use Symfony\Component\Serializer\Encoder\JsonEncoder;
+                    use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
+                    use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
+                    use Symfony\Component\Serializer\Serializer;
+
+                    $serializer = new Serializer(
+                        array(new GetSetMethodNormalizer(), new ArrayDenormalizer()),
+                        array(new JsonEncoder())
+                    );
+
+                    $persons = $serializer->deserialize($data, 'Acme\Person[]', 'json', 'array');
+                correct: false
+
+    -   question: "Which of these methods are automatically detected and used by the Serializer ?"
+        answers:
+            -   value:  remove*
+                correct: true
+            -   value:  get*
+                correct: true
+            -   value:  has*
+                correct: true
+            -   value: add*
+                correct: true
+            -   value: is*
+                correct: true
+
+
+    -   question: "Which of these methods are automatically detected and used by the Serializer ?"
+        answers:
+            - value: DataUriNormalizer
+              correct: false
+            - value: JsonNormalizer
+              correct: false
+            - value: TimeNormalizer
+              correct: false
+            - value: DateTimeNormalizer
+              correct: true
+            - value: XmlNormalizer
+              correct: false
+            - value: DateNormalizer
+              correct: false
+            - value: GetSetMethodNormalizer
+              correct: true
+            - value: CustomNormalizer
+              correct: true
+            - value: ObjectNormalizer
+              correct: true

@@ -1,7 +1,6 @@
 category: Validation
 questions:
-    -
-        question: |
+    -   question: |
             Is the following code correct ?
 
             namespace Acme\User;
@@ -37,3 +36,27 @@ questions:
         answers:
             - {value: Yes, correct: false}
             - {value: No, correct: true}
+
+    -   question: |
+            Assuming that the validate() method detects no violations, what will the Response object contain?
+
+            // Controller/BookController.php
+            public function indexAction(
+            {
+                $book = new Book();
+                $validator = $this->get('validator');
+                $errors = $validator->validate($book);
+                return new Response((string) $errors);
+            }
+        answers:
+            - {value: "Notice: Array to string conversion.", correct: false}
+            - {value: An empty string, correct: true}
+            - {value: False, correct: falseh}
+            - {value: "Fatal error: Object of class ConstraintViolationList could not be converted to string.", correct: false}
+
+    -   question: "What does the CardScheme Constraint stand for ?"
+        answers:
+            - {value: It validates a credit card number, correct: false}
+            - {value: It validates if a credit card is a VISA one, correct: true}
+            - {value: It validates that a card number is valid for a given credit card company, correct: falseh}
+            - {value: It doesn't exist, correct: false}

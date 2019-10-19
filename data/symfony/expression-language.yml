@@ -1,0 +1,9 @@
+category: Expression Language
+questions:
+    -   question: "What are the possibles ways to register new functions in Symfony\\Component\\ExpressionLanguage\\ExpressionLanguage?"
+        answers:
+            - { value: By calling the addFunction() method., correct: true }
+            - { value: By calling the register() method., correct: true }
+            - { value: By calling the setFunctions() method., correct: false }
+            - { value: By calling the registerProvider() method., correct: false }
+            - { value: By calling the createFunction() method., correct: false }

@@ -1,7 +1,6 @@
 category: Arrays
 questions:
-    -
-        question: |
+    -   question: |
             What is the output of the following PHP script?
             ```
             <?php
@@ -20,8 +19,7 @@ questions:
             - {value: '09537', correct: false}
             - {value: '50937', correct: false}
             - {value: '375509', correct: false}
-    -
-        question: |
+    -   question: |
             What is the output of the following PHP script?
 
             <?php
@@ -41,8 +39,7 @@ questions:
             - {value: '153', correct: true}
             - {value: 'An error', correct: false}
 
-    -
-        question: |
+    -   question: |
             What line of code should be substituted with /** line **/ to achieve an output of a?
 
             <?php
@@ -66,8 +63,7 @@ questions:
             - {value: 'sort($fruitAndVeg);', correct: false}
             - {value: 'ksort($fruitAndVeg);', correct: true}
 
-    -
-        question: |
+    -   question: |
             In the following code, what is the key of the element with value 25?
 
             <?php
@@ -84,3 +80,75 @@ questions:
             - {value: '8', correct: true}
             - {value: '0', correct: false}
             - {value: '9', correct: false}
+
+    -   question: 'How do you add the value 10 to an array called $myArray?'
+        answers:
+            - {value: 'array_shift($myArray, 10);', correct: false}
+            - {value: 'array_unshift($myArray, 10);', correct: true}
+            - {value: '$myArray = array_merge($myArray, [10]);', correct: true}
+            - {value: '$myArray = array_merge($myArray, 10);', correct: false}
+
+    -   question: |
+            What is the output of the following PHP script?
+
+            <?php
+
+            $values = [37, 5, '09'];
+
+            $sorted = sort($values);
+
+            foreach ($sorted as $v) {
+                echo $v;
+            }
+        answers:
+            - {value: '50937', correct: false}
+            - {value: 'An error', correct: true}
+            - {value: '375509', correct: false}
+            - {value: '09537', correct: false}
+
+    -   question: |
+            What is the output ?
+
+            <?php
+            $base_array = ['red', 'green', 'yellow', 'white'];
+            $replacements_array = [0 => 'orange', 4 => 'blue'];
+
+            $result = array_replace($base_array, $replacements_array);
+            print_r($result);
+        answers:
+            - {value: 'Array ( [0] => yellow [1] => white [2] => blue [3] => green [4] => orange )', correct: false}
+            - {value: 'Array ( [0] => orange [1] => green [2] => yellow [3] => white [4] => blue )', correct: true}
+            - {value: 'An error', correct: false}
+            - {value: 'Array ( [0] => blue [1] => white [2] => yellow [3] => green [4] => orange )', correct: false}
+
+
+    -   question: |
+            n the PHP script below, what line of code should be substituted with /** line **/ to achieve an output of eeeeee?
+
+            <?php
+            function sortByLength($a, $b)
+            {
+                $lenA = strlen($a);
+                $lenB = strlen($b);
+
+                if ($lenA == $lenB) { return 0; }
+
+                /** line **/
+            }
+
+            $values = [
+                'ccc',
+                'a',
+                'eeeeee',
+                'dddd',
+                'bb',
+                'fffff'
+            ];
+
+            usort($values, 'sortByLength');
+            echo $values[5];
+        answers:
+            - {value: 'return $lenA <=> $lenB;', correct: true}
+            - {value: 'return $lenA < $lenB ? 0 : -1;', correct: false}
+            - {value: 'return $lenB <=> $lenA;', correct: false}
+            - {value: 'return $lenA < $lenB ? 1 : -1;', correct: false}

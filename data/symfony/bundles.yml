@@ -1,12 +1,44 @@
 category: Bundles
 questions:
-    -
-        question: 'What kind of help provides the config:dump-reference command?'
+    -   question: 'What kind of help provides the config:dump-reference command?'
         answers:
             - {value: Adds the default configuration of a bundle in the app/config/config.yml file, correct: false}
             - {value: Dumps the default configuration of a bundle, correct: true}
             - {value: Dumps the current configuration in .htaccess format using the php_value directive, correct: false}
             - {value: Dumps the current configuration of a bundle, correct: false}
 
+    -   question: 'What value type is returned by the Symfony\Bundle\FrameworkBundle\Controller\Controller::renderView() method?'
+        answers:
+            - {value: An instance of Symfony\Component\View\View., correct: false}
+            - {value: An instance of Symfony\Component\HttpFoundation\Response., correct: false}
+            - {value: A string., correct: true}
+            - {value: An instance of Symfony\Component\BrowserKit\Response., correct: false}
 
+    -   question: 'What is the tag to use to create a custom form type extension?'
+        answers:
+            - {value: form.type.extension, correct: false}
+            - {value: form.extension, correct: false}
+            - {value: form_extension, correct: false}
+            - {value: form.type_extension, correct: true}
+            - {value: type_extension, correct: false}
 
+    -   question: 'What is the tag to allow remember me authentication?'
+        answers:
+            - {value: security.remember_me_aware, correct: true}
+            - {value: security.remember_me_auth, correct: false}
+            - {value: security.remember_me_authentication, correct: false}
+            - {value: security.remember_me, correct: false}
+
+    -   question: 'What is the name of the special request attribute used by the RouterListener object to know which callable to invoke through the HttpKernel engine?'
+        answers:
+            - {value: _action, correct: false}
+            - {value: _request, correct: false}
+            - {value: _route, correct: false}
+            - {value: _controller, correct: true}
+
+    -   question: 'What value type is returned by the Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller::renderView() method?'
+        answers:
+            - {value: An instance of Symfony\Component\BrowserKit\Response., correct: false}
+            - {value: A string., correct: true}
+            - {value: An instance of Symfony\Component\HttpFoundation\Response., correct: false}
+            - {value: An instance of Symfony\Component\View\View., correct: false}

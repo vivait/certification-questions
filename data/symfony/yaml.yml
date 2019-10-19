@@ -1,0 +1,44 @@
+category: Yaml
+questions:
+    -   question: "What are the correct ways to parse the 1983-07-01 date into an DateTime object?"
+        answers:
+            - { value: "Yaml::parse('1983-07-01', 32)", correct: true }
+            - { value: "Yaml::parse('1983-07-01', false)", correct: false }
+            - { value: "Yaml::parse('1983-07-01', Yaml::PARSE_DATETIME)", correct: true }
+            - { value: "Yaml::parse('1983-07-01', Yaml::DATETIME)", correct: false }
+            - { value: "Yaml::parse('1983-07-01')", correct: false }
+            - { value: "Yaml::parse('1983-07-01', true)", correct: false }
+
+    -   question: |
+            $string = array("string" => "Multiple
+            Line
+            String");
+            $yaml = Yaml::dump($string);
+            echo $yaml;
+        answers:
+            -   value: |
+                    string: "Multiple\nLine\nString"
+                correct: true
+            -   value: |
+                    string: |
+                        Multiple
+                        Line
+                        String
+                        Multiple\nLine\nString
+                correct: false
+            -   value: |
+                    string: "Multiple
+                    Line
+                    String"
+                correct: false
+            -   value: |
+                    string: Multiple\nLine\nString
+                        "Multiple\nLine\nString"
+                correct: false
+
+
+
+
+
+
+

@@ -1,9 +1,22 @@
 category: HTTP Cache
 questions:
-    -
-        question: 'Which HTTP response headers are involved in the validation caching model?'
+    -   question: 'Which HTTP response headers are involved in the validation caching model?'
         answers:
             - {value: Etag, correct: true}
             - {value: Last-Modified, correct: true}
             - {value: "Cache-Control: s-max-age", correct: false}
             - {value: "Cache-Control: max-age", correct: false}
+
+    -   question: 'Which Cache-Control directive disallows the browser and all intermediate caches from storing any version of the returned response?'
+        answers:
+            - { value: no-store, correct: true }
+            - { value: private, correct: false }
+            - { value: public, correct: false }
+            - { value: no-cache, correct: false }
+
+    -   question: 'Which of theses are the way to add the Cache-Control: public,s-maxage=900 HTTP response header on a Symfony\Component\HttpFoundation\Response object?'
+        answers:
+            - { value: $response->setShareMaxAge(900);, correct: false}
+            - { value: $response->setSharedMaxAge(900);, correct: true}
+            - { value: $response->setSMaxAge(900);, correct: false}
+            - { value: $response->setMaxAge(900, true);, correct: false}

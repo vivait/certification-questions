@@ -1,0 +1,65 @@
+category: HTTP Codes
+questions:
+    -   question: 'What is the HTTP status codes for Internal Server Error?'
+        answers:
+            - { value: 504, correct: false }
+            - { value: 505, correct: false }
+            - { value: 500, correct: true }
+            - { value: 502, correct: false }
+            - { value: 503, correct: false }
+            - { value: 501, correct: false }
+
+    -   question: 'What is the HTTP status codes for Not Implemented?'
+        answers:
+            - { value: 504, correct: false }
+            - { value: 505, correct: false }
+            - { value: 500, correct: false }
+            - { value: 502, correct: false }
+            - { value: 503, correct: false }
+            - { value: 501, correct: true }
+
+    -   question: 'What is the HTTP status codes for Bad Gateway?'
+        answers:
+            - { value: 504, correct: false }
+            - { value: 505, correct: false }
+            - { value: 500, correct: false }
+            - { value: 502, correct: true }
+            - { value: 503, correct: false }
+            - { value: 501, correct: false }
+
+    -   question: 'What is the HTTP status codes for Service Unavailable?'
+        answers:
+            - { value: 504, correct: false }
+            - { value: 505, correct: false }
+            - { value: 500, correct: false }
+            - { value: 502, correct: false }
+            - { value: 503, correct: true }
+            - { value: 501, correct: false }
+
+    -   question: 'What is the HTTP status codes for Gateway Timeout?'
+        answers:
+            - { value: 504, correct: true }
+            - { value: 505, correct: false }
+            - { value: 500, correct: false }
+            - { value: 502, correct: false }
+            - { value: 503, correct: false }
+            - { value: 501, correct: false }
+
+    -   question: 'What is the HTTP status codes for HTTP Version Not Supported?'
+        answers:
+            - { value: 504, correct: false }
+            - { value: 505, correct: true }
+            - { value: 500, correct: false }
+            - { value: 502, correct: false }
+            - { value: 503, correct: false }
+            - { value: 501, correct: false }
+
+    -   question: 'What is the HTTP status codes for HTTP Network Authentication Required?'
+        answers:
+            - { value: 504, correct: false }
+            - { value: 505, correct: false }
+            - { value: 500, correct: false }
+            - { value: 502, correct: false }
+            - { value: 503, correct: false }
+            - { value: 511, correct: true }
+            - { value: 501, correct: false }

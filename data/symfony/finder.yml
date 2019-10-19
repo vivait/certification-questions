@@ -10,3 +10,50 @@ questions:
             - { value: $finder->files()->in('home')->depth('> 1'), correct: false }
             - { value: $finder->files()->in('home'), correct: false }
             - { value: $finder->in('home/me'), correct: false }
+
+    -   question: "What is the default value of the directory mode argument of the Symfony\\Component\\Filesystem\\Filesystem::mkdir method ?"
+        answers:
+            - { value: 0777, correct: true }
+            - { value: 0700, correct: false }
+            - { value: 0755, correct: false }
+
+    -   question: "Which exception is thrown when a directory creation has failed ?"
+        answers:
+            - { value: InvalidFileException, correct: false }
+            - { value: DirectoryException, correct: false }
+            - { value: FileSystemException, correct: false }
+            - { value: FileException, correct: false }
+            - { value: IOException, correct: true }
+
+    -   question: "Which value a closure must return in order to exclude .txt files with Symfony\\Component\\Finder\\Finder::filter method?"
+        answers:
+            - { value: 'true', correct: false }
+            - { value: 'null', correct: false }
+            - { value: 0, correct: false }
+            - { value: 1, correct: false }
+            - { value: 'false', correct: true }
+
+    -   question: "What is the Symfony\\Component\\Filesystem\\Filesystem method to dump contents to a file?"
+        answers:
+            - { value: "$fs->dumpFile('file.txt', 'Hello World');", correct: true }
+            - { value: "$fs->file('file.txt', 'Hello World');", correct: false }
+            - { value: "$fs->dump('file.txt', 'Hello World');", correct: false }
+            - { value: "$fs->dumpToFile('file.txt', 'Hello World');", correct: false }
+
+    -   question: "Which of the following are Filesystem methods?"
+        answers:
+            - { value: "move", correct: false }
+            - { value: "exists", correct: true }
+            - { value: "symlink", correct: true }
+            - { value: "makePathRelative", correct: true }
+            - { value: "remove", correct: true }
+            - { value: "isAbsolutePath", correct: true }
+
+    -   question: |
+            Which exception is thrown when the origin file does not exist when you use the Symfony\Component\Filesystem\Filesystem::copy method ?
+        answers:
+            - { value: "FileException", correct: false }
+            - { value: "FileNotExistException", correct: false }
+            - { value: "FileErrorException", correct: false }
+            - { value: "FilesystemException", correct: false }
+            - { value: "FileNotFoundException", correct: true }

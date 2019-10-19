@@ -12,3 +12,38 @@ questions:
             - { value: DB2, correct: false }
             - { value: Oracle, correct: true }
             - { value: PostgreSQL, correct: true }
+
+    -   question: |
+            Will the following code update your database with the changes made to the $user object?
+
+            $user = $entityManager->find("User", 1);
+            $user->setProfession("Wizard");
+            $entityManager->flush();
+        answers:
+            - { value: Yes, correct: true }
+            - { value: 'No, there is a missing $entityManager->persist($user);', correct: false }
+
+    -   question: "Which of the following APIs are designed to be SAFE from SQL injections?"
+        answers:
+            - { value: 'Doctrine\DBAL\Query\QueryBuilder#setFirstResult($offset)', correct: true }
+            - { value: 'Query methods on the Connection.', correct: false }
+            - { value: 'Doctrine\DBAL\Platforms\AbstractPlatform#modifyLimitQuery($sql, $limit, $offset)', correct: true= }
+            - { value: 'Doctrine\DBAL\Connection#update($table, $values, $where, $types)', correct: true }
+            - { value: 'Doctrine\DBAL\Query\QueryBuilder#setMaxResults($limit)', correct: true }
+            - { value: 'The QueryBuilder API.', correct: false }
+            - { value: 'Doctrine\DBAL\Connection#insert($table, $values, $types)', correct: true }
+            - { value: 'Doctrine\DBAL\Connection#delete($table, $where, $types)', correct: true }
+
+    -   question: |
+            Which of the following are valid database URLs that can be used in the dbal.url option in Symfony applications?
+
+            # config/packages/doctrine.yaml
+            doctrine:
+                dbal:
+                    url: ...
+        answers:
+            - { value: 'sqlite:///:memory:', correct: true }
+            - { value: 'mysql://localhost/mydb@user:secret', correct: false }
+            - { value: 'pgsql://localhost:5432', correct: false}
+            - { value: 'mysql://localhost:4486/foo?charset=UTF-8', correct: true }
+            - { value: 'sqlite:///data.db', correct: true }
