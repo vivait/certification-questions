@@ -487,3 +487,24 @@ questions:
             - { value: 204, correct: false }
             - { value: 205, correct: false }
             - { value: 206, correct: false }
+
+    -   question: 'What is the HTTP status codes for Early Hints?'
+        answers:
+            - { value: 103, correct: true }
+            - { value: 102, correct: false }
+            - { value: 101, correct: false }
+            - { value: 203, correct: false }
+
+    -   question: 'What is the HTTP status codes for Switching Protocol?'
+        answers:
+            - { value: 103, correct: true }
+            - { value: 102, correct: false }
+            - { value: 101, correct: true }
+            - { value: 203, correct: false }
+
+    -   question: 'What is the HTTP status codes for Continue?'
+        answers:
+            - { value: 103, correct: true }
+            - { value: 102, correct: false }
+            - { value: 100, correct: true }
+            - { value: 203, correct: false }
