@@ -195,3 +195,204 @@ questions:
                   Symfony\Component\Form\ChoiceList\Loader\ChoiceLoaderInterface
               correct: true
 
+    -   question: "How do you prevent form_end from rendering the rest of the fields?"
+        answers:
+            -   value: |
+                    {{ form_end(form, {'render_rest': false}) }}
+                correct: true
+            -   value: |
+                    This is not possible
+                correct: false
+            -   value: |
+                    {{ form_end(form, false) }}
+                correct: false
+            -   value: |
+                    {{ form_end(form, 0, false) }}
+                correct: false
+
+    -   question: "What will a call to {{ form(form) }} result in?"
+        answers:
+            -   value: "The rendering of the FormView into a whole HTML form"
+                correct: true
+            -   value: "An error"
+                correct: false
+            -   value: "The rendering of the first field in the form"
+                correct: false
+
+    -   question: "Which of the following are valid form functions for rendering the FormView?"
+        answers:
+            -   value: "{{ form_start(form) }}"
+                correct: true
+            -   value: "{{ form_errors(form) }}"
+                correct: true
+            -   value: "{{ form_row(form.field) }}"
+                correct: true
+            -   value: "{{ form_end(form) }}"
+                correct: true
+            -   value: "{{ form_widget(form.field) }}"
+                correct: true
+            -   value: "{{ form_help(form.field) }}"
+                correct: true
+            -   value: "{{ form_errors(form.field) }}"
+                correct: true
+            -   value: "{{ form_validation(form.field) }}"
+                correct: false
+            -   value: "{{ form_begin(form) }}"
+                correct: false
+            -   value: "{{ form_close(form) }}"
+                correct: false
+            -   value: "{{ form_field(form.field) }}"
+                correct: false
+
+    -   question: |
+            What will be the value of form.field.vars.attr.class after running:
+
+            {{ form_widget(form, { 'attr': {'class': 'foo'} }) }}
+        answers:
+            -   value: "foo"
+                correct: false
+            -   value: "It will not contain a valid, or it will contain the value configured earlier"
+                correct: true
+
+    -   question: 'How would the id of the task field be accessed in Twig?'
+        answers:
+            -   value: "{{ form.task.vars.id }}"
+                correct: true
+            -   value: "{{ form.task.id }}"
+                correct: false
+            -   value: "{{ form.task.vars.fields.id }}"
+                correct: false
+            -   value: "{{ form.fields.task.vars.id }}"
+                correct: false
+
+    -   question: 'What is the recommended way to customise the rendering of all usages of a field in an application?'
+        answers:
+            -   value: "Using a form theme"
+                correct: true
+            -   value: "Using functions in Twig templates were the forms are used"
+                correct: false
+
+    -   question: 'How could you adjust the HTTP method of a form is rendered in a Twig template?'
+        answers:
+            -   value: "{{ form(form, {'method': 'GET'}) }}"
+                correct: true
+            -   value: "{{ form(form, {'http_method': 'GET'}) }}"
+                correct: false
+            -   value: "{{ form(form, 'GET') }}"
+                correct: false
+            -   value: "{{ form(form, false, 'GET') }}"
+                correct: false
+
+    -   question: 'Which Twig form function handles only rendering the first <form> tag?'
+        answers:
+            -   value: "{{ form_start(form) }}"
+                correct: true
+            -   value: "{{ form_tag(form) }}"
+                correct: false
+            -   value: "{{ form_first(form) }}"
+                correct: false
+
+    -   question: 'How could you adjust the HTTP method of a form is rendered in a Twig template?'
+        answers:
+            -   value: "{{ form_start(form, {'method': 'GET'}) }}"
+                correct: true
+            -   value: "{{ form_start(form, {'http_method': 'GET'}) }}"
+                correct: false
+            -   value: "{{ form_start(form, 'GET') }}"
+                correct: false
+            -   value: "{{ form_start(form, false, 'GET') }}"
+                correct: false
+
+    -   question: 'Which Twig form function handles only rendering the last </form> tag?'
+        answers:
+            -   value: "{{ form_end(form) }}"
+                correct: true
+            -   value: "{{ form_close(form) }}"
+                correct: false
+            -   value: "{{ form_tag_end(form) }}"
+                correct: false
+
+    -   question: 'Which Twig form function handles only rendering the label for a form field?'
+        answers:
+            -   value: "{{ form_label(form) }}"
+                correct: true
+            -   value: "{{ form_widget(form) }}"
+                correct: false
+            -   value: "{{ label_form(form) }}"
+                correct: false
+
+    -   question: 'Which of the following are valid ways to customise the label of a form field within a Twig template?'
+        answers:
+            -   value: "{{ form_label(form.name, 'Updated field') }}"
+                correct: true
+            -   value: "{{ form_label(form.name, null, 'Updated field') }}"
+                correct: false
+            -   value: "{{ label_form(form, 'Updated field') }}"
+                correct: false
+            -   value: "{{ label_form(form, null, 'Updated field') }}"
+                correct: false
+            -   value: "{{ form_label(form.name, null, {'label': 'Updated field'}) }}"
+                correct: true
+            -   value: "{{ form_label(form.name, {'label': 'Updated field'}) }}"
+                correct: false
+            -   value: "{{ label_form(form.name, {'label': 'Updated field'}) }}"
+                correct: false
+
+    -   question: 'How would you add the HTML class foo to the form.name field?'
+        answers:
+            -   value: "{{ form_label(form.name, null, {'label_attr': {'class': 'foo'}}) }}"
+                correct: true
+            -   value: "{{ form_label(form.name, null, {'class': 'foo'}) }}"
+                correct: false
+            -   value: "{{ form_label(form.name, {'class': 'foo'}) }}"
+                correct: false
+            -   value: "{{ form_label(form.name, {'label_attr': {'class': 'foo'}}) }}"
+                correct: false
+
+    -   question: 'Which Twig form function handles only rendering the help text for a form field?'
+        answers:
+            -   value: "{{ form_help(form.name) }}"
+                correct: true
+            -   value: "{{ help_form(form.name) }}"
+                correct: false
+            -   value: "{{ form_help_text(form.name) }}"
+                correct: false
+            -   value: "{{ form_help(form) }}"
+                correct: false
+
+    -   question: 'Which Twig form function handles only rendering the form errors for a form field?'
+        answers:
+            -   value: "{{ form_errors(form.name) }}"
+                correct: true
+            -   value: "{{ form_errors(form) }}"
+                correct: false
+            -   value: "{{ errors_form(form.name) }}"
+                correct: false
+            -   value: "{{ form_errors_text(form.name) }}"
+                correct: false
+
+    -   question: 'Which Twig form function handles rendering the HTML tag for the field?'
+        answers:
+            -   value: "{{ form_widget(form.name) }}"
+                correct: false
+            -   value: "{{ form_widget(form) }}"
+                correct: true
+            -   value: "{{ widget_form(form.name) }}"
+                correct: false
+            -   value: "{{ form_html_widget(form.name) }}"
+                correct: false
+            -   value: "{{ form_html_widget(form) }}"
+                correct: false
+
+    -   question: "Which Twig form function handles returning a forms view's parent?"
+        answers:
+            -   value: "{{ form_parent(form) }}"
+                correct: false
+            -   value: "{{ parent_form_form(form) }}"
+                correct: true
+            -   value: "{{ form_get_parent(form) }}"
+                correct: false
+            -   value: "{{ form_parent_or_null(form) }}"
+                correct: false
+            -   value: "{{ parent(form) }}"
+                correct: false
