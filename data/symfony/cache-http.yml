@@ -20,3 +20,13 @@ questions:
             - { value: $response->setSharedMaxAge(900);, correct: true}
             - { value: $response->setSMaxAge(900);, correct: false}
             - { value: $response->setMaxAge(900, true);, correct: false}
+
+    -   question: 'What are browser caches especially useful for?'
+        answers:
+            - { value: Back/forward navigation, correct: true }
+            - { value: Sharing files with other clients, correct: false }
+
+    -   question: 'Are browser caches dedicated to a single user?'
+        answers:
+            - { value: Yes, correct: true }
+            - { value: No, correct: false }
