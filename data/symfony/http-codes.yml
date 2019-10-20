@@ -305,3 +305,75 @@ questions:
             - { value: 401 denotes that the server knowns the client identity, correct: false }
             - { value: 403 denotes that resource doesn't exist, correct: false }
             - { value: 401 denotes that resource doesn't exist, correct: false }
+
+    -   question: 'What is the HTTP status codes for Permanent Redirect?'
+        answers:
+            - { value: 308, correct: true }
+            - { value: 307, correct: false}
+            - { value: 306, correct: false }
+            - { value: 305, correct: false }
+            - { value: 304, correct: false }
+            - { value: 303, correct: false }
+
+    -   question: 'What is the HTTP status codes for Temporary Redirect?'
+        answers:
+            - { value: 307, correct: true }
+            - { value: 308, correct: false}
+            - { value: 306, correct: false }
+            - { value: 305, correct: false }
+            - { value: 304, correct: false }
+            - { value: 303, correct: false }
+
+    -   question: 'What is the HTTP status codes for Not Modified?'
+        answers:
+            - { value: 304, correct: true }
+            - { value: 308, correct: false}
+            - { value: 306, correct: false }
+            - { value: 305, correct: false }
+            - { value: 307, correct: false }
+            - { value: 303, correct: false }
+
+    -   question: 'What is the HTTP status codes for Not Modified?'
+        answers:
+            - { value: 304, correct: true }
+            - { value: 308, correct: false}
+            - { value: 306, correct: false }
+            - { value: 305, correct: false }
+            - { value: 307, correct: false }
+            - { value: 303, correct: false }
+
+    -   question: 'What is the HTTP status codes for See Other?'
+        answers:
+            - { value: 303, correct: true }
+            - { value: 308, correct: false}
+            - { value: 301, correct: false }
+            - { value: 305, correct: false }
+            - { value: 302, correct: false }
+            - { value: 304, correct: false }
+
+    -   question: 'What is the HTTP status codes for See Other?'
+        answers:
+            - { value: 302, correct: true }
+            - { value: 308, correct: false}
+            - { value: 306, correct: false }
+            - { value: 305, correct: false }
+            - { value: 307, correct: false }
+            - { value: 301, correct: false }
+
+    -   question: 'What is the HTTP status codes for Moved Permanently?'
+        answers:
+            - { value: 301, correct: true }
+            - { value: 308, correct: false}
+            - { value: 306, correct: false }
+            - { value: 305, correct: false }
+            - { value: 307, correct: false }
+            - { value: 300, correct: false }
+
+    -   question: 'What is the HTTP status codes for Multiple Choice?'
+        answers:
+            - { value: 300, correct: true }
+            - { value: 308, correct: false}
+            - { value: 306, correct: false }
+            - { value: 305, correct: false }
+            - { value: 307, correct: false }
+            - { value: 301, correct: false }

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/cache-http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/cache-http.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/http-codes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http-codes.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +30,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/symfony/cache-http.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+            <state relative-caret-position="343">
+              <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/symfony/http-codes.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="365" column="42" selection-start-line="365" selection-start-column="42" selection-end-line="365" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -57,6 +66,7 @@
         <option value="$PROJECT_DIR$/data/symfony/config.yml" />
         <option value="$PROJECT_DIR$/data/symfony/event-dispatcher.yml" />
         <option value="$PROJECT_DIR$/data/symfony/cache-http.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/http-codes.yml" />
       </list>
     </option>
   </component>
@@ -327,7 +337,7 @@
       <workItem from="1571240781404" duration="268000" />
       <workItem from="1571299274376" duration="6000" />
       <workItem from="1571327599383" duration="308000" />
-      <workItem from="1571572651290" duration="923000" />
+      <workItem from="1571572651290" duration="2957000" />
     </task>
     <task id="LOCAL-00001" summary="a7562208-c630-4142-8cab-3d728de28c90">
       <created>1564070847740</created>
@@ -630,11 +640,25 @@
       <option name="project" value="LOCAL" />
       <updated>1571507252862</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Client cache questions">
+      <created>1571574356520</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1571574356520</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Adds HTTP codes for 4xx">
+      <created>1571575762736</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1571575762736</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2655000" />
+    <option name="totallyTimeSpent" value="4689000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="810" height="708" extended-state="0" />
@@ -653,7 +677,7 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.6790757" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.6781955" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -718,7 +742,9 @@
     <MESSAGE value="Fixes" />
     <MESSAGE value="Formatting fixes" />
     <MESSAGE value="Questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Questions" />
+    <MESSAGE value="Client cache questions" />
+    <MESSAGE value="Adds HTTP codes for 4xx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds HTTP codes for 4xx" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Command/StartCommand.php">
@@ -744,8 +770,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/symfony/cache-http.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+        <state relative-caret-position="343">
+          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/http-codes.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="365" column="42" selection-start-line="365" selection-start-column="42" selection-end-line="365" selection-end-column="42" />
         </state>
       </provider>
     </entry>
