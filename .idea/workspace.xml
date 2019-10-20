@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data/symfony/architecture.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/http-codes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http-codes.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,10 +31,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/symfony/http-codes.yml">
+        <entry file="file://$PROJECT_DIR$/data/symfony/architecture.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="508" column="26" selection-start-line="508" selection-start-column="26" selection-end-line="508" selection-end-column="26" />
+            <state relative-caret-position="235">
+              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -46,7 +46,19 @@
       <find>encoding</find>
       <find>environment variable</find>
       <find>nvironment variable</find>
+      <find>con</find>
+      <find>Continue</find>
+      <find>HTTP status codes</find>
+      <find>What is the HTTP status codes</find>
+      <find>license</find>
+      <find>MIT</find>
     </findStrings>
+    <replaceStrings>
+      <replace>What is the HTTP status code</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/vendor/certificationy/symfony-pack</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,7 +69,9 @@
         <option value="$PROJECT_DIR$/data/symfony/config.yml" />
         <option value="$PROJECT_DIR$/data/symfony/event-dispatcher.yml" />
         <option value="$PROJECT_DIR$/data/symfony/cache-http.yml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/data/symfony/http-codes.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/architecture.yml" />
       </list>
     </option>
   </component>
@@ -114,7 +128,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="810" />
+    <option name="width" value="831" />
     <option name="height" value="708" />
   </component>
   <component name="ProjectId" id="1OVix7AIIqgbpXCE8Z4KULBv23M" />
@@ -195,13 +209,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data/symfony" />
-      <recent name="$PROJECT_DIR$/data/php" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data/symfony" />
       <recent name="$PROJECT_DIR$/data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/symfony" />
+      <recent name="$PROJECT_DIR$/data/php" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -333,14 +347,7 @@
       <workItem from="1571240781404" duration="268000" />
       <workItem from="1571299274376" duration="6000" />
       <workItem from="1571327599383" duration="308000" />
-      <workItem from="1571572651290" duration="3842000" />
-    </task>
-    <task id="LOCAL-00001" summary="a7562208-c630-4142-8cab-3d728de28c90">
-      <created>1564070847740</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1564070847740</updated>
+      <workItem from="1571572651290" duration="5443000" />
     </task>
     <task id="LOCAL-00002" summary="Fixes formatting in forms.yml">
       <created>1564070988937</created>
@@ -664,17 +671,38 @@
       <option name="project" value="LOCAL" />
       <updated>1571578312077</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="HTTP response codes">
+      <created>1571578479408</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1571578479408</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Updates gitignore to include .idea files">
+      <created>1571578554197</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1571578554197</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Grammar fixes">
+      <created>1571578696802</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1571578696804</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5574000" />
+    <option name="totallyTimeSpent" value="7175000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="810" height="708" extended-state="0" />
+    <frame x="0" y="23" width="831" height="708" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.6" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.37934363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -732,8 +760,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="a7562208-c630-4142-8cab-3d728de28c90" />
-    <MESSAGE value="Fixes formatting in forms.yml" />
     <MESSAGE value="dd2ed48e-a96c-463d-be62-933c322ed8d8" />
     <MESSAGE value="1334c195-4e54-473a-8383-707ff2701807" />
     <MESSAGE value="Fix/1334c195-4e54-473a-8383-707ff2701807" />
@@ -756,7 +782,10 @@
     <MESSAGE value="Adds HTTP codes for 4xx" />
     <MESSAGE value="Adds HTTP codes for 3xx" />
     <MESSAGE value="Adds HTTP codes for 2xx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds HTTP codes for 2xx" />
+    <MESSAGE value="HTTP response codes" />
+    <MESSAGE value="Updates gitignore to include .idea files" />
+    <MESSAGE value="Grammar fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Grammar fixes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/data/symfony/config.yml">
@@ -780,17 +809,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1278">
+          <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/certificationy/certificationy/Certification/Loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Command/StartCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="46" column="37" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="37" />
+        <state relative-caret-position="426">
+          <caret line="70" column="24" lean-forward="true" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/symfony/http-codes.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="508" column="26" selection-start-line="508" selection-start-column="26" selection-end-line="508" selection-end-column="26" />
+        <state relative-caret-position="270">
+          <caret line="144" column="42" lean-forward="true" selection-start-line="144" selection-start-column="42" selection-end-line="144" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/certificationy/symfony-pack/data/architecture.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="125" selection-start-line="125" selection-end-line="131" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/cache.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/architecture.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
         </state>
       </provider>
     </entry>
