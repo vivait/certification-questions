@@ -40,7 +40,7 @@ questions:
             - { value: 4XX, correct: false }
             - { value: 5XX, correct: true }
 
-    -   question: 'What is the HTTP status codes for Internal Server Error?'
+    -   question: 'What is the HTTP status code for Internal Server Error?'
         answers:
             - { value: 504, correct: false }
             - { value: 505, correct: false }
@@ -49,7 +49,7 @@ questions:
             - { value: 503, correct: false }
             - { value: 501, correct: false }
 
-    -   question: 'What is the HTTP status codes for Not Implemented?'
+    -   question: 'What is the HTTP status code for Not Implemented?'
         answers:
             - { value: 504, correct: false }
             - { value: 505, correct: false }
@@ -58,7 +58,7 @@ questions:
             - { value: 503, correct: false }
             - { value: 501, correct: true }
 
-    -   question: 'What is the HTTP status codes for Bad Gateway?'
+    -   question: 'What is the HTTP status code for Bad Gateway?'
         answers:
             - { value: 504, correct: false }
             - { value: 505, correct: false }
@@ -67,7 +67,7 @@ questions:
             - { value: 503, correct: false }
             - { value: 501, correct: false }
 
-    -   question: 'What is the HTTP status codes for Service Unavailable?'
+    -   question: 'What is the HTTP status code for Service Unavailable?'
         answers:
             - { value: 504, correct: false }
             - { value: 505, correct: false }
@@ -76,7 +76,7 @@ questions:
             - { value: 503, correct: true }
             - { value: 501, correct: false }
 
-    -   question: 'What is the HTTP status codes for Gateway Timeout?'
+    -   question: 'What is the HTTP status code for Gateway Timeout?'
         answers:
             - { value: 504, correct: true }
             - { value: 505, correct: false }
@@ -85,7 +85,7 @@ questions:
             - { value: 503, correct: false }
             - { value: 501, correct: false }
 
-    -   question: 'What is the HTTP status codes for HTTP Version Not Supported?'
+    -   question: 'What is the HTTP status code for HTTP Version Not Supported?'
         answers:
             - { value: 504, correct: false }
             - { value: 505, correct: true }
@@ -94,7 +94,7 @@ questions:
             - { value: 503, correct: false }
             - { value: 501, correct: false }
 
-    -   question: 'What is the HTTP status codes for HTTP Network Authentication Required?'
+    -   question: 'What is the HTTP status code for HTTP Network Authentication Required?'
         answers:
             - { value: 504, correct: false }
             - { value: 505, correct: false }
@@ -104,7 +104,7 @@ questions:
             - { value: 511, correct: true }
             - { value: 501, correct: false }
 
-    -   question: 'What is the HTTP status codes for Unavailable For Legal Reasons?'
+    -   question: 'What is the HTTP status code for Unavailable For Legal Reasons?'
         answers:
             - { value: 451, correct: true}
             - { value: 505, correct: false }
@@ -113,7 +113,7 @@ questions:
             - { value: 400, correct: false }
             - { value: 403, correct: false }
 
-    -   question: 'What is the HTTP status codes for Request Header Fields Too Large?'
+    -   question: 'What is the HTTP status code for Request Header Fields Too Large?'
         answers:
             - { value: 431, correct: true}
             - { value: 451, correct: false }
@@ -122,7 +122,7 @@ questions:
             - { value: 431, correct: false }
             - { value: 400, correct: false }
 
-    -   question: 'What is the HTTP status codes for Too Many Requests?'
+    -   question: 'What is the HTTP status code for Too Many Requests?'
         answers:
             - { value: 429, correct: true}
             - { value: 431, correct: false }
@@ -131,7 +131,7 @@ questions:
             - { value: 429, correct: false }
             - { value: 431, correct: false }
 
-    -   question: 'What is the HTTP status codes for Precondition Required?'
+    -   question: 'What is the HTTP status code for Precondition Required?'
         answers:
             - { value: 428, correct: true}
             - { value: 429, correct: false }
@@ -140,7 +140,7 @@ questions:
             - { value: 505, correct: false }
             - { value: 429, correct: false }
 
-    -   question: 'What is the HTTP status codes for Upgrade Required?'
+    -   question: 'What is the HTTP status code for Upgrade Required?'
         answers:
             - { value: 426, correct: true}
             - { value: 428, correct: false }
@@ -149,7 +149,7 @@ questions:
             - { value: 451, correct: false }
             - { value: 505, correct: false }
 
-    -   question: 'What is the HTTP status codes for Too Early?'
+    -   question: 'What is the HTTP status code for Too Early?'
         answers:
             - { value: 425, correct: true}
             - { value: 426, correct: false }
@@ -158,7 +158,7 @@ questions:
             - { value: 431, correct: false }
             - { value: 405, correct: false }
 
-    -   question: 'What is the HTTP status codes for Misdirected Request?'
+    -   question: 'What is the HTTP status code for Misdirected Request?'
         answers:
             - { value: 421, correct: true}
             - { value: 425, correct: false }
@@ -167,7 +167,7 @@ questions:
             - { value: 420, correct: false }
             - { value: 431, correct: false }
 
-    -   question: 'What is the HTTP status codes for I am a teapot?'
+    -   question: 'What is the HTTP status code for I am a teapot?'
         answers:
             - { value: 418, correct: true}
             - { value: 421, correct: false }
@@ -176,7 +176,7 @@ questions:
             - { value: 406, correct: false }
             - { value: 429, correct: false }
 
-    -   question: 'What is the HTTP status codes for Expectation Failed?'
+    -   question: 'What is the HTTP status code for Expectation Failed?'
         answers:
             - { value: 417, correct: true}
             - { value: 411, correct: false }
@@ -185,7 +185,7 @@ questions:
             - { value: 405, correct: false }
             - { value: 428, correct: false }
 
-    -   question: 'What is the HTTP status codes for Requested Range Not Satisfiable?'
+    -   question: 'What is the HTTP status code for Requested Range Not Satisfiable?'
         answers:
             - { value: 416, correct: true}
             - { value: 406, correct: false }
@@ -194,7 +194,7 @@ questions:
             - { value: 425, correct: false }
             - { value: 426, correct: false }
 
-    -   question: 'What is the HTTP status codes for Unsupported Media Type?'
+    -   question: 'What is the HTTP status code for Unsupported Media Type?'
         answers:
             - { value: 415, correct: true}
             - { value: 411, correct: false }
@@ -203,7 +203,7 @@ questions:
             - { value: 421, correct: false }
             - { value: 506, correct: false }
 
-    -   question: 'What is the HTTP status codes for URI Too Long?'
+    -   question: 'What is the HTTP status code for URI Too Long?'
         answers:
             - { value: 414, correct: true}
             - { value: 416, correct: false }
@@ -212,7 +212,7 @@ questions:
             - { value: 505, correct: false }
             - { value: 425, correct: false }
 
-    -   question: 'What is the HTTP status codes for Payload Too Large?'
+    -   question: 'What is the HTTP status code for Payload Too Large?'
         answers:
             - { value: 413, correct: true}
             - { value: 404, correct: false }
@@ -221,7 +221,7 @@ questions:
             - { value: 505, correct: false }
             - { value: 425, correct: false }
 
-    -   question: 'What is the HTTP status codes for Precondition Failed?'
+    -   question: 'What is the HTTP status code for Precondition Failed?'
         answers:
             - { value: 412, correct: true}
             - { value: 404, correct: false }
@@ -230,7 +230,7 @@ questions:
             - { value: 505, correct: false }
             - { value: 425, correct: false }
 
-    -   question: 'What is the HTTP status codes for Length Required?'
+    -   question: 'What is the HTTP status code for Length Required?'
         answers:
             - { value: 411, correct: true}
             - { value: 407, correct: false }
@@ -239,7 +239,7 @@ questions:
             - { value: 505, correct: false }
             - { value: 425, correct: false }
 
-    -   question: 'What is the HTTP status codes for Gone?'
+    -   question: 'What is the HTTP status code for Gone?'
         answers:
             - { value: 410, correct: true}
             - { value: 407, correct: false }
@@ -248,7 +248,7 @@ questions:
             - { value: 505, correct: false }
             - { value: 425, correct: false }
 
-    -   question: 'What is the HTTP status codes for Conflict?'
+    -   question: 'What is the HTTP status code for Conflict?'
         answers:
             - { value: 409, correct: true}
             - { value: 407, correct: false }
@@ -257,7 +257,7 @@ questions:
             - { value: 505, correct: false }
             - { value: 425, correct: false }
 
-    -   question: 'What is the HTTP status codes for Request Timeout?'
+    -   question: 'What is the HTTP status code for Request Timeout?'
         answers:
             - { value: 408, correct: true}
             - { value: 403, correct: false }
@@ -266,7 +266,7 @@ questions:
             - { value: 505, correct: false }
             - { value: 402, correct: false }
 
-    -   question: 'What is the HTTP status codes for Proxy Authentication Required?'
+    -   question: 'What is the HTTP status code for Proxy Authentication Required?'
         answers:
             - { value: 407, correct: true}
             - { value: 403, correct: false }
@@ -275,7 +275,7 @@ questions:
             - { value: 505, correct: false }
             - { value: 402, correct: false }
 
-    -   question: 'What is the HTTP status codes for Not Acceptable?'
+    -   question: 'What is the HTTP status code for Not Acceptable?'
         answers:
             - { value: 406, correct: true}
             - { value: 403, correct: false }
@@ -284,7 +284,7 @@ questions:
             - { value: 502, correct: false }
             - { value: 402, correct: false }
 
-    -   question: 'What is the HTTP status codes for Method Not Allowed?'
+    -   question: 'What is the HTTP status code for Method Not Allowed?'
         answers:
             - { value: 405, correct: true}
             - { value: 403, correct: false }
@@ -293,7 +293,7 @@ questions:
             - { value: 502, correct: false }
             - { value: 402, correct: false }
 
-    -   question: 'What is the HTTP status codes for Not Found?'
+    -   question: 'What is the HTTP status code for Not Found?'
         answers:
             - { value: 404, correct: true}
             - { value: 403, correct: false }
@@ -302,7 +302,7 @@ questions:
             - { value: 502, correct: false }
             - { value: 402, correct: false }
 
-    -   question: 'What is the HTTP status codes for Forbidden?'
+    -   question: 'What is the HTTP status code for Forbidden?'
         answers:
             - { value: 403, correct: true}
             - { value: 403, correct: false }
@@ -311,7 +311,7 @@ questions:
             - { value: 502, correct: false }
             - { value: 402, correct: false }
 
-    -   question: 'What is the HTTP status codes for Payment Required?'
+    -   question: 'What is the HTTP status code for Payment Required?'
         answers:
             - { value: 402, correct: true}
             - { value: 403, correct: false }
@@ -320,7 +320,7 @@ questions:
             - { value: 502, correct: false }
             - { value: 401, correct: false }
 
-    -   question: 'What is the HTTP status codes for Unauthorized?'
+    -   question: 'What is the HTTP status code for Unauthorized?'
         answers:
             - { value: 401, correct: true}
             - { value: 403, correct: false }
@@ -329,7 +329,7 @@ questions:
             - { value: 502, correct: false }
             - { value: 402, correct: false }
 
-    -   question: 'What is the HTTP status codes for Bad Request?'
+    -   question: 'What is the HTTP status code for Bad Request?'
         answers:
             - { value: 400, correct: true }
             - { value: 401, correct: false}
@@ -346,7 +346,7 @@ questions:
             - { value: 403 denotes that resource doesn't exist, correct: false }
             - { value: 401 denotes that resource doesn't exist, correct: false }
 
-    -   question: 'What is the HTTP status codes for Permanent Redirect?'
+    -   question: 'What is the HTTP status code for Permanent Redirect?'
         answers:
             - { value: 308, correct: true }
             - { value: 307, correct: false}
@@ -355,7 +355,7 @@ questions:
             - { value: 304, correct: false }
             - { value: 303, correct: false }
 
-    -   question: 'What is the HTTP status codes for Temporary Redirect?'
+    -   question: 'What is the HTTP status code for Temporary Redirect?'
         answers:
             - { value: 307, correct: true }
             - { value: 308, correct: false}
@@ -364,7 +364,7 @@ questions:
             - { value: 304, correct: false }
             - { value: 303, correct: false }
 
-    -   question: 'What is the HTTP status codes for Not Modified?'
+    -   question: 'What is the HTTP status code for Not Modified?'
         answers:
             - { value: 304, correct: true }
             - { value: 308, correct: false}
@@ -373,7 +373,7 @@ questions:
             - { value: 307, correct: false }
             - { value: 303, correct: false }
 
-    -   question: 'What is the HTTP status codes for Not Modified?'
+    -   question: 'What is the HTTP status code for Not Modified?'
         answers:
             - { value: 304, correct: true }
             - { value: 308, correct: false}
@@ -382,7 +382,7 @@ questions:
             - { value: 307, correct: false }
             - { value: 303, correct: false }
 
-    -   question: 'What is the HTTP status codes for See Other?'
+    -   question: 'What is the HTTP status code for See Other?'
         answers:
             - { value: 303, correct: true }
             - { value: 308, correct: false}
@@ -391,7 +391,7 @@ questions:
             - { value: 302, correct: false }
             - { value: 304, correct: false }
 
-    -   question: 'What is the HTTP status codes for See Other?'
+    -   question: 'What is the HTTP status code for See Other?'
         answers:
             - { value: 302, correct: true }
             - { value: 308, correct: false}
@@ -400,7 +400,7 @@ questions:
             - { value: 307, correct: false }
             - { value: 301, correct: false }
 
-    -   question: 'What is the HTTP status codes for Moved Permanently?'
+    -   question: 'What is the HTTP status code for Moved Permanently?'
         answers:
             - { value: 301, correct: true }
             - { value: 308, correct: false}
@@ -409,7 +409,7 @@ questions:
             - { value: 307, correct: false }
             - { value: 300, correct: false }
 
-    -   question: 'What is the HTTP status codes for Multiple Choice?'
+    -   question: 'What is the HTTP status code for Multiple Choice?'
         answers:
             - { value: 300, correct: true }
             - { value: 308, correct: false}
@@ -418,7 +418,7 @@ questions:
             - { value: 307, correct: false }
             - { value: 301, correct: false }
 
-    -   question: 'What is the HTTP status codes for Partial Content?'
+    -   question: 'What is the HTTP status code for Partial Content?'
         answers:
             - { value: 200, correct: false }
             - { value: 201, correct: false}
@@ -428,7 +428,7 @@ questions:
             - { value: 205, correct: false }
             - { value: 206, correct: true }
 
-    -   question: 'What is the HTTP status codes for Reset Content?'
+    -   question: 'What is the HTTP status code for Reset Content?'
         answers:
             - { value: 200, correct: false }
             - { value: 201, correct: false}
@@ -438,7 +438,7 @@ questions:
             - { value: 205, correct: true }
             - { value: 206, correct: false }
 
-    -   question: 'What is the HTTP status codes for No Content?'
+    -   question: 'What is the HTTP status code for No Content?'
         answers:
             - { value: 200, correct: false }
             - { value: 201, correct: false}
@@ -448,7 +448,7 @@ questions:
             - { value: 205, correct: false }
             - { value: 206, correct: false }
 
-    -   question: 'What is the HTTP status codes for Non-Authoritative Information?'
+    -   question: 'What is the HTTP status code for Non-Authoritative Information?'
         answers:
             - { value: 200, correct: false }
             - { value: 201, correct: false}
@@ -458,7 +458,7 @@ questions:
             - { value: 205, correct: false }
             - { value: 206, correct: false }
 
-    -   question: 'What is the HTTP status codes for Accepted?'
+    -   question: 'What is the HTTP status code for Accepted?'
         answers:
             - { value: 200, correct: false }
             - { value: 201, correct: false}
@@ -468,7 +468,7 @@ questions:
             - { value: 205, correct: false }
             - { value: 206, correct: false }
 
-    -   question: 'What is the HTTP status codes for Created?'
+    -   question: 'What is the HTTP status code for Created?'
         answers:
             - { value: 200, correct: false }
             - { value: 201, correct: true}
@@ -478,7 +478,7 @@ questions:
             - { value: 205, correct: false }
             - { value: 206, correct: false }
 
-    -   question: 'What is the HTTP status codes for OK?'
+    -   question: 'What is the HTTP status code for OK?'
         answers:
             - { value: 200, correct: true }
             - { value: 201, correct: false }
@@ -488,21 +488,21 @@ questions:
             - { value: 205, correct: false }
             - { value: 206, correct: false }
 
-    -   question: 'What is the HTTP status codes for Early Hints?'
+    -   question: 'What is the HTTP status code for Early Hints?'
         answers:
             - { value: 103, correct: true }
             - { value: 102, correct: false }
             - { value: 101, correct: false }
             - { value: 203, correct: false }
 
-    -   question: 'What is the HTTP status codes for Switching Protocol?'
+    -   question: 'What is the HTTP status code for Switching Protocol?'
         answers:
             - { value: 103, correct: true }
             - { value: 102, correct: false }
             - { value: 101, correct: true }
             - { value: 203, correct: false }
 
-    -   question: 'What is the HTTP status codes for Continue?'
+    -   question: 'What is the HTTP status code for Continue?'
         answers:
             - { value: 103, correct: true }
             - { value: 102, correct: false }
