@@ -396,3 +396,14 @@ questions:
                 correct: false
             -   value: "{{ parent(form) }}"
                 correct: false
+
+    -   question: "If you need to change request data before binding them to the form, which event should you use?"
+        answers:
+            -   value: "FormEvents::POST_SET_DATA"
+                correct: false
+            -   value: "FormEvents::PRE_SET_DATA"
+                correct: false
+            -   value: "FormEvents::PRE_SUBMIT"
+                correct: true
+            -   value: "FormEvents::POST_SUBMIT"
+                correct: false

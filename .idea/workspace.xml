@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/symfony/architecture.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/doctrine/orm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/doctrine/orm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/forms.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/forms.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/security.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,12 +31,30 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/symfony/architecture.yml">
+        <entry file="file://$PROJECT_DIR$/data/symfony/forms.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+            <state relative-caret-position="673">
+              <caret line="409" lean-forward="true" selection-start-line="409" selection-end-line="409" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/doctrine/orm.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/symfony/security.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="79" selection-start-line="79" selection-end-line="85" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -52,12 +72,16 @@
       <find>What is the HTTP status codes</find>
       <find>license</find>
       <find>MIT</find>
+      <find>form_rest</find>
+      <find>form_re</find>
+      <find>which of the following are valid twig</find>
     </findStrings>
     <replaceStrings>
       <replace>What is the HTTP status code</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/vendor/certificationy/symfony-pack</dir>
+      <dir>$PROJECT_DIR$/data</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -72,6 +96,11 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/data/symfony/http-codes.yml" />
         <option value="$PROJECT_DIR$/data/symfony/architecture.yml" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.twig" />
+        <option value="$PROJECT_DIR$/data/twig/functions.yml" />
+        <option value="$PROJECT_DIR$/data/doctrine/orm.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/security.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/forms.yml" />
       </list>
     </option>
   </component>
@@ -126,9 +155,9 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
-    <option name="width" value="831" />
+    <option name="width" value="957" />
     <option name="height" value="708" />
   </component>
   <component name="ProjectId" id="1OVix7AIIqgbpXCE8Z4KULBv23M" />
@@ -161,33 +190,19 @@
               <item name="certification-questions" type="b2602c69:ProjectViewProjectNode" />
               <item name="certification-questions" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="doctrine" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="certification-questions" type="b2602c69:ProjectViewProjectNode" />
               <item name="certification-questions" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="certification-questions" type="b2602c69:ProjectViewProjectNode" />
-              <item name="certification-questions" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="certificationy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="certification-questions" type="b2602c69:ProjectViewProjectNode" />
-              <item name="certification-questions" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="certificationy" type="462c0819:PsiDirectoryNode" />
-              <item name="symfony-pack" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="certification-questions" type="b2602c69:ProjectViewProjectNode" />
-              <item name="certification-questions" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="certificationy" type="462c0819:PsiDirectoryNode" />
-              <item name="symfony-pack" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="certification-questions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="certification-questions" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -199,7 +214,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP&#10;Twig&#10;HTML&#10;TEXT" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Twig&#10;PHP&#10;HTML&#10;TEXT" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/data/symfony" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs.protractor.protractor_package" value="" />
@@ -347,21 +362,8 @@
       <workItem from="1571240781404" duration="268000" />
       <workItem from="1571299274376" duration="6000" />
       <workItem from="1571327599383" duration="308000" />
-      <workItem from="1571572651290" duration="5443000" />
-    </task>
-    <task id="LOCAL-00002" summary="Fixes formatting in forms.yml">
-      <created>1564070988937</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1564070988937</updated>
-    </task>
-    <task id="LOCAL-00003" summary="dd2ed48e-a96c-463d-be62-933c322ed8d8">
-      <created>1564417112667</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1564417112667</updated>
+      <workItem from="1571572651290" duration="9362000" />
+      <workItem from="1571845762381" duration="533000" />
     </task>
     <task id="LOCAL-00004" summary="1334c195-4e54-473a-8383-707ff2701807">
       <created>1564502520925</created>
@@ -692,17 +694,31 @@
       <option name="project" value="LOCAL" />
       <updated>1571578696804</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="License changes">
+      <created>1571580139017</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1571580139017</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Twig form rendering">
+      <created>1571585196055</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1571585196056</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7175000" />
+    <option name="totallyTimeSpent" value="11627000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="831" height="708" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.37934363" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.378125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -715,7 +731,7 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.6781955" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.677792" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -760,8 +776,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dd2ed48e-a96c-463d-be62-933c322ed8d8" />
-    <MESSAGE value="1334c195-4e54-473a-8383-707ff2701807" />
     <MESSAGE value="Fix/1334c195-4e54-473a-8383-707ff2701807" />
     <MESSAGE value="d7e3efa5-228b-46c8-a54d-37da95e0cde1" />
     <MESSAGE value="8e605a05-f10b-447a-8e8b-0d98e25b1e0f" />
@@ -785,7 +799,9 @@
     <MESSAGE value="HTTP response codes" />
     <MESSAGE value="Updates gitignore to include .idea files" />
     <MESSAGE value="Grammar fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Grammar fixes" />
+    <MESSAGE value="License changes" />
+    <MESSAGE value="Twig form rendering" />
+    <option name="LAST_COMMIT_MESSAGE" value="Twig form rendering" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/data/symfony/config.yml">
@@ -860,8 +876,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/symfony/architecture.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        <state relative-caret-position="370">
+          <caret line="15" column="63" lean-forward="true" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="83" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/twig/functions.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/doctrine/orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="79" selection-start-line="79" selection-end-line="85" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/forms.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="409" lean-forward="true" selection-start-line="409" selection-end-line="409" />
         </state>
       </provider>
     </entry>

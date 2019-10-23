@@ -76,3 +76,11 @@ questions:
             - {value: ACCESS_DENIED_ERROR, correct: true}
             - {value: MAX_USERNAME_LENGTH, correct: true}
             - {value: BAD_CREDENTIALS, correct: false}
+
+    -   question: In order to create a custom password encoder, what must you do
+        answers:
+            - {value: Implement the Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface, correct: true}
+            - {value: Implement the encodePassword() method, correct: true}
+            - {value: Implement the isPasswordValid() method, correct: true}
+            - {value: Implement the isPasswordTooLong() method, correct: false}
+            - {value: Implement the validate() method, correct: false}
