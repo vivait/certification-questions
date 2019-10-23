@@ -1,0 +1,13 @@
+category: HTTP kernel
+questions:
+    -   question: What are the methods available on the Symfony\Component\HttpKernel\Event\KernelEvent?
+        answers:
+            - { value: hasResponse, correct: false }
+            - { value: getResponse, correct: false }
+            - { value: getRequestType, correct: true }
+            - { value: getKernel, correct: true }
+            - { value: getRequest, correct: true }
+            - { value: hasRequest, correct: false }
+            - { value: hasException, correct: false }
+            - { value: getException, correct: false }
+            - { value: isMasterRequest, correct: true }
