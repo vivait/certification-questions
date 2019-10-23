@@ -504,7 +504,7 @@ questions:
 
     -   question: 'What is the HTTP status code for Continue?'
         answers:
-            - { value: 103, correct: true }
+            - { value: 103, correct: false }
             - { value: 102, correct: false }
             - { value: 100, correct: true }
             - { value: 203, correct: false }

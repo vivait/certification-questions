@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/symfony/http-kernel.yml" afterDir="false" />
+    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="Adds HTTP kernel question">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/best-practices.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/best-practices.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/cache-http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/cache-http.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/forms.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/forms.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/http-codes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http-codes.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/twig.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/twig.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,26 +34,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/symfony/http-kernel.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/symfony/expression-language.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" lean-forward="true" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -56,7 +42,6 @@
       <find>environment variable</find>
       <find>nvironment variable</find>
       <find>con</find>
-      <find>Continue</find>
       <find>HTTP status codes</find>
       <find>What is the HTTP status codes</find>
       <find>license</find>
@@ -67,14 +52,27 @@
       <find>compa</find>
       <find>compat</find>
       <find>crsf</find>
+      <find>validation caching model</find>
+      <find>PHP</find>
+      <find>{value: public</find>
+      <find>Which default role exist ?</find>
+      <find>Which default role exist</find>
+      <find>Using Twig, what syntax used to print the content of a variable</find>
+      <find>Using Config component, which of these methods are existing?</find>
+      <find>What is the signature of the voteOnAttribute() method from Symfony\Component\Security\Core\Authorization\Voter\Voter abstract</find>
+      <find>What is the HTTP status code for Continue?</find>
+      <find>What</find>
+      <find>Continue</find>
+      <find>How to add an extension MyForm to the Form component</find>
     </findStrings>
     <replaceStrings>
       <replace>What is the HTTP status code</replace>
     </replaceStrings>
     <dirStrings>
+      <dir>$PROJECT_DIR$/vendor/certificationy/symfony-pack/data</dir>
       <dir>$PROJECT_DIR$/vendor/certificationy/symfony-pack</dir>
       <dir>$PROJECT_DIR$/data</dir>
-      <dir>$PROJECT_DIR$/vendor/certificationy/symfony-pack/data</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -85,17 +83,19 @@
       <list>
         <option value="$PROJECT_DIR$/data/symfony/config.yml" />
         <option value="$PROJECT_DIR$/data/symfony/event-dispatcher.yml" />
-        <option value="$PROJECT_DIR$/data/symfony/cache-http.yml" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/data/symfony/http-codes.yml" />
         <option value="$PROJECT_DIR$/data/symfony/architecture.yml" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.twig" />
         <option value="$PROJECT_DIR$/data/twig/functions.yml" />
         <option value="$PROJECT_DIR$/data/doctrine/orm.yml" />
-        <option value="$PROJECT_DIR$/data/symfony/security.yml" />
         <option value="$PROJECT_DIR$/data/symfony/standardization.yml" />
-        <option value="$PROJECT_DIR$/data/symfony/forms.yml" />
         <option value="$PROJECT_DIR$/data/symfony/http-kernel.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/cache-http.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/best-practices.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/twig.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/security.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/http-codes.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/forms.yml" />
       </list>
     </option>
   </component>
@@ -164,7 +164,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,6 +229,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -385,14 +385,8 @@
       <workItem from="1571327599383" duration="308000" />
       <workItem from="1571572651290" duration="9362000" />
       <workItem from="1571845762381" duration="622000" />
-      <workItem from="1571863039206" duration="2440000" />
-    </task>
-    <task id="LOCAL-00006" summary="d7e3efa5-228b-46c8-a54d-37da95e0cde1">
-      <created>1564647176355</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1564647176355</updated>
+      <workItem from="1571863039206" duration="2916000" />
+      <workItem from="1571866055503" duration="851000" />
     </task>
     <task id="LOCAL-00007" summary="d7e3efa5-228b-46c8-a54d-37da95e0cde1">
       <created>1565020538665</created>
@@ -730,17 +724,23 @@
       <option name="project" value="LOCAL" />
       <updated>1571865057232</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Adds HTTP kernel question">
+      <created>1571865639910</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1571865639910</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14156000" />
+    <option name="totallyTimeSpent" value="15483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="866" height="708" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3752887" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3752887" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -753,7 +753,7 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.677792" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.6766917" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -798,7 +798,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="d7e3efa5-228b-46c8-a54d-37da95e0cde1" />
     <MESSAGE value="8e605a05-f10b-447a-8e8b-0d98e25b1e0f" />
     <MESSAGE value="723a070d-276d-48fd-a15f-8e20f0a769d0" />
     <MESSAGE value="568d044a-81ca-411a-9441-b2e59701030d" />
@@ -823,7 +822,8 @@
     <MESSAGE value="License changes" />
     <MESSAGE value="Twig form rendering" />
     <MESSAGE value="Adds Symfony backwards compatibility promise" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds Symfony backwards compatibility promise" />
+    <MESSAGE value="Adds HTTP kernel question" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds HTTP kernel question" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/data/symfony/config.yml">
@@ -837,13 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
           <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/symfony/cache-http.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -865,13 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
           <caret line="70" column="24" lean-forward="true" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/symfony/http-codes.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="144" column="42" lean-forward="true" selection-start-line="144" selection-start-column="42" selection-end-line="144" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -918,13 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/symfony/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2133">
-          <caret line="79" selection-start-line="79" selection-end-line="85" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/symfony/http.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -946,10 +925,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/symfony/forms.yml">
+    <entry file="file://$PROJECT_DIR$/data/symfony/http-kernel.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="401" column="18" selection-start-line="401" selection-start-column="18" selection-end-line="401" selection-end-column="18" />
+        <state relative-caret-position="270">
+          <caret line="10" column="53" lean-forward="true" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -960,10 +939,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/symfony/http-kernel.yml">
+    <entry file="file://$PROJECT_DIR$/data/symfony/cache-http.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="162">
+          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/best-practices.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/certificationy/symfony-pack/data/templating.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="182" column="43" selection-start-line="182" selection-start-column="43" selection-end-line="182" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/certificationy/symfony-pack/data/bundles.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="75" column="57" lean-forward="true" selection-start-line="75" selection-start-column="57" selection-end-line="75" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/forms.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="149" column="51" lean-forward="true" selection-start-line="149" selection-start-column="51" selection-end-line="149" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/http-codes.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="498" column="16" lean-forward="true" selection-start-line="498" selection-start-column="16" selection-end-line="498" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/twig.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>

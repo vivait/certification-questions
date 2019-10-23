@@ -137,7 +137,7 @@ questions:
             - { value: AppBundle\Form\Type, correct: false }
             - { value: AppBundle\FormType, correct: false }
 
-    -   question: "How to add an extension MyForm to the Form component ?"
+    -   question: "Which is the correct way to add an extension MyForm to the Form component?"
         answers:
             - value: |
                   use Symfony\Component\Form\Forms;

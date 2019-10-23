@@ -62,10 +62,10 @@ questions:
 
     -   question: What is the signature of the voteOnAttribute() method from Symfony\Component\Security\Core\Authorization\Voter\Voter abstract class?
         answers:
-            - {value: voteOnAttribute($attribute, TokenInterface $token, $subject), correct: false}
-            - {value: voteOnAttribute(TokenInterface $token, $subject, $attribute), correct: false}
-            - {value: voteOnAttribute(TokenInterface $token, $attribute, $subject), correct: false}
-            - {value: voteOnAttribute($attribute, $subject, TokenInterface $token), correct: true}
+            - {value: 'voteOnAttribute($attribute, TokenInterface $token, $subject)', correct: false}
+            - {value: 'voteOnAttribute(TokenInterface $token, $subject, $attribute)', correct: false}
+            - {value: 'voteOnAttribute(TokenInterface $token, $attribute, $subject)', correct: false}
+            - {value: 'voteOnAttribute($attribute, $subject, TokenInterface $token)', correct: true}
 
     -   question: Which are the constants defined in Symfony\Component\Security\Core\Security class?
         answers:
@@ -84,3 +84,24 @@ questions:
             - {value: Implement the isPasswordValid() method, correct: true}
             - {value: Implement the isPasswordTooLong() method, correct: false}
             - {value: Implement the validate() method, correct: false}
+
+    -   question: |
+            Which of the following methods should be defined in order to implement the
+            Symfony\Bundle\SecurityBundle\DependencyInjection\Security
+        answers:
+            -   value: public function addConfiguration(NodeDefinition $builder);
+                correct: true
+            -   value: public function supports(TokenInterface $token);
+                correct: false
+            -   value: public function getPosition();
+                correct: true
+            -   value: public function getKey();
+                correct: true
+            -   value: |
+                    public function create(ContainerBuilder $container, $id, $config, $userProvider $defaultEntryPoint);
+                correct: true
+            -   value: public function add(NodeDefinition $builder);
+                correct: false
+            -   value: public function getToken();
+                correct: false
+

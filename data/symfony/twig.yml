@@ -61,3 +61,14 @@ questions:
             - {value: "['is_safe' => ['html']]", correct: true}
             - {value: "['is_safe']", correct: false}
             - {value: "['is_safe' => 'html']", correct: false}
+
+    -   question: Which of the following are built-in Twig functions?
+        answers:
+            - {value: source(), correct: true}
+            - {value: render(), correct: true}
+            - {value: date(), correct: true}
+            - {value: url(), correct: false}
+            - {value: dump(), correct: true}
+            - {value: path(), correct: false}
+            - {value: max(), correct: true}
+            - {value: attribute(), correct: true}
