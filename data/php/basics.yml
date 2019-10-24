@@ -228,3 +228,10 @@ questions:
             - {value: With the $GLOBALS array, correct: false }
             - {value: With the reflection API, correct: true }
             - {value: With get_loaded_extensions(), correct: true }
+
+    -   question: "How do you retrieve a cookie in PHP?"
+        answers:
+            - {value: "get_cookie('mycookie')", correct: false }
+            - {value: "cookies::get('mycookie')", correct: true }
+            - {value: "$_COOKIE['mycookie']", correct: true }
+            - {value: "$_SERVER['cookies']['mycookie']", correct: false }

@@ -11,3 +11,37 @@ questions:
             - { value: hasException, correct: false }
             - { value: getException, correct: false }
             - { value: isMasterRequest, correct: true }
+    -   question: What is the base class for events that are thrown in the HttpKernel component?
+        answers:
+            - { value: Symfony\Component\HttpKernel\Event\KernelEvent, correct: false }
+            - { value: Symfony\Component\HttpKernel\HttpKernelEvent, correct: false }
+            - { value: Symfony\Component\HttpKernel\KernelEvent, correct: true }
+            - { value: Symfony\Component\HttpKernel\Event\HttpKernelEvent, correct: false }
+            - { value: Symfony\Component\HttpKernel\Event\BaseKernelEvent, correct: false }
+            - { value: Symfony\Component\HttpKernel\BaseKernelEvent, correct: false }
+
+    -   question: How could you simulate a GET request to /hello-world?
+        answers:
+            - value: |
+                  $request = Request::create(
+                    null,
+                    '/hello-world'
+                    );
+              correct: false
+            - value: |
+                  $request = Request::create(
+                    '/hello-world'
+                    );
+              correct: true
+            - value: |
+                  $request = Request::create(
+                    '/hello-world',
+                    'GET'
+                    );
+              correct: true
+            - value: |
+                  $request = Request::create(
+                    'GET',
+                    '/hello-world'
+                    );
+              correct: false
