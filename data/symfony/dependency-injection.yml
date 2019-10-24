@@ -167,3 +167,43 @@ questions:
             - {value: "None of them (they're cached and compiled PHP before running).", correct: true}
             - {value: 'XML', correct: false}
             - {value: 'PHP', correct: true}
+
+    - question: "Which of the following is the correct way to decorate a service?"
+        answers:
+            - value: |
+                  App\DecoratingMailer:
+                      decorates: App\Mailer
+              correct: true
+            - value: |
+                  App\DecoratingMailer:
+                      decorates: @App\Mailer
+              correct: false
+            - value: |
+                  App\DecoratingMailer:
+                      wrap: App\Mailer
+              correct: false
+            - value: |
+                  App\DecoratingMailer:
+                      wrap: @App\Mailer
+              correct: false
+
+    - question: "What would be the default service alias when the App\Mailer is decorated?"
+          answers:
+              - {value: "App\Mailer.inner", correct: true}
+              - {value: "App\Mailer", correct: false}
+              - {value: 'App\Mailer.decorated', correct: false}
+
+    - question: "Which of the following is the valid way to change the decorated service's alias?"
+          answers:
+              - value: |
+                    App\DecoratingMailer:
+                        decoration_inner_name: App\DecoratingMailer.changed
+                correct: true
+              - value: |
+                    App\DecoratingMailer:
+                        decorated_service_alias: App\DecoratingMailer.changed
+                correct: false
+              - value: |
+                    App\DecoratingMailer:
+                        original_service_alias: App\DecoratingMailer.changed
+                correct: false

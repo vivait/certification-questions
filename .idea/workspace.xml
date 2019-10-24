@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="Adds HTTP kernel question">
+    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/event-dispatcher.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/event-dispatcher.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/http-kernel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http-kernel.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -192,12 +189,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.phpunit.xml.dist" />
+      <item itemvalue="PHP Script.scratch_2.php" />
       <item itemvalue="PHP Script.scratch_12.php" />
       <item itemvalue="PHP Script.scratch_14.php" />
       <item itemvalue="PHP Script.scratch_15.php" />
       <item itemvalue="PHP Script.scratch_17.php" />
-      <item itemvalue="PHP Script.scratch_2.php" />
+      <item itemvalue="PHPUnit.phpunit.xml.dist" />
     </list>
     <recent_temporary>
       <list>
@@ -292,13 +289,6 @@
       <workItem from="1571845762381" duration="622000" />
       <workItem from="1571863039206" duration="2916000" />
       <workItem from="1571866055503" duration="851000" />
-    </task>
-    <task id="LOCAL-00007" summary="d7e3efa5-228b-46c8-a54d-37da95e0cde1">
-      <created>1565020538665</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1565020538665</updated>
     </task>
     <task id="LOCAL-00008" summary="8e605a05-f10b-447a-8e8b-0d98e25b1e0f">
       <created>1565020797493</created>
@@ -636,7 +626,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571865639910</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Questions">
+      <created>1571932263028</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1571932263028</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,7 +680,6 @@
     <MESSAGE value="Some tesst" />
     <MESSAGE value="Fixes" />
     <MESSAGE value="Formatting fixes" />
-    <MESSAGE value="Questions" />
     <MESSAGE value="Client cache questions" />
     <MESSAGE value="Adds HTTP codes for 4xx" />
     <MESSAGE value="Adds HTTP codes for 3xx" />
@@ -695,6 +691,7 @@
     <MESSAGE value="Twig form rendering" />
     <MESSAGE value="Adds Symfony backwards compatibility promise" />
     <MESSAGE value="Adds HTTP kernel question" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds HTTP kernel question" />
+    <MESSAGE value="Questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Questions" />
   </component>
 </project>
