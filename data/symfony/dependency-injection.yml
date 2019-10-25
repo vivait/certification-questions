@@ -207,3 +207,168 @@ questions:
                     App\DecoratingMailer:
                         original_service_alias: App\DecoratingMailer.changed
                 correct: false
+
+    - question: "Which of the following is the valid way to create a service using a static factory?"
+      answers:
+          - value: |
+                App\Email\NewsletterManager:
+                    factory: ['App\Email\NewsletterManagerStaticFactory', 'createNewsletterManager']
+            correct: true
+          - value: |
+                App\Email\NewsletterManager:
+                    factory_class: 'App\Email\NewsletterManagerStaticFactory',
+                    factory_method: 'createNewsletterManager'
+            correct: false
+          - value: |
+                App\Email\NewsletterManager: ['App\Email\NewsletterManagerStaticFactory', 'createNewsletterManager']
+            correct: false
+
+    - question: "Which of the following is the valid way to create a service using a static factory?"
+      answers:
+          - value: |
+                <services>
+                    <service id="App\Email\NewsletterManager">
+                        <factory class="App\Email\NewsletterManagerStaticFactory" method="createNewsletterManager"/>
+                    </service>
+                </services>
+            correct: true
+          - value: |
+                <services>
+                    <service id="App\Email\NewsletterManager">
+                        <factory value="App\Email\NewsletterManagerStaticFactory::createNewsletterManager"/>
+                    </service>
+                </services>
+            correct: false
+          - value: |
+                <services>
+                    <service id="App\Email\NewsletterManager" factory="App\Email\NewsletterManagerStaticFactory::createNewsletterManager">
+                    </service>
+                </services>
+            correct: false
+
+    - question: "Which of the following is the valid way to create a service using a static factory?"
+      answers:
+          - value: |
+                namespace Symfony\Component\DependencyInjection\Loader\Configurator;
+
+                use App\Email\NewsletterManager;
+                use App\Email\NewsletterManagerStaticFactory;
+
+                return function(ContainerConfigurator $configurator) {
+                    $services = $configurator->services();
+
+                    $services->set(NewsletterManager::class)
+                        ->factory([NewsletterManagerStaticFactory::class, 'createNewsletterManager']);
+                };
+            correct: true
+          - value: |
+                namespace Symfony\Component\DependencyInjection\Loader\Configurator;
+
+                use App\Email\NewsletterManager;
+                use App\Email\NewsletterManagerStaticFactory;
+
+                return function(ContainerConfigurator $configurator) {
+                    $services = $configurator->services();
+
+                    $services->set(NewsletterManager::class)
+                        ->factory(NewsletterManagerStaticFactory::createNewsletterManager());
+                };
+            correct: false
+          - value: |
+                namespace Symfony\Component\DependencyInjection\Loader\Configurator;
+
+                use App\Email\NewsletterManager;
+                use App\Email\NewsletterManagerStaticFactory;
+
+                return function(ContainerConfigurator $configurator) {
+                    $services = $configurator->services();
+
+                    $services->set(NewsletterManager::class)
+                        ->factory(function () {
+                            return NewsletterManagerStaticFactory::createNewsletterManager();
+                        });
+                };
+            correct: false
+
+    - question: "Which of the following is the valid way to create a service using a factory?"
+      answers:
+          - value: |
+                App\Email\NewsletterManager:
+                    factory: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager']
+            correct: true
+          - value: |
+                App\Email\NewsletterManager:
+                    factory_class: '@App\Email\NewsletterManagerFactory',
+                    factory_method: 'createNewsletterManager'
+            correct: false
+          - value: |
+                App\Email\NewsletterManager: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager']
+            correct: false
+
+    - question: "Which of the following is the valid way to create a service using a factory?"
+      answers:
+          - value: |
+                <services>
+                    <service id="App\Email\NewsletterManager">
+                        <factory service="App\Email\NewsletterManagerFactory" method="createNewsletterManager"/>
+                    </service>
+                </services>
+            correct: true
+          - value: |
+                <services>
+                    <service id="App\Email\NewsletterManager">
+                        <factory service="App\Email\NewsletterManagerFactory::createNewsletterManager"/>
+                    </service>
+                </services>
+            correct: false
+          - value: |
+                <services>
+                    <service id="App\Email\NewsletterManager" factory="@App\Email\NewsletterManagerFactory::createNewsletterManager">
+                    </service>
+                </services>
+            correct: false
+
+    - question: "Which of the following is the valid way to create a service using a factory?"
+      answers:
+          - value: |
+                return function(ContainerConfigurator $configurator) {
+                    $services = $configurator->services();
+
+                    $services->set(NewsletterManager::class)
+                         ->factory([ref(NewsletterManagerFactory::class), 'createNewsletterManager']);
+                };
+            correct: true
+          - value: |
+                return function(ContainerConfigurator $configurator) {
+                    $services = $configurator->services();
+
+                    $services->set(NewsletterManager::class)
+                        ->serviceFactory([NewsletterManagerFactory, 'createNewsletterManager']);
+                };
+            correct: false
+          - value: |
+                return function(ContainerConfigurator $configurator) {
+                    $services = $configurator->services();
+
+                    $services->set(NewsletterManager::class)
+                        ->factory(function ($container) {
+                            return $container->get(NewsletterManagerFactory::class)->createNewsletterManager();
+                        });
+                };
+            correct: false
+
+    - question: "Which of the following is the valid way to pass arguments to a factory?"
+          answers:
+              - value: |
+                    App\Email\NewsletterManager:
+                        factory: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager']
+                        arguments: ['@templating']
+                correct: true
+              - value: |
+                    App\Email\NewsletterManager:
+                        factory: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager']
+                        factory_arguments: ['@templating']
+                correct: false
+              - value: |
+                    App\Email\NewsletterManager: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager', '@templating']
+                correct: false

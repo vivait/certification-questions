@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/symfony/process.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/validation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/validation.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/yaml.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/yaml.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -252,14 +250,7 @@
       <workItem from="1571845762381" duration="622000" />
       <workItem from="1571863039206" duration="2916000" />
       <workItem from="1571866055503" duration="851000" />
-      <workItem from="1572017518716" duration="665000" />
-    </task>
-    <task id="LOCAL-00009" summary="723a070d-276d-48fd-a15f-8e20f0a769d0">
-      <created>1565077506263</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1565077506263</updated>
+      <workItem from="1572017518716" duration="1562000" />
     </task>
     <task id="LOCAL-00010" summary="568d044a-81ca-411a-9441-b2e59701030d">
       <created>1565109179323</created>
@@ -597,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571932844948</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Adds questions">
+      <created>1572018293200</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1572018293200</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,7 +629,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="723a070d-276d-48fd-a15f-8e20f0a769d0" />
     <MESSAGE value="568d044a-81ca-411a-9441-b2e59701030d" />
     <MESSAGE value="71a18f0f-a283-418a-af28-c4db623b526b" />
     <MESSAGE value="Updates question" />
@@ -656,6 +653,7 @@
     <MESSAGE value="Adds HTTP kernel question" />
     <MESSAGE value="Questions" />
     <MESSAGE value="Adds questions regarding decoration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds questions regarding decoration" />
+    <MESSAGE value="Adds questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds questions" />
   </component>
 </project>
