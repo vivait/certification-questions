@@ -60,3 +60,30 @@ questions:
             - {value: It validates if a credit card is a VISA one, correct: true}
             - {value: It validates that a card number is valid for a given credit card company, correct: falseh}
             - {value: It doesn't exist, correct: false}
+
+    -   question: |
+            Will the following snippet throw an InvalidArgumentException ?
+
+            use Symfony\Component\Validator\Validation;
+            use Symfony\Component\Validator\Constraints\Blank;
+
+            $expectedBlank = [];
+
+            $validator = Validation::createValidator();
+            $violations = $validator->validate($expectedBlank, [new Blank()]);
+
+            if (0 !== count($violations)) {
+                throw new InvalidArgumentException('The value is not blank !');
+            }
+        answers:
+            - {value: Yes, correct: true}
+            - {value: No, correct: false}
+
+    -   question: |
+            Which of the following values will fail Symfony\Component\Validator\Constraints\Blank's validation?
+        answers:
+            - {value: "''", correct: false}
+            - {value: null, correct: false}
+            - {value: '[]', correct: true}
+            - {value: 'new \stdClass', correct: true}
+            - {value: '0', correct: true}

@@ -1,0 +1,14 @@
+category: Process
+questions:
+    -   question: |
+            What is the method to access the pid of the running process of the following code:
+
+            use Symfony\Component\Process\Process;
+
+            $process = new Process('/usr/bin/php worker.php');
+            $process->start();
+        answers:
+            - {value: "$pid = $process->getPid();", correct: true}
+            - {value: "$pid = $process->getProcessId();", correct: false}
+            - {value: '$pid = $process->getData()->getProcessId();', correct: false}
+            - {value: '$pid = $process->getData()->getPid();', correct: false}
