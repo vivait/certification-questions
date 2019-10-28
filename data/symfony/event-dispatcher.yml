@@ -25,7 +25,7 @@ questions:
     -   question: |
             What is the argument passed to listeners of kernel.exception prior to Symfony 4.3?
         answers:
-            - { value: ResponseEvent, correct: true }
+            - { value: ResponseEvent, correct: false }
             - { value: PostExceptionEvent, correct: false }
             - { value: ExceptionEvent, correct: false }
             - { value: PostResponseEvent, correct: false }
