@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/http-kernel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http-kernel.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/psr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/psr.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -249,14 +246,7 @@
       <workItem from="1571863039206" duration="2916000" />
       <workItem from="1571866055503" duration="851000" />
       <workItem from="1572017518716" duration="1976000" />
-      <workItem from="1572280742713" duration="535000" />
-    </task>
-    <task id="LOCAL-00011" summary="71a18f0f-a283-418a-af28-c4db623b526b">
-      <created>1565280003288</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1565280003288</updated>
+      <workItem from="1572280742713" duration="683000" />
     </task>
     <task id="LOCAL-00012" summary="Updates question">
       <created>1565337840695</created>
@@ -594,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572019172488</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Questions">
+      <created>1572281346581</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1572281346582</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -649,10 +646,10 @@
     <MESSAGE value="Twig form rendering" />
     <MESSAGE value="Adds Symfony backwards compatibility promise" />
     <MESSAGE value="Adds HTTP kernel question" />
-    <MESSAGE value="Questions" />
     <MESSAGE value="Adds questions regarding decoration" />
     <MESSAGE value="Adds questions" />
     <MESSAGE value="Adds questions about factories" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds questions about factories" />
+    <MESSAGE value="Questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Questions" />
   </component>
 </project>

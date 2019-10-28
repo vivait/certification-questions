@@ -14,6 +14,12 @@ questions:
             - {value: 'constructor', correct: true}
             - {value: 'getter', correct: false}
 
+    -   question: "Do synthetic services require a class name?"
+        answers:
+            - {value: "It is optional", correct: false}
+            - {value: 'They do not specify a class', correct: true}
+            - {value: 'A class is required for container validation', correct: false}
+
     -   question: "On a default Symfony project using symfony/form, what solutions can successfully help us retrieve the FormFactory in the signup action?"
         answers:
             -   value: |
