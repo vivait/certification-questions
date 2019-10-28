@@ -20,7 +20,7 @@ questions:
 
             $firstName = $accessor->getValue($person, 'firstName');
         answers:
-            - { value: Wouter, correct: false t}
+            - { value: Wouter, correct: false}
             - { value: Ryan, correct: true }
 
     -   question: "What is the method to call to check if getValue can safely be called?"
