@@ -45,3 +45,11 @@ questions:
                     '/hello-world'
                     );
               correct: false
+
+    -   question: What is the argument passed to listeners of kernel.finish_request?
+        answers:
+            - { value: FinishRequestEvent, correct: true }
+            - { value: PostResponseEvent, correct: false }
+            - { value: ResponseEvent, correct: false }
+            - { value: GetResponseEvent, correct: false }
+            - { value: RequestEvent, correct: false }

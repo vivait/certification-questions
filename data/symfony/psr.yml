@@ -17,3 +17,11 @@ questions:
             - {value: A common logger interface.,   correct: true}
             - {value: A utility to convert non-namespaced PHP classes into namespaced ones,   correct: false}
             - {value: A coding style guide.,   correct: false}
+
+    -   question: 'Which Symfony component has been created to provide a PSR-6 implementation?'
+        answers:
+            - {value: Filesystem, correct: false}
+            - {value: PropertyAccess,   correct: true}
+            - {value: Cache,   correct: false}
+            - {value: Inflector,   correct: false}
+            - {value: HTTP foundation,   correct: false}

@@ -235,3 +235,12 @@ questions:
             - {value: "cookies::get('mycookie')", correct: true }
             - {value: "$_COOKIE['mycookie']", correct: true }
             - {value: "$_SERVER['cookies']['mycookie']", correct: false }
+
+
+    -   question: "How can you get the value of the session identifier when the session is correctly started?"
+        answers:
+            - {value: "With the $_COOKIE variable", correct: true }
+            - {value: "By using session_name()", correct: false }
+            - {value: "With the SID constant", correct: true }
+            - {value: "By using session_id()", correct: true }
+            - {value: "By using session_start()", correct: false }

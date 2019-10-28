@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/http-kernel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http-kernel.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/psr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/psr.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,11 +87,6 @@
       <path value="$PROJECT_DIR$/vendor/herrera-io/json" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
     </include_path>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="866" />
-    <option name="height" value="708" />
   </component>
   <component name="ProjectId" id="1OVix7AIIqgbpXCE8Z4KULBv23M" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -250,14 +248,8 @@
       <workItem from="1571845762381" duration="622000" />
       <workItem from="1571863039206" duration="2916000" />
       <workItem from="1571866055503" duration="851000" />
-      <workItem from="1572017518716" duration="1562000" />
-    </task>
-    <task id="LOCAL-00010" summary="568d044a-81ca-411a-9441-b2e59701030d">
-      <created>1565109179323</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1565109179323</updated>
+      <workItem from="1572017518716" duration="1976000" />
+      <workItem from="1572280742713" duration="535000" />
     </task>
     <task id="LOCAL-00011" summary="71a18f0f-a283-418a-af28-c4db623b526b">
       <created>1565280003288</created>
@@ -595,7 +587,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572018293200</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Adds questions about factories">
+      <created>1572019172487</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1572019172488</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,7 +628,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="568d044a-81ca-411a-9441-b2e59701030d" />
     <MESSAGE value="71a18f0f-a283-418a-af28-c4db623b526b" />
     <MESSAGE value="Updates question" />
     <MESSAGE value="350f5b95-576a-4888-a8e1-398271a5de50" />
@@ -654,6 +652,7 @@
     <MESSAGE value="Questions" />
     <MESSAGE value="Adds questions regarding decoration" />
     <MESSAGE value="Adds questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds questions" />
+    <MESSAGE value="Adds questions about factories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds questions about factories" />
   </component>
 </project>

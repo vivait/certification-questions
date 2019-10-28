@@ -119,6 +119,22 @@ questions:
             - {value: 'kernel.cache', correct: false}
             - {value: 'kernel.cache_clearer', correct: true}
 
+    -   question: What is the tag to use to register your service to be called during the cache clearing process?
+        answers:
+            - {value: 'kernel.fragment_renderer', correct: true}
+            - {value: 'content_renderer', correct: false}
+            - {value: 'kernel.renderer', correct: false}
+            - {value: 'kernel.content_renderer', correct: false}
+            - {value: 'renderer', correct: false}
+            - {value: 'fragment_renderer', correct: false}
+
+    -   question: Which of the following sentences are true about synthetic services?
+        answers:
+            - {value: 'The kernel service is synthetic.', correct: true}
+            - {value: 'Third-party services cannot be registered as synthetic.', correct: false}
+            - {value: 'They are injected into the container instead of being created by the container.', correct: true}
+            - {value: 'They cannot be injected into another services.', correct: false}
+
     -   question: What is the tag to register a provider for expression language functions in routing?
         answers:
             - {value: 'routing.route_provider', correct: false}
