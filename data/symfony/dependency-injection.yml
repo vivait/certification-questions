@@ -182,8 +182,8 @@ questions:
             - {value: '$this->services[Foo::class] = new Baz(new Foo());', correct: false}
             - {value: '$this->services[Foo::class] = new Bar(new Foo());', correct: false}
             - {value: '$this->services[Foo::class] = new Foo();', correct: false}
-    -
-        question: "Which configuration format is the most efficient for the container when registering new services?"
+
+    -   question: "Which configuration format is the most efficient for the container when registering new services?"
         answers:
             - {value: "YAML", correct: false}
             - {value: "None of them (they're cached and compiled PHP before running).", correct: true}
@@ -394,3 +394,11 @@ questions:
           - value: |
                 App\Email\NewsletterManager: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager', '@templating']
             correct: false
+
+    -   question: "What is the tag to use to register your service to be called during the cache warming process?"
+        answers:
+            - {value: "cache.warmer", correct: false}
+            - {value: "cache_warmer", correct: true}
+            - {value: 'kernel.warmer', correct: false}
+            - {value: 'kernel.cache_warmer', correct: true}
+            - {value: 'command.cache_warmer', correct: false}

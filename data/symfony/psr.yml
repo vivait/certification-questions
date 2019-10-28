@@ -18,6 +18,13 @@ questions:
             - {value: A utility to convert non-namespaced PHP classes into namespaced ones,   correct: false}
             - {value: A coding style guide.,   correct: false}
 
+    -   question: 'Which PSR draft is meant to be a joke?'
+        answers:
+            - {value: PSR-8, correct: true}
+            - {value: PSR-9,   correct: false}
+            - {value: PSR-0,   correct: false}
+            - {value: PSR-12,   correct: false}
+
     -   question: 'Which Symfony component has been created to provide a PSR-6 implementation?'
         answers:
             - {value: Filesystem, correct: false}

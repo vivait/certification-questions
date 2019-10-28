@@ -7,9 +7,30 @@ questions:
             - { value: The resource filename, correct: false}
             - { value: A callback executed if the cache has to be refreshed, correct: true}
 
-    -   question: 'Sometimes you may prefer to not save the objects immediately in order to increase the application performance. Which method would you call to mark cache items as "ready to be persisted" and then call to commit() method when you are ready to persist them all?'
+    -   question: |
+            Sometimes you may prefer to not save the objects immediately in order to increase the application
+            performance. Which method would you call to mark cache items as "ready to be persisted" and then call to
+            commit() method when you are ready to persist them all?
         answers:
             - { value: persistDeferred(), correct: false}
             - { value: save(), correct: false}
             - { value: saveDeferred(), correct: true}
             - { value: defer(), correct: false}
+
+    -   question: "Which methods can be used for expiration caching?"
+        answers:
+            - {value: setExpires, correct: true}
+            - {value: setMaxAge, correct: false}
+            - {value: setEtag, correct: false}
+            - {value: setCache, correct: false}
+            - {value: setSharedMaxAge, correct: true}
+            - {value: setLastModified, correct: false}
+
+    -   question: "Which methods can be used for expiration caching?"
+        answers:
+            - {value: setExpires, correct: true}
+            - {value: setMaxAge, correct: false}
+            - {value: setEtag, correct: false}
+            - {value: setCache, correct: false}
+            - {value: setSharedMaxAge, correct: true}
+            - {value: setLastModified, correct: false}
