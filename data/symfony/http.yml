@@ -83,10 +83,74 @@ questions:
             - { value: 'The process of requesting JS and CSS files from the HTML file.', correct: false }
             - { value: 'The process of requesting the HTML document', correct: false }
 
-#    -   question: What is service driven content negotiation?
-#        answers:
-#            - { value: 'The process of choosing specific representation when the resource is called', correct: true }
-#            - { value: 'The process of requesting JS and CSS files from the HTML file.', correct: false }
-#            - { value: 'The process of requesting the HTML document', correct: false }
-#
-    # TODO: at Server-driven content negotiation on https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation
+    -   question: What is server driven content negotiation?
+        answers:
+            - { value: 'The process of choosing specific representation when the resource is called', correct: true }
+            - { value: 'The process of requesting JS and CSS files from the HTML file.', correct: false }
+            - { value: 'The process of requesting the HTML document', correct: false }
+
+    -   question: What is proactive content negotiation?
+        answers:
+            - { value: 'The process of choosing specific representation when the resource is called', correct: true }
+            - { value: 'The process of requesting JS and CSS files from the HTML file.', correct: false }
+            - { value: 'The process of requesting the HTML document', correct: false }
+
+    -   question: During proative content negotiation how is the user agent's preferred content calculated?
+        answers:
+            - { value: The user agent sends headers and they're used to calculate their preference, correct: true }
+            - { value: The extension of the document in URL, correct: false }
+            - { value: The status code of the response is used by the client to request the result, correct: false }
+
+    -   question: |
+            According the HTTP/1.1 standard which of the following headers are used to start server-driven content
+            negotiation?
+        answers:
+            - { value: Accept, correct: true }
+            - { value: Accept-Charset, correct: true }
+            - { value: Accept-Encoding, correct: true }
+            - { value: Accept-Language, correct: true }
+            - { value: Accept-Type, correct: false }
+            - { value: User-Agent, correct: false }
+            - { value: Acceptable, correct: false }
+            - { value: Is-HTML, correct: false }
+
+    -   question: |
+            Which header can the server use to indicate which headers are used for content negotiation in order
+            to allow caches to work optimally
+        answers:
+            - { value: Vary, correct: true }
+            - { value: Encoding, correct: false }
+            - { value: Content, correct: false }
+            - { value: Transfer-Encoding, correct: false }
+            - { value: Cache-Control, correct: false }
+
+    -   question: |
+            Which header can the server use to indicate which headers are used for content negotiation in order
+            to allow caches to work optimally
+        answers:
+            - { value: Vary, correct: true }
+            - { value: Encoding, correct: false }
+            - { value: Content, correct: false }
+            - { value: Transfer-Encoding, correct: false }
+            - { value: Cache-Control, correct: false }
+
+    -   question: Which header lists MINE types the user agent can accept?
+        answers:
+            - { value: Accept, correct: true }
+            - { value: Accept-Type, correct: false }
+            - { value: Accept-Content, correct: false }
+            - { value: Cache-Control, correct: false }
+
+    -   question: Which header lists character encodings the user agent can accept?
+        answers:
+            - { value: Accept-Charset, correct: true }
+            - { value: Accept-Char, correct: false }
+            - { value: Char, correct: false }
+            - { value: Accept-UTF, correct: false }
+
+    -   question: Which header lists compression formats the user agent can accept?
+        answers:
+            - { value: Accept-Encoding, correct: true }
+            - { value: Accept-Charset, correct: false }
+            - { value: Accept-Content, correct: false }
+            - { value: Vary, correct: false }
