@@ -22,3 +22,13 @@ questions:
         answers:
             - { value: Doctrine will create a proxy of this association object, correct: false }
             - { value: Doctrine will eager load this association object, correct: true }
+
+    -   question: |
+            Considering the following code, which assertions are true?
+
+            $object = $this->entityManager->getReference('App\Entity\User', 1);
+        answers:
+            - { value: $object is an instance of App\Entity\User., correct: true }
+            - { value: $object is an instance of Doctrine\ORM\Proxy\Proxy., correct: true }
+            - { value: $object is an instance of Doctrine\ORM\Reference., correct: false }
+            - { value: $object is an instance of Proxies\__CG__\App\Entity\User, correct: true }

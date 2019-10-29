@@ -87,3 +87,10 @@ questions:
             - {value: '[]', correct: true}
             - {value: 'new \stdClass', correct: true}
             - {value: '0', correct: true}
+
+    -   question: Which of the following can a contraint apply to?
+        answers:
+            - {value: Property, correct: true}
+            - {value: public method whose name starts with "has", correct: true}
+            - {value: public method whose name starts with "get", correct: true}
+            - {value: public method whose name starts with "is", correct: true}

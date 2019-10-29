@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsonSchemas.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/property-accessor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/property-accessor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/doctrine/orm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/doctrine/orm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/cache-http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/cache-http.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/event-dispatcher.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/event-dispatcher.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/validation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/validation.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -248,21 +249,8 @@
       <workItem from="1571863039206" duration="2916000" />
       <workItem from="1571866055503" duration="851000" />
       <workItem from="1572017518716" duration="1976000" />
-      <workItem from="1572280742713" duration="1522000" />
-    </task>
-    <task id="LOCAL-00014" summary="350f5b95-576a-4888-a8e1-398271a5de50">
-      <created>1565365733878</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1565365733878</updated>
-    </task>
-    <task id="LOCAL-00015" summary="f15d4191-1d18-4f72-a3ba-13d05ec58818">
-      <created>1565711998844</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1565711998844</updated>
+      <workItem from="1572280742713" duration="3168000" />
+      <workItem from="1572367875956" duration="990000" />
     </task>
     <task id="LOCAL-00016" summary="Another">
       <created>1566202309240</created>
@@ -593,7 +581,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572281888620</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Fixes broken questions">
+      <created>1572283002799</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1572283002799</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Fixes broken questions">
+      <created>1572283177826</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1572283177826</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

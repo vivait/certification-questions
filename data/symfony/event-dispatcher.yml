@@ -31,3 +31,14 @@ questions:
             - { value: PostResponseEvent, correct: false }
             - { value: GetResponseExceptionEvent, correct: false }
             - { value: GetResponseForExceptionEvent, correct: true }
+
+    -   question: |
+            What is returned by $dispatcher->dispatch('bar.event', $event) in the following code?
+
+            $event = new OrderPlacedEvent($order);
+            $dispatcher->dispatch('bar.event', $event);
+        answers:
+            - { value: $dispatcher, correct: false }
+            - { value: Nothing, correct: false }
+            - { value: true, correct: false }
+            - { value: $event, correct: true }

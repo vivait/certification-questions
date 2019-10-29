@@ -23,3 +23,36 @@ questions:
         answers:
             - { value: Yes, correct: true }
             - { value: No, correct: false }
+
+    -   question: |
+            Which are the valid ways of caching a Response based not only on the URI but also the value of the
+            Accept-Encoding and User-Agent request headers?
+        answers:
+            - { value: This is default behaviour, correct: false }
+            - value: |
+                  $response->headers->set('Vary', 'Accept-Encoding');
+                  $response->headers->set('Vary', 'User-Agent');
+              correct: false
+            -   value: |
+                    $response->headers->set('Vary', ['Accept-Encoding', 'User-Agent']);
+                correct: true
+            -   value: |
+                    $response->setVary('Accept-Encoding, User-Agent');
+                correct: true
+            -   value: |
+                    $response->setVary('Accept-Encoding');
+                    $response->setVary('User-Agent', false);
+                correct: true
+            -   value: |
+                    $response->headers->set('Vary', 'Accept-Encoding');
+                    $response->headers->set('Vary', 'User-Agent', false);
+                correct: true
+            -   value: |
+                    $response->headers->set('Vary', 'Accept-Encoding, User-Agent');
+                correct: true
+            -   value: This is not possible without calling a reverse proxy
+                correct: false
+            -   value: |
+                    $response->setVary('Accept-Encoding');
+                    $response->setVary('User-Agent');
+                correct: false
