@@ -249,13 +249,6 @@
       <workItem from="1572280742713" duration="3168000" />
       <workItem from="1572367875956" duration="1385000" />
     </task>
-    <task id="LOCAL-00018" summary="4f4f1c11-3fff-4e27-9100-9ef6ed48ac5d">
-      <created>1566575907195</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1566575907195</updated>
-    </task>
     <task id="LOCAL-00019" summary="Some tesst">
       <created>1567073399354</created>
       <option name="number" value="00019" />
@@ -592,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572375038421</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Questions on server driven content negotiation">
+      <created>1572376810328</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1572376810328</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -626,7 +626,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="350f5b95-576a-4888-a8e1-398271a5de50" />
     <MESSAGE value="f15d4191-1d18-4f72-a3ba-13d05ec58818" />
     <MESSAGE value="Another" />
     <MESSAGE value="2514cd7a-27d5-4c38-8897-30836aa4852f" />
@@ -651,6 +650,7 @@
     <MESSAGE value="Adds Questions about Synthetic services" />
     <MESSAGE value="Fixes broken questions" />
     <MESSAGE value="Questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Questions" />
+    <MESSAGE value="Questions on server driven content negotiation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Questions on server driven content negotiation" />
   </component>
 </project>

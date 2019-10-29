@@ -43,12 +43,12 @@ questions:
 
     -   question: "What is the purpose of the Vary header in the response?"
         answers:
-            - value: To inform the client about request headers that will affect the result for caching
-              correct: true
-            - value: To ensure the client changes their headers between requests
-              correct: false
-            - value: To ensure the client uses the response for a different purpose
-              correct: false
+            -   value: To inform the client about request headers that will affect the result for caching
+                correct: true
+            -   value: To ensure the client changes their headers between requests
+                correct: false
+            -   value: To ensure the client uses the response for a different purpose
+                correct: false
     -   question: 'For a request to http://example.com/blog/index.php/post/hello-world what will be the value of $pathInfo in the following code?'
         answers:
             - { value: /post/hello-world, correct: true }
@@ -152,5 +152,13 @@ questions:
         answers:
             - { value: Accept-Encoding, correct: true }
             - { value: Accept-Charset, correct: false }
+            - { value: Accept-Content, correct: false }
+            - { value: Vary, correct: false }
+
+    -   question: What is agent-driven negotiation?
+        answers:
+            - value: The client chooses their preferred resource
+              correct: true
+            - { value: The user agent sends headers and they're used to calculate their preference, correct: false }
             - { value: Accept-Content, correct: false }
             - { value: Vary, correct: false }
