@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
+    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="Questions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/doctrine/orm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/doctrine/orm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/cache-http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/cache-http.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/event-dispatcher.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/event-dispatcher.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/validation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/validation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,12 +146,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.phpunit.xml.dist" />
       <item itemvalue="PHP Script.scratch_12.php" />
       <item itemvalue="PHP Script.scratch_14.php" />
       <item itemvalue="PHP Script.scratch_15.php" />
       <item itemvalue="PHP Script.scratch_17.php" />
       <item itemvalue="PHP Script.scratch_2.php" />
+      <item itemvalue="PHPUnit.phpunit.xml.dist" />
     </list>
     <recent_temporary>
       <list>
@@ -250,14 +248,7 @@
       <workItem from="1571866055503" duration="851000" />
       <workItem from="1572017518716" duration="1976000" />
       <workItem from="1572280742713" duration="3168000" />
-      <workItem from="1572367875956" duration="990000" />
-    </task>
-    <task id="LOCAL-00016" summary="Another">
-      <created>1566202309240</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1566202309240</updated>
+      <workItem from="1572367875956" duration="1385000" />
     </task>
     <task id="LOCAL-00017" summary="2514cd7a-27d5-4c38-8897-30836aa4852f">
       <created>1566489041478</created>
@@ -595,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572283177826</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Questions">
+      <created>1572369803774</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1572369803774</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -651,9 +649,9 @@
     <MESSAGE value="Adds questions regarding decoration" />
     <MESSAGE value="Adds questions" />
     <MESSAGE value="Adds questions about factories" />
-    <MESSAGE value="Questions" />
     <MESSAGE value="Adds Questions about Synthetic services" />
     <MESSAGE value="Fixes broken questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes broken questions" />
+    <MESSAGE value="Questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Questions" />
   </component>
 </project>

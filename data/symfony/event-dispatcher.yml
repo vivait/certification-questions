@@ -42,3 +42,12 @@ questions:
             - { value: Nothing, correct: false }
             - { value: true, correct: false }
             - { value: $event, correct: true }
+
+    -   question: "What is the argument passed to listeners of kernel.view?"
+        answers:
+            - { value: ViewEvent, correct: true }
+            - { value: ResponseEvent, correct: false }
+            - { value: ResponseViewEvent, correct: false }
+            - { value: GetResponseForControllerResultEvent, correct: false }
+            - { value: RequestViewEvent, correct: false }
+            - { value: FinishRequestEvent, correct: false }

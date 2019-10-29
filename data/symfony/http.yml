@@ -77,11 +77,16 @@ questions:
             - { value: No, correct: false }
             - { value: Yes, correct: true }
 
-    -   question: "What is the argument passed to listeners of kernel.view?"
+    -   question: What is content negotiation?
         answers:
-            - { value: ViewEvent, correct: true }
-            - { value: ResponseEvent, correct: false }
-            - { value: ResponseViewEvent, correct: false }
-            - { value: GetResponseForControllerResultEvent, correct: false }
-            - { value: RequestViewEvent, correct: false }
-            - { value: FinishRequestEvent, correct: false }
+            - { value: 'The process of choosing specific representation when the resource is called', correct: true }
+            - { value: 'The process of requesting JS and CSS files from the HTML file.', correct: false }
+            - { value: 'The process of requesting the HTML document', correct: false }
+
+#    -   question: What is service driven content negotiation?
+#        answers:
+#            - { value: 'The process of choosing specific representation when the resource is called', correct: true }
+#            - { value: 'The process of requesting JS and CSS files from the HTML file.', correct: false }
+#            - { value: 'The process of requesting the HTML document', correct: false }
+#
+    # TODO: at Server-driven content negotiation on https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation
