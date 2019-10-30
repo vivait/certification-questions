@@ -42,3 +42,53 @@ questions:
             - {value: A string., correct: true}
             - {value: An instance of Symfony\Component\HttpFoundation\Response., correct: false}
             - {value: An instance of Symfony\Component\View\View., correct: false}
+
+
+    -   question: |
+            Lets assume, we have a controller declared as a service.
+            How to add routing to this controller using annotations ?
+        answers:
+            - value: |
+                  namespace AcmeBundle\Controller;
+
+                  use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
+                  /**
+                   * @Route(service="my_post_controller_service")
+                   */
+                  class PostController
+                  {
+                      // ...
+                  }
+              correct: true
+
+            - value: |
+                  namespace AcmeBundle\Controller;
+
+                  use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
+                  /**
+                   * @Route(service_id="my_post_controller_service")
+                   */
+                  class PostController
+                  {
+                      // ...
+                  }
+              correct: false
+
+            - value: |
+                  namespace AcmeBundle\Controller;
+
+                  use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
+                  /**
+                   * @Route
+                   */
+                  class PostController
+                  {
+                      // ...
+                  }
+              correct: false
+
+            - value: It's not possible
+              correct: false

@@ -94,3 +94,11 @@ questions:
             - {value: public method whose name starts with "has", correct: true}
             - {value: public method whose name starts with "get", correct: true}
             - {value: public method whose name starts with "is", correct: true}
+
+    -   question: Which of the following formats are available to define validation rules or constraints?
+        answers:
+            - {value: YAML, correct: true}
+            - {value: Annotations, correct: true}
+            - {value: XML, correct: true}
+            - {value: JSON, correct: false}
+            - {value: PHP, correct: true}

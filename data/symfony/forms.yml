@@ -407,3 +407,11 @@ questions:
                 correct: true
             -   value: "FormEvents::POST_SUBMIT"
                 correct: false
+
+    -   question: |
+            Does a Symfony\Component\Form\Exception\TransformationFailedException thrown in a DataTransformer cause a validation error ?
+        answers:
+            -   value: "Yes"
+                correct: true
+            -   value: "No"
+                correct: false

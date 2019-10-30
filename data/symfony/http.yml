@@ -162,3 +162,10 @@ questions:
             - { value: The user agent sends headers and they're used to calculate their preference, correct: false }
             - { value: Accept-Content, correct: false }
             - { value: Vary, correct: false }
+
+    -   question: Which of these headers don't belong to the Response?
+        answers:
+            - { value: Proxy-Authenticate, correct: false }
+            - { value: WWW-Authenticate, correct: false }
+            - { value: User-Agent, correct: true }
+            - { value: Referer, correct: true }
