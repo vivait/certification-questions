@@ -169,3 +169,9 @@ questions:
             - { value: WWW-Authenticate, correct: false }
             - { value: User-Agent, correct: true }
             - { value: Referer, correct: true }
+
+    -   question: Which headers/directives will be ignored by a proxy if Expires, s-maxage and max-age are all present in a response ?
+        answers:
+            - { value: s-maxage, correct: false }
+            - { value: Expires, correct: true }
+            - { value: max-age, correct: true }

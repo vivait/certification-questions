@@ -244,3 +244,31 @@ questions:
             - {value: "With the SID constant", correct: true }
             - {value: "By using session_id()", correct: true }
             - {value: "By using session_start()", correct: false }
+
+    -   question: |
+            Considering the following PHP script :
+
+            $dom = new DomDocument;
+            $dom->load('test.xml');
+            $xpath = new DomXPath($dom);
+            $nodes = $xpath->query(/* ... */);
+            echo $nodes->item(0)->getAttributeNode('bgcolor')->value;
+
+            What Xpath query should go in the /* ... */ to display the bgcolor attribute of the first body node in the XML Document ?
+        answers:
+            - {value: "With the $_COOKIE variable", correct: true }
+            - {value: "By using session_name()", correct: false }
+            - {value: "With the SID constant", correct: true }
+            - {value: "By using session_id()", correct: true }
+            - {value: "By using session_start()", correct: false }
+
+    -   question: |
+            What will be the output of the following code?
+
+            $a = (object) ["a" => "b"];
+            $b = (object) ["a" => "c"];
+            echo $a <=> $b;
+        answers:
+            - {value: "0", correct: false }
+            - {value: "-1", correct: false }
+            - {value: "1", correct: true }

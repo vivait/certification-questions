@@ -53,3 +53,10 @@ questions:
             - { value: ResponseEvent, correct: false }
             - { value: GetResponseEvent, correct: false }
             - { value: RequestEvent, correct: false }
+
+    -   question: What is the default status code of a Symfony\Component\HttpFoundation\RedirectResponse object?
+        answers:
+            - { value: 302, correct: true }
+            - { value: 304, correct: false }
+            - { value: 300, correct: false }
+            - { value: 301, correct: false }

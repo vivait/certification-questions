@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/bundles.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/bundles.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/forms.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/forms.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/oop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/oop.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/http-kernel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http-kernel.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/validation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/validation.yml" afterDir="false" />
     </list>
@@ -96,7 +98,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Twig&#10;PHP&#10;HTML&#10;TEXT" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP&#10;Twig&#10;HTML&#10;TEXT" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/data/question.schema.json" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs.protractor.protractor_package" value="" />
@@ -127,12 +129,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_17.php">
+  <component name="RunManager" selected="PHP Script.scratch_21.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_12.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_12.php">
       <method v="2" />
     </configuration>
     <configuration name="scratch_14.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_14.php">
@@ -144,24 +143,27 @@
     <configuration name="scratch_17.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_17.php">
       <method v="2" />
     </configuration>
-    <configuration name="scratch_2.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.php">
+    <configuration name="scratch_20.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_20.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_21.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_21.php">
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.phpunit.xml.dist" />
-      <item itemvalue="PHP Script.scratch_12.php" />
       <item itemvalue="PHP Script.scratch_14.php" />
       <item itemvalue="PHP Script.scratch_15.php" />
       <item itemvalue="PHP Script.scratch_17.php" />
-      <item itemvalue="PHP Script.scratch_2.php" />
+      <item itemvalue="PHPUnit.phpunit.xml.dist" />
+      <item itemvalue="PHP Script.scratch_20.php" />
+      <item itemvalue="PHP Script.scratch_21.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.scratch_21.php" />
+        <item itemvalue="PHP Script.scratch_20.php" />
         <item itemvalue="PHP Script.scratch_17.php" />
         <item itemvalue="PHP Script.scratch_15.php" />
         <item itemvalue="PHP Script.scratch_14.php" />
-        <item itemvalue="PHP Script.scratch_12.php" />
-        <item itemvalue="PHP Script.scratch_2.php" />
       </list>
     </recent_temporary>
   </component>
@@ -251,13 +253,7 @@
       <workItem from="1572017518716" duration="1976000" />
       <workItem from="1572280742713" duration="3168000" />
       <workItem from="1572367875956" duration="1385000" />
-    </task>
-    <task id="LOCAL-00019" summary="Some tesst">
-      <created>1567073399354</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1567073399354</updated>
+      <workItem from="1572626264850" duration="992000" />
     </task>
     <task id="LOCAL-00020" summary="Some tesst">
       <created>1567073440358</created>
@@ -595,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572376810328</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Questions">
+      <created>1572453861814</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1572453861815</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -652,8 +655,8 @@
     <MESSAGE value="Adds questions about factories" />
     <MESSAGE value="Adds Questions about Synthetic services" />
     <MESSAGE value="Fixes broken questions" />
-    <MESSAGE value="Questions" />
     <MESSAGE value="Questions on server driven content negotiation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Questions on server driven content negotiation" />
+    <MESSAGE value="Questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Questions" />
   </component>
 </project>

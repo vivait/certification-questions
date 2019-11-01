@@ -102,3 +102,39 @@ questions:
             - {value: XML, correct: true}
             - {value: JSON, correct: false}
             - {value: PHP, correct: true}
+
+    -   question: |
+            What are the validation groups defined by this code?
+
+            <?php
+
+            // src/Entity/User.php
+            namespace App\Entity;
+
+            use Symfony\Component\Security\Core\User\UserInterface;
+            use Symfony\Component\Validator\Constraints as Assert;
+
+            class User implements UserInterface
+            {
+                /**
+                * @Assert\Email(groups={"registration"})
+                */
+                private $email;
+
+                /**
+                * @Assert\NotBlank(groups={"registration"})
+                * @Assert\Length(min=7, groups={"registration"})
+                */
+                private $password;
+
+                /**
+                * @Assert\Length(min=2)
+                */
+                private $city;
+            }
+        answers:
+            - {value: registration, correct: true}
+            - {value: User, correct: true}
+            - {value: default, correct: false}
+            - {value: Default, correct: true}
+            - {value: user, correct: false}

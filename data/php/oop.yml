@@ -53,3 +53,25 @@ questions:
             - {value: '$b will be an instance of the A class', correct: false}
             - {value: 'PHP Fatal error: Uncaught TypeError: Return value of A::get() must be an instance of A', correct: true}
             - {value: 'PHP Fatal error: Declaration of B::get(): B must be compatible with A::get(): A', correct: false}
+
+    -   question: |
+            What is the output of this code?
+
+            <?php
+
+            class M {
+               function m() {
+                  echo "M";
+               }
+               function construct() {
+                  echo "mmm";
+               }
+            }
+
+            $m = new M();
+            $m->m();
+        answers:
+            - {value: 'MM', correct: true}
+            - {value: 'mmmM', correct: false}
+            - {value: 'M', correct: false}
+            - {value: 'An error', correct: false}

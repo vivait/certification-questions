@@ -402,3 +402,17 @@ questions:
             - {value: 'kernel.warmer', correct: false}
             - {value: 'kernel.cache_warmer', correct: true}
             - {value: 'command.cache_warmer', correct: false}
+
+    -   question: "What is the tag to use to register your service to be called during the cache warming process?"
+        answers:
+            - {value: "translation_extractor", correct: false}
+            - {value: "translation.extractor", correct: true}
+            - {value: 'translator_extractor', correct: false}
+            - {value: 'translator.extractor', correct: false}
+
+    -   question: "What is the tag to use to create a custom form field type?"
+        answers:
+            - {value: "form_type", correct: false}
+            - {value: "form.type_extension", correct: false}
+            - {value: 'form.type', correct: true}
+            - {value: 'form', correct: false}
