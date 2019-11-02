@@ -43,11 +43,76 @@ questions:
             - { value: true, correct: false }
             - { value: $event, correct: true }
 
-    -   question: "What is the argument passed to listeners of kernel.view?"
+    -   question: "What is the argument passed to listeners of kernel.view after Symfony 4.3?"
         answers:
             - { value: ViewEvent, correct: true }
             - { value: ResponseEvent, correct: false }
             - { value: ResponseViewEvent, correct: false }
+            - { value: GetResponseForControllerResultEvent, correct: false }
+            - { value: RequestViewEvent, correct: false }
+            - { value: FinishRequestEvent, correct: false }
+
+    -   question: "What is the argument passed to listeners of kernel.view before Symfony 4.3?"
+        answers:
+            - { value: ViewEvent, correct: false }
+            - { value: ResponseEvent, correct: false }
+            - { value: ResponseViewEvent, correct: false }
+            - { value: GetResponseForControllerResultEvent, correct: true }
+            - { value: RequestViewEvent, correct: false }
+            - { value: FinishRequestEvent, correct: false }
+
+    -   question: "What is the argument passed to listeners of kernel.request before Symfony 4.3?"
+        answers:
+            - { value: GetResponseEvent, correct: true }
+            - { value: ViewEvent, correct: false }
+            - { value: ResponseEvent, correct: false }
+            - { value: ResponseViewEvent, correct: false }
+            - { value: GetResponseForControllerResultEvent, correct: true }
+            - { value: RequestViewEvent, correct: false }
+            - { value: FinishRequestEvent, correct: false }
+
+    -   question: "What is the argument passed to listeners of kernel.request after Symfony 4.3?"
+        answers:
+            - { value: RequestEvent, correct: true }
+            - { value: ViewEvent, correct: false }
+            - { value: ResponseEvent, correct: false }
+            - { value: ResponseViewEvent, correct: false }
+            - { value: GetResponseForControllerResultEvent, correct: false }
+            - { value: RequestViewEvent, correct: false }
+            - { value: FinishRequestEvent, correct: false }
+
+    -   question: "What is the argument passed to listeners of kernel.controller before Symfony 4.3?"
+        answers:
+            - { value: FilterControllerEvent, correct: true }
+            - { value: GetResponseEvent, correct: false }
+            - { value: ViewEvent, correct: false }
+            - { value: GetResponseForControllerResultEvent, correct: true }
+            - { value: RequestViewEvent, correct: false }
+            - { value: FinishRequestEvent, correct: false }
+
+    -   question: "What is the argument passed to listeners of kernel.controller after Symfony 4.3?"
+        answers:
+            - { value: ControllerEvent, correct: true }
+            - { value: RequestEvent, correct: false }
+            - { value: ViewEvent, correct: false }
+            - { value: GetResponseForControllerResultEvent, correct: false }
+            - { value: RequestViewEvent, correct: false }
+            - { value: FinishRequestEvent, correct: false }
+
+    -   question: "What is the argument passed to listeners of kernel.controller_arguments before Symfony 4.3?"
+        answers:
+            - { value: FilterControllerArgumentsEvent, correct: true }
+            - { value: GetResponseEvent, correct: false }
+            - { value: ViewEvent, correct: false }
+            - { value: GetResponseForControllerResultEvent, correct: true }
+            - { value: RequestViewEvent, correct: false }
+            - { value: FinishRequestEvent, correct: false }
+
+    -   question: "What is the argument passed to listeners of kernel.controller_arguments after Symfony 4.3?"
+        answers:
+            - { value: ControllerArgumentsEvent, correct: true }
+            - { value: RequestEvent, correct: false }
+            - { value: ViewEvent, correct: false }
             - { value: GetResponseForControllerResultEvent, correct: false }
             - { value: RequestViewEvent, correct: false }
             - { value: FinishRequestEvent, correct: false }

@@ -415,3 +415,17 @@ questions:
                 correct: true
             -   value: "No"
                 correct: false
+
+    -   question: |
+            Which of these form types does not inherit from the Symfony\Component\Form\Extension\Core\Type\TextType type ?
+        answers:
+        -   value: Symfony\Component\Form\Extension\Core\Type\SearchType
+            correct: false
+        -   value: Symfony\Component\Form\Extension\Core\Type\RangeType
+            correct: false
+        -   value: Symfony\Component\Form\Extension\Core\Type\LocaleType
+            correct: true
+        -   value: Symfony\Component\Form\Extension\Core\Type\PasswordType
+            correct: false
+        -   value: Symfony\Component\Form\Extension\Core\Type\HiddenType
+            correct: true
