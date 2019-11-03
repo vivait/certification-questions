@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/cache-http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/cache-http.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +30,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/symfony/cache-http.yml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/symfony/event-dispatcher.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="165" column="46" selection-start-line="165" selection-start-column="46" selection-end-line="165" selection-end-column="46" />
+            <state relative-caret-position="592">
+              <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/php/basics.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="246" lean-forward="true" selection-start-line="246" selection-end-line="246" />
             </state>
           </provider>
         </entry>
@@ -44,6 +53,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>indectate</find>
+      <find>kernel.view</find>
+      <find>TextType</find>
+      <find>What Xpath query should go in the /*</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -53,6 +65,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/data/symfony/cache-http.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/forms.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/http.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/event-dispatcher.yml" />
+        <option value="$PROJECT_DIR$/data/php/basics.yml" />
       </list>
     </option>
   </component>
@@ -107,6 +123,10 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
     </include_path>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
   <component name="ProjectId" id="1OVix7AIIqgbpXCE8Z4KULBv23M" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -151,32 +171,6 @@
               <item name="certification-questions" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="symfony" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="certification-questions" type="b2602c69:ProjectViewProjectNode" />
-              <item name="certification-questions" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="certification-questions" type="b2602c69:ProjectViewProjectNode" />
-              <item name="certification-questions" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="certificationy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="certification-questions" type="b2602c69:ProjectViewProjectNode" />
-              <item name="certification-questions" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="certificationy" type="462c0819:PsiDirectoryNode" />
-              <item name="symfony-pack" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="certification-questions" type="b2602c69:ProjectViewProjectNode" />
-              <item name="certification-questions" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="certificationy" type="462c0819:PsiDirectoryNode" />
-              <item name="symfony-pack" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -343,20 +337,6 @@
       <workItem from="1572280742713" duration="3168000" />
       <workItem from="1572367875956" duration="1385000" />
       <workItem from="1572626264850" duration="992000" />
-    </task>
-    <task id="LOCAL-00021" summary="Fixes">
-      <created>1567092462524</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1567092462524</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Formatting fixes">
-      <created>1567092475991</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1567092475991</updated>
     </task>
     <task id="LOCAL-00023" summary="Questions">
       <created>1567528304973</created>
@@ -687,17 +667,31 @@
       <option name="project" value="LOCAL" />
       <updated>1572702715936</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Adds questions on cache-control">
+      <created>1572713930214</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1572713930214</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Adds some questions regarding kernel events">
+      <created>1572714710608</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1572714710608</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3465000" />
+    <option name="totallyTimeSpent" value="4766000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="512" y="0" width="768" height="800" extended-state="6" />
+    <frame x="791" y="0" width="489" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.37239584" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3716312" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -776,8 +770,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="f15d4191-1d18-4f72-a3ba-13d05ec58818" />
-    <MESSAGE value="Another" />
     <MESSAGE value="2514cd7a-27d5-4c38-8897-30836aa4852f" />
     <MESSAGE value="4f4f1c11-3fff-4e27-9100-9ef6ed48ac5d" />
     <MESSAGE value="Some tesst" />
@@ -801,6 +793,45 @@
     <MESSAGE value="Fixes broken questions" />
     <MESSAGE value="Questions on server driven content negotiation" />
     <MESSAGE value="Questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Questions" />
+    <MESSAGE value="Adds questions on cache-control" />
+    <MESSAGE value="Adds some questions regarding kernel events" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds some questions regarding kernel events" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/data/symfony/cache-http.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="163" column="46" selection-start-line="159" selection-start-column="34" selection-end-line="163" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/http.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/forms.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="414" column="29" lean-forward="true" selection-start-line="414" selection-start-column="29" selection-end-line="414" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/event-dispatcher.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/php/basics.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="246" lean-forward="true" selection-start-line="246" selection-end-line="246" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
