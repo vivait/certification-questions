@@ -261,3 +261,48 @@ questions:
             - {value: "header('Content-Type: text/html');", correct: true }
             - {value: "set_header('Content-Type: text/html');", correct: false }
             - {value: "set_header('Content-Type', 'text/html');", correct: true }
+
+    -   question: |
+            Will the following PHP work?
+            <html>
+            <?php
+            namespace MyProject;
+            ?>
+        answers:
+            - {value: No, correct: true }
+            - {value: Yes, correct: false }
+
+    -   question: |
+            Will the following PHP work?
+            <html>
+            <?php
+            namespace MyProject;
+            ?>
+        answers:
+            - {value: No, correct: true }
+            - {value: Yes, correct: false }
+
+    -   question: Can PHP support multiple namespaces within a single file?
+        answers:
+            - {value: No, correct: false }
+            - {value: Yes, correct: true }
+
+    -   question: Can PHP support multiple namespaces within a single file?
+        answers:
+            - {value: No, correct: false }
+            - {value: Yes, correct: true }
+
+    -   question: |
+            Will the following code trigger an error?
+
+            <?php
+            namespace a;
+
+            echo "I belong to namespace a";
+
+            namespace b {
+                echo "I'm from namespace b";
+            }
+        answers:
+            - {value: No, correct: false }
+            - {value: Yes, correct: true }
