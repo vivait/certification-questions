@@ -166,3 +166,15 @@ questions:
             - { value: s-maxage, correct: false }
             - { value: Expires, correct: true }
             - { value: max-age, correct: true }
+
+    -   question: Which of the following is a valid first line for the request?
+        answers:
+            - { value: GET /route HTTP/1.1, correct: true }
+            - { value: HTTP/1.1 GET /route, correct: false }
+            - { value: HTTP/1.1 /route GET, correct: false }
+
+    -   question: Which of the following is a valid first line for the response?
+        answers:
+            - { value: HTTP/1.1 200 OK, correct: true }
+            - { value: 200 OK HTTP/1.1, correct: false }
+            - { value: OK 200 HTTP/1.1, correct: false }

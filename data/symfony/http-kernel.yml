@@ -60,3 +60,43 @@ questions:
             - { value: 304, correct: false }
             - { value: 300, correct: false }
             - { value: 301, correct: false }
+
+    -   question: Which class is used to represent requests in Symfony?
+        answers:
+            - { value: Symfony\Component\HttpFoundation\Request, correct: true }
+            - { value: Symfony\Component\HttpKernel\Request, correct: false }
+            - { value: Symfony\Component\Request, correct: false }
+            - { value: Symfony\Request, correct: false }
+
+    -   question: What is output on $request->getPathInfo(); for a request to https://symfony.com/app.php/about?test=a?
+        answers:
+            - { value: /about, correct: true }
+            - { value: /app.php/about?test=a, correct: false }
+            - { value: https://symfony.com/app.php/about?test=a, correct: false }
+            - { value: /about?test=a, correct: false }
+
+    -   question: What is the correct way to retrieve the HTTP method from the request?
+        answers:
+            - { value: $request->getMethod();, correct: true }
+            - { value: $request->method;, correct: false }
+            - { value: $request->getHttpMethod();, correct: false }
+            - { value: $request->server->get('method');, correct: false }
+
+    -   question: What is the correct way to set the response code on the response?
+        answers:
+            - { value: $request->setStatusCode(Response::HTTP_OK);, correct: true }
+            - { value: $request->setStatus(Response::HTTP_OK);, correct: false }
+            - { value: $request->setCode(Response::HTTP_OK);, correct: false }
+            - { value: $request->setHttpStatusCode(Response::HTTP_OK);, correct: false }
+
+    -   question: What is the correct way to set a header on the response?
+        answers:
+            - { value: "$response->headers->set('Content-Type', 'text/html');", correct: true }
+            - { value: "$response->setHeader('Content-Type', 'text/html');", correct: false }
+            - { value: "$response->setHeader('Content-Type: text/html');", correct: false }
+
+    -   question: What is the correct way to return a HTTP response using a response object?
+        answers:
+            - { value: $response->send();, correct: true }
+            - { value: The object has no way of doing this, correct: false }
+            - { value: $response->print();, correct: false }

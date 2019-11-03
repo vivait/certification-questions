@@ -255,3 +255,9 @@ questions:
             - {value: "0", correct: false }
             - {value: "-1", correct: false }
             - {value: "1", correct: true }
+
+    -   question: Which is a valid way to set a header on a response in PHP?
+        answers:
+            - {value: "header('Content-Type: text/html');", correct: true }
+            - {value: "set_header('Content-Type: text/html');", correct: false }
+            - {value: "set_header('Content-Type', 'text/html');", correct: true }
