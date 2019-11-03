@@ -49,3 +49,23 @@ questions:
             - { value: "%a%%", correct: false }
             - { value: "None, there will be a ParameterCircularReferenceException", correct: false }
             - { value: "", correct: false }
+
+    -   question: |
+            What will be the value of $yaml with the following code:
+
+            use Symfony\Component\Yaml\Yaml;
+
+            $yaml = Yaml::parse('1983-07-01');
+        answers:
+            - { value: 425865600, correct: true }
+            - { value: 983-07-01, correct: false }
+            - { value: An array, correct: false }
+            - { value: A DateTime object, correct: false }
+            - { value: 1983-07-01, correct: false }
+
+    -   question: What is the method to write YAML?
+        answers:
+            - { value: Symfony\Component\Yaml\Yaml::toYaml, correct: false }
+            - { value: Symfony\Component\Yaml\Yaml::yaml, correct: false }
+            - { value: Symfony\Component\Yaml\Yaml::write, correct: false }
+            - { value: Symfony\Component\Yaml\Yaml::dump, correct: true }

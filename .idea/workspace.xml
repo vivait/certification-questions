@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/http-kernel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http-kernel.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/doctrine/orm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/doctrine/orm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/yaml.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/yaml.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,10 +32,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/symfony/http-kernel.yml">
+        <entry file="file://$PROJECT_DIR$/data/doctrine/orm.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="101" column="42" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
+            <state relative-caret-position="181">
+              <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
+              <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+              <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -49,7 +50,12 @@
       <find>kernel.view</find>
       <find>TextType</find>
       <find>What Xpath query should go in the /*</find>
+      <find>front contro</find>
+      <find>Vote</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,6 +69,9 @@
         <option value="$PROJECT_DIR$/data/symfony/http.yml" />
         <option value="$PROJECT_DIR$/data/php/basics.yml" />
         <option value="$PROJECT_DIR$/data/symfony/http-kernel.yml" />
+        <option value="$PROJECT_DIR$/certificationy.php" />
+        <option value="$PROJECT_DIR$/data/symfony/yaml.yml" />
+        <option value="$PROJECT_DIR$/data/doctrine/orm.yml" />
       </list>
     </option>
   </component>
@@ -203,12 +212,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_21.php">
+  <component name="RunManager" selected="PHP Script.certificationy.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
-    <configuration name="scratch_14.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_14.php">
+    <configuration name="certificationy.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/certificationy.php">
       <method v="2" />
     </configuration>
     <configuration name="scratch_15.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_15.php">
@@ -224,20 +233,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHP Script.scratch_14.php" />
       <item itemvalue="PHP Script.scratch_15.php" />
       <item itemvalue="PHP Script.scratch_17.php" />
       <item itemvalue="PHP Script.scratch_20.php" />
       <item itemvalue="PHP Script.scratch_21.php" />
       <item itemvalue="PHPUnit.phpunit.xml.dist" />
+      <item itemvalue="PHP Script.certificationy.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.certificationy.php" />
         <item itemvalue="PHP Script.scratch_21.php" />
         <item itemvalue="PHP Script.scratch_20.php" />
         <item itemvalue="PHP Script.scratch_17.php" />
         <item itemvalue="PHP Script.scratch_15.php" />
-        <item itemvalue="PHP Script.scratch_14.php" />
       </list>
     </recent_temporary>
   </component>
@@ -328,14 +337,7 @@
       <workItem from="1572280742713" duration="3168000" />
       <workItem from="1572367875956" duration="1385000" />
       <workItem from="1572626264850" duration="992000" />
-      <workItem from="1572794304356" duration="2512000" />
-    </task>
-    <task id="LOCAL-00024" summary="Questions">
-      <created>1567697780539</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1567697780539</updated>
+      <workItem from="1572794304356" duration="3667000" />
     </task>
     <task id="LOCAL-00025" summary="Questions">
       <created>1567757455995</created>
@@ -673,11 +675,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572794315982</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Adds questions regarding request handling">
+      <created>1572797499103</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1572797499103</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7278000" />
+    <option name="totallyTimeSpent" value="8433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="501" y="23" width="779" height="708" extended-state="0" />
@@ -688,7 +697,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32932332" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -696,7 +705,7 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.9614891" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.9548872" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -762,7 +771,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="4f4f1c11-3fff-4e27-9100-9ef6ed48ac5d" />
     <MESSAGE value="Some tesst" />
     <MESSAGE value="Fixes" />
     <MESSAGE value="Formatting fixes" />
@@ -787,7 +795,8 @@
     <MESSAGE value="Adds questions on cache-control" />
     <MESSAGE value="Adds some questions regarding kernel events" />
     <MESSAGE value="Cleanup questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup questions" />
+    <MESSAGE value="Adds questions regarding request handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds questions regarding request handling" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/data/symfony/cache-http.yml">
@@ -827,8 +836,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/symfony/http-kernel.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="101" column="42" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
+        <state relative-caret-position="312">
+          <caret line="94" column="45" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/certificationy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#328#372#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/yaml.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="61" column="15" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/doctrine/orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
         </state>
       </provider>
     </entry>
