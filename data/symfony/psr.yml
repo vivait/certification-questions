@@ -130,3 +130,5 @@ questions:
             - {value: HTTP Handlers., correct: false}
             - {value: Huggable Interface.,   correct: false}
             - {value: HTTP Handlers.,   correct: false}
+
+# TODO: https://thomasberends.github.io/symfony-certification-preparation-list/topics/standardization.html#framework-interoperability-and-psrs
