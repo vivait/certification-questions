@@ -39,3 +39,94 @@ questions:
             - {value: A container interface., correct: false}
             - {value: Huggable Interface.,   correct: false}
             - {value: A logger interface.,   correct: false}
+
+    -   question: 'What is PSR-1?'
+        answers:
+            - {value: Basic Coding Standard.,   correct: true}
+            - {value: Autoloading Standard., correct: false}
+            - {value: Huggable Interface.,   correct: false}
+            - {value: A logger interface.,   correct: false}
+
+    -   question: 'What is PSR-4?'
+        answers:
+            - {value: Autoloading Standard.,   correct: true}
+            - {value: Autoloading Standard., correct: false}
+            - {value: Huggable Interface.,   correct: false}
+            - {value: A logger interface.,   correct: false}
+
+    -   question: 'What is PSR-6?'
+        answers:
+            - {value: Caching Interface.,   correct: true}
+            - {value: Autoloading Standard., correct: false}
+            - {value: HTTP Client.,   correct: false}
+            - {value: A logger interface.,   correct: false}
+
+    -   question: 'What is PSR-11?'
+        answers:
+            - {value: Container Interface.,   correct: true}
+            - {value: Autoloading Standard., correct: false}
+            - {value: Huggable Interface.,   correct: false}
+            - {value: A logger interface.,   correct: false}
+
+    -   question: 'What is PSR-12?'
+        answers:
+            - {value: Extended Coding Style Guide.,   correct: true}
+            - {value: Autoloading Standard., correct: false}
+            - {value: Huggable Interface.,   correct: false}
+            - {value: A logger interface.,   correct: false}
+
+    -   question: 'What is PSR-13?'
+        answers:
+            - {value: Hypermedia Links.,   correct: true}
+            - {value: HTTP Handlers., correct: false}
+            - {value: HTTP Message Interface.,   correct: false}
+            - {value: A logger interface.,   correct: false}
+
+    -   question: 'What is PSR-14?'
+        answers:
+            - {value: Event Dispatcher.,   correct: true}
+            - {value: Container Interface., correct: false}
+            - {value: Simple Cache.,   correct: false}
+            - {value: A logger interface.,   correct: false}
+
+    -   question: 'What is PSR-15?'
+        answers:
+            - {value: HTTP Handlers.,   correct: true}
+            - {value: Autoloading Standard., correct: false}
+            - {value: Huggable Interface.,   correct: false}
+            - {value: Caching Interface.,   correct: false}
+
+    -   question: 'What is PSR-16?'
+        answers:
+            - {value: Simple Cache.,   correct: true}
+            - {value: Autoloading Standard., correct: false}
+            - {value: Huggable Interface.,   correct: false}
+            - {value: A logger interface.,   correct: false}
+
+    -   question: 'What is PSR-17?'
+        answers:
+            - {value: HTTP Factories.,   correct: true}
+            - {value: Hypermedia Links., correct: false}
+            - {value: Huggable Interface.,   correct: false}
+            - {value: HTTP Message Interface.,   correct: false}
+
+    -   question: 'What is PSR-18?'
+        answers:
+            - {value: HTTP Client.,   correct: true}
+            - {value: HTTP Factories., correct: false}
+            - {value: Huggable Interface.,   correct: false}
+            - {value: HTTP Handlers.,   correct: false}
+
+    -   question: 'What is PSR-0?'
+        answers:
+            - {value: Autoloading Standard.,   correct: true}
+            - {value: Basic Coding Standard., correct: false}
+            - {value: Huggable Interface.,   correct: false}
+            - {value: HTTP Handlers.,   correct: false}
+
+    -   question: 'What is PSR-2?'
+        answers:
+            - {value: Coding Style Guide.,   correct: true}
+            - {value: HTTP Handlers., correct: false}
+            - {value: Huggable Interface.,   correct: false}
+            - {value: HTTP Handlers.,   correct: false}

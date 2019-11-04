@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/best-practices.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/best-practices.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/psr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/psr.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,19 +30,6 @@
     </option>
     <expand />
     <select />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>indectate</find>
-      <find>kernel.view</find>
-      <find>TextType</find>
-      <find>What Xpath query should go in the /*</find>
-      <find>front contro</find>
-      <find>Vote</find>
-    </findStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,12 +84,6 @@
       <path value="$PROJECT_DIR$/vendor/herrera-io/json" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
     </include_path>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="501" />
-    <option name="y" value="23" />
-    <option name="width" value="779" />
-    <option name="height" value="708" />
   </component>
   <component name="ProjectId" id="1OVix7AIIqgbpXCE8Z4KULBv23M" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -270,13 +250,6 @@
       <workItem from="1572367875956" duration="1385000" />
       <workItem from="1572626264850" duration="992000" />
       <workItem from="1572794304356" duration="3667000" />
-    </task>
-    <task id="LOCAL-00026" summary="Questions">
-      <created>1568043139030</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1568043139030</updated>
     </task>
     <task id="LOCAL-00027" summary="Questions">
       <created>1568044471091</created>
@@ -614,7 +587,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572886047615</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Questions">
+      <created>1572886379070</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1572886379070</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -667,12 +647,12 @@
     <MESSAGE value="Adds Questions about Synthetic services" />
     <MESSAGE value="Fixes broken questions" />
     <MESSAGE value="Questions on server driven content negotiation" />
-    <MESSAGE value="Questions" />
     <MESSAGE value="Adds questions on cache-control" />
     <MESSAGE value="Adds some questions regarding kernel events" />
     <MESSAGE value="Cleanup questions" />
     <MESSAGE value="Adds questions regarding request handling" />
     <MESSAGE value="Adds questions regarding YAML" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds questions regarding YAML" />
+    <MESSAGE value="Questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Questions" />
   </component>
 </project>
