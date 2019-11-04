@@ -28,8 +28,8 @@ questions:
     -   question: 'Which Symfony component has been created to provide a PSR-6 implementation?'
         answers:
             - {value: Filesystem, correct: false}
-            - {value: PropertyAccess,   correct: true}
-            - {value: Cache,   correct: false}
+            - {value: PropertyAccess,   correct: false}
+            - {value: Cache,   correct: true}
             - {value: Inflector,   correct: false}
             - {value: HTTP foundation,   correct: false}
 
@@ -50,9 +50,9 @@ questions:
     -   question: 'What is PSR-4?'
         answers:
             - {value: Autoloading Standard.,   correct: true}
-            - {value: Autoloading Standard., correct: false}
+            - {value: A logger interface., correct: false}
             - {value: Huggable Interface.,   correct: false}
-            - {value: A logger interface.,   correct: false}
+            - {value: HTTP Message Interface.,   correct: false}
 
     -   question: 'What is PSR-6?'
         answers:
@@ -92,7 +92,7 @@ questions:
     -   question: 'What is PSR-15?'
         answers:
             - {value: HTTP Handlers.,   correct: true}
-            - {value: Autoloading Standard., correct: false}
+            - {value: Hypermedia Links., correct: false}
             - {value: Huggable Interface.,   correct: false}
             - {value: Caching Interface.,   correct: false}
 
@@ -129,6 +129,6 @@ questions:
             - {value: Coding Style Guide.,   correct: true}
             - {value: HTTP Handlers., correct: false}
             - {value: Huggable Interface.,   correct: false}
-            - {value: HTTP Handlers.,   correct: false}
+            - {value: Huggable Interface.,   correct: false}
 
 # TODO: https://thomasberends.github.io/symfony-certification-preparation-list/topics/standardization.html#framework-interoperability-and-psrs
