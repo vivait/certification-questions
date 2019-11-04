@@ -131,4 +131,169 @@ questions:
             - {value: Huggable Interface.,   correct: false}
             - {value: Huggable Interface.,   correct: false}
 
-# TODO: https://thomasberends.github.io/symfony-certification-preparation-list/topics/standardization.html#framework-interoperability-and-psrs
+    -   question: 'Which character encoding does PSR-1 require?'
+        answers:
+            - {value: UTF-8 without BOM, correct: true}
+            - {value: UTF-8, correct: false}
+            - {value: ASCII, correct: false}
+
+    -   question: |
+            Is the following code valid in PSR-1?
+            function foo()
+            {
+            }
+
+            if (! function_exists('bar')) {
+                function bar()
+                {
+                }
+            }
+        answers:
+            - {value: Yes, correct: true}
+            - {value: No, correct: false}
+
+    -   question: |
+            Is the following code valid in PSR-1?
+            echo "<html>\n";
+
+            function foo()
+            {
+            }
+        answers:
+            - {value: No, correct: true}
+            - {value: Yes, correct: false}
+
+    -   question: Does PSR-1 recommend a case for properties?
+        answers:
+            - {value: 'No but, whatever naming convention is used should be applied consistently', correct: true}
+            - {value: $StudlyCaps, correct: false}
+            - {value: $camelCase, correct: false}
+            - {value: $under_score, correct: false}
+
+
+    -   question: |
+            Is the following code valid in PSR-12 ?
+
+            <?php declare(strict_types=1);
+
+            class SomeClass {
+            }
+        answers:
+            - {value: No, correct: true}
+            - {value: Yes, correct: false}
+
+    -   question: |
+            Is the following code valid in PSR-12 ?
+
+            <?php
+
+            declare(strict_types=1);
+
+            use \App\OtherClass;
+
+            class SomeClass
+            {
+            }
+        answers:
+            - {value: No, correct: true}
+            - {value: Yes, correct: false}
+
+    -   question: |
+            Is the following code valid in PSR-12 ?
+
+            <?php
+
+            declare(strict_types=1);
+
+            use App\OtherClass;
+
+            class SomeClass
+            {
+                use FirstTrait, SecondTrait;
+            }
+        answers:
+            - {value: No, correct: true}
+            - {value: Yes, correct: false}
+
+    -   question: |
+            Is the following code valid in PSR-12 ?
+
+            <?php
+
+            declare(strict_types=1);
+
+            use App\OtherClass;
+
+            class SomeClass
+            {
+                use FirstTrait;
+                use SecondTrait;
+            }
+        answers:
+            - {value: Yes, correct: true}
+            - {value: No, correct: false}
+
+    -   question: |
+            Is the following code valid in PSR-12 ?
+
+            <?php
+
+            declare(strict_types=1);
+
+            use App\OtherClass;
+
+            class SomeClass
+            {
+
+                abstract public function test()
+                {
+                }
+            }
+        answers:
+            - {value: Yes, correct: true}
+            - {value: No, correct: false}
+
+    -   question: |
+            Is the following code valid in PSR-12 ?
+
+            <?php
+
+            declare(strict_types=1);
+
+            use App\OtherClass;
+
+            class SomeClass
+            {
+
+                public abstract function test()
+                {
+                }
+            }
+        answers:
+            - {value: No, correct: true}
+            - {value: Yes, correct: false}
+
+    -   question: |
+            Is the following code valid in PSR-12 ?
+
+            <?php
+
+            $instance = new class extends Foo implements HandleableInterface
+            {
+
+            };
+        answers:
+            - {value: No, correct: true}
+            - {value: Yes, correct: false}
+
+    -   question: |
+            Is the following code valid in PSR-12 ?
+
+            <?php
+
+            $instance = new class extends Foo implements HandleableInterface {
+
+            };
+        answers:
+            - {value: Yes, correct: true}
+            - {value: No, correct: false}
