@@ -32,3 +32,10 @@ questions:
             - {value: Cache,   correct: false}
             - {value: Inflector,   correct: false}
             - {value: HTTP foundation,   correct: false}
+
+    -   question: 'What is PSR-7?'
+        answers:
+            - {value: HTTP message interface.,   correct: true}
+            - {value: A container interface., correct: false}
+            - {value: Huggable Interface.,   correct: false}
+            - {value: A logger interface.,   correct: false}

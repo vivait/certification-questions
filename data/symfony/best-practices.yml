@@ -15,3 +15,10 @@ questions:
             - {value: symfony create blog, correct: false}
             - {value: symfony install blog, correct: false}
             - {value: symfony new --full blog, correct: true}
+
+    -   question: The default value of the opcache.max_accelerated_files PHP configuration option is 2,000. Is this setting correct for a typical Symfony application?
+        answers:
+            - {value: 'No, it is recommended to increase it at least to 20,000.', correct: true }
+            - {value: 'Yes, because PHP increases that limit dynamically when needed.', correct: false }
+            - {value: 'No, it is recommended to decrease it to 500 to limit the memory consumption in the server.', correct: false }
+            - {value: 'Yes, 2,000 is correct.', correct: false }
