@@ -69,3 +69,61 @@ questions:
             - { value: Symfony\Component\Yaml\Yaml::yaml, correct: false }
             - { value: Symfony\Component\Yaml\Yaml::write, correct: false }
             - { value: Symfony\Component\Yaml\Yaml::dump, correct: true }
+
+
+    -   question: |
+            How would one make YAML dump in the following format?
+
+            foo: bar
+            bar:
+                foo: bar
+                bar: baz
+        answers:
+            - { value: 'Yaml::dump($array, 2);', correct: true }
+            - { value: 'Yaml::dump($array, 3);', correct: false }
+            - { value: 'Yaml::dump($array, null, 2);', correct: false }
+            - { value: 'Yaml::dump($array, Yaml::NEW_LINE);', correct: true }
+
+    -   question: Which method is used to parse YAML from a file?
+        answers:
+            - { value: 'Yaml::parseFile', correct: true }
+            - { value: 'Yaml::parse', correct: false }
+            - { value: 'YamlParser::parse', correct: false }
+            - { value: 'YamlParser::parseFile', correct: false }
+
+    -   question: |
+            How would one make YAML dump in the following format?
+
+            foo: bar
+            bar:
+                    foo: bar
+                    bar: baz
+        answers:
+            - { value: 'Yaml::dump($array, 2, 8);', correct: true }
+            - { value: 'Yaml::dump($array, 8, 2);', correct: false }
+            - { value: 'Yaml::dump($array);', correct: false }
+            - { value: 'Yaml::dump($array, Yaml::NEW_LINE|Yaml::INDENT_SPACES);', correct: false }
+
+    -   question: |
+            What will the following YAML output in PHP?
+
+            value: 10_000_000_000
+        answers:
+            - { value: "'value' => 10000000000", correct: true }
+            - { value: "'value' => '10_000_000_000'", correct: true }
+            - { value: "'value' => '10,000,000,000'", correct: false }
+
+    -   question: |
+            What will the following script output?
+
+            $string = ["string" => "Multiple\nLine\nString"];
+            $yaml = Yaml::dump($string, 2, 4, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
+            echo $yaml;
+        answers:
+            - value: |
+                    string: |
+                         Multiple
+                         Line
+                         String
+              correct: true
+            - { value: "Multiple\nLine\nString", correct: false }
