@@ -31,3 +31,29 @@ questions:
             - { value: "CsvFileLoader", correct: false }
             - { value: "JsonFileLoader", correct: false }
             - { value: "MoFileLoader", correct: false }
+
+    -   question: What is the correct option to add other directories in the translator configuration?
+        answers:
+            - value: |
+                  # config/packages/translation.yaml
+                  framework:
+                      translator:
+                          paths:
+                              - '%kernel.project_dir%/translations'
+              correct: true
+
+            - value: |
+                  # config/packages/translation.yaml
+                  framework:
+                      translator:
+                          add_paths:
+                              - '%kernel.project_dir%/translations'
+              correct: true
+
+            - value: |
+                  # config/packages/translation.yaml
+                  framework:
+                      translator:
+                          directories:
+                              - '%kernel.project_dir%/translations'
+              correct: true

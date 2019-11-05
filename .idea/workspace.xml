@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="" />
+    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/cache-http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/cache-http.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/translator.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/translator.yml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,13 +253,8 @@
       <workItem from="1572367875956" duration="1385000" />
       <workItem from="1572626264850" duration="992000" />
       <workItem from="1572794304356" duration="3667000" />
-    </task>
-    <task id="LOCAL-00028" summary="Questions">
-      <created>1568129446237</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1568129446237</updated>
+      <workItem from="1572946640280" duration="6000" />
+      <workItem from="1572976131231" duration="427000" />
     </task>
     <task id="LOCAL-00029" summary="Questions">
       <created>1568130940770</created>
@@ -591,7 +592,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572886772305</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="TODO FOR PSR">
+      <created>1572888774166</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1572888774166</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -625,7 +633,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Formatting fixes" />
     <MESSAGE value="Client cache questions" />
     <MESSAGE value="Adds HTTP codes for 4xx" />
     <MESSAGE value="Adds HTTP codes for 3xx" />
@@ -650,6 +657,7 @@
     <MESSAGE value="Adds questions regarding YAML" />
     <MESSAGE value="Questions" />
     <MESSAGE value="Adds questions regarding PSR standards" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds questions regarding PSR standards" />
+    <MESSAGE value="TODO FOR PSR" />
+    <option name="LAST_COMMIT_MESSAGE" value="TODO FOR PSR" />
   </component>
 </project>

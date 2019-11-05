@@ -114,3 +114,13 @@ questions:
             -   value: public function getToken();
                 correct: false
 
+    -   question: By default, what priority does a voter has?
+        answers:
+            -   value: 0
+                correct: true
+            -   value: The highest.
+                correct: false
+            -   value: 1024
+                correct: false
+            -   value: -1
+                correct: false

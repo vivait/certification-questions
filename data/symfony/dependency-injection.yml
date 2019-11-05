@@ -416,3 +416,10 @@ questions:
             - {value: "form.type_extension", correct: false}
             - {value: 'form.type', correct: true}
             - {value: 'form', correct: false}
+
+    -   question: "What is the tag to use to create a custom form type extension?"
+        answers:
+            - {value: "form.type_extension", correct: true}
+            - {value: "type_extension", correct: false}
+            - {value: 'form.type.extension', correct: false}
+            - {value: 'form_extension', correct: false}
