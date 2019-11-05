@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="">
+    <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/cache-http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/cache-http.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/translator.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/translator.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/psr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/psr.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,100 +17,68 @@
       <executable />
     </execution>
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/vendor/tedivm/jshrink" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/vendor/herrera-io/annotations" />
-      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
-      <path value="$PROJECT_DIR$/vendor/kherge/box" />
-      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
-      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/vendor/kherge/amend" />
-      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
-      <path value="$PROJECT_DIR$/vendor/phine/path" />
-      <path value="$PROJECT_DIR$/vendor/certificationy/symfony-pack" />
-      <path value="$PROJECT_DIR$/vendor/phine/exception" />
       <path value="$PROJECT_DIR$/vendor/certificationy/certificationy" />
       <path value="$PROJECT_DIR$/vendor/certificationy/php-pack" />
+      <path value="$PROJECT_DIR$/vendor/certificationy/symfony-pack" />
       <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
-      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
       <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
-      <path value="$PROJECT_DIR$/vendor/herrera-io/phar-update" />
-      <path value="$PROJECT_DIR$/vendor/herrera-io/version" />
-      <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
-      <path value="$PROJECT_DIR$/vendor/herrera-io/box" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/herrera-io/json" />
+      <path value="$PROJECT_DIR$/vendor/herrera-io/version" />
+      <path value="$PROJECT_DIR$/vendor/herrera-io/phar-update" />
+      <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/phine/exception" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/kherge/box" />
+      <path value="$PROJECT_DIR$/vendor/kherge/amend" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/tedivm/jshrink" />
+      <path value="$PROJECT_DIR$/vendor/herrera-io/annotations" />
+      <path value="$PROJECT_DIR$/vendor/herrera-io/box" />
+      <path value="$PROJECT_DIR$/vendor/phine/path" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1OVix7AIIqgbpXCE8Z4KULBv23M" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="false" id="Update" />
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1TABzbwfQvyKgeuad5D5VlT2ljh" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP&#10;Twig&#10;HTML&#10;TEXT" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/data/question.schema.json" />
-    <property name="nodejs.jest.jest_package" value="" />
-    <property name="nodejs.protractor.protractor_package" value="" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data" />
-      <recent name="$PROJECT_DIR$/data/symfony" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data/symfony" />
-      <recent name="$PROJECT_DIR$/data/php" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -127,479 +92,43 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.certificationy.php">
-    <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
+  <component name="RunManager">
+    <configuration name="scratch_8.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_8.php">
       <method v="2" />
     </configuration>
-    <configuration name="certificationy.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/certificationy.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_15.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_15.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_17.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_17.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_20.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_20.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_21.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_21.php">
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="PHP Script.scratch_15.php" />
-      <item itemvalue="PHP Script.scratch_17.php" />
-      <item itemvalue="PHP Script.scratch_20.php" />
-      <item itemvalue="PHP Script.scratch_21.php" />
-      <item itemvalue="PHP Script.certificationy.php" />
-      <item itemvalue="PHPUnit.phpunit.xml.dist" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHP Script.certificationy.php" />
-        <item itemvalue="PHP Script.scratch_21.php" />
-        <item itemvalue="PHP Script.scratch_20.php" />
-        <item itemvalue="PHP Script.scratch_17.php" />
-        <item itemvalue="PHP Script.scratch_15.php" />
+        <item itemvalue="PHP Script.scratch_8.php" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="46f1f8ff-4fa2-4e94-a9b1-6f9ec413590b" name="Default Changelist" comment="" />
-      <created>1563983499247</created>
+      <changelist id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="" />
+      <created>1572893282701</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1563983499247</updated>
-      <workItem from="1563983500361" duration="617000" />
-      <workItem from="1564069408796" duration="2183000" />
-      <workItem from="1564071857654" duration="430000" />
-      <workItem from="1564415323870" duration="1765000" />
-      <workItem from="1564500775481" duration="950000" />
-      <workItem from="1564502159385" duration="1835000" />
-      <workItem from="1564587805843" duration="2044000" />
-      <workItem from="1564677108943" duration="2158000" />
-      <workItem from="1564760662608" duration="154000" />
-      <workItem from="1564760928102" duration="387000" />
-      <workItem from="1565020526536" duration="761000" />
-      <workItem from="1565076739621" duration="18000" />
-      <workItem from="1565076765671" duration="1580000" />
-      <workItem from="1565106071659" duration="2935000" />
-      <workItem from="1565164945815" duration="629000" />
-      <workItem from="1565192357974" duration="1310000" />
-      <workItem from="1565196391080" duration="4073000" />
-      <workItem from="1565337356511" duration="546000" />
-      <workItem from="1565364648897" duration="1402000" />
-      <workItem from="1565597595762" duration="173000" />
-      <workItem from="1565711051716" duration="1247000" />
-      <workItem from="1565796478184" duration="1435000" />
-      <workItem from="1565968572213" duration="2802000" />
-      <workItem from="1566316431292" duration="1053000" />
-      <workItem from="1566375228435" duration="910000" />
-      <workItem from="1566401460301" duration="1037000" />
-      <workItem from="1566488176402" duration="1304000" />
-      <workItem from="1566574869191" duration="2592000" />
-      <workItem from="1567007258942" duration="777000" />
-      <workItem from="1567065665960" duration="116000" />
-      <workItem from="1567073392188" duration="1107000" />
-      <workItem from="1567092446053" duration="517000" />
-      <workItem from="1567177854139" duration="427000" />
-      <workItem from="1567438075890" duration="1415000" />
-      <workItem from="1567498324861" duration="76000" />
-      <workItem from="1567524633510" duration="1437000" />
-      <workItem from="1567611231276" duration="1144000" />
-      <workItem from="1567624372275" duration="68000" />
-      <workItem from="1567697432472" duration="1216000" />
-      <workItem from="1567713834324" duration="137000" />
-      <workItem from="1567785375584" duration="399000" />
-      <workItem from="1568017001538" duration="603000" />
-      <workItem from="1568019492835" duration="7000" />
-      <workItem from="1568042927418" duration="2067000" />
-      <workItem from="1568059295910" duration="71000" />
-      <workItem from="1568129441162" duration="1394000" />
-      <workItem from="1568216180409" duration="1259000" />
-      <workItem from="1568302212546" duration="1267000" />
-      <workItem from="1568648816666" duration="634000" />
-      <workItem from="1568734423736" duration="2427000" />
-      <workItem from="1568993291257" duration="520000" />
-      <workItem from="1569226129117" duration="401000" />
-      <workItem from="1569251480235" duration="162000" />
-      <workItem from="1569342950319" duration="808000" />
-      <workItem from="1569511855565" duration="436000" />
-      <workItem from="1569943453049" duration="420000" />
-      <workItem from="1569944341169" duration="31000" />
-      <workItem from="1569944379143" duration="567000" />
-      <workItem from="1570030060645" duration="919000" />
-      <workItem from="1570116425208" duration="583000" />
-      <workItem from="1570202966838" duration="601000" />
-      <workItem from="1570550035444" duration="256000" />
-      <workItem from="1570563031683" duration="170000" />
-      <workItem from="1570634529856" duration="561000" />
-      <workItem from="1570801810821" duration="371000" />
-      <workItem from="1571068468123" duration="320000" />
-      <workItem from="1571240781404" duration="268000" />
-      <workItem from="1571299274376" duration="6000" />
-      <workItem from="1571327599383" duration="308000" />
-      <workItem from="1571572651290" duration="9362000" />
-      <workItem from="1571845762381" duration="622000" />
-      <workItem from="1571863039206" duration="2916000" />
-      <workItem from="1571866055503" duration="851000" />
-      <workItem from="1572017518716" duration="1976000" />
-      <workItem from="1572280742713" duration="3168000" />
-      <workItem from="1572367875956" duration="1385000" />
-      <workItem from="1572626264850" duration="992000" />
-      <workItem from="1572794304356" duration="3667000" />
-      <workItem from="1572946640280" duration="6000" />
-      <workItem from="1572976131231" duration="427000" />
+      <updated>1572893282701</updated>
+      <workItem from="1572893283973" duration="104000" />
+      <workItem from="1572904818413" duration="847000" />
+      <workItem from="1572905832716" duration="69000" />
+      <workItem from="1572905917543" duration="3078000" />
     </task>
-    <task id="LOCAL-00029" summary="Questions">
-      <created>1568130940770</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
+    <task id="LOCAL-00001" summary="Removes personal .idea files">
+      <created>1572893306261</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1568130940770</updated>
+      <updated>1572893306261</updated>
     </task>
-    <task id="LOCAL-00030" summary="Questions">
-      <created>1568276356129</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
+    <task id="LOCAL-00002" summary="Makes PSR questions harder">
+      <created>1572907458285</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1568276356129</updated>
+      <updated>1572907458285</updated>
     </task>
-    <task id="LOCAL-00031" summary="Questions">
-      <created>1568303845457</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1568303845458</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Questions">
-      <created>1568734462231</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1568734462231</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Questions">
-      <created>1569228132548</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1569228132548</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Questions">
-      <created>1569580610459</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1569580610459</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Questions">
-      <created>1569943461026</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1569943461026</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Questions">
-      <created>1569944989215</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1569944989215</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Questions">
-      <created>1570030772871</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1570030772871</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Questions">
-      <created>1570118220528</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1570118220528</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Questions">
-      <created>1570808413039</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1570808413039</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Questions">
-      <created>1571127259206</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1571127259206</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Questions">
-      <created>1571506389236</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1571506389236</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Questions">
-      <created>1571507015661</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1571507015661</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Questions">
-      <created>1571507252862</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1571507252862</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Client cache questions">
-      <created>1571574356520</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1571574356520</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Adds HTTP codes for 4xx">
-      <created>1571575762736</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1571575762736</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Adds HTTP codes for 3xx">
-      <created>1571576523562</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1571576523562</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Adds HTTP codes for 2xx">
-      <created>1571578312077</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1571578312077</updated>
-    </task>
-    <task id="LOCAL-00048" summary="HTTP response codes">
-      <created>1571578479408</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1571578479408</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Updates gitignore to include .idea files">
-      <created>1571578554197</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1571578554197</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Grammar fixes">
-      <created>1571578696802</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1571578696804</updated>
-    </task>
-    <task id="LOCAL-00051" summary="License changes">
-      <created>1571580139017</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1571580139017</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Twig form rendering">
-      <created>1571585196055</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1571585196056</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Twig form rendering">
-      <created>1571846334861</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1571846334863</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Adds Symfony backwards compatibility promise">
-      <created>1571865057231</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1571865057232</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Adds HTTP kernel question">
-      <created>1571865639910</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1571865639910</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Questions">
-      <created>1571932263028</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1571932263028</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Adds questions regarding decoration">
-      <created>1571932844948</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1571932844948</updated>
-    </task>
-    <task id="LOCAL-00058" summary="Adds questions">
-      <created>1572018293200</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1572018293200</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Adds questions about factories">
-      <created>1572019172487</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1572019172488</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Questions">
-      <created>1572281346581</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1572281346582</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Adds Questions about Synthetic services">
-      <created>1572281545256</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1572281545256</updated>
-    </task>
-    <task id="LOCAL-00062" summary="Fixes broken questions">
-      <created>1572281888619</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1572281888620</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Fixes broken questions">
-      <created>1572283002799</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1572283002799</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Fixes broken questions">
-      <created>1572283177826</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1572283177826</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Questions">
-      <created>1572369803774</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1572369803774</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Questions">
-      <created>1572375038421</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1572375038421</updated>
-    </task>
-    <task id="LOCAL-00067" summary="Questions on server driven content negotiation">
-      <created>1572376810328</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1572376810328</updated>
-    </task>
-    <task id="LOCAL-00068" summary="Questions">
-      <created>1572453861814</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1572453861815</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Questions">
-      <created>1572702715935</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1572702715936</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Adds questions on cache-control">
-      <created>1572713930214</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1572713930214</updated>
-    </task>
-    <task id="LOCAL-00071" summary="Adds some questions regarding kernel events">
-      <created>1572714710608</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1572714710608</updated>
-    </task>
-    <task id="LOCAL-00072" summary="Cleanup questions">
-      <created>1572794315982</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1572794315982</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Adds questions regarding request handling">
-      <created>1572797499103</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1572797499103</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Adds questions regarding YAML">
-      <created>1572886047615</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1572886047615</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Questions">
-      <created>1572886379070</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1572886379070</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Adds questions regarding PSR standards">
-      <created>1572886772305</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1572886772305</updated>
-    </task>
-    <task id="LOCAL-00077" summary="TODO FOR PSR">
-      <created>1572888774166</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1572888774166</updated>
-    </task>
-    <option name="localTasksCounter" value="78" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,47 +146,10 @@
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Client cache questions" />
-    <MESSAGE value="Adds HTTP codes for 4xx" />
-    <MESSAGE value="Adds HTTP codes for 3xx" />
-    <MESSAGE value="Adds HTTP codes for 2xx" />
-    <MESSAGE value="HTTP response codes" />
-    <MESSAGE value="Updates gitignore to include .idea files" />
-    <MESSAGE value="Grammar fixes" />
-    <MESSAGE value="License changes" />
-    <MESSAGE value="Twig form rendering" />
-    <MESSAGE value="Adds Symfony backwards compatibility promise" />
-    <MESSAGE value="Adds HTTP kernel question" />
-    <MESSAGE value="Adds questions regarding decoration" />
-    <MESSAGE value="Adds questions" />
-    <MESSAGE value="Adds questions about factories" />
-    <MESSAGE value="Adds Questions about Synthetic services" />
-    <MESSAGE value="Fixes broken questions" />
-    <MESSAGE value="Questions on server driven content negotiation" />
-    <MESSAGE value="Adds questions on cache-control" />
-    <MESSAGE value="Adds some questions regarding kernel events" />
-    <MESSAGE value="Cleanup questions" />
-    <MESSAGE value="Adds questions regarding request handling" />
-    <MESSAGE value="Adds questions regarding YAML" />
-    <MESSAGE value="Questions" />
-    <MESSAGE value="Adds questions regarding PSR standards" />
-    <MESSAGE value="TODO FOR PSR" />
-    <option name="LAST_COMMIT_MESSAGE" value="TODO FOR PSR" />
+    <MESSAGE value="Removes personal .idea files" />
+    <MESSAGE value="Makes PSR questions harder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Makes PSR questions harder" />
   </component>
 </project>
