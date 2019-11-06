@@ -26,11 +26,9 @@ questions:
             - {value: setSharedMaxAge, correct: true}
             - {value: setLastModified, correct: false}
 
-    -   question: "Which methods can be used for expiration caching?"
+    -   question: "Which HTTP response headers are involved in the validation caching model?"
         answers:
-            - {value: setExpires, correct: true}
-            - {value: setMaxAge, correct: false}
-            - {value: setEtag, correct: false}
-            - {value: setCache, correct: false}
-            - {value: setSharedMaxAge, correct: true}
-            - {value: setLastModified, correct: false}
+            - {value: 'Cache-Control: max-age', correct: false}
+            - {value: 'Etag', correct: true}
+            - {value: 'Last-Modified', correct: true}
+            - {value: 'Cache-Control: s-max-age', correct: false}

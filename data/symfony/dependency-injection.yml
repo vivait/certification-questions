@@ -150,16 +150,6 @@ questions:
             - {value: 'router.expression_language_provider', correct: false}
             - {value: 'router.provider', correct: false}
 
-
-    -   question: What are the valid ways to get the Session object if the controller class inherits from the base FrameworkBundle's Controller class?
-        answers:
-            - {value: 'routing.route_provider', correct: false}
-            - {value: 'routing.expression_language_provider', correct: true}
-            - {value: 'routing.provider', correct: false}
-            - {value: 'router.route_provider', correct: false}
-            - {value: 'router.expression_language_provider', correct: false}
-            - {value: 'router.provider', correct: false}
-
     -   question: |
             What is the result of:
                 # config/services.yaml

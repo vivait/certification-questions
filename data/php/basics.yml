@@ -306,3 +306,26 @@ questions:
         answers:
             - {value: No, correct: false }
             - {value: Yes, correct: true }
+
+    -   question: |
+            From the script below, how would you display the error messages thrown by the 'ls' command ?
+
+            $null = fopen('/dev/null', 'r+');
+            $descriptorspec = [  0 => $null,  1 => $null,  2 => array["pipe", "w"] ];
+
+            $process = proc_open("ls /foo", $descriptorspec, $pipes);
+            echo __________________
+        answers:
+            - {value: 'proc_errors($process);', correct: false }
+            - {value: 'fgets($pipes[2]);', correct: true }
+            - {value: 'stream_errors($pipes);', correct: false }
+            - {value: 'fread($null, 128);', correct: false }
+
+    -   question: You want to fully overload all PDO features with OOP. What do you need to accomplish that?
+        answers:
+            - {value: 'PDO::setStatementClass()', correct: false }
+            - {value: 'Use the PDO parameter', correct: false }
+            - {value: 'PDO::ATTR_STATEMENT_CLASS', correct: true }
+            - {value: 'Extend the PDO class', correct: true }
+            - {value: 'PDO::ATTR_USE_CLASS', correct: false }
+            - {value: 'Extend the PDOStatement class', correct: true }

@@ -40,3 +40,41 @@ questions:
             - {value: _locale, correct: true}
             - {value: _format, correct: true}
             - {value: _response, correct: false}
+
+    -   question: |
+            Given the following routes, what controller will be executed for /book/123 ?
+
+            # config/routes.yaml
+            book_list:
+                path:       /books
+                controller: 'App\Controller\BookController::list'
+            book_detail:
+                path:       /books/{slug}
+                controller: 'App\Controller\BookController::detail'
+            book_download:
+                path:       /books/{slug}/download
+                controller: 'App\Controller\BookController::download'
+        answers:
+            - {value: 'Error: No route found', correct: true}
+            - {value: App\Controller\BookController::detail, correct: false}
+            - {value: App\Controller\BookController::download, correct: false}
+            - {value: App\Controller\BookController::list, correct: false}
+
+    -   question: |
+            Given the following routes, what controller will be executed for /books/123 ?
+
+            # config/routes.yaml
+            book_list:
+                path:       /books
+                controller: 'App\Controller\BookController::list'
+            book_detail:
+                path:       /books/{slug}
+                controller: 'App\Controller\BookController::detail'
+            book_download:
+                path:       /books/{slug}/download
+                controller: 'App\Controller\BookController::download'
+        answers:
+            - {value: App\Controller\BookController::detail, correct: true}
+            - {value: 'Error: No route found', correct: false}
+            - {value: App\Controller\BookController::download, correct: false}
+            - {value: App\Controller\BookController::list, correct: false}
