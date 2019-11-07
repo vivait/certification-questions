@@ -72,3 +72,11 @@ questions:
             - {value: path(), correct: false}
             - {value: max(), correct: true}
             - {value: attribute(), correct: true}
+
+    -   question: Which of the following classes are Twig loaders available by default?
+        answers:
+            - {value: ArrayLoader, correct: true}
+            - {value: FilesystemLoader, correct: true}
+            - {value: DoctrineLoader, correct: false}
+            - {value: CacheLoader, correct: false}
+            - {value: ChainLoader, correct: true}

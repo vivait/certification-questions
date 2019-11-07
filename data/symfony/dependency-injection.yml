@@ -125,7 +125,7 @@ questions:
             - {value: 'kernel.cache', correct: false}
             - {value: 'kernel.cache_clearer', correct: true}
 
-    -   question: What is the tag to use to register your service to be called during the cache clearing process?
+    -   question: What is the tag to use to register HTTP content rendering strategy?
         answers:
             - {value: 'kernel.fragment_renderer', correct: true}
             - {value: 'content_renderer', correct: false}
@@ -413,3 +413,8 @@ questions:
             - {value: "type_extension", correct: false}
             - {value: 'form.type.extension', correct: false}
             - {value: 'form_extension', correct: false}
+
+    -   question: "Should a parent service be abstract?"
+        answers:
+            - {value: "No", correct: true}
+            - {value: "Yes", correct: false}

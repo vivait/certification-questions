@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/cache.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/cache.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/serializer.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/serializer.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/twig.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/twig.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,9 +100,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_8.php">
+  <component name="RunManager" selected="PHP Script.scratch_22.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_22.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_22.php">
       <method v="2" />
     </configuration>
     <configuration name="scratch_8.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_8.php">
@@ -111,6 +113,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.scratch_22.php" />
         <item itemvalue="PHP Script.scratch_8.php" />
       </list>
     </recent_temporary>
@@ -132,7 +135,8 @@
       <workItem from="1572904818413" duration="847000" />
       <workItem from="1572905832716" duration="69000" />
       <workItem from="1572905917543" duration="3078000" />
-      <workItem from="1573058460539" duration="1190000" />
+      <workItem from="1573058460539" duration="2358000" />
+      <workItem from="1573145838608" duration="911000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>
@@ -148,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572907458285</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Questions">
+      <created>1573059725613</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573059725613</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +181,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removes personal .idea files" />
     <MESSAGE value="Makes PSR questions harder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Makes PSR questions harder" />
+    <MESSAGE value="Questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Questions" />
   </component>
 </project>

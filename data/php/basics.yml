@@ -329,3 +329,18 @@ questions:
             - {value: 'Extend the PDO class', correct: true }
             - {value: 'PDO::ATTR_USE_CLASS', correct: false }
             - {value: 'Extend the PDOStatement class', correct: true }
+
+    -   question: |
+            $subs = [
+                'at' => '@',
+                'com' => 'net'
+            ];
+
+            $email = 'comnet@example.com';
+
+            echo strtr($email, $subs);
+        answers:
+            - {value: 'netnet@example.net', correct: true }
+            - {value: 'comnet@example.com', correct: false }
+            - {value: 'comnetatexample.net', correct: false }
+            - {value: 'netnet@example.com', correct: false }

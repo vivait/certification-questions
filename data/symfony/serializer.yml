@@ -114,25 +114,3 @@ questions:
                 correct: true
             -   value: is*
                 correct: true
-
-
-    -   question: "Which of these methods are automatically detected and used by the Serializer ?"
-        answers:
-            - value: DataUriNormalizer
-              correct: false
-            - value: JsonNormalizer
-              correct: false
-            - value: TimeNormalizer
-              correct: false
-            - value: DateTimeNormalizer
-              correct: true
-            - value: XmlNormalizer
-              correct: false
-            - value: DateNormalizer
-              correct: false
-            - value: GetSetMethodNormalizer
-              correct: true
-            - value: CustomNormalizer
-              correct: true
-            - value: ObjectNormalizer
-              correct: true

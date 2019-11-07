@@ -124,3 +124,14 @@ questions:
                 correct: false
             -   value: -1
                 correct: false
+
+    -   question: By default, what parameter can you use inside the login form to specify the target of the redirection ?
+        answers:
+            -   value: _target_path
+                correct: true
+            -   value: _path
+                correct: false
+            -   value: _default_target
+                correct: false
+            -   value: _path_target
+                correct: false
