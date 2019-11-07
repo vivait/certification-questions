@@ -351,3 +351,82 @@ questions:
             - {value: '5.6', correct: false }
             - {value: '4.0', correct: false }
             - {value: '7.0', correct: false }
+
+    -   question: |
+            Is the following interface valid?
+
+            interface Mine {
+                protected function test ();
+            }
+        answers:
+            - {value: No, correct: true }
+            - {value: Yes, correct: false }
+
+    -   question: |
+            Is the following interface valid?
+
+            interface Mine {
+                public function test ();
+            }
+        answers:
+            - {value: Yes, correct: true }
+            - {value: No, correct: false }
+
+
+    -   question: |
+            Is the following code valid?
+
+            interface Mine {
+                public const TEST = '123';
+            }
+
+            class Two implements Mine {
+                public const TEST = '321';
+            }
+        answers:
+            - {value: No, correct: true }
+            - {value: Yes, correct: false }
+
+    -   question: |
+            Is the following code valid?
+
+            class Mine {
+                public const TEST = '123';
+            }
+
+            class Two extends Mine {
+                public const TEST = '321';
+            }
+        answers:
+            - {value: Yes, correct: true }
+            - {value: No, correct: false }
+
+    -   question: |
+            Is the following code valid?
+
+            $object = new class {};
+            $string = 'class';
+            var_dump($object instanceof $string);
+        answers:
+            - {value: Yes, correct: true }
+            - {value: No, correct: false }
+
+    -   question: |
+            Is the following code valid?
+
+            $object = new class {};
+            $stdClass = new stdClass;
+            var_dump($object instanceof $stdClass);
+        answers:
+            - {value: Yes, correct: true }
+            - {value: No, correct: false }
+
+    -   question: |
+            What is the output of the following script?
+
+            $object = new stdClass;
+            const STRING = 'stdClass';
+            var_dump($object instanceof STRING);
+        answers:
+            - {value: bool(false), correct: true }
+            - {value: bool(true), correct: false }

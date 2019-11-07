@@ -96,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_22.php">
+  <component name="RunManager" selected="PHP Script.scratch_23.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -104,11 +104,15 @@
     <configuration name="scratch_22.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_22.php">
       <method v="2" />
     </configuration>
+    <configuration name="scratch_23.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_23.php">
+      <method v="2" />
+    </configuration>
     <configuration name="scratch_8.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_8.php">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.scratch_23.php" />
         <item itemvalue="PHP Script.scratch_22.php" />
         <item itemvalue="PHP Script.scratch_8.php" />
       </list>
@@ -129,7 +133,7 @@
       <workItem from="1572905832716" duration="69000" />
       <workItem from="1572905917543" duration="3078000" />
       <workItem from="1573058460539" duration="2358000" />
-      <workItem from="1573145838608" duration="1583000" />
+      <workItem from="1573145838608" duration="2400000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>
@@ -159,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573146776435</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Questions about abstract classes">
+      <created>1573147551685</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573147551685</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +193,7 @@
     <MESSAGE value="Removes personal .idea files" />
     <MESSAGE value="Makes PSR questions harder" />
     <MESSAGE value="Questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Questions" />
+    <MESSAGE value="Questions about abstract classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Questions about abstract classes" />
   </component>
 </project>
