@@ -344,3 +344,10 @@ questions:
             - {value: 'comnet@example.com', correct: false }
             - {value: 'comnetatexample.net', correct: false }
             - {value: 'netnet@example.com', correct: false }
+
+    -   question: Which version of PHP introduced abstract classes?
+        answers:
+            - {value: '5.0', correct: true }
+            - {value: '5.6', correct: false }
+            - {value: '4.0', correct: false }
+            - {value: '7.0', correct: false }

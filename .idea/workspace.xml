@@ -4,10 +4,6 @@
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/serializer.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/serializer.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/twig.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/twig.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,9 +114,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="showServicesTree" value="false" />
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -136,7 +129,7 @@
       <workItem from="1572905832716" duration="69000" />
       <workItem from="1572905917543" duration="3078000" />
       <workItem from="1573058460539" duration="2358000" />
-      <workItem from="1573145838608" duration="911000" />
+      <workItem from="1573145838608" duration="1583000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>
@@ -159,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573059725613</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Questions">
+      <created>1573146776435</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573146776435</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
