@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/arrays.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/arrays.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/options-resolver.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/options-resolver.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/validation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/validation.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +99,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_23.php">
+  <component name="RunManager" selected="PHP Script.scratch_25.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -107,11 +110,15 @@
     <configuration name="scratch_23.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_23.php">
       <method v="2" />
     </configuration>
+    <configuration name="scratch_25.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_25.php">
+      <method v="2" />
+    </configuration>
     <configuration name="scratch_8.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_8.php">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.scratch_25.php" />
         <item itemvalue="PHP Script.scratch_23.php" />
         <item itemvalue="PHP Script.scratch_22.php" />
         <item itemvalue="PHP Script.scratch_8.php" />
@@ -133,7 +140,9 @@
       <workItem from="1572905832716" duration="69000" />
       <workItem from="1572905917543" duration="3078000" />
       <workItem from="1573058460539" duration="2358000" />
-      <workItem from="1573145838608" duration="2400000" />
+      <workItem from="1573145838608" duration="3291000" />
+      <workItem from="1573228887645" duration="17000" />
+      <workItem from="1573234888462" duration="1557000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>
@@ -170,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573147551685</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Type checking">
+      <created>1573148451806</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1573148451806</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +210,7 @@
     <MESSAGE value="Makes PSR questions harder" />
     <MESSAGE value="Questions" />
     <MESSAGE value="Questions about abstract classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Questions about abstract classes" />
+    <MESSAGE value="Type checking" />
+    <option name="LAST_COMMIT_MESSAGE" value="Type checking" />
   </component>
 </project>

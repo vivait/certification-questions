@@ -51,7 +51,7 @@ questions:
         answers:
             - {value: "Notice: Array to string conversion.", correct: false}
             - {value: An empty string, correct: true}
-            - {value: False, correct: falseh}
+            - {value: 'False', correct: false}
             - {value: "Fatal error: Object of class ConstraintViolationList could not be converted to string.", correct: false}
 
     -   question: "What does the CardScheme Constraint stand for ?"
