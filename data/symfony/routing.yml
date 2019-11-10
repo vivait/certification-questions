@@ -78,3 +78,18 @@ questions:
             - {value: 'Error: No route found', correct: false}
             - {value: App\Controller\BookController::download, correct: false}
             - {value: App\Controller\BookController::list, correct: false}
+
+    -   question: |
+            blog_page:
+                path: /blog/{page}
+                requirements:
+                    page: \d*
+                defaults:
+                    page: 1
+        answers:
+            - {value: /blog/page1, correct: false}
+            - {value: /blog/, correct: true}
+            - {value: /blog/1, correct: true}
+            - {value: /blog, correct: true}
+            - {value: /blog/page, correct: false}
+            - {value: /blog/page-1, correct: false}

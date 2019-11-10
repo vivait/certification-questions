@@ -444,3 +444,13 @@ questions:
             - {value: "!http_redirect_to($url)", correct: false }
             - {value: "!headers_sent()", correct: false }
             - {value: "$_SERVER['HTTP_LOCATION'] != $url", correct: false }
+
+    -   question: |
+            Which function would best parse the following string by the tab (\t) and newline (\n) characters ?
+
+            $string = "John\tMark\nTed\tLarry";
+        answers:
+            - {value: 'strtok($string, "\t\n");', correct: true }
+            - {value: 'strstr($string, "\t\n");', correct: false }
+            - {value: 'explode($string, "\t\n");', correct: false }
+            - {value: 'str_split($string, "\t\n");', correct: false }

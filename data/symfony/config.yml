@@ -340,3 +340,11 @@ questions:
             - {value: XML, correct: true}
             - {value: PHP, correct: true}
             - {value: INI, correct: false}
+
+    -   question: |
+            What is the purpose of Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition::fixXmlConfig ?
+        answers:
+            - {value: It normalizes XML element name, correct: false}
+            - {value: It ensures that single XML elements are turned into an array, correct: true}
+            - {value: It always applies a custom function to an XML element, correct: false}
+            - {value: It applies a custom function to an XML element if an error occurs, correct: false}
