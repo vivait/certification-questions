@@ -167,3 +167,19 @@ questions:
             - {value: 'An error', correct: false}
             - {value: 'Array ( [0] => yellow [1] => white [2] => blue [3] => green [4] => orange )', correct: false}
             - {value: 'Array ( [0] => orange [1] => green [2] => yellow [3] => white [4] => blue )', correct: true}
+
+    -   question: |
+            Given the $info array defined below, what is the best way to assign the first value to a variable called $name and the third value to a variable called $country?
+
+            <?php
+
+            $info = [
+                'Paul',
+                31,
+                'Australia'
+            ];
+        answers:
+            - {value: 'list($name, , $country) = $info;', correct: true}
+            - {value: 'list($name, $country) = $info;', correct: false}
+            - {value: 'list($name, $age, $country) = $info;', correct: false}
+            - {value: 'array_list($name, $age, $country) = $info;', correct: false}

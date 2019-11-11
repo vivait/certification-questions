@@ -7,3 +7,12 @@ questions:
             - { value: By calling the setFunctions() method., correct: false }
             - { value: By calling the registerProvider() method., correct: false }
             - { value: By calling the createFunction() method., correct: false }
+
+    -   question: |
+            /** @var \Symfony\Component\ExpressionLanguage\ExpressionLanguage $language */
+            echo $language->evaluate('"\\\\"');
+        answers:
+            - { value: \, correct: true }
+            - { value: \\, correct: false }
+            - { value: An Empty String, correct: false }
+            - { value: \\\\, correct: false }

@@ -57,3 +57,11 @@ questions:
             - { value: "FileErrorException", correct: false }
             - { value: "FilesystemException", correct: false }
             - { value: "FileNotFoundException", correct: true }
+
+    -   question: |
+            What is returned by the Symfony\Component\Filesystem\Filesystem::mkdir method if the directory has been successfully created ?
+        answers:
+            - { value: "Nothing", correct: true }
+            - { value: "The FileSystem object", correct: false }
+            - { value: "A string with the directory path", correct: false }
+            - { value: "true or false", correct: false }

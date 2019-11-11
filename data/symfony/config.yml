@@ -348,3 +348,11 @@ questions:
             - {value: It ensures that single XML elements are turned into an array, correct: true}
             - {value: It always applies a custom function to an XML element, correct: false}
             - {value: It applies a custom function to an XML element if an error occurs, correct: false}
+
+    -   question: |
+            How to overwrite a configuration array if the value is also defined in a second configuration array ?
+        answers:
+            - {value: By using ->performNoDeepMerging(), correct: true}
+            - {value: By using ->performDeepMerging(), correct: false}
+            - {value: By using ->canBeOverwritten(), correct: false}
+            - {value: By using ->enableMerging(), correct: false}
