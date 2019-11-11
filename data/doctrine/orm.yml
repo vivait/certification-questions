@@ -49,3 +49,33 @@ questions:
             - value: |
                 ManyToOne is always the owning side and OneToMany the inverse side of a bidirectional association.
               correct: true
+
+    -   question: |
+            What is wrong with this repository method ?
+
+            public function filterBooks(array $filters)
+            {
+                $qb = $this->createQueryBuild('b');
+                $qb->where('b.year = :year');
+                $qb->setParameters(['year' => $filters['year']]);
+
+                $qb->andWhere('b.gender = :gender');
+                $qb->setParameters(['gender' => $filters['gender']]);
+
+                return $qb->getResults();
+        answers:
+            - value: |
+                  The method getResults does not exists. You should use getResult().
+              correct: false
+            - value: |
+                  The query builder does not have a getResults() method.
+                  You should use getQuery().
+              correct: true
+            - value: |
+                  $qb is never updated after its initialization.
+                  You should do methods chaining.
+              correct: false
+            - value: |
+                  The second call setParameters(...) will erase data set in the first call.
+                  So year will be deleted from the parameters list. You should use setParameter($name, $value).
+              correct: true

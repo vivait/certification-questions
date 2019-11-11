@@ -100,3 +100,10 @@ questions:
             - { value: $response->send();, correct: true }
             - { value: The object has no way of doing this, correct: false }
             - { value: $response->print();, correct: false }
+
+    -   question: Which of the following is the route to preview the 400 exception page in Symfony?
+        answers:
+            - { value: 'http://localhost/_error/400.html', correct: true }
+            - { value: 'http://localhost/error400.html', correct: false }
+            - { value: 'http://localhost/400_error.html', correct: false }
+            - { value: 'http://localhost/_error/400.html', correct: false }
