@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/php/arrays.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/arrays.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/options-resolver.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/options-resolver.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/validation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/validation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/yaml.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/yaml.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +140,9 @@
       <workItem from="1573058460539" duration="2358000" />
       <workItem from="1573145838608" duration="3291000" />
       <workItem from="1573228887645" duration="17000" />
-      <workItem from="1573234888462" duration="1557000" />
+      <workItem from="1573234888462" duration="1654000" />
+      <workItem from="1573462894591" duration="124000" />
+      <workItem from="1573489185786" duration="904000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>
@@ -186,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573148451806</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Questions">
+      <created>1573236664818</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573236664818</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,9 +215,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removes personal .idea files" />
     <MESSAGE value="Makes PSR questions harder" />
-    <MESSAGE value="Questions" />
     <MESSAGE value="Questions about abstract classes" />
     <MESSAGE value="Type checking" />
-    <option name="LAST_COMMIT_MESSAGE" value="Type checking" />
+    <MESSAGE value="Questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Questions" />
   </component>
 </project>
