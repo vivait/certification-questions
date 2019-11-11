@@ -106,4 +106,3 @@ questions:
             - { value: 'http://localhost/_error/400.html', correct: true }
             - { value: 'http://localhost/error400.html', correct: false }
             - { value: 'http://localhost/400_error.html', correct: false }
-            - { value: 'http://localhost/_error/400.html', correct: false }

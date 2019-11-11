@@ -442,7 +442,6 @@ questions:
             - {value: "!in_array($header, headers_list())", correct: true }
             - {value: "!headers_sent()", correct: true }
             - {value: "!http_redirect_to($url)", correct: false }
-            - {value: "!headers_sent()", correct: false }
             - {value: "$_SERVER['HTTP_LOCATION'] != $url", correct: false }
 
     -   question: |
