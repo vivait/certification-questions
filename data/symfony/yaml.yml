@@ -127,3 +127,32 @@ questions:
                          String
               correct: true
             - { value: "Multiple\nLine\nString", correct: false }
+
+    -   question: What is the correct way to output a twig variable for debug when a template can be modified?
+        answers:
+            - {value: "{{ dump(var) }}", correct: true}
+            - {value: "{{ debug(var) }}", correct: false}
+            - {value: "{% dump articles %}", correct: false}
+            - {value: "{% debug articles %}", correct: false}
+            - {value: "{% var_dump articles %}", correct: false}
+            - {value: "{{ var_dump(var) }}", correct: false}
+
+    -   question: What is the correct way to output a twig variable for debug when a template cannot be modified?
+        answers:
+            - {value: "{{ dump(var) }}", correct: false}
+            - {value: "{{ debug(var) }}", correct: false}
+            - {value: "{% dump articles %}", correct: true}
+            - {value: "{% debug articles %}", correct: false}
+            - {value: "{% var_dump articles %}", correct: false}
+            - {value: "{{ var_dump(var) }}", correct: false}
+
+    -   question: |
+            What will the result of running the following Twig in production?
+
+            {% set var = 'hello world' %}
+
+            {{ dump(var) }}
+        answers:
+            - {value: An error, correct: false}
+            - {value: The contents of the var variable in a HTML format, correct: false}
+            - {value: 'string("hello world")', correct: false}

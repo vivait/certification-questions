@@ -454,3 +454,8 @@ questions:
             - {value: 'strstr($string, "\t\n");', correct: false }
             - {value: 'explode($string, "\t\n");', correct: false }
             - {value: 'str_split($string, "\t\n");', correct: false }
+
+    -   question: Is content automatically escaped in PHP templates?
+        answers:
+            - {value: "No", correct: true }
+            - {value: "Yes", correct: false }
