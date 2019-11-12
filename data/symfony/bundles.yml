@@ -92,3 +92,11 @@ questions:
 
             - value: It's not possible
               correct: false
+
+    -   question: 'What is the command to display the debug information of the container?'
+        answers:
+            - {value: services:debug, correct: false}
+            - {value: debug:services, correct: false}
+            - {value: container:info, correct: false}
+            - {value: container:debug, correct: false}
+            - {value: debug:container, correct: true}

@@ -135,3 +135,11 @@ questions:
                 correct: false
             -   value: _path_target
                 correct: false
+
+    -   question: "What is the parent of Symfony\\Component\\Security\\Guard\\GuardAuthenticatorInterface?"
+        answers:
+            - {value: None, correct: true}
+            - {value: Symfony\Component\Security\AuthenticatorInterface, correct: false}
+            - {value: Symfony\Component\Security\Http\EntryPoint\AuthenticationEntryPointInterface, correct: true}
+            - {value: Symfony\Component\Security\Authenticator\AuthenticatorInterface, correct: false}
+            - {value: Symfony\Component\Security\Http\AuthenticatorInterface, correct: false}
