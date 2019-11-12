@@ -86,7 +86,7 @@ questions:
             - { value: FilterControllerEvent, correct: true }
             - { value: GetResponseEvent, correct: false }
             - { value: ViewEvent, correct: false }
-            - { value: GetResponseForControllerResultEvent, correct: true }
+            - { value: GetResponseForControllerResultEvent, correct: false }
             - { value: RequestViewEvent, correct: false }
             - { value: FinishRequestEvent, correct: false }
 

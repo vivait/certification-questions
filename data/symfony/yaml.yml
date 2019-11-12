@@ -61,7 +61,7 @@ questions:
             - { value: 983-07-01, correct: false }
             - { value: An array, correct: false }
             - { value: A DateTime object, correct: false }
-            - { value: 1983-07-01, correct: false }
+            - { value: "1983-07-01", correct: false }
 
     -   question: What is the method to write YAML?
         answers:

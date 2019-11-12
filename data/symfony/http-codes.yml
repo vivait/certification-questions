@@ -497,7 +497,7 @@ questions:
 
     -   question: 'What is the HTTP status code for Switching Protocol?'
         answers:
-            - { value: 103, correct: true }
+            - { value: 103, correct: false }
             - { value: 102, correct: false }
             - { value: 101, correct: true }
             - { value: 203, correct: false }
