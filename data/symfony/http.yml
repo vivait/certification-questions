@@ -160,6 +160,11 @@ questions:
             - { value: WWW-Authenticate, correct: false }
             - { value: User-Agent, correct: true }
             - { value: Referer, correct: true }
+        help: |
+            https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate
+            https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authenticate
+            https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent
+            https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer
 
     -   question: Which headers/directives will be ignored by a proxy if Expires, s-maxage and max-age are all present in a response ?
         answers:
