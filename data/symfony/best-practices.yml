@@ -22,3 +22,10 @@ questions:
             - {value: 'Yes, because PHP increases that limit dynamically when needed.', correct: false }
             - {value: 'No, it is recommended to decrease it to 500 to limit the memory consumption in the server.', correct: false }
             - {value: 'Yes, 2,000 is correct.', correct: false }
+
+    -   question: According to the official Symfony Best Practices Guide, which format do you need to use to configure routing, caching and security whenever possible?
+        answers:
+            - {value: yaml, correct: false }
+            - {value: php, correct: false }
+            - {value: xml, correct: false }
+            - {value: annotations, correct: true }

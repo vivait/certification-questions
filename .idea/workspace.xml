@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/doctrine/dbal.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/doctrine/dbal.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/best-practices.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/best-practices.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/config.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,6 +146,7 @@
       <workItem from="1573145838608" duration="3291000" />
       <workItem from="1573228887645" duration="17000" />
       <workItem from="1573234888462" duration="1557000" />
+      <workItem from="1573748992764" duration="1831000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>

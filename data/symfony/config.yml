@@ -356,3 +356,15 @@ questions:
             - {value: By using ->performDeepMerging(), correct: false}
             - {value: By using ->canBeOverwritten(), correct: false}
             - {value: By using ->enableMerging(), correct: false}
+
+    -   question: |
+            Which types are not valid Node Types ?
+        answers:
+            - {value: decimal, correct: true}
+            - {value: variable, correct: false}
+            - {value: enum, correct: false}
+            - {value: integer, correct: false}
+            - {value: date, correct: true}
+            - {value: float, correct: false}
+            - {value: int, correct: true}
+            - {value: scalar, correct: false}

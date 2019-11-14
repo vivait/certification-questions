@@ -47,3 +47,5 @@ questions:
             - { value: 'pgsql://localhost:5432', correct: false}
             - { value: 'mysql://localhost:4486/foo?charset=UTF-8', correct: true }
             - { value: 'sqlite:///data.db', correct: true }
+        help: |
+            https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html
