@@ -331,6 +331,8 @@ questions:
             - {value: ifNull(), correct: true}
             - {value: ifNotNull(), correct: false}
             - {value: ifTrue(), correct: true}
+        help: |
+            https://symfony.com/doc/current/components/config/definition.html#validation-rules
 
     -   question: |
             Which configuration file format can be used to define PHP constants as parameters?

@@ -183,3 +183,14 @@ questions:
             - {value: 'list($name, $country) = $info;', correct: false}
             - {value: 'list($name, $age, $country) = $info;', correct: false}
             - {value: 'array_list($name, $age, $country) = $info;', correct: false}
+
+    -   question: |
+            How can you get a random value of the following array?
+
+            $values = ['foo', 'key' => 'bar', true, 'baz', 36];
+        answers:
+            - {value: '$values[array_rand($values)]', correct: true}
+            - {value: 'array_shuffle($values)', correct: false}
+            - {value: 'array_rand(array_flip($values))', correct: false}
+            - {value: '$values[shuffle($values)]', correct: false}
+            - {value: 'array_rand($values)', correct: false}

@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/doctrine/dbal.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/doctrine/dbal.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/best-practices.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/best-practices.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/arrays.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/arrays.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +19,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -146,7 +161,8 @@
       <workItem from="1573145838608" duration="3291000" />
       <workItem from="1573228887645" duration="17000" />
       <workItem from="1573234888462" duration="1557000" />
-      <workItem from="1573748992764" duration="1831000" />
+      <workItem from="1573748992764" duration="1847000" />
+      <workItem from="1573835966009" duration="669000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>
@@ -218,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573577811318</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Questions">
+      <created>1573750941156</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1573750941156</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,10 +265,10 @@
     <MESSAGE value="Makes PSR questions harder" />
     <MESSAGE value="Questions about abstract classes" />
     <MESSAGE value="Type checking" />
-    <MESSAGE value="Questions" />
     <MESSAGE value="Questions Debugging variables" />
     <MESSAGE value="Fixes questions" />
     <MESSAGE value="Adds questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds questions" />
+    <MESSAGE value="Questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Questions" />
   </component>
 </project>

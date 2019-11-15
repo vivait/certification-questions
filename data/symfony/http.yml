@@ -177,6 +177,8 @@ questions:
             - { value: GET /route HTTP/1.1, correct: true }
             - { value: HTTP/1.1 GET /route, correct: false }
             - { value: HTTP/1.1 /route GET, correct: false }
+        help: |
+            https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html
 
     -   question: Which of the following is a valid first line for the response?
         answers:
