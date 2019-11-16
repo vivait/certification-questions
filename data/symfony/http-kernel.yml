@@ -110,9 +110,65 @@ questions:
     -   question: |
             Which of the following a valid way to forward a request to another controller in an abstract controller?
         answers:
-            - { value: 'this->forward(DefaultController::class . "::action", []);', correct: true }
-            - { value: 'this->send(DefaultController::class . "::action", []);', correct: false }
+            - { value: '$this->forward(DefaultController::class . "::action", []);', correct: true }
+            - { value: '$this->send(DefaultController::class . "::action", []);', correct: false }
             - { value: '$defaultController->action();', correct: false }
         help: |
             https://github.com/symfony/symfony/blob/4.3/src/Symfony/Bundle/FrameworkBundle/Controller/ControllerTrait.php
             https://symfony.com/doc/current/controller/forwarding.html
+
+    -   question: |
+            Is the following code valid to redirect the user?
+
+            homepage:
+                path: /
+                controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
+                defaults:
+                    path: /app
+        answers:
+            - { value: 'Yes', correct: true }
+            - { value: 'No', correct: false }
+        help: |
+            https://symfony.com/doc/4.0/routing/redirect_in_config.html
+
+    -   question: |
+            Is the following code valid to redirect the user?
+
+            homepage:
+                path: /
+                controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+                defaults:
+                    path: /app
+        answers:
+            - { value: 'No', correct: true }
+            - { value: 'Yes', correct: false }
+        help: |
+            https://symfony.com/doc/4.0/routing/redirect_in_config.html
+
+    -   question: |
+            Is the following code valid to redirect the user?
+
+            admin:
+                path: /wp-admin
+                controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+                defaults:
+                    route: sonata_admin_dashboard
+        answers:
+            - { value: 'Yes', correct: true }
+            - { value: 'No', correct: false }
+        help: |
+            https://symfony.com/doc/4.0/routing/redirect_in_config.html
+
+    -   question: |
+            Is the following code valid to redirect the user?
+
+            admin:
+                path: /wp-admin
+                controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
+                defaults:
+                    route: sonata_admin_dashboard
+        answers:
+            - { value: 'No', correct: true }
+            - { value: 'Yes', correct: false }
+        help: |
+            https://symfony.com/doc/4.0/routing/redirect_in_config.html
