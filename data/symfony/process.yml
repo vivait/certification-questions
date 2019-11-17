@@ -12,3 +12,10 @@ questions:
             - {value: "$pid = $process->getProcessId();", correct: false}
             - {value: '$pid = $process->getData()->getProcessId();', correct: false}
             - {value: '$pid = $process->getData()->getPid();', correct: false}
+
+    -   question: What is returned by the run() method of Symfony\Component\Process\Process?
+        answers:
+            - {value: "The exit status code", correct: true}
+            - {value: "Nothing", correct: false}
+            - {value: '1', correct: false}
+            - {value: 'true or false', correct: false}

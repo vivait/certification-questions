@@ -194,3 +194,26 @@ questions:
             - {value: 'array_rand(array_flip($values))', correct: false}
             - {value: '$values[shuffle($values)]', correct: false}
             - {value: 'array_rand($values)', correct: false}
+
+    -   question: What is the average complexity of an insertion in a PHP array ?
+        answers:
+            - {value: 'O(n log (n))', correct: false}
+            - {value: 'O(n2)', correct: false}
+            - {value: 'O(1)', correct: true}
+            - {value: 'O(n)', correct: false}
+            - {value: 'O(log (n))', correct: false}
+        help: |
+            https://en.wikipedia.org/wiki/Hash_table
+
+    -   question: |
+            What is the output ?
+
+            <?php
+            array_combine([1, 2, 3, 6], [4,5,6]);
+        answers:
+            - {value: '[1 => 4, 2 => 5, 3 => 6]', correct: false}
+            - {value: '[1 => 2, 3 => 4, 5 => 6]', correct: false}
+            - {value: '[1, 2, 3, 4, 5, 6]', correct: false}
+            - {value: 'An error', correct: true}
+        help: |
+            https://www.php.net/manual/en/function.array-combine.php

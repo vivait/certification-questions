@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/http-kernel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http-kernel.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/doctrine/orm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/doctrine/orm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/arrays.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/arrays.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/process.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/process.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/psr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/psr.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,10 +35,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/symfony/http-kernel.yml">
+        <entry file="file://$PROJECT_DIR$/data/php/basics.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="171" column="27" selection-start-line="171" selection-start-column="27" selection-end-line="171" selection-end-column="27" />
+            <state relative-caret-position="159">
+              <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/symfony/validation.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/doctrine/orm.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/symfony/process.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -44,6 +75,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>questions</find>
+      <find>Symfony\Component\Security\Http\EntryPoint\AuthenticationEntryPointInterface,</find>
+      <find>abstract public function test()</find>
+      <find>What are the validation groups defined</find>
+      <find>What is wrong with this</find>
+      <find>ini</find>
+      <find>until the</find>
+      <find>What is the default timeout of a PHP session</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -53,6 +91,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/data/symfony/http-kernel.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/security.yml" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.php" />
+        <option value="$PROJECT_DIR$/data/symfony/psr.yml" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_4.php" />
+        <option value="$PROJECT_DIR$/data/php/arrays.yml" />
+        <option value="$PROJECT_DIR$/data/doctrine/orm.yml" />
+        <option value="$PROJECT_DIR$/data/symfony/process.yml" />
+        <option value="$PROJECT_DIR$/data/php/basics.yml" />
       </list>
     </option>
   </component>
@@ -108,8 +154,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="471" />
     <option name="y" value="23" />
-    <option name="width" value="820" />
+    <option name="width" value="809" />
     <option name="height" value="708" />
   </component>
   <component name="ProjectId" id="1TABzbwfQvyKgeuad5D5VlT2ljh" />
@@ -133,6 +180,12 @@
               <item name="certification-questions" type="b2602c69:ProjectViewProjectNode" />
               <item name="certification-questions" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="certification-questions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="certification-questions" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="certification-questions" type="b2602c69:ProjectViewProjectNode" />
@@ -166,12 +219,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_26.php">
+  <component name="RunManager" selected="PHP Script.scratch_4.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_22.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_22.php">
       <method v="2" />
     </configuration>
     <configuration name="scratch_23.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_23.php">
@@ -183,24 +233,27 @@
     <configuration name="scratch_26.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_26.php">
       <method v="2" />
     </configuration>
-    <configuration name="scratch_8.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_8.php">
+    <configuration name="scratch_3.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_4.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_4.php">
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHP Script.scratch_22.php" />
       <item itemvalue="PHP Script.scratch_23.php" />
       <item itemvalue="PHP Script.scratch_25.php" />
       <item itemvalue="PHP Script.scratch_26.php" />
-      <item itemvalue="PHP Script.scratch_8.php" />
+      <item itemvalue="PHP Script.scratch_3.php" />
+      <item itemvalue="PHP Script.scratch_4.php" />
       <item itemvalue="PHPUnit.phpunit.xml.dist" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.scratch_4.php" />
+        <item itemvalue="PHP Script.scratch_3.php" />
         <item itemvalue="PHP Script.scratch_26.php" />
         <item itemvalue="PHP Script.scratch_25.php" />
         <item itemvalue="PHP Script.scratch_23.php" />
-        <item itemvalue="PHP Script.scratch_22.php" />
-        <item itemvalue="PHP Script.scratch_8.php" />
       </list>
     </recent_temporary>
   </component>
@@ -309,17 +362,31 @@
       <option name="project" value="LOCAL" />
       <updated>1573920194919</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Adds questions for the redirect built-in controller">
+      <created>1573920917591</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1573920917592</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixes question">
+      <created>1573921030398</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1573921030398</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1046000" />
+    <option name="totallyTimeSpent" value="3232000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="820" height="708" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="708" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.4707317" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.4703125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -332,7 +399,7 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.57443607" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.9548872" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -407,7 +474,9 @@
     <MESSAGE value="Adds questions" />
     <MESSAGE value="Questions" />
     <MESSAGE value="A question on internal redirection" />
-    <option name="LAST_COMMIT_MESSAGE" value="A question on internal redirection" />
+    <MESSAGE value="Adds questions for the redirect built-in controller" />
+    <MESSAGE value="Fixes question" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes question" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Command/StartCommand.php">
@@ -417,10 +486,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/psr.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2391">
+          <caret line="264" column="21" selection-start-line="264" selection-start-column="21" selection-end-line="264" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/symfony/http-kernel.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="171" column="27" selection-start-line="171" selection-start-column="27" selection-end-line="171" selection-end-column="27" />
+        <state relative-caret-position="316">
+          <caret line="168" column="49" selection-start-line="168" selection-start-column="49" selection-end-line="168" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/php/arrays.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="205" column="52" selection-start-line="205" selection-start-column="52" selection-end-line="205" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/validation.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/doctrine/orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/symfony/process.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/php/basics.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
         </state>
       </provider>
     </entry>

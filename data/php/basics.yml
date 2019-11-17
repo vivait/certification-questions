@@ -144,6 +144,8 @@ questions:
             - {value: Until the browser is closed, correct: true }
             - {value: 20 minutes, correct: false }
             - {value: 10 minutes, correct: false }
+        help: |
+            https://www.php.net/manual/en/session.configuration.php#ini.session.cookie-lifetime
 
     -   question: |
             <?php

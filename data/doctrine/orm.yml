@@ -66,7 +66,7 @@ questions:
         answers:
             - value: |
                   The method getResults does not exists. You should use getResult().
-              correct: false
+              correct: true
             - value: |
                   The query builder does not have a getResults() method.
                   You should use getQuery().

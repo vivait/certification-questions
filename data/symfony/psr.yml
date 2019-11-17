@@ -242,7 +242,7 @@ questions:
 
             use App\OtherClass;
 
-            class SomeClass
+            abstract class SomeClass
             {
 
                 abstract public function test()
@@ -262,7 +262,7 @@ questions:
 
             use App\OtherClass;
 
-            class SomeClass
+            abstract class SomeClass
             {
 
                 public abstract function test()
