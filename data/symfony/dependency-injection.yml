@@ -388,7 +388,6 @@ questions:
 
     -   question: "What is the tag to use to create a custom form field type?"
         answers:
-            - {value: "form_type", correct: false}
             - {value: "form.type_extension", correct: false}
             - {value: 'form.type', correct: true}
             - {value: 'form', correct: false}
@@ -445,3 +444,200 @@ questions:
             - {value: "It is not possible.", correct: false}
             - {value: "$container->get('app.mailer');", correct: true}
             - {value: "$container->get('app.mailer.one');", correct: false}
+
+
+    -   question: "What is the tag to use to create a command?"
+        answers:
+            - {value: "console.command", correct: true}
+            - {value: "command", correct: false}
+            - {value: 'console_command', correct: false}
+            - {value: 'cli.command', correct: false}
+
+    -   question: "What is the tag to use to register a value resolver for controller arguments?"
+        answers:
+            - {value: "controller.argument_value_resolver", correct: true}
+            - {value: "kernel.value_resolver", correct: false}
+            - {value: 'argument_resolver', correct: false}
+            - {value: 'controller.arguments', correct: false}k
+
+    -   question: "What is the tag to use to create a class that collects custom data for the profiler?"
+        answers:
+            - {value: "data_collector", correct: true}
+            - {value: "kernel.data_collector", correct: false}
+            - {value: 'profiler.data_collector', correct: false}
+            - {value: 'data.collector', correct: false}
+
+    -   question: "What is the tag to use to add a Doctrine event listener?"
+        answers:
+            - {value: "doctrine.event_listener", correct: true}
+            - {value: "event_listener", correct: false}
+            - {value: 'doctrine.listener', correct: false}
+            - {value: 'doctrine.event_listen', correct: false}
+
+    -   question: "What is the tag to use to add a Doctrine event subscriber?"
+        answers:
+            - {value: "doctrine.event_subscriber", correct: true}
+            - {value: "event_subscriber", correct: false}
+            - {value: 'doctrine.subscriber', correct: false}
+            - {value: 'doctrine.event_listen', correct: false}
+
+    -   question: "What is the tag to use to add a Doctrine event subscriber?"
+        answers:
+            - {value: "doctrine.event_subscriber", correct: true}
+            - {value: "event_subscriber", correct: false}
+            - {value: 'doctrine.subscriber', correct: false}
+            - {value: 'doctrine.event_subscribe', correct: false}
+
+    -   question: "What is the tag to use to add your own logic for 'form type guessing'?"
+        answers:
+            - {value: "form.type_guesser", correct: true}
+            - {value: "kernel.type_guesser", correct: false}
+            - {value: 'type_guesser', correct: false}
+            - {value: 'kernel.guesser', correct: false}
+
+    -   question: "What is the tag to use to add your own logic for 'form type guessing'?"
+        answers:
+            - {value: "form.type_guesser", correct: true}
+            - {value: "kernel.type_guesser", correct: false}
+            - {value: 'type_guesser', correct: false}
+            - {value: 'kernel.guesser', correct: false}
+
+    -   question: "What is the tag to use to listen to different events/hooks in Symfony?"
+        answers:
+            - {value: "kernel.event_listener", correct: true}
+            - {value: "event_listener", correct: false}
+            - {value: 'event_dispatcher.event_listener', correct: false}
+            - {value: 'kernel.listener', correct: false}
+
+    -   question: "What is the tag to subscribe to a set of different events/hooks in Symfony?"
+        answers:
+            - {value: "kernel.event_subscriber", correct: true}
+            - {value: "event_subscriber", correct: false}
+            - {value: 'event_dispatcher.event_subscriber', correct: false}
+            - {value: 'kernel.subscriber', correct: false}
+
+    -   question: "What is the tag to subscribe to clean up services between requests?"
+        answers:
+            - {value: "kernel.reset", correct: true}
+            - {value: "service_reset", correct: false}
+            - {value: 'service_container.reset', correct: false}
+            - {value: 'kernel.service_reset', correct: false}
+
+    -   question: "What is the tag to subscribe to add your own logic for guessing MIME types?"
+        answers:
+            - {value: "mime.mime_type_guesser", correct: true}
+            - {value: "mime_type_guesser", correct: false}
+            - {value: 'request.mime_type_guesser', correct: false}
+            - {value: 'kernel.mime_type_guesser', correct: false}
+
+    -   question: "What is the tag to subscribe to use a custom logging channel with Monolog?"
+        answers:
+            - {value: "monolog.logger", correct: true}
+            - {value: "monolog.logger_channel", correct: false}
+            - {value: 'monolog.channel', correct: false}
+            - {value: 'monolog.logging_channel', correct: false}
+
+    -   question: "What is the tag to subscribe to add a custom processor for logging?"
+        answers:
+            - {value: "monolog.processor", correct: true}
+            - {value: "monolog.custom_processor", correct: false}
+            - {value: 'monolog.logs_processor', correct: false}
+            - {value: 'monolog.logging_processor', correct: false}
+
+    -   question: "What is the tag to register a custom service that loads routes?"
+        answers:
+            - {value: "routing.loader", correct: true}
+            - {value: "route_loader", correct: false}
+            - {value: 'routing.route_loader', correct: false}
+            - {value: 'router.loader', correct: false}
+
+    -   question: "What is the tag to register a provider for expression language functions in security?"
+        answers:
+            - {value: "security.expression_language_provider", correct: true}
+            - {value: "security.provider", correct: false}
+            - {value: 'expression_language_provider', correct: false}
+            - {value: 'security.expression_language.provider', correct: false}
+
+    -   question: "What is the tag to allow remember me authentication?"
+        answers:
+            - {value: "security.remember_me_aware", correct: true}
+            - {value: "security.remember_me", correct: false}
+            - {value: 'allow_remember_me', correct: false}
+            - {value: 'security.allow_remember_me', correct: false}
+
+    -   question: "What is the tag to add a custom voter to Symfony's authorization logic?"
+        answers:
+            - {value: "security.voter", correct: true}
+            - {value: "voter", correct: false}
+            - {value: 'security.authorization_voter', correct: false}
+            - {value: 'authorization_voter', correct: false}
+
+    -   question: "What is the tag to register a new encoder in the serializer service?"
+        answers:
+            - {value: "serializer.encoder", correct: true}
+            - {value: "serializer.serialize_encoder", correct: false}
+            - {value: 'serializing.serialize_encoder', correct: false}
+            - {value: 'serializing.encoder', correct: false}
+
+    -   question: "What is the tag to register a new normalizer in the Serializer service?"
+        answers:
+            - {value: "serializer.normalizer", correct: true}
+            - {value: "serializer.serialize_normalizer", correct: false}
+            - {value: 'serializing.serialize_normalizer', correct: false}
+            - {value: 'serializing.normalizer', correct: false}
+
+    -   question: "What is the tag to register a custom SwiftMailer Plugin?"
+        answers:
+            - {value: "swiftmailer.default.plugin", correct: true}
+            - {value: "swiftmailer.plugin", correct: false}
+            - {value: 'swiftmailer_plugin', correct: false}
+            - {value: 'swiftmailer.default_plugin', correct: false}
+
+    -   question: "What is the tag to register a custom service that extracts messages from a file?"
+        answers:
+            - {value: "translation.extractor", correct: true}
+            - {value: "translating.extractor", correct: false}
+            - {value: 'translator_extractor', correct: false}
+            - {value: 'translating_extractor', correct: false}
+
+    -   question: "What is the tag to register a custom service that dumps messages to a file?"
+        answers:
+            - {value: "translation.dumper", correct: true}
+            - {value: "translator.dumper", correct: false}
+            - {value: 'translator_dumper', correct: false}
+            - {value: 'dumper', correct: false}
+
+    -   question: "What is the tag to register a custom Twig Extension?"
+        answers:
+            - {value: "twig.extension", correct: true}
+            - {value: "twig_extension", correct: false}
+            - {value: 'twig.extend', correct: false}
+            - {value: 'twig.default.extension', correct: false}
+
+    -   question: "What is the tag to register a custom service that loads Twig templates?"
+        answers:
+            - {value: "twig.loader", correct: true}
+            - {value: "twig.runtime", correct: false}
+            - {value: 'twig.compile_time', correct: false}
+            - {value: 'twig.default.loader', correct: false}
+
+    -   question: "What is the tag to register a custom Lazy-Loaded Twig Extension?"
+        answers:
+            - {value: "twig.runtime", correct: true}
+            - {value: "twig.lazy_load_extension", correct: false}
+            - {value: 'twig.lazy_load.extension', correct: false}
+            - {value: 'twig.runtime_extension', correct: false}
+
+    -   question: "What is the tag to create your own custom validation constraint?"
+        answers:
+            - {value: "validator.constraint_validator", correct: true}
+            - {value: "validator.validator", correct: false}
+            - {value: 'validator.validator_constraint', correct: false}
+            - {value: 'validator.constraint', correct: false}
+
+    -   question: "What is the tag to register a service that initializes objects before validation?"
+        answers:
+            - {value: "validator.initializer", correct: true}
+            - {value: "validator.initializer_object", correct: false}
+            - {value: 'validator.object_initializer', correct: false}
+            - {value: 'validator.object', correct: false}

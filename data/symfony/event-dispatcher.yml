@@ -116,3 +116,10 @@ questions:
             - { value: GetResponseForControllerResultEvent, correct: false }
             - { value: RequestViewEvent, correct: false }
             - { value: FinishRequestEvent, correct: false }
+
+    -   question: "From an Event instance, is it possible to get the EventDispatcher instance that dispatched this event?"
+        answers:
+            - { value: Yes, correct: false }
+            - { value: No, correct: true }
+        help: |
+            https://symfony.com/doc/current/components/event_dispatcher.html#event-name-introspection
