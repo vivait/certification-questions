@@ -458,7 +458,7 @@ questions:
             - {value: "controller.argument_value_resolver", correct: true}
             - {value: "kernel.value_resolver", correct: false}
             - {value: 'argument_resolver', correct: false}
-            - {value: 'controller.arguments', correct: false}k
+            - {value: 'controller.arguments', correct: false}
 
     -   question: "What is the tag to use to create a class that collects custom data for the profiler?"
         answers:

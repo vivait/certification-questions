@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/arrays.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/arrays.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/oop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/oop.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -110,7 +112,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_2.php">
+  <component name="RunManager" selected="PHP Script.scratch_9.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -121,30 +123,30 @@
     <configuration name="scratch_2.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.php">
       <method v="2" />
     </configuration>
-    <configuration name="scratch_3.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.php">
+    <configuration name="scratch_4.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_4.php">
       <method v="2" />
     </configuration>
-    <configuration name="scratch_4.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_4.php">
+    <configuration name="scratch_9.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_9.php">
       <method v="2" />
     </configuration>
     <configuration name="scratch.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.php">
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHP Script.scratch_3.php" />
-      <item itemvalue="PHP Script.scratch_4.php" />
-      <item itemvalue="PHPUnit.phpunit.xml.dist" />
-      <item itemvalue="PHP Script.scratch.php" />
       <item itemvalue="PHP Script.scratch_1.php" />
       <item itemvalue="PHP Script.scratch_2.php" />
+      <item itemvalue="PHP Script.scratch_4.php" />
+      <item itemvalue="PHP Script.scratch.php" />
+      <item itemvalue="PHP Script.scratch_9.php" />
+      <item itemvalue="PHPUnit.phpunit.xml.dist" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.scratch_9.php" />
         <item itemvalue="PHP Script.scratch_2.php" />
         <item itemvalue="PHP Script.scratch_1.php" />
         <item itemvalue="PHP Script.scratch.php" />
         <item itemvalue="PHP Script.scratch_4.php" />
-        <item itemvalue="PHP Script.scratch_3.php" />
       </list>
     </recent_temporary>
   </component>

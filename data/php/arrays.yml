@@ -219,6 +219,8 @@ questions:
             https://www.php.net/manual/en/function.array-combine.php
 
     -   question: |
+            What is the result of the following script?
+
             $values = [
                 15,
                 12,
@@ -231,7 +233,6 @@ questions:
 
                 echo "Not found...";
             } else {
-                // gettype() will return either 'string' or 'integer'
                 echo $key . ' - ' . strtolower(gettype($values[$key]));
             }
         answers:
