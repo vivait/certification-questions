@@ -1,0 +1,10 @@
+category: Filesystem
+questions:
+    -   question: |
+            Will the following code trigger an error if the /tmp/photos directory already exists ?
+
+            $fs = new Filesystem();
+            $fs->mkdir('/tmp/photos', 0700);
+        answers:
+            - { value: No, correct: true }
+            - { value: Yes, correct: false }

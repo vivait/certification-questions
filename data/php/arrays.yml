@@ -217,3 +217,29 @@ questions:
             - {value: 'An error', correct: true}
         help: |
             https://www.php.net/manual/en/function.array-combine.php
+
+    -   question: |
+            $values = [
+                15,
+                12,
+                '15',
+                34,
+                15 => 25
+            ];
+
+            $key = array_search('15', $values);
+
+                echo "Not found...";
+            } else {
+                // gettype() will return either 'string' or 'integer'
+                echo $key . ' - ' . strtolower(gettype($values[$key]));
+            }
+        answers:
+            - {value: 'Not found', correct: false}
+            - {value: '0 - integer', correct: false}
+            - {value: '4 - integer', correct: false}
+            - {value: '2 - string', correct: true}
+        help: |
+            https://www.php.net/array
+            https://php.net/manual/en/function.array-search.php
+            ((0 == false) === true)
