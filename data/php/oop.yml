@@ -75,3 +75,191 @@ questions:
             - {value: 'mmmM', correct: false}
             - {value: 'M', correct: false}
             - {value: 'An error', correct: false}
+
+    -   question: |
+            What is the output of this code?
+
+            <?php
+
+            $classA = new stdClass()
+            $classB = $classA;
+            $classA->d = 123;
+            var_dump($classA === $classB)
+        answers:
+            - {value: 'true', correct: true}
+            - {value: 'false', correct: false}
+
+    -   question: |
+            From which version of PHP will the following code error?
+            $class = new class ()
+            {
+                private $prop = 'hi';
+
+                public function myFunc()
+                {
+                    return $this->prop;
+                }
+            };
+
+            $class::myFunc();
+        answers:
+            - {value: '7.0.0', correct: true}
+            - {value: '7.1.0', correct: false}
+            - {value: '5.6.0', correct: false}
+            - {value: '5.0.0', correct: false}
+
+    -   question: |
+            Will the following PHP run in 7.0 without errors:
+
+            $class = stdClass::class;
+            new $class();
+        answers:
+            - {value: 'Yes', correct: true}
+            - {value: 'No', correct: false}
+
+    -   question: |
+            What is the value of $instance in the following script?
+
+            $instance = new SimpleClass();
+
+            $assigned   =  $instance;
+            $reference  =& $instance;
+
+            $instance = null;
+        answers:
+            - {value: 'Null', correct: true}
+            - {value: 'An instance of SimpleClass', correct: false}
+
+    -   question: |
+            What is the value of $assigned in the following script?
+
+            $instance = new SimpleClass();
+
+            $assigned   =  $instance;
+            $reference  =& $instance;
+
+            $instance = null;
+        answers:
+            - {value: 'Null', correct: false}
+            - {value: 'An instance of SimpleClass', correct: true}
+
+    -   question: |
+            From which version of PHP is the following code valid?
+
+            echo (new DateTime())->format('Y');
+        answers:
+            - {value: '5.4.0', correct: true}
+            - {value: '5.6.0', correct: false}
+            - {value: '5.2.0', correct: false}
+            - {value: '7.0.0', correct: false}
+
+    -   question: |
+            Is the following class definition valid?
+
+            class Foo
+            {
+                public $bar = 'property';
+
+                public function bar() {
+                    return 'method';
+                }
+            }
+        answers:
+            - {value: 'Yes', correct: true}
+            - {value: 'No', correct: false}
+
+    -   question: |
+            From which version of PHP is the following code valid?
+
+            class Foo
+            {
+                public $bar;
+
+                public function __construct() {
+                    $this->bar = function() {
+                        return 42;
+                    };
+                }
+            }
+
+            ($obj->bar)();
+        answers:
+            - {value: '7.0.0', correct: true}
+            - {value: '5.6.0', correct: false}
+            - {value: '5.2.0', correct: false}
+            - {value: '7.1.0', correct: false}
+
+    -   question: |
+            What is the output of the following script?
+
+            class First {
+                function test () {
+                    return get_class($this);
+                }
+            }
+
+            class Second extends First {
+            }
+
+            echo (new Second())->test();
+        answers:
+            - {value: 'Second', correct: true}
+            - {value: 'First', correct: false}
+
+    -   question: |
+            From which version of PHP is the following code valid?
+
+            class First {
+                private const TEST = '123';
+            }
+        answers:
+            - {value: '7.1.0', correct: true}
+            - {value: '7.0.0', correct: false}
+            - {value: '7.2.0', correct: false}
+            - {value: '5.6.0', correct: false}
+
+    -   question: |
+            What is the output of the following script?
+
+            class One {
+                function __construct()
+                {
+                    echo 'Hello world';
+                }
+            }
+
+            class Two {
+
+            }
+
+            new Two();
+        answers:
+            - {value: 'An empty string', correct: true}
+            - {value: 'Hello world', correct: false}
+
+    -   question: When is the destructor method called on a PHP class?
+        answers:
+            - {value: 'When there are no reference pointing to it', correct: true}
+            - {value: 'During the shutdown sequence', correct: true}
+            - {value: 'When the class has its first method called', correct: false}
+            - {value: "Once the class's constructor has finished running", correct: false}
+            - {value: "During PHP's garbage collection", correct: false}
+
+    -   question: |
+            What is the output of the following script?
+
+            class One {
+                private $var = 'created';
+
+                function another()
+                {
+                    $one = new One();
+
+                    echo $one->var;
+                }
+            }
+
+            (new One)->another();
+        answers:
+            - {value: 'created', correct: true}
+            - {value: 'An error', correct: false}
