@@ -92,3 +92,19 @@ questions:
             - {value: '1,10,1,10', correct: false}
             - {value: '1,2,3,4,5,6,7,8,9,10', correct: false}
             - {value: '1,3,5,7,9', correct: true}
+
+    -   question: |
+            Consider the following code snippet:
+
+            {% set foo, bar = 'FOO' %}
+
+            <p>
+              Foo is {{ foo }} and Bar is {{ bar }}.
+            </p>
+
+            What will be the outcome of evaluating this Twig code?
+        answers:
+            - {value: 'Twig will raise a Twig_Error_Syntax exception.', correct: false}
+            - {value: 'The output will display the string Foo is FOO and Bar is FOO..', correct: false}
+            - {value: 'The output will display the string Foo is and Bar is ..', correct: false}
+            - {value: 'The output will display the string Foo is FOO and Bar is ..', correct: true}

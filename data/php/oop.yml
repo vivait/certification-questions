@@ -75,3 +75,359 @@ questions:
             - {value: 'mmmM', correct: false}
             - {value: 'M', correct: false}
             - {value: 'An error', correct: false}
+
+    -   question: |
+            What is the output of this code?
+
+            <?php
+
+            $classA = new stdClass()
+            $classB = $classA;
+            $classA->d = 123;
+            var_dump($classA === $classB)
+        answers:
+            - {value: 'true', correct: true}
+            - {value: 'false', correct: false}
+
+    -   question: |
+            From which version of PHP will the following code error?
+            $class = new class ()
+            {
+                private $prop = 'hi';
+
+                public function myFunc()
+                {
+                    return $this->prop;
+                }
+            };
+
+            $class::myFunc();
+        answers:
+            - {value: '7.0.0', correct: true}
+            - {value: '7.1.0', correct: false}
+            - {value: '5.6.0', correct: false}
+            - {value: '5.0.0', correct: false}
+
+    -   question: |
+            Will the following PHP run in 7.0 without errors:
+
+            $class = stdClass::class;
+            new $class();
+        answers:
+            - {value: 'Yes', correct: true}
+            - {value: 'No', correct: false}
+
+    -   question: |
+            What is the value of $instance in the following script?
+
+            $instance = new SimpleClass();
+
+            $assigned   =  $instance;
+            $reference  =& $instance;
+
+            $instance = null;
+        answers:
+            - {value: 'Null', correct: true}
+            - {value: 'An instance of SimpleClass', correct: false}
+
+    -   question: |
+            What is the value of $assigned in the following script?
+
+            $instance = new SimpleClass();
+
+            $assigned   =  $instance;
+            $reference  =& $instance;
+
+            $instance = null;
+        answers:
+            - {value: 'Null', correct: false}
+            - {value: 'An instance of SimpleClass', correct: true}
+
+    -   question: |
+            From which version of PHP is the following code valid?
+
+            echo (new DateTime())->format('Y');
+        answers:
+            - {value: '5.4.0', correct: true}
+            - {value: '5.6.0', correct: false}
+            - {value: '5.2.0', correct: false}
+            - {value: '7.0.0', correct: false}
+
+    -   question: |
+            Is the following class definition valid?
+
+            class Foo
+            {
+                public $bar = 'property';
+
+                public function bar() {
+                    return 'method';
+                }
+            }
+        answers:
+            - {value: 'Yes', correct: true}
+            - {value: 'No', correct: false}
+
+    -   question: |
+            From which version of PHP is the following code valid?
+
+            class Foo
+            {
+                public $bar;
+
+                public function __construct() {
+                    $this->bar = function() {
+                        return 42;
+                    };
+                }
+            }
+
+            ($obj->bar)();
+        answers:
+            - {value: '7.0.0', correct: true}
+            - {value: '5.6.0', correct: false}
+            - {value: '5.2.0', correct: false}
+            - {value: '7.1.0', correct: false}
+
+    -   question: |
+            What is the output of the following script?
+
+            class First {
+                function test () {
+                    return get_class($this);
+                }
+            }
+
+            class Second extends First {
+            }
+
+            echo (new Second())->test();
+        answers:
+            - {value: 'Second', correct: true}
+            - {value: 'First', correct: false}
+
+    -   question: |
+            From which version of PHP is the following code valid?
+
+            class First {
+                private const TEST = '123';
+            }
+        answers:
+            - {value: '7.1.0', correct: true}
+            - {value: '7.0.0', correct: false}
+            - {value: '7.2.0', correct: false}
+            - {value: '5.6.0', correct: false}
+
+    -   question: |
+            What is the output of the following script?
+
+            class One {
+                function __construct()
+                {
+                    echo 'Hello world';
+                }
+            }
+
+            class Two {
+
+            }
+
+            new Two();
+        answers:
+            - {value: 'An empty string', correct: true}
+            - {value: 'Hello world', correct: false}
+
+    -   question: When is the destructor method called on a PHP class?
+        answers:
+            - {value: 'When there are no reference pointing to it', correct: true}
+            - {value: 'During the shutdown sequence', correct: true}
+            - {value: 'When the class has its first method called', correct: false}
+            - {value: "Once the class's constructor has finished running", correct: false}
+            - {value: "During PHP's garbage collection", correct: false}
+
+    -   question: |
+            What is the output of the following script?
+
+            class One {
+                private $var = 'created';
+
+                function another()
+                {
+                    $one = new One();
+
+                    echo $one->var;
+                }
+            }
+
+            (new One)->another();
+        answers:
+            - {value: 'created', correct: true}
+            - {value: 'An error', correct: false}
+
+    -   question: Can interfaces contain contructors?
+        answers:
+            - {value: 'Yes', correct: true}
+            - {value: 'No', correct: false}
+
+    -   question: Can a constant in an interface be overridden?
+        answers:
+            - {value: 'Yes', correct: false}
+            - {value: 'No', correct: true}
+
+    -   question: |
+            What is the result of the following script?
+
+            class Base {
+                public function sayHello() {
+                    echo 'Hello ';
+                }
+            }
+
+            trait SayWorld {
+                public function sayHello() {
+                    parent::sayHello();
+                    echo 'World!';
+                }
+            }
+
+            class MyHelloWorld extends Base {
+                use SayWorld;
+            }
+
+            $o = new MyHelloWorld();
+            $o->sayHello();
+        answers:
+            - {value: 'Hello World!', correct: true}
+            - {value: 'An Error', correct: false}
+            - {value: 'World!', correct: false}
+            - {value: 'Hello ', correct: false}
+
+    -   question: |
+            What is the result of the following script?
+
+            trait Talker
+            {
+
+                public function test()
+                {
+                    echo '1';
+                }
+            }
+
+            trait Talker2 {
+
+                public function test()
+                {
+                    echo '2';
+                }
+            }
+
+            class Talking {
+                use Talker, Talker2 {
+                    Talker::test as another;
+                }
+            }
+            (new Talking)->another();
+        answers:
+            - {value: 'An Error', correct: true}
+            - {value: '1', correct: false}
+            - {value: '2', correct: false}
+        help: |
+            https://www.php.net/manual/en/language.oop5.traits.php#language.oop5.traits.conflict
+
+            Requires insteadof also
+
+    -   question: |
+            What is the result of the following script?
+
+            trait Talker
+            {
+
+                abstract public function test();
+            }
+
+            class Talking {
+                use Talker;
+
+                public function test(string $text) {
+                    echo $text;
+                }
+            }
+
+            (new Talking)->test('hello');
+        answers:
+            - {value: 'hello', correct: true}
+            - {value: 'An error', correct: false}
+        help: |
+            https://www.php.net/manual/en/language.oop5.traits.php#language.oop5.traits.conflict
+
+            Requires insteadof also
+
+    -   question: |
+            What is the result of the following script in PHP 7.0.0?
+
+            <?php
+
+            trait Some
+            {
+                public $var = 'hello';
+            }
+
+            class SomeClass
+            {
+                use Some;
+
+                public $var = 'hello';
+            }
+
+            echo (new SomeClass)->var;
+        answers:
+            - {value: 'hello', correct: true}
+            - {value: 'An error', correct: false}
+        help: |
+            https://www.php.net/manual/en/language.oop5.traits.php#language.oop5.traits.properties
+
+
+    -   question: |
+            What is the result of the following script?
+
+            <?php
+
+            trait Some
+            {
+                public $var = 'hello';
+            }
+
+            class SomeClass
+            {
+                use Some;
+
+                public $var = 'other message';
+            }
+
+            echo (new SomeClass)->var;
+        answers:
+            - {value: 'An error', correct: true}
+            - {value: 'hello', correct: false}
+        help: |
+            https://www.php.net/manual/en/language.oop5.traits.php#language.oop5.traits.properties
+
+    -   question: |
+            What is the result of the following script?
+
+            <?php
+            function anonymous_class()
+            {
+                return new class {};
+            }
+
+            if (get_class(anonymous_class()) === get_class(anonymous_class())) {
+                echo 'same class';
+            } else {
+                echo 'different class';
+            }
+        answers:
+            - {value: 'same class', correct: true}
+            - {value: 'different class', correct: false}
+        help: |
+            https://www.php.net/manual/en/language.oop5.traits.php#language.oop5.traits.properties

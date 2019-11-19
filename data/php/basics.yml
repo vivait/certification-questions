@@ -460,3 +460,35 @@ questions:
         answers:
             - {value: "No", correct: true }
             - {value: "Yes", correct: false }
+
+    -   question: |
+            function dot($n)
+            {
+                if ($n > 0) {
+                    dot(--$n);
+                    echo '.';
+                } else {
+                    return $n;
+                }
+            }
+            dot(4);
+        answers:
+            - {value: "An error.", correct: false }
+            - {value: ".....", correct: false }
+            - {value: "...", correct: false }
+            - {value: "....", correct: true }
+            - {value: "...0", correct: false }
+
+    -   question: |
+            What is the output ?
+
+            <?php
+            $a = 4 << 2 + 1;
+            echo $a;
+            ?>
+        answers:
+            - {value: 32, correct: true }
+            - {value: 17, correct: false }
+            - {value: 1, correct: false }
+            - {value: 16, correct: false }
+            - {value: 9, correct: false }

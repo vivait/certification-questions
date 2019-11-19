@@ -118,13 +118,6 @@ questions:
             - {value: 'An AbstractController behaves like a Controller, but provide a restricted access to services.', correct: true}
             - {value: 'An AbstractController is ServiceSubscriberInterface.', correct: true}
 
-    -   question: What is the tag to use to register your service to be called during the cache clearing process?
-        answers:
-            - {value: 'cache_clearer', correct: false}
-            - {value: 'cache.clearer', correct: false}
-            - {value: 'kernel.cache', correct: false}
-            - {value: 'kernel.cache_clearer', correct: true}
-
     -   question: What is the tag to use to register HTTP content rendering strategy?
         answers:
             - {value: 'kernel.fragment_renderer', correct: true}
@@ -388,17 +381,10 @@ questions:
     -   question: "What is the tag to use to register your service to be called during the cache warming process?"
         answers:
             - {value: "cache.warmer", correct: false}
-            - {value: "cache_warmer", correct: true}
+            - {value: "cache_warmer", correct: false}
             - {value: 'kernel.warmer', correct: false}
             - {value: 'kernel.cache_warmer', correct: true}
             - {value: 'command.cache_warmer', correct: false}
-
-    -   question: "What is the tag to use to register your service to be called during the cache warming process?"
-        answers:
-            - {value: "translation_extractor", correct: false}
-            - {value: "translation.extractor", correct: true}
-            - {value: 'translator_extractor', correct: false}
-            - {value: 'translator.extractor', correct: false}
 
     -   question: "What is the tag to use to create a custom form field type?"
         answers:
@@ -442,6 +428,23 @@ questions:
           https://github.com/symfony/symfony/tree/master/src/Symfony/Component/DependencyInjection/Compiler
           https://symfony.com/doc/current/service_container/compiler_passes.html
 
+    -   question: |
+            With the following service definition how is it possible to access the mailer service?
+
+            services:
+                app.mailer.one:
+                    class: App\OneMailer
+                    arguments: [sendmail]
+                    public: false
+
+                app.mailer:
+                    alias: app.mailer.one
+                    public: true
+        answers:
+            - {value: "It is not possible.", correct: false}
+            - {value: "$container->get('app.mailer');", correct: true}
+            - {value: "$container->get('app.mailer.one');", correct: false}
+
 
     -   question: "What is the tag to use to create a command?"
         answers:
@@ -455,7 +458,7 @@ questions:
             - {value: "controller.argument_value_resolver", correct: true}
             - {value: "kernel.value_resolver", correct: false}
             - {value: 'argument_resolver', correct: false}
-            - {value: 'controller.arguments', correct: false}k
+            - {value: 'controller.arguments', correct: false}
 
     -   question: "What is the tag to use to create a class that collects custom data for the profiler?"
         answers:

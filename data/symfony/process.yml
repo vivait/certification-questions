@@ -19,3 +19,10 @@ questions:
             - {value: "Nothing", correct: false}
             - {value: '1', correct: false}
             - {value: 'true or false', correct: false}
+
+    -   question: While running a process asynchronously, which method would you use to check if the process is done?
+        answers:
+            - {value: "isAsync()", correct: false}
+            - {value: "isStarted()", correct: false}
+            - {value: 'isProcessing()', correct: false}
+            - {value: 'isRunning()', correct: true}
