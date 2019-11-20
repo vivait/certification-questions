@@ -129,15 +129,6 @@ questions:
             - {value: Using the php://input stream, correct: true }
             - {value: Using $_POST, correct: false }
 
-    -   question: "What are the correct ways to parse the 1983-07-01 date into an DateTime object?"
-        answers:
-            - {value: Using $_PUT, correct: false }
-            - {value: Using $HTTP_PUT_VARS, correct: false }
-            - {value: It is not possible, correct: false }
-            - {value: Using the php://input stream, correct: true }
-            - {value: Using $_POST, correct: false }
-
-
     -   question: "What is the default timeout of a PHP session cookie ?"
         answers:
             - {value: Depends on the web server, correct: false }

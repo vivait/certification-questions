@@ -123,3 +123,11 @@ questions:
             - { value: No, correct: true }
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#event-name-introspection
+
+    -   question: "What happens if two listeners have the same priority?"
+        answers:
+            - { value: They are executed in the order that they were added to the dispatcher., correct: true }
+            - { value: It throws an InvalidPriorityException., correct: false }
+            - { value: They are executed in the alphanumeric order., correct: false }
+        help: |
+            https://symfony.com/doc/current/components/event_dispatcher.html#event-name-introspection

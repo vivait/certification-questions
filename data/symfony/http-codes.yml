@@ -119,7 +119,6 @@ questions:
             - { value: 451, correct: false }
             - { value: 505, correct: false }
             - { value: 429, correct: false }
-            - { value: 431, correct: false }
             - { value: 400, correct: false }
 
     -   question: 'What is the HTTP status code for Too Many Requests?'

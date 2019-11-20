@@ -143,3 +143,10 @@ questions:
             - {value: Symfony\Component\Security\Http\EntryPoint\AuthenticationEntryPointInterface, correct: true}
             - {value: Symfony\Component\Security\Authenticator\AuthenticatorInterface, correct: false}
             - {value: Symfony\Component\Security\Http\AuthenticatorInterface, correct: false}
+
+    -   question: "By default, what is the form field containing the CSRF token?"
+        answers:
+            - {value: _secret, correct: false}
+            - {value: _token, correct: true}
+            - {value: ThisTokenIsNotSoSecretChangeIt, correct: false}
+            - {value: _csrf, correct: false}

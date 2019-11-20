@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/php/arrays.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/arrays.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/php/oop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/oop.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/dependency-injection.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/event-dispatcher.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/event-dispatcher.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/forms.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/forms.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/http-codes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http-codes.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/security.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,8 +140,8 @@
       <item itemvalue="PHP Script.scratch_1.php" />
       <item itemvalue="PHP Script.scratch_2.php" />
       <item itemvalue="PHP Script.scratch_4.php" />
-      <item itemvalue="PHP Script.scratch.php" />
       <item itemvalue="PHP Script.scratch_9.php" />
+      <item itemvalue="PHP Script.scratch.php" />
       <item itemvalue="PHPUnit.phpunit.xml.dist" />
     </list>
     <recent_temporary>
@@ -180,6 +184,8 @@
       <workItem from="1573234888462" duration="1557000" />
       <workItem from="1573748992764" duration="1847000" />
       <workItem from="1573835966009" duration="669000" />
+      <workItem from="1574181093985" duration="2326000" />
+      <workItem from="1574239700637" duration="200000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>

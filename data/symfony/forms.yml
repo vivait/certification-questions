@@ -429,3 +429,19 @@ questions:
             correct: false
         -   value: Symfony\Component\Form\Extension\Core\Type\HiddenType
             correct: true
+
+    -   question: |
+            By default, what parameter can you use inside the login form to specify the target of the redirection ?
+        answers:
+            -   value: _target_path
+                correct: true
+            -   value: _default_target
+                correct: false
+            -   value: _path_target
+                correct: false
+            -   value: _target
+                correct: false
+            -   value: _path
+                correct: false
+        help: |
+            https://symfony.com/doc/current/security/form_login.html#control-the-redirect-url-from-inside-the-form

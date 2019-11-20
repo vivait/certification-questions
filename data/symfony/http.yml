@@ -185,3 +185,13 @@ questions:
             - { value: HTTP/1.1 200 OK, correct: true }
             - { value: 200 OK HTTP/1.1, correct: false }
             - { value: OK 200 HTTP/1.1, correct: false }
+
+    -   question: Which of the following is a valid first line for the response?
+        answers:
+            - { value: Request-Line Headers CRLF Body, correct: false }
+            - { value: Request-Line CRLF Headers CRLF CRLF Body, correct: false }
+            - { value: Request-Line Headers CRLF CRLF Body, correct: true }
+            - { value: Request-Line CRLF Headers CRLF CRLF Body, correct: false }
+        help: |
+            https://en.wikipedia.org/wiki/HTTP_message_body
+
