@@ -138,3 +138,23 @@ questions:
             - {value: default, correct: false}
             - {value: Default, correct: true}
             - {value: user, correct: false}
+
+
+    -   question: |
+            Which of the following are valid values for the type option of the Symfony\Component\Validator\Constraints\Type
+            validation constraint ?
+        answers:
+            - {value: xml, correct: false}
+            - {value: digit, correct: true}
+            - {value: alpha, correct: true}
+            - {value: integer, correct: true}
+            - {value: email, correct: false}
+            - {value: graph, correct: true}
+
+    -   question: Which of the following elements can contain validation constraints?
+        answers:
+            - {value: Public getters/issers, correct: true}
+            - {value: Classes, correct: true}
+            - {value: Private and protected properties, correct: false}
+            - {value: Public properties, correct: true}
+            - {value: Private and protected getters/issers, correct: false}

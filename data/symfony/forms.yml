@@ -445,3 +445,26 @@ questions:
                 correct: false
         help: |
             https://symfony.com/doc/current/security/form_login.html#control-the-redirect-url-from-inside-the-form
+
+    -   question: |
+            With the following code, what can be set as the value of the choice_label option to display the name
+            property of each choice ?
+        answers:
+            -   value: |
+                    function ($value, $key, $index) {
+                        return $value->getName();
+                    }
+                correct: true
+            -   value: |
+                    function ($value, $key, $index) {
+                        return $value->getName();
+                    }
+                correct: true
+
+            -   value: Post::getName
+                correct: false
+
+            -   value: getName
+                correct: false
+        help: |
+            http://symfony.com/doc/current/reference/forms/types/choice.html#choice-label
