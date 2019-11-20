@@ -37,6 +37,7 @@ questions:
                 correct: false
 
 
+   # TODO FIX
     -   question: |
             What will be the value of the b parameter?
 
@@ -153,6 +154,6 @@ questions:
 
             {{ dump(var) }}
         answers:
-            - {value: An error, correct: false}
+            - {value: An error, correct: true}
             - {value: The contents of the var variable in a HTML format, correct: false}
             - {value: 'string("hello world")', correct: false}
