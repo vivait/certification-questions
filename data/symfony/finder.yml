@@ -64,3 +64,15 @@ questions:
             - { value: "The FileSystem object", correct: false }
             - { value: "A string with the directory path", correct: false }
             - { value: "true or false", correct: false }
+
+    -   question: |
+            Which methods belong to Symfony\Component\Finder\Finder class ?
+        answers:
+            - { value: "path", correct: true }
+            - { value: "name", correct: true }
+            - { value: "size", correct: true }
+            - { value: "notPath", correct: true }
+            - { value: "notName", correct: true }
+            - { value: "owner", correct: false }
+            - { value: "type", correct: false }
+            - { value: "notSize", correct: false }

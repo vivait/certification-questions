@@ -57,3 +57,11 @@ questions:
                           directories:
                               - '%kernel.project_dir%/translations'
               correct: true
+
+    -   question: "Which of the following are not valid interval notations ?"
+        answers:
+            - { value: "]-Inf,Inf[", correct: false }
+            - { value: "{0,10,100,1000,Inf}", correct: true }
+            - { value: "]Inf, 0]", correct: true }
+            - { value: "[1,+Inf[", correct: false }
+            - { value: "]1,Inf]", correct: false }

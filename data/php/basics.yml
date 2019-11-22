@@ -491,3 +491,12 @@ questions:
             - {value: This is not possible without javascript., correct: false }
             - {value: 0, correct: false }
             - {value: 1, correct: false }
+
+    -   question: |
+            Which of the following is not a magic method?
+        answers:
+            - {value: __serialize(), correct: true }
+            - {value: __wakeup(), correct: false }
+            - {value: __invoke(), correct: false }
+            - {value: __get(), correct: false }
+            - {value: __set_state(), correct: false }

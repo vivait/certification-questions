@@ -468,3 +468,12 @@ questions:
                 correct: false
         help: |
             http://symfony.com/doc/current/reference/forms/types/choice.html#choice-label
+
+    -   question: |
+            Which of these options are not valid for a Symfony\Component\Form\Extension\Core\Type\CollectionType form type ?
+        answers:
+            - { value: allow_add, correct: true }
+            - { value: allow_delete, correct: true }
+            - { value: allow_remove, correct: false }
+            - { value: allow_create, correct: false }
+            - { value: allow_update, correct: false }
