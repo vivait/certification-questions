@@ -449,22 +449,41 @@ questions:
     -   question: |
             With the following code, what can be set as the value of the choice_label option to display the name
             property of each choice ?
+
+            class Post
+            {
+                private $name;
+                public function __construct($name)
+                {
+                     $this->name = $name;
+                }
+                public function getName()
+                {
+                    return $this->name;
+                }
+            }
+
+            $formBuilder->add('posts', ChoiceType::class, [
+                'choices' => [new Post('foo'), new Post('bar')]
+                'choice_label' => /* ... */
+            ]);
         answers:
             -   value: |
-                    function ($value, $key, $index) {
-                        return $value->getName();
-                    }
+                    false
+                correct: false
+            -   value: Post::getName
+                correct: false
+            -   value: 'name'
                 correct: true
             -   value: |
                     function ($value, $key, $index) {
                         return $value->getName();
                     }
                 correct: true
-
-            -   value: Post::getName
-                correct: false
-
-            -   value: getName
+            -   value: |
+                    function ($values, $key, $index) {
+                        return $values[$key];
+                    }
                 correct: false
         help: |
             http://symfony.com/doc/current/reference/forms/types/choice.html#choice-label
@@ -477,3 +496,36 @@ questions:
             - { value: allow_remove, correct: false }
             - { value: allow_create, correct: false }
             - { value: allow_update, correct: false }
+
+    -   question: |
+            Which of the following snipets is valid to set the maximum and minimum value for a
+            Symfony\Component\Form\Extension\Core\Type\RangeType form type ?
+        answers:
+            -   value: |
+                    $formBuilder->add('name', RangeType::class, [
+                        'attr' => [
+                            'minimum' => 5,
+                            'maximum' => 50
+                        ]
+                    ]);
+                correct: false
+            -   value: |
+                    $formBuilder->add('name', RangeType::class, [
+                        'attr' => [
+                            'min' => 5,
+                            'max' => 50
+                        ]
+                    ]);
+                correct: true
+            -   value: |
+                    $formBuilder->add('name', RangeType::class, [
+                        'min' => 5,
+                        'max' => 50
+                    ]);
+                correct: false
+            -   value: |
+                    $formBuilder->add('name', RangeType::class, [
+                        'minimum' => 5,
+                        'maximum' => 50
+                    ]);
+                correct: false
