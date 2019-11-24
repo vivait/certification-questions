@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/data/php/arrays.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/arrays.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/php/oop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/oop.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/command-line.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/command-line.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/options-resolver.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/options-resolver.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -316,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574626972211</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Fixes questions">
+      <created>1574627737664</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1574627737664</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,8 +368,8 @@
     <MESSAGE value="A question on internal redirection" />
     <MESSAGE value="Adds questions for the redirect built-in controller" />
     <MESSAGE value="Adds questions" />
-    <MESSAGE value="Fixes questions" />
     <MESSAGE value="Fixes question" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes question" />
+    <MESSAGE value="Fixes questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes questions" />
   </component>
 </project>

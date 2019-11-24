@@ -500,3 +500,20 @@ questions:
             - {value: __invoke(), correct: false }
             - {value: __get(), correct: false }
             - {value: __set_state(), correct: false }
+
+    -   question: |
+            What is the output ?
+
+            <?php
+            $a = 10;
+            echo strlen($a) . count($a);
+            do {
+               echo $a . "elephpant ";
+               $a++;
+            } while($a <= 1);
+        answers:
+            - {value: 12, correct: false }
+            - {value: 2110elephpant, correct: true }
+            - {value: 21, correct: false }
+            - {value: 1210elephpant, correct: false }
+            - {value: 10elephpant, correct: false }

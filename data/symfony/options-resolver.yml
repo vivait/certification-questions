@@ -47,3 +47,61 @@ questions:
             - {value: "A Symfony\\Component\\OptionsResolver\\Exception\\UndefinedOptionsException.", correct: false}
             - {value: "A Symfony\\Component\\OptionsResolver\\Exception\\OptionDefinitionException.", correct: false}
             - {value: "A Symfony\\Component\\OptionsResolver\\Exception\\MissingOptionsException.", correct: false}
+
+    -   question: |
+            With the following code:
+
+            <?php
+            // ...
+            class Mailer
+            {
+                // ...
+                public function configureOptions(OptionsResolver $resolver)
+                {
+                    // ...
+                    $resolver->setDefault('encryption', null);
+
+                    $resolver->setDefault('port', function () {
+                        if ('ssl' === $options['encryption']) {
+                            return 465;
+                        }
+
+                        return 25;
+                    });
+                }
+            }
+
+            what would be the resolved $options passed as:
+
+            $options = array('encryption' => 'SSL');
+        answers:
+            - value: |
+                  $options = array(
+                      'encryption' => 'SSL',
+                      'port' => null,
+                  );
+              correct: false
+            - value: |
+                  $options = array(
+                      'encryption' => 'SSL',
+                      'port' => 465,
+                  );
+              correct: false
+            - value: |
+                  $options = array(
+                      'encryption' => 'SSL',
+                      'port' => 25,
+                  );
+              correct: false
+            - value: |
+                  $options = array(
+                      'encryption' => 'SSL',
+                      'port' => function () {
+                              if ('ssl' === $options['encryption']) {
+                                  return 465;
+                              }
+
+                              return 25;
+                          },
+                  );
+              correct: true
