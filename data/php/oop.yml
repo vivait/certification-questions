@@ -90,7 +90,7 @@ questions:
             - {value: 'false', correct: false}
 
     -   question: |
-            From which version of PHP will the following code error?
+            From which version of PHP will the following code not error?
             $class = new class ()
             {
                 private $prop = 'hi';

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/data/symfony/forms.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/forms.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/arrays.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/arrays.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/oop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/oop.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,12 +30,6 @@
     </option>
     <expand />
     <select />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>PHP</find>
-      <find>kernel.fra</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -115,12 +110,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_10.php">
+  <component name="RunManager" selected="PHP Script.scratch_11.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
     <configuration name="scratch_10.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_10.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_11.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_11.php">
       <method v="2" />
     </configuration>
     <configuration name="scratch_1.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.php">
@@ -132,24 +130,21 @@
     <configuration name="scratch_9.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_9.php">
       <method v="2" />
     </configuration>
-    <configuration name="scratch.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.php">
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="PHP Script.scratch_1.php" />
       <item itemvalue="PHP Script.scratch_2.php" />
       <item itemvalue="PHP Script.scratch_9.php" />
-      <item itemvalue="PHP Script.scratch.php" />
       <item itemvalue="PHPUnit.phpunit.xml.dist" />
       <item itemvalue="PHP Script.scratch_10.php" />
+      <item itemvalue="PHP Script.scratch_11.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.scratch_11.php" />
         <item itemvalue="PHP Script.scratch_10.php" />
         <item itemvalue="PHP Script.scratch_9.php" />
         <item itemvalue="PHP Script.scratch_2.php" />
         <item itemvalue="PHP Script.scratch_1.php" />
-        <item itemvalue="PHP Script.scratch.php" />
       </list>
     </recent_temporary>
   </component>
@@ -314,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574269460161</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Fixes question">
+      <created>1574626972211</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1574626972211</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,9 +358,9 @@
     <MESSAGE value="Questions" />
     <MESSAGE value="A question on internal redirection" />
     <MESSAGE value="Adds questions for the redirect built-in controller" />
-    <MESSAGE value="Fixes question" />
     <MESSAGE value="Adds questions" />
     <MESSAGE value="Fixes questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes questions" />
+    <MESSAGE value="Fixes question" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes question" />
   </component>
 </project>

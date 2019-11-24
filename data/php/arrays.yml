@@ -231,15 +231,16 @@ questions:
 
             $key = array_search('15', $values);
 
+            if (! $key) {
                 echo "Not found...";
             } else {
                 echo $key . ' - ' . strtolower(gettype($values[$key]));
             }
         answers:
-            - {value: 'Not found', correct: false}
+            - {value: 'Not found', correct: true}
             - {value: '0 - integer', correct: false}
             - {value: '4 - integer', correct: false}
-            - {value: '2 - string', correct: true}
+            - {value: '2 - string', correct: false}
         help: |
             https://www.php.net/array
             https://php.net/manual/en/function.array-search.php
