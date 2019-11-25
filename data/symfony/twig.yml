@@ -108,3 +108,13 @@ questions:
             - {value: 'The output will display the string Foo is FOO and Bar is FOO..', correct: false}
             - {value: 'The output will display the string Foo is and Bar is ..', correct: false}
             - {value: 'The output will display the string Foo is FOO and Bar is ..', correct: true}
+
+    -   question: Which of the following is not a supported Twig tag?
+        answers:
+            - {value: for, correct: false}
+            - {value: flush, correct: false}
+            - {value: embed, correct: false}
+            - {value: include, correct: false}
+            - {value: do, correct: false}
+            - {value: verbatim, correct: false}
+            - {value: escape, correct: true}

@@ -517,3 +517,25 @@ questions:
             - {value: 21, correct: false }
             - {value: 1210elephpant, correct: false }
             - {value: 10elephpant, correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            function foo(&$a = 8)
+            {
+                $b = &$a;
+                $b -= $a + 3;
+
+                return $b;
+            }
+
+            $a = foo(4);
+            echo $a;
+
+            What will be the outcome of executing this script?
+        answers:
+            - {value: A PHP fatal error., correct: true }
+            - {value: -3, correct: false }
+            - {value: 3, correct: false }
+            - {value: 8, correct: false }
+            - {value: -4, correct: false }

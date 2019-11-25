@@ -195,3 +195,11 @@ questions:
         help: |
             https://en.wikipedia.org/wiki/HTTP_message_body
 
+    -   question: Which Request header is used to check the ETag validity ?
+        answers:
+            - { value: If-None-Match, correct: true }
+            - { value: Etag, correct: false }
+            - { value: Last-Modified, correct: false }
+            - { value: Cache-Control, correct: false }
+        help: |
+            https://symfony.com/doc/current/http_cache/validation.html#validation-with-the-etag-header
