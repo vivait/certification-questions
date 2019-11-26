@@ -225,7 +225,7 @@ questions:
     -   question: "How do you retrieve a cookie in PHP?"
         answers:
             - {value: "get_cookie('mycookie')", correct: false }
-            - {value: "cookies::get('mycookie')", correct: true }
+            - {value: "cookies::get('mycookie')", correct: false }
             - {value: "$_COOKIE['mycookie']", correct: true }
             - {value: "$_SERVER['cookies']['mycookie']", correct: false }
 

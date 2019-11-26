@@ -4,10 +4,6 @@
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/forms.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/forms.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/twig.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/twig.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,8 +135,8 @@
       <item itemvalue="PHP Script.scratch_11.php" />
       <item itemvalue="PHP Script.scratch_2.php" />
       <item itemvalue="PHP Script.scratch_9.php" />
-      <item itemvalue="PHPUnit.phpunit.xml.dist" />
       <item itemvalue="PHP Script.scratch_7.php" />
+      <item itemvalue="PHPUnit.phpunit.xml.dist" />
     </list>
     <recent_temporary>
       <list>
@@ -186,7 +182,7 @@
       <workItem from="1574239700637" duration="299000" />
       <workItem from="1574267377663" duration="2091000" />
       <workItem from="1574353844213" duration="1441000" />
-      <workItem from="1574700018259" duration="392000" />
+      <workItem from="1574700018259" duration="1446000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>
@@ -335,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574634502839</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Questions">
+      <created>1574700559610</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1574700559610</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
