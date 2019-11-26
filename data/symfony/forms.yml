@@ -36,8 +36,7 @@ questions:
             - {value: 'trim', correct: false}
             - {value: 'attributes', correct: true}
 
-    -
-        question: "Which of the following are built-in Symfony form events?"
+    -   question: "Which of the following are built-in Symfony form events?"
         answers:
             - {value: "FormEvents::PRE_SET_DATA", correct: true}
             - {value: "FormEvents::POST_SET_DATA", correct: true}
@@ -139,61 +138,61 @@ questions:
 
     -   question: "Which is the correct way to add an extension MyForm to the Form component?"
         answers:
-            - value: |
-                  use Symfony\Component\Form\Forms;
+            -   value: |
+                    use Symfony\Component\Form\Forms;
 
-                  $formFactory = Forms::createFormFactoryBuilder()
-                  ->addExtension(new MyFormExtension())
-                  ->getFormFactory();
-              correct: true
-            - value: |
-                  use Symfony\Component\Form\Forms;
+                    $formFactory = Forms::createFormFactoryBuilder()
+                    ->addExtension(new MyFormExtension())
+                    ->getFormFactory();
+                correct: true
+            -   value: |
+                    use Symfony\Component\Form\Forms;
 
-                  $formFactory = Forms::createFormFactoryBuilder()
-                  ->registerExtension(new MyFormExtension())
-                  ->getFormFactory();
-              correct: false
-            - value: |
-                  use Symfony\Component\Form\Forms;
+                    $formFactory = Forms::createFormFactoryBuilder()
+                    ->registerExtension(new MyFormExtension())
+                    ->getFormFactory();
+                correct: false
+            -   value: |
+                    use Symfony\Component\Form\Forms;
 
-                  $formFactory = Forms::createFormFactoryBuilder()
-                  ->addExtension('text', new MyFormExtension())
-                  ->getFormFactory();
-              correct: false
-            - value: |
-                  use Symfony\Component\Form\Forms;
+                    $formFactory = Forms::createFormFactoryBuilder()
+                    ->addExtension('text', new MyFormExtension())
+                    ->getFormFactory();
+                correct: false
+            -   value: |
+                    use Symfony\Component\Form\Forms;
 
-                  $formFactory = Forms::createFormFactoryBuilder()
-                  ->add(new MyFormExtension())
-                  ->getFormFactory();
-              correct: false
+                    $formFactory = Forms::createFormFactoryBuilder()
+                    ->add(new MyFormExtension())
+                    ->getFormFactory();
+                correct: false
 
     -   question: "What are prerequisites to create a FormExtension in a Symfony Fullstack project using FrameworkBundle?"
         answers:
-            - value: |
-                  Extending the Symfony\Component\Form\AbstractTypeExtension
-              correct: true
-            - value: |
-                  Creating a service with the form.type_extension tag
-              correct: true
-            - value: |
-                  Putting the new MyFormExtension class in the Form\Extension namespace
-              correct: false
-            - value: |
-                  Implementing the interface Symfony\Component\Form\FormTypeExtensionInterface
-              correct: true
+            -   value: |
+                    Extending the Symfony\Component\Form\AbstractTypeExtension
+                correct: true
+            -   value: |
+                    Creating a service with the form.type_extension tag
+                correct: true
+            -   value: |
+                    Putting the new MyFormExtension class in the Form\Extension namespace
+                correct: false
+            -   value: |
+                    Implementing the interface Symfony\Component\Form\FormTypeExtensionInterface
+                correct: true
 
     -   question: "Which interface should be implemented when you want to set the choice_loader option of the Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType form type ?"
         answers:
-            - value: |
-                  Symfony\Component\Form\Extension\Core\ChoiceLoaderInterface
-              correct: false
-            - value: |
-                  Symfony\Component\Form\ChoiceLoaderInterface
-              correct: false
-            - value: |
-                  Symfony\Component\Form\ChoiceList\Loader\ChoiceLoaderInterface
-              correct: true
+            -   value: |
+                    Symfony\Component\Form\Extension\Core\ChoiceLoaderInterface
+                correct: false
+            -   value: |
+                    Symfony\Component\Form\ChoiceLoaderInterface
+                correct: false
+            -   value: |
+                    Symfony\Component\Form\ChoiceList\Loader\ChoiceLoaderInterface
+                correct: true
 
     -   question: "How do you prevent form_end from rendering the rest of the fields?"
         answers:
@@ -419,16 +418,18 @@ questions:
     -   question: |
             Which of these form types does not inherit from the Symfony\Component\Form\Extension\Core\Type\TextType type ?
         answers:
-        -   value: Symfony\Component\Form\Extension\Core\Type\SearchType
-            correct: false
-        -   value: Symfony\Component\Form\Extension\Core\Type\RangeType
-            correct: false
-        -   value: Symfony\Component\Form\Extension\Core\Type\LocaleType
-            correct: true
-        -   value: Symfony\Component\Form\Extension\Core\Type\PasswordType
-            correct: false
-        -   value: Symfony\Component\Form\Extension\Core\Type\HiddenType
-            correct: true
+            -   value: Symfony\Component\Form\Extension\Core\Type\SearchType
+                correct: false
+            -   value: Symfony\Component\Form\Extension\Core\Type\RangeType
+                correct: false
+            -   value: Symfony\Component\Form\Extension\Core\Type\LocaleType
+                correct: true
+            -   value: Symfony\Component\Form\Extension\Core\Type\PasswordType
+                correct: false
+            -   value: Symfony\Component\Form\Extension\Core\Type\HiddenType
+                correct: true
+        help:
+            https://symfony.com/doc/current/reference/forms/types/range.html
 
     -   question: |
             By default, what parameter can you use inside the login form to specify the target of the redirection ?

@@ -431,3 +431,75 @@ questions:
             - {value: 'different class', correct: false}
         help: |
             https://www.php.net/manual/en/language.oop5.traits.php#language.oop5.traits.properties
+
+    -   question: |
+            What is the result of the following script?
+
+            class MeClass
+            {
+                protected function __invoke()
+                {
+                    echo 'hi';
+                }
+            }
+
+            (new MeClass())();
+        answers:
+            - {value: 'An error', correct: true}
+            - {value: 'No output', correct: false}
+            - {value: 'hi', correct: false}
+        help: |
+            https://www.php.net/manual/en/language.oop5.magic.php
+
+    -   question: When are the magic methods __sleep() and __wakeup() called?
+        answers:
+            - {value: 'To modify the object on serialization and unserialization', correct: true}
+            - {value: 'To modify the object on start and delete', correct: false}
+            - {value: 'To modify the object when its stopped being used and when its restarted', correct: false}
+        help: |
+            https://www.php.net/manual/en/language.oop5.magic.php#object.sleep
+            https://www.php.net/manual/en/language.oop5.magic.php#object.wakeup
+
+    -   question: |
+            What is the result of the following script?
+
+            class MeClass
+            {
+
+                public function __toString()
+                {
+                    throw new Exception('hi');
+                }
+            }
+
+            try {
+                (string)new MeClass();
+            } catch (Exception $exception) {
+                echo 'caught';
+            }
+        answers:
+            - {value: 'A error', correct: true}
+            - {value: 'caught', correct: false}
+            - {value: 'hi', correct: false}
+        help: |
+            https://www.php.net/manual/en/language.oop5.magic.php#object.tostring
+
+    -   question: When is the magic method __set_state() called?
+        answers:
+            - {value: 'during var_export()', correct: true}
+            - {value: 'during var_dump()', correct: false}
+            - {value: 'during echo', correct: false}
+            - {value: 'during construction of the class', correct: false}
+            - {value: 'during unserialization of the class', correct: false}
+            - {value: 'during var_export() and var_dump()', correct: false}
+        help: |
+            https://www.php.net/manual/en/language.oop5.magic.php#object.set-state
+
+    -   question: When is the magic method __debugInfo() called?
+        answers:
+            - {value: 'during var_dump()', correct: true}
+            - {value: 'during var_export()', correct: false}
+            - {value: 'during echo', correct: false}
+            - {value: 'during var_export() and var_dump()', correct: false}
+        help: |
+            https://www.php.net/manual/en/language.oop5.magic.php#object.debuginfo
