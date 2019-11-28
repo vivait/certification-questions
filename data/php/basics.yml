@@ -539,3 +539,16 @@ questions:
             - {value: 3, correct: false }
             - {value: 8, correct: false }
             - {value: -4, correct: false }
+
+    -   question: |
+            What will be the output of the following script ?
+
+            $str = printf('%.1f', 1/8);
+            echo 'Total is ';
+            echo $str;
+        answers:
+            - {value: 0.1Total is 3, correct: true }
+            - {value: 0.125Total is 0.125, correct: false }
+            - {value: 3Total is 3, correct: false }
+            - {value: 0.125Total is 0.1, correct: false }
+            - {value: 1/8Total is 1/8, correct: false }
