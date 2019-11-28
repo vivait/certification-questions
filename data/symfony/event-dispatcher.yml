@@ -56,19 +56,19 @@ questions:
         answers:
             - { value: ViewEvent, correct: false }
             - { value: ResponseEvent, correct: false }
-            - { value: ResponseViewEvent, correct: false }
+            - { value: GetControllerEvent, correct: false }
             - { value: GetResponseForControllerResultEvent, correct: true }
-            - { value: RequestViewEvent, correct: false }
-            - { value: FinishRequestEvent, correct: false }
+            - { value: GetViewEvent, correct: false }
+            - { value: GetRequestEvent, correct: false }
 
     -   question: "What is the argument passed to listeners of kernel.request before Symfony 4.3?"
         answers:
             - { value: GetResponseEvent, correct: true }
             - { value: ViewEvent, correct: false }
-            - { value: ResponseEvent, correct: false }
-            - { value: ResponseViewEvent, correct: false }
-            - { value: GetResponseForControllerResultEvent, correct: true }
-            - { value: RequestViewEvent, correct: false }
+            - { value: GetResponseEvent, correct: false }
+            - { value: GetViewEvent, correct: false }
+            - { value: GetResponseForControllerResultEvent, correct: false }
+            - { value: GetRequestEvent, correct: false }
             - { value: FinishRequestEvent, correct: false }
 
     -   question: "What is the argument passed to listeners of kernel.request after Symfony 4.3?"

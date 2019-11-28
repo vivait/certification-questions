@@ -641,3 +641,10 @@ questions:
             - {value: "validator.initializer_object", correct: false}
             - {value: 'validator.object_initializer', correct: false}
             - {value: 'validator.object', correct: false}
+
+    -   question: What is a "Service Configurator" in Symfony?
+        answers:
+            - {value: It's a feature of the Dependency Injection component that allows to apply some configuration logic to all the services that define a specific tag., correct: false}
+            - {value: There's no such a thing in Symfony's Dependency Injection component., correct: false}
+            - {value: It's a Symfony built-in service that can be obtained as $container->get('configurator'), correct: false}
+            - {value: It's a PHP callable that you can optionally execute to configure a Symfony service after its instantiation., correct: true}
