@@ -26,3 +26,20 @@ questions:
             - {value: "isStarted()", correct: false}
             - {value: 'isProcessing()', correct: false}
             - {value: 'isRunning()', correct: true}
+
+    -   question: What is returned by the wait() method of Symfony\Component\Process\Process ?
+        answers:
+            - {value: "A Process object", correct: false}
+            - {value: "Nothing", correct: false}
+            - {value: 'The exitcode of the process', correct: true}
+            - {value: 'true or false', correct: false}
+
+    -   question: What are the availables process status constants in the Symfony\Component\Process\Process class ?
+        answers:
+            - {value: "STATUS_STOPPED", correct: false}
+            - {value: "STATUS_FAILED", correct: false}
+            - {value: 'STATUS_READY', correct: true}
+            - {value: 'STATUS_INITIALIZED', correct: false}
+            - {value: 'STATUS_SENT', correct: false}
+            - {value: 'STATUS_TERMINATED', correct: true}
+            - {value: 'STATUS_STARTED', correct: true}
