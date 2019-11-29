@@ -8,3 +8,55 @@ questions:
         answers:
             - { value: No, correct: true }
             - { value: Yes, correct: false }
+
+    -   question: |
+            What will the following script return if rabbit.jpg does not exist ?
+
+            $filesystem->exists(['rabbit.jpg', 'bottle.png']);
+        answers:
+            - { value: Nothing, correct: false }
+            - { value: True, correct: false }
+            - { value: False, correct: true }
+            - { value: An error, correct: true }
+
+    -   question: |
+            What will the following script return if rabbit.jpg does not exist ?
+
+            $filesystem->exists(['rabbit.jpg', 'bottle.png']);
+        answers:
+            - { value: Nothing, correct: false }
+            - { value: True, correct: false }
+            - { value: False, correct: true }
+
+    -   question: Can FileSystem::copy copy directories?
+        answers:
+            - { value: Yes, correct: false }
+            - { value: No, correct: true }
+
+    -   question:
+            Will the following override image.jpg when it's is older than image-ICC.jpg?
+
+            $filesystem->copy('image-ICC.jpg', 'image.jpg', true);
+        answers:
+            - { value: Yes, correct: false }
+            - { value: No, correct: true }
+
+    -   question:
+            Will the following override image.jpg when it's is newer than image-ICC.jpg?
+
+            $filesystem->copy('image-ICC.jpg', 'image.jpg', false);
+        answers:
+            - { value: Yes, correct: false }
+            - { value: No, correct: true }
+
+    -   question: What is the purpose of FileSystem::touch?
+        answers:
+            - { value: It sets access and modification time for a file, correct: true }
+            - { value: It creates a new file, correct: false }
+            - { value: It clears the contents of a file, correct: false }
+
+    -   question: Which of the following will change the owner of all files in a directory?
+        answers:
+            - { value: "$filesystem->chown('/video', 'www-data', true);", correct: true }
+            - { value: "$filesystem->chown('/video', 'www-data');", correct: false }
+            - { value: "$filesystem->chown('/video', 'www-data', false);", correct: false }

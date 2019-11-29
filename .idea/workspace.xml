@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/certification-questions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/certification-questions.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/translator.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/translator.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/filesystem.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/filesystem.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +179,8 @@
       <workItem from="1574700018259" duration="1446000" />
       <workItem from="1574786141496" duration="2010000" />
       <workItem from="1574872350734" duration="785000" />
-      <workItem from="1574958620723" duration="652000" />
+      <workItem from="1574958620723" duration="2143000" />
+      <workItem from="1575018626573" duration="911000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>
@@ -358,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574958627918</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Adds questions">
+      <created>1574959406932</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1574959406932</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,37 +405,37 @@
     <MESSAGE value="Questions Debugging variables" />
     <MESSAGE value="A question on internal redirection" />
     <MESSAGE value="Adds questions for the redirect built-in controller" />
-    <MESSAGE value="Adds questions" />
     <MESSAGE value="Fixes question" />
     <MESSAGE value="Fixes questions" />
     <MESSAGE value="Questions" />
     <MESSAGE value="Questions on Magic methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Questions on Magic methods" />
+    <MESSAGE value="Adds questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds questions" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1591" y="329" key="CommitChangelistDialog2" timestamp="1574958627833">
+    <state x="1591" y="329" key="CommitChangelistDialog2" timestamp="1574959406827">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="1591" y="329" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1574958627833" />
-    <state width="1315" height="424" key="GridCell.Tab.0.bottom" timestamp="1574959311978">
+    <state x="1591" y="329" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1574959406827" />
+    <state width="1315" height="424" key="GridCell.Tab.0.bottom" timestamp="1575018420755">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="1315" height="424" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1574959311978" />
-    <state width="1315" height="424" key="GridCell.Tab.0.center" timestamp="1574959311977">
+    <state width="1315" height="424" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1575018420755" />
+    <state width="1315" height="424" key="GridCell.Tab.0.center" timestamp="1575018420755">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="1315" height="424" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1574959311977" />
-    <state width="1315" height="424" key="GridCell.Tab.0.left" timestamp="1574959311977">
+    <state width="1315" height="424" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1575018420755" />
+    <state width="1315" height="424" key="GridCell.Tab.0.left" timestamp="1575018420755">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="1315" height="424" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1574959311977" />
-    <state width="1315" height="424" key="GridCell.Tab.0.right" timestamp="1574959311978">
+    <state width="1315" height="424" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1575018420755" />
+    <state width="1315" height="424" key="GridCell.Tab.0.right" timestamp="1575018420755">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="1315" height="424" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1574959311978" />
-    <state x="1634" y="471" key="Vcs.Push.Dialog.v2" timestamp="1574958631108">
+    <state width="1315" height="424" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1575018420755" />
+    <state x="1634" y="471" key="Vcs.Push.Dialog.v2" timestamp="1574959771149">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="1634" y="471" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1574958631108" />
+    <state x="1634" y="471" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1574959771149" />
   </component>
 </project>
