@@ -118,3 +118,18 @@ questions:
             - {value: do, correct: false}
             - {value: verbatim, correct: false}
             - {value: escape, correct: true}
+
+    -   question: |
+            Considering Twig filters, how to retrieve a, b and foo from a filter defined with a name *_path_*?
+
+            We assume using this filter in a template with:
+
+            {{ 'foo'|a_path_b }}
+
+            The callable function will be called with the given parameters respectively:
+        answers:
+            - {value: "('foo', 'a', 'b')", correct: false}
+            - {value: "('foo', ['patterns' => ['a', 'b']])", correct: false}
+            - {value: "('foo', 'a', 'b')", correct: false}
+            - {value: "('a', 'b', 'foo')", correct: true}
+            - {value: "('foo', ['a', 'b'])", correct: false}

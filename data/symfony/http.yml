@@ -203,3 +203,10 @@ questions:
             - { value: Cache-Control, correct: false }
         help: |
             https://symfony.com/doc/current/http_cache/validation.html#validation-with-the-etag-header
+
+    -   question: Which Cache-Control directive disallows the browser and all intermediate caches from storing any version of the returned response ?
+        answers:
+            - { value: public, correct: false }
+            - { value: no-cache, correct: false }
+            - { value: no-store, correct: true }
+            - { value: private, correct: false }

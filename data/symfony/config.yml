@@ -84,12 +84,12 @@ questions:
 
             app.my_parameter: !!binary VGhpcyBpcyBhIEJlbGwgY2hhciAH
         answers:
-            - {value: Base64, correct: true}
-            - {value: Binary encoding, correct: false}
-            - {value: They'll be no encoding, correct: true}
-            - {value: Base85, correct: true}
-            - {value: PHP, correct: true}
-            - {value: XML, correct: true}
+            - {value: Base64, correct: false}
+            - {value: Binary encoding, correct: true}
+            - {value: They'll be no encoding, correct: false}
+            - {value: Base85, correct: false}
+            - {value: PHP, correct: false}
+            - {value: XML, correct: false}
 
     -   question: |
             What encoding will the app.my_parameter parameter contain?
@@ -109,12 +109,12 @@ questions:
                 </parameters>
             </container>
         answers:
-            - {value: Base64, correct: true}
-            - {value: Binary encoding, correct: false}
-            - {value: They'll be no encoding, correct: true}
-            - {value: Base85, correct: true}
-            - {value: PHP, correct: true}
-            - {value: XML, correct: true}
+            - {value: Base64, correct: false}
+            - {value: Binary encoding, correct: true}
+            - {value: They'll be no encoding, correct: false}
+            - {value: Base85, correct: false}
+            - {value: PHP, correct: false}
+            - {value: XML, correct: false}
 
     -   question: |
             Assuming that GLOBAL_CONSTANT is set to "Hello World" What value will the app.some_constant parameter

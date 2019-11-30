@@ -72,3 +72,15 @@ questions:
             - { value: "$translator->addResource('yaml', 'path/to/messages.fr.yml', 'fr_FR');", correct: true }
             - { value: "$translator->addResource('path/to/messages.fr.yml', 'yaml',  'fr_FR');", correct: false }
             - { value: "$translator->loadResource('yaml', 'path/to/messages.fr.yml', 'fr_FR');", correct: false }
+
+    -   question: "Which of the followings are part of the built-in loaders?"
+        answers:
+            - { value: "CsvLoader", correct: false }
+            - { value: "PoFileLoader", correct: true }
+            - { value: "PhpLoader", correct: false }
+            - { value: "XliffFileLoader", correct: true }
+            - { value: "JsonLoader", correct: false }
+            - { value: "IcuFileLoader", correct: false }
+            - { value: "IniFileLoader", correct: true }
+            - { value: "MoFileLoader", correct: true }
+            - { value: "YamlFileLoader", correct: true }
