@@ -503,3 +503,76 @@ questions:
             - {value: 'during var_export() and var_dump()', correct: false}
         help: |
             https://www.php.net/manual/en/language.oop5.magic.php#object.debuginfo
+
+    -   question: Can class constants be final?
+        answers:
+            - {value: 'Yes', correct: false}
+            - {value: 'No', correct: true}
+
+    -   question: |
+            What is the result of the following script?
+
+            <?php
+
+            class MyClass
+            {
+                public $hi = '321';
+
+                public function __clone()
+                {
+                    $this->hi = '123';
+                }
+            }
+
+            $original = new MyClass;
+            $object = clone $original;
+            echo $original->hi;
+        answers:
+            - {value: '321', correct: true}
+            - {value: '123', correct: false}
+
+    -   question: |
+            What is the result of the following script in PHP 5.6?
+
+            <?php
+
+            class MyClass
+            {
+                public $hi = '321';
+            }
+
+            echo (clone (new MyClass))->hi;
+        answers:
+            - {value: 'An error', correct: true}
+            - {value: '321', correct: false}
+            - {value: 'null', correct: false}
+            - {value: 'object(MyClass)', correct: false}
+
+    -   question: |
+            What is the result of the following script in PHP?
+
+            <?php
+
+            class One
+            {
+
+                public function func()
+                {
+                    echo static::class;
+                }
+            }
+
+            class Two extends One
+            {
+
+                public function func()
+                {
+                    parent::func();
+                }
+            }
+
+            $class = new Two;
+            $class->func();
+        answers:
+            - {value: 'Two', correct: true}
+            - {value: 'One', correct: false}
