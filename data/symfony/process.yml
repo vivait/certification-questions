@@ -43,3 +43,11 @@ questions:
             - {value: 'STATUS_SENT', correct: false}
             - {value: 'STATUS_TERMINATED', correct: true}
             - {value: 'STATUS_STARTED', correct: true}
+
+    -   question: Which types of argument accepts the Symfony\Component\Process\InputStream\write() method?
+        answers:
+            - {value: "Boolean", correct: false}
+            - {value: "Arrays", correct: false}
+            - {value: 'Stream resources', correct: true}
+            - {value: 'Scalars', correct: true}
+            - {value: 'Traversable objects', correct: true}

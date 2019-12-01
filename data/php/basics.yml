@@ -561,3 +561,27 @@ questions:
             - {value: $_ENV, correct: false }
             - {value: $_REQUEST, correct: true }
             - {value: $_POST, correct: true }
+
+    -   question: |
+            What line of code should be substituted with /** line **/ to achieve an output of a?
+
+            <?php
+
+            $fruitAndVeg = [
+                'c' => 'Carrot',
+                'p' => 'Tomato',
+                'b' => 'Banana',
+                't' => 'Potato',
+                'a' => 'Apple'
+            ];
+
+            /** line **/
+
+            $keys = array_keys($fruitAndVeg);
+
+            echo $keys[0];
+        answers:
+            - {value: ksort($fruitAndVeg);, correct: true }
+            - {value: usort($fruitAndVeg);, correct: false }
+            - {value: krsort($fruitAndVeg);, correct: false }
+            - {value: sort($fruitAndVeg);, correct: false }

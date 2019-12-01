@@ -537,3 +537,10 @@ questions:
             - { value: Symfony\Component\Form\Extension\Core\Type\DateType, correct: true }
             - { value: Symfony\Component\Form\Extension\Core\Type\DateTimeType, correct: false }
             - { value: Symfony\Component\Form\Extension\Core\Type\TimeType, correct: false }
+
+    -   question: Among the following, which one is not a built-in type?
+        answers:
+            - { value: PasswordType, correct: false }
+            - { value: MoneyType, correct: false }
+            - { value: NumberType, correct: false }
+            - { value: IbanType, correct: true }
