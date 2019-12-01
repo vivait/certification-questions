@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/oop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/oop.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/certificationy/certificationy/" />
     <ignored path="$PROJECT_DIR$/vendor/certificationy/php-pack/" />
@@ -75,7 +76,17 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/php/oop.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="463" column="69" selection-start-line="463" selection-start-column="69" selection-end-line="463" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -83,6 +94,7 @@
       <find>patterns'</find>
       <find>patterns</find>
       <find>php</find>
+      <find>throw new Exception('hi');</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,8 +111,9 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_8.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_9.php" />
-        <option value="$PROJECT_DIR$/data/php/oop.yml" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_10.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_11.php" />
+        <option value="$PROJECT_DIR$/data/php/oop.yml" />
       </list>
     </option>
   </component>
@@ -155,7 +168,7 @@
       <path value="$PROJECT_DIR$/vendor/phine/path" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="780" />
     <option name="height" value="708" />
@@ -169,7 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,6 +210,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -225,7 +238,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_9.php">
+  <component name="RunManager" selected="PHP Script.scratch_11.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -255,11 +268,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.scratch_11.php" />
         <item itemvalue="PHP Script.scratch_9.php" />
         <item itemvalue="PHP Script.scratch_8.php" />
         <item itemvalue="PHP Script.scratch_10.php" />
         <item itemvalue="PHP Script.scratch_7.php" />
-        <item itemvalue="PHP Script.scratch_11.php" />
       </list>
     </recent_temporary>
   </component>
@@ -309,7 +322,8 @@
       <workItem from="1575207788379" duration="1387000" />
       <workItem from="1575209454094" duration="12000" />
       <workItem from="1575209486081" duration="56000" />
-      <workItem from="1575209558406" duration="49000" />
+      <workItem from="1575209558406" duration="127000" />
+      <workItem from="1575209735565" duration="704000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>
@@ -514,16 +528,24 @@
       <option name="project" value="LOCAL" />
       <updated>1575208908318</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Ups php version">
+      <created>1575209680871</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1575209680871</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3790000" />
+    <option name="totallyTimeSpent" value="4572000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="780" height="708" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="708" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.4782051" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -616,7 +638,8 @@
     <MESSAGE value="Adds some filesystem questions" />
     <MESSAGE value="Adds questions" />
     <MESSAGE value="Finishes OOP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finishes OOP" />
+    <MESSAGE value="Ups php version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ups php version" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2" />
@@ -689,24 +712,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/php/oop.yml">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_10.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="555" column="21" lean-forward="true" selection-start-line="555" selection-start-column="21" selection-end-line="555" selection-end-column="21" />
+        <state relative-caret-position="45">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_10.php">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_11.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        <state relative-caret-position="378">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/php/oop.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="463" column="69" selection-start-line="463" selection-start-column="69" selection-end-line="463" selection-end-column="69" />
         </state>
       </provider>
     </entry>
