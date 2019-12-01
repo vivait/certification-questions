@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/php/oop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/oop.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/certificationy/certificationy/" />
     <ignored path="$PROJECT_DIR$/vendor/certificationy/php-pack/" />
@@ -78,26 +75,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_9.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="17" column="5" lean-forward="true" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/php/oop.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="557" lean-forward="true" selection-start-line="557" selection-end-line="557" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -122,10 +100,11 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_9.php" />
         <option value="$PROJECT_DIR$/data/php/oop.yml" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_10.php" />
       </list>
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/certificationy/certificationy" />
       <path value="$PROJECT_DIR$/vendor/certificationy/php-pack" />
@@ -190,6 +169,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,7 +198,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -327,7 +306,10 @@
       <workItem from="1575018626573" duration="911000" />
       <workItem from="1575045615694" duration="589000" />
       <workItem from="1575143778191" duration="1389000" />
-      <workItem from="1575207788379" duration="872000" />
+      <workItem from="1575207788379" duration="1387000" />
+      <workItem from="1575209454094" duration="12000" />
+      <workItem from="1575209486081" duration="56000" />
+      <workItem from="1575209558406" duration="49000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>
@@ -525,17 +507,23 @@
       <option name="project" value="LOCAL" />
       <updated>1575144538542</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Finishes OOP">
+      <created>1575208908318</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1575208908318</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3158000" />
+    <option name="totallyTimeSpent" value="3790000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="780" height="708" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.46666667" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.4782051" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -545,10 +533,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.9548872" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.9503759" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -627,33 +615,22 @@
     <MESSAGE value="Questions on Magic methods" />
     <MESSAGE value="Adds some filesystem questions" />
     <MESSAGE value="Adds questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds questions" />
+    <MESSAGE value="Finishes OOP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finishes OOP" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2" timestamp="1575045641584">
-      <screen x="0" y="23" width="2560" height="1417" />
-    </state>
-    <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1575045641584" />
-    <state width="1315" height="424" key="GridCell.Tab.0.bottom" timestamp="1575018420755">
-      <screen x="0" y="23" width="2560" height="1417" />
-    </state>
-    <state width="1315" height="424" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1575018420755" />
-    <state width="1315" height="424" key="GridCell.Tab.0.center" timestamp="1575018420755">
-      <screen x="0" y="23" width="2560" height="1417" />
-    </state>
-    <state width="1315" height="424" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1575018420755" />
-    <state width="1315" height="424" key="GridCell.Tab.0.left" timestamp="1575018420755">
-      <screen x="0" y="23" width="2560" height="1417" />
-    </state>
-    <state width="1315" height="424" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1575018420755" />
-    <state width="1315" height="424" key="GridCell.Tab.0.right" timestamp="1575018420755">
-      <screen x="0" y="23" width="2560" height="1417" />
-    </state>
-    <state width="1315" height="424" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1575018420755" />
-    <state x="1634" y="471" key="Vcs.Push.Dialog.v2" timestamp="1575046028484">
-      <screen x="0" y="23" width="2560" height="1417" />
-    </state>
-    <state x="1634" y="471" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1575046028484" />
+    <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2" />
+    <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" />
+    <state width="1315" height="424" key="GridCell.Tab.0.bottom" />
+    <state width="1315" height="424" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" />
+    <state width="1315" height="424" key="GridCell.Tab.0.center" />
+    <state width="1315" height="424" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" />
+    <state width="1315" height="424" key="GridCell.Tab.0.left" />
+    <state width="1315" height="424" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" />
+    <state width="1315" height="424" key="GridCell.Tab.0.right" />
+    <state width="1315" height="424" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" />
+    <state x="1634" y="471" key="Vcs.Push.Dialog.v2" />
+    <state x="1634" y="471" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/data/symfony/config.yml">
@@ -705,13 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_9.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -721,8 +691,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/php/oop.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="557" lean-forward="true" selection-start-line="557" selection-end-line="557" />
+        <state relative-caret-position="176">
+          <caret line="555" column="21" lean-forward="true" selection-start-line="555" selection-start-column="21" selection-end-line="555" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_10.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
         </state>
       </provider>
     </entry>
