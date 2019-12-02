@@ -51,3 +51,10 @@ questions:
             - {value: 'Stream resources', correct: true}
             - {value: 'Scalars', correct: true}
             - {value: 'Traversable objects', correct: true}
+
+    -   question: Which method is used to disable fetching output and error output from the underlying process ?
+        answers:
+            - {value: "The Symfony\Component\Process::fetchOutput method", correct: false}
+            - {value: "The Symfony\Component\Process::setOutput method", correct: false}
+            - {value: 'The Symfony\Component\Process::disableOutput method', correct: true}
+            - {value: 'The Symfony\Component\Process::output method', correct: false}
