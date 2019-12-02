@@ -259,12 +259,12 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="PHPUnit.phpunit.xml.dist" />
       <item itemvalue="PHP Script.scratch_10.php" />
       <item itemvalue="PHP Script.scratch_11.php" />
       <item itemvalue="PHP Script.scratch_7.php" />
       <item itemvalue="PHP Script.scratch_8.php" />
       <item itemvalue="PHP Script.scratch_9.php" />
-      <item itemvalue="PHPUnit.phpunit.xml.dist" />
     </list>
     <recent_temporary>
       <list>
