@@ -158,3 +158,17 @@ questions:
             - {value: Private and protected properties, correct: false}
             - {value: Public properties, correct: true}
             - {value: Private and protected getters/issers, correct: false}
+
+    -   question: |
+            With this following simple code:
+
+            use Symfony\Component\Validator\Validation;
+
+            $validator = Validation::createValidator();
+
+            Which variables types this $validator object can validate ?
+        answers:
+            - {value: objects, correct: false}
+            - {value: arrays, correct: true}
+            - {value: strings, correct: true}
+            - {value: numbers, correct: true}

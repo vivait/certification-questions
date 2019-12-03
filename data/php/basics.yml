@@ -585,3 +585,23 @@ questions:
             - {value: usort($fruitAndVeg);, correct: false }
             - {value: krsort($fruitAndVeg);, correct: false }
             - {value: sort($fruitAndVeg);, correct: false }
+
+    -   question: |
+            What will be the output of the following code?
+
+            class Foo {
+                public $value = 42;
+                public function &getValue() {
+                    return $this->value;
+                }
+            }
+            $foo = new Foo;
+            $myValue = &$foo->getValue();
+            $foo->value = 2;
+
+            echo $myValue;
+        answers:
+            - {value: 0, correct: false }
+            - {value: null, correct: false }
+            - {value: 2, correct: true }
+            - {value: 42, correct: false }

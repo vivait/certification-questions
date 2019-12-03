@@ -76,3 +76,10 @@ questions:
             - { value: "$finder->in(__DIR__)->ignoreFiles('logs');", correct: false }
             - { value: "$finder->in(__DIR__)->ignore('logs');", correct: false }
             - { value: "$finder->in(__DIR__)->exclude('logs');", correct: true }
+
+    -   question: What is the Symfony\Component\Filesystem\Filesystem method to check if the given path is absolute ?
+        answers:
+            - { value: "$fs->checkAbsolutePath('/tmp');", correct: false }
+            - { value: "$fs->isAbsolute('/tmp');", correct: false }
+            - { value: "$fs->absolutePath('/tmp');", correct: false }
+            - { value: "$fs->isAbsolutePath('/tmp');", correct: true }
