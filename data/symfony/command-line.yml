@@ -26,6 +26,8 @@ questions:
             - {value: 'OutputInterface::VERBOSITY_VERBOSE', correct: true}
             - {value: 'OutputInterface::VERBOSITY_QUIET', correct: true}
             - {value: 'OutputInterface::VERBOSITY_VERY_VERBOSE', correct: true}
+        help: |
+            http://symfony.com/doc/current/console/verbosity.html
 
     -   question: "Which of the following are not built-in option variants ?"
         answers:

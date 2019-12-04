@@ -6,6 +6,10 @@ questions:
             - { value: Composite keys must be avoided as much as possible., correct: true }
             - { value: Composite keys must only consist of the primitives types integer and string., correct: true }
             - { value: An auto increment strategy can be used for one of the key using the @GeneratedValue annotation., correct: false }
+        help: |
+            http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#composite-keys
+            http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/best-practices.html#avoid-composite-keys
+            http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/tutorials/composite-primary-keys.html#general-considerations
 
     -   question: 'You query for an object joining on a single-valued association object that is configured LAZY.'
         answers:
