@@ -605,3 +605,28 @@ questions:
             - {value: null, correct: false }
             - {value: 2, correct: true }
             - {value: 42, correct: false }
+
+    -   question: |
+            What should ????? be replaced with to add a <title> node with the value of "Hello, World!"?
+
+            $title = $dom->createElement('title');
+
+            $node = ?????????
+
+            $title->appendChild($node);
+            $head->appendChild($title);
+        answers:
+            - {value: '$dom->appendTextNode($title, "Hello, World!");', correct: false }
+            - {value: "$dom->createTextNode('Hello, World!');", correct: true }
+            - {value: None of the above, correct: true }
+            - {value: "$dom->appendElement($title, 'text', 'Hello, World!');", correct: false }
+            - {value: "$dom->createElement('text', 'Hello, World!');", correct: false }
+
+
+    -   question: |
+            $stmt = $conn->prepare('SELECT * FROM articles WHERE id IN (?)');
+            $stmt->bindValue(1, [1, 2, 3, 4, 5, 6], \Doctrine\DBAL\Connection::PARAM_INT_ARRAY);
+            $stmt->execute();
+        answers:
+            - {value: No, correct: true }
+            - {value: Yes, correct: false }

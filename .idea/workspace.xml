@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
+    <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="Adds questions">
+      <change beforePath="$PROJECT_DIR$/.idea/certification-questions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/certification-questions.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/finder.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/finder.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/process.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/process.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/doctrine/dbal.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/doctrine/dbal.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +98,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP" />
@@ -189,6 +192,10 @@
       <workItem from="1575209486081" duration="56000" />
       <workItem from="1575209558406" duration="127000" />
       <workItem from="1575209735565" duration="704000" />
+      <workItem from="1575390608893" duration="2006000" />
+      <workItem from="1575477147719" duration="1953000" />
+      <workItem from="1575563278252" duration="1484000" />
+      <workItem from="1575650531425" duration="752000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>
@@ -407,7 +414,28 @@
       <option name="project" value="LOCAL" />
       <updated>1575304425057</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Adds questions">
+      <created>1575305467814</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1575305467814</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Adds questions">
+      <created>1575391932740</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1575391932740</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Adds question help">
+      <created>1575478521758</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1575478521758</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,16 +481,17 @@
     <MESSAGE value="Questions" />
     <MESSAGE value="Questions on Magic methods" />
     <MESSAGE value="Adds some filesystem questions" />
-    <MESSAGE value="Adds questions" />
     <MESSAGE value="Finishes OOP" />
     <MESSAGE value="Ups php version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ups php version" />
+    <MESSAGE value="Adds questions" />
+    <MESSAGE value="Adds question help" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds question help" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2" timestamp="1575304424963">
+    <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2" timestamp="1575650682635">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1575304424963" />
+    <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1575650682635" />
     <state width="1315" height="424" key="GridCell.Tab.0.bottom" timestamp="1575304421745" />
     <state width="1315" height="424" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1575304421745" />
     <state width="1315" height="424" key="GridCell.Tab.0.center" timestamp="1575304421745" />
@@ -471,9 +500,13 @@
     <state width="1315" height="424" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1575304421745" />
     <state width="1315" height="424" key="GridCell.Tab.0.right" timestamp="1575304421745" />
     <state width="1315" height="424" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1575304421745" />
-    <state x="1634" y="471" key="Vcs.Push.Dialog.v2" timestamp="1575304427209">
+    <state x="1634" y="471" key="Vcs.Push.Dialog.v2" timestamp="1575478524449">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="1634" y="471" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1575304427209" />
+    <state x="1634" y="471" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1575478524449" />
+    <state x="621" y="292" width="1805" height="878" key="find.popup" timestamp="1575650700381">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="621" y="292" width="1805" height="878" key="find.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1575650700381" />
   </component>
 </project>
