@@ -49,3 +49,17 @@ questions:
             - { value: 'sqlite:///data.db', correct: true }
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html
+
+    -   question: Does Doctrine support passing arrays as parameters?
+        answers:
+            - { value: 'Yes', correct: true }
+            - { value: 'No', correct: false }
+        help: |
+            https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/data-retrieval-and-manipulation.html#list-of-parameters-conversion
+
+    -   question: Is it possible to change the type of each item in an array in a Doctrine query?
+        answers:
+            - { value: 'Yes', correct: true }
+            - { value: 'No', correct: false }
+        help: |
+            https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/data-retrieval-and-manipulation.html#list-of-parameters-conversion

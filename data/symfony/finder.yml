@@ -66,3 +66,20 @@ questions:
             - { value: "owner", correct: false }
             - { value: "type", correct: false }
             - { value: "notSize", correct: false }
+
+    -   question: With the Finder, which method is correct to exclude a logs directory from matching ?
+        answers:
+            - { value: "$finder->in(__DIR__)->excludeDir('logs');", correct: false }
+            - { value: "$finder->in(__DIR__)->ignoreDir('logs');", correct: false }
+            - { value: "$finder->in(__DIR__)->notMatch('logs');", correct: false }
+            - { value: "$finder->in(__DIR__)->ignoreDirectory('logs');", correct: false }
+            - { value: "$finder->in(__DIR__)->ignoreFiles('logs');", correct: false }
+            - { value: "$finder->in(__DIR__)->ignore('logs');", correct: false }
+            - { value: "$finder->in(__DIR__)->exclude('logs');", correct: true }
+
+    -   question: What is the Symfony\Component\Filesystem\Filesystem method to check if the given path is absolute ?
+        answers:
+            - { value: "$fs->checkAbsolutePath('/tmp');", correct: false }
+            - { value: "$fs->isAbsolute('/tmp');", correct: false }
+            - { value: "$fs->absolutePath('/tmp');", correct: false }
+            - { value: "$fs->isAbsolutePath('/tmp');", correct: true }
