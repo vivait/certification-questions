@@ -305,14 +305,14 @@ questions:
             - {value: 'stream_errors($pipes);', correct: false }
             - {value: 'fread($null, 128);', correct: false }
 
-    -   question: You want to fully overload all PDO features with OOP. What do you need to accomplish that?
-        answers:
-            - {value: 'PDO::setStatementClass()', correct: false }
-            - {value: 'Use the PDO parameter', correct: false }
-            - {value: 'PDO::ATTR_STATEMENT_CLASS', correct: true }
-            - {value: 'Extend the PDO class', correct: true }
-            - {value: 'PDO::ATTR_USE_CLASS', correct: false }
-            - {value: 'Extend the PDOStatement class', correct: true }
+#    -   question: You want to fully overload all PDO features with OOP. What do you need to accomplish that?
+#        answers:
+#            - {value: 'PDO::setStatementClass()', correct: false }
+#            - {value: 'Use the PDO parameter', correct: false }
+#            - {value: 'PDO::ATTR_STATEMENT_CLASS', correct: true }
+#            - {value: 'Extend the PDO class', correct: true }
+#            - {value: 'PDO::ATTR_USE_CLASS', correct: false }
+#            - {value: 'Extend the PDOStatement class', correct: true }
 
     -   question: |
             $subs = [
