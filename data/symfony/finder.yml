@@ -18,7 +18,6 @@ questions:
         answers:
             - { value: 'true', correct: false }
             - { value: 'null', correct: false }
-            - { value: 0, correct: false }
             - { value: 1, correct: false }
             - { value: 'false', correct: true }
 
