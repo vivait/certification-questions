@@ -466,6 +466,7 @@ questions:
             - {value: "kernel.data_collector", correct: false}
             - {value: 'profiler.data_collector', correct: false}
             - {value: 'data.collector', correct: false}
+        help: http://symfony.com/doc/current/reference/dic_tags.html#data-collector
 
     -   question: "What is the tag to use to add a Doctrine event listener?"
         answers:

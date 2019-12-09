@@ -210,3 +210,10 @@ questions:
             - { value: no-cache, correct: false }
             - { value: no-store, correct: true }
             - { value: private, correct: false }
+
+    -   question: Which one of the following HTTP verbs is not cacheable ?
+        answers:
+            - { value: POST, correct: false }
+            - { value: PUT, correct: true }
+            - { value: HEAD, correct: false }
+            - { value: GET, correct: false }
