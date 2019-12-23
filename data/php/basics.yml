@@ -638,3 +638,12 @@ questions:
             - {value: PHP is a strongly-typed, functionnal language., correct: false }
             - {value: PHP is a loosely-typed functionnal language., correct: false }
             - {value: PHP is a loosely-typed declarative language., correct: false }
+
+    -   question: |
+            What will be the value $bool ?
+
+            $bool = (bool) "false"
+        answers:
+            - {value: true, correct: true }
+            - {value: false, correct: false }
+            - {value: "Error : you cannot cast a String as a Boolean", correct: false }

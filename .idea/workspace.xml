@@ -4,9 +4,6 @@
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/cache.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/cache.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/forms.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/forms.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/process.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/process.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -443,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575651357654</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Further questions">
+      <created>1577114227466</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1577114227466</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +498,8 @@
     <MESSAGE value="Adds questions" />
     <MESSAGE value="Adds question help" />
     <MESSAGE value="Doctrine questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Doctrine questions" />
+    <MESSAGE value="Further questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Further questions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2" timestamp="1575651357567">
