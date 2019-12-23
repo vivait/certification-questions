@@ -544,3 +544,10 @@ questions:
             - { value: MoneyType, correct: false }
             - { value: NumberType, correct: false }
             - { value: IbanType, correct: true }
+
+    -   question: Which of these extensions are a built-in ones ?
+        answers:
+            - { value: DataCollectorExtension, correct: true }
+            - { value: HttpFoundationExtension, correct: true }
+            - { value: DependencyInjectionExtension, correct: true }
+            - { value: HttpFoundationRequestHandler, correct: true }

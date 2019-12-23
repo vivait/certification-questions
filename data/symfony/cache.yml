@@ -32,3 +32,12 @@ questions:
             - {value: 'Etag', correct: true}
             - {value: 'Last-Modified', correct: true}
             - {value: 'Cache-Control: s-max-age', correct: false}
+
+    -   question: Which methods can be used for expiration caching ?
+        answers:
+            - { value: 'setMaxAge', correct: false }
+            - { value: 'setExpires', correct: true }
+            - { value: 'setLastModified', correct: false }
+            - { value: 'setSharedMaxAge', correct: true }
+            - { value: 'setEtag', correct: false }
+            - { value: 'setCache', correct: false }

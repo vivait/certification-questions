@@ -58,3 +58,10 @@ questions:
             - {value: "The Symfony\\Component\\Process::setOutput method", correct: false}
             - {value: 'The Symfony\\Component\\Process::disableOutput method', correct: true}
             - {value: 'The Symfony\\Component\\Process::output method', correct: false}
+
+    -   question: What is returned by the run() method of Symfony\Component\Process\Process?
+        answers:
+            - {value: "Nothing", correct: false}
+            - {value: "The exit status code", correct: true}
+            - {value: '1', correct: false}
+            - {value: 'true or false', correct: false}
