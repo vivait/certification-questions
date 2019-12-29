@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
+    <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="More">
+      <change beforePath="$PROJECT_DIR$/.idea/certification-questions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/certification-questions.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +119,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.scratch_11.php">
+  <component name="RunManager" selected="PHP Script.scratch_12.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -126,7 +130,7 @@
     <configuration name="scratch_11.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_11.php">
       <method v="2" />
     </configuration>
-    <configuration name="scratch_7.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_7.php">
+    <configuration name="scratch_12.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_12.php">
       <method v="2" />
     </configuration>
     <configuration name="scratch_8.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch_8.php">
@@ -138,18 +142,18 @@
     <list>
       <item itemvalue="PHP Script.scratch_10.php" />
       <item itemvalue="PHP Script.scratch_11.php" />
-      <item itemvalue="PHP Script.scratch_7.php" />
       <item itemvalue="PHP Script.scratch_8.php" />
       <item itemvalue="PHP Script.scratch_9.php" />
       <item itemvalue="PHPUnit.phpunit.xml.dist" />
+      <item itemvalue="PHP Script.scratch_12.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.scratch_12.php" />
         <item itemvalue="PHP Script.scratch_11.php" />
         <item itemvalue="PHP Script.scratch_9.php" />
         <item itemvalue="PHP Script.scratch_8.php" />
         <item itemvalue="PHP Script.scratch_10.php" />
-        <item itemvalue="PHP Script.scratch_7.php" />
       </list>
     </recent_temporary>
   </component>
@@ -194,6 +198,7 @@
       <workItem from="1575563278252" duration="1484000" />
       <workItem from="1575650531425" duration="1537000" />
       <workItem from="1575882639680" duration="151000" />
+      <workItem from="1577206911263" duration="2582000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>
@@ -447,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577114227466</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="More">
+      <created>1577114863554</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1577114863554</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +511,8 @@
     <MESSAGE value="Adds question help" />
     <MESSAGE value="Doctrine questions" />
     <MESSAGE value="Further questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Further questions" />
+    <MESSAGE value="More" />
+    <option name="LAST_COMMIT_MESSAGE" value="More" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2" timestamp="1575651357567">
