@@ -601,9 +601,9 @@ questions:
 
             echo $myValue;
         answers:
-            - {value: 0, correct: false }
+            - {value: "'5'", correct: false }
             - {value: null, correct: false }
-            - {value: 2, correct: true }
+            - {value: "'2'", correct: true }
             - {value: 42, correct: false }
 
     -   question: |

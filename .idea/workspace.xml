@@ -4,6 +4,9 @@
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/finder.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/finder.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/forms.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/forms.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/process.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/process.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,18 +106,6 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="PHP Script.scratch_11.php">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -136,12 +127,12 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="PHPUnit.phpunit.xml.dist" />
       <item itemvalue="PHP Script.scratch_10.php" />
       <item itemvalue="PHP Script.scratch_11.php" />
       <item itemvalue="PHP Script.scratch_7.php" />
       <item itemvalue="PHP Script.scratch_8.php" />
       <item itemvalue="PHP Script.scratch_9.php" />
-      <item itemvalue="PHPUnit.phpunit.xml.dist" />
     </list>
     <recent_temporary>
       <list>
@@ -152,6 +143,18 @@
         <item itemvalue="PHP Script.scratch_7.php" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -514,13 +517,15 @@
     <state width="1315" height="424" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1575304421745" />
     <state width="1315" height="424" key="GridCell.Tab.0.right" timestamp="1575304421745" />
     <state width="1315" height="424" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1575304421745" />
-    <state x="1634" y="471" key="Vcs.Push.Dialog.v2" timestamp="1575651360457">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state x="480" y="211" key="Vcs.Push.Dialog.v2" timestamp="1577745970484">
+      <screen x="0" y="23" width="1280" height="708" />
     </state>
+    <state x="480" y="211" key="Vcs.Push.Dialog.v2/0.23.1280.708@0.23.1280.708" timestamp="1577745970484" />
     <state x="1634" y="471" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1575651360457" />
-    <state x="621" y="292" width="1805" height="878" key="find.popup" timestamp="1575651444597">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state x="311" y="157" width="903" height="486" key="find.popup" timestamp="1577747202303">
+      <screen x="0" y="23" width="1280" height="708" />
     </state>
+    <state x="311" y="157" width="903" height="486" key="find.popup/0.23.1280.708@0.23.1280.708" timestamp="1577747202303" />
     <state x="621" y="292" width="1805" height="878" key="find.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1575651444597" />
   </component>
 </project>

@@ -82,3 +82,12 @@ questions:
             - { value: "$fs->isAbsolute('/tmp');", correct: false }
             - { value: "$fs->absolutePath('/tmp');", correct: false }
             - { value: "$fs->isAbsolutePath('/tmp');", correct: true }
+
+
+    -   question: Which exception is thrown with the Symfony\Component\Finder\Finder::in method if one of the directories does not exist ?
+        answers:
+            - { value: "InvalidArgumentException", correct: true }
+            - { value: "FileException", correct: false }
+            - { value: "FileNotFoundException", correct: false }
+            - { value: "invalidException", correct: false }
+            - { value: "InvalidOptionException", correct: false }

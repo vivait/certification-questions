@@ -113,7 +113,7 @@ questions:
 
     -   question: Which statements are true about the Symfony\Bundle\FrameworkBundle\Controller\AbstractController class?
         answers:
-            - {value: 'An AbstractController uses ControllerTrait.', correct: true}
+            - {value: 'An AbstractController uses ControllerTrait.', correct: false}
             - {value: 'An AbstractController replaces the former Controller.', correct: true}
             - {value: 'An AbstractController behaves like a Controller, but provide a restricted access to services.', correct: true}
             - {value: 'An AbstractController is ServiceSubscriberInterface.', correct: true}
