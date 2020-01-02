@@ -547,6 +547,13 @@ questions:
 
     -   question: Which of these extensions are a built-in ones ?
         answers:
+            - { value: HttpFoundationRequestHandler, correct: true }
+            - { value: HttpFoundationExtension, correct: false }
+            - { value: DependencyInjectionExtension, correct: true }
+            - { value: DataCollectorExtension, correct: false }
+
+    -   question: Which of these extensions are a built-in ones ?
+        answers:
             - { value: DataCollectorExtension, correct: true }
             - { value: HttpFoundationExtension, correct: true }
             - { value: DependencyInjectionExtension, correct: true }

@@ -149,7 +149,6 @@ questions:
             - {value: 15, correct: false }
             - {value: An error, correct: true }
             - {value: 14, correct: false }
-            - {value: 0, correct: false }
 
     -   question: |
             Consider the following code snippet:
