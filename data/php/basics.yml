@@ -149,7 +149,6 @@ questions:
             - {value: 15, correct: false }
             - {value: An error, correct: true }
             - {value: 14, correct: false }
-            - {value: 0, correct: false }
 
     -   question: |
             Consider the following code snippet:
@@ -220,7 +219,7 @@ questions:
             - {value: With ini_get_all(), correct: true }
             - {value: With the $GLOBALS array, correct: false }
             - {value: With the reflection API, correct: true }
-            - {value: With get_loaded_extensions(), correct: true }
+            - {value: With get_loaded_extensions(), correct: false }
 
     -   question: "How do you retrieve a cookie in PHP?"
         answers:
@@ -601,9 +600,9 @@ questions:
 
             echo $myValue;
         answers:
-            - {value: 0, correct: false }
+            - {value: "'5'", correct: false }
             - {value: null, correct: false }
-            - {value: 2, correct: true }
+            - {value: "'2'", correct: true }
             - {value: 42, correct: false }
 
     -   question: |

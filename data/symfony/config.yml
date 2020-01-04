@@ -359,17 +359,12 @@ questions:
             - {value: By using ->canBeOverwritten(), correct: false}
             - {value: By using ->enableMerging(), correct: false}
 
-    -   question: |
-            Which types are not valid Node Types ?
+    -   question: If debug mode is set to false, how ConfigCache determine if the cache has to be refresh ?
         answers:
-            - {value: decimal, correct: true}
-            - {value: variable, correct: false}
-            - {value: enum, correct: false}
-            - {value: integer, correct: false}
-            - {value: date, correct: true}
-            - {value: float, correct: false}
-            - {value: int, correct: true}
-            - {value: scalar, correct: false}
+            - {value: By checking the last modification time of the resource, correct: false}
+            - {value: By checking that the resource exists, correct: true}
+            - {value: By checking timestamps in a .meta file present in the same directory as the cache file itself, correct: false}
+            - {value: It is always refreshed, correct: false}
 
     -   question: |
             Which methods don't belong to Symfony\Component\Config\Definition\Builder\ExprBuilder ?

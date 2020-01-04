@@ -547,7 +547,20 @@ questions:
 
     -   question: Which of these extensions are a built-in ones ?
         answers:
+            - { value: HttpFoundationRequestHandler, correct: true }
+            - { value: HttpFoundationExtension, correct: false }
+            - { value: DependencyInjectionExtension, correct: true }
+            - { value: DataCollectorExtension, correct: false }
+
+    -   question: Which of these extensions are a built-in ones ?
+        answers:
             - { value: DataCollectorExtension, correct: true }
             - { value: HttpFoundationExtension, correct: true }
             - { value: DependencyInjectionExtension, correct: true }
             - { value: HttpFoundationRequestHandler, correct: true }
+
+    -   question: What is the use of the default_protocol option of the Symfony\Component\Form\Extension\Core\Type\UrlType form type ?
+        answers:
+            - { value: To prepend the submitted value with an URI scheme (eg. http://) if it does not begin with one., correct: true }
+            - { value: To render the input with the placeholder property containing the value of the option., correct: false }
+            - { value: To force the submitted value to begin with a given URI scheme (eg. http://)., correct: false }

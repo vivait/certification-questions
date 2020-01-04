@@ -71,15 +71,57 @@ questions:
             - value: |
                   The method getResults does not exists. You should use getResult().
               correct: true
-            - value: |
+            -   value: |
                   The query builder does not have a getResults() method.
                   You should use getQuery().
-              correct: true
-            - value: |
-                  $qb is never updated after its initialization.
-                  You should do methods chaining.
-              correct: false
-            - value: |
-                  The second call setParameters(...) will erase data set in the first call.
-                  So year will be deleted from the parameters list. You should use setParameter($name, $value).
-              correct: true
+                correct: true
+            -   value: |
+                    $qb is never updated after its initialization.
+                    You should do methods chaining.
+                correct: false
+            -   value: |
+                    The second call setParameters(...) will erase data set in the first call.
+                    So year will be deleted from the parameters list. You should use setParameter($name, $value).
+                correct: true
+
+    -   question: What is the behaviour of the deferred implicit change policy?
+        answers:
+            -   value: |
+                    Doctrine checks all managed entities at the time of flush using a property-by-property comparision.
+                correct: true
+            -   value: |
+                    Doctrine checks persisted entities, or entities that'd save because of a cascade, it'll happen at the
+                    time of flush using a property-by-property comparision.
+                correct: false
+            -   value: |
+                    Doctrine injects a set of services into an entity, they must be invoked with details about a change in
+                    a property.
+                correct: false
+
+    -   question: What is the behaviour of the deferred explicit change policy?
+        answers:
+            -   value: |
+                    Doctrine checks all managed entities at the time of flush using a property-by-property comparision.
+                correct: false
+            -   value: |
+                    Doctrine checks persisted entities, or entities that'd save because of a cascade, it'll happen at the
+                    time of flush using a property-by-property comparision.
+                correct: true
+            -   value: |
+                    Doctrine injects a set of services into an entity, they must be invoked with details about a change in
+                    a property.
+                correct: false
+
+    -   question: What is the behaviour of the notify change policy?
+        answers:
+            -   value: |
+                    Doctrine checks all managed entities at the time of flush using a property-by-property comparision.
+                correct: false
+            -   value: |
+                    Doctrine checks persisted entities, or entities that'd save because of a cascade, it'll happen at the
+                    time of flush using a property-by-property comparision.
+                correct: false
+            -   value: |
+                    Doctrine passes objects into an entity, the objects must be invoked with details about a change any
+                    of the properties.
+                correct: true
