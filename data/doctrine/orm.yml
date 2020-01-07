@@ -125,3 +125,19 @@ questions:
                     Doctrine passes objects into an entity, the objects must be invoked with details about a change any
                     of the properties.
                 correct: true
+
+    -   question: |
+            Assuming there is an article with the title “Hello World” and the id 1234, what will be the output ?
+
+            $article = $entityManager->find('Article', 1234);
+            $article->setTitle('Hello World dude!');
+
+            $article2 = $entityManager->find('Article', 1234);
+            echo $article2->getTitle();
+        answers:
+            -   value: |
+                    Hello World dude!
+                correct: true
+            -   value: |
+                    Hello World
+                correct: false
