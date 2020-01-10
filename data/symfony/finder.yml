@@ -91,3 +91,108 @@ questions:
             - { value: "FileNotFoundException", correct: false }
             - { value: "invalidException", correct: false }
             - { value: "InvalidOptionException", correct: false }
+
+    -   question: What is the result of calling getRealPath() on a file?
+        answers:
+            - { value: "The absolute path", correct: true }
+            - { value: "The relative path to the file, omitting the filename", correct: false }
+            - { value: "The relative path to the file", correct: false }
+
+    -   question: What is the result of calling getRelativePath() on a file?
+        answers:
+            - { value: "The absolute path", correct: false }
+            - { value: "The relative path to the file, omitting the filename", correct: true }
+            - { value: "The relative path to the file", correct: false }
+
+    -   question: What is the result of calling getRelativePathname() on a file?
+        answers:
+            - { value: "The absolute path", correct: false }
+            - { value: "The relative path to the file, omitting the filename", correct: false }
+            - { value: "The relative path to the file", correct: true }
+
+    -   question: What is the result of calling getRelativePathname() on a file?
+        answers:
+            - { value: "The absolute path", correct: false }
+            - { value: "The relative path to the file, omitting the filename", correct: false }
+            - { value: "The relative path to the file", correct: true }
+
+    -   question: Which criteria is mandatory for the finder?
+        answers:
+            - { value: "Location", correct: true }
+            - { value: "Name", correct: false }
+            - { value: "Size", correct: true }
+
+    -   question: Which of the follow are valid usages of ->in()?
+        answers:
+            - { value: "$finder->in(__DIR__)->in('/elsewhere');", correct: true }
+            - { value: "$finder->in([__DIR__, '/elsewhere']);", correct: true }
+            - { value: "$finder->in(__DIR__, '/elsewhere');", correct: false }
+            - { value: "$finder->in(__DIR__)->in('/elsewhere');", correct: true }
+
+    -   question: |
+            Is the following usage of the finder correct:
+
+            $finder->in('ftp://example.com/');
+        answers:
+            - { value: "Yes", correct: true }
+            - { value: "No", correct: true }
+            - { value: "$finder->in(__DIR__, '/elsewhere');", correct: false }
+            - { value: "$finder->in(__DIR__, '/elsewhere');", correct: false }
+
+    -   question: What is the purpose of the ignoreVCS() method?
+        answers:
+            - { value: "When enabled it ensures the finder does not include VCS metadata files", correct: true }
+            - { value: "When enabled it ensures that new files are not included in the VCS", correct: false }
+            - { value: "When enabled it ensures that VCS ignored files are not included", correct: false }
+
+    -   question: What is the purpose of the ignoreVCSIgnored() method?
+        answers:
+            - { value: "When enabled it ensures the finder does not include VCS metadata files", correct: false }
+            - { value: "When enabled it ensures that new files are not included in the VCS", correct: false }
+            - { value: "When enabled it ensures that VCS ignored files are not included", correct: true }
+
+    -   question: |
+            What would be the order of the following files after a call to sortByName() with no arguments?
+
+            file2.txt, file1.txt, file3.txt
+        answers:
+            - { value: "file1.txt, file2.txt, file10.txt", correct: false }
+            - { value: "file1.txt, file10.txt, file2.txt", correct: true }
+            - { value: "file10.txt, file2.txt, file1.txt", correct: false }
+        help: |
+            https://symfony.com/doc/current/components/finder.html#sorting-results
+            https://www.php.net/manual/en/function.strcmp.php
+
+            By default, the sortByName() method uses the strcmp PHP function
+
+    -   question: |
+            What would be the order of the following files after a call to sortByName() with true as its first argument?
+
+            file2.txt, file1.txt, file3.txt
+        answers:
+            - { value: "file1.txt, file2.txt, file10.txt", correct: true }
+            - { value: "file1.txt, file10.txt, file2.txt", correct: false }
+            - { value: "file10.txt, file2.txt, file1.txt", correct: false }
+
+    -   question: |
+            Which of the following are valid sorting methods on the finder?
+        answers:
+            - { value: "sortByName", correct: true }
+            - { value: "sortByType", correct: true }
+            - { value: "sortByAccessedTime", correct: true }
+            - { value: "sortByChangedTime", correct: true }
+            - { value: "sortByModifiedTime", correct: true }
+            - { value: "sortByLastOpen", correct: false }
+            - { value: "sortByDirectories", correct: false }
+            - { value: "sortByAlphabeticalOrder", correct: false }
+            - { value: "sortByLastTouch", correct: false }
+
+    -   question: |
+            Which is the correct method to reverse the order of the finder?
+        answers:
+            - { value: "reverseSorting", correct: true }
+            - { value: "reverseOrder", correct: false }
+            - { value: "flipOrder", correct: false }
+            - { value: "flipSorting", correct: false }
+            - { value: "oppositeSorting", correct: false }
+            - { value: "oppositeSorting", correct: false }

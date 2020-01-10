@@ -486,10 +486,10 @@ questions:
     -   question: |
             How many HTTP requests (without using JavaScript) are required to determine whether or not a client supports cookies?
         answers:
-            - {value: 2, correct: true }
+            - {value: '"2"', correct: true }
             - {value: This is not possible without javascript., correct: false }
-            - {value: 0, correct: false }
-            - {value: 1, correct: false }
+            - {value: '"0"', correct: false }
+            - {value: '"1"', correct: false }
 
     -   question: |
             Which of the following is not a magic method?
@@ -718,3 +718,33 @@ questions:
             - {value: "[0 => 1, 1 => 4, 2 => 3]", correct: false }
             - {value: "The script won't execute", correct: false }
             - {value: "[0 => 0, 1 => [0 => 1, 1 => 2, 2 => 3], 2 => 4]", correct: false }
+
+
+    -   question: |
+            What is the output of the following script?
+
+            <?php
+
+            echo '10', 10;
+        answers:
+            - {value: "1010", correct: true }
+            - {value: "An error", correct: false }
+            - {value: "10", correct: false }
+
+    -   question: |
+            What is the output of the following script?
+
+            <?php
+
+            $val = 1;
+
+            switch ($val) {
+                case 1:
+                    echo 'Hello';
+                case 2:
+                    echo 'World';
+            }
+        answers:
+            - {value: "HelloWorld", correct: true }
+            - {value: "Hello", correct: false }
+            - {value: "An error", correct: false }
