@@ -65,3 +65,53 @@ questions:
             - {value: "The exit status code", correct: true}
             - {value: '1', correct: false}
             - {value: 'true or false', correct: false}
+
+    -   question: Which of the following are valid methods on a process object?
+        answers:
+            - {value: "getOutput()", correct: true}
+            - {value: "getErrorOutput()", correct: true}
+            - {value: 'getIncrementalOutput()', correct: true}
+            - {value: 'getIncrementalErrorOutput()', correct: true}
+            - {value: 'fetchOutput()', correct: false}
+            - {value: 'fetchErrorOutput()', correct: false}
+            - {value: 'fetchIncrementalOutput()', correct: false}
+            - {value: 'fetchIncrementalErrorOutput()', correct: false}
+
+    -   question: What is the purpose of the mustRun() method on a process object?
+        answers:
+            - {value: "It throws an exception if the process cannot start", correct: false}
+            - {value: "It throws an exception if the process exits with a non-zero exit code", correct: true}
+            - {value: 'It is just an alias for the run method', correct: false}
+
+    -   question: Will the send call to fetchIncrementalOutput() contain the output of the first?
+        answers:
+            - {value: "Yes", correct: false}
+            - {value: "No", correct: true}
+
+    -   question: Which is the correct method to fetch the last time that the process outputted?
+        answers:
+            - {value: "This is not possible", correct: false}
+            - {value: "getLastOutputTime()", correct: true}
+            - {value: "getOutputTime()", correct: false}
+            - {value: "getLastResponseTime()", correct: false}
+
+    -   question: Which of the following is the recommened way to invoke a command with muliple arguments?
+        answers:
+            - {value: "new Process(['/path/command', '--opxtion', 'argument', 'etc.']);", correct: true}
+            - {value: "new Process(['/path/command --option argument etc.']);", correct: false}
+            - {value: "new Process('/path/command --option argument etc.');", correct: false}
+            - {value: "new Process('/path/command', '--option', 'argument', 'etc.');", correct: false}
+
+    -   question: Which of the following is the recommened way to invoke a command with muliple arguments?
+        answers:
+            - {value: "new Process(['/path/command', '--option', 'argument', 'etc.']);", correct: true}
+            - {value: "new Process(['/path/command --option argument etc.']);", correct: false}
+            - {value: "new Process('/path/command --option argument etc.');", correct: false}
+            - {value: "new Process('/path/command', '--option', 'argument', 'etc.');", correct: false}
+
+    -   question: What is the difference between start() and run()?
+        answers:
+            - {value: "Start is asynchronous", correct: true}
+            - {value: "new Process(['/path/command --option argument etc.']);", correct: false}
+            - {value: "new Process('/path/command --option argument etc.');", correct: false}
+            - {value: "new Process('/path/command', '--option', 'argument', 'etc.');", correct: false}
