@@ -29,3 +29,53 @@ questions:
             - {value: php, correct: false }
             - {value: xml, correct: false }
             - {value: annotations, correct: true }
+
+    -   question: 'According to the official Symfony Best Practices Guide, where should the application specific configuration parameters be stored?'
+        answers:
+            - {value: In the src/Kernel.php file., correct: true}
+            - {value: In the config/parameters.yaml file., correct: false}
+            - {value: In the .app.yml file at the root of the project directory., correct: false}
+            - {value: In the config/services.yaml file., correct: true}
+            - {value: In global environment variables., correct: false}
+
+    -   question: 'Where should canonical environment variables be stored?'
+        answers:
+            - {value: .env.dist, correct: true}
+            - {value: .env, correct: false}
+            - {value: parameters.yaml, correct: false}
+            - {value: They should be configured by the host system, correct: false}
+
+    -   question: 'Which of the following parameters conventions are recommended?'
+        answers:
+            - {value: app.my_parameter, correct: true}
+            - {value: my_parameter, correct: false}
+            - {value: parameter.my_parameter, correct: false}
+
+    -   question: 'What is the optimum convention for a service for a class that only has one usage?'
+        answers:
+            - {value: AppBundle\Utils\Slugger, correct: true}
+            - {value: app.utils.slugger, correct: false}
+
+    -   question: 'What is the optimum convention for a service for a class that only has more than one usage?'
+        answers:
+            - {value: AppBundle\Utils\Slugger and AppBundle\Utils\Slugger.other, correct: false}
+            - {value: app.utils.slugger and app.utils.slugger_other, correct: true}
+
+    -   question: 'What is the optimum visibility for services?'
+        answers:
+            - {value: public, correct: false}
+            - {value: private, correct: true}
+
+    -   question: 'What is the best format to define services in?'
+        answers:
+            - {value: YAML, correct: true}
+            - {value: PHP, correct: false}
+            - {value: JSON, correct: false}
+            - {value: Annotations, correct: false}
+
+    -   question: What is the best format to configure Doctrine entities in?
+        answers:
+            - {value: YAML, correct: false }
+            - {value: PHP, correct: false }
+            - {value: XML, correct: false }
+            - {value: Annotations, correct: true }

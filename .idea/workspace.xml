@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="88dd1676-f5b9-4ebb-9bb2-4d1544ae985d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/doctrine/orm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/doctrine/orm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/symfony/cache-http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/cache-http.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/php/basics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/php/basics.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/symfony/forms.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/forms.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/http.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/http.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/forms.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/forms.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/symfony/process.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/symfony/process.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,12 +130,12 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="PHPUnit.phpunit.xml.dist" />
       <item itemvalue="PHP Script.scratch_10.php" />
       <item itemvalue="PHP Script.scratch_11.php" />
       <item itemvalue="PHP Script.scratch_7.php" />
       <item itemvalue="PHP Script.scratch_8.php" />
       <item itemvalue="PHP Script.scratch_9.php" />
-      <item itemvalue="PHPUnit.phpunit.xml.dist" />
     </list>
     <recent_temporary>
       <list>
@@ -196,8 +200,9 @@
       <workItem from="1575563278252" duration="1484000" />
       <workItem from="1575650531425" duration="1537000" />
       <workItem from="1575882639680" duration="151000" />
-      <workItem from="1578748560259" duration="412000" />
-      <workItem from="1578843880535" duration="1639000" />
+      <workItem from="1575907601469" duration="1501000" />
+      <workItem from="1576773644752" duration="902000" />
+      <workItem from="1576834036516" duration="196000" />
     </task>
     <task id="LOCAL-00001" summary="Removes personal .idea files">
       <created>1572893306261</created>
@@ -444,6 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575651357654</updated>
     </task>
+    <task id="LOCAL-00036" summary="Doctrine questions">
+      <created>1575907606787</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1575907606787</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <task id="LOCAL-00036" summary="Further questions">
       <created>1577114227466</created>
       <option name="number" value="00036" />
@@ -451,14 +464,7 @@
       <option name="project" value="LOCAL" />
       <updated>1577114227466</updated>
     </task>
-    <task id="LOCAL-00037" summary="Further questions">
-      <created>1577747233783</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1577747233783</updated>
-    </task>
-    <option name="localTasksCounter" value="38" />
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,11 +519,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Further questions" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2" timestamp="1577747233413">
-      <screen x="0" y="23" width="1280" height="708" />
+    <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2" timestamp="1575907606700">
+      <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.708@0.23.1280.708" timestamp="1577747233413" />
-    <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1575651357567" />
+    <state x="0" y="23" width="2560" height="1417" key="CommitChangelistDialog2/0.23.2560.1417@0.23.2560.1417" timestamp="1575907606700" />
     <state width="1315" height="424" key="GridCell.Tab.0.bottom" timestamp="1575304421745" />
     <state width="1315" height="424" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1575304421745" />
     <state width="1315" height="424" key="GridCell.Tab.0.center" timestamp="1575304421745" />
@@ -526,25 +531,18 @@
     <state width="1315" height="424" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1575304421745" />
     <state width="1315" height="424" key="GridCell.Tab.0.right" timestamp="1575304421745" />
     <state width="1315" height="424" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1575304421745" />
-    <state x="351" y="111" key="MultipleFileMergeDialog" timestamp="1578843424226">
+    <state x="480" y="211" key="Vcs.Push.Dialog.v2" timestamp="1577745970484">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
-    <state x="351" y="111" key="MultipleFileMergeDialog/0.23.1280.708@0.23.1280.708" timestamp="1578843424226" />
-    <state x="480" y="211" key="Vcs.Push.Dialog.v2" timestamp="1577747259613">
-      <screen x="0" y="23" width="1280" height="708" />
-    </state>
-    <state x="480" y="211" key="Vcs.Push.Dialog.v2/0.23.1280.708@0.23.1280.708" timestamp="1577747259613" />
+    <state x="480" y="211" key="Vcs.Push.Dialog.v2/0.23.1280.708@0.23.1280.708" timestamp="1577745970484" />
     <state x="1634" y="471" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1575651360457" />
-    <state x="350" y="170" width="1016" height="619" key="find.popup" timestamp="1578844884431">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="311" y="157" width="903" height="486" key="find.popup" timestamp="1577747202303">
+      <screen x="0" y="23" width="1280" height="708" />
+    <state x="1634" y="471" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1575907608809" />
+    <state x="621" y="292" width="1805" height="878" key="find.popup" timestamp="1577985308416">
+      <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="311" y="151" width="903" height="550" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1578844238806" />
-    <state x="350" y="170" width="1016" height="619" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1578844884431" />
     <state x="311" y="157" width="903" height="486" key="find.popup/0.23.1280.708@0.23.1280.708" timestamp="1577747202303" />
-    <state x="621" y="292" width="1805" height="878" key="find.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1575651444597" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1578844850234">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1578844850234" />
+    <state x="621" y="292" width="1805" height="878" key="find.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1577985308416" />
   </component>
 </project>
