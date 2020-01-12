@@ -177,3 +177,11 @@ questions:
             - { value: 'Caching systems will favor the Cache-Control header field over the Expires field to cache the response.', correct: true }
             - { value: 'The response wont be cachable and caching systems will simply ignore it.', correct: false }
             - { value: 'Caching systems will favor the Expires header field over the Cache-Control field to cache the response.', correct: false }
+
+    -   question: What can happen to an HTTP response whose Cache-Control header value equals private, max-age=120?
+        answers:
+            - { value: 'It will be cached by any proxy server.', correct: false }
+            - { value: 'It will only be cached by any shared proxy servers including reverse proxies.', correct: false }
+            - { value: 'It will be cached by a reverse proxy cache like Varnish.', correct: false }
+            - { value: 'It will be cached by the web browser.', correct: true }
+            - { value: 'It prevents the response from being cached by the web browser or any shared proxies.', correct: false }
