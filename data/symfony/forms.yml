@@ -581,3 +581,10 @@ questions:
             - { value: EntityTransformer, correct: false }
             - { value: ObjectTransformer, correct: false }
             - { value: BooleanTransformer, correct: false }
+
+    -   question: Which type does not correspond to a button?
+        answers:
+            - { value: reset, correct: false }
+            - { value: input, correct: true }
+            - { value: button, correct: false }
+            - { value: submit, correct: false }
