@@ -65,7 +65,7 @@ questions:
     -   question: Which of the following are built-in Twig functions?
         answers:
             - {value: source(), correct: true}
-            - {value: render(), correct: true}
+            - {value: render(), correct: false}
             - {value: date(), correct: true}
             - {value: url(), correct: false}
             - {value: dump(), correct: true}

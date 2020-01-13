@@ -60,3 +60,12 @@ questions:
             - { value: "$filesystem->chown('/video', 'www-data', true);", correct: true }
             - { value: "$filesystem->chown('/video', 'www-data');", correct: false }
             - { value: "$filesystem->chown('/video', 'www-data', false);", correct: false }
+
+    -   question: |
+            Which exception is thrown when the origin file does not exist when you use the Symfony\Component\Filesystem\Filesystem::copy method ?
+        answers:
+            - { value: "FileErrorException", correct: false }
+            - { value: "FileNotExistException", correct: false }
+            - { value: "FileNotFoundException", correct: true }
+            - { value: "FilesystemException", correct: false }
+            - { value: "FileException", correct: false }
