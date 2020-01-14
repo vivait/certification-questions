@@ -649,3 +649,11 @@ questions:
             - {value: There's no such a thing in Symfony's Dependency Injection component., correct: false}
             - {value: It's a Symfony built-in service that can be obtained as $container->get('configurator'), correct: false}
             - {value: It's a PHP callable that you can optionally execute to configure a Symfony service after its instantiation., correct: true}
+
+    -   question: "What is the tag to make your service available in PHP templates?"
+        answers:
+            - {value: 'templating.helper', correct: true}
+            - {value: "twig.service", correct: false}
+            - {value: "twig.helper", correct: false}
+            - {value: "templating.service", correct: false}
+            - {value: 'template.service', correct: false}

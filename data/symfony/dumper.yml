@@ -66,3 +66,12 @@ questions:
 
             -   value: 'An object of the same class of $myVar.'
                 correct: false
+
+    -   question: |
+            What is the second optional parameter of the Symfony\Component\VarDumper\VarDumper::dump method ?
+        answers:
+            -   value: 'An optional $return boolean variable to return the information rather than print it.'
+                correct: false
+
+            -   value: 'Nothing, the Symfony\Component\VarDumper\VarDumper::dump has just one parameter.'
+                correct: true

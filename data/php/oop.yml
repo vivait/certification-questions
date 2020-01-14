@@ -576,3 +576,35 @@ questions:
         answers:
             - {value: 'Two', correct: true}
             - {value: 'One', correct: false}
+
+    -   question: |
+            Consider the following class:
+
+            class User
+            {
+                private $fullname;
+
+                public function __construct($fullname)
+                {
+                    $this->fullname = $fullname;
+                }
+
+                public function getFullname()
+                {
+                    return $this->fullname;
+                }
+            }
+
+            And the following code snippet:
+
+            ???
+            echo $user->getFullname();
+
+            Which of the following statements can successfully replace the ??? token in order to make this script display the string John Smith in the standard output?
+        answers:
+            - {value: "$user = User::getInstance('John Smith');", correct: false}
+            - {value: "$user = new User('John Smith');", correct: true}
+            - {value: "$user = new User(['$fullname' => 'John Smith']);", correct: false}
+            - {value: "$user = (new ReflectionClass('User'))->newInstanceWithoutConstructor();", correct: false}
+            - {value: "$user = (new ReflectionClass('User'))->newInstanceArgs(['John Smith']);", correct: true}
+            - {value: "$user = (new ReflectionClass(User::class))->newInstance('John Smith');", correct: true}

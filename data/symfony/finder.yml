@@ -196,3 +196,13 @@ questions:
             - { value: "flipSorting", correct: false }
             - { value: "oppositeSorting", correct: false }
             - { value: "oppositeSorting", correct: false }
+
+    -   question: |
+            Which is the correct method to reverse the order of the finder?
+        answers:
+            - { value: "reverseSorting", correct: true }
+            - { value: "reverseOrder", correct: false }
+            - { value: "flipOrder", correct: false }
+            - { value: "flipSorting", correct: false }
+            - { value: "oppositeSorting", correct: false }
+            - { value: "oppositeSorting", correct: false }

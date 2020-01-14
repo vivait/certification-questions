@@ -40,7 +40,7 @@ questions:
         answers:
             - { value: $dispatcher, correct: false }
             - { value: Nothing, correct: false }
-            - { value: true, correct: false }
+            - { value: "true", correct: false }
             - { value: $event, correct: true }
 
     -   question: "What is the argument passed to listeners of kernel.view after Symfony 4.3?"
