@@ -79,3 +79,9 @@ questions:
             - {value: PHP, correct: false }
             - {value: XML, correct: false }
             - {value: Annotations, correct: true }
+
+    -   question: According to the official Symfony Best Practices Guide, where do you have to store your assets?
+        answers:
+            - {value: in the public/ directory, correct: false }
+            - {value: in the src/Resources/public/ directory, correct: false }
+            - {value: in the assets/ directory of each bundle, correct: true }
