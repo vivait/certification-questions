@@ -62,6 +62,93 @@ questions:
             - { value: "$filesystem->chown('/video', 'www-data', false);", correct: false }
 
     -   question: |
+            Which of the following are valid methods?
+        answers:
+            - { value: "mkdir", correct: true }
+            - { value: "exists", correct: true }
+            - { value: "copy", correct: true }
+            - { value: "touch", correct: true }
+            - { value: "chown", correct: true }
+            - { value: "chgrp", correct: true }
+            - { value: "chmod", correct: true }
+            - { value: "remove", correct: true }
+            - { value: "delete", correct: false }
+            - { value: "change", correct: false }
+            - { value: "createDir", correct: false }
+            - { value: "isValid", correct: false }
+            - { value: "changeOwner", correct: false }
+
+    -   question: |
+            Which of the following are valid methods?
+        answers:
+            - { value: "rename", correct: true }
+            - { value: "symlink", correct: true }
+            - { value: "readlink", correct: true }
+            - { value: "makePathRelative", correct: true }
+            - { value: "mirror", correct: true }
+            - { value: "isAbsolutePath", correct: true }
+            - { value: "tempnam", correct: true }
+            - { value: "dumpFile", correct: true }
+            - { value: "appendToFile", correct: true }
+            - { value: "createDir", correct: false }
+            - { value: "isValid", correct: false }
+            - { value: "doesExist", correct: false }
+            - { value: "changeOwner", correct: false }
+
+    -   question: |
+            What is the second argument of the mkDir() method?
+        answers:
+            - { value: "The mode to create the dir with", correct: true }
+            - { value: "A callback for after the method finishes", correct: false }
+            - { value: "A flag for if it should overwrite existing directories", correct: false }
+            - { value: "A flag for if it should ignore existing directories", correct: false }
+
+    -   question: |
+            Which are valid arguments for the exists() method?
+        answers:
+            - { value: "array", correct: true }
+            - { value: "Traversable", correct: true }
+            - { value: "string", correct: true }
+            - { value: "int", correct: false }
+            - { value: "bool", correct: false }
+            - { value: "float", correct: false }
+            - { value: "Iterator", correct: false }
+
+    -   question: |
+            Which is the purpose of the exists() method?
+        answers:
+            - { value: "Checks for the presence of one or more files or directories", correct: true }
+            - { value: "Checks for the presence of one or more files", correct: false }
+            - { value: "Checks for the presence of one or more directories", correct: false }
+            - { value: "Checks for the presence of one file or directory", correct: false }
+            - { value: "Checks for the presence of one file", correct: false }
+            - { value: "Checks for the presence of one directory", correct: false }
+
+    -   question: |
+            What is the purpose of the copy() method?
+        answers:
+            - { value: "Makes a copy of a single file", correct: true }
+            - { value: "Makes a copy of multiple files", correct: false }
+            - { value: "Makes a copy of multiple files or directories", correct: false }
+            - { value: "Makes a copy of a single file or directory", correct: false }
+
+    -   question: |
+            Which of the following will change the group of all files in a directory?
+        answers:
+            - { value: "$filesystem->chgrp('/video', 'nginx', true);", correct: true }
+            - { value: "$filesystem->chgrp('/video', 'nginx', false);", correct: false }
+            - { value: "$filesystem->chgrp('/video', 'nginx');", correct: false }
+
+    #TODO: https://symfony.com/doc/4.3/components/filesystem.html#chmod
+    -   question: |
+            What is the purpose of the chmod() method?
+        answers:
+            - { value: "Changes the mode or permissions of a file", correct: true }
+            - { value: "Changes access and modification time for a file", correct: false }
+            - { value: "Changes the mode of a file", correct: false }
+            - { value: "Changes the permissions of a file", correct: false }
+
+    -   question: |
             Which exception is thrown when the origin file does not exist when you use the Symfony\Component\Filesystem\Filesystem::copy method ?
         answers:
             - { value: "FileErrorException", correct: false }
