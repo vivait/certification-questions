@@ -139,7 +139,6 @@ questions:
             - { value: "$filesystem->chgrp('/video', 'nginx', false);", correct: false }
             - { value: "$filesystem->chgrp('/video', 'nginx');", correct: false }
 
-    #TODO: https://symfony.com/doc/4.3/components/filesystem.html#chmod
     -   question: |
             What is the purpose of the chmod() method?
         answers:
@@ -156,3 +155,37 @@ questions:
             - { value: "FileNotFoundException", correct: true }
             - { value: "FilesystemException", correct: false }
             - { value: "FileException", correct: false }
+
+    -   question: |
+            What is the signature of the chmod method?
+        answers:
+            - { value: "chmod($files, $mode, $umask = 0000, $recursive = false)", correct: true }
+            - { value: "chmod($files, $umask = 0000, $mode, $recursive = false)", correct: false }
+            - { value: "chmod($files, $mode, $umask, $recursive = false)", correct: false }
+            - { value: "chmod($files, $mode, $recursive = false)", correct: false }
+            - { value: "chmod($files, $recursive = false)", correct: false }
+            - { value: "chmod($files, $recursive = false)", correct: false }
+
+
+    -   question: |
+            Does the rename() method accept multiple files to rename?
+        answers:
+            - { value: "No", correct: true }
+            - { value: "Yes", correct: false }
+
+    -   question: |
+            What facilities does the symlink() method provide for file systems that don't support symlinks?
+        answers:
+            - { value: "The third argument is a flag to copy the file instead if the filesystem does not support symlinks", correct: true }
+            - { value: "The third argument is a flag to copy the file instead", correct: false }
+            - { value: "It throws an exception which can be caught and used to manually copy the files", correct: false }
+            - { value: "If the FileSystem object is configured correctly it will copy the files instead", correct: false }
+
+    -   question: |
+            How many arguments does the makePathRelative() method accept?
+        answers:
+            - { value: "2", correct: true }
+            - { value: "1", correct: false }
+            - { value: "3", correct: false }
+
+        # TODO: https://symfony.com/doc/4.3/components/filesystem.html#readlink
