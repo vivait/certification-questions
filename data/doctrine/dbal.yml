@@ -63,3 +63,18 @@ questions:
             - { value: 'No', correct: false }
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/data-retrieval-and-manipulation.html#list-of-parameters-conversion
+
+    -   question: Which of the following are reserved words?
+        answers:
+            - { value: 'ADD', correct: true }
+            - { value: 'AND', correct: true }
+            - { value: 'BOTH', correct: true }
+            - { value: 'CONDITION', correct: true }
+            - { value: 'NUMERIC', correct: true }
+            - { value: 'FETCH', correct: true }
+            - { value: 'KILL', correct: true }
+            - { value: 'DIFF', correct: false }
+            - { value: 'ORGANIZE', correct: false }
+            - { value: 'PAYLOAD', correct: false }
+        help: |
+            https://dev.mysql.com/doc/refman/5.5/en/keywords.html

@@ -188,4 +188,91 @@ questions:
             - { value: "1", correct: false }
             - { value: "3", correct: false }
 
-        # TODO: https://symfony.com/doc/4.3/components/filesystem.html#readlink
+    -   question: |
+            What is the signature of the readlink() method?
+        answers:
+            - { value: "public function readlink($path, $canonicalize = false)", correct: true }
+            - { value: "public function readlink($path, $canonicalize = true)", correct: false }
+            - { value: "public function readlink($path, $canonicalize)", correct: false }
+            - { value: "public function readlink($path)", correct: false }
+
+    -   question: |
+            What is the purpose of the $canonicalize parameter on the readlink() method?
+        answers:
+            - { value: "If true, it will return the absolute fully resolved final version of the link", correct: true }
+            - { value: "If false, it will return the absolute fully resolved final version of the link", correct: false }
+            - { value: "If true, it will return the absolute version of the link", correct: false }
+            - { value: "If false, it will return the absolute version of the link", correct: false }
+
+    -   question: |
+            What is the purpose of the mirror() method?
+        answers:
+            - { value: "copies all the contents of the source directory into the target one", correct: true }
+            - { value: "create a symlink between the two directories", correct: false }
+
+    -   question: |
+            What will the following code return?
+
+            $filesystem->isAbsolutePath('/tmp');
+        answers:
+            - { value: "True", correct: true }
+            - { value: "False", correct: false }
+
+    -   question: |
+            What will the following code return?
+
+            $filesystem->isAbsolutePath('c:\\Windows');
+        answers:
+            - { value: "True", correct: true }
+            - { value: "False", correct: false }
+
+    -   question: |
+            What will the following code return?
+
+            $filesystem->isAbsolutePath('tmp');
+        answers:
+            - { value: "False", correct: true }
+            - { value: "True", correct: false }
+
+    -   question: |
+            What will the following code return?
+
+            $filesystem->isAbsolutePath('../dir');
+        answers:
+            - { value: "False", correct: true }
+            - { value: "True", correct: false }
+
+    -   question: |
+            What method can be used to check if a path is absolute?
+        answers:
+            - { value: "isAbsolutePath", correct: true }
+            - { value: "isPathAbsolute", correct: false }
+            - { value: "checkPathAbsolute", correct: false }
+
+    -   question: |
+            What is the signature of the tempnam() method?
+        answers:
+            - { value: "public function tempnam($dir, $prefix)", correct: true }
+            - { value: "public function tempnam($dir)", correct: false }
+            - { value: "public function tempnam($dir, $prefix, $extension = null)", correct: false }
+            - { value: "public function tempnam($dir, $prefix, $extension)", correct: false }
+
+    -   question: |
+            Which methods allow the saving of text to a file?
+        answers:
+            - { value: "dumpFile", correct: true }
+            - { value: "dumpToFile", correct: false }
+            - { value: "fileDump", correct: false }
+            - { value: "appendToFile", correct: true }
+            - { value: "appendFile", correct: false }
+            - { value: "pushContents", correct: false }
+            - { value: "contentsPush", correct: false }
+
+    -   question: |
+            Which interfaces are the implemented by all exceptions thrown by the FileSystem?
+        answers:
+            - { value: "Symfony\\Component\\Filesystem\\Exception\\ExceptionInterface", correct: true }
+            - { value: "Symfony\\Component\\Filesystem\\Exception\\Exception", correct: false }
+            - { value: "\\ExceptionInterface", correct: false }
+            - { value: "Symfony\\Component\\Filesystem\\Exception", correct: true }
+            - { value: "Symfony\\Component\\Filesystem\\ExceptionInterface", correct: false }
