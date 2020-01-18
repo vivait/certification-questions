@@ -432,22 +432,6 @@ questions:
             https://symfony.com/doc/current/reference/forms/types/range.html
 
     -   question: |
-            By default, what parameter can you use inside the login form to specify the target of the redirection ?
-        answers:
-            -   value: _target_path
-                correct: true
-            -   value: _default_target
-                correct: false
-            -   value: _path_target
-                correct: false
-            -   value: _target
-                correct: false
-            -   value: _path
-                correct: false
-        help: |
-            https://symfony.com/doc/current/security/form_login.html#control-the-redirect-url-from-inside-the-form
-
-    -   question: |
             With the following code, what can be set as the value of the choice_label option to display the name
             property of each choice ?
 

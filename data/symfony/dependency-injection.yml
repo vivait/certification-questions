@@ -657,3 +657,11 @@ questions:
             - {value: "twig.helper", correct: false}
             - {value: "templating.service", correct: false}
             - {value: 'template.service', correct: false}
+
+    -   question: "Which of the following statements are true about the so-called compiler passes?"
+        answers:
+            - {value: 'They allow to add, alter or remove any services definitions of a ContainerBuilder object.', correct: true}
+            - {value: "They are always triggered on every HTTP requests made to the Symfony application.", correct: false}
+            - {value: "They prevent the ContainerBuilder object from being compiled if they detect any circular references in services definitions.", correct: true}
+            - {value: "They perform some optimization operations on a ContainerBuilder instance in order to generate the most efficient PHP code possible.", correct: false}
+            - {value: 'They check that all registered services definitions are valid and some required global parameters are not missing.', correct: true}
