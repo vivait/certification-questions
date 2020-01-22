@@ -361,3 +361,19 @@ questions:
 
 
     # TODO: https://symfony.com/doc/current/components/var_dumper/advanced.html
+
+
+    -   question: |
+            Which methods are available when using the Symfony\Component\VarDumper\Test\VarDumperTestTrait?
+        answers:
+            -   value: 'assertDumpEquals'
+                correct: true
+
+            -   value: 'assertDumpMatchesFormat'
+                correct: true
+
+            -   value: 'assertDumpNotEmpty'
+                correct: false
+
+            -   value: 'assertDumpSameAs'
+                correct: false
