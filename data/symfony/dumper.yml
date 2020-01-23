@@ -350,17 +350,18 @@ questions:
             How can the casters of the VarCloner be set?
         answers:
             -   value: |
-
+                    new VarCloner(
+                        [
+                          'FooClass' =>  $myCaster
+                         ]
+                    )
                 correct: true
 
-            -   value: "casts PHP variables to Data objects"
+            -   value: (new VarCloner())->setCasters(['FooClass' =>  $myCaster])
                 correct: false
 
-            -   value: "casts PHP variables to the required format for dumping"
+            -   value: (new VarCloner())->addCaster('FooClass', $myCaster)
                 correct: false
-
-
-    # TODO: https://symfony.com/doc/current/components/var_dumper/advanced.html
 
 
     -   question: |
@@ -376,4 +377,43 @@ questions:
                 correct: false
 
             -   value: 'assertDumpSameAs'
+                correct: false
+
+    -   question: |
+            What is a valid caster key for a resource named bar?
+        answers:
+            -   value: ":bar resource"
+                correct: true
+
+            -   value: "//:bar"
+                correct: false
+
+            -   value: "://bar"
+                correct: false
+
+            -   value: "bar://"
+                correct: false
+
+    -   question: |
+            What order are casters called on an object when multiple can run?
+        answers:
+            -   value: "interfaces -> parents -> main"
+                correct: true
+
+            -   value: "main -> parents -> interfaces"
+                correct: false
+
+            -   value: "parents -> main -> interfaces"
+                correct: false
+
+    -   question: |
+            What is the purpose of caster stubs?
+        answers:
+            -   value: "To add semantics to casted objects"
+                correct: true
+
+            -   value: "To ensure an item isn't displayed in the view"
+                correct: false
+
+            -   value: "To stop large objects from displaying"
                 correct: false
