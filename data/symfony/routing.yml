@@ -96,12 +96,12 @@ questions:
 
     -   question: How do you add a Route to a RouteCollection?
         answers:
-            - {value: $routes->add('route_name', $route);, correct: true}
-            - {value: $routes->addRoute('route_name', $route);, correct: false}
-            - {value: $routes->routes->add('route_name', $route);, correct: false}
-            - {value: $routes->add($route);, correct: false}
-            - {value: $routes->routes->add($route);, correct: false}
-            - {value: $routes->addRoute($route);, correct: false}
+            - {value: "$routes->add('route_name', $route);", correct: true}
+            - {value: "$routes->addRoute('route_name', $route);", correct: false}
+            - {value: "$routes->routes->add('route_name', $route);", correct: false}
+            - {value: "$routes->add($route);", correct: false}
+            - {value: "$routes->routes->add($route);", correct: false}
+            - {value: "$routes->addRoute($route);", correct: false}
 
     -   question: Which of the following are a valid part of the routing component?
         answers:
@@ -240,7 +240,7 @@ questions:
             - {value: The methods supported by the Route, correct: false}
             - {value: Array of schemes supported by the Route, correct: false}
 
-    -   question: What are the variables available in the Route condition?
+    -   question: What are the variables available in the Route expression language condition?
         answers:
             - {value: context, correct: true}
             - {value: request, correct: true}
@@ -274,13 +274,6 @@ questions:
             - {value: /start/default/hi/world, correct: true}
             - {value: /start/default/, correct: false}
             - {value: /start/, correct: false}
-
-    -   question: |
-            How can one add a prefix to all routes in a collection?
-        answers:
-            - {value: $collection->addPrefix('/prefix');, correct: true}
-            - {value: $collection->add('/prefix');, correct: false}
-            - {value: $collection->prefix('/prefix');, correct: false}
 
     -   question: |
             How can one add a prefix to all routes in a collection?
