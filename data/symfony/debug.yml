@@ -1,0 +1,9 @@
+category: Debug
+questions:
+    -   question: |
+            What is the default error reporting level value used by the Symfony\Component\Debug\Debug::enable method ?
+        answers:
+            - { value: E_NOTICE, correct: false }
+            - { value: E_ALL, correct: true }
+            - { value: E_STRICT, correct: false }
+            - { value: -1, correct: false }

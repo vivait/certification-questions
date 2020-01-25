@@ -77,15 +77,6 @@ questions:
             - {value: MAX_USERNAME_LENGTH, correct: true}
             - {value: BAD_CREDENTIALS, correct: false}
 
-    -   question: |
-            By default, what parameter can you use inside the login form to specify the target of the redirection ?
-        answers:
-            - {value: _path_target, correct: false}
-            - {value: _target_path, correct: true}
-            - {value: _target, correct: false}
-            - {value: _path, correct: false}
-            - {value: _default_target, correct: false}
-
     -   question: In order to create a custom password encoder, what must you do
         answers:
             - {value: Implement the Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface, correct: true}
@@ -125,17 +116,6 @@ questions:
             -   value: -1
                 correct: false
 
-    -   question: By default, what parameter can you use inside the login form to specify the target of the redirection ?
-        answers:
-            -   value: _target_path
-                correct: true
-            -   value: _path
-                correct: false
-            -   value: _default_target
-                correct: false
-            -   value: _path_target
-                correct: false
-
     -   question: "What is the parent of Symfony\\Component\\Security\\Guard\\GuardAuthenticatorInterface?"
         answers:
             - {value: None, correct: false}
@@ -156,3 +136,19 @@ questions:
             - {value: To let some user be able to switch from one to another., correct: true}
             - {value: To be able to have several accounts and switch easily., correct: false}
             - {value: To change the roles of the user easily., correct: false}
+
+    -   question: |
+            By default, what parameter can you use inside the login form to specify the target of the redirection ?
+        answers:
+            -   value: _target_path
+                correct: true
+            -   value: _default_target
+                correct: false
+            -   value: _path_target
+                correct: false
+            -   value: _target
+                correct: false
+            -   value: _path
+                correct: false
+        help: |
+            https://symfony.com/doc/current/security/form_login.html#control-the-redirect-url-from-inside-the-form

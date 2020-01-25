@@ -84,3 +84,30 @@ questions:
             - { value: "IniFileLoader", correct: true }
             - { value: "MoFileLoader", correct: true }
             - { value: "YamlFileLoader", correct: true }
+
+    -   question: "What is the command to view all messages for French?"
+        answers:
+            - { value: "php bin/console debug:translation fr", correct: true }
+            - { value: "php bin/console translator:list fr", correct: false }
+            - { value: "php bin/console translator:translations:list fr", correct: false }
+            - { value: "php bin/console translator:detect fr", correct: false }
+
+    -   question: "What is the command to check which translations are used?"
+        answers:
+            - { value: "php bin/console debug:translation fr --only-unused", correct: true }
+            - { value: "php bin/console debug:translation fr --unused", correct: true }
+            - { value: "php bin/console translator:list fr --only-unused", correct: false }
+            - { value: "php bin/console translator:list fr --unused", correct: false }
+            - { value: "php bin/console translator:translations:list fr --only-unused", correct: false }
+            - { value: "php bin/console translator:translations:list fr --unused", correct: false }
+            - { value: "php bin/console translator:detect fr --only-unused", correct: false }
+            - { value: "php bin/console translator:detect fr --unused", correct: false }
+
+    -   question: |
+            Which of theses are methods of Symfony\Component\Translation\TranslatorInterface?
+        answers:
+            - { value: "trans()", correct: true }
+            - { value: "transChoice()", correct: true }
+            - { value: "translate()", correct: false }
+            - { value: "getTranslations()", correct: false }
+            - { value: "getTranslation()", correct: false }

@@ -432,22 +432,6 @@ questions:
             https://symfony.com/doc/current/reference/forms/types/range.html
 
     -   question: |
-            By default, what parameter can you use inside the login form to specify the target of the redirection ?
-        answers:
-            -   value: _target_path
-                correct: true
-            -   value: _default_target
-                correct: false
-            -   value: _path_target
-                correct: false
-            -   value: _target
-                correct: false
-            -   value: _path
-                correct: false
-        help: |
-            https://symfony.com/doc/current/security/form_login.html#control-the-redirect-url-from-inside-the-form
-
-    -   question: |
             With the following code, what can be set as the value of the choice_label option to display the name
             property of each choice ?
 
@@ -548,16 +532,9 @@ questions:
     -   question: Which of these extensions are a built-in ones ?
         answers:
             - { value: HttpFoundationRequestHandler, correct: true }
-            - { value: HttpFoundationExtension, correct: false }
-            - { value: DependencyInjectionExtension, correct: true }
-            - { value: DataCollectorExtension, correct: false }
-
-    -   question: Which of these extensions are a built-in ones ?
-        answers:
-            - { value: DataCollectorExtension, correct: true }
             - { value: HttpFoundationExtension, correct: true }
             - { value: DependencyInjectionExtension, correct: true }
-            - { value: HttpFoundationRequestHandler, correct: true }
+            - { value: DataCollectorExtension, correct: true }
 
     -   question: What is the use of the default_protocol option of the Symfony\Component\Form\Extension\Core\Type\UrlType form type ?
         answers:
@@ -565,9 +542,44 @@ questions:
             - { value: To render the input with the placeholder property containing the value of the option., correct: false }
             - { value: To force the submitted value to begin with a given URI scheme (eg. http://)., correct: false }
 
+    -   question: Which FormConfigBuilderInterface method should be called to attach a model transformer to a form?
+        answers:
+            - { value: addModelTransformer, correct: true }
+            - { value: newModelTransformer, correct: false }
+            - { value: attachModelTransformer, correct: false }
+            - { value: appendModelTransformer, correct: false }
+
+    -   question: Which of the following are component built in model transformers?
+        answers:
+            - { value: CallbackTransformer, correct: true }
+            - { value: ReverseTransformer, correct: false }
+            - { value: DateTimeTransformer, correct: false }
+            - { value: StringTransformer, correct: false }
+            - { value: EntityTransformer, correct: false }
+            - { value: ObjectTransformer, correct: false }
+            - { value: BooleanTransformer, correct: false }
+
     -   question: Which type does not correspond to a button?
         answers:
             - { value: reset, correct: false }
             - { value: input, correct: true }
             - { value: button, correct: false }
             - { value: submit, correct: false }
+
+    -   question: |
+            Assuming an application that stores money amounts multiplied by 100 (eg. 1.23 is stored 123).
+
+            What option should you set on the Symfony\Component\Form\Extension\Core\Type\MoneyType form type in order to display the correct value to the user ?
+        answers:
+            - { value: scale, correct: false }
+            - { value: by_reference, correct: false }
+            - { value: multiply, correct: false }
+            - { value: divisor, correct: true }
+
+    -   question: |
+            If the expanded and multiple options are set to true on a Symfony\Component\Form\Extension\Core\Type\ChoiceType form type, what is displayed when rendering the form ?
+        answers:
+            - { value: Select tag., correct: false }
+            - { value: Radio buttons., correct: false }
+            - { value: Select tag (with multiple attribute)., correct: false }
+            - { value: Checkboxes., correct: true }

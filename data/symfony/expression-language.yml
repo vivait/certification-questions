@@ -16,3 +16,164 @@ questions:
             - { value: \\, correct: false }
             - { value: An Empty String, correct: false }
             - { value: \\\\, correct: false }
+
+
+    -   question: |
+            What is the output of the following?
+
+            var_dump($expressionLanguage->evaluate('1 + 2'));
+        answers:
+            - { value: Int(3), correct: true }
+            - { value: String('1 + 2'), correct: false }
+            - { value: An error, correct: false }
+            - { value: String(''), correct: false }
+
+    -   question: |
+            What is the output of the following?
+
+            var_dump($expressionLanguage->compile('1 + 2'));
+        answers:
+            - { value: String('1 + 2'), correct: true }
+            - { value: Int(3), correct: false }
+            - { value: An error, correct: false }
+            - { value: String(''), correct: false }
+
+    -   question: |
+            Is the following a valid expression language statement?
+
+            ['foo' => 'bar']
+        answers:
+            - { value: No, correct: true }
+            - { value: Yes, correct: false }
+
+    -   question: |
+            Is the following a valid expression language statement?
+
+            { foo: 'bar' }
+        answers:
+            - { value: Yes, correct: true }
+            - { value: No, correct: false }
+
+    -   question: |
+            Is the following a valid expression language statement?
+
+            $fruit->variety
+        answers:
+            - { value: No, correct: true }
+            - { value: Yes, correct: false }
+
+    -   question: |
+            Is the following a valid expression language statement?
+
+            fruit.variety
+        answers:
+            - { value: Yes, correct: true }
+            - { value: No, correct: false }
+
+    -   question: |
+            What is the output of the following?
+
+            define('DB_USER', 'root');
+
+            var_dump($expressionLanguage->evaluate(
+                'constant("DB_USER")'
+            ));
+        answers:
+            - { value: root, correct: true }
+            - { value: An error, correct: false }
+
+    -   question: |
+            What is the output of the following?
+
+            $data = ['life' => 10, 'universe' => 10, 'everything' => 22];
+
+            var_dump($expressionLanguage->evaluate(
+                'data["life"] + data["universe"] + data["everything"]',
+                [
+                    'data' => $data,
+                ]
+            ));
+        answers:
+            - { value: 42, correct: true }
+            - { value: 10 + 10 + 22, correct: false }
+            - { value: 'data["life"] + data["universe"] + data["everything"]', correct: false }
+            - { value: An error, correct: false }
+
+    -   question: |
+            What is the output of the following?
+
+            var_dump($expressionLanguage->evaluate('not ("foo" matches "/bar/")'));
+        answers:
+            - { value: bool(true), correct: true }
+            - { value: bool(false), correct: false }
+            - { value: An error, correct: false }
+
+
+    -   question: |
+            What is the operator to perform a concatenation?
+        answers:
+            - { value: "~", correct: true }
+            - { value: ".", correct: false }
+            - { value: "+", correct: false }
+            - { value: "concat(a, b)", correct: false }
+
+    -   question: |
+            Is the following a valid expression language statement?
+
+            user.group in ["human_resources", "marketing"]
+        answers:
+            - { value: "Yes", correct: true }
+            - { value: "No", correct: false }
+
+    -   question: |
+            Is the following a valid expression language statement?
+
+            user.group not in ["human_resources", "marketing"]
+        answers:
+            - { value: "Yes", correct: true }
+            - { value: "No", correct: false }
+
+    -   question: |
+            Is the following a valid expression language statement?
+
+            not user.group in ["human_resources", "marketing"]
+        answers:
+            - { value: "No", correct: true }
+            - { value: "Yes", correct: false }
+
+    -   question: |
+            What is the output of the following?
+
+            class User
+            {
+                public $age;
+            }
+
+            $user = new User();
+            $user->age = 34;
+
+            $expressionLanguage->evaluate(
+                'user.age in 18..45',
+                [
+                    'user' => $user,
+                ]
+            );
+        answers:
+            - { value: "true", correct: true }
+            - { value: "false", correct: false }
+            - { value: "An error", correct: false }
+
+    -   question: |
+            What is the output of the following?
+
+            $expressionLanguage->evaluate(
+                "foo ? 'yes'",
+                [
+                    'foo' => false,
+                ]
+            );
+        answers:
+            - { value: "true", correct: false }
+            - { value: "false", correct: true }
+            - { value: "yes", correct: false }
+            - { value: "An error", correct: false }

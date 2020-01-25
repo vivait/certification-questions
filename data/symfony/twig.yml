@@ -65,7 +65,7 @@ questions:
     -   question: Which of the following are built-in Twig functions?
         answers:
             - {value: source(), correct: true}
-            - {value: render(), correct: true}
+            - {value: render(), correct: false}
             - {value: date(), correct: true}
             - {value: url(), correct: false}
             - {value: dump(), correct: true}
@@ -105,9 +105,11 @@ questions:
             What will be the outcome of evaluating this Twig code?
         answers:
             - {value: 'Twig will raise a Twig_Error_Syntax exception.', correct: false}
-            - {value: 'The output will display the string Foo is FOO and Bar is FOO..', correct: false}
+            - {value: 'The output will display the string Foo is FOO and Bar is FOO..', correct: true}
             - {value: 'The output will display the string Foo is and Bar is ..', correct: false}
-            - {value: 'The output will display the string Foo is FOO and Bar is ..', correct: true}
+            - {value: 'The output will display the string Foo is FOO and Bar is ..', correct: false}
+        help: |
+            https://twig.symfony.com/doc/3.x/tags/set.html
 
     -   question: Which of the following is not a supported Twig tag?
         answers:

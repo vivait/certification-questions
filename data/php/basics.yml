@@ -748,3 +748,19 @@ questions:
             - {value: "HelloWorld", correct: true }
             - {value: "Hello", correct: false }
             - {value: "An error", correct: false }
+
+
+    -   question: |
+            What will be the output of the following script?
+
+            <?php
+
+            $a = ['foo', 'bar' => 'baz', ['foobar', 'baz']];
+
+            echo count($a, true);
+        answers:
+            - {value: "4", correct: false }
+            - {value: "5", correct: true }
+            - {value: "An error", correct: false }
+            - {value: "2", correct: false }
+            - {value: "3", correct: false }

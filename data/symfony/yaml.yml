@@ -142,3 +142,16 @@ questions:
             - {value: An error, correct: true}
             - {value: The contents of the var variable in a HTML format, correct: false}
             - {value: 'string("hello world")', correct: false}
+
+    -   question: |
+            What will be the value of the b parameter?
+
+            a: "%%b%%"
+            b: "%a%%"
+        answers:
+            - {value: None, there will be a ParameterCircularReferenceException, correct: false}
+            - {value: %a%%, correct: false}
+            - {value: %b%%, correct: true}
+            - {value: %%b%%%, correct: false}
+            - {value: %a%, correct: false}
+

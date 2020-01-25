@@ -80,6 +80,24 @@ questions:
             - {value: No, correct: false}
 
     -   question: |
+            Will the following snippet throw an InvalidArgumentException ?
+
+            use Symfony\Component\Validator\Validation;
+            use Symfony\Component\Validator\Constraints\IsFalse;
+
+            $expectedFalse = '0';
+
+            $validator = Validation::createValidator();
+            $violations = $validator->validate($expectedFalse, [new IsFalse()]);
+
+            if (0 !== count($violations)) {
+                throw new InvalidArgumentException('The value is not false !');
+            }
+        answers:
+            - {value: Yes, correct: false}
+            - {value: No, correct: true}
+
+    -   question: |
             Which of the following values will fail Symfony\Component\Validator\Constraints\Blank's validation?
         answers:
             - {value: "''", correct: false}

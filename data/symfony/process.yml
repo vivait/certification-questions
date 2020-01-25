@@ -111,7 +111,131 @@ questions:
 
     -   question: What is the difference between start() and run()?
         answers:
-            - {value: "Start is asynchronous", correct: true}
-            - {value: "new Process(['/path/command --option argument etc.']);", correct: false}
-            - {value: "new Process('/path/command --option argument etc.');", correct: false}
-            - {value: "new Process('/path/command', '--option', 'argument', 'etc.');", correct: false}
+            - {value: "start is asynchronous", correct: true}
+            - {value: "run is asynchronous", correct: false}
+            - {value: "They're exactly the same, one is just an alias", correct: false}
+
+    -   question: What is the difference between start() and run()?
+        answers:
+            - {value: "start is asynchronous", correct: true}
+            - {value: "run is asynchronous", correct: false}
+            - {value: "They're exactly the same, one is just an alias", correct: false}
+
+    -   question: What is the difference between wait() and waitUntil()?
+        answers:
+            - {value: "waitUntil() takes a callback which when returns true, will allow the script to continue", correct: true}
+            - {value: "wait() takes a callback which when returns true, will allow the script to continue", correct: false}
+            - {value: "waitUntil() waits until the process has finished executing", correct: false}
+            - {value: "wait() waits until the process has finished executing", correct: true}
+
+    -   question: |
+            What is the result of the following script?
+
+            $process = new Process('php -r "echo \"hello\";"');
+            $process->setInput('echo " world";');
+            $process->run();
+
+            echo $process->getOutput();
+        answers:
+            - {value: "Hello", correct: true}
+            - {value: "Hello world", correct: false}
+            - {value: "An error", correct: false}
+
+    -   question: What is the signature of the stop() method?
+        answers:
+            - {value: "stop($timeout = 10, $signal = null)", correct: true}
+            - {value: "stop($signal = null, $timeout = 10)", correct: false}
+            - {value: "stop($signal, $timeout)", correct: false}
+            - {value: "stop($timeout, $signal)", correct: false}
+
+    -   question: What is the default value of the kill signal for process component?
+        answers:
+            - {value: "SIGINT", correct: true}
+            - {value: "0", correct: false}
+            - {value: "1", correct: false}
+            - {value: "KILLSIG", correct: false}
+
+    -   question: What is the default value of the kill signal for the process component?
+        answers:
+            - {value: "SIGINT", correct: true}
+            - {value: "0", correct: false}
+            - {value: "1", correct: false}
+            - {value: "3", correct: false}
+
+    -   question: What is the class to use to execute PHP in an isolated process?
+        answers:
+            - {value: 'Symfony\Component\Process\PhpProcess', correct: true}
+            - {value: 'Symfony\Component\Process\Php\PhpProcess', correct: false}
+            - {value: 'Symfony\Component\PhpProcess\PhpProcess', correct: false}
+            - {value: 'Symfony\Component\PhpProcess\Process', correct: false}
+
+    -   question: What is the method to change the time to the process closing?
+        answers:
+            - {value: "setTimeout", correct: true}
+            - {value: "setProcessTimeout", correct: false}
+            - {value: "setTimeToLive", correct: false}
+            - {value: "setProcessTimeToLive", correct: false}
+
+    -   question: What is the exception thrown when the process timesout?
+        answers:
+            - {value: 'Symfony\Component\Process\Exception\ProcessTimedOutException', correct: true}
+            - {value: 'Symfony\Component\Process\Exception\ProcessTimeOutException', correct: true}
+            - {value: 'Symfony\Component\Process\Exception\RuntimeException', correct: false}
+            - {value: '\Exception', correct: false}
+            - {value: '\RuntimeException', correct: false}
+            - {value: 'Symfony\Component\Process\Exception\ProcessFailedException', correct: false}
+
+    -   question: What is the difference between the setTimeout() and setIdleTimeout() methods?
+        answers:
+            - {value: "setIdleTimeout() only considers the time since the last output", correct: true}
+            - {value: "setTimeout() considers the time the whole command has ran for", correct: true}
+            - {value: "setIdleTimeout() only considers the time since the last input ", correct: false}
+            - {value: "setTimeout() considers the time the since the last output or input", correct: false}
+
+    -   question: What is the method to send a signal to a process?
+        answers:
+            - {value: "signal()", correct: true}
+            - {value: "setSignal()", correct: true}
+            - {value: "sendSignal()", correct: false}
+            - {value: "addSignal()", correct: false}
+
+    -   question: |
+            What is the result of the following script?
+
+            $process = new Process('php -r "echo \"hello\";"');
+            $process->run();
+            $process->disableOutput();
+
+            echo $process->getOutput();
+        answers:
+            - {value: "Nothing.", correct: true}
+            - {value: "hello", correct: true}
+            - {value: 'A Symfony\Component\Process\Exception\RuntimeException exception', correct: false}
+            - {value: 'A Symfony\Component\Process\Exception\LogicException exception', correct: false}
+
+    -   question: |
+            What is the result of the following script?
+
+            $process = new Process('php -r "echo \"hello\";"');
+            $process->disableOutput();
+            $process->run();
+
+            echo $process->getOutput();
+        answers:
+            - {value: "Nothing.", correct: true}
+            - {value: "hello", correct: true}
+            - {value: 'A Symfony\Component\Process\Exception\LogicException exception', correct: false}
+            - {value: 'A Symfony\Component\Process\Exception\RuntimeException exception', correct: false}
+
+    -   question: What is the purpose of the Symfony\Component\Process\PhpExecutableFinder class?
+        answers:
+            - {value: "finds the absolute path of the available executable PHP binary", correct: true}
+            - {value: "finds all executable PHP files on the server", correct: false}
+            - {value: "finds all PHP files on the server", correct: false}
+
+    -   question: What is the method to call to check where TTY are enabled on the current OS?
+        answers:
+            - {value: "Process::isTtySupported()", correct: true}
+            - {value: "$process->isTtySupported()", correct: false}
+            - {value: "Process::isTtyEnabled()", correct: false}
+            - {value: "$process->isTtyEnabled()", correct: false}
