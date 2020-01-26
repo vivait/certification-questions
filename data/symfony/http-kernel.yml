@@ -219,3 +219,30 @@ questions:
             - { value: 'redirectToRoute()', correct: true }
         help: |
             https://github.com/symfony/symfony/blob/3.0/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php
+
+    -   question: |
+            Which classes exists to help you test some code that is using a Symfony\Component\HttpFoundation\Session\Session object ?
+        answers:
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockSessionStorage', correct: false }
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockDatabaseSessionStorage', correct: false }
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage', correct: true }
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockArraySessionStorage', correct: true }
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockMemorySessionStorage', correct: false }
+
+    -   question: |
+            Which session storage class is best for functional testing?
+        answers:
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockSessionStorage', correct: false }
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockDatabaseSessionStorage', correct: false }
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage', correct: true }
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockArraySessionStorage', correct: false }
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockMemorySessionStorage', correct: false }
+
+    -   question: |
+            Which session storage class is best for unit testing?
+        answers:
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockSessionStorage', correct: false }
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockDatabaseSessionStorage', correct: false }
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage', correct: false }
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockArraySessionStorage', correct: true }
+            - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockMemorySessionStorage', correct: false }

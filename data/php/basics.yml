@@ -764,3 +764,31 @@ questions:
             - {value: "An error", correct: false }
             - {value: "2", correct: false }
             - {value: "3", correct: false }
+
+    -   question: |
+            What will be the output of the following script?
+
+            $name = 'Jean Luc';
+            $age  = 9;
+
+            printf("My name is %2$.4s and I'm %1$02d", $age, $name);
+        answers:
+            - {value: "My name is Jean and I'm 09", correct: true }
+            - {value: "My name is Jean Luc and I'm 9", correct: false }
+            - {value: "My name is 9 and I'm Jean Luc", correct: false }
+            - {value: "My name is $Jean Luc and I'm $9", correct: false }
+            - {value: "My name is Jean 9 and I'm Luc", correct: false }
+
+    -   question: |
+            What will be the output of the following script?
+
+            $name = 'Jean Luc';
+            $age  = 9;
+
+            printf("My name is %2$.1s and I'm %1$04d", $age, $name);
+        answers:
+            - {value: "My name is J and I'm 0009", correct: true }
+            - {value: "My name is Jean Luc and I'm 9", correct: false }
+            - {value: "My name is 9 and I'm Jean Luc", correct: false }
+            - {value: "My name is $Jean Luc and I'm $9", correct: false }
+            - {value: "My name is Jean 9 and I'm Luc", correct: false }

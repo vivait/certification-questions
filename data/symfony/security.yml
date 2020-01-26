@@ -152,3 +152,15 @@ questions:
                 correct: false
         help: |
             https://symfony.com/doc/current/security/form_login.html#control-the-redirect-url-from-inside-the-form
+
+    -   question: What is the purpose the IS_AUTHENTICATED_FULLY role?
+        answers:
+            - {value: "A user has the role when they're logged in using any method except by remember me", correct: true}
+            - {value: "A user has the role when they're logged in using any method", correct: false}
+            - {value: "A user has the role when they're able to login after signup", correct: false}
+
+    -   question: What is the purpose the IS_AUTHENTICATED_ANONYMOUSLY role?
+        answers:
+            - {value: "Every user has this role", correct: true}
+            - {value: "Only anonymous users have this role", correct: false}
+            - {value: "A user which had a session just expire has this role", correct: fals}
