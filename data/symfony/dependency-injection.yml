@@ -171,7 +171,7 @@ questions:
             - {value: "YAML", correct: false}
             - {value: "None of them (they're cached and compiled PHP before running).", correct: true}
             - {value: 'XML', correct: false}
-            - {value: 'PHP', correct: true}
+            - {value: 'PHP', correct: false}
 
     - question: "Which of the following is the correct way to decorate a service?"
       answers:

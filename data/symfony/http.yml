@@ -233,16 +233,6 @@ questions:
         help: |
             https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
 
-    -   question: Which of the following are valid HTTP request headers used in the validation caching model?
-        answers:
-            - { value: POST, correct: false }
-            - { value: PUT, correct: true }
-            - { value: HEAD, correct: false }
-            - { value: GET, correct: false }
-        help: |
-            https://tools.ietf.org/html/rfc2616#page-85
-            https://symfony.com/doc/current/http_cache/validation.html#validation-with-the-etag-header
-
     -   question: What returned HTTP call using the method HEAD?
         answers:
             - { value: The exact same as GET except without a message body, correct: true }
