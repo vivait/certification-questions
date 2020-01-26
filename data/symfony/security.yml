@@ -163,4 +163,4 @@ questions:
         answers:
             - {value: "Every user has this role", correct: true}
             - {value: "Only anonymous users have this role", correct: false}
-            - {value: "A user which had a session just expire has this role", correct: fals}
+            - {value: "A user which had a session just expire has this role", correct: false}

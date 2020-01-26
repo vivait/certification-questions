@@ -2,43 +2,43 @@ category: HTTP Codes
 questions:
     -   question: 'What is the status codes for Information responses?'
         answers:
-            - { value: 1XX, correct: true }
-            - { value: 2XX, correct: false }
-            - { value: 3XX, correct: false }
-            - { value: 4XX, correct: false }
-            - { value: 5XX, correct: false }
+            - { value: "'1XX'", correct: true }
+            - { value: "'2XX'", correct: false }
+            - { value: "'3XX'", correct: false }
+            - { value: "'4XX'", correct: false }
+            - { value: "'5XX'", correct: false }
 
     -   question: 'What is the status codes for Successful responses?'
         answers:
-            - { value: 1XX, correct: false }
-            - { value: 2XX, correct: true }
-            - { value: 3XX, correct: false }
-            - { value: 4XX, correct: false }
-            - { value: 5XX, correct: false }
+            - { value: "'1XX'", correct: false }
+            - { value: "'2XX'", correct: true }
+            - { value: "'3XX'", correct: false }
+            - { value: "'4XX'", correct: false }
+            - { value: "'5XX'", correct: false }
 
     -   question: 'What is the status codes for Redirection messages?'
         answers:
-            - { value: 1XX, correct: false }
-            - { value: 2XX, correct: false }
-            - { value: 3XX, correct: true }
-            - { value: 4XX, correct: false }
-            - { value: 5XX, correct: false }
+            - { value: "'1XX'", correct: false }
+            - { value: "'2XX'", correct: false }
+            - { value: "'3XX'", correct: true }
+            - { value: "'4XX'", correct: false }
+            - { value: "'5XX'", correct: false }
 
     -   question: 'What is the status codes for Client error responses?'
         answers:
-            - { value: 1XX, correct: false }
-            - { value: 2XX, correct: false }
-            - { value: 3XX, correct: false }
-            - { value: 4XX, correct: true }
-            - { value: 5XX, correct: false }
+            - { value: "'1XX'", correct: false }
+            - { value: "'2XX'", correct: false }
+            - { value: "'3XX'", correct: false }
+            - { value: "'4XX'", correct: true }
+            - { value: "'5XX'", correct: false }
 
     -   question: 'What is the status codes for Server error responses?'
         answers:
-            - { value: 1XX, correct: false }
-            - { value: 2XX, correct: false }
-            - { value: 3XX, correct: false }
-            - { value: 4XX, correct: false }
-            - { value: 5XX, correct: true }
+            - { value: "'1XX'", correct: false }
+            - { value: "'2XX'", correct: false }
+            - { value: "'3XX'", correct: false }
+            - { value: "'4XX'", correct: false }
+            - { value: "'5XX'", correct: true }
 
     -   question: 'What is the HTTP status code for Internal Server Error?'
         answers:

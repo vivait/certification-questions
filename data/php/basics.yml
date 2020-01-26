@@ -601,7 +601,7 @@ questions:
             echo $myValue;
         answers:
             - {value: "'5'", correct: false }
-            - {value: null, correct: false }
+            - {value: "null", correct: false }
             - {value: "'2'", correct: true }
             - {value: 42, correct: false }
 
@@ -617,8 +617,7 @@ questions:
         answers:
             - {value: '$dom->appendTextNode($title, "Hello, World!");', correct: false }
             - {value: "$dom->createTextNode('Hello, World!');", correct: true }
-            - {value: None of the above, correct: true }
-            - {value: "$dom->appendElement($title, 'text', 'Hello, World!');", correct: false }
+            - {value: "$dom->appendElement($title, 'tet', 'Hello, World!');", correct: false }
             - {value: "$dom->createElement('text', 'Hello, World!');", correct: false }
 
 
@@ -792,3 +791,32 @@ questions:
             - {value: "My name is 9 and I'm Jean Luc", correct: false }
             - {value: "My name is $Jean Luc and I'm $9", correct: false }
             - {value: "My name is Jean 9 and I'm Luc", correct: false }
+
+    -   question: |
+            What is the result of the following script?
+
+            class MyClass
+            {
+
+                function myMethod()
+                {
+                    return function () {
+                        var_dump(get_class($this));
+                    };
+                }
+            }
+
+            class AnotherClass
+            {
+
+                function myMethod()
+                {
+                    (new MyClass)->myMethod()();
+                }
+            }
+
+            (new AnotherClass)->myMethod();
+        answers:
+            - {value: "string(MyClass)", correct: true }
+            - {value: "string(AnotherClass)", correct: false }
+            - {value: "An error", correct: false }
