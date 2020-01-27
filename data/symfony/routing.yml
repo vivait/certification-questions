@@ -364,8 +364,16 @@ questions:
             - {value: "new Router($loader, 'route.yml', ['cache' => ['dir' => '/somedir']])", correct: false}
 
     -   question: |
-            How ensure a route can respect UTF8 characters?
+            How can one ensure a route can respect UTF8 characters?
         answers:
             - {value: "new Route('/show/{slug}', $defaults, ['utf8' => true,])", correct: true}
             - {value: "new Route('/show/{slug}', $defaults, true)", correct: false}
             - {value: "new Route('/show/{slug}', ['utf8' => true])", correct: false}
+
+    -   question: |
+            How is it possible to generate absolute URLs from the Console?
+        answers:
+            - {value: "By specifying the host parameter in the Twig function url().", correct: false}
+            - {value: "By overloading the parameter router.request_context.host in the configuration.", correct: true}
+            - {value: "$this->getContainer()->get('router')->getContext()->setHost('example.org');", correct: true}
+            - {value: "The host is automatically known by Symfony, there is no need to specify it in CLI.", correct: false}

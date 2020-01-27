@@ -60,6 +60,11 @@ questions:
             - {value: Yes, correct: false}
             - {value: No, correct: true}
 
+    -   question: Should the check_path route be behind a firewall?
+        answers:
+            - {value: No, correct: false}
+            - {value: Yes, correct: true}
+
     -   question: What is the signature of the voteOnAttribute() method from Symfony\Component\Security\Core\Authorization\Voter\Voter abstract class?
         answers:
             - {value: 'voteOnAttribute($attribute, TokenInterface $token, $subject)', correct: false}
