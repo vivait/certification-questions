@@ -179,7 +179,7 @@ questions:
     -   question: What is the exception thrown when the process timesout?
         answers:
             - {value: 'Symfony\Component\Process\Exception\ProcessTimedOutException', correct: true}
-            - {value: 'Symfony\Component\Process\Exception\ProcessTimeOutException', correct: true}
+            - {value: 'Symfony\Component\Process\Exception\ProcessTimeOutException', correct: false}
             - {value: 'Symfony\Component\Process\Exception\RuntimeException', correct: false}
             - {value: '\Exception', correct: false}
             - {value: '\RuntimeException', correct: false}

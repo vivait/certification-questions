@@ -63,6 +63,19 @@ questions:
             - { value: TRACE, correct: false }
             - { value: PATCH, correct: true }
 
+    -   question: "Which of these methods are mentioned in the RFC2616?"
+        answers:
+            - { value: "OPTIONS", correct: true }
+            - { value: "GET", correct: true }
+            - { value: "HEAD", correct: true }
+            - { value: "POST", correct: true }
+            - { value: "PUT", correct: true }
+            - { value: "DELETE", correct: true }
+            - { value: "TRACE", correct: true }
+            - { value: "CONNECT", correct: true }
+            - { value: LINK, correct: false }
+            - { value: PATCH, correct: false }
+
     -   question: "Is there any required header in the request ?"
         answers:
             - { value: No, correct: false }
@@ -220,12 +233,9 @@ questions:
         help: |
             https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
 
-    -   question: Which of the following are valid HTTP request headers used in the validation caching model?
+    -   question: What returned HTTP call using the method HEAD?
         answers:
-            - { value: POST, correct: false }
-            - { value: PUT, correct: true }
-            - { value: HEAD, correct: false }
+            - { value: The exact same as GET except without a message body, correct: true }
+            - { value: A formatted list of all headers which the server returns, correct: false }
+            - { value: A specified number of bytes of the message body, correct: false }
             - { value: GET, correct: false }
-        help: |
-            https://tools.ietf.org/html/rfc2616#page-85
-            https://symfony.com/doc/current/http_cache/validation.html#validation-with-the-etag-header

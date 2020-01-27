@@ -102,3 +102,12 @@ questions:
             - { value: "php bin/console translator:translations:list fr --unused", correct: false }
             - { value: "php bin/console translator:detect fr --only-unused", correct: false }
             - { value: "php bin/console translator:detect fr --unused", correct: false }
+
+    -   question: |
+            Which of theses are methods of Symfony\Component\Translation\TranslatorInterface?
+        answers:
+            - { value: "trans()", correct: true }
+            - { value: "transChoice()", correct: true }
+            - { value: "translate()", correct: false }
+            - { value: "getTranslations()", correct: false }
+            - { value: "getTranslation()", correct: false }

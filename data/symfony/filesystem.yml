@@ -15,18 +15,8 @@ questions:
             $filesystem->exists(['rabbit.jpg', 'bottle.png']);
         answers:
             - { value: Nothing, correct: false }
-            - { value: True, correct: false }
-            - { value: False, correct: true }
-            - { value: An error, correct: true }
-
-    -   question: |
-            What will the following script return if rabbit.jpg does not exist ?
-
-            $filesystem->exists(['rabbit.jpg', 'bottle.png']);
-        answers:
-            - { value: Nothing, correct: false }
-            - { value: True, correct: false }
-            - { value: False, correct: true }
+            - { value: "True", correct: false }
+            - { value: "False", correct: true }
 
     -   question: Can FileSystem::copy copy directories?
         answers:
