@@ -820,3 +820,31 @@ questions:
             - {value: "string(MyClass)", correct: true }
             - {value: "string(AnotherClass)", correct: false }
             - {value: "An error", correct: false }
+
+
+    -   question: |
+            Consider the following code snippet:
+
+            <ul>
+            <?php foreach ($letters as $letter) : ?>
+                <li><?= $letter ?></li>
+            <?php endforeach ?>
+            </ul>
+
+            Which of the following $letters variable declarations will make this script generate an HTML list of the 26 alphabet letters on any PHP versions?
+        answers:
+            - {value: "$letters = range('A', 'Z');", correct: true }
+            - {value: "$letters = str_split('ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: true }
+            - {value: "$letters = explode('', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: false }
+            - {value: "$letters = split('//', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: false }
+            - {value: "$letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';", correct: false }
+
+    -   question: |
+            What is the $result of the following:
+
+            array_map('var_dump', str_split('AAABBBCCC', 2));
+        answers:
+            - {value: "AA AB BB CC C", correct: true }
+            - {value: "AAABBBCCC", correct: true }
+            - {value: "AAA BBB CCC", correct: false }
+            - {value: "A A A B B B C C C", correct: false }
