@@ -127,7 +127,6 @@ questions:
             - { value: "$finder->in(__DIR__)->in('/elsewhere');", correct: true }
             - { value: "$finder->in([__DIR__, '/elsewhere']);", correct: true }
             - { value: "$finder->in(__DIR__, '/elsewhere');", correct: false }
-            - { value: "$finder->in(__DIR__)->in('/elsewhere');", correct: true }
 
     -   question: |
             Is the following usage of the finder correct:

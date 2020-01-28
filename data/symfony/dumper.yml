@@ -320,7 +320,7 @@ questions:
         answers:
             -   value: |
                     $dumper = new HtmlDumper();
-                    $dumper->dump($var, $output, 160]);
+                    $dumper->dump($var, $output, 160);
                 correct: true
 
             -   value: |
