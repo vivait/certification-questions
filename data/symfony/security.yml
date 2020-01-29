@@ -169,3 +169,11 @@ questions:
             - {value: "Every user has this role", correct: true}
             - {value: "Only anonymous users have this role", correct: false}
             - {value: "A user which had a session just expire has this role", correct: false}
+
+    -   question: Which class can be used to extracts security errors from a Request?
+        answers:
+            - {value: "AuthenticationUtils", correct: true}
+            - {value: "RequestUtils", correct: false}
+            - {value: "SecurityUtils", correct: false}
+            - {value: "FrameworkUtils", correct: false}
+            - {value: "HttpUtils", correct: false}

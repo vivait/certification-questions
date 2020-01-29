@@ -85,3 +85,10 @@ questions:
             - {value: in the public/ directory, correct: false }
             - {value: in the src/Resources/public/ directory, correct: false }
             - {value: in the assets/ directory of each bundle, correct: true }
+
+
+    -   question: |
+            According to the official Symfony Best Practices Guide, is it recommended to store the sensitive global parameters (ie. database credentials, etc.) outside of the project (ie. environment variables, external configuration file, etc.)?
+        answers:
+            - {value: No, correct: false }
+            - {value: Yes, correct: true }
