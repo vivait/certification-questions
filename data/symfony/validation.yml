@@ -196,5 +196,5 @@ questions:
         answers:
             - {value: RFC 2616, correct: false}
             - {value: PSR-2, correct: false}
-            - {value: CVE-2015-2308, correct: false
+            - {value: 'CVE-2015-2308', correct: false}
             - {value: JSR 303, correct: true}
