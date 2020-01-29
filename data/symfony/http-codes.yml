@@ -303,7 +303,8 @@ questions:
 
     -   question: 'What is the HTTP status code for Forbidden?'
         answers:
-            - { value: 403, correct: true}
+            - { value: 403, correct: true  }
+            - { value: 401, correct: false }
             - { value: 403, correct: false }
             - { value: 417, correct: false }
             - { value: 400, correct: false }
