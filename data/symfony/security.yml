@@ -41,9 +41,9 @@ questions:
     -   question: "Which is the interface used for all security authentication listeners?"
         answers:
             - {value: Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface, correct: true}
-            - {value: Symfony\\Component\\Security\Core\Authentication\AuthenticationManagerInterface, correct: false}
+            - {value: Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface, correct: false}
             - {value: Sensio\Bundle\FrameworkExtraBundle\EventListener\SecurityListenerInterface, correct: false}
-            - {value: Symfony\\Component\\Security\Guard\GuardAuthenticatorInterface, correct: false}
+            - {value: Symfony\Component\Security\Guard\GuardAuthenticatorInterface, correct: false}
 
     -   question: Which of the following "roles" are built-in ?
         answers:
@@ -65,14 +65,14 @@ questions:
             - {value: No, correct: false}
             - {value: Yes, correct: true}
 
-    -   question: What is the signature of the voteOnAttribute() method from Symfony\\Component\\Security\Core\Authorization\Voter\Voter abstract class?
+    -   question: What is the signature of the voteOnAttribute() method from Symfony\Component\Security\Core\Authorization\Voter\Voter abstract class?
         answers:
             - {value: 'voteOnAttribute($attribute, TokenInterface $token, $subject)', correct: false}
             - {value: 'voteOnAttribute(TokenInterface $token, $subject, $attribute)', correct: false}
             - {value: 'voteOnAttribute(TokenInterface $token, $attribute, $subject)', correct: false}
             - {value: 'voteOnAttribute($attribute, $subject, TokenInterface $token)', correct: true}
 
-    -   question: Which are the constants defined in Symfony\\Component\\Security\Core\Security class?
+    -   question: Which are the constants defined in Symfony\Component\Security\Core\Security class?
         answers:
             - {value: WRONG_PASSWORD, correct: false}
             - {value: AUTHENTICATION_ERROR, correct: true}
@@ -84,7 +84,7 @@ questions:
 
     -   question: In order to create a custom password encoder, what must you do
         answers:
-            - {value: Implement the Symfony\\Component\\Security\Core\Encoder\PasswordEncoderInterface, correct: true}
+            - {value: Implement the Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface, correct: true}
             - {value: Implement the encodePassword() method, correct: true}
             - {value: Implement the isPasswordValid() method, correct: true}
             - {value: Implement the isPasswordTooLong() method, correct: false}
@@ -124,10 +124,10 @@ questions:
     -   question: "What is the parent of Symfony\\Component\\Security\\Guard\\GuardAuthenticatorInterface?"
         answers:
             - {value: None, correct: false}
-            - {value: Symfony\\Component\\Security\AuthenticatorInterface, correct: false}
-            - {value: Symfony\\Component\\Security\Http\EntryPoint\AuthenticationEntryPointInterface, correct: true}
-            - {value: Symfony\\Component\\Security\Authenticator\AuthenticatorInterface, correct: false}
-            - {value: Symfony\\Component\\Security\Http\AuthenticatorInterface, correct: false}
+            - {value: Symfony\Component\Security\AuthenticatorInterface, correct: false}
+            - {value: Symfony\Component\Security\Http\EntryPoint\AuthenticationEntryPointInterface, correct: true}
+            - {value: Symfony\Component\Security\Authenticator\AuthenticatorInterface, correct: false}
+            - {value: Symfony\Component\Security\Http\AuthenticatorInterface, correct: false}
 
     -   question: "By default, what is the form field containing the CSRF token?"
         answers:
@@ -170,99 +170,10 @@ questions:
             - {value: "Only anonymous users have this role", correct: false}
             - {value: "A user which had a session just expire has this role", correct: false}
 
-    -   question: Which of the following are security components?
+    -   question: Which class can be used to extracts security errors from a Request?
         answers:
-            - {value: "symfony/security-core", correct: true}
-            - {value: "symfony/security-http", correct: true}
-            - {value: "symfony/security-csrf", correct: true}
-            - {value: "symfony/security-guard", correct: true}
-            - {value: "symfony/security-framework", correct: false}
-            - {value: "symfony/security-authentication", correct: false}
-
-    -   question: Which of the following are not security components?
-        answers:
-            - {value: "symfony/security-core", correct: false}
-            - {value: "symfony/security-http", correct: false}
-            - {value: "symfony/security-csrf", correct: false}
-            - {value: "symfony/security-guard", correct: false}
-            - {value: "symfony/security-framework", correct: true}
-            - {value: "symfony/security-authentication", correct: true}
-
-    -   question: What is the purpose of the symfony/security-core component?
-        answers:
-            - {value: "It provides all the common security features.", correct: false}
-            - {value: "It provides integration into the Symfony framework.", correct: false}
-            - {value: "It provides security integration for your application kernel.", correct: false}
-
-    -   question: What is the purpose of the symfony/security-http component?
-        answers:
-            - {value: "It integrates the core sub-component with the HTTP protocol.", correct: true}
-            - {value: "It provides integration with the HTTP Foundation component.", correct: false}
-            - {value: "It provides security for your HTTP application kernel.", correct: false}
-
-    -   question: What is the purpose of the symfony/security-csrf component?
-        answers:
-            - {value: "It provides protection against CSRF attacks.", correct: true}
-            - {value: "It provides integration with the Symfony Form component.", correct: false}
-            - {value: "It provides security integration for your application kernel.", correct: false}
-
-    -   question: What is the purpose of the symfony/security-guard component?
-        answers:
-            - {value: "It provides more complex authentication mechanism for your application.", correct: true}
-            - {value: "It provides integration with the HTTP Foundation component.", correct: false}
-            - {value: "It provides a guard for your application kernel.", correct: false}
-
-    -   question: What is authentication?
-        answers:
-            - {value: "Verifying the user is who they say they are.", correct: true}
-            - {value: "Deciding if the user has access to a resource.", correct: false}
-            - {value: "Protecting your application from malicious actors.", correct: false}
-        help: |
-            https://miro.medium.com/max/1000/0*EGe-sdGsXYBtlmkW.png
-
-    -   question: What is authorization?
-        answers:
-            - {value: "Deciding if the user has access to a resource.", correct: true}
-            - {value: "Verifying the user is who they say they are.", correct: false}
-            - {value: "Protecting your application from malicious actors.", correct: false}
-        help: |
-            https://miro.medium.com/max/1000/0*EGe-sdGsXYBtlmkW.png
-
-    -   question: What is authorization?
-        answers:
-            - {value: "Deciding if the user has access to a resource.", correct: true}
-            - {value: "Verifying the user is who they say they are.", correct: false}
-            - {value: "Protecting your application from malicious actors.", correct: false}
-        help: |
-            https://miro.medium.com/max/1000/0*EGe-sdGsXYBtlmkW.png
-
-    -   question: What interface must Tokens implement?
-        answers:
-            - {value: "Symfony\\Component\\Security\\Core\Authentication\\Token\\TokenInterface", correct: true}
-            - {value: "Symfony\\Component\\Security\\Authentication\\Token\\TokenInterface", correct: false}
-            - {value: "Symfony\\Component\\Security\\Core\\Authentication\\TokenInterface", correct: false}
-            - {value: "Symfony\\Component\\Security\\Authentication\\TokenInterface", correct: false}
-            - {value: "Symfony\\Component\\Security\\Core\\Authentication\\TokenInterface", correct: false}
-            - {value: "Symfony\\Component\\Security\\Authentication\\TokenInterface", correct: false}
-        help: |
-            https://symfony.com/doc/current/components/security/authentication.html
-
-    -   question: What is the purpose of an Authentication Manager?
-        answers:
-            - {value: "They take a token and return it authenticated, or throw an exception if it can be", correct: true}
-            - {value: "", correct: false}
-        help: |
-            https://symfony.com/doc/current/components/security/authentication.html#the-authentication-manager
-
-    -   question: What is the default authentication manager?
-        answers:
-            - { value: "Symfony\\Component\\Security\\Core\\Authentication\\AuthenticationProviderManager", correct: true }
-            - { value: "Symfony\\Component\\Security\\Core\\Authentication\\AuthenticationManager", correct: false }
-            - { value: "Symfony\\Component\\Security\\Core\\Authentication\\DefaultAuthenticationManager", correct: false }
-            - { value: "Symfony\\Component\\Security\\Authentication\\AuthenticationProviderManager", correct: false }
-            - { value: "Symfony\\Component\\Security\\Authentication\\AuthenticationManager", correct: false }
-            - { value: "Symfony\\Component\\Security\\Authentication\\DefaultAuthenticationManager", correct: false }
-        help: |
-            https://symfony.com/doc/current/components/security/authentication.html#the-authentication-manager
-
-#       https://symfony.com/doc/current/components/security/authentication.html#authentication-providers
+            - {value: "AuthenticationUtils", correct: true}
+            - {value: "RequestUtils", correct: false}
+            - {value: "SecurityUtils", correct: false}
+            - {value: "FrameworkUtils", correct: false}
+            - {value: "HttpUtils", correct: false}

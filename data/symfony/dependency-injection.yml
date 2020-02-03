@@ -639,9 +639,11 @@ questions:
     -   question: "What is the tag to register a service that initializes objects before validation?"
         answers:
             - {value: "validator.initializer", correct: true}
+            - {value: "validation.initializer", correct: false}
             - {value: "validator.initializer_object", correct: false}
+            - {value: "validation.initializer_object", correct: false}
             - {value: 'validator.object_initializer', correct: false}
-            - {value: 'validator.object', correct: false}
+            - {value: 'validation.object_initializer', correct: false}
 
     -   question: What is a "Service Configurator" in Symfony?
         answers:

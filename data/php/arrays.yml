@@ -76,10 +76,10 @@ questions:
 
             $myArray[] = 25;
         answers:
-            - {value: '29', correct: false}
-            - {value: '8', correct: false}
-            - {value: '0', correct: false}
-            - {value: '9', correct: true}
+            - {value: "'29'", correct: false}
+            - {value: "'8'", correct: false}
+            - {value: "'0'", correct: false}
+            - {value: "'9'", correct: true}
 
     -   question: 'How do you add the value 10 to an array called $myArray?'
         answers:

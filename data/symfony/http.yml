@@ -81,6 +81,14 @@ questions:
             - { value: No, correct: false }
             - { value: Yes, correct: true }
 
+    -   question: "Which of the following is a required header in a HTTP 1.1 request ?"
+        answers:
+            - { value: Host, correct: true }
+            - { value: Content-Length, correct: false }
+            - { value: Connection, correct: false }
+            - { value: Cache-Control, correct: false }
+            - { value: Accept, correct: false }
+
     -   question: What is content negotiation?
         answers:
             - { value: 'The process of choosing specific representation when the resource is called', correct: true }

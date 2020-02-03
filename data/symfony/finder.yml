@@ -153,7 +153,7 @@ questions:
     -   question: |
             What would be the order of the following files after a call to sortByName() with no arguments?
 
-            file2.txt, file1.txt, file3.txt
+            file2.txt, file1.txt, file10.txt
         answers:
             - { value: "file1.txt, file2.txt, file10.txt", correct: false }
             - { value: "file1.txt, file10.txt, file2.txt", correct: true }
@@ -167,7 +167,7 @@ questions:
     -   question: |
             What would be the order of the following files after a call to sortByName() with true as its first argument?
 
-            file2.txt, file1.txt, file3.txt
+            file2.txt, file1.txt, file10.txt
         answers:
             - { value: "file1.txt, file2.txt, file10.txt", correct: true }
             - { value: "file1.txt, file10.txt, file2.txt", correct: false }

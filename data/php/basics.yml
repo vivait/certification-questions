@@ -848,3 +848,60 @@ questions:
             - {value: "AAABBBCCC", correct: true }
             - {value: "AAA BBB CCC", correct: false }
             - {value: "A A A B B B C C C", correct: false }
+
+    -   question: |
+            Which of the following is not a predefined PHP variable?
+        answers:
+            - {value: "$php_errormsg", correct: false }
+            - {value: "$http_response_header", correct: false }
+            - {value: "$_POST", correct: false }
+            - {value: "$_GLOBALS", correct: true }
+            - {value: "$argc", correct: false }
+
+    -   question: |
+            What is the purpose of $php_errormsg?
+        answers:
+            - {value: "It contains the previous error message", correct: false }
+            - {value: "It contains an object of the last error", correct: false }
+            - {value: "It has no special meaning it's just a variable", correct: false }
+            - {value: "It has no special meaning it's just a variable", correct: false }
+
+    -   question: |
+            What is the purpose of $argc?
+        answers:
+            - {value: "It contains the number of arguments passed to the script", correct: true }
+            - {value: "It contains a list of arguments passed to the script", correct: false }
+            - {value: "It contains the number of arguments passed to the current script", correct: false }
+            - {value: "It contains a list of arguments passed to the current script", correct: false }
+
+    -   question: |
+            Which of the following are predefined PHP variables?
+        answers:
+            - {value: "$GLOBALS", correct: true }
+            - {value: "$_GLOBALS", correct: false }
+            - {value: "$_SERVER", correct: true }
+            - {value: "$SERVER", correct: false }
+            - {value: "$_GET", correct: true }
+            - {value: "$GET", correct: false }
+            - {value: "$_POST", correct: true }
+            - {value: "$POST", correct: false }
+            - {value: "$_FILES", correct: true }
+            - {value: "$FILES", correct: false }
+            - {value: "$_REQUEST", correct: true }
+            - {value: "$REQUEST", correct: false }
+            - {value: "$_SESSION", correct: true }
+            - {value: "$SESSION", correct: false }
+            - {value: "$_ENV", correct: true }
+            - {value: "$ENV", correct: false }
+            - {value: "$_COOKIE", correct: true }
+            - {value: "$COOKIE", correct: false }
+            - {value: "$php_errormsg", correct: true }
+            - {value: "$_errormsg", correct: false }
+            - {value: "$HTTP_RAW_POST_DATA", correct: true }
+            - {value: "$PHP_HTTP_RAW_POST_DATA", correct: false }
+            - {value: "$http_response_header", correct: true }
+            - {value: "$HTTP_RESPONSE_HEADER", correct: false }
+            - {value: "$argc", correct: true }
+            - {value: "$php_argc", correct: false }
+            - {value: "$argv", correct: true }
+            - {value: "$php_argv", correct: false }
