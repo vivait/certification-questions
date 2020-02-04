@@ -101,7 +101,7 @@ questions:
             Which of the following values will fail Symfony\Component\Validator\Constraints\Blank's validation?
         answers:
             - {value: "''", correct: false}
-            - {value: null, correct: false}
+            - {value: "null", correct: false}
             - {value: '[]', correct: true}
             - {value: 'new \stdClass', correct: true}
             - {value: '0', correct: true}

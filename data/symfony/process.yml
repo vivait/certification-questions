@@ -208,9 +208,9 @@ questions:
 
             echo $process->getOutput();
         answers:
-            - {value: "Nothing.", correct: true}
-            - {value: "hello", correct: true}
-            - {value: 'A Symfony\Component\Process\Exception\RuntimeException exception', correct: false}
+            - {value: "Nothing.", correct: false}
+            - {value: "hello", correct: false}
+            - {value: 'A Symfony\Component\Process\Exception\RuntimeException exception', correct: true}
             - {value: 'A Symfony\Component\Process\Exception\LogicException exception', correct: false}
 
     -   question: |
@@ -223,7 +223,7 @@ questions:
             echo $process->getOutput();
         answers:
             - {value: "Nothing.", correct: true}
-            - {value: "hello", correct: true}
+            - {value: "hello", correct: false}
             - {value: 'A Symfony\Component\Process\Exception\LogicException exception', correct: false}
             - {value: 'A Symfony\Component\Process\Exception\RuntimeException exception', correct: false}
 
