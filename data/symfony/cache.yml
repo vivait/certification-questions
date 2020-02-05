@@ -41,3 +41,70 @@ questions:
             - { value: 'setSharedMaxAge', correct: true }
             - { value: 'setEtag', correct: false }
             - { value: 'setCache', correct: false }
+
+    -   question: How can one enable the caching in a Symfony application?
+        answers:
+            - { value: 'In the front controller wrap the Kernel with a new kernel that extends Symfony\Bundle\FrameworkBundle\HttpCache\HttpCache', correct: true }
+            - { value: 'In the front controller wrap the Kernel with a new kernel that extends Symfony\Bundle\FrameworkBundle\\HttpCache\HttpCacheKernel', correct: false }
+            - { value: 'Set the option framework.caching to true', correct: false }
+            - { value: 'Set the option framework.http_caching to true', correct: false }
+            - { value: 'Set the option framework.cache to true', correct: false }
+
+    -   question: How can one alter the configuration option of the HttpCache Kernel?
+        answers:
+            - { value: 'By implementing the getOptions() method and returning the config', correct: true }
+            - { value: 'Options can be changed using the options argument of the constructor', correct: true }
+            - { value: 'By calling the setOptions() method on Kernel', correct: false }
+            - { value: 'Each option has its own method for changing the option', correct: false }
+
+    -   question: How can one alter the configuration option of the HttpCache Kernel?
+        answers:
+            - { value: 'By implementing the getOptions() method and returning the config', correct: true }
+            - { value: 'Options can be changed using the options argument of the constructor', correct: true }
+            - { value: 'By calling the setOptions() method on Kernel', correct: false }
+            - { value: 'Each option has its own method for changing the option', correct: false }
+
+    -   question: What is the purpose of the debug option for the HttpCache Kernel?
+        answers:
+            - { value: 'When enabled exceptions are thrown when things go wrong', correct: true }
+            - { value: 'When enabled the cache is refreshed every request', correct: true }
+            - { value: 'When disabled the cache is never refreshed', correct: false }
+            - { value: 'Each option has its own method for changing the option', correct: false }
+
+    -   question: What is the purpose of the private_headers option for the HttpCache Kernel?
+        answers:
+            - { value: 'It contains a list of headers that force the responses to be private', correct: true }
+            - { value: 'It contains a list of headers that should be hidden from caches', correct: false }
+            - { value: 'When enabled the cache is marked as private', correct: false }
+            - { value: 'When enabled the cache is marked as private', correct: false }
+
+    -   question: What is the purpose of the allow_reload option for the HttpCache Kernel?
+        answers:
+            - { value: 'When enabled it makes the no-cache directive reload caches', correct: true }
+            - { value: 'When enabled it makes the max-age=0 directive reload caches', correct: false }
+            - { value: 'When enabled it makes the cache reload on every request to the kernel', correct: false }
+            - { value: 'When disabled it stops cache from ever being reloaded', correct: false }
+            - { value: 'When disabled it sends the no-store cache directive in every response', correct: false }
+
+    -   question: What is the purpose of the allow_revalidate option for the HttpCache Kernel?
+        answers:
+            - { value: 'When enabled it makes the max-age=0 directive revalidate caches', correct: true }
+            - { value: 'When enabled it makes the no-cache directive revalidate caches', correct: false }
+            - { value: 'When enabled it makes the cache revalidate on every request to the kernel', correct: false }
+            - { value: 'When disabled it stops cache from ever being revalidated', correct: false }
+            - { value: 'When disabled it sends the no-transform cache directive in every response', correct: false }
+
+    -   question: What is the purpose of the stale_while_revalidate option for the HttpCache Kernel?
+        answers:
+            - { value: 'When enabled it makes the max-age=0 directive revalidate caches', correct: true }
+            - { value: 'When enabled it makes the no-cache directive revalidate caches', correct: false }
+            - { value: 'When enabled it makes the cache revalidate on every request to the kernel', correct: false }
+            - { value: 'When disabled it stops cache from ever being revalidated', correct: false }
+            - { value: 'When disabled it sends the no-transform cache directive in every response', correct: false }
+
+    -   question: What is the purpose of the getLogs() method on the HttpCache Kernel?
+        answers:
+            - { value: 'Gets a string representation of what happened in the cache layer', correct: true }
+            - { value: 'Gets list of objects representing what happened in the cache layer', correct: false }
+            - { value: 'Output the kernels logs to provided logs system', correct: false }
+#TODO: https://symfony.com/doc/current/http_cache.html#making-your-responses-http-cacheable
