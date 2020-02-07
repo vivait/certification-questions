@@ -107,4 +107,41 @@ questions:
             - { value: 'Gets a string representation of what happened in the cache layer', correct: true }
             - { value: 'Gets list of objects representing what happened in the cache layer', correct: false }
             - { value: 'Output the kernels logs to provided logs system', correct: false }
-#TODO: https://symfony.com/doc/current/http_cache.html#making-your-responses-http-cacheable
+
+    -   question: What scenarios are a good use for Symfony's Reverse Proxy?
+        answers:
+            - { value: 'A shared host where you cannot install anything beyond PHP code', correct: true }
+            - { value: 'During development', correct: true }
+            - { value: 'For when you want your application to perform the best', correct: false }
+            - { value: 'When your website is serving lots of static content', correct: false }
+
+    -   question: |
+            How can one add the must-revalidate cache directive to a response object?
+        answers:
+            - { value: "$response->headers->addCacheControlDirective('must-revalidate', true);", correct: true }
+            - { value: "$response->addCacheControlDirective('must-revalidate', true);", correct: false }
+            - { value: "$response->addControlDirective('must-revalidate', true);", correct: false }
+            - { value: "$response->headers->addControlDirective('must-revalidate', true);", correct: false }
+
+    -   question: |
+            Which HTTP methods are recommended to cache?
+        answers:
+            - { value: "GET", correct: true }
+            - { value: "HEAD", correct: false }
+            - { value: "PUT", correct: false }
+            - { value: "POST", correct: false }
+            - { value: "PATCH", correct: false }
+        help: |
+            https://symfony.com/doc/current/http_cache.html#safe-methods-only-caching-get-or-head-requests
+
+    -   question: |
+            How can one stop Symfony from marking a response as private when there's user details present?
+        answers:
+            - { value: "$response->headers->set(AbstractSessionListener::NO_AUTO_CACHE_CONTROL_HEADER, 'true');", correct: true }
+            - { value: "$response->headers->set(AbstractSessionListener::NO_AUTO_PRIVATE_CONTROL_DIRECTIVE, 'true');", correct: true }
+            - { value: "$response->headers->set(AbstractSessionListener::NO_AUTO_CACHE_CONTROL_HEADER, 'false');", correct: false }
+            - { value: "$response->headers->set(AbstractSessionListener::NO_AUTO_PRIVATE_CONTROL_DIRECTIVE, 'false');", correct: false }
+            - { value: "$response->setAutoCache(true);", correct: false }
+            - { value: "$response->setPrivateControl(true);", correct: false }
+            - { value: "$response->setAutoCache(false);", correct: false }
+            - { value: "$response->setPrivateControl(false);", correct: false }
