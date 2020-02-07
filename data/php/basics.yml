@@ -905,3 +905,12 @@ questions:
             - {value: "$php_argc", correct: false }
             - {value: "$argv", correct: true }
             - {value: "$php_argv", correct: false }
+
+
+    -   question: |
+            How can you make it harder for JavaScript code to read out session IDs ?
+        answers:
+            - {value: "Use session_set_cookie_param() function", correct: false }
+            - {value: "Use session.use_only_cookies php.ini setting", correct: true }
+            - {value: "Use session_regenerate_id() function", correct: false }
+            - {value: "Use session.cookie_httponly php.ini setting", correct: true }
