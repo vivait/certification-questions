@@ -246,3 +246,13 @@ questions:
             - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage', correct: false }
             - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockArraySessionStorage', correct: true }
             - { value: 'Symfony\Component\HttpFoundation\Session\Storage\MockMemorySessionStorage', correct: false }
+
+
+    -   question: |
+            Which of the following are valid statements to read request data?
+        answers:
+            - { value: "$request->files->get('avatar');", correct: true }
+            - { value: "$request->headers->get('Accept-Language');", correct: true }
+            - { value: "$request->server->get('HTTP_HOST');", correct: true }
+            - { value: "$request->env->get('CLI_COLOR');", correct: false }
+            - { value: "$request->session->get('security._last_username');", correct: false }

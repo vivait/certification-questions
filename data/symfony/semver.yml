@@ -1,0 +1,8 @@
+category: SemVer
+questions:
+    -   question: How can only attach build metadata to a version?
+        answers:
+            - {value: 1.0.0-beta+exp.sha.5114f85, correct: true}
+            - {value: 1.0.0-beta/exp.sha.5114f85, correct: false}
+            - {value: 1.0.0-beta_exp.sha.5114f85, correct: false}
+            - {value: 1.0.0-beta-exp.sha.5114f85, correct: false}

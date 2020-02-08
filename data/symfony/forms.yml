@@ -583,3 +583,67 @@ questions:
             - { value: Radio buttons., correct: false }
             - { value: Select tag (with multiple attribute)., correct: false }
             - { value: Checkboxes., correct: true }
+
+    -   question: |
+            What are the prerequisites to creating a form type extension?
+        answers:
+            - { value: Extending AbstractTypeExtension, correct: true }
+            - { value: Implementing FormTypeExtensionInterface., correct: true }
+            - { value: Implementing the getExtendedTypes() method, correct: true }
+            - { value: using the tag form.type_extension, correct: true }
+            - { value: using the tag form.extension, correct: false }
+            - { value: Implementing the getExtendedType() method, correct: false }
+            - { value: Extending TypeExtension, correct: false }
+
+    -   question: |
+            How could one use the CLI to verify the configuration of their new type extension?
+        answers:
+            - { value: php bin/console debug:form, correct: true }
+            - { value: php bin/console form:debug, correct: false }
+            - { value: php bin/console form:type-extensions:view, correct: false }
+            - { value: php bin/console debug:services, correct: false }
+            - { value: php bin/console services:debug, correct: false }
+
+    -   question: |
+            What method of a type extension allow one to override the options of a form type?
+        answers:
+            - { value: configureOptions(OptionsResolver $resolver), correct: true }
+            - { value: overrideOptions(OptionsResolver $resolver), correct: false }
+            - { value: configureOptionResolver(OptionsResolver $resolver), correct: false }
+            - { value: overrideOptionResolver(OptionsResolver $resolver), correct: false }
+
+    -   question: |
+            What method of a type extension allow one to override the generated form view?
+        answers:
+            - { value: "buildView(FormView $view, FormInterface $form, array $options)", correct: true }
+            - { value: "buildView(FormInterface $form, FormView $view, array $options)", correct: false }
+            - { value: "overrideView(FormInterface $form, FormView $view, array $options)", correct: false }
+            - { value: "overrideView(FormView $view, FormInterface $form, array $options)", correct: false }
+
+    -   question: |
+            What is the block one must override to change the markup of the FileType?
+        answers:
+            - { value: "file_widget", correct: true }
+            - { value: "files_widget", correct: false }
+            - { value: "file_type_widget", correct: false }
+            - { value: "_form_file_type_widget", correct: false }
+
+    -   question: |
+            Do form types extended in a form extension respect parent values of types?
+        answers:
+            - { value: "Yes", correct: true }
+            - { value: "No", correct: false }
+
+    -   question: |
+            Which of the following are valid method on the FormTypeExtensionInterface in Symfony 3.4?
+        answers:
+            - { value: "public function buildForm(FormBuilderInterface $builder, array $options);", correct: true }
+            - { value: "public function buildForm(FormBuilder $builder, array $options);", correct: false }
+            - { value: "public function buildView(FormView $view, FormInterface $form, array $options);", correct: true }
+            - { value: "public function buildView(FormInterface $form, FormView $view, array $options);", correct: false }
+            - { value: "public function finishView(FormView $view, FormInterface $form, array $options);", correct: true }
+            - { value: "public function finishView(FormInterface $form, FormView $view, array $options);", correct: false }
+            - { value: "public function configureOptions(OptionsResolver $resolver);", correct: true }
+            - { value: "public function configureOptionResolver(OptionsResolver $resolver);", correct: false }
+            - { value: "public function getExtendedType();", correct: true }
+            - { value: "public function getExtendedTypes();", correct: false }
