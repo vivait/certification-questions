@@ -48,7 +48,7 @@ questions:
                       translator:
                           add_paths:
                               - '%kernel.project_dir%/translations'
-              correct: true
+              correct: false
 
             - value: |
                   # config/packages/translation.yaml
@@ -56,7 +56,7 @@ questions:
                       translator:
                           directories:
                               - '%kernel.project_dir%/translations'
-              correct: true
+              correct: false
 
     -   question: "Which of the following are not valid interval notations ?"
         answers:

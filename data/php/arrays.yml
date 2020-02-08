@@ -34,9 +34,9 @@ questions:
 
             echo array_sum($values);
         answers:
-            - {value: '276', correct: false}
-            - {value: '30', correct: false}
-            - {value: '153', correct: true}
+            - {value: "'276'", correct: false}
+            - {value: "'30'", correct: false}
+            - {value: "'153'", correct: true}
             - {value: 'An error', correct: false}
 
     -   question: |

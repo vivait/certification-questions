@@ -277,7 +277,7 @@ questions:
     -   question: What command can be ran to improve the performance of environment variables in production?
         answers:
             - {value: composer dump-env prod, correct: true}
-            - {value: composer env-dump prod, correct: true}
+            - {value: composer env-dump prod, correct: false}
             - {value: composer optimize-env prod, correct: false}
             - {value: bin/console dump:env --env=prod, correct: false}
             - {value: bin/console dotenv:optimize--env=prod, correct: false}
