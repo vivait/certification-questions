@@ -377,3 +377,12 @@ questions:
             - {value: "By overloading the parameter router.request_context.host in the configuration.", correct: true}
             - {value: "$this->getContainer()->get('router')->getContext()->setHost('example.org');", correct: true}
             - {value: "The host is automatically known by Symfony, there is no need to specify it in CLI.", correct: false}
+
+    -   question: |
+            Which of the following are valid patterns for importing resources?
+        answers:
+            - { value: "*.yml", correct: true }
+            - { value: "../common/", correct: true }
+            - { value: "bundles/*/{xml,yaml}/services.{yml,xml}", correct: true }
+            - { value: "%kernel.root_dir%/route.yml", correct: false }
+            - { value: "App/Service/Routes::loadRoutes()", correct: false }

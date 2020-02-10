@@ -243,7 +243,7 @@ questions:
         answers:
             - {value: "header('Content-Type: text/html');", correct: true }
             - {value: "set_header('Content-Type: text/html');", correct: false }
-            - {value: "set_header('Content-Type', 'text/html');", correct: true }
+            - {value: "send_header('Content-Type', 'text/html');", correct: false }
 
     -   question: |
             Will the following PHP work?
