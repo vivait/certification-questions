@@ -908,9 +908,33 @@ questions:
 
 
     -   question: |
+            What is the expected output when executing this script?
+
+            $iterator = new LimitIterator(
+                new InfiniteIterator(
+                    new ArrayIterator(range('a', 'z'))
+                ),
+                10,
+                2
+            );
+
+            print_r(iterator_to_array($iterator));
+        answers:
+            - {value: "['k', 'l']", correct: true }
+            - {value: "['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']", correct: false }
+            - {value: "['a', 'b']", correct: false }
+
+    -   question: |
             How can you make it harder for JavaScript code to read out session IDs ?
         answers:
             - {value: "Use session_set_cookie_param() function", correct: false }
             - {value: "Use session.use_only_cookies php.ini setting", correct: true }
             - {value: "Use session_regenerate_id() function", correct: false }
             - {value: "Use session.cookie_httponly php.ini setting", correct: true }
+
+    -   question: |
+            What is the purpose of the InfiniteIterator?
+        answers:
+            - {value: "Allows infinite iteration over an array", correct: true }
+            - {value: "Allows the user to add as many items as they like", correct: false }
+            - {value: "Allows for rewinding at any point during the iteration", correct: false }
