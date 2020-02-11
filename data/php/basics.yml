@@ -477,11 +477,11 @@ questions:
             echo $a;
             ?>
         answers:
-            - {value: 32, correct: true }
-            - {value: 17, correct: false }
-            - {value: 1, correct: false }
-            - {value: 16, correct: false }
-            - {value: 9, correct: false }
+            - {value: "'32'", correct: true }
+            - {value: "'17'", correct: false }
+            - {value: "'1'", correct: false }
+            - {value: "'16'", correct: false }
+            - {value: "'9'", correct: false }
 
     -   question: |
             How many HTTP requests (without using JavaScript) are required to determine whether or not a client supports cookies?
@@ -511,11 +511,11 @@ questions:
                $a++;
             } while($a <= 1);
         answers:
-            - {value: 12, correct: false }
-            - {value: 2110elephpant, correct: true }
-            - {value: 21, correct: false }
-            - {value: 1210elephpant, correct: false }
-            - {value: 10elephpant, correct: false }
+            - {value: "'12'", correct: false }
+            - {value: "'2110elephpant'", correct: true }
+            - {value: "'21'", correct: false }
+            - {value: "'1210elephpant'", correct: false }
+            - {value: "'10elephpant'", correct: false }
 
     -   question: |
             Consider the following code snippet:
