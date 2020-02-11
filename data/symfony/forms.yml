@@ -87,40 +87,17 @@ questions:
     -   question: "How to get the value of title set in a form?"
         answers:
             -   value: |
-                    $formBuilder->add('name', RangeType::class, [
-                        'min' => 5,
-                        'max' => 50
-                    ]);
-                correct: false
-            -   value: |
-                    $formBuilder->add('name', RangeType::class, [
-                        'attr' => [
-                            'minimum' => 5,
-                            'maximum' => 50
-                        ]
-                    ]);
-                correct: false
-            -   value: |
-                    $formBuilder->add('name', RangeType::class, [
-                        'attr' => [
-                            'min' => 5,
-                            'max' => 50
-                        ]
-                    ]);
+                    {{ form.title.vars.value }}
                 correct: true
             -   value: |
-                    $formBuilder->add('name', RangeType::class, [
-                        'minimum' => 5,
-                        'maximum' => 50
-                    ]);
+                    {{ form.vars.title }}
                 correct: false
             -   value: |
-                    $formBuilder->add('name', RangeType::class, [
-                        'min' => 5,
-                        'max' => 50
-                    ]);
+                    {{ form.vars.title.value }}
                 correct: false
-
+            -   value: |
+                    {{ form.title }}
+                correct: false
     -   question: |
             By default, which function provides the choices of the Symfony\Component\Form\Extension\Core\Type\LanguageType form type ?
         answers:
@@ -476,11 +453,23 @@ questions:
     -   question: |
             Which of these options are not valid for a Symfony\Component\Form\Extension\Core\Type\CollectionType form type ?
         answers:
-            - { value: allow_add, correct: false }
-            - { value: allow_delete, correct: false }
-            - { value: allow_remove, correct: true }
-            - { value: allow_create, correct: true }
-            - { value: allow_update, correct: true }
+            - { value: allow_add, correct: true }
+            - { value: allow_delete, correct: true }
+            - { value: allow_remove, correct: false }
+            - { value: allow_create, correct: false }
+            - { value: allow_update, correct: false }
+
+    -   question: |
+            Which of these options are not valid for a Symfony\Component\Form\Extension\Core\Type\CollectionType form type ?
+        answers:
+            - { value: entry_options, correct: true }
+            - { value: delete_empty, correct: true }
+            - { value: entry_options, correct: true }
+            - { value: allow_delete, correct: true }
+            - { value: entry_type, correct: true }
+            - { value: allow_remove, correct: false }
+            - { value: allow_create, correct: false }
+            - { value: allow_update, correct: false }
 
     -   question: |
             Which of the following snipets is valid to set the maximum and minimum value for a

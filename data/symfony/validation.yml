@@ -198,3 +198,26 @@ questions:
             - {value: PSR-2, correct: false}
             - {value: 'CVE-2015-2308', correct: false}
             - {value: JSR 303, correct: true}
+
+    -   question: |
+            Which of the following values match the IsFalse constraint?
+        answers:
+            - {value: 'false', correct: true}
+            - {value: '0', correct: true}
+            - {value: "'0'", correct: true}
+            - {value: "''", correct: false}
+            - {value: "null", correct: false}
+            - {value: "new class {}", correct: false}
+            - {value: "[]", correct: false}
+
+
+    -   question: |
+            Which of the following values match the IsTrue constraint?
+        answers:
+            - {value: 'true', correct: true}
+            - {value: '1', correct: true}
+            - {value: "'1'", correct: true}
+            - {value: "''", correct: false}
+            - {value: "null", correct: false}
+            - {value: "new class {}", correct: false}
+            - {value: "[]", correct: false}
