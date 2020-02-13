@@ -37,3 +37,210 @@ questions:
             - {value: 'InputOption::VALUE_NONE', correct: false}
             - {value: 'InputOption::VALUE_OPTIONAL', correct: false}
             - {value: 'InputOption::VALUE_IS_ARRAY', correct: false}
+
+    -   question: "What is the the built in command to display all commands?"
+        answers:
+            - {value: "list", correct: true}
+            - {value: 'help', correct: false}
+            - {value: '-h', correct: false}
+            - {value: '--list', correct: false}
+
+
+    -   question: "Which are the built in commands/flags to display options for a certain command?"
+        answers:
+            - {value: "help", correct: true}
+            - {value: '--help', correct: true}
+            - {value: '-h', correct: true}
+            - {value: 'list', correct: false}
+            - {value: '--list', correct: false}
+            - {value: '--info', correct: false}
+            - {value: 'info', correct: false}
+
+    -   question: "How would one display the options for a certain command?"
+        answers:
+            - {value: "bin/console help app:my_command", correct: true}
+            - {value: 'bin/console app:my_command --help', correct: true}
+            - {value: 'bin/console app:my_command -h', correct: true}
+            - {value: 'bin/console app:my_command --info', correct: false}
+            - {value: 'bin/console info app:my_command', correct: false}
+            - {value: 'bin/console app:my_command -i', correct: false}
+            - {value: 'bin/console app:my_command --options', correct: false}
+            - {value: 'bin/console app:my_command -o', correct: false}
+            - {value: 'bin/console options app:my_command', correct: false}
+
+
+    -   question: "How could one suppress all output of a certain command?"
+        answers:
+            - {value: 'bin/console app:my_command --quiet', correct: true}
+            - {value: 'bin/console app:my_command -q', correct: true}
+            - {value: "bin/console quiet app:my_command", correct: false}
+            - {value: 'bin/console app:my_command --silent', correct: false}
+            - {value: 'bin/console silent app:my_command', correct: false}
+            - {value: 'bin/console app:my_command -s', correct: false}
+            - {value: 'bin/console app:my_command --suppress-output', correct: false}
+            - {value: 'bin/console suppress-output app:my_command', correct: false}
+
+    -   question: "Which of the following are valid ways to change message verbosity of a command?"
+        answers:
+            - {value: 'bin/console app:my_command --verbose', correct: true}
+            - {value: 'bin/console app:my_command -v', correct: true}
+            - {value: 'bin/console app:my_command -vv', correct: true}
+            - {value: 'bin/console app:my_command -vvv', correct: true}
+            - {value: 'bin/console app:my_command --v', correct: false}
+            - {value: 'bin/console app:my_command --vv', correct: false}
+            - {value: 'bin/console app:my_command --vvv', correct: false}
+            - {value: 'bin/console app:my_command --V', correct: false}
+            - {value: 'bin/console app:my_command --VV', correct: false}
+            - {value: 'bin/console app:my_command --VVV', correct: false}
+            - {value: "bin/console verbose app:my_command", correct: false}
+            - {value: "bin/console verbose*2 app:my_command", correct: false}
+            - {value: "bin/console verbose*3 app:my_command", correct: false}
+
+    -   question: "Which of the following is the valid way to get the version and name of the console app?"
+        answers:
+            - {value: 'bin/console app:my_command --version', correct: true}
+            - {value: 'bin/console app:my_command -V', correct: true}
+            - {value: 'bin/console app:my_command -v', correct: false}
+            - {value: 'bin/console app:my_command --info', correct: true}
+            - {value: 'bin/console app:my_command -I', correct: true}
+            - {value: 'bin/console app:my_command -i', correct: false}
+            - {value: "bin/console app:display_version", correct: false}
+            - {value: "bin/console app:display_version", correct: false}
+
+    -   question: "How can one force a command to output ansi colouring?"
+        answers:
+            - {value: 'bin/console app:my_command --ansi', correct: true}
+            - {value: 'bin/console app:my_command -a', correct: false}
+            - {value: 'bin/console app:my_command --colours', correct: false}
+
+    -   question: "How can one force a command to not output ansi colouring?"
+        answers:
+            - {value: 'bin/console app:my_command --no-ansi', correct: true}
+            - {value: 'bin/console app:my_command -n', correct: false}
+            - {value: 'bin/console app:my_command --no-colours', correct: false}
+
+    -   question: "How can one suppress a command to any questions requiring user input?"
+        answers:
+            - {value: 'bin/console app:my_command -n', correct: true}
+            - {value: 'bin/console app:my_command --no-interaction', correct: true}
+            - {value: 'bin/console app:my_command --without-interaction', correct: false}
+            - {value: 'bin/console app:my_command -w', correct: false}
+            - {value: 'bin/console app:my_command --block-interaction', correct: false}
+            - {value: 'bin/console app:my_command -b', correct: false}
+            - {value: 'bin/console app:my_command --headless', correct: false}
+            - {value: 'bin/console app:my_command -h', correct: false}
+
+    -   question: "Which of the following is a valid user defined command in Symfony 3.4?"
+        answers:
+            - {value: 'AppBundle\Command\CreateUserCommand', correct: true}
+            - {value: 'AppBundle\Command\CreateUserConsoleCommand', correct: true}
+            - {value: 'AppBundle\CreateUserConsoleCommand', correct: false}
+            - {value: 'AppBundle\CreateUserCommand', correct: false}
+            - {value: 'AppBundle\Command\CreateUser', correct: false}
+            - {value: 'AppBundle\Command\CreateUserConsole', correct: false}
+            - {value: 'AppBundle\CreateUserConsole', correct: false}
+            - {value: 'AppBundle\CreateUser', correct: false}
+
+    -   question: "How could one set information about a command to help the user when calling list?"
+        answers:
+            - {value: 'calling setDescription with a string in the configure() method', correct: true}
+            - {value: 'passing a string to the 3rd argument of __construct', correct: false}
+            - {value: 'passing a string to the 2rd argument of __construct', correct: false}
+            - {value: 'passing a string to the 2rd argument of __construct', correct: false}
+            - {value: 'calling setInformation with a string in the configure() method', correct: false}
+            - {value: 'calling setInformation with a string in __construct', correct: false}
+            - {value: 'calling setDescription with a string in __construct', correct: false}
+
+    -   question: "How could one set information about a command to help the user when calling help?"
+        answers:
+            - {value: 'calling setHelp with a string in the configure() method', correct: true}
+            - {value: 'passing a string to the 4rd argument of __construct', correct: false}
+            - {value: 'passing a string to the 3rd argument of __construct', correct: false}
+            - {value: 'passing a string to the 3rd argument of __construct', correct: false}
+            - {value: 'calling setInformation with a string in the configure() method', correct: false}
+            - {value: 'calling setInformation with a string in __construct', correct: false}
+            - {value: 'calling setHelp with a string in __construct', correct: false}
+
+    -   question: "How could one write a string to the console in execute()?"
+        answers:
+            - {value: 'By calling $input->writeLn()', correct: true}
+            - {value: 'By calling $input->writeLine()', correct: false}
+            - {value: 'By calling $input->output()', correct: false}
+            - {value: 'By calling $input->write()', correct: false}
+
+    -   question: "What is outputted to the console upon calling $input->writeLn('hello!')?"
+        answers:
+            - {value: 'hello!\n', correct: true}
+            - {value: '\nhello!\n', correct: false}
+            - {value: '<text>hello</text>', correct: false}
+            - {value: 'hello!', correct: false}
+
+    -   question: "How could one add required input data called username to a command?"
+        answers:
+            - {value: "In configure() call $this->addArgument('username', InputArgument::REQUIRED);", correct: true}
+            - {value: "In configure() call $this->addArgument('username', InputArgument::REQUIRED_ARGUMENT);", correct: false}
+            - {value: "In configure() call $this->addArgument(InputArgument::REQUIRED_ARGUMENT, 'username');", correct: false}
+            - {value: "In configure() call $this->addArgument(InputArgument::REQUIRED, 'username');", correct: false}
+            - {value: "In configure() call $this->addInput('username', InputArgument::REQUIRED);", correct: false}
+            - {value: "In configure() call $this->addInput('username', InputArgument::REQUIRED_ARGUMENT);", correct: false}
+            - {value: "In configure() call $this->addInput(InputArgument::REQUIRED_ARGUMENT, 'username');", correct: false}
+            - {value: "In configure() call $this->addInput(InputArgument::REQUIRED, 'username');", correct: false}
+
+    -   question: "Can commands be configured as services?"
+        answers:
+            - {value: "Yes", correct: true}
+            - {value: "No", correct: false}
+
+    -   question: "Which of the following command methods are optional?"
+        answers:
+            - {value: "initialize()", correct: true}
+            - {value: "interact()", correct: true}
+            - {value: "execute()", correct: false}
+
+    -   question: "Which of the following command methods are optional?"
+        answers:
+            - {value: "initialize()", correct: true}
+            - {value: "interact()", correct: true}
+            - {value: "execute()", correct: false}
+
+    -   question: "Which of the following classes are useful for testing commands?"
+        answers:
+            - {value: 'Symfony\Component\Console\Tester\CommandTester', correct: true}
+            - {value: 'Symfony\Component\Console\CommandTester', correct: false}
+            - {value: 'Symfony\Component\Console\Tester\CommandTestCase', correct: false}
+            - {value: 'Symfony\Component\Console\CommandTestCase', correct: false}
+
+    -   question: "Which of the following classes are useful for testing console applications?"
+        answers:
+            - {value: 'Symfony\Component\Console\Tester\ApplicationTester', correct: true}
+            - {value: 'Symfony\Component\Console\ApplicationTester', correct: false}
+            - {value: 'Symfony\Component\Console\Tester\ConsoleApplicationTestCase', correct: false}
+            - {value: 'Symfony\Component\Console\ConsoleApplicationTestCase', correct: false}
+
+    -   question: "Which standard does Symfony console follow for arguments?"
+        answers:
+            - {value: 'docopt', correct: true}
+            - {value: 'CLIDL', correct: false}
+            - {value: 'PSR', correct: false}
+            - {value: 'JSR-331', correct: false}
+
+    -   question: "Which standard does Symfony console follow for arguments?"
+        answers:
+            - {value: 'docopt', correct: true}
+            - {value: 'CLIDL', correct: false}
+            - {value: 'PSR', correct: false}
+            - {value: 'JSR-331', correct: false}
+
+    -   question: "What is the value of the option new InputOption('foo', 'f') when the command --bar=Hello is ran?"
+        answers:
+            - {value: 'false', correct: true}
+            - {value: '0', correct: false}
+            - {value: 'Hello', correct: false}
+            - {value: '=Hello', correct: false}
+
+    -   question: "What is the value of the option new InputOption('foo', 'f') when the command --bar=Hello is ran?"
+        answers:
+            - {value: 'false', correct: true}
+            - {value: '0', correct: false}
+            - {value: 'Hello', correct: false}
+            - {value: '=Hello', correct: false}
