@@ -105,9 +105,9 @@ questions:
             What will be the outcome of evaluating this Twig code?
         answers:
             - {value: 'Twig will raise a Twig_Error_Syntax exception.', correct: false}
-            - {value: 'The output will display the string Foo is FOO and Bar is FOO..', correct: true}
+            - {value: 'The output will display the string Foo is FOO and Bar is FOO..', correct: false}
             - {value: 'The output will display the string Foo is and Bar is ..', correct: false}
-            - {value: 'The output will display the string Foo is FOO and Bar is ..', correct: false}
+            - {value: 'The output will display the string Foo is FOO and Bar is ..', correct: true}
         help: |
             https://twig.symfony.com/doc/3.x/tags/set.html
 
@@ -135,3 +135,43 @@ questions:
             - {value: "('foo', 'a', 'b')", correct: false}
             - {value: "('a', 'b', 'foo')", correct: true}
             - {value: "('foo', ['a', 'b'])", correct: false}
+
+    -   question: |
+            Consider the following code snippet:
+
+            {% set foo, bar = 'foo', 'bar' %}
+
+            <p>
+              Foo is {{ foo }} and Bar is {{ bar }}.
+            </p>
+
+            What will be the outcome of evaluating this Twig code?
+        answers:
+            - {value: 'Twig will raise a Twig_Error_Syntax exception.', correct: false}
+            - {value: 'The output will display the string Foo is FOO and Bar is BAR.', correct: true}
+            - {value: 'The output will display the string Foo is BAR and Bar is FOO.', correct: false}
+            - {value: 'The output will display the string Foo is and Bar is FOO.', correct: false}
+
+    -   question: |
+            What is the value of foo after the following Twig code not in strict mode?
+
+            {% set foo %}
+                <i id="pagination" />
+            {% endset
+        answers:
+            - {value: '<i id="pagination" />', correct: true}
+            - {value: 'null', correct: false}
+            - {value: 'A Twig_Error_Syntax exception is thrown', correct: false}
+            - {value: '&lt;i id="pagination" /%gt;', correct: false}
+
+    -   question: |
+            What is the value of foo after the following Twig code not in strict mode?
+            {% list = ['item'] %}
+            {% for item in list %}
+                {% set foo = item %}
+            {% endfor %}
+        answers:
+            - {value: 'null', correct: true}
+            - {value: 'item', correct: false}
+            - {value: 'foo', correct: false}
+            - {value: 'A Twig_Error_Syntax exception is thrown', correct: false}

@@ -174,20 +174,20 @@ questions:
 
     -   question: "What class must one extend to create an event?"
         answers:
-            - { value: "Symfony\Component\EventDispatcher\Event", correct: true }
-            - { value: "Symfony\Bridge\EventDispatcher\Event", correct: false }
-            - { value: "Symfony\Bridge\EventDispatcher\BaseEvent", correct: false }
-            - { value: "Symfony\Bridge\EventDispatcher\BaseEvent", correct: false }
+            - { value: Symfony\Component\EventDispatcher\Event, correct: true }
+            - { value: Symfony\Bridge\EventDispatcher\Event, correct: false }
+            - { value: Symfony\Bridge\EventDispatcher\BaseEvent, correct: false }
+            - { value: Symfony\Bridge\EventDispatcher\BaseEvent, correct: false }
         help: |
             https://symfony.com/doc/3.4/components/event_dispatcher.html#creating-an-event-class
 
     -   question: "What interface must an EventSubscriber extend?"
         answers:
-            - { value: "Symfony\Component\EventDispatcher\EventSubscriberInterface", correct: true }
-            - { value: "Symfony\Component\EventDispatcher\Subscriber\EventSubscriberInterface", correct: false }
-            - { value: "Symfony\Component\EventDispatcher\EventSubscriber", correct: false }
-            - { value: "Symfony\Component\DependencyInjection\EventSubscriber", correct: false }
-            - { value: "Symfony\Component\DependencyInjection\EventSubscriberInterface", correct: false }
+            - { value: Symfony\Component\EventDispatcher\EventSubscriberInterface, correct: true }
+            - { value: Symfony\Component\EventDispatcher\Subscriber\EventSubscriberInterface, correct: false }
+            - { value: Symfony\Component\EventDispatcher\EventSubscriber, correct: false }
+            - { value: Symfony\Component\DependencyInjection\EventSubscriber, correct: false }
+            - { value: Symfony\Component\DependencyInjection\EventSubscriberInterface, correct: false }
         help: |
             https://symfony.com/doc/3.4/components/event_dispatcher.html#using-event-subscribers
 
