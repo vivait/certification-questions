@@ -177,3 +177,16 @@ questions:
             - { value: "false", correct: true }
             - { value: "yes", correct: false }
             - { value: "An error", correct: false }
+
+    -   question: What are the arguments of the __construct() method to create a Symfony\Component\ExpressionLanguage\ExpressionFunction object?
+        answers:
+            - { value: "(string $name, callable $compiler, callable $evaluator)", correct: true }
+            - { value: "(string $name, CompilerInterface $compiler, EvaluatorInterface $evaluator)", correct: false }
+            - { value: "(callable $compiler, callable $evaluator)", correct: false }
+            - { value: "(CompilerInterface $compiler, EvaluatorInterface $evaluator)", correct: false }
+
+    -   question: What are the arguments of the ExpressionFunction::fromPhp static function Symfony\Component\ExpressionLanguage\ExpressionFunction class?
+        answers:
+            - { value: "($phpFunctionName, $expressionFunctionName = null)", correct: true }
+            - { value: "($phpFunctionName, callable $expressionFunctionCallable)", correct: false }
+            - { value: "(string $phpFunctionName, callable $compiler, callable $evaluator)", correct: false }
