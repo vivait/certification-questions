@@ -938,3 +938,13 @@ questions:
             - {value: "Allows infinite iteration over an array", correct: true }
             - {value: "Allows the user to add as many items as they like", correct: false }
             - {value: "Allows for rewinding at any point during the iteration", correct: false }
+
+    -   question: |
+            Which PHP superglobal variable contains the command line arguments when the script runs in CLI mode?
+        answers:
+            - {value: "$_SERVER", correct: true }
+            - {value: "$GLOBALS", correct: false }
+            - {value: "$_CLI", correct: false }
+            - {value: "$_POST", correct: false }
+            - {value: "PHP cannot run from the command line interface.", correct: false }
+            - {value: "$_ENV", correct: false }

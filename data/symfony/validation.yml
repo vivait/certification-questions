@@ -326,3 +326,26 @@ questions:
             - {value: 'disableAnnotation()', correct: false}
             - {value: 'disableAnnotations()', correct: false}
 #TODO: https://symfony.com/doc/3.4/components/validator/resources.html#the-annotationloader
+
+    -   question: |
+            When using the Symfony\Component\Validator\Constraints\Url validation constraint, what protocols are allowed
+            by default ?
+        answers:
+            - {value: 'HTTP and HTTPS.', correct: true}
+            - {value: 'Only HTTP.', correct: false}
+            - {value: 'Any protocol.', correct: false}
+            - {value: 'HTTP, HTTPS, FTP and SMTP.', correct: false}
+
+    -   question: |
+            What is the pupose of the normalizer option for the URL constaint?
+        answers:
+            - {value: 'It is a PHP callable in order to modify the url before validation', correct: true}
+            - {value: 'When true it trims and makes the URL lowercase URL before validation', correct: false}
+            - {value: 'When true it modify the value validated to ensure it is consistent', correct: false}
+
+    -   question: |
+            What is the pupose of the payload option for a constaint?
+        answers:
+            - {value: 'It allows the passing of arbitrary domain-specific data', correct: true}
+            - {value: 'It is the data that is passed to the constraint validator', correct: false}
+            - {value: 'It allows modification of the original structure passed to the validator', correct: false}

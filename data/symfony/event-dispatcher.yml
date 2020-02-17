@@ -110,10 +110,10 @@ questions:
 
     -   question: "What is the argument passed to listeners of kernel.controller_arguments after Symfony 4.3?"
         answers:
-            - { value: ControllerArgumentsEvent, correct: true }
+            - { value: ControllerArgumentsEvent, correct: false }
             - { value: RequestEvent, correct: false }
             - { value: ViewEvent, correct: false }
-            - { value: GetResponseForControllerResultEvent, correct: false }
+            - { value: GetResponseForControllerResultEvent, correct: true }
             - { value: RequestViewEvent, correct: false }
             - { value: FinishRequestEvent, correct: false }
 
