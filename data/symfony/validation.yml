@@ -221,3 +221,108 @@ questions:
             - {value: "null", correct: false}
             - {value: "new class {}", correct: false}
             - {value: "[]", correct: false}
+
+
+    -   question: |
+            What is result returned from the validate() method?
+        answers:
+            - {value: 'a ConstraintViolationListInterface', correct: true}
+            - {value: 'null', correct: false}
+            - {value: 'an array', correct: false}
+            - {value: 'a string', correct: false}
+
+    -   question: |
+            Which of the following are valid methods on the ConstraintViolationInterface?
+        answers:
+            - {value: 'getMessage', correct: true}
+            - {value: 'getMessageTemplate', correct: true}
+            - {value: 'getParameters', correct: true}
+            - {value: 'getPlural', correct: true}
+            - {value: 'getInfo', correct: false}
+            - {value: 'getMetaData', correct: false}
+            - {value: 'getConstraint', correct: false}
+
+    -   question: |
+            Which of the following are valid methods on the ConstraintViolationInterface?
+        answers:
+            - {value: 'getRoot', correct: true}
+            - {value: 'getPropertyPath', correct: true}
+            - {value: 'getInvalidValue', correct: true}
+            - {value: 'getCode', correct: true}
+            - {value: 'getInfo', correct: false}
+            - {value: 'getMetaData', correct: false}
+            - {value: 'getConstraint', correct: false}
+
+    -   question: |
+            What is the purpose of the ConstraintViolationInterface::getRoot() method?
+        answers:
+            - {value: 'The value that was originally passed to the validator', correct: true}
+            - {value: 'The directory which the validator ran in', correct: false}
+            - {value: 'Gets the parent validator for the constraint', correct: false}
+            - {value: 'Gets the object where the value came from', correct: false}
+
+    -   question: |
+            What is the purpose of the ConstraintViolationInterface::getInvalidValue()?
+        answers:
+            - {value: 'Returns the value that triggered the violation', correct: true}
+            - {value: 'Returns the value that could not run with the constraint', correct: false}
+            - {value: 'Returns the value that could not run with the validator', correct: false}
+            - {value: 'Returns invalid configuration options', correct: false}
+
+    -   question: |
+            What is the purpose of the ConstraintViolationInterface::getInvalidValue()?
+        answers:
+            - {value: 'Returns the value that triggered the violation', correct: true}
+            - {value: 'Returns the value that could not run with the constraint', correct: false}
+            - {value: 'Returns the value that could not run with the validator', correct: false}
+            - {value: 'Returns invalid configuration options', correct: false}
+
+    -   question: |
+            Which getters can be validated against for a property?
+        answers:
+            - {value: 'get*', correct: true}
+            - {value: 'has*', correct: true}
+            - {value: 'is*', correct: true}
+            - {value: '*', correct: false}
+            - {value: 'had*', correct: false}
+            - {value: 'had*', correct: false}
+
+    -   question: |
+            Can a full object be validated?
+        answers:
+            - {value: 'Yes', correct: true}
+            - {value: 'No', correct: false}
+
+    -   question: |
+            What method should be called on the validator builder to allow a class to create validator metadata for itself?
+        answers:
+            - {value: 'addMethodMapping()', correct: true}
+            - {value: 'addValidationDetails()', correct: false}
+            - {value: 'loadValidatorMetadata()', correct: false}
+
+    -   question: |
+            Which configuration file formats are supported by the validator by default?
+        answers:
+            - {value: 'YAML', correct: true}
+            - {value: 'XML', correct: true}
+            - {value: 'Annotations', correct: true}
+            - {value: 'INI', correct: false}
+            - {value: 'Array', correct: false}
+            - {value: 'PHP', correct: false}
+
+    -   question: |
+            What method should be called on the validator builder to allow a class to be validated by annotations?
+        answers:
+            - {value: 'enableAnnotationMapping()', correct: true}
+            - {value: 'enableAnnotations()', correct: false}
+            - {value: 'enableAnnotationsMapping()', correct: false}
+            - {value: 'enableAnnotation()', correct: false}
+
+    -   question: |
+            What method should be called on the validator builder to allow a class to be validated by annotations?
+        answers:
+            - {value: 'disableAnnotationMapping()', correct: true}
+            - {value: 'disableAnnotationsMapping()', correct: false}
+            - {value: 'disableAnnotation()', correct: false}
+            - {value: 'disableAnnotations()', correct: false}
+#TODO: https://symfony.com/doc/3.4/components/validator/resources.html#the-annotationloader
