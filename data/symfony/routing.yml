@@ -276,7 +276,7 @@ questions:
             - {value: /start/, correct: false}
 
     -   question: |
-            How can one add a prefix to all routes in a collection?
+            How can one prefix to all routes in a collection?
         answers:
             - {value: $collection->addPrefix('/prefix');, correct: true}
             - {value: $collection->add('/prefix');, correct: false}
