@@ -89,6 +89,19 @@ questions:
             - { value: "doesExist", correct: false }
             - { value: "changeOwner", correct: false }
 
+
+    -   question: |
+            Which of the following are Filesystem methods?
+        answers:
+            - { value: "move", correct: false }
+            - { value: "chown", correct: true }
+            - { value: "rename", correct: true }
+            - { value: "touch", correct: true }
+            - { value: "tempnam", correct: true }
+            - { value: "dumpFile", correct: true }
+            - { value: "isAbsolutePath", correct: true }
+            - { value: "duplicate", correct: false }
+
     -   question: |
             What is the second argument of the mkDir() method?
         answers:

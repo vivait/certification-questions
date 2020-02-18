@@ -100,3 +100,29 @@ questions:
             - {value: container:info, correct: false}
             - {value: container:debug, correct: false}
             - {value: debug:container, correct: true}
+
+
+    -   question: |
+            What is the output of the following controller?
+
+
+            use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+            class HelloController extends Controller
+            {
+                public function helloAction()
+                {
+                    $filename = tempnam(sys_get_temp_dir(), 'sf');
+                    file_put_contents($filename, 'hello {{ 1 + 1 }}');
+
+                    return $this->forward('FrameworkBundle:Template:template', [
+                        'template' => $filename
+                    ]);
+                }
+            }
+        answers:
+            - {value: "Error: The controller must return a response", correct: false }
+            - {value: "Error: Controller requires that you provide a value for the “$variables” argument.", correct: false }
+            - {value: "hello 2", correct: true }
+            - {value: "hello", correct: false }
+            - {value: "Error: Route `FrameworkBundle:Template:template` does not exist.", correct: false }

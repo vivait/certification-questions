@@ -325,7 +325,6 @@ questions:
             - {value: 'disableAnnotationsMapping()', correct: false}
             - {value: 'disableAnnotation()', correct: false}
             - {value: 'disableAnnotations()', correct: false}
-#TODO: https://symfony.com/doc/3.4/components/validator/resources.html#the-annotationloader
 
     -   question: |
             When using the Symfony\Component\Validator\Constraints\Url validation constraint, what protocols are allowed
@@ -349,3 +348,22 @@ questions:
             - {value: 'It allows the passing of arbitrary domain-specific data', correct: true}
             - {value: 'It is the data that is passed to the constraint validator', correct: false}
             - {value: 'It allows modification of the original structure passed to the validator', correct: false}
+
+    -   question: |
+            How many types of mapping can be configurated in the validation builder?
+        answers:
+            - {value: 'unlimited', correct: true}
+            - {value: '1', correct: false}
+            - {value: '10', correct: false}
+
+    -   question: |
+            Using the validation builder how can one add a new MetaData factory?
+        answers:
+            - {value: 'Implement Symfony\Component\Validator\Mapping\Factory', correct: true}
+            - {value: 'Pass a Symfony\Component\Validator\Mapping\Factory instance to setMetadataFactory()', correct: true}
+            - {value: 'Pass a Symfony\Component\Validator\Mapping\Factory instance to addMetadataFactory()', correct: false}
+            - {value: 'Implement Symfony\Component\Validator\Factory', correct: false}
+            - {value: 'Pass a Symfony\Component\Validator\Factory instance to setMetadataFactory()', correct: false}
+            - {value: 'Pass a Symfony\Component\Validator\Factory instance to addMetadataFactory()', correct: false}
+            - {value: 'Pass a callable to setMetadataFactory()', correct: false}
+            - {value: 'Pass a callable to addMetadataFactory()', correct: false}

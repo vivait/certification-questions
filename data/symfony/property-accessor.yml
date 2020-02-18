@@ -47,3 +47,23 @@ questions:
             - { value: "The value of $age will be null.", correct: true }
             - { value: "A Symfony\\Component\\PropertyAccess\\Exception\\NoSuchPropertyException will be thrown.", correct: false }
             - { value: "A Symfony\\Component\\PropertyAccess\\Exception\\NoSuchIndexException will be thrown.", correct: false }
+
+    -   question: |
+            What will be the result of the following code?
+
+            use Symfony\Component\PropertyAccess\PropertyAccess;
+
+            $propertyAccessor = PropertyAccess::createPropertyAccessorBuilder()
+                ->enableExceptionOnInvalidIndex()
+                ->getPropertyAccessor();
+
+            $person = array(
+                'first_name' => 'Wouter',
+            );
+
+            $age = $propertyAccessor->getValue($person, '[age]');
+        answers:
+            - { value: "The value of $age will be 0.", correct: false }
+            - { value: "The value of $age will be null.", correct: false }
+            - { value: "A Symfony\\Component\\PropertyAccess\\Exception\\NoSuchPropertyException will be thrown.", correct: false }
+            - { value: "A Symfony\\Component\\PropertyAccess\\Exception\\NoSuchIndexException will be thrown.", correct: true }
