@@ -256,3 +256,29 @@ questions:
             - { value: "$request->server->get('HTTP_HOST');", correct: true }
             - { value: "$request->env->get('CLI_COLOR');", correct: false }
             - { value: "$request->session->get('security._last_username');", correct: false }
+
+    -   question: |
+            Which of the following are valid properties on the Request?
+        answers:
+            - { value: "request", correct: true }
+            - { value: "query", correct: true }
+            - { value: "cookies", correct: true }
+            - { value: "attributes", correct: true }
+            - { value: "files", correct: true }
+            - { value: "server", correct: true }
+            - { value: "headers", correct: true }
+            - { value: "header", correct: false }
+            - { value: "file", correct: false }
+            - { value: "attribute", correct: false }
+            - { value: "cookie", correct: false }
+            - { value: "parameters", correct: false }
+            - { value: "parameter", correct: false }
+
+
+    -   question: |
+            How does one access $_COOKIE data when using a Symfony\Component\HttpFoundation\Request $request object?
+        answers:
+            - { value: "$request->cookies", correct: true }
+            - { value: "$request->cookie", correct: false }
+            - { value: "$request->getCookieData()", correct: false }
+            - { value: "request->getCookie()", correct: false }
