@@ -243,3 +243,45 @@ questions:
                 correct: false
             -   value: Symfony\Component\Serializer\NameConverter\CustomNameFactoryInterface
                 correct: false
+
+    -   question: |
+            Which of the followings are built-in normalizers?
+        answers:
+            -   value:  XmlNormalizer
+                correct: false
+            -   value:  CustomNormalizer
+                correct: true
+            -   value: DataUriNormalizer
+                correct: true
+            -   value: ObjectNormalizer
+                correct: true
+            -   value: TimeNormalizer
+                correct: false
+            -   value: DateTimeNormalizer
+                correct: true
+            -   value: GetSetMethodNormalizer
+                correct: true
+            -   value: DateNormalizer
+                correct: false
+            -   value: JsonNormalizer
+                correct: false
+
+    -   question: |
+            What is the purpose of the CustomNormalizer?
+            #https://github.com/symfony/symfony/blob/3.1/src/Symfony/Component/Serializer/Normalizer/CustomNormalizer.php
+        answers:
+            -   value:  Allows a NormalizableInterface object to normalize and denormalize itself
+                correct: true
+            -   value:  Allows normalize and denormalize via a callback
+                correct: false
+            -   value:  It is an abstract class which can be extended to provide basic utilities for normalizing and denormalizing
+                correct: false
+    -   question: |
+            What is an example of the normalized format of the DataUriNormalizer?
+        answers:
+            -   value:  data:application/json;base64,U29tZSB0ZXh0IHRoYXQgaXMgbm90IHNvIHNlY3JldA==,
+                correct: true
+            -   value:  U29tZSB0ZXh0IHRoYXQgaXMgbm90IHNvIHNlY3JldA
+                correct: false
+            -   value: "{'some': 'data}"
+                correct: false

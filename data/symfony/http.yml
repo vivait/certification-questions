@@ -248,9 +248,15 @@ questions:
             - { value: A specified number of bytes of the message body, correct: false }
             - { value: GET, correct: false }
 
-
     -   question: What is the aim of the Symfony\Component\HttpKernel\EventListener\ResponseListener::onKernelResponse() listener on kernel.response event?
         answers:
             - { value: Fixes the Response headers based on the Request., correct: true }
             - { value: Checks if the Response headers match the HTTP RFC requirements., correct: false }
             - { value: Checks if the Response has a body., correct: false }
+
+    -   question: What is the default status code of a Symfony\Component\HttpFoundation\RedirectResponse object?
+        answers:
+            - { value: 302, correct: true }
+            - { value: 301, correct: false }
+            - { value: 300, correct: false }
+            - { value: 304, correct: false }

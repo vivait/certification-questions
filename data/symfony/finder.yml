@@ -205,3 +205,13 @@ questions:
             - { value: "flipSorting", correct: false }
             - { value: "oppositeSorting", correct: false }
             - { value: "oppositeSorting", correct: false }
+
+    -   question: |
+            Which solution will match /home/me/myFile.txt file ?
+        answers:
+            - { value: "$finder->in('/home/me')->depth('== 0');", correct: true }
+            - { value: "$finder->in('/home/me');", correct: true }
+            - { value: "$finder->files()->in('/home');", correct: true }
+            - { value: "$finder->files()->in('/home')->depth('> 1');", correct: false }
+            - { value: "$finder->directories()->in('/home')->depth('== 1');", correct: false }
+            - { value: "$finder->files()->in('/home')->depth('< 1');", correct: false }
