@@ -285,3 +285,5 @@ questions:
                 correct: false
             -   value: "{'some': 'data}"
                 correct: false
+            -   value: 'a:1:{s:4:"some";s:5:"value";}'
+                    correct: false
