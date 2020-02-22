@@ -172,3 +172,11 @@ questions:
             - {value: "SecurityUtils", correct: false}
             - {value: "FrameworkUtils", correct: false}
             - {value: "HttpUtils", correct: false}
+
+
+    -   question: Which ROLE allows you to impersonate a user?
+        answers:
+            - {value: "ROLE_ALLOWED_TO_SWITCH", correct: true}
+            - {value: "ROLE_ADMIN", correct: false}
+            - {value: "ROLE_USER_ALLOWED_TO_SWITCH", correct: false}
+            - {value: "ROLE_ADMIN_ALLOWED_TO_SWITCH", correct: false}

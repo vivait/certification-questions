@@ -260,3 +260,23 @@ questions:
             - { value: 301, correct: false }
             - { value: 300, correct: false }
             - { value: 304, correct: false }
+
+    -   question: Which of the following are valid status code to create a Symfony\Component\HttpFoundation\RedirectResponse?
+        answers:
+            - { value: 307, correct: true }
+            - { value: 303, correct: true }
+            - { value: 201, correct: true }
+            - { value: 308, correct: true }
+            - { value: 301, correct: true }
+            - { value: 302, correct: true }
+            - { value: 304, correct: false }
+
+    -   question: Which of the following are valid status code to create a Symfony\Component\HttpFoundation\RedirectResponse?
+        answers:
+            - { value: 307, correct: true }
+            - { value: 303, correct: true }
+            - { value: 201, correct: true }
+            - { value: 308, correct: true }
+            - { value: 301, correct: true }
+            - { value: 302, correct: true }
+            - { value: 304, correct: false }
