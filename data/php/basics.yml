@@ -1279,3 +1279,28 @@ questions:
             - {value: "A fatal error", correct: false }
             - {value: 'A: 2; B: 1', correct: false }
             - {value: 'A: $a; B: $b', correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            $class1 = new stdClass();
+            $class1->a = new class {
+
+                private $b = 'Hello';
+
+                public function __toString()
+                {
+                    return 'World';
+                }
+            };
+
+            $iterator = new RecursiveArrayIterator(
+                [
+                    $class1
+                ]
+            );
+            echo $iterator->getChildren()->current();
+        answers:
+            - {value: 'World', correct: true }
+            - {value: "Hello", correct: false }
+            - {value: 'Fatal error', correct: false }
