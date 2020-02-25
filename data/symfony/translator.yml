@@ -85,6 +85,31 @@ questions:
             - { value: "MoFileLoader", correct: true }
             - { value: "YamlFileLoader", correct: true }
 
+    -   question: "Is IniFileLoader a valid loader?"
+        answers:
+            - { value: "No", correct: false }
+            - { value: "Yes", correct: true }
+
+    -   question: "Is PhpLoader a valid loader?"
+        answers:
+            - { value: "No", correct: true }
+            - { value: "Yes", correct: false }
+
+    -   question: "Is JsonLoader a valid loader?"
+        answers:
+            - { value: "No", correct: true }
+            - { value: "Yes", correct: false }
+
+    -   question: "Is CsvFileLoader a valid loader?"
+        answers:
+            - { value: "Yes", correct: true }
+            - { value: "No", correct: false }
+
+    -   question: "Is CsvLoader a valid loader?"
+        answers:
+            - { value: "Yes", correct: true }
+            - { value: "No", correct: false }
+
     -   question: "What is the command to view all messages for French?"
         answers:
             - { value: "php bin/console debug:translation fr", correct: true }
@@ -111,3 +136,17 @@ questions:
             - { value: "translate()", correct: false }
             - { value: "getTranslations()", correct: false }
             - { value: "getTranslation()", correct: false }
+
+    -   question: |
+            What is a PO file?
+        answers:
+            - { value: "A human readable key value storage", correct: true }
+            - { value: "An XML document with a custom schema", correct: false }
+            - { value: "A Symfony format for storing translations", correct: false }
+
+    -   question: |
+            What is a Xliff file?
+        answers:
+            - { value: "An XML document with a custom schema", correct: true }
+            - { value: "A human readable key value storage", correct: false }
+            - { value: "A Symfony format for storing translations", correct: false }

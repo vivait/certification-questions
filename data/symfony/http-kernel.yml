@@ -282,3 +282,12 @@ questions:
             - { value: "$request->cookie", correct: false }
             - { value: "$request->getCookieData()", correct: false }
             - { value: "request->getCookie()", correct: false }
+
+
+    -   question: |
+            Which Response object allows you use create response content using PHP output buffering in a callback
+        answers:
+            - { value: "StreamedResponse", correct: true }
+            - { value: "BinaryFileResponse", correct: false }
+            - { value: "StreamResponse", correct: false }
+            - { value: "BinaryResponse", correct: false }
