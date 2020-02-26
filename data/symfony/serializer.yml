@@ -276,6 +276,7 @@ questions:
                 correct: false
             -   value:  It is an abstract class which can be extended to provide basic utilities for normalizing and denormalizing
                 correct: false
+
     -   question: |
             What is an example of the normalized format of the DataUriNormalizer?
         answers:
@@ -286,4 +287,4 @@ questions:
             -   value: "{'some': 'data}"
                 correct: false
             -   value: 'a:1:{s:4:"some";s:5:"value";}'
-                    correct: false
+                correct: false
