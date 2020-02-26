@@ -303,7 +303,7 @@ questions:
             correct: true
           - value: |
                 App\Email\NewsletterManager:
-                    factory_class: '@App\Email\NewsletterManagerFactory',
+                    factory_class: '@App\Email\NewsletterManagerFactory'
                     factory_method: 'createNewsletterManager'
             correct: false
           - value: |

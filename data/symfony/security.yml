@@ -180,3 +180,12 @@ questions:
             - {value: "ROLE_ADMIN", correct: false}
             - {value: "ROLE_USER_ALLOWED_TO_SWITCH", correct: false}
             - {value: "ROLE_ADMIN_ALLOWED_TO_SWITCH", correct: false}
+
+    -   question: |
+            Which of the following services exist since Symfony 2.3 and still exist in any Symfony 3.x versions?
+        answers:
+            - {value: "security.encoder_factory", correct: true}
+            - {value: "security.authentication_utils", correct: false}
+            - {value: "security.secure_random", correct: false}
+            - {value: "security.firewall", correct: true}
+            - {value: "security.context", correct: false}

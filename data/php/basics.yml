@@ -157,9 +157,9 @@ questions:
 
             What will be the output when running this script?
         answers:
+            - {value: hello1, correct: true }
             - {value: hellotrue, correct: false }
             - {value: hello5, correct: false }
-            - {value: hello1, correct: true }
             - {value: hello0, correct: false }
             - {value: hello, correct: false }
 
@@ -1304,3 +1304,13 @@ questions:
             - {value: 'World', correct: true }
             - {value: "Hello", correct: false }
             - {value: 'Fatal error', correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            echo print('test');
+        answers:
+            - {value: 'test1', correct: true }
+            - {value: "test4", correct: false }
+            - {value: 'test0', correct: false }
+            - {value: 'test', correct: false }
