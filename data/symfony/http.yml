@@ -146,7 +146,7 @@ questions:
             - { value: Transfer-Encoding, correct: false }
             - { value: Cache-Control, correct: false }
 
-    -   question: Which header lists MINE types the user agent can accept?
+    -   question: Which header lists MIME types the user agent can accept?
         answers:
             - { value: Accept, correct: true }
             - { value: Accept-Type, correct: false }

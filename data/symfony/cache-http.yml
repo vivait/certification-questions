@@ -38,7 +38,7 @@ questions:
                 correct: true
             -   value: |
                     $response->setVary('Accept-Encoding, User-Agent');
-                correct: true
+                correct: false
             -   value: |
                     $response->setVary('Accept-Encoding');
                     $response->setVary('User-Agent', false);
@@ -49,8 +49,6 @@ questions:
                 correct: true
             -   value: |
                     $response->headers->set('Vary', 'Accept-Encoding, User-Agent');
-                correct: true
-            -   value: This is not possible without calling a reverse proxy
                 correct: false
             -   value: |
                     $response->setVary('Accept-Encoding');

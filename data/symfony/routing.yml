@@ -145,11 +145,11 @@ questions:
 
     -   question: How many arguments does the Route class contructor accept?
         answers:
-            - {value: 8, correct: true}
-            - {value: 6, correct: false}
-            - {value: 10, correct: false}
-            - {value: 5, correct: false}
-            - {value: 2, correct: false}
+            - {value: "'8'", correct: true}
+            - {value: "'6'", correct: false}
+            - {value: "'10'", correct: false}
+            - {value: "'5'", correct: false}
+            - {value: "'2'", correct: false}
 
     -   question: Can a Regex string be passed to the first argument of Route's contructor?
         answers:
