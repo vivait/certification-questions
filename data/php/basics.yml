@@ -861,7 +861,7 @@ questions:
     -   question: |
             What is the purpose of $php_errormsg?
         answers:
-            - {value: "It contains the previous error message", correct: false }
+            - {value: "It contains the previous error message", correct: true }
             - {value: "It contains an object of the last error", correct: false }
             - {value: "It has no special meaning it's just a variable", correct: false }
             - {value: "It has no special meaning it's just a variable", correct: false }
