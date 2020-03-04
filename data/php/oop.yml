@@ -330,8 +330,8 @@ questions:
             (new Talking)->another();
         answers:
             - {value: 'An Error', correct: true}
-            - {value: '1', correct: false}
-            - {value: '2', correct: false}
+            - {value: "'1'", correct: false}
+            - {value: "'2'", correct: false}
         help: |
             https://www.php.net/manual/en/language.oop5.traits.php#language.oop5.traits.conflict
 

@@ -1314,3 +1314,19 @@ questions:
             - {value: "test4", correct: false }
             - {value: 'test0', correct: false }
             - {value: 'test', correct: false }
+
+    -   question: |
+            What is the output of the following code?
+
+            <?php
+            $myArray = [];
+
+            array_unshift($myArray, 10, 20);
+
+            echo $myArray[0];
+        answers:
+            - {value: '10', correct: true }
+            - {value: "200", correct: false }
+            - {value: '20', correct: false }
+            - {value: '30', correct: false }
+            - {value: 'An error', correct: false }
