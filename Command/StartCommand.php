@@ -13,7 +13,6 @@ namespace Certificationy\Cli\Command;
 
 use Certificationy\Certification\Loader;
 use Certificationy\Certification\Set;
-
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Input\InputArgument;
@@ -108,10 +107,9 @@ class StartCommand extends Command
             );
 
             $multiSelect = true === $hideMultipleChoice ? true : $question->isMultipleChoice();
-            $numericOnly = 1 === array_product(array_map('is_numeric', $question->getAnswersLabels()));
             $choiceQuestion->setMultiselect($multiSelect);
             $choiceQuestion->setErrorMessage('Answer %s is invalid.');
-            $choiceQuestion->setAutocompleterValues($numericOnly ? null : $question->getAnswersLabels());
+            $choiceQuestion->setAutocompleterValues(null);
 
             $answer = $questionHelper->ask($input, $output, $choiceQuestion);
 

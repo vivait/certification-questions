@@ -138,7 +138,7 @@ questions:
             How can one stop Symfony from marking a response as private when there's user details present?
         answers:
             - { value: "$response->headers->set(AbstractSessionListener::NO_AUTO_CACHE_CONTROL_HEADER, 'true');", correct: true }
-            - { value: "$response->headers->set(AbstractSessionListener::NO_AUTO_PRIVATE_CONTROL_DIRECTIVE, 'true');", correct: true }
+            - { value: "$response->headers->set(AbstractSessionListener::NO_AUTO_PRIVATE_CONTROL_DIRECTIVE, 'true');", correct: false }
             - { value: "$response->headers->set(AbstractSessionListener::NO_AUTO_CACHE_CONTROL_HEADER, 'false');", correct: false }
             - { value: "$response->headers->set(AbstractSessionListener::NO_AUTO_PRIVATE_CONTROL_DIRECTIVE, 'false');", correct: false }
             - { value: "$response->setAutoCache(true);", correct: false }

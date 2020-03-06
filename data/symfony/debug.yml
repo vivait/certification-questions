@@ -7,3 +7,11 @@ questions:
             - { value: E_ALL, correct: true }
             - { value: E_STRICT, correct: false }
             - { value: -1, correct: false }
+    -   question: |
+            What is the command to display the debug information of the container?
+        answers:
+            - { value: debug:container, correct: true }
+            - { value: debug:services, correct: false }
+            - { value: container:debug, correct: false }
+            - { value: services:debug, correct: false }
+            - { value: container:info, correct: false }

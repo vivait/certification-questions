@@ -256,3 +256,106 @@ questions:
             - { value: "$request->server->get('HTTP_HOST');", correct: true }
             - { value: "$request->env->get('CLI_COLOR');", correct: false }
             - { value: "$request->session->get('security._last_username');", correct: false }
+
+    -   question: |
+            Which of the following are valid properties on the Request?
+        answers:
+            - { value: "request", correct: true }
+            - { value: "query", correct: true }
+            - { value: "cookies", correct: true }
+            - { value: "attributes", correct: true }
+            - { value: "files", correct: true }
+            - { value: "server", correct: true }
+            - { value: "headers", correct: true }
+            - { value: "header", correct: false }
+            - { value: "file", correct: false }
+            - { value: "attribute", correct: false }
+            - { value: "cookie", correct: false }
+            - { value: "parameters", correct: false }
+            - { value: "parameter", correct: false }
+
+
+    -   question: |
+            How does one access $_COOKIE data when using a Symfony\Component\HttpFoundation\Request $request object?
+        answers:
+            - { value: "$request->cookies", correct: true }
+            - { value: "$request->cookie", correct: false }
+            - { value: "$request->getCookieData()", correct: false }
+            - { value: "request->getCookie()", correct: false }
+
+
+    -   question: |
+            Which Response object allows you use create response content using PHP output buffering in a callback
+        answers:
+            - { value: "StreamedResponse", correct: true }
+            - { value: "BinaryFileResponse", correct: false }
+            - { value: "StreamResponse", correct: false }
+            - { value: "BinaryResponse", correct: false }
+
+    -   question: |
+            What returns the Symfony\Bundle\FrameworkBundle\Controller\Controller::redirect() method?
+        answers:
+            - { value: A Symfony\Component\HttpFoundation\RedirectResponse., correct: true }
+            - { value: A Symfony\Component\HttpKernel\RedirectResponse., correct: false }
+            - { value: A Symfony\Component\HttpFoundation\RedirectionResponse., correct: false }
+            - { value: A Symfony\Component\HttpKernel\RedirectionResponse., correct: false }
+
+    -   question: |
+            Which of the following kernel events should you listen to in order to modify the HTTP response before it is sent back to the client?
+        answers:
+            - { value: "kernel.response", correct: true }
+            - { value: "kernel.view", correct: true }
+            - { value: "kernel.request", correct: true }
+            - { value: "kernel.finish_request", correct: false }
+            - { value: "kernel.controller", correct: false }
+            - { value: "kernel.terminate", correct: false }
+
+    -   question: |
+            What is a typical usage of the kernel.request Event?
+        answers:
+            - { value: "Modify the request when first received", correct: true }
+            - { value: "Modify or initialize things or the controller before the controller is executed", correct: false }
+            - { value: "Modify or add arguments that are passed to the controller", correct: false }
+            - { value: "Transform a non-Response return value from a controller into a Response", correct: false }
+            - { value: "Modify the Response object just before it is sent", correct: false }
+            - { value: 'To perform some "heavy" action after the response has been streamed to the user', correct: false }
+
+    -   question: |
+            What is a typical usage of the kernel.controller Event?
+        answers:
+            - { value: "Modify or initialize things or the controller before the controller is executed", correct: true }
+            - { value: "Modify the request when first received", correct: false }
+            - { value: "Modify or add arguments that are passed to the controller", correct: false }
+            - { value: "Transform a non-Response return value from a controller into a Response", correct: false }
+            - { value: "Modify the Response object just before it is sent", correct: false }
+            - { value: 'To perform some "heavy" action after the response has been streamed to the user', correct: false }
+
+    -   question: |
+            What is a typical usage of the kernel.controller_arguments Event?
+        answers:
+            - { value: "Modify or add arguments that are passed to the controller", correct: true }
+            - { value: "Modify or initialize things or the controller before the controller is executed", correct: false }
+            - { value: "Modify the request when first received", correct: false }
+            - { value: "Transform a non-Response return value from a controller into a Response", correct: false }
+            - { value: "Modify the Response object just before it is sent", correct: false }
+            - { value: 'To perform some "heavy" action after the response has been streamed to the user', correct: false }
+
+    -   question: |
+            What is a typical usage of the kernel.view Event?
+        answers:
+            - { value: "Transform a non-Response return value from a controller into a Response", correct: true }
+            - { value: "Modify or add arguments that are passed to the controller", correct: false }
+            - { value: "Modify or initialize things or the controller before the controller is executed", correct: false }
+            - { value: "Modify the request when first received", correct: false }
+            - { value: "Modify the Response object just before it is sent", correct: false }
+            - { value: 'To perform some "heavy" action after the response has been streamed to the user', correct: false }
+
+    -   question: |
+            What is a typical usage of the kernel.terminate Event?
+        answers:
+            - { value: 'To perform some "heavy" action after the response has been streamed to the user', correct: true }
+            - { value: "Modify the Response object just before it is sent", correct: false }
+            - { value: "Transform a non-Response return value from a controller into a Response", correct: false }
+            - { value: "Modify or add arguments that are passed to the controller", correct: false }
+            - { value: "Modify or initialize things or the controller before the controller is executed", correct: false }
+            - { value: "Modify the request when first received", correct: false }

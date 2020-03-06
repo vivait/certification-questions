@@ -195,7 +195,7 @@ questions:
     -   question: What is the method to send a signal to a process?
         answers:
             - {value: "signal()", correct: true}
-            - {value: "setSignal()", correct: true}
+            - {value: "setSignal()", correct: false}
             - {value: "sendSignal()", correct: false}
             - {value: "addSignal()", correct: false}
 

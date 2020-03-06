@@ -146,7 +146,7 @@ questions:
             - { value: Transfer-Encoding, correct: false }
             - { value: Cache-Control, correct: false }
 
-    -   question: Which header lists MINE types the user agent can accept?
+    -   question: Which header lists MIME types the user agent can accept?
         answers:
             - { value: Accept, correct: true }
             - { value: Accept-Type, correct: false }
@@ -247,3 +247,36 @@ questions:
             - { value: A formatted list of all headers which the server returns, correct: false }
             - { value: A specified number of bytes of the message body, correct: false }
             - { value: GET, correct: false }
+
+    -   question: What is the aim of the Symfony\Component\HttpKernel\EventListener\ResponseListener::onKernelResponse() listener on kernel.response event?
+        answers:
+            - { value: Fixes the Response headers based on the Request., correct: true }
+            - { value: Checks if the Response headers match the HTTP RFC requirements., correct: false }
+            - { value: Checks if the Response has a body., correct: false }
+
+    -   question: What is the default status code of a Symfony\Component\HttpFoundation\RedirectResponse object?
+        answers:
+            - { value: 302, correct: true }
+            - { value: 301, correct: false }
+            - { value: 300, correct: false }
+            - { value: 304, correct: false }
+
+    -   question: Which of the following are valid status code to create a Symfony\Component\HttpFoundation\RedirectResponse?
+        answers:
+            - { value: 307, correct: true }
+            - { value: 303, correct: true }
+            - { value: 201, correct: true }
+            - { value: 308, correct: true }
+            - { value: 301, correct: true }
+            - { value: 302, correct: true }
+            - { value: 304, correct: false }
+
+    -   question: Which of the following are valid status code to create a Symfony\Component\HttpFoundation\RedirectResponse?
+        answers:
+            - { value: 307, correct: true }
+            - { value: 303, correct: true }
+            - { value: 201, correct: true }
+            - { value: 308, correct: true }
+            - { value: 301, correct: true }
+            - { value: 302, correct: true }
+            - { value: 304, correct: false }

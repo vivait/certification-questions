@@ -369,11 +369,11 @@ questions:
     -   question: |
             Which methods don't belong to Symfony\Component\Config\Definition\Builder\ExprBuilder ?
         answers:
-            - {value: ifString, correct: false}
-            - {value: ifArray, correct: false}
-            - {value: then, correct: false}
             - {value: ifInteger, correct: true}
             - {value: else, correct: true}
             - {value: thenValid, correct: true}
-            - {value: ifEmpty, correct: false}
             - {value: thenSet, correct: true}
+            - {value: ifString, correct: false}
+            - {value: ifArray, correct: false}
+            - {value: then, correct: false}
+            - {value: ifEmpty, correct: false}

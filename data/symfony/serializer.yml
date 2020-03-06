@@ -114,3 +114,177 @@ questions:
                 correct: true
             -   value: is*
                 correct: true
+
+    -   question: "Which of these methods are automatically detected and used by the Serializer ?"
+        answers:
+            -   value:  remove*
+                correct: true
+            -   value:  get*
+                correct: true
+            -   value:  has*
+                correct: true
+            -   value: add*
+                correct: true
+            -   value: is*
+                correct: true
+
+    -   question: "What is the signature of the Serializer constructor?"
+        answers:
+            -   value:  __construct(array $normalizers = [], array $encoders = [])
+                correct: true
+            -   value:  __construct(array $encoders = [], array $normalizers = [])
+                correct: false
+            -   value:  __construct(EncoderCollection $encoders, NormalizerCollection $normalizers)
+                correct: false
+            -   value: __construct(NormalizerCollection $normalizers, EncoderCollection $encoders)
+                correct: false
+
+    -   question: "What is the signature of Serializer::serialize?"
+        answers:
+            -   value:  serialize($data, $format, array $context = [])
+                correct: true
+            -   value:  serialize($data, array $context, $format)
+                correct: false
+            -   value:  serialize(array $context, $format, $data)
+                correct: false
+
+    -   question: "What is the signature of Serializer::serialize?"
+        answers:
+            -   value:  deserialize($data, $type, $format, array $context = [])
+                correct: true
+            -   value:  deserialize($data, $format, $type, array $context = [])
+                correct: false
+            -   value:  deserialize($format, $data, $type, array $context = [])
+                correct: false
+
+    -   question: |
+            class Person {
+                public $name;
+                public $age;
+            }
+
+            $data = <<<EOF
+            <person>
+                <name>foo</name>
+                <age>99</age>
+                <city>Paris</city>
+            </person>
+            EOF;
+
+            ...
+
+            $person = $serializer->deserialize($data, '\Person', 'xml', ['allow_extra_attributes' => false]);
+        answers:
+            -   value:  It will throw a Symfony\Component\Serializer\Exception\ExtraAttributesException.
+                correct: true
+            -   value:  It will throw a Symfony\Component\Serializer\Exception\MissingPropertyException.
+                correct: false
+            -   value: It create a populated person object.
+                correct: false
+
+    -   question: |
+            class Person {
+                public $name;
+                public $age;
+            }
+
+            $data = <<<EOF
+            <person>
+                <name>foo</name>
+                <age>99</age>
+                <city>Paris</city>
+            </person>
+            EOF;
+
+            ...
+
+            $person = $serializer->deserialize($data, '\Person', 'xml');
+        answers:
+            -   value:  It will throw a Symfony\Component\Serializer\Exception\ExtraAttributesException.
+                correct: false
+            -   value:  It will throw a Symfony\Component\Serializer\Exception\MissingPropertyException.
+                correct: false
+            -   value: It create a populated person object.
+                correct: true
+
+    -   question: |
+            class Person {
+                public $name;
+                public $age;
+            }
+
+            $data = <<<EOF
+            <person>
+                <name>foo</name>
+                <age>99</age>
+                <city>Paris</city>
+            </person>
+            EOF;
+
+            ...
+
+            $person = $serializer->deserialize($data, '\Person', 'xml');
+        answers:
+            -   value:  It will throw a Symfony\Component\Serializer\Exception\ExtraAttributesException.
+                correct: false
+            -   value:  It will throw a Symfony\Component\Serializer\Exception\MissingPropertyException.
+                correct: false
+            -   value: It create a populated person object.
+                correct: true
+
+    -   question: |
+            What interface must one use have custom names for serialized fields?
+        answers:
+            -   value:  Symfony\Component\Serializer\NameConverter\NameConverterInterface
+                correct: true
+            -   value:  Symfony\Component\Serializer\NameConverterInterface
+                correct: false
+            -   value: Symfony\Component\Serializer\CustomNameFactoryInterface
+                correct: false
+            -   value: Symfony\Component\Serializer\NameConverter\CustomNameFactoryInterface
+                correct: false
+
+    -   question: |
+            Which of the followings are built-in normalizers?
+        answers:
+            -   value:  XmlNormalizer
+                correct: false
+            -   value:  CustomNormalizer
+                correct: true
+            -   value: DataUriNormalizer
+                correct: true
+            -   value: ObjectNormalizer
+                correct: true
+            -   value: TimeNormalizer
+                correct: false
+            -   value: DateTimeNormalizer
+                correct: true
+            -   value: GetSetMethodNormalizer
+                correct: true
+            -   value: DateNormalizer
+                correct: false
+            -   value: JsonNormalizer
+                correct: false
+
+    -   question: |
+            What is the purpose of the CustomNormalizer?
+            #https://github.com/symfony/symfony/blob/3.1/src/Symfony/Component/Serializer/Normalizer/CustomNormalizer.php
+        answers:
+            -   value:  Allows a NormalizableInterface object to normalize and denormalize itself
+                correct: true
+            -   value:  Allows normalize and denormalize via a callback
+                correct: false
+            -   value:  It is an abstract class which can be extended to provide basic utilities for normalizing and denormalizing
+                correct: false
+
+    -   question: |
+            What is an example of the normalized format of the DataUriNormalizer?
+        answers:
+            -   value:  data:application/json;base64,U29tZSB0ZXh0IHRoYXQgaXMgbm90IHNvIHNlY3JldA==,
+                correct: true
+            -   value:  U29tZSB0ZXh0IHRoYXQgaXMgbm90IHNvIHNlY3JldA
+                correct: false
+            -   value: "{'some': 'data}"
+                correct: false
+            -   value: 'a:1:{s:4:"some";s:5:"value";}'
+                correct: false

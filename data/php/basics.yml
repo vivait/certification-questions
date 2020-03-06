@@ -157,9 +157,9 @@ questions:
 
             What will be the output when running this script?
         answers:
+            - {value: hello1, correct: true }
             - {value: hellotrue, correct: false }
             - {value: hello5, correct: false }
-            - {value: hello1, correct: true }
             - {value: hello0, correct: false }
             - {value: hello, correct: false }
 
@@ -861,7 +861,7 @@ questions:
     -   question: |
             What is the purpose of $php_errormsg?
         answers:
-            - {value: "It contains the previous error message", correct: false }
+            - {value: "It contains the previous error message", correct: true }
             - {value: "It contains an object of the last error", correct: false }
             - {value: "It has no special meaning it's just a variable", correct: false }
             - {value: "It has no special meaning it's just a variable", correct: false }
@@ -938,3 +938,395 @@ questions:
             - {value: "Allows infinite iteration over an array", correct: true }
             - {value: "Allows the user to add as many items as they like", correct: false }
             - {value: "Allows for rewinding at any point during the iteration", correct: false }
+
+    -   question: |
+            Which PHP superglobal variable contains the command line arguments when the script runs in CLI mode?
+        answers:
+            - {value: "$_SERVER", correct: true }
+            - {value: "$GLOBALS", correct: false }
+            - {value: "$_CLI", correct: false }
+            - {value: "$_POST", correct: false }
+            - {value: "PHP cannot run from the command line interface.", correct: false }
+            - {value: "$_ENV", correct: false }
+
+    -   question: |
+            Which PHP superglobal variable contains the command line arguments when the script runs in CLI mode?
+        answers:
+            - {value: "$_SERVER", correct: true }
+            - {value: "$GLOBALS", correct: false }
+            - {value: "$_CLI", correct: false }
+            - {value: "$_POST", correct: false }
+            - {value: "PHP cannot run from the command line interface.", correct: false }
+            - {value: "$_ENV", correct: false }
+
+    -   question: |
+            In which version of PHP were late static binding added?
+        answers:
+            - {value: "5.3", correct: true }
+            - {value: "5.2", correct: false }
+            - {value: "5.4", correct: false }
+            - {value: "5.5", correct: false }
+            - {value: "5.6", correct: false }
+            - {value: "7.0", correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            function func1() {
+                goto label1;
+                echo 'World';
+            }
+
+            function func2() {
+                label1:
+                echo 'Hello';
+            }
+
+            func1();
+        answers:
+            - {value: "A fatal error", correct: true }
+            - {value: "Hello", correct: false }
+            - {value: "World", correct: false }
+            - {value: "Hello World", correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            goto label1;
+            echo 'World';
+
+            if (false) {
+                label1:
+                echo 'Hello';
+                return;
+            }
+        answers:
+            - {value: "Hello", correct: true }
+            - {value: "World", correct: false }
+            - {value: "A fatal error", correct: false }
+            - {value: "Hello World", correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            for($i=0,$j=50; $i<100; $i++) {
+              while($j--) {
+                if($j==17) goto end;
+              }
+            }
+            echo "i = $i";
+            end:
+            echo 'j hit 17';
+        answers:
+            - {value: "j hit 17", correct: true }
+            - {value: "i = 33", correct: false }
+            - {value: "i = 32", correct: false }
+            - {value: "It will throw a fatal error", correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            goto loop;
+            for($i=0,$j=50; $i<100; $i++) {
+              while($j--) {
+                loop:
+              }
+            }
+            echo "$i = $i";
+        answers:
+            - {value: "It will throw a fatal error", correct: true }
+            - {value: "i = 99", correct: false }
+            - {value: "i = 100", correct: false }
+            - {value: "i = 101", correct: false }
+    -   question: |
+            What is the result of running the following code?
+
+            goto next;
+
+            next: {
+                echo "Hello";
+            }
+        answers:
+            - {value: "Hello", correct: true }
+            - {value: "A fatal error", correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            goto next;
+
+            next: (
+                echo "Hello";
+            )
+        answers:
+            - {value: "A fatal error", correct: true }
+            - {value: "Hello", correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            echo <<<EOD
+            \\
+            EOD;
+        answers:
+            - {value: '\', correct: true }
+            - {value: '\\', correct: false }
+            - {value: '', correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            echo <<<'EOD'
+            \\
+            EOD;
+        answers:
+            - {value: '\\', correct: true }
+            - {value: '\', correct: false }
+            - {value: '', correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            $var = 'var';
+            echo <<<EOD
+            {$var}
+            EOD;
+        answers:
+            - {value: 'var', correct: true }
+            - {value: '{$var}', correct: false }
+            - {value: "'var'", correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            $var = 'var';
+            echo <<<'EOD'
+            {$var}
+            EOD;
+        answers:
+            - {value: '{$var}', correct: true }
+            - {value: 'var', correct: false }
+            - {value: "'var'", correct: false }
+
+    -   question: |
+            What mechinism is used to create the string Hello world?
+            $var <<<'EOD'
+            Hello world
+            EOD;
+        answers:
+            - {value: 'Nowdoc', correct: true }
+            - {value: 'Heredoc', correct: false }
+
+    -   question: |
+            What mechinism is used to create the string Hello world?
+            $var <<<EOD
+            Hello world
+            EOD;
+        answers:
+            - {value: 'Heredoc', correct: true }
+            - {value: 'Nowdoc', correct: false }
+
+    -   question: |
+            What mechinism is used to create the string Hello world?
+            $var <<<"EOD"
+            Hello world
+            EOD;
+        answers:
+            - {value: 'Heredoc', correct: true }
+            - {value: 'Nowdoc', correct: false }
+    -   question: |
+            What is the result of running the following code?
+
+            class Test {
+              public static $bar = <<<EOT
+            bar
+              EOT;
+             }
+
+            echo Test::$bar;
+        answers:
+            - {value: "A fatal error", correct: true }
+            - {value: 'bar', correct: false }
+            - {value: '\n bar', correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            class Test {
+              public static $bar = <<<EOT
+              bar
+              EOT;
+             }
+
+            echo Test::$bar;
+        answers:
+            - {value: 'bar', correct: true }
+            - {value: "A fatal error", correct: false }
+            - {value: '\n bar', correct: false }
+    -   question: |
+            What is the result of running the following code?
+
+            class Test {
+              public static $bar = <<<"EOT"
+              bar
+              EOT;
+             }
+
+            echo Test::$bar;
+        answers:
+            - {value: 'bar', correct: true }
+            - {value: "A fatal error", correct: false }
+            - {value: '\n bar', correct: false }
+    -   question: |
+            What is the result of running the following code?
+
+            class Test {
+              public static $bar = <<<EOT
+                bar
+              EOT;
+             }
+
+            echo Test::$bar;
+        answers:
+            - {value: '  bar', correct: true }
+            - {value: 'bar', correct: false }
+            - {value: "A fatal error", correct: false }
+            - {value: '\n bar', correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            class Test {
+              public static $bar = <<<"EOT"
+                bar
+              EOT;
+             }
+
+            echo Test::$bar;
+        answers:
+            - {value: '  bar', correct: true }
+            - {value: 'bar', correct: false }
+            - {value: "A fatal error", correct: false }
+            - {value: '\n bar', correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            echo 2 ** 3;
+        answers:
+            - {value: '8', correct: true }
+            - {value: "A fatal error", correct: false }
+            - {value: '6', correct: false }
+            - {value: '5', correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            $a = gmp_init(42);
+            $b = gmp_init(17);
+
+            echo $a + $b;
+        answers:
+            - {value: '59', correct: true }
+            - {value: "A fatal error", correct: false }
+            - {value: '2', correct: false }
+            - {value: '0', correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            $array = [
+                [1, 2],
+            ];
+
+            foreach ($array as list($a, $b)) {
+                echo "A: $a; B: $b";
+            }
+        answers:
+            - {value: 'A: 1; B: 2', correct: true }
+            - {value: "A fatal error", correct: false }
+            - {value: 'A: 2; B: 1', correct: false }
+            - {value: 'A: $a; B: $b', correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            $array = [
+                [1, 2],
+            ];
+
+            foreach ($array as $a, $b) {
+                echo "A: $a; B: $b";
+            }
+        answers:
+            - {value: "A fatal error", correct: true }
+            - {value: 'A: 1; B: 2', correct: false }
+            - {value: 'A: 2; B: 1', correct: false }
+            - {value: 'A: $a; B: $b', correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            $array = [
+                [1, 2],
+            ];
+
+            foreach ($array as [$a, $b]) {
+                echo "A: $a; B: $b";
+            }
+        answers:
+            - {value: 'A: 1; B: 2', correct: true }
+            - {value: "A fatal error", correct: false }
+            - {value: 'A: 2; B: 1', correct: false }
+            - {value: 'A: $a; B: $b', correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            $class1 = new stdClass();
+            $class1->a = new class {
+
+                private $b = 'Hello';
+
+                public function __toString()
+                {
+                    return 'World';
+                }
+            };
+
+            $iterator = new RecursiveArrayIterator(
+                [
+                    $class1
+                ]
+            );
+            echo $iterator->getChildren()->current();
+        answers:
+            - {value: 'World', correct: true }
+            - {value: "Hello", correct: false }
+            - {value: 'Fatal error', correct: false }
+
+    -   question: |
+            What is the result of running the following code?
+
+            echo print('test');
+        answers:
+            - {value: 'test1', correct: true }
+            - {value: "test4", correct: false }
+            - {value: 'test0', correct: false }
+            - {value: 'test', correct: false }
+
+    -   question: |
+            What is the output of the following code?
+
+            <?php
+            $myArray = [];
+
+            array_unshift($myArray, 10, 20);
+
+            echo $myArray[0];
+        answers:
+            - {value: '10', correct: true }
+            - {value: "200", correct: false }
+            - {value: '20', correct: false }
+            - {value: '30', correct: false }
+            - {value: 'An error', correct: false }

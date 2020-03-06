@@ -30,9 +30,9 @@ questions:
             - {value: xml, correct: false }
             - {value: annotations, correct: true }
 
-    -   question: 'According to the official Symfony Best Practices Guide, where should the application specific configuration parameters be stored?'
+    -   question: 'According to the official Symfony Best Practices Guide, where should the application related configuration parameters be stored?'
         answers:
-            - {value: In the src/Kernel.php file., correct: true}
+            - {value: In the src/Kernel.php file., correct: false}
             - {value: In the config/parameters.yaml file., correct: false}
             - {value: In the .app.yml file at the root of the project directory., correct: false}
             - {value: In the config/services.yaml file., correct: true}
@@ -51,12 +51,12 @@ questions:
             - {value: my_parameter, correct: false}
             - {value: parameter.my_parameter, correct: false}
 
-    -   question: 'What is the optimum convention for a service for a class that only has one usage?'
+    -   question: 'What is the optimum convention for a service ID for a class that only has one usage?'
         answers:
             - {value: AppBundle\Utils\Slugger, correct: true}
             - {value: app.utils.slugger, correct: false}
 
-    -   question: 'What is the optimum convention for a service for a class that only has more than one usage?'
+    -   question: 'What is the optimum convention for a service ID for a class that only has more than one usage?'
         answers:
             - {value: AppBundle\Utils\Slugger and AppBundle\Utils\Slugger.other, correct: false}
             - {value: app.utils.slugger and app.utils.slugger_other, correct: true}
