@@ -189,3 +189,12 @@ questions:
             - {value: "security.secure_random", correct: false}
             - {value: "security.firewall", correct: true}
             - {value: "security.context", correct: false}
+
+    -   question: |
+            What is the purpose of the login_path firewall option?
+        answers:
+            - {value: "It provides a path to redirect the user to when they are not authenticated", correct: true}
+            - {value: "It provides the overall path to redirect ", correct: false}
+            - {value: "security.secure_random", correct: false}
+            - {value: "security.firewall", correct: true}
+            - {value: "security.context", correct: false}
