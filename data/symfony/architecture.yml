@@ -17,3 +17,24 @@ questions:
         answers:
             - { value: Yes, correct: false}
             - { value: No, correct: true}
+
+    -   question: 'What is the purpose of a bridge?'
+        answers:
+            - { value: It intergrates a third-party component into Symfony componenents, correct: true}
+            - { value: It connects the classes of two bundles in a decoupled way, correct: false}
+            - { value: It is a bundle which is for a thrd-party component, correct: false}
+
+    -   question: 'Are new services public by default with Symfony full-stack?'
+        answers:
+            - { value: No, correct: true}
+            - { value: Yes, correct: false}
+
+    -   question: 'Are services autowired by default with Symfony full-stack?'
+        answers:
+            - { value: Yes, correct: true}
+            - { value: No, correct: false}
+
+    -   question: 'Are services autoconfigured by default with Symfony full-stack?'
+        answers:
+            - { value: Yes, correct: true}
+            - { value: No, correct: false}

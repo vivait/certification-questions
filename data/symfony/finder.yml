@@ -215,3 +215,19 @@ questions:
             - { value: "$finder->files()->in('/home')->depth('> 1');", correct: false }
             - { value: "$finder->directories()->in('/home')->depth('== 1');", correct: false }
             - { value: "$finder->files()->in('/home')->depth('< 1');", correct: false }
+
+    -   question: |
+            How can one represent finder result as an array?
+        answers:
+            - { value: "By calling the iterator_to_array function on the Finder instance", correct: true }
+            - { value: "By calling toArray on the Finder instance", correct: false }
+            - { value: "By calling asArray on the Finder instance", correct: false }
+            - { value: "You can't", correct: false }
+
+    -   question: |
+            How can one view the contents of a found file?
+        answers:
+            - { value: "By calling getContents on the File instance", correct: true }
+            - { value: "By calling asString on the File instance", correct: false }
+            - { value: "By calling getStream on the File instance", correct: false }
+            - { value: "You can't", correct: false }

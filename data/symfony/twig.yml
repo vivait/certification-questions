@@ -65,13 +65,23 @@ questions:
     -   question: Which of the following are built-in Twig functions?
         answers:
             - {value: source(), correct: true}
-            - {value: render(), correct: false}
             - {value: date(), correct: true}
-            - {value: url(), correct: false}
             - {value: dump(), correct: true}
-            - {value: path(), correct: false}
             - {value: max(), correct: true}
             - {value: attribute(), correct: true}
+            - {value: render(), correct: false}
+            - {value: url(), correct: false}
+            - {value: path(), correct: false}
+
+    -   question: Is path() a Twig function?
+        answers:
+            - {value: No, correct: true}
+            - {value: Yes, correct: false}
+
+    -   question: Is render() a Twig function?
+        answers:
+            - {value: No, correct: true}
+            - {value: Yes, correct: false}
 
     -   question: Which of the following classes are Twig loaders available by default?
         answers:

@@ -397,6 +397,6 @@ questions:
                 return new Response($id);
             }
         answers:
-            - { value: 'Parameter "id" for route "article" must match "\d+" ("toto" given)', correct: true }
-            - { value: 'Unable to find the controller for path "article". The route is wrongly configured.', correct: false }
+            - { value: 'Unable to find the controller for path "article". The route is wrongly configured.', correct: true }
+            - { value: 'Parameter "id" for route "article" must match "\d+" ("toto" given)', correct: false }
             - { value: 'toto', correct: false }

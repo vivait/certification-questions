@@ -15,3 +15,19 @@ questions:
             - { value: container:debug, correct: false }
             - { value: services:debug, correct: false }
             - { value: container:info, correct: false }
+
+    -   question: |
+            Which of the following does the ErrorHandler do?
+        answers:
+            - { value: Turns PHP errors into exceptions, correct: true }
+            - { value: Catches PHP function errors and turns them into exceptions, correct: true }
+            - { value: Turns Response objects to exceptions, correct: false }
+            - { value: It is mostly useful in debug mode to replace the default PHP/XDebug output with something prettier and more useful., correct: false }
+
+
+    -   question: |
+            What is the purpose of DebugClassLoader?
+        answers:
+            - { value: It throws more useful exceptions when a class is not found by the autoloaders, correct: true }
+            - { value: It is a autoloader for development environments, correct: false }
+            - { value: It is mostly useful in debug mode to replace the default PHP/XDebug output with something prettier and more useful., correct: false }

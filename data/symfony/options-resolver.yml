@@ -105,3 +105,10 @@ questions:
                           },
                   );
               correct: true
+
+    -   question: "Which of the following are true about Symfony\Component\OptionsResolver\Options?"
+        answers:
+            - {value: "The OptionsResolver class implements Options.", correct: true}
+            - {value: "It is an interface.", correct: true}
+            - {value: "It is an abstract class.", correct: false}
+            - {value: "The OptionsResolver class extends Options.", correct: false}
