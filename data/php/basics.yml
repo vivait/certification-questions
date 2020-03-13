@@ -871,8 +871,6 @@ questions:
         answers:
             - {value: "It contains the number of arguments passed to the script", correct: true }
             - {value: "It contains a list of arguments passed to the script", correct: false }
-            - {value: "It contains the number of arguments passed to the current script", correct: false }
-            - {value: "It contains a list of arguments passed to the current script", correct: false }
 
     -   question: |
             Which of the following are predefined PHP variables?
@@ -1330,3 +1328,12 @@ questions:
             - {value: '20', correct: false }
             - {value: '30', correct: false }
             - {value: 'An error', correct: false }
+
+
+    -   question: |
+            Which of the following is not a built-in function anymore as of PHP 7.0?
+        answers:
+            - {value: 'mysql_connect()', correct: true }
+            - {value: "metaphone()", correct: false }
+            - {value: 'date()', correct: false }
+            - {value: 'in_array()', correct: false }

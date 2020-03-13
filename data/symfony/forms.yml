@@ -451,7 +451,7 @@ questions:
             http://symfony.com/doc/current/reference/forms/types/choice.html#choice-label
 
     -   question: |
-            Which of these options are not valid for a Symfony\Component\Form\Extension\Core\Type\CollectionType form type ?
+            Which of these options are valid for a Symfony\Component\Form\Extension\Core\Type\CollectionType form type ?
         answers:
             - { value: allow_add, correct: true }
             - { value: allow_delete, correct: true }
@@ -460,7 +460,7 @@ questions:
             - { value: allow_update, correct: false }
 
     -   question: |
-            Which of these options are not valid for a Symfony\Component\Form\Extension\Core\Type\CollectionType form type ?
+            Which of these options are valid for a Symfony\Component\Form\Extension\Core\Type\CollectionType form type ?
         answers:
             - { value: entry_options, correct: true }
             - { value: delete_empty, correct: true }
