@@ -231,3 +231,142 @@ questions:
             - { value: "By calling asString on the File instance", correct: false }
             - { value: "By calling getStream on the File instance", correct: false }
             - { value: "You can't", correct: false }
+
+    -   question: |
+            What is the type of the files?
+        answers:
+            - { value: "Symfony\\Component\\Finder\\SplFileInfo", correct: true }
+            - { value: "Symfony\\Component\\Finder\\File\\SplFileInfo", correct: false }
+            - { value: "\\SplFileInfo", correct: false }
+            - { value: "Symfony\\Component\\Finder\\File", correct: false }
+            - { value: "Symfony\\Component\\Finder\\File\\File", correct: false }
+
+    -   question: |
+            Which method gets the absolute path for a file?
+        answers:
+            - { value: "getRealPath()", correct: true }
+            - { value: "getAbsolutePath()", correct: false }
+            - { value: "getRelativePathname()", correct: false }
+            - { value: "getPath()", correct: false }
+            - { value: "getRelativePath()", correct: false }
+
+    -   question: |
+            Which method gets the relative path for a file omitting the filename?
+        answers:
+            - { value: "getRelativePath()", correct: true }
+            - { value: "getRealPath()", correct: false }
+            - { value: "getAbsolutePath()", correct: false }
+            - { value: "getRelativePathname()", correct: false }
+            - { value: "getPath()", correct: false }
+
+    -   question: |
+            Which method gets the relative path for a file?
+        answers:
+            - { value: "getRelativePathname()", correct: true }
+            - { value: "getRelativePath()", correct: false }
+            - { value: "getRealPath()", correct: false }
+            - { value: "getAbsolutePath()", correct: false }
+            - { value: "getPath()", correct: false }
+
+    -   question: |
+            What is the method to check if the finder matches any files or directories?
+        answers:
+            - { value: "hasResults()", correct: true }
+            - { value: "hasFound()", correct: false }
+            - { value: "hasFiltered()", correct: false }
+            - { value: "hasFoundResults()", correct: false }
+
+    -   question: |
+            Which of the following are mandatory criteria?
+        answers:
+            - { value: "in()", correct: true }
+            - { value: "files() or directories()", correct: false }
+            - { value: "name()", correct: false }
+            - { value: "size()", correct: false }
+
+    -   question: |
+            Is the following a valid call to in() for wildcard matching?
+
+            $finder->in('src/Symfony/*/*/Resources');
+        answers:
+            - { value: "Yes", correct: true }
+            - { value: "No", correct: false }
+
+    -   question: |
+            What is the method to call to excude a directory?
+        answers:
+            - { value: "exclude", correct: true }
+            - { value: "notIn", correct: false }
+            - { value: "ignoreDir", correct: false }
+            - { value: "notDir", correct: false }
+
+    -   question: |
+            Is it possible for the finder to exclude directories which it doesn't have permission for?
+        answers:
+            - { value: "Yes, call ignoreUnreadableDirs()", correct: true }
+            - { value: "No it is not possible", correct: false }
+            - { value: "No, but you've can check the permissions", correct: false }
+            - { value: "Yes, call ignoreUnreadable()", correct: false }
+            - { value: "Yes, call readable()", correct: false }
+
+    -   question: |
+            Which of the following is valid methods?
+        answers:
+            - { value: "name()", correct: true }
+            - { value: "notName()", correct: true }
+            - { value: "contains()", correct: true }
+            - { value: "notContains()", correct: true }
+            - { value: "path()", correct: true }
+            - { value: "size()", correct: true }
+            - { value: "date()", correct: true }
+            - { value: "notSize()", correct: false }
+            - { value: "notDepth()", correct: false }
+
+
+    -   question: |
+            Which of the following can the contain() method accept?
+        answers:
+            - { value: "Regex strings", correct: true }
+            - { value: "string", correct: true }
+            - { value: "integers", correct: false }
+            - { value: "booleans", correct: false }
+            - { value: "wildcard strings", correct: false }
+
+    -   question: |
+            Which of the following can the path() method accept?
+        answers:
+            - { value: "Regex strings", correct: true }
+            - { value: "string", correct: true }
+            - { value: "integers", correct: false }
+            - { value: "booleans", correct: false }
+            - { value: "wildcard strings", correct: true }
+
+    -   question: |
+            Which of the following are a valid operators to limit compare the size of files?
+        answers:
+            - { value: ">", correct: true }
+            - { value: ">=", correct: true }
+            - { value: "<", correct: true }
+            - { value: "<=", correct: true }
+            - { value: "==", correct: true }
+            - { value: "!=", correct: true }
+            - { value: "!==", correct: false }
+            - { value: "===", correct: false }
+            - { value: "contains", correct: false }
+            - { value: "not is", correct: false }
+            - { value: "is", correct: false }
+
+    -   question: |
+            Which method is correct for filtering based on callback?
+        answers:
+            - { value: "filter()", correct: true }
+            - { value: "callback()", correct: false }
+            - { value: "filterCallback()", correct: false }
+            - { value: "arrayFilter()", correct: false }
+
+    -   question: |
+            How can one get the content of a file?
+        answers:
+            - { value: "Call the getContents() method", correct: true }
+            - { value: "Cast the file to a string", correct: false }
+            - { value: "Call the toString() method", correct: false }

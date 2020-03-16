@@ -151,16 +151,16 @@ questions:
     -   question: What is the default value of the kill signal for process component?
         answers:
             - {value: "SIGINT", correct: true}
-            - {value: "0", correct: false}
-            - {value: "1", correct: false}
+            - {value: "'0'", correct: false}
+            - {value: "'1'", correct: false}
             - {value: "KILLSIG", correct: false}
 
     -   question: What is the default value of the kill signal for the process component?
         answers:
             - {value: "SIGINT", correct: true}
-            - {value: "0", correct: false}
-            - {value: "1", correct: false}
-            - {value: "3", correct: false}
+            - {value: "'0'", correct: false}
+            - {value: "'1'", correct: false}
+            - {value: "'3'", correct: false}
 
     -   question: What is the class to use to execute PHP in an isolated process?
         answers:

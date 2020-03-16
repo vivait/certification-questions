@@ -377,3 +377,12 @@ questions:
             - {value: ifArray, correct: false}
             - {value: then, correct: false}
             - {value: ifEmpty, correct: false}
+
+    -   question: |
+            How can you set true as default value for a Node Type?
+        answers:
+            - {value: ->defaultTrue();, correct: true}
+            - {value: ->defaultValue(true);, correct: true}
+            - {value: ->setDefault(true);, correct: false}
+            - {value: ->isTrue();, correct: false}
+            - {value: ->default(true);, correct: false}

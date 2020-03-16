@@ -106,7 +106,7 @@ questions:
                   );
               correct: true
 
-    -   question: "Which of the following are true about Symfony\Component\OptionsResolver\Options?"
+    -   question: "Which of the following are true about Symfony\\Component\\OptionsResolver\\Options?"
         answers:
             - {value: "The OptionsResolver class implements Options.", correct: true}
             - {value: "It is an interface.", correct: true}
