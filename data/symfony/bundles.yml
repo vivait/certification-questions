@@ -126,3 +126,12 @@ questions:
             - {value: "hello 2", correct: true }
             - {value: "hello", correct: false }
             - {value: "Error: Route `FrameworkBundle:Template:template` does not exist.", correct: false }
+
+    -   question: |
+            What are the valid ways to get the Session object if the controller class inherits from the base FrameworkBundle's Controller class?
+        answers:
+            - {value: "$session = $request->getSession();", correct: true }
+            - {value: "$session = $this->get('session');", correct: true }
+            - {value: "$session = $this->getSession();", correct: false }
+            - {value: "$session = $this->getUser()->getSession();", correct: false }
+            - {value: "$session = $this->container->getSession();", correct: false }
