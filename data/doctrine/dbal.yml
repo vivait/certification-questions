@@ -88,3 +88,13 @@ questions:
             - { value: 'PAYLOAD', correct: false }
         help: |
             https://dev.mysql.com/doc/refman/5.5/en/keywords.html
+
+    -   question: Unlike a database such as MySQL, SQLite columns are not explicitely typed. Instead, SQLite categorizes data into which of the following categories ?
+        answers:
+            - { value: 'numeric', correct: true }
+            - { value: 'binary', correct: false }
+            - { value: 'textual', correct: true }
+            - { value: 'constant', correct: false }
+            - { value: 'unicode', correct: false }
+        help: |
+            https://sqlite.org/docs.html

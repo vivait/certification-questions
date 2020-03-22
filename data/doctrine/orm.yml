@@ -136,3 +136,63 @@ questions:
             -   value: |
                     Hello World
                 correct: false
+
+    -   question: |
+            Which of the following are built-in Doctrine DBAL data types?
+        answers:
+            -   value: hash
+                correct: false
+            -   value: datetimetz
+                correct: true
+            -   value: numeric
+                correct: false
+            -   value: guid
+                correct: true
+            -   value: varchar
+                correct: false
+
+    -   question: |
+            Which of the following are built-in Doctrine DBAL data types?
+        answers:
+            -   value: password
+                correct: false
+            -   value: guid
+                correct: true
+            -   value: numeric
+                correct: false
+            -   value: date
+                correct: true
+            -   value: bin
+                correct: false
+
+    -   question: |
+            Which of the following are built-in Doctrine DBAL data types?
+        answers:
+            -   value: dateinterval
+                correct: true
+            -   value: time
+                correct: true
+            -   value: numeric
+                correct: false
+            -   value: date
+                correct: true
+            -   value: bin
+                correct: false
+            -   value: xml
+                correct: false
+
+    -   question: |
+            Which of the following are built-in Doctrine DBAL data types?
+        answers:
+            -   value: smallint
+                correct: true
+            -   value: simple_array
+                correct: true
+            -   value: numeric
+                correct: false
+            -   value: object
+                correct: true
+            -   value: bin
+                correct: false
+            -   value: xml
+                correct: false

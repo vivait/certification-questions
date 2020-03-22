@@ -386,3 +386,17 @@ questions:
             - {value: ->setDefault(true);, correct: false}
             - {value: ->isTrue();, correct: false}
             - {value: ->default(true);, correct: false}
+
+    -   question: |
+            What is the purpose of ->arrayPrototype()?
+        answers:
+            - {value: It defines a node contains a multi-dimensional array with two layers, correct: true}
+            - {value: It defines a node contains a single dimensional array, correct: false}
+            - {value: It defines a node contains any array value, correct: false}
+
+    -   question: |
+            What is the purpose of ->arrayNode()?
+        answers:
+            - {value: It defines a node contains a single dimensional array, correct: true}
+            - {value: It defines a node contains a multi-dimensional array with two layers, correct: false}
+            - {value: It defines a node contains any array value, correct: false}
