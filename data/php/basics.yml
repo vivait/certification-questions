@@ -642,8 +642,8 @@ questions:
 
             $bool = (bool) "false"
         answers:
-            - {value: true, correct: true }
-            - {value: false, correct: false }
+            - {value: "true", correct: true }
+            - {value: "false", correct: false }
             - {value: "Error : you cannot cast a String as a Boolean", correct: false }
 
     -   question: |
