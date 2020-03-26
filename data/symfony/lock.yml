@@ -47,8 +47,8 @@ questions:
             - { value: "createLock($resource, $autoRelease = true, $ttl = 300.0)", correct: false }
             - { value: "createLock($resource, $ttl = 150, $autoRelease = true)", correct: false }
             - { value: "createLock($resource, $autoRelease = true, $ttl = 150.0)", correct: false }
-            - { value: "createLock($resource, $ttl = 300.0)", correct: true }
-            - { value: "createLock($resource, $ttl = 150.0)", correct: true }
+            - { value: "createLock($resource, $ttl = 300.0)", correct: false }
+            - { value: "createLock($resource, $ttl = 150.0)", correct: false }
 
     -   question: "What is the purpose of the third argument Symfony\\Component\\Lock\\Factory::createLock?"
         answers:
