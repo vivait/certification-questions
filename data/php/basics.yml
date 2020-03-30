@@ -1337,3 +1337,18 @@ questions:
             - {value: "metaphone()", correct: false }
             - {value: 'date()', correct: false }
             - {value: 'in_array()', correct: false }
+
+    -   question: |
+          What should replace the /* ... */ to create a Zlib-compressed file foo.gz with a compression level of 9 ?
+
+          $file = /* ... */;
+
+          $f = fopen($file, 'wb9');
+          fwrite($f, $data);
+          fclose($f);
+        answers:
+          - {value: 'compress.zlib://foo.gz', correct: true }
+          - {value: 'compress.zip://foo.gz?level=9', correct: false }
+          - {value: 'compress.gzip://foo.gz?level=9', correct: false }
+          - {value: 'zlib://foo.gz', correct: false }
+          - {value: 'gzip://foo.gz?level=9', correct: false }

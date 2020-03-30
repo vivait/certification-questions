@@ -144,9 +144,17 @@ questions:
             - { value: "An XML document with a custom schema", correct: false }
             - { value: "A Symfony format for storing translations", correct: false }
 
-    -   question: |
-            What is a Xliff file?
-        answers:
-            - { value: "An XML document with a custom schema", correct: true }
-            - { value: "A human readable key value storage", correct: false }
-            - { value: "A Symfony format for storing translations", correct: false }
+    - question: |
+          What is a Xliff file?
+      answers:
+          - { value: "An XML document with a custom schema", correct: true }
+          - { value: "A human readable key value storage", correct: false }
+          - { value: "A Symfony format for storing translations", correct: false }
+
+    - question: |
+          What is the way to add a resource to the translator ?
+      answers:
+          - { value: "$translator->addResource('yaml', 'path/to/messages.fr.yml', 'fr_FR');", correct: true }
+          - { value: "$translator->loadResource('yaml', 'path/to/messages.fr.yml', 'fr_FR');", correct: false }
+          - { value: "$translator->loadResource('path/to/messages.fr.yml', 'yaml',  'fr_FR');", correct: false }
+          - { value: "$translator->addResource('path/to/messages.fr.yml', 'yaml',  'fr_FR');", correct: false }
