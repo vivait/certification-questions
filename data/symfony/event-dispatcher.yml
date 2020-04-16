@@ -168,7 +168,7 @@ questions:
             - { value: "Compiler passes", correct: true }
             - { value: "Tags", correct: true }
             - { value: "Service configurators", correct: false }
-            - { value: "Method calls on the listeners within the service container", correct: false }
+            - { value: "Method calls on the listeners within the service container config", correct: false }
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#connecting-listeners
 

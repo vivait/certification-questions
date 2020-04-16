@@ -152,9 +152,57 @@ questions:
           - { value: "A Symfony format for storing translations", correct: false }
 
     - question: |
-          What is the way to add a resource to the translator ?
+        What is the way to add a resource to the translator ?
       answers:
           - { value: "$translator->addResource('yaml', 'path/to/messages.fr.yml', 'fr_FR');", correct: true }
           - { value: "$translator->loadResource('yaml', 'path/to/messages.fr.yml', 'fr_FR');", correct: false }
           - { value: "$translator->loadResource('path/to/messages.fr.yml', 'yaml',  'fr_FR');", correct: false }
           - { value: "$translator->addResource('path/to/messages.fr.yml', 'yaml',  'fr_FR');", correct: false }
+
+    - question: |
+        Is the following a valid way to create a translator?
+
+        $translator = new Translator('fr_FR', new MessageSelector());
+      answers:
+        - { value: "Yes", correct: true }
+        - { value: "No", correct: false }
+
+    - question: |
+        Is the following a valid way to create a translator?
+
+        $translator = new Translator('fr_FR');
+      answers:
+        - { value: "Yes", correct: true }
+        - { value: "No", correct: false }
+
+    - question: |
+        Is the following a valid way to create a translator?
+
+        $translator = new Translator(new MessageSelector());
+      answers:
+        - { value: "No", correct: true }
+        - { value: "Yes", correct: false }
+
+    - question: |
+        Is the following a valid way to create a translator?
+
+        $translator = new Translator(new MessageSelector(), 'fr_FR');
+      answers:
+        - { value: "No", correct: true }
+        - { value: "Yes", correct: false }
+
+    - question: |
+        Which components are required in order to use the YamlFileLoader?
+      answers:
+        - { value: "Yaml Component", correct: true }
+        - { value: "Config Component", correct: true }
+        - { value: "Finder Component", correct: false }
+        - { value: "Filesystem Component", correct: false }
+
+    - question: |
+        Which components are required in order to use the YamlFileLoader?
+      answers:
+        - { value: "Yaml Component", correct: true }
+        - { value: "Config Component", correct: true }
+        - { value: "Finder Component", correct: false }
+        - { value: "Filesystem Component", correct: false }
