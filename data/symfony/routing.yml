@@ -290,7 +290,7 @@ questions:
             - {value: They are stored in an auxiliary object, correct: false}
 
     -   question: |
-            When using the HttpFoundation how can one quickly populate the RequestContext using a HttpFoundcation request object?
+            When using the HttpFoundation component how can one quickly populate the RequestContext using a HttpFoundcation request object?
         answers:
             - {value: "$context->fromRequest($request);", correct: true}
             - {value: RequestContext::fromRequest($request);, correct: false}

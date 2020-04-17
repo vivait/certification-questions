@@ -636,3 +636,68 @@ questions:
             - { value: "public function configureOptionResolver(OptionsResolver $resolver);", correct: false }
             - { value: "public function getExtendedType();", correct: true }
             - { value: "public function getExtendedTypes();", correct: false }
+
+    -   question: |
+            What is the difference between data mappers and data transformers?
+        answers:
+            - { value: "Data transformers change the representation of a value", correct: true }
+            - { value: "Data mappers copy values into and out of form fields", correct: true }
+            - { value: "Data mappers change the representation of a value", correct: false }
+            - { value: "Data mappers map a data between two non-form representations for normalisation", correct: false }
+
+    -   question: |
+            What interface must be implemented to create a data mapper?
+        answers:
+            - { value: "Symfony\\Component\\Form\\DataMapperInterface", correct: true }
+            - { value: "Symfony\\Component\\Form\\DataMapper", correct: false }
+            - { value: "Symfony\\Component\\Form\\Mappers\\DataMapper", correct: false }
+            - { value: "Symfony\\Component\\Form\\Mappers\\DataMapperInterface", correct: false }
+            - { value: "Symfony\\Bundle\\FormBundle\\DataMapperInterface", correct: false }
+            - { value: "Symfony\\Bundle\\FormBundle\\DataMapper", correct: false }
+            - { value: "Symfony\\Bundle\\FormBundle\\Mappers\\DataMapper", correct: false }
+            - { value: "Symfony\\Bundle\\FormBundle\\Mappers\\DataMapperInterface", correct: false }
+
+    -   question: |
+            What must be done to create a attach a data mapper to a form?
+        answers:
+            - { value: "By calling setDataMapper() on the form", correct: true }
+            - { value: "By calling setMapper() on the form", correct: false }
+            - { value: "By calling settings the option data_mapper on the from with an object", correct: false }
+            - { value: "By calling settings the option data_mapper on the from with a class name", correct: false }
+
+
+    -   question: |
+            Are data mappers called on forms which have inherit_data set to true?
+        answers:
+            - { value: "No", correct: true }
+            - { value: "Yes", correct: false }
+
+    -   question: |
+            Are data mappers called on forms which have inherit_data set to false?
+        answers:
+            - { value: "Yes", correct: true }
+            - { value: "No", correct: false }
+
+    -   question: |
+            What is an easier alternative to implementing a data mapper for a mutable object with constructor arguments?
+        answers:
+            - { value: "Configure the empty_data option with a closure which constructs the object", correct: true }
+            - { value: "Set the empty_data option to true", correct: false }
+            - { value: "Configure the constructor option with a closure which constructs the object", correct: false }
+            - { value: "Set the constructor option to true", correct: false }
+            - { value: "Configure the initializer option with a closure which constructs the object", correct: false }
+            - { value: "Set the initializer option to true", correct: false }
+
+    -   question: |
+            Which other Symfony component does the built-in data mapper rely on?
+        answers:
+            - { value: "PropertyAccess component", correct: true }
+            - { value: "OptionsResolver component", correct: false }
+            - { value: "Inflector component", correct: false }
+
+    -   question: |
+            Why would one want to redirect a user after a form submission?
+        answers:
+            - { value: "It stops their refresh button from resubmitting the form.", correct: true }
+            - { value: "It stops it from displaying error messages saying it wasn't completed", correct: false }
+            - { value: "It stops it from displaying error messages about CRSF token invalidation", correct: false }

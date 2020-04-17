@@ -845,7 +845,7 @@ questions:
             array_map('var_dump', str_split('AAABBBCCC', 2));
         answers:
             - {value: "AA AB BB CC C", correct: true }
-            - {value: "AAABBBCCC", correct: true }
+            - {value: "AAABBBCCC", correct: false }
             - {value: "AAA BBB CCC", correct: false }
             - {value: "A A A B B B C C C", correct: false }
 
