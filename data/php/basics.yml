@@ -1352,3 +1352,28 @@ questions:
           - {value: 'compress.gzip://foo.gz?level=9', correct: false }
           - {value: 'zlib://foo.gz', correct: false }
           - {value: 'gzip://foo.gz?level=9', correct: false }
+
+    -   question: |
+            In the following code, what are the values required in $a, $b, $c and $d to output 40?
+
+            <?php
+            $values = [
+                [
+                    1 => 10,
+                    20,
+                    [30, [40]],
+                ], 1
+                [
+                    2 => 50,
+                    [
+                        [1 => 60, 0 => 70],
+                    ],
+                ],
+            ];
+
+            echo $values[$a][$b][$c][$d];
+        answers:
+            - {value: '$a = 0, $b = 3, $c = 1, $d = 0', correct: true }
+            - {value: '$a = 0, $b = 1, $c = 1, $d = 0', correct: true }
+            - {value: '$a = 0, $b = 1, $c = 0, $d = 0', correct: false }
+            - {value: '$a = 1, $b = 3, $c = 1, $d = 0', correct: false }

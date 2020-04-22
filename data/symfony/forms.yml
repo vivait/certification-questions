@@ -701,3 +701,176 @@ questions:
             - { value: "It stops their refresh button from resubmitting the form.", correct: true }
             - { value: "It stops it from displaying error messages saying it wasn't completed", correct: false }
             - { value: "It stops it from displaying error messages about CRSF token invalidation", correct: false }
+
+    -   question: |
+            Which form event would be event for modifying data given during pre-population?
+        answers:
+            - { value: "FormEvents::PRE_SET_DATA", correct: true }
+            - { value: "FormEvents::POST_SET_DATA", correct: false }
+            - { value: "FormEvents::PRE_SUBMIT", correct: false }
+            - { value: "FormEvents::SUBMIT", correct: false }
+            - { value: "FormEvents::POST_SUBMIT", correct: false }
+
+    -   question: |
+            Which form event would be best for modifying the form depending on the pre-populated data?
+        answers:
+            - { value: "FormEvents::PRE_SET_DATA", correct: true }
+            - { value: "FormEvents::POST_SET_DATA", correct: false }
+            - { value: "FormEvents::PRE_SUBMIT", correct: false }
+            - { value: "FormEvents::SUBMIT", correct: false }
+            - { value: "FormEvents::POST_SUBMIT", correct: false }
+
+    -   question: |
+            What is the result of calling Form::setData() in a FormEvents::PRE_SET_DATA event?
+        answers:
+            - { value: "It will throw a Symfony\\Component\\Form\\Exception\\RuntimeException", correct: true }
+            - { value: "It will throw a \\RuntimeException", correct: false }
+            - { value: "It will set the data and return nothing", correct: false }
+            - { value: "It will set the data and return the set data", correct: false }
+            - { value: "It will set the data and return the form", correct: false }
+
+    -   question: |
+            What is the purpose of the Symfony\Component\Form\Extension\Core\EventListener\ResizeFormListener?
+        answers:
+            - { value: "It reorders CollectionType forms based on pre-populated data", correct: true }
+            - { value: "It ensures the form's view has the correct embedded CSS", correct: false }
+            - { value: "It reorders all forms based on pre-populated data", correct: false }
+            - { value: "It ensures the view is correctly sized for the user agent", correct: false }
+
+    -   question: |
+            What is the purpose of the Symfony\Component\Form\Extension\Core\EventListener\ResizeFormListener?
+        answers:
+            - { value: "It reorders CollectionType forms based on pre-populated data", correct: true }
+            - { value: "It ensures the form's view has the correct embedded CSS", correct: false }
+            - { value: "It reorders all forms based on pre-populated data", correct: false }
+            - { value: "It ensures the view is correctly sized for the user agent", correct: false }
+
+    -   question: |
+            Which form event would be best for reading data after having pre-populated the form?
+        answers:
+            - { value: "FormEvents::POST_SET_DATA", correct: true }
+            - { value: "FormEvents::PRE_SET_DATA", correct: false }
+            - { value: "FormEvents::PRE_SUBMIT", correct: false }
+            - { value: "FormEvents::SUBMIT", correct: false }
+            - { value: "FormEvents::POST_SUBMIT", correct: false }
+
+    -   question: |
+            Which event is Symfony\Component\Form\Extension\DataCollector\EventListener\DataCollectorListener subscribed to?
+        answers:
+            - { value: "FormEvents::POST_SET_DATA", correct: true }
+            - { value: "FormEvents::PRE_SET_DATA", correct: false }
+            - { value: "FormEvents::PRE_SUBMIT", correct: false }
+            - { value: "FormEvents::SUBMIT", correct: false }
+            - { value: "FormEvents::POST_SUBMIT", correct: false }
+
+    -   question: |
+             Which form event would be best for changing data from the request before submission?
+        answers:
+            - { value: "FormEvents::PRE_SUBMIT", correct: true }
+            - { value: "FormEvents::POST_SET_DATA", correct: false }
+            - { value: "FormEvents::PRE_SET_DATA", correct: false }
+            - { value: "FormEvents::SUBMIT", correct: false }
+            - { value: "FormEvents::POST_SUBMIT", correct: false }
+
+    -   question: |
+            Which form event would be best for adding or removing form fields before submitting the data to the form?
+        answers:
+            - { value: "FormEvents::PRE_SUBMIT", correct: true }
+            - { value: "FormEvents::POST_SET_DATA", correct: false }
+            - { value: "FormEvents::PRE_SET_DATA", correct: false }
+            - { value: "FormEvents::SUBMIT", correct: false }
+            - { value: "FormEvents::POST_SUBMIT", correct: false }
+
+    -   question: |
+            Which form event would be best for adding or removing form fields before submitting the data to the form?
+        answers:
+            - { value: "FormEvents::PRE_SUBMIT", correct: true }
+            - { value: "FormEvents::POST_SET_DATA", correct: false }
+            - { value: "FormEvents::PRE_SET_DATA", correct: false }
+            - { value: "FormEvents::SUBMIT", correct: false }
+            - { value: "FormEvents::POST_SUBMIT", correct: false }
+
+    -   question: |
+            Which event is Symfony\Component\Form\Extension\Core\EventListener\TrimListener subscribed to?
+        answers:
+            - { value: "FormEvents::PRE_SUBMIT", correct: true }
+            - { value: "FormEvents::POST_SET_DATA", correct: false }
+            - { value: "FormEvents::PRE_SET_DATA", correct: false }
+            - { value: "FormEvents::SUBMIT", correct: false }
+            - { value: "FormEvents::POST_SUBMIT", correct: false }
+
+    -   question: |
+            Which is the purpose of Symfony\Component\Form\Extension\Core\EventListener\TrimListener?
+        answers:
+            - { value: "It trims the request's data", correct: true }
+            - { value: "It trims internal form keys", correct: false }
+            - { value: "It doesn't exist", correct: false }
+            - { value: "It trims pre-populated data", correct: false }
+
+    -   question: |
+            Which event is Symfony\Component\Form\Extension\Csrf\EventListener\CsrfValidationListener subscribed to?
+        answers:
+            - { value: "FormEvents::PRE_SUBMIT", correct: true }
+            - { value: "FormEvents::POST_SET_DATA", correct: false }
+            - { value: "FormEvents::PRE_SET_DATA", correct: false }
+            - { value: "FormEvents::SUBMIT", correct: false }
+            - { value: "FormEvents::POST_SUBMIT", correct: false }
+
+    -   question: |
+            Which form event can be used to change data from the normalized representation of the data?
+        answers:
+            - { value: "FormEvents::SUBMIT", correct: true }
+            - { value: "FormEvents::PRE_SUBMIT", correct: false }
+            - { value: "FormEvents::POST_SET_DATA", correct: false }
+            - { value: "FormEvents::PRE_SET_DATA", correct: false }
+            - { value: "FormEvents::POST_SUBMIT", correct: false }
+
+    -   question: |
+            Which form event does Symfony\Component\Form\Extension\Core\EventListener\FixUrlProtocolListener listen to?
+        answers:
+            - { value: "FormEvents::SUBMIT", correct: true }
+            - { value: "FormEvents::PRE_SUBMIT", correct: false }
+            - { value: "FormEvents::POST_SET_DATA", correct: false }
+            - { value: "FormEvents::PRE_SET_DATA", correct: false }
+            - { value: "FormEvents::POST_SUBMIT", correct: false }
+
+    -   question: |
+            Which form event can be used to fetch data after denormalization?
+        answers:
+            - { value: "FormEvents::POST_SUBMIT", correct: true }
+            - { value: "FormEvents::SUBMIT", correct: false }
+            - { value: "FormEvents::PRE_SUBMIT", correct: false }
+            - { value: "FormEvents::POST_SET_DATA", correct: false }
+            - { value: "FormEvents::PRE_SET_DATA", correct: false }
+
+    -   question: |
+            What are the benefits of creating a seperate event class for Form Events?
+        answers:
+            - { value: "Improves readability", correct: true }
+            - { value: "Allows listening to multiple events", correct: true }
+            - { value: "Runs quicker", correct: false }
+            - { value: "It allows you to subscribe different types of events", correct: false }
+
+    -   question: |
+            What are the benefits of creating a seperate event class for Form Events?
+        answers:
+            - { value: "Improves readability", correct: true }
+            - { value: "Allows listening to multiple events", correct: true }
+            - { value: "Runs quicker", correct: false }
+            - { value: "It allows you to subscribe different types of events", correct: false }
+
+    -   question: |
+            What are the benefits of creating a seperate event class for Form Events?
+        answers:
+            - { value: "Improves readability", correct: true }
+            - { value: "Allows listening to multiple events", correct: true }
+            - { value: "Runs quicker", correct: false }
+            - { value: "It allows you to subscribe different types of events", correct: false }
+
+    -   question: |
+            Which interface must one implement to subscribe to events in a form event subscriber?
+        answers:
+            - { value: "EventSubscriberInterface::getSubscribedEvents", correct: true }
+            - { value: "EventSubscriberInterface::getSubscribedEvent", correct: false }
+            - { value: "EventSubscriberInterface::getFormEvents", correct: false }
+            - { value: "EventSubscriberInterface::getFormEvent", correct: false }
