@@ -206,3 +206,19 @@ questions:
         - { value: "Config Component", correct: true }
         - { value: "Finder Component", correct: false }
         - { value: "Filesystem Component", correct: false }
+
+    - question: |
+          It is possible to find missing or unused translation messages from templates?
+      answers:
+          - { value: "Yes, with the debug:translation command", correct: true }
+          - { value: "No, it is not possible.", correct: false }
+          - { value: "Yes, with the debug:translate command", correct: false }
+          - { value: "Yes, with the debug:translator command", correct: false }
+          - { value: "Yes, with the debug:i18n command", correct: false }
+
+    - question: |
+          What is the required arguments to the debug:translation command?
+      answers:
+          - { value: "the locale", correct: true }
+          - { value: "the translation file", correct: false }
+          - { value: "the key of a translation to debug", correct: false }

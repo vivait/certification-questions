@@ -19,11 +19,11 @@ questions:
     -   question: |
             Which of the following does the ErrorHandler do?
         answers:
-            - { value: Turns PHP errors into exceptions, correct: true }
-            - { value: Catches PHP function errors and turns them into exceptions, correct: true }
-            - { value: Turns Response objects to exceptions, correct: false }
-            - { value: It is mostly useful in debug mode to replace the default PHP/XDebug output with something prettier and more useful., correct: false }
-
+            - { value: converts an exception to a Response object, correct: true }
+            - { value: It is mostly useful in debug mode to replace the default PHP/XDebug output with something prettier and more useful, correct: true }
+            - { value: Turns PHP errors into exceptions, correct: false }
+            - { value: Catches PHP function errors and turns them into exceptions, correct: false }
+            - { value: It is mainly used during Kernel boot where nothing is yet available the Response content is always HTML, correct: true }
 
     -   question: |
             What is the purpose of DebugClassLoader?
@@ -31,3 +31,62 @@ questions:
             - { value: It throws more useful exceptions when a class is not found by the autoloaders, correct: true }
             - { value: It is a autoloader for development environments, correct: false }
             - { value: It is mostly useful in debug mode to replace the default PHP/XDebug output with something prettier and more useful., correct: false }
+
+
+    -   question: |
+            What classes does the Debug Component in 3.4 provide?
+        answers:
+            - { value: Symfony\Component\Debug\Debug, correct: true }
+            - { value: Symfony\Component\Debug\ErrorHandler, correct: true }
+            - { value: Symfony\Component\Debug\ExceptionHandler, correct: true }
+            - { value: Symfony\Component\Debug\DebugClassLoader, correct: true }
+            - { value: Symfony\Component\Debug\ErrorConverter, correct: false }
+            - { value: Symfony\Component\Debug\ErrorHanlder, correct: false }
+            - { value: Symfony\Component\Debug\DebugPhpLoader, correct: false }
+            - { value: Symfony\Component\Debug\DebugHelper, correct: false }
+
+    -   question: |
+            What help does Symfony\Component\Debug\Debug::enable() provide?
+        answers:
+            - { value: "It registers an error handler an exception handler and a special class loader.", correct: true }
+            - { value: "It registers an error handler and an exception handler.", correct: false }
+            - { value: "It ensures the kernel boots in debug mode.", correct: false }
+            - { value: "It registers an error handler.", correct: false }
+
+    -   question: |
+            Is it appropriate to enable debug tools in production?
+        answers:
+            - { value: "No, it may expose sensitive information", correct: true }
+            - { value: "Yes, it is automatically disabled in kernel production environments", correct: false }
+
+    -   question: |
+            What help does Symfony\Component\Debug\ErrorHandler provide?
+        answers:
+            - { value: "It catches PHP errors and converts them to exceptions", correct: true }
+            - { value: "It provides a pretty view for for PHP errors", correct: false }
+            - { value: "It provides a pretty view for for PHP errors and exceptions", correct: false }
+            - { value: "It logs exceptions and PHP errors", correct: false }
+
+    -   question: |
+            What help does Symfony\Component\Debug\ExceptionHandler provide?
+        answers:
+            - { value: "It provides a pretty view for for PHP exceptions", correct: true }
+            - { value: "It catches PHP errors and converts them to exceptions", correct: false }
+            - { value: "It provides a pretty view for for PHP errors", correct: false }
+            - { value: "It provides a pretty view for for PHP errors and exceptions", correct: false }
+            - { value: "It logs exceptions and PHP errors", correct: false }
+
+    -   question: |
+            Will the Symfony\Component\Debug\ExceptionHandler always provide a raw PHP response?
+        answers:
+            - { value: "No", correct: true }
+            - { value: "Yes", correct: false }
+        help: |
+            https://symfony.com/doc/3.3/components/debug.html#enabling-the-exception-handler it provides a Symfony response if
+            the HttpFoundation component is available
+
+    -   question: |
+            What help does Symfony\Component\Debug\DebugClassLoader provide?
+        answers:
+            - { value: "It throws more useful exceptions when a class isn't found", correct: true }
+            - { value: "It is a custom autoloader that ensures tests are loaded", correct: false }
