@@ -222,3 +222,10 @@ questions:
           - { value: "the locale", correct: true }
           - { value: "the translation file", correct: false }
           - { value: "the key of a translation to debug", correct: false }
+
+    - question: |
+          What is the required arguments to the debug:translation command?
+      answers:
+          - { value: "the locale", correct: true }
+          - { value: "the translation file", correct: false }
+          - { value: "the key of a translation to debug", correct: false }

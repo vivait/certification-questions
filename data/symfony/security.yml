@@ -91,8 +91,6 @@ questions:
         answers:
             -   value: public function addConfiguration(NodeDefinition $builder);
                 correct: true
-            -   value: public function supports(TokenInterface $token);
-                correct: false
             -   value: public function getPosition();
                 correct: true
             -   value: public function getKey();
@@ -100,6 +98,9 @@ questions:
             -   value: |
                     public function create(ContainerBuilder $container, $id, $config, $userProvider $defaultEntryPoint);
                 correct: true
+
+            -   value: public function supports(TokenInterface $token);
+                correct: false
             -   value: public function add(NodeDefinition $builder);
                 correct: false
             -   value: public function getToken();
@@ -198,3 +199,73 @@ questions:
             - {value: "security.secure_random", correct: false}
             - {value: "security.firewall", correct: true}
             - {value: "security.context", correct: false}
+
+    -   question: |
+            Does Symfony forms work with PHP superglobal information?
+        answers:
+            - {value: "Yes", correct: true}
+            - {value: "No", correct: false}
+
+    -   question: |
+            What is the correct way to make Symfony forms support HttpFoundation requests?
+        answers:
+            - {value: "By calling ->addExtension() on a FormBuilder object with a HttpFoundationExtension object", correct: true}
+            - {value: "By calling ->addExtension() on a Form object with a HttpFoundationExtension object", correct: false}
+            - {value: "By calling ->enableExtension() on a Form object with a HttpFoundationExtension object", correct: false}
+            - {value: "By calling ->enableExtension() on a FormBuilder object with a HttpFoundationExtension object", correct: false}
+            - {value: "By calling ->enableSymfonyRequest() on a Form object", correct: false}
+            - {value: "By calling ->enableSymfonyRequest() on a FormBuilder object", correct: false}
+
+    -   question: |
+            What Symfony component is required to support CSRF protection on Symfony forms?
+        answers:
+            - {value: 'symfony/security-csrf', correct: true}
+            - {value: 'symfony/csrf', correct: false}
+            - {value: 'symfony/form-csrf', correct: false}
+
+    -   question: |
+            What Symfony component is required to support CSRF protection on Symfony forms?
+        answers:
+            - {value: 'symfony/security-csrf', correct: true}
+            - {value: 'symfony/csrf', correct: false}
+            - {value: 'symfony/form-csrf', correct: false}
+
+    -   question: |
+            What is the name of the form field where the CSRF code is stored?
+        answers:
+            - {value: '_token', correct: true}
+            - {value: '_code', correct: false}
+            - {value: 'token', correct: false}
+            - {value: 'code', correct: false}
+            - {value: 'csrf', correct: false}
+            - {value: '_csrf', correct: false}
+
+    -   question: |
+            How can one disable CSRF validation on a form?
+        answers:
+            - {value: 'Settings the csrf_protection option to false', correct: true}
+            - {value: 'Settings the disable_csrf_protection option to true', correct: false}
+            - {value: 'Settings the csrf_protection_name option to false', correct: false}
+            - {value: 'Settings the csrf_protection_form_name option to false', correct: false}
+
+    -   question: |
+            Does the Symfony/form component support Twig?
+        answers:
+            - {value: 'No', correct: true}
+            - {value: 'Yes', correct: false}
+
+    -   question: |
+            What component must be installed to render forms using Twig?
+        answers:
+            - {value: 'symfony/twig-bridge', correct: true}
+            - {value: 'symfony/twig-form-bridge', correct: false}
+            - {value: 'symfony/twig-form-component', correct: false}
+            - {value: 'symfony/twig-form-component', correct: false}
+
+    -   question: |
+            What component must be installed to render forms using Twig?
+        answers:
+            - {value: 'symfony/twig-bridge', correct: true}
+            - {value: 'symfony/twig-form-bridge', correct: false}
+            - {value: 'symfony/twig-form-component', correct: false}
+            - {value: 'symfony/twig-form-component', correct: false}

@@ -534,10 +534,10 @@ questions:
             What will be the outcome of executing this script?
         answers:
             - {value: A PHP fatal error., correct: true }
-            - {value: -3, correct: false }
-            - {value: 3, correct: false }
-            - {value: 8, correct: false }
-            - {value: -4, correct: false }
+            - {value: '-3', correct: false }
+            - {value: '3', correct: false }
+            - {value: '8', correct: false }
+            - {value: '-4', correct: false }
 
     -   question: |
             What will be the output of the following script ?
@@ -1377,3 +1377,102 @@ questions:
             - {value: '$a = 0, $b = 1, $c = 1, $d = 0', correct: true }
             - {value: '$a = 0, $b = 1, $c = 0, $d = 0', correct: false }
             - {value: '$a = 1, $b = 3, $c = 1, $d = 0', correct: false }
+
+    -   question: |
+            What is the ouput of the following?
+
+            <?php
+            $myArray = [
+                0,
+                NULL,
+                '',
+                '0',
+                -1
+            ];
+
+            echo count(
+                array_filter($myArray)
+            );
+        answers:
+            - {value: '1', correct: true }
+            - {value: '4', correct: false }
+            - {value: '3', correct: false }
+            - {value: '5', correct: false }
+            - {value: 'An error', correct: false }
+
+    -   question: |
+            What is the ouput of the following?
+
+            <?php
+
+            var_dump(0 == false);
+        answers:
+            - {value: 'bool(true)', correct: true }
+            - {value: 'bool(false)', correct: false }
+
+    -   question: |
+            What is the ouput of the following?
+
+            <?php
+
+            var_dump(NULL == false);
+        answers:
+            - {value: 'bool(true)', correct: true }
+            - {value: 'bool(false)', correct: false }
+
+    -   question: |
+            What is the ouput of the following?
+
+            <?php
+
+            var_dump('' == false);
+        answers:
+            - {value: 'bool(true)', correct: true }
+            - {value: 'bool(false)', correct: false }
+
+    -   question: |
+            What is the ouput of the following?
+
+            <?php
+
+            var_dump('0' == false);
+        answers:
+            - {value: 'bool(true)', correct: true }
+            - {value: 'bool(false)', correct: false }
+
+    -   question: |
+            What is the ouput of the following?
+
+            <?php
+
+            var_dump(-1 == false);
+        answers:
+            - {value: 'bool(true)', correct: false }
+            - {value: 'bool(false)', correct: true }
+
+    -   question: |
+            What is the ouput of the following?
+
+            <?php
+            function fsplit()
+            {
+                $spl = 1;
+            ?>
+
+            <?php
+               echo $spl;
+            }
+
+            fsplit();
+        answers:
+            - {value: '1', correct: true }
+            - {value: 'Error, function declarations can not be split over multiple PHP segments', correct: false }
+            - {value: 'Noting', correct: false }
+
+    -   question: |
+            Which of the following statements allows to retrieve the value of the User-Agent HTTP request header field?
+        answers:
+            - {value: "$HTTP_HEADERS_VARS['USER_AGENT'];", correct: true }
+            - {value: "http_get_request_header('User-Agent');", correct: false }
+            - {value: "It is not possible to read an HTTP request header field value with PHP.", correct: false }
+            - {value: "$_SERVER['HTTP_USER_AGENT'];", correct: false }

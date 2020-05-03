@@ -56,9 +56,9 @@ questions:
 
     -   question: "What does the CardScheme Constraint stand for ?"
         answers:
+            - {value: It validates that a card number is valid for a given credit card company, correct: true}
+            - {value: It validates if a credit card is a VISA one, correct: false}
             - {value: It validates a credit card number, correct: false}
-            - {value: It validates if a credit card is a VISA one, correct: true}
-            - {value: It validates that a card number is valid for a given credit card company, correct: falseh}
             - {value: It doesn't exist, correct: false}
 
     -   question: |
@@ -367,3 +367,229 @@ questions:
             - {value: 'Pass a Symfony\Component\Validator\Factory instance to addMetadataFactory()', correct: false}
             - {value: 'Pass a callable to setMetadataFactory()', correct: false}
             - {value: 'Pass a callable to addMetadataFactory()', correct: false}
+
+    -   question: |
+            If a User class extends a BaseUser class, and the applied validation group is User. Will the constraints present in the BaseUser class be applied ?
+        answers:
+            - {value: Yes, correct: true}
+            - {value: No, correct: false}
+
+    -   question: |
+            Is the following XML config valid to ensure that App\Entity\Author::name is not blank?
+
+            <?xml version="1.0" encoding="UTF-8" ?>
+            <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
+                    https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+
+                <class name="App\Entity\Author">
+                    <property name="name">
+                        <constraint name="NotBlank"/>
+                    </property>
+                </class>
+            </constraint-mapping>
+        answers:
+            - {value: 'Yes', correct: true}
+            - {value: 'No', correct: false}
+
+    -   question: |
+            Is the following XML config valid to ensure that App\Entity\Author::name is not blank?
+
+            <?xml version="1.0" encoding="UTF-8" ?>
+            <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
+                    https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+
+                <class name="App\Entity\Author">
+                    <property name="name">
+                        <constraint class="Symfony\Component\Validator\Constraints\NotBlank"/>
+                    </property>
+                </class>
+            </constraint-mapping>
+        answers:
+            - {value: 'No', correct: true}
+            - {value: 'Yes', correct: false}
+
+    -   question: |
+            Is the following PHP snippet a valid way to echo all error messages for validation in?
+
+            $errors = $validator->validate($someObject);
+
+            foreach($errors as $error) {
+                echo $error->getMessage();
+            }
+        answers:
+            - {value: 'Yes', correct: true}
+            - {value: 'No', correct: false}
+
+    -   question: |
+            Is the following PHP snippet a valid way to echo all error messages for validation in?
+
+            $errors = $validator->validate($someObject);
+
+            foreach($errors as $error) {
+                echo $error->getText();
+            }
+        answers:
+            - {value: 'Yes', correct: false}
+            - {value: 'No', correct: true}
+
+    -   question: |
+            Which class represents validation errors?
+        answers:
+            - {value: Symfony\Component\Validator\ConstraintViolation, correct: true}
+            - {value: Symfony\Component\Validator\ValidationError, correct: false}
+            - {value: Symfony\Component\Validator\Error, correct: false}
+            - {value: Symfony\Component\Validator\ConstraintError, correct: false}
+            - {value: Symfony\Component\Validator\Violation, correct: false}
+
+    -   question: |
+            Must one enable validation before using it in Full-Stack Symfony projects?
+        answers:
+            - {value: Yes, correct: true}
+            - {value: No, correct: false}
+
+    -   question: |
+            Which of the following are valid constraints?
+        answers:
+            - {value: NotBlank, correct: true}
+            - {value: Blank, correct: true}
+            - {value: NotNull, correct: true}
+            - {value: IsNull, correct: true}
+            - {value: Null, correct: false}
+            - {value: IsBlank, correct: false}
+
+    -   question: |
+            Which of the following are valid constraints?
+        answers:
+            - {value: IsTrue, correct: true}
+            - {value: IsFalse, correct: true}
+            - {value: Type, correct: true}
+            - {value: NotType, correct: false}
+            - {value: Null, correct: false}
+            - {value: IsBlank, correct: false}
+
+    -   question: |
+            Which of the following are valid constraints?
+        answers:
+            - {value: Email, correct: true}
+            - {value: Length, correct: true}
+            - {value: Url, correct: true}
+            - {value: Regex, correct: true}
+            - {value: Password, correct: false}
+            - {value: DateString, correct: false}
+
+    -   question: |
+            Which of the following are valid constraints?
+        answers:
+            - {value: Ip, correct: true}
+            - {value: Uuid, correct: true}
+            - {value: UserPassword, correct: true}
+            - {value: String, correct: false}
+            - {value: Password, correct: false}
+            - {value: DateString, correct: false}
+
+
+    -   question: |
+            Which of the following are valid constraints?
+        answers:
+            - {value: EqualTo, correct: true}
+            - {value: NotEqualTo, correct: true}
+            - {value: IdenticalTo, correct: true}
+            - {value: SameAs, correct: false}
+            - {value: Equal, correct: false}
+            - {value: Identical, correct: false}
+            - {value: NotEqual, correct: false}
+            - {value: Same, correct: false}
+
+    -   question: |
+            Which of the following are valid constraints?
+        answers:
+            - {value: NotIdenticalTo, correct: true}
+            - {value: LessThan, correct: true}
+            - {value: LessThanOrEqual, correct: true}
+            - {value: SameAs, correct: false}
+            - {value: NotIdentical, correct: false}
+            - {value: Identical, correct: false}
+            - {value: Less, correct: false}
+            - {value: Same, correct: false}
+
+    -   question: |
+            Which of the following are valid constraints?
+        answers:
+            - {value: GreaterThan, correct: true}
+            - {value: GreaterThanOrEqual, correct: true}
+            - {value: Range, correct: true}
+            - {value: SameAs, correct: false}
+            - {value: NotIdentical, correct: false}
+            - {value: Greater, correct: false}
+            - {value: Less, correct: false}
+            - {value: Same, correct: false}
+
+    -   question: |
+            Which of the following are valid constraints?
+        answers:
+            - {value: Date, correct: true}
+            - {value: DateTime, correct: true}
+            - {value: Time, correct: true}
+            - {value: Timezone, correct: false}
+
+    -   question: |
+            Which of the following are valid constraints?
+        answers:
+            - {value: Choice, correct: true}
+            - {value: Language, correct: true}
+            - {value: Locale, correct: true}
+            - {value: Country, correct: true}
+            - {value: Geo, correct: false}
+
+    -   question: |
+            Which of the following are valid constraints?
+        answers:
+            - {value: File, correct: true}
+            - {value: Image, correct: true}
+            - {value: UploadedFile, correct: false}
+            - {value: Stream, correct: false}
+
+    -   question: |
+            Which of the following are valid constraints?
+        answers:
+            - {value: Bic, correct: true}
+            - {value: CardScheme, correct: true}
+            - {value: Currency, correct: true}
+            - {value: Luhn, correct: true}
+            - {value: Iban, correct: true}
+            - {value: Isbn, correct: true}
+            - {value: Issn, correct: true}
+            - {value: Money, correct: false}
+            - {value: Ibn, correct: false}
+            - {value: SortCode, correct: false}
+            - {value: AccountNumber, correct: false}
+            - {value: Visa, correct: false}
+            - {value: Ssp, correct: false}
+
+    -   question: |
+            Which of the following are valid constraints?
+        answers:
+            - {value: Callback, correct: true}
+            - {value: Expression, correct: true}
+            - {value: All, correct: true}
+            - {value: Valid, correct: true}
+            - {value: Collection, correct: true}
+            - {value: Array, correct: false}
+            - {value: Length, correct: false}
+            - {value: Traversable, correct: false}
+            - {value: Iterable, correct: false}
+
+    -   question: |
+            Which of the following are valid constraints?
+        answers:
+            - {value: Count, correct: true}
+            - {value: UniqueEntity, correct: true}
+            - {value: Traverse, correct: true}
+            - {value: Array, correct: false}
+            - {value: Length, correct: false}
+            - {value: Traversable, correct: false}
+            - {value: Iterable, correct: false}

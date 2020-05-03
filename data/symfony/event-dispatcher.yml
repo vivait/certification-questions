@@ -65,7 +65,6 @@ questions:
         answers:
             - { value: GetResponseEvent, correct: true }
             - { value: ViewEvent, correct: false }
-            - { value: GetResponseEvent, correct: false }
             - { value: GetViewEvent, correct: false }
             - { value: GetResponseForControllerResultEvent, correct: false }
             - { value: GetRequestEvent, correct: false }
