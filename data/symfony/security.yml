@@ -249,23 +249,10 @@ questions:
             - {value: 'Settings the csrf_protection_form_name option to false', correct: false}
 
     -   question: |
-            Does the Symfony/form component support Twig?
+            Which of these are Symfony built-in security providers configuration name?
         answers:
-            - {value: 'No', correct: true}
-            - {value: 'Yes', correct: false}
-
-    -   question: |
-            What component must be installed to render forms using Twig?
-        answers:
-            - {value: 'symfony/twig-bridge', correct: true}
-            - {value: 'symfony/twig-form-bridge', correct: false}
-            - {value: 'symfony/twig-form-component', correct: false}
-            - {value: 'symfony/twig-form-component', correct: false}
-
-    -   question: |
-            What component must be installed to render forms using Twig?
-        answers:
-            - {value: 'symfony/twig-bridge', correct: true}
-            - {value: 'symfony/twig-form-bridge', correct: false}
-            - {value: 'symfony/twig-form-component', correct: false}
-            - {value: 'symfony/twig-form-component', correct: false}
+            - {value: 'in_memory', correct: true}
+            - {value: 'ldap', correct: true}
+            - {value: 'chain', correct: true}
+            - {value: 'doctrine', correct: false}
+            - {value: 'memory', correct: false}

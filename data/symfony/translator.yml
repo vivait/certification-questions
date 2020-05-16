@@ -229,3 +229,22 @@ questions:
           - { value: "the locale", correct: true }
           - { value: "the translation file", correct: false }
           - { value: "the key of a translation to debug", correct: false }
+
+    - question: |
+          Which of this following code is correct to use the percent character % in a translated string ?
+      answers:
+          - { value: "{% trans %}Percent: %percent%%%{% endtrans %}", correct: true }
+          - { value: "{% trans %}Percent: %percent%\\%{% endtrans %}", correct: false }
+          - { value: "{% trans %}Percent: %percent%[%]{% endtrans %}", correct: false }
+          - { value: "{% trans %}Percent: %percent%{%}{% endtrans %}", correct: false }
+      help: |
+          https://symfony.com/doc/current/translation/templates.html#using-twig-tags
+
+    - question: |
+          What is the correct way to manually set a translation domain of 'app' in a Twig block?
+      answers:
+          - { value: "{% trans from 'app' %}Hello %name%{% endtrans %}", correct: true }
+          - { value: "{% trans('app') %}Hello %name%{% endtrans %}", correct: false }
+          - { value: "{{ trans('Hello %name%','app') }}", correct: false }
+      help: |
+          https://symfony.com/doc/current/translation/templates.html#using-twig-tags

@@ -1440,12 +1440,44 @@ questions:
             - {value: 'bool(true)', correct: true }
             - {value: 'bool(false)', correct: false }
 
+
+    -   question: |
+            What is the ouput of the following?
+
+            <?php
+
+            var_dump('' === false);
+        answers:
+            - {value: 'bool(false)', correct: true }
+            - {value: 'bool(true)', correct: false }
+
+    -   question: |
+            What is the ouput of the following?
+
+            <?php
+
+            var_dump('0' === false);
+        answers:
+            - {value: 'bool(false)', correct: true }
+            - {value: 'bool(true)', correct: false }
+
     -   question: |
             What is the ouput of the following?
 
             <?php
 
             var_dump(-1 == false);
+        answers:
+            - {value: 'bool(true)', correct: false }
+            - {value: 'bool(false)', correct: true }
+
+
+    -   question: |
+            What is the ouput of the following?
+
+            <?php
+
+            var_dump(-1 === false);
         answers:
             - {value: 'bool(true)', correct: false }
             - {value: 'bool(false)', correct: true }
@@ -1476,3 +1508,46 @@ questions:
             - {value: "http_get_request_header('User-Agent');", correct: false }
             - {value: "It is not possible to read an HTTP request header field value with PHP.", correct: false }
             - {value: "$_SERVER['HTTP_USER_AGENT'];", correct: false }
+
+    -   question: |
+            What will be the output of the following code?
+            $a = (object) ["a" => "b"];
+            $b = (object) ["a" => "c"];
+
+            echo $a <=> $b;
+        answers:
+            - {value: "-1", correct: true }
+            - {value: "0", correct: false }
+            - {value: "1", correct: false }
+
+    -   question: |
+            What is the value of $value?
+
+            $value = 'a' > 'b';
+        answers:
+            - {value: "false", correct: true }
+            - {value: "true", correct: false }
+
+    -   question: |
+            What is the value of $value?
+
+            $value = 'A' > 'b';
+        answers:
+            - {value: "false", correct: true }
+            - {value: "true", correct: false }
+
+    -   question: |
+            What is the value of $value?
+
+            $value = 'B' > 'a';
+        answers:
+            - {value: "false", correct: true }
+            - {value: "true", correct: false }
+
+    -   question: |
+            What is the value of $value?
+
+            $value = 'b' > 'a';
+        answers:
+            - {value: "true", correct: true }
+            - {value: "false", correct: false }

@@ -134,9 +134,7 @@ questions:
             $finder->in('ftp://example.com/');
         answers:
             - { value: "Yes", correct: true }
-            - { value: "No", correct: true }
-            - { value: "$finder->in(__DIR__, '/elsewhere');", correct: false }
-            - { value: "$finder->in(__DIR__, '/elsewhere');", correct: false }
+            - { value: "No", correct: false }
 
     -   question: What is the purpose of the ignoreVCS() method?
         answers:

@@ -280,3 +280,10 @@ questions:
             - { value: 301, correct: true }
             - { value: 302, correct: true }
             - { value: 304, correct: false }
+
+    -   question: What are the HTTP status codes involved by the caching models?
+        answers:
+            - { value: 304, correct: true }
+            - { value: 300, correct: false }
+            - { value: 200, correct: false }
+            - { value: 204, correct: false }

@@ -464,7 +464,6 @@ questions:
         answers:
             - { value: entry_options, correct: true }
             - { value: delete_empty, correct: true }
-            - { value: entry_options, correct: true }
             - { value: allow_delete, correct: true }
             - { value: entry_type, correct: true }
             - { value: allow_remove, correct: false }
@@ -874,3 +873,25 @@ questions:
             - { value: "EventSubscriberInterface::getSubscribedEvent", correct: false }
             - { value: "EventSubscriberInterface::getFormEvents", correct: false }
             - { value: "EventSubscriberInterface::getFormEvent", correct: false }
+
+    -   question: |
+            Does the Symfony/form component support Twig?
+        answers:
+            - {value: 'No', correct: true}
+            - {value: 'Yes', correct: false}
+
+    -   question: |
+            What component must be installed to render forms using Twig?
+        answers:
+            - {value: 'symfony/twig-bridge', correct: true}
+            - {value: 'symfony/twig-form-bridge', correct: false}
+            - {value: 'symfony/twig-form-component', correct: false}
+            - {value: 'symfony/twig-form-component', correct: false}
+
+    -   question: |
+            What component must be installed to render forms using Twig?
+        answers:
+            - {value: 'symfony/twig-bridge', correct: true}
+            - {value: 'symfony/twig-form-bridge', correct: false}
+            - {value: 'symfony/twig-form-component', correct: false}
+            - {value: 'symfony/twig-form-component', correct: false}

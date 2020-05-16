@@ -468,7 +468,7 @@ questions:
             - {value: IsFalse, correct: true}
             - {value: Type, correct: true}
             - {value: NotType, correct: false}
-            - {value: Null, correct: false}
+            - {value: "Null", correct: false}
             - {value: IsBlank, correct: false}
 
     -   question: |
