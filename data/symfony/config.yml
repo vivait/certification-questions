@@ -400,3 +400,15 @@ questions:
             - {value: It defines a node contains a single dimensional array, correct: true}
             - {value: It defines a node contains a multi-dimensional array with two layers, correct: false}
             - {value: It defines a node contains any array value, correct: false}
+
+    -   question: |
+            Which types are not valid Node Types ?
+        answers:
+            - {value: scalar, correct: true}
+            - {value: integer, correct: true}
+            - {value: float, correct: true}
+            - {value: enum, correct: true}
+            - {value: variable, correct: true}
+            - {value: int, correct: false}
+            - {value: date, correct: false}
+            - {value: decimal, correct: false}

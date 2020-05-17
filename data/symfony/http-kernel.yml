@@ -360,3 +360,13 @@ questions:
             - { value: "Modify or add arguments that are passed to the controller", correct: false }
             - { value: "Modify or initialize things or the controller before the controller is executed", correct: false }
             - { value: "Modify the request when first received", correct: false }
+
+    -   question: |
+            What is the argument passed to listeners of kernel.terminate?
+        answers:
+            - { value: "TerminateEvent", correct: true }
+            - { value: 'GetResponseEvent', correct: false }
+            - { value: "TerminateResponseEvent", correct: false }
+            - { value: "ResponseEvent", correct: false }
+            - { value: "TerminateRequestEvent", correct: false }
+            - { value: "PostRequestEvent", correct: false }

@@ -112,3 +112,82 @@ questions:
             - {value: "It is an interface.", correct: true}
             - {value: "It is an abstract class.", correct: false}
             - {value: "The OptionsResolver class extends Options.", correct: false}
+
+    -   question: "How can you add an option named my_option without setting a default value?"
+        answers:
+            - {value: "$resolver->setDefined('my_option');", correct: true}
+            - {value: "$resolver->setNotRequired('my_option');", correct: false}
+            - {value: "$resolver->setDefault('my_option');", correct: false}
+            - {value: "$resolver->setDefault('my_option', null);", correct: false}
+
+    -   question: "What is the method one must call on an option resolver object to validate an array?"
+        answers:
+            - {value: "$resolver->resolve($options);", correct: true}
+            - {value: "$resolver->validate($options);", correct: false}
+            - {value: "$resolver->check($options);", correct: false}
+
+    -   question: "What is the method one must call on an option resolver object to populate an array?"
+        answers:
+            - {value: "$resolver->resolve($options);", correct: true}
+            - {value: "$resolver->populate($options);", correct: false}
+            - {value: "$resolver->fill($options);", correct: false}
+
+    -   question: "How can one require an option?"
+        answers:
+            - {value: "$resolver->setRequired('option');", correct: true}
+            - {value: "$resolver->setRequired(['option']);", correct: true}
+            - {value: "$resolver->require('option');", correct: false}
+            - {value: "$resolver->require(['option']);", correct: false}
+
+    -   question: "Is it possible to check if an option has been required by configuration?"
+        answers:
+            - {value: "Yes", correct: true}
+            - {value: "No", correct: false}
+
+    -   question: "Which methods can be used to check if an option has been required?"
+        answers:
+            - {value: "$resolver->getRequiredOptions()", correct: true}
+            - {value: "$resolver->isRequired('option')", correct: true}
+            - {value: "$resolver->getOptionConfiguration()['required']", correct: false}
+            - {value: "$resolver->getRequired()", correct: false}
+
+    -   question: "Which method can be used to check if an option has been provided for a required option?"
+        answers:
+            - {value: "$resolver->isMissing('option')", correct: true}
+            - {value: "$resolver->getMissingOptions()", correct: true}
+            - {value: "$resolver->isOptionMissing('option')", correct: false}
+            - {value: "$resolver->isRequired('option')", correct: false}
+            - {value: "$resolver->getOptionConfiguration()['missing']", correct: false}
+            - {value: "$resolver->getOptionMetaData()", correct: false}
+
+    -   question: "Does the component support validating the type of options?"
+        answers:
+            - {value: "Yes", correct: true}
+            - {value: "No", correct: false}
+
+    -   question: "Which of the following are validate to validate a type?"
+        answers:
+            - {value: "$resolver->setAllowedTypes('host', 'string');", correct: true}
+            - {value: "$resolver->setAllowedTypes('port', ['null', 'int']);", correct: true}
+            - {value: "$resolver->getOption('host')->setAllowedTypes('string');", correct: false}
+            - {value: "$resolver->getOption('port')->setAllowedTypes(['null', 'int']);", correct: false}
+
+    -   question: "What type of exception is thrown when an option of the invalid type is passed to an object?"
+        answers:
+            - {value: "Symfony\\Component\\OptionsResolver\\Exception\\InvalidOptionsException", correct: true}
+            - {value: "\\InvalidArgumentException", correct: false}
+            - {value: "Symfony\\Component\\OptionsResolver\\InvalidArgumentException", correct: false}
+
+    -   question: "Is it possible to append allowed types to an option?"
+        answers:
+            - {value: "Yes, by using the addAllowedTypes() method", correct: true}
+            - {value: "Yes, by using the appendAllowedTypes() method", correct: false}
+            - {value: "Yes, by using the allow*() methods", correct: false}
+            - {value: "No", correct: false}
+
+    -   question: ""
+        answers:
+            - {value: "Yes, by using the addAllowedTypes() method", correct: true}
+            - {value: "Yes, by using the appendAllowedTypes() method", correct: false}
+            - {value: "Yes, by using the allow*() methods", correct: false}
+            - {value: "No", correct: false}

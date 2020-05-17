@@ -1551,3 +1551,21 @@ questions:
         answers:
             - {value: "true", correct: true }
             - {value: "false", correct: false }
+
+    -   question: |
+            What will be the output of the following script?
+
+            echo (true ? 'Foo' : false ? 'Bar' : 'Baz');
+        answers:
+            - {value: "Bar", correct: true }
+            - {value: "Baz", correct: false }
+            - {value: "Parse error: syntax error, unexpected ':'", correct: false }
+            - {value: "Foo", correct: false }
+
+    -   question: |
+            What PHP function is used to create a new array pre-filled with a sequential series of values?
+        answers:
+            - {value: "range", correct: true }
+            - {value: "array_construct", correct: false }
+            - {value: "array_combine", correct: false }
+            - {value: "array_fill", correct: false }

@@ -98,3 +98,11 @@ questions:
             - { value: 'unicode', correct: false }
         help: |
             https://sqlite.org/docs.html
+
+    -   question: What class must a custom driver wrapper extension extend?
+        answers:
+            - { value: 'Doctrine\DBAL\Connection', correct: true }
+            - { value: 'Doctrine\DBAL\Wrapper', correct: false }
+            - { value: 'Doctrine\DBAL\DriverExtension', correct: false }
+        help: |
+            https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#wrapper-class

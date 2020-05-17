@@ -22,12 +22,12 @@ questions:
 
     -   question: "Which of the followings are not part of the built-in loaders?"
         answers:
-            - { value: "ArrayLoader", correct: false }
             - { value: "CsvLoader", correct: true }
+            - { value: "JsonLoader", correct: true }
+            - { value: "ArrayLoader", correct: false }
             - { value: "PoFileLoader", correct: false }
             - { value: "PhpFileLoader", correct: false }
             - { value: "QtFileLoader", correct: false }
-            - { value: "JsonLoader", correct: true }
             - { value: "CsvFileLoader", correct: false }
             - { value: "JsonFileLoader", correct: false }
             - { value: "MoFileLoader", correct: false }
