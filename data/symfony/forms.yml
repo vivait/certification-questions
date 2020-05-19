@@ -895,3 +895,14 @@ questions:
             - {value: 'symfony/twig-form-bridge', correct: false}
             - {value: 'symfony/twig-form-component', correct: false}
             - {value: 'symfony/twig-form-component', correct: false}
+
+    -   question: |
+            Which of the following are Symfony built-in field types?
+        answers:
+            - {value: 'NumberType', correct: true}
+            - {value: 'MoneyType', correct: true}
+            - {value: 'RangeType', correct: true}
+            - {value: 'IntegerType', correct: true}
+            - {value: 'PercentType', correct: true}
+            - {value: 'DecimalType', correct: false}
+            - {value: 'IntervalType', correct: false}

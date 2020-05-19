@@ -35,19 +35,19 @@ questions:
     -   question: 'Which of the following rules are true about bidirectional associations ?'
         answers:
             - value: |
-                The owning side has to use the mappedBy attribute and the inverse side the inversedBy attribute
-                of the OneToOne, ManyToOne, or ManyToMany mapping declaration.
-              correct: false
-            - value: |
-                 OneToMany is always the owning side and ManyToOne the inverse side of a bidirectional association.
-              correct: false
-            - value: |
                 The inverse side has to use the mappedBy attribute and the owning side the inversedBy attribute of
                 the OneToOne, ManyToOne, or ManyToMany mapping declaration.
               correct: true
             - value: |
                 ManyToOne is always the owning side and OneToMany the inverse side of a bidirectional association.
               correct: true
+            - value: |
+                The owning side has to use the mappedBy attribute and the inverse side the inversedBy attribute
+                of the OneToOne, ManyToOne, or ManyToMany mapping declaration.
+              correct: false
+            - value: |
+                 OneToMany is always the owning side and ManyToOne the inverse side of a bidirectional association.
+              correct: false
 
     -   question: |
             What is wrong with this repository method ?
@@ -196,3 +196,8 @@ questions:
                 correct: false
             -   value: xml
                 correct: false
+
+    -   question: 'Which usually is the owning side?'
+        answers:
+            - { value: ManyToOne, correct: true }
+            - { value: OneToMany, correct: false }

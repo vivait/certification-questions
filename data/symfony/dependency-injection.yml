@@ -674,3 +674,22 @@ questions:
             - value: |
                   <service id="app.markdown_parser" class="AppBundle\Markdown\Parser" deprecated=true></service>
               correct: false
+
+    -   question: |
+            Is the following a valid way to autowire the logger?
+
+            class Rot13Transformer
+            {
+                private $logger;
+
+                /**
+                 * @required
+                 */
+                public function setLogger(LoggerInterface $logger)
+                {
+                    $this->logger = $logger;
+                }
+            }
+        answers:
+            - { value: Yes, correct: true }
+            - { value: No, correct: false }

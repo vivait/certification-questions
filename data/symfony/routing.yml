@@ -408,3 +408,23 @@ questions:
             - { value: 'php bin/console debug:router:match /blog/my-latest-post', correct: false }
             - { value: 'php bin/console debug:router-match /blog/my-latest-post', correct: false }
             - { value: "it's not possible", correct: false }
+
+    -   question: |
+            Given the following route path: /score-50%%, what URLs will be matched?
+        answers:
+            - { value: '/score-50%25', correct: true }
+            - { value: '/score-50%', correct: true }
+            - { value: '/score-50%%', correct: false }
+            - { value: "/score-50", correct: false }
+
+    -   question: |
+            Is the following route valid (assuming that the app.route_prefix parameter is defined)?
+
+            some_route:
+                path:     /%app.route_prefix%/contact
+                defaults: { _controller: AppBundle:Main:contact }
+        answers:
+            - { value: '/score-50%25', correct: true }
+            - { value: '/score-50%', correct: true }
+            - { value: '/score-50%%', correct: false }
+            - { value: "/score-50", correct: false }
