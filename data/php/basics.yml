@@ -1569,3 +1569,187 @@ questions:
             - {value: "array_construct", correct: false }
             - {value: "array_combine", correct: false }
             - {value: "array_fill", correct: false }
+
+    -   question: |
+            What will be the output of the following script?
+
+            var_dump(array_change_key_case(['hello' => '1'])['HELLO'] ?? null);
+        answers:
+            - {value: "NULL", correct: true }
+            - {value: "int(1)", correct: false }
+            - {value: "false", correct: false }
+
+    -   question: |
+            What will be the output of the following script?
+
+            var_dump(array_change_key_case(['hello' => '1'], 1)['HELLO'] ?? null);
+        answers:
+            - {value: "int(1)", correct: true }
+            - {value: "NULL", correct: false }
+            - {value: "false", correct: false }
+
+    -   question: |
+            What will be the output of the following script?
+
+            var_dump(array_change_key_case(['hello' => '1'], 1)['HELLO'] ?? null);
+        answers:
+            - {value: "int(1)", correct: true }
+            - {value: "NULL", correct: false }
+            - {value: "false", correct: false }
+
+    -   question: |
+            What will be the output of the following script?
+
+            var_dump(array_change_key_case(['hello' => '1'], CASE_UPPER)['HELLO'] ?? null);
+        answers:
+            - {value: "int(1)", correct: true }
+            - {value: "NULL", correct: false }
+            - {value: "false", correct: false }
+
+    -   question: |
+            What will be the output of the following script?
+
+            var_dump(array_change_key_case(['hello' => '1'], CASE_LOWER)['HELLO'] ?? null);
+        answers:
+            - {value: "NULL", correct: true }
+            - {value: "int(1)", correct: false }
+            - {value: "false", correct: false }
+
+    -   question: |
+            What will be the output of the following script?
+
+            var_dump(
+                array_chunk(
+                    [
+                        'hello1' => 'hello1',
+                        'hello2' => 'hello2',
+                        'hello3' => 'hello3'
+                    ],
+                    2
+                )[0]
+            );
+        answers:
+            - value: |
+                  array(2) {
+                    [0]=>
+                    string(6) "hello1"
+                    [1]=>
+                    string(6) "hello2"
+                  }
+              correct: true
+            - value: |
+                  array(2) {
+                    ["hello1"]=>
+                    string(6) "hello1"
+                    ["hello2"]=>
+                    string(6) "hello2"
+                  }
+            correct: false
+
+    -   question: |
+            What will be the output of the following script?
+
+            var_dump(
+                array_chunk(
+                    [
+                        'hello1' => 'hello1',
+                        'hello2' => 'hello2',
+                        'hello3' => 'hello3'
+                    ],
+                    2,
+                    true
+                )[0]
+            );
+        answers:
+            - value: |
+                  array(2) {
+                    ["hello1"]=>
+                    string(6) "hello1"
+                    ["hello2"]=>
+                    string(6) "hello2"
+                  }
+            correct: true
+            - value: |
+                  array(2) {
+                    [0]=>
+                    string(6) "hello1"
+                    [1]=>
+                    string(6) "hello2"
+                  }
+              correct: false
+
+    -   question: |
+            What will be the output of the following script?
+
+            var_dump(
+                array_count_values(
+                    [
+                        'hello1' => 'value1',
+                        'hello2' => 'value2',
+                        'hello3' => 'value1',
+                    ]
+                )['value1'] ?? null
+            );
+        answers:
+            - {value: "int(2)", correct: true }
+            - {value: "NULL", correct: false }
+            - {value: "int(1)", correct: false }
+            - {value: "false", correct: false }
+
+    -   question: |
+            What the purpose of array_diff_assoc()?
+        answers:
+            - {value: "Computes the difference of arrays with additional index check", correct: true }
+            - {value: "Computes the difference of arrays", correct: false }
+            - {value: "Computes the differences between arrays' indexes", correct: false }
+    -   question: |
+            What will be the output of the following script?
+
+            var_dump(array_fill_keys([0, 1, 2], 'value')[2] ?? null);
+        answers:
+            - {value: 'string(5) "value"', correct: true }
+            - {value: "NULL", correct: false }
+            - {value: "2", correct: false }
+    -   question: |
+            What will be the output of the following script?
+
+            var_dump(array_key_first(array_fill_keys([5, 1, 0, 2, 4], 'value')));
+        answers:
+            - {value: 'int(5)', correct: true }
+            - {value: "int(0)", correct: false }
+            - {value: 'string(5) "value"', correct: false }
+            - {value: 'NULL', correct: false }
+    -   question: |
+            What will be the output of the following script?
+
+            var_dump(
+                array_merge_recursive(
+                    [
+                        'a' => 'b',
+                    ],
+                    [
+                        'a' => ['c'],
+                    ]
+                )['a'][0] ?? null
+            );
+        answers:
+            - {value: 'string(1) "b"', correct: true }
+            - {value: 'string(1) "c"', correct: false }
+            - {value: 'NULL', correct: false }
+    -   question: |
+            What will be the output of the following script?
+
+            var_dump(
+                array_merge_recursive(
+                    [
+                        'a' => ['c'],
+                    ],
+                    [
+                        'a' => 'b',
+                    ],
+                )['a'][0] ?? null
+            );
+        answers:
+            - {value: 'string(1) "c"', correct: true }
+            - {value: 'string(1) "b"', correct: false }
+            - {value: 'NULL', correct: false }
