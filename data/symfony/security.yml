@@ -270,3 +270,71 @@ questions:
         answers:
             - {value: 'It attaches authentication related services based on the config', correct: true}
             - {value: 'It creates security firewalls based on the config', correct: false}
+
+    -   question: |
+            Where should one configure security configuration in Symfony 3.4?
+        answers:
+            - {value: 'app/config/security.yml', correct: true}
+            - {value: 'app/config/config.yml', correct: false}
+            - {value: 'app/config/security/main.yml', correct: false}
+
+    -   question: |
+            What option must one configure to allow any user to view a page?
+        answers:
+            - {value: 'anonymous: ~', correct: true}
+            - {value: 'login: false', correct: false}
+            - {value: 'open: true', correct: false}
+            - {value: 'secure: false', correct: false}
+
+    -   question: |
+            How does one configure HTTP basic authentication?
+        answers:
+            - {value: 'One must add the http_basic key under a firewall they want to configure it for', correct: true}
+            - {value: 'One can add the http_basic key under the security key', correct: false}
+            - {value: 'One can add the http_basic provider', correct: false}
+
+    -   question: |
+            Which key must one configure under security to make certain set of routes require a role?
+        answers:
+            - {value: 'access_control', correct: true}
+            - {value: 'required_role', correct: false}
+            - {value: 'access_roles', correct: false}
+            - {value: 'roles', correct: false}
+
+    -   question: |
+            What security providers must one use to configure the users in configuration files?
+        answers:
+            - {value: 'users_in_memory', correct: true}
+            - {value: 'configuration_users', correct: false}
+            - {value: 'memory_users', correct: false}
+
+    -   question: |
+            Is it possible for different file walls to get users from different locations?
+        answers:
+            - {value: 'Yes', correct: true}
+            - {value: 'No', correct: false}
+
+    -   question: |
+            Is the following a valid way to configure an encoder?
+
+            security:
+                # ...
+
+                encoders:
+                    Symfony\Component\Security\Core\User\User: plaintext
+        answers:
+            - {value: 'Yes', correct: true}
+            - {value: 'No', correct: false}
+
+    -   question: |
+            Is the following a valid way to configure an encoder?
+
+            security:
+                # ...
+                encoders:
+                    Symfony\Component\Security\Core\Encoder\PlaintextPasswordEncoder:
+                        users:
+                            - Symfony\Component\Security\Core\User\User
+        answers:
+            - {value: 'No', correct: true}
+            - {value: 'Yes', correct: false}
