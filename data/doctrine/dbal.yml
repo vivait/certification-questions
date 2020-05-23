@@ -93,6 +93,111 @@ questions:
         help: |
             https://dev.mysql.com/doc/refman/5.5/en/keywords.html
 
+    -   question: |
+            Is the following the correct way to create a MySQL database connection?
+
+            $connectionParams = array(
+                'dbname' => 'mydb',
+                'user' => 'user',
+                'password' => 'secret',
+                'host' => 'localhost',
+                'driver' => 'pdo_mysql',
+            );
+
+            $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
+        answers:
+            - { value: 'Yes', correct: true }
+            - { value: 'No', correct: false }
+        help: |
+            https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#getting-a-connection
+
+    -   question: |
+            Is the following the correct way to create a MySQL database connection?
+
+            $connectionParams = array(
+                'dbname' => 'mydb',
+                'user' => 'user',
+                'password' => 'secret',
+                'host' => 'localhost',
+            );
+
+            $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
+        answers:
+            - { value: 'Yes', correct: false }
+            - { value: 'No', correct: true }
+        help: |
+            https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#getting-a-connection
+
+    -   question: |
+            Is the following the correct way to create a MySQL database connection?
+
+            $connectionParams = array(
+                'dbname' => 'mydb',
+                'user' => 'user',
+                'password' => 'secret',
+                'host' => 'localhost',
+            );
+
+            $conn = \Doctrine\DBAL\DriverFactory::create($connectionParams);
+        answers:
+            - { value: 'Yes', correct: false }
+            - { value: 'No', correct: true }
+        help: |
+            https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#getting-a-connection
+
+    -   question: |
+            Is the following the correct way to create a MySQL database connection?
+
+            $connectionParams = array(
+                'url' => 'mysql://user:secret@localhost/mydb',
+            );
+
+            $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
+        answers:
+            - { value: 'Yes', correct: true }
+            - { value: 'No', correct: false }
+        help: |
+            https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#getting-a-connection
+
+    -   question: |
+            Is the following the correct way to create a MySQL database connection?
+
+            $connectionParams = array(
+                'url' => 'mysql://user:secret@localhost/mydb',
+            );
+
+            $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
+        answers:
+            - { value: 'Yes', correct: true }
+            - { value: 'No', correct: false }
+        help: |
+            https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#getting-a-connection
+
+    -   question: Which of the following are valid driver url schemes?
+        answers:
+            - { value: 'db2', correct: true }
+            - { value: 'mssql', correct: true }
+            - { value: 'mysql', correct: true }
+            - { value: 'pgsql', correct: true }
+            - { value: 'ibm', correct: false }
+            - { value: 'pg', correct: false }
+            - { value: 'sqlite2', correct: false }
+            - { value: 'sqlite2', correct: false }
+        help: |
+            https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#connecting-using-a-url
+
+    -   question: Which of the following are valid driver url schemes?
+        answers:
+            - { value: 'postgres', correct: true }
+            - { value: 'postgresql', correct: true }
+            - { value: 'sqlite', correct: true }
+            - { value: 'sqlite3', correct: true }
+            - { value: 'ibm', correct: false }
+            - { value: 'sqlite2', correct: false }
+            - { value: 'pg', correct: false }
+        help: |
+            https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#connecting-using-a-url
+
     -   question: Unlike a database such as MySQL, SQLite columns are not explicitely typed. Instead, SQLite categorizes data into which of the following categories ?
         answers:
             - { value: 'numeric', correct: true }

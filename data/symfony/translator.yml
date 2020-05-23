@@ -68,8 +68,8 @@ questions:
 
     -   question: "What is the way to add a resources to the translator ?"
         answers:
-            - { value: "$translator->loadResource('path/to/messages.fr.yml', 'yaml',  'fr_FR');", correct: false }
             - { value: "$translator->addResource('yaml', 'path/to/messages.fr.yml', 'fr_FR');", correct: true }
+            - { value: "$translator->loadResource('path/to/messages.fr.yml', 'yaml',  'fr_FR');", correct: false }
             - { value: "$translator->addResource('path/to/messages.fr.yml', 'yaml',  'fr_FR');", correct: false }
             - { value: "$translator->loadResource('yaml', 'path/to/messages.fr.yml', 'fr_FR');", correct: false }
 
