@@ -906,3 +906,20 @@ questions:
             - {value: 'PercentType', correct: true}
             - {value: 'DecimalType', correct: false}
             - {value: 'IntervalType', correct: false}
+
+    -   question: |
+            What are the benefits of using the PercentType over the NumberType?
+        answers:
+            - {value: 'It appends a percentage side after in the input box', correct: true}
+            - {value: 'It allows one to easily convert decimal stored values into whole numbers', correct: true}
+            - {value: 'It ensures that the number is displayed whole number', correct: false}
+            - {value: 'It ensures that values are stored as whole numbers', correct: false}
+
+    -   question: |
+            What are valid options passed to the PercentType?
+        answers:
+            - {value: 'scale', correct: true}
+            - {value: 'type', correct: true}
+            - {value: 'multiplier', correct: false}
+            - {value: 'divisor', correct: false}
+            - {value: 'value', correct: false}

@@ -20,20 +20,10 @@ questions:
             - {value: 'They do not specify a class', correct: true}
             - {value: 'A class is required for container validation', correct: false}
 
-    -   question: "On a default Symfony project using symfony/form, what solutions can successfully help us retrieve the FormFactory in the signup action?"
+    -   question: |
+            On a default Symfony project using symfony/form, what solutions can successfully help us retrieve the
+            FormFactory in the signup action?
         answers:
-            -   value: |
-                    use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
-                    class SecurityController extends AbstractController
-                    {
-                        public function signup()
-                        {
-                            $formFactory = $this->getFormFactory();
-                        }
-                    }
-                correct: false
-
             -   value: |
                     class SecurityController
                     {
@@ -95,6 +85,18 @@ questions:
                         }
                     }
                 correct: true
+
+            -   value: |
+                    use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
+                    class SecurityController extends AbstractController
+                    {
+                        public function signup()
+                        {
+                            $formFactory = $this->getFormFactory();
+                        }
+                    }
+                correct: false
 
     -   question: |
             What will be the value of the following configuration sample?

@@ -256,3 +256,17 @@ questions:
             - {value: 'chain', correct: true}
             - {value: 'doctrine', correct: false}
             - {value: 'memory', correct: false}
+
+    -   question: |
+            What methods exist in Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface?
+        answers:
+            - {value: 'public function create(ContainerBuilder $container, $id, $config, $userProvider, $defaultEntryPoint);', correct: true}
+            - {value: 'public function getPosition();', correct: true}
+            - {value: 'public function getKey();', correct: true}
+            - {value: 'public function addConfiguration(NodeDefinition $builder);', correct: true}
+
+    -   question: |
+            What is the purpose of Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface?
+        answers:
+            - {value: 'It attaches authentication related services based on the config', correct: true}
+            - {value: 'It creates security firewalls based on the config', correct: false}

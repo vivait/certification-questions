@@ -185,9 +185,84 @@ questions:
             - {value: "Yes, by using the allow*() methods", correct: false}
             - {value: "No", correct: false}
 
-    -   question: ""
+    -   question: |
+            What is the output of the following?
+
+            class Mailer
+            {
+                private $host;
+
+                public function __construct(array $options)
+                {
+                    $resolver = new OptionResolver();
+                    $this->configureOptions($resolver);
+
+                    $this->host = $resolver->resolve($options)['host'];
+                }
+
+                public function configureOptions(OptionsResolver $resolver)
+                {
+                    $resolver->setDefaults([
+                           'encryption' => null,
+                           'host' => 'example.org',
+                    ]);
+
+                    $resolver->setDefault('host', function (Options $options, $previousValue) {
+                        if ('ssl' === $options['encryption']) {
+                            return 'secure.example.org'
+                        }
+
+                        return $previousValue;
+                    });
+                }
+
+                public function getHost()
+                {
+                    return $this->host;
+                }
+            }
+
+            echo (new Mailer([]))->getHost();
         answers:
-            - {value: "Yes, by using the addAllowedTypes() method", correct: true}
-            - {value: "Yes, by using the appendAllowedTypes() method", correct: false}
-            - {value: "Yes, by using the allow*() methods", correct: false}
-            - {value: "No", correct: false}
+            - {value: "example.org", correct: true}
+            - {value: "encryption", correct: false}
+            - {value: "null", correct: false}
+            - {value: "There will be an error", correct: false}
+
+    -   question: |
+            What is the output of the following?
+
+            class Mailer
+            {
+                // ...
+
+                public function configureOptions(OptionsResolver $resolver)
+                {
+                    // ...
+                    $resolver->setDefined('port');
+                }
+
+                // ...
+                public function sendMail($from, $to)
+                {
+                    if (array_key_exists('port', $this->options)) {
+                        echo 'Set!';
+                    } else {
+                        echo 'Not Set!';
+                    }
+                }
+            }
+
+            $mailer = new Mailer();
+            $mailer->sendMail($from, $to);
+        answers:
+            - {value: "Not Set!", correct: true}
+            - {value: "Set!", correct: false}
+
+    -   question: |
+            How could one improve the performance of a class which is instantiated multiple times which contains an
+            option resolver?
+        answers:
+            - { value: "One could store the configured option resolver in a static class", correct: true }
+            - { value: "One could enable the option resolver cache", correct: false }
+            - { value: "One could create a single option resolver and configure it within each class", correct: false }
