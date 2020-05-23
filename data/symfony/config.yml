@@ -404,11 +404,11 @@ questions:
     -   question: |
             Which types are not valid Node Types ?
         answers:
-            - {value: scalar, correct: true}
-            - {value: integer, correct: true}
-            - {value: float, correct: true}
-            - {value: enum, correct: true}
-            - {value: variable, correct: true}
-            - {value: int, correct: false}
-            - {value: date, correct: false}
-            - {value: decimal, correct: false}
+            - {value: int, correct: true}
+            - {value: date, correct: true}
+            - {value: decimal, correct: true}
+            - {value: scalar, correct: false}
+            - {value: integer, correct: false}
+            - {value: float, correct: false}
+            - {value: enum, correct: false}
+            - {value: variable, correct: false}

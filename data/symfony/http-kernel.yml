@@ -370,3 +370,30 @@ questions:
             - { value: "ResponseEvent", correct: false }
             - { value: "TerminateRequestEvent", correct: false }
             - { value: "PostRequestEvent", correct: false }
+
+    -   question: |
+            What is the third arguments of the handle method of Symfony\Component\HttpKernel\HttpKernelInterface?
+        answers:
+            - { value: "Whether to catch exceptions or not.", correct: true }
+            - { value: 'A Request instance', correct: false }
+            - { value: "The name of the environment", correct: false }
+            - { value: "The type of the request", correct: false }
+            - { value: "Whether to activate the debug or not", correct: false }
+
+    -   question: |
+            What is the second arguments of the handle method of Symfony\Component\HttpKernel\HttpKernelInterface?
+        answers:
+            - { value: "The type of the request", correct: true }
+            - { value: "Whether to catch exceptions or not.", correct: false}
+            - { value: 'A Request instance', correct: false }
+            - { value: "The name of the environment", correct: false }
+            - { value: "Whether to activate the debug or not", correct: false }
+
+    -   question: |
+            What is the first arguments of the handle method of Symfony\Component\HttpKernel\HttpKernelInterface?
+        answers:
+            - { value: 'A Request instance', correct: true }
+            - { value: "The type of the request", correct: false }
+            - { value: "Whether to catch exceptions or not.", correct: false}
+            - { value: "The name of the environment", correct: false }
+            - { value: "Whether to activate the debug or not", correct: false }

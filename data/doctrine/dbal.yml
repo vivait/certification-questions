@@ -70,9 +70,13 @@ questions:
             - { value: "$result = $conn->delete('user', ['id' => 1]);", correct: true }
             - { value: "$result = $conn->executeUpdate('DELETE FROM user WHERE id = 1');", correct: true }
             - { value: "$result = $conn->prepare('DELETE FROM user WHERE id = 1')->execute();", correct: false }
-            - { value: "$result = $conn->executeQuery('DELETE FROM user WHERE id = 1');", correct: true }
+            - { value: "$result = $conn->executeQuery('DELETE FROM user WHERE id = 1');", correct: false }
         help: |
-            https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/data-retrieval-and-manipulation.html#list-of-parameters-conversion
+            Doctrine\DBAL\Connection#executeQueryreturns a Doctrine\DBAL\Driver\Statement https://github.com/doctrine/dbal/blob/2.5/lib/Doctrine/DBAL/Connection.php#L827
+
+            Doctrine\DBAL\Driver\Statement#execute returns true or false. https://github.com/doctrine/dbal/blob/2.5/lib/Doctrine/DBAL/Driver/Statement.php#L112
+
+            In both case we can call Doctrine\DBAL\Driver\Statement#rowCount to get the number of affected rows.
 
     -   question: Which of the following are reserved words?
         answers:

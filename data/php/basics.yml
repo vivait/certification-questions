@@ -1644,7 +1644,7 @@ questions:
                     ["hello2"]=>
                     string(6) "hello2"
                   }
-            correct: false
+              correct: false
 
     -   question: |
             What will be the output of the following script?
@@ -1668,7 +1668,7 @@ questions:
                     ["hello2"]=>
                     string(6) "hello2"
                   }
-            correct: true
+              correct: true
             - value: |
                   array(2) {
                     [0]=>
@@ -1753,3 +1753,12 @@ questions:
             - {value: 'string(1) "c"', correct: true }
             - {value: 'string(1) "b"', correct: false }
             - {value: 'NULL', correct: false }
+    -   question: |
+            What will be the output of the following script?
+
+            echo strcmp(123, '123');
+        answers:
+            - {value: '1', correct: true }
+            - {value: '0', correct: false }
+            - {value: '-1', correct: false }
+            - {value: 'An error', correct: false }
