@@ -86,9 +86,95 @@ questions:
             - {value: in the src/Resources/public/ directory, correct: false }
             - {value: in the assets/ directory of each bundle, correct: true }
 
-
     -   question: |
             According to the official Symfony Best Practices Guide, is it recommended to store the sensitive global parameters (ie. database credentials, etc.) outside of the project (ie. environment variables, external configuration file, etc.)?
         answers:
             - {value: No, correct: false }
             - {value: Yes, correct: true }
+
+    -   question: What is business logic?
+        answers:
+            - {value: 'Determines how data can be created, stored, and changed', correct: true }
+            - {value: 'It is your doctrine entities', correct: false }
+            - {value: 'It is your Symfony services', correct: false }
+
+    -   question: Does Symfony's best practices recommend you define class names as parameters?
+        answers:
+            - {value: 'Yes', correct: true }
+            - {value: 'No', correct: false }
+
+    -   question: What is the most efficient format to store Doctrine entity configuration in?
+        answers:
+            - {value: 'None', correct: true }
+            - {value: 'YAML', correct: false }
+            - {value: 'XML', correct: false }
+            - {value: 'Annotations', correct: false }
+
+    -   question: Which PSRs are followed by Symfony?
+        answers:
+            - {value: 'PSR-1', correct: true }
+            - {value: 'PSR-2', correct: false }
+            - {value: 'PSR-3', correct: false }
+            - {value: 'PSR-0', correct: false }
+
+    -   question: Does Symfony's best practices recommend you use the @Template annoation?
+        answers:
+            - {value: 'Yes', correct: true }
+            - {value: 'No', correct: false }
+
+    -   question: |
+            What are some benefits of marking services as private?
+        answers:
+            - {value: "It allows the container to optimize to increase the container's performance", correct: true }
+            - {value: "It gives you clearer errors if you try to access non-existent service on any page", correct: true }
+            - {value: "It allows you to better control how developers access business logic", correct: false }
+
+    -   question: |
+            What is the recommend format to name your templates with?
+        answers:
+            - {value: "snake_case", correct: true }
+            - {value: "camelCase", correct:  false }
+            - {value: "PascalCase", correct: false }
+            - {value: "bbq-case", correct: false }
+            - {value: "bbq-case", correct: false }
+
+    -   question: |
+            Is it recommended to prefix partial templates with underscores?
+        answers:
+            - {value: "Yes", correct: true }
+            - {value: "No", correct:  false }
+
+    -   question: |
+            Which namespace should you store your Twig extensions in Symfony 3.4?
+        answers:
+            - {value: "AppBundle/Twig/", correct: true }
+            - {value: "App/Twig/", correct:  false }
+            - {value: "App/Twig/Extension", correct:  false }
+            - {value: "AppBundle/Twig/Extension", correct:  false }
+            - {value: "App/TwigExtension", correct:  false }
+            - {value: "AppBundle/TwigExtension", correct:  false }
+
+    -   question: |
+            Which namespace should you store your Form Types in Symfony 3.4?
+        answers:
+            - {value: "AppBundle/Form/", correct: true }
+            - {value: "App/Form/", correct:  false }
+            - {value: "App/Form/Type", correct:  false }
+            - {value: "AppBundle/Form/Type", correct:  false }
+            - {value: "App/FormType", correct:  false }
+            - {value: "AppBundle/FormType", correct:  false }
+
+    -   question: |
+            Where does Symfony recommend you configure validation constraints?
+        answers:
+            - {value: "On the model", correct: true }
+            - {value: "In the form type", correct:  false }
+            - {value: "In the template", correct:  false }
+            - {value: "In the controller", correct:  false }
+
+    -   question: |
+            How many actions does Symfony recommend you use to render and handle submits of a form?
+        answers:
+            - {value: "'1'", correct: true }
+            - {value: "'2'", correct:  false }
+            - {value: "'3'", correct:  false }

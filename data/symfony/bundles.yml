@@ -135,3 +135,9 @@ questions:
             - {value: "$session = $this->getSession();", correct: false }
             - {value: "$session = $this->getUser()->getSession();", correct: false }
             - {value: "$session = $this->container->getSession();", correct: false }
+
+    -   question: |
+            What is the purpose of @Template?
+        answers:
+            - {value: "It allows you to render a template without calling Twig", correct: true }
+            - {value: "It allows you to modify the template rendered in the controller", correct: false }

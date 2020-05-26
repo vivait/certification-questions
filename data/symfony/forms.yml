@@ -923,3 +923,9 @@ questions:
             - {value: 'multiplier', correct: false}
             - {value: 'divisor', correct: false}
             - {value: 'value', correct: false}
+
+    -   question: |
+            What is the valid order to call the submission methods on the form instance?
+        answers:
+            - {value: 'form->isSubmitted() && $form->isValid()', correct: true}
+            - {value: '$form->isValid() && form->isSubmitted()', correct: false}

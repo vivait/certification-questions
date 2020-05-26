@@ -695,3 +695,26 @@ questions:
         answers:
             - { value: Yes, correct: true }
             - { value: No, correct: false }
+
+    -   question: |
+            Which formats support anonymous services?
+        answers:
+            - {value: "YAML", correct: true }
+            - {value: "XML", correct: true }
+            - {value: "Annotations", correct: false }
+            - {value: "Php", correct: false }
+
+    -   question: |
+            Which formats support anonymous services?
+        answers:
+            - {value: "YAML", correct: true }
+            - {value: "XML", correct: true }
+            - {value: "Annotations", correct: false }
+            - {value: "Php", correct: false }
+
+    -   question: |
+            What are anonymous services?
+        answers:
+            - {value: "Allows you to create define a service inline", correct: true }
+            - {value: "It allows you define a service that are ran at compile time", correct: false }
+            - {value: "It allows you define a service using a PHP anonymous class", correct: false }
