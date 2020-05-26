@@ -71,13 +71,13 @@ questions:
                   You should use getQuery().
                 correct: true
             -   value: |
-                    $qb is never updated after its initialization.
-                    You should do methods chaining.
-                correct: false
-            -   value: |
                     The second call setParameters(...) will erase data set in the first call.
                     So year will be deleted from the parameters list. You should use setParameter($name, $value).
                 correct: true
+            -   value: |
+                    $qb is never updated after its initialization.
+                    You should do methods chaining.
+                correct: false
 
     -   question: What is the behaviour of the deferred implicit change policy?
         answers:

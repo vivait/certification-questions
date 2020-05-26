@@ -259,3 +259,19 @@ questions:
             - {value: '"0"', correct: true}
             - {value: '"-1"', correct: false}
             - {value: '"-3"', correct: false}
+
+    -   question: |
+            What is the result of the following script?
+
+            <?php
+            $array = ['a1' => 'x', 'a2' => 'e', 'a3' => 'z'];
+            asort($array);
+
+            foreach ($array as $keys => $values) {
+                print "$keys = $values";
+            }
+        answers:
+            - {value: 'a2 = ea1 = xa3 = z', correct: true}
+            - {value: 'a1 = ea2 = xa3 = z', correct: false}
+            - {value: '"0 = e1 = x2 = z"', correct: false}
+            - {value: 'An error', correct: false}

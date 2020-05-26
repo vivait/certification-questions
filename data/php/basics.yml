@@ -1762,3 +1762,12 @@ questions:
             - {value: '0', correct: false }
             - {value: '-1', correct: false }
             - {value: 'An error', correct: false }
+
+    -   question: |
+            Which of the following are not true about streams ?
+        answers:
+            - { value: 'When used properly, they significantly reduce memory consumption.', correct: true }
+            - { value: 'They are always bi-directional.', correct: true }
+            - { value: 'They can be applied to any data source.', correct: true }
+            - { value: 'They can be filtered.', correct: false }
+            - { value: 'They are always seekable.', correct: false }
