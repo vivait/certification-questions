@@ -758,11 +758,11 @@ questions:
 
             echo count($a, true);
         answers:
-            - {value: "4", correct: false }
-            - {value: "5", correct: true }
+            - {value: "'4'", correct: false }
+            - {value: "'5'", correct: true }
             - {value: "An error", correct: false }
-            - {value: "2", correct: false }
-            - {value: "3", correct: false }
+            - {value: "'2'", correct: false }
+            - {value: "'3'", correct: false }
 
     -   question: |
             What will be the output of the following script?
@@ -863,7 +863,6 @@ questions:
         answers:
             - {value: "It contains the previous error message", correct: true }
             - {value: "It contains an object of the last error", correct: false }
-            - {value: "It has no special meaning it's just a variable", correct: false }
             - {value: "It has no special meaning it's just a variable", correct: false }
 
     -   question: |

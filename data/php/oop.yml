@@ -264,7 +264,7 @@ questions:
             - {value: 'created', correct: true}
             - {value: 'An error', correct: false}
 
-    -   question: Can interfaces contain contructors?
+    -   question: Can interfaces contain constructors?
         answers:
             - {value: 'Yes', correct: true}
             - {value: 'No', correct: false}

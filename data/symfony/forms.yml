@@ -929,3 +929,11 @@ questions:
         answers:
             - {value: 'form->isSubmitted() && $form->isValid()', correct: true}
             - {value: '$form->isValid() && form->isSubmitted()', correct: false}
+
+    -   question: |
+            What is the difference between the IntegerType and NumberType?
+        answers:
+            - { value: 'The IntegerType always rounds to whole numbers', correct: true}
+            - { value: 'The IntegerType allows the user to enter decimal numbers', correct: true }
+            - { value: 'The NumberType always rounds to whole numbers', correct: false }
+            - { value: 'The NumberType allows the user to use decimal numbers', correct: false }
