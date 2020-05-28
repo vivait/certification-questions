@@ -201,3 +201,58 @@ questions:
         answers:
             - { value: ManyToOne, correct: true }
             - { value: OneToMany, correct: false }
+
+    -   question: 'What does the type of the query builder mean?'
+        answers:
+            - { value: The operation that will performed on the database (e.g SELECT, DELETE and UPDATE), correct: true }
+            - { value: It represents if there is an entity attached, correct: false }
+
+    -   question: 'Which methods exist in the QueryBuilder?'
+        answers:
+            - { value: "public function select($select = null)", correct: true }
+            - { value: "public function addSelect($select = null)", correct: true }
+            - { value: "public function delete($delete = null, $alias = null)", correct: true }
+            - { value: "public function addDelete($delete = null, $alias = null)", correct: false }
+            - { value: "public function addLeftJoin($delete = null, $alias = null)", correct: false }
+
+    -   question: 'Which methods exist in the QueryBuilder?'
+        answers:
+            - { value: "public function delete($delete = null, $alias = null)", correct: true }
+            - { value: "public function update($update = null, $alias = null)", correct: true }
+            - { value: "public function set($key, $value)", correct: true }
+            - { value: "public function addSet($delete = null, $alias = null)", correct: false }
+            - { value: "public function addUpdate($delete = null, $alias = null)", correct: false }
+
+    -   question: 'Which methods exist in the QueryBuilder?'
+        answers:
+            - { value: "public function delete($delete = null, $alias = null)", correct: true }
+            - { value: "public function update($update = null, $alias = null)", correct: true }
+            - { value: "public function set($key, $value)", correct: true }
+            - { value: "public function addSet($delete = null, $alias = null)", correct: false }
+            - { value: "public function addUpdate($delete = null, $alias = null)", correct: false }
+
+    -   question: 'Which methods exist in the QueryBuilder?'
+        answers:
+            - { value: "public function delete($delete = null, $alias = null)", correct: true }
+            - { value: "public function update($update = null, $alias = null)", correct: true }
+            - { value: "public function set($key, $value)", correct: true }
+            - { value: "public function addSet($delete = null, $alias = null)", correct: false }
+            - { value: "public function addUpdate($delete = null, $alias = null)", correct: false }
+            - { value: "public function addWhere($delete = null, $alias = null)", correct: false }
+
+    -   question: 'Which methods exist in the QueryBuilder?'
+        answers:
+            - { value: "public function from($from, $alias, $indexBy = null)", correct: true }
+            - { value: "public function join($join, $alias, $conditionType = null, $condition = null, $indexBy = null)", correct: true }
+            - { value: "public function innerJoin($join, $alias, $conditionType = null, $condition = null, $indexBy = null)", correct: true }
+            - { value: "public function addSet($delete = null, $alias = null)", correct: false }
+            - { value: "public function addWhere($delete = null, $alias = null)", correct: false }
+
+    -   question: 'Which methods exist in the QueryBuilder?'
+        answers:
+            - { value: "public function rightJoin($join, $alias, $conditionType = null, $condition = null, $indexBy = null)", correct: true }
+            - { value: "public function addGroupBy($groupBy)", correct: true }
+            - { value: "public function having($having)", correct: true }
+            - { value: "public function having($having)", correct: true }
+            - { value: "public function addSet($delete = null, $alias = null)", correct: false }
+            - { value: "public function addOrderBy($sort, $order = null)", correct: false }

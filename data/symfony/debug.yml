@@ -90,3 +90,12 @@ questions:
         answers:
             - { value: "It throws more useful exceptions when a class isn't found", correct: true }
             - { value: "It is a custom autoloader that ensures tests are loaded", correct: false }
+
+    -   question: |
+            Which of the following sentences are correct about the Symfony\Component\Debug\ExceptionHandler class ?
+        answers:
+            - { value: "ExceptionHandler is mostly useful in debug mode to replace the default PHP/XDebug output with something prettier and more useful.", correct: true }
+            - { value: "The ExceptionHandler class is mainly used during Kernel boot, where nothing is yet available, the Response content is always HTML.", correct: true }
+            - { value: "ExceptionHandler converts an exception to a Response object.", correct: true }
+            - { value: "ExceptionHandler converts a Response object to an exception.", correct: false }
+            - { value: "The ExceptionHandler class catches PHP errors and converts them to exceptions.", correct: false }
