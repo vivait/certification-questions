@@ -1770,3 +1770,56 @@ questions:
             - { value: 'They can be applied to any data source.', correct: true }
             - { value: 'They can be filtered.', correct: false }
             - { value: 'They are always seekable.', correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            $a = 4;
+
+            echo $a+++$a++;
+
+            What is the expected output when running this script?
+        answers:
+            - { value: '9', correct: true }
+            - { value: "It's a syntax error.", correct: false }
+            - { value: '8', correct: false }
+            - { value: '10', correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            $a = 4;
+            echo $a++;
+
+            What is the expected output when running this script?
+        answers:
+            - { value: '"4"', correct: true }
+            - { value: "It's a syntax error.", correct: false }
+            - { value: '"5"', correct: false }
+            - { value: '"3"', correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            $a = 4;
+            echo ++$a++;
+
+            What is the expected output when running this script?
+        answers:
+            - { value: "It's a syntax error.", correct: true }
+            - { value: '4', correct: false }
+            - { value: '5', correct: false }
+            - { value: '3', correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            $a = 4;
+            echo ++$a;
+
+            What is the expected output when running this script?
+        answers:
+            - { value: '5', correct: true }
+            - { value: "It's a syntax error.", correct: false }
+            - { value: '4', correct: false }
+            - { value: '3', correct: false }

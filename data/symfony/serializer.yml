@@ -115,19 +115,6 @@ questions:
             -   value: is*
                 correct: true
 
-    -   question: "Which of these methods are automatically detected and used by the Serializer ?"
-        answers:
-            -   value:  remove*
-                correct: true
-            -   value:  get*
-                correct: true
-            -   value:  has*
-                correct: true
-            -   value: add*
-                correct: true
-            -   value: is*
-                correct: true
-
     -   question: "What is the signature of the Serializer constructor?"
         answers:
             -   value:  __construct(array $normalizers = [], array $encoders = [])
@@ -288,3 +275,30 @@ questions:
                 correct: false
             -   value: 'a:1:{s:4:"some";s:5:"value";}'
                 correct: false
+
+    -   question: |
+            Assuming the $serialiser is configured with GetSetMethodNormalizer what is the result of the following?
+
+            class Organization {
+                public $name;
+                public $members;
+            }
+
+            class Member {
+                public $name;
+                public $organization;
+            }
+
+            $member = new Member();
+            $member->name = 'Kévin';
+
+            $org = new Organization();
+            $org->name = 'Les-Tilleuls.coop';
+            $org->members = [$member];
+
+            $member->organization = $org;
+
+            echo $serializer->serialize($org, 'json');
+        answers:
+            - {value: It will throw an exception,   correct: true}
+            - {value: '{"name": "Les-Tilleuls.coop", "members": [{"name": "Kévin"}]}', correct: false}

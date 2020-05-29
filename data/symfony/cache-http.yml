@@ -171,8 +171,8 @@ questions:
 
     -   question: What happens for an HTTP response if it has both the Expires and Cache-Control headers set?
         answers:
-            - { value: 'Caching systems will use the Expires header field if the response is generated if the current day number is odd, otherwise they will use the Cache-Control header field.', correct: false }
             - { value: 'Caching systems will favor the Cache-Control header field over the Expires field to cache the response.', correct: true }
+            - { value: 'Caching systems will use the Expires header field if the response is generated if the current day number is odd, otherwise they will use the Cache-Control header field.', correct: false }
             - { value: 'The response wont be cachable and caching systems will simply ignore it.', correct: false }
             - { value: 'Caching systems will favor the Expires header field over the Cache-Control field to cache the response.', correct: false }
 

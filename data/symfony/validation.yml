@@ -593,3 +593,11 @@ questions:
             - {value: Length, correct: false}
             - {value: Traversable, correct: false}
             - {value: Iterable, correct: false}
+
+    -   question: |
+            How can you inverse the result of the validation when using a Symfony\Component\Validator\Constraints\Regex validation constraint ?
+        answers:
+            - {value: Using the match option., correct: true}
+            - {value: Using the prune option., correct: false}
+            - {value: Using the not option., correct: false}
+            - {value: Using the inverse option., correct: false}

@@ -248,3 +248,13 @@ questions:
           - { value: "{{ trans('Hello %name%','app') }}", correct: false }
       help: |
           https://symfony.com/doc/current/translation/templates.html#using-twig-tags
+
+    - question: |
+          When you want to use a translation in another domain than the default domain, you must specify the domain as:
+      answers:
+          - { value: "third argument of trans()", correct: true }
+          - { value: "first argument of trans()", correct: false }
+          - { value: "second argument of trans()", correct: false }
+          - { value: "fourth argument of trans()", correct: false }
+      help: |
+          http://symfony.com/doc/current/components/translation/introduction.html#using-message-domains

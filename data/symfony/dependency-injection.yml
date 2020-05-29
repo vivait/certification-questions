@@ -718,3 +718,11 @@ questions:
             - {value: "Allows you to create define a service inline", correct: true }
             - {value: "It allows you define a service that are ran at compile time", correct: false }
             - {value: "It allows you define a service using a PHP anonymous class", correct: false }
+
+    -   question: |
+            What is the tag to register a custom service that loads translations?
+        answers:
+            - {value: "translation.loader", correct: true }
+            - {value: "translator_loader", correct: false }
+            - {value: "translation_loader", correct: false }
+            - {value: "translator.loader", correct: false }
