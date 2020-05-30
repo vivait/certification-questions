@@ -215,3 +215,12 @@ questions:
             - { value: 'Doctrine\DBAL\DriverExtension', correct: false }
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#wrapper-class
+
+    -   question: In which of these cases will $result contain the number of affected rows?
+        answers:
+            - { value: "$result = $conn->executeUpdate('DELETE FROM user WHERE id = 1');", correct: true }
+            - { value: "$result = $conn->delete('user', ['id' => 1]);", correct: false }
+            - { value: "$result = $conn->executeQuery('DELETE FROM user WHERE id = 1');", correct: false }
+            - { value: "$result = $conn->prepare('DELETE FROM user WHERE id = 1')->execute();", correct: false }
+        help: |
+            https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#wrapper-class

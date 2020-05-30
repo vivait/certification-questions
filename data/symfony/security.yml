@@ -251,11 +251,11 @@ questions:
     -   question: |
             Which of these are Symfony built-in security providers configuration name?
         answers:
-            - {value: 'in_memory', correct: true}
+            - {value: 'memory', correct: true}
             - {value: 'ldap', correct: true}
             - {value: 'chain', correct: true}
+            - {value: 'in_memory', correct: false}
             - {value: 'doctrine', correct: false}
-            - {value: 'memory', correct: false}
 
     -   question: |
             What methods exist in Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface?
