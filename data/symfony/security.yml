@@ -338,3 +338,26 @@ questions:
         answers:
             - {value: 'No', correct: true}
             - {value: 'Yes', correct: false}
+
+    -   question: |
+            Which of the followig is correct option to configure a redirection route on login failure?
+        answers:
+            - {value: 'failure_path: login_failure_route_name', correct: true}
+            - {value: 'failure_path: /failure', correct: false}
+            - {value: 'on_failure: login_failure_route_name', correct: false}
+            - {value: 'on_failure:  /failure', correct: false}
+
+    -   question: |
+            By default, what parameter can you use inside the login form to specify the failure target of the redirection ?
+        answers:
+            - {value: '_failure_path', correct: true}
+            - {value: '_failure', correct: false}
+            - {value: '_failure_redirection_path', correct: false}
+            - {value: '_failure_redirection_route', correct: false}
+
+    -   question: |
+            What is the name of the trait to redirect the user to a they were trying to access?
+        answers:
+            - {value: 'TargetPathTrait', correct: true}
+            - {value: 'NextPathTrait', correct: false}
+            - {value: 'LoginRedirectTrait', correct: false}

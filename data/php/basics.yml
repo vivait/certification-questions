@@ -1823,3 +1823,15 @@ questions:
             - { value: "It's a syntax error.", correct: false }
             - { value: '4', correct: false }
             - { value: '3', correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            <?php
+            $array = [1.1 => '1', 1.2 => '1'];
+            echo count ($array);
+        answers:
+            - { value: "'1'", correct: true }
+            - { value: "'0'", correct: false }
+            - { value: "'2'", correct: false }
+            - { value: "'4'", correct: false }
