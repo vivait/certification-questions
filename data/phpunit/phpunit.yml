@@ -1,0 +1,88 @@
+category: PHPUnit
+questions:
+    -   question: 'What is the tag to ensure that one test passes before executing another?'
+        answers:
+            - { value: '@depends', correct: true }
+            - { value: '@pre', correct: false }
+            - { value: '@execute', correct: false }
+            - { value: '@dependency', correct: false }
+            - { value: '@before', correct: false }
+
+    -   question: 'Is it possible to test deprecation warnings?'
+        answers:
+            - { value: 'Yes', correct: true }
+            - { value: 'No', correct: false }
+
+    -   question: 'Is it possible to test PHP warnings?'
+        answers:
+            - { value: 'Yes', correct: true }
+            - { value: 'No', correct: false }
+
+    -   question: 'How does PHPUnit handle when PHP warnings?'
+        answers:
+            - { value: 'It throws it as an exception', correct: true }
+            - { value: 'It functions depending on INI configuration', correct: false }
+            - { value: 'It functions depending on INI configuration', correct: false }
+
+    -   question: 'Which methods can test the result of the output buffer?'
+        answers:
+            - { value: 'expectOutputString("test")', correct: true }
+            - { value: 'expectOutputRegex("test")', correct: true }
+            - { value: 'assertSame("test", $this->getOutput())', correct: false }
+            - { value: 'expectOutputBufferRegex("test")', correct: false }
+            - { value: 'assertSame("test", $this->getOutputBuffer())', correct: false }
+
+    -   question: 'How long can a test marked with @large take?'
+        answers:
+            - { value: '60s', correct: true }
+            - { value: 'unlimited', correct: false }
+            - { value: '120s', correct: false }
+            - { value: '30s', correct: false }
+            - { value: '10s', correct: false }
+            - { value: '5s', correct: false }
+            - { value: '1s', correct: false }
+
+    -   question: 'How long can a test marked with @medium take?'
+        answers:
+            - { value: '10s', correct: true }
+            - { value: '60s', correct: false }
+            - { value: 'unlimited', correct: false }
+            - { value: '120s', correct: false }
+            - { value: '30s', correct: false }
+            - { value: '5s', correct: false }
+            - { value: '1s', correct: false }
+
+    -   question: 'How long can a test marked with @small take?'
+        answers:
+            - { value: '1s', correct: true }
+            - { value: '10s', correct: false }
+            - { value: '60s', correct: false }
+            - { value: 'unlimited', correct: false }
+            - { value: '120s', correct: false }
+            - { value: '30s', correct: false }
+            - { value: '5s', correct: false }
+
+    -   question: 'What method can be called to mark a test as not implemented?'
+        answers:
+            - { value: 'markTestIncomplete()', correct: true }
+            - { value: 'markIncomplete()', correct: false }
+            - { value: 'markNotImplemented()', correct: false }
+
+    -   question: 'Which of the following can PHPUnit check for before running a test case or test suite?'
+        answers:
+            - { value: 'PHP Version', correct: true }
+            - { value: 'PHPUnit version', correct: true }
+            - { value: 'The operating system', correct: true }
+            - { value: 'Date', correct: false }
+            - { value: 'Composer version', correct: false }
+            - { value: 'PHP extension versions', correct: false }
+
+    -   question: 'Which of the following can PHPUnit check for before running a test case or test suite?'
+        answers:
+            - { value: 'OS family', correct: true }
+            - { value: 'If a function exists', correct: true }
+            - { value: 'PHP extension', correct: true }
+            - { value: 'Date', correct: false }
+            - { value: 'Composer version', correct: false }
+            - { value: 'PHP extension versions', correct: false }
+            - { value: 'If a class exists', correct: false }
