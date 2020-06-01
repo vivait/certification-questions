@@ -1835,3 +1835,47 @@ questions:
             - { value: "'0'", correct: false }
             - { value: "'2'", correct: false }
             - { value: "'4'", correct: false }
+
+    -   question: |
+            What type is the __debugInfo() magic method supposed to return?
+        answers:
+            - { value: "Array", correct: true }
+            - { value: "Boolean", correct: false }
+            - { value: "Object", correct: false }
+            - { value: "String", correct: false }
+            - { value: "Any type", correct: false }
+    -   question: |
+            What type is the __set_state() magic method supposed to return?
+        answers:
+            - { value: "Object", correct: true }
+            - { value: "Array", correct: false }
+            - { value: "Boolean", correct: false }
+            - { value: "String", correct: false }
+            - { value: "Any type", correct: false }
+    -   question: |
+            What type is the __serialize() magic method supposed to return?
+        answers:
+            - { value: "Array", correct: true }
+            - { value: "Object", correct: false }
+            - { value: "Boolean", correct: false }
+            - { value: "String", correct: false }
+            - { value: "Any type", correct: false }
+    -   question: |
+            What type is the __unserialize() magic method supposed to return?
+        answers:
+            - { value: "Nothing", correct: true }
+            - { value: "Array", correct: false }
+            - { value: "Object", correct: false }
+            - { value: "Boolean", correct: false }
+            - { value: "String", correct: false }
+            - { value: "Any type", correct: false }
+    -   question: |
+            What type is the __sleep() magic method supposed to return?
+        answers:
+            - { value: "Array containing the field names to serialize", correct: true }
+            - { value: "Array containing a representation of the object", correct: false }
+            - { value: "Nothing", correct: false }
+            - { value: "Object", correct: false }
+            - { value: "Boolean", correct: false }
+            - { value: "String", correct: false }
+            - { value: "Any type", correct: false }

@@ -43,10 +43,10 @@ questions:
                     url: ...
         answers:
             - { value: 'sqlite:///:memory:', correct: true }
-            - { value: 'mysql://localhost/mydb@user:secret', correct: false }
-            - { value: 'pgsql://localhost:5432', correct: false}
             - { value: 'mysql://localhost:4486/foo?charset=UTF-8', correct: true }
             - { value: 'sqlite:///data.db', correct: true }
+            - { value: 'mysql://localhost/mydb@user:secret', correct: false }
+            - { value: 'pgsql://localhost:5432', correct: false}
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html
 
