@@ -726,3 +726,89 @@ questions:
             - {value: "translator_loader", correct: false }
             - {value: "translation_loader", correct: false }
             - {value: "translator.loader", correct: false }
+
+    -   question: |
+            Regarding the following code, will the calls directive of service_parent be overridden by the one from service_child ?
+
+                logger_A:
+                    class: Acme\Logger\TextLogger
+                logger_B:
+                    class: Acme\Logger\EchoLogger
+
+                service_parent:
+                    abstract: true
+                    calls:
+                        - ['addLogger', ['@logger_A']]
+
+                service_child:
+                    parent: @service_parent
+                    class: Acme\Transformer\TextTransformer
+                    calls:
+                        - ['addLogger', ['@logger_B']]
+        answers:
+            - {value: "No", correct: true }
+            - {value: "Yes", correct: false }
+
+    -   question: |
+            Which attributes are inhertited by child service definitions?
+        answers:
+            - {value: "calls", correct: true }
+            - {value: "arguments", correct: true }
+            - {value: "shared", correct: false }
+            - {value: "abstract", correct: false }
+            - {value: "tags", correct: false }
+
+    -   question: |
+            Is the following config valid?
+
+            AppBundle\Repository\DoctrineUserRepository:
+                  parent: AppBundle\Repository\BaseDoctrineRepository
+                  public: false
+                  arguments: ['@app.username_checker']
+
+            AppBundle\Repository\DoctrinePostRepository:
+                parent: AppBundle\Repository\BaseDoctrineRepository
+                arguments:
+                    index_0: '@doctrine.custom_entity_manager'
+        answers:
+            - {value: "Yes", correct: true }
+            - {value: "No", correct: false }
+
+    -   question: |
+            Is the following config valid?
+
+            AppBundle\Repository\DoctrineUserRepository:
+                  parent: AppBundle\Repository\BaseDoctrineRepository
+                  public: false
+                  arguments: ['@app.username_checker']
+
+            AppBundle\Repository\DoctrinePostRepository:
+                parent: AppBundle\Repository\BaseDoctrineRepository
+                arguments:
+                    index_0: '@doctrine.custom_entity_manager'
+        answers:
+            - {value: "No", correct: true }
+            - {value: "Yes", correct: false }
+    -   question: |
+            How can you mark a service as deprecated in YAML?
+        answers:
+            - value: |
+                  app.markdown_parser:
+                      class: AppBundle\Markdown\Parser
+                      deprecated: 'The "%service_id%" service is deprecated. Use "app.content_parser" instead'
+              correct: true
+            - value: |
+                  app.markdown_parser:
+                      class: AppBundle\Markdown\Parser
+                      deprecated: ~
+              correct: true
+            - value: |
+                    app.markdown_parser:
+                        class: AppBundle\Markdown\Parser
+                        deprecated: 'Use "app.content_parser" instead'
+              correct: false
+            - value: |
+                    app.markdown_parser:
+                        class: AppBundle\Markdown\Parser
+                        deprecated: true
+              correct: false

@@ -32,8 +32,8 @@ questions:
     -   question: "Which of the following are not built-in option variants ?"
         answers:
             - {value: "InputOption::VALUE_NOT_REQUIRED", correct: true}
-            - {value: "InputOption::VALUE_REQUIRED", correct: false}
             - {value: 'InputOption::VALUE_IS_MULTIPLE', correct: true}
+            - {value: "InputOption::VALUE_REQUIRED", correct: false}
             - {value: 'InputOption::VALUE_NONE', correct: false}
             - {value: 'InputOption::VALUE_OPTIONAL', correct: false}
             - {value: 'InputOption::VALUE_IS_ARRAY', correct: false}

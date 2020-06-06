@@ -26,13 +26,17 @@ questions:
     -   question: "Which of the following APIs are designed to be SAFE from SQL injections?"
         answers:
             - { value: 'Doctrine\DBAL\Query\QueryBuilder#setFirstResult($offset)', correct: true }
-            - { value: 'Query methods on the Connection.', correct: false }
             - { value: 'Doctrine\DBAL\Platforms\AbstractPlatform#modifyLimitQuery($sql, $limit, $offset)', correct: true }
             - { value: 'Doctrine\DBAL\Connection#update($table, $values, $where, $types)', correct: true }
             - { value: 'Doctrine\DBAL\Query\QueryBuilder#setMaxResults($limit)', correct: true }
-            - { value: 'The QueryBuilder API.', correct: false }
             - { value: 'Doctrine\DBAL\Connection#insert($table, $values, $types)', correct: true }
             - { value: 'Doctrine\DBAL\Connection#delete($table, $where, $types)', correct: true }
+            - { value: 'Query methods on the Connection.', correct: false }
+            - { value: 'The QueryBuilder API.', correct: false }
+         help: |
+             https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/security.html#sql-injection-safe-and-unsafe-apis-for-user-input
+
+             Doctrine\DBAL\Platforms\AbstractPlatform#modifyLimitQuery($sql, $limit, $offset) for the $limit and $offset parameters.
 
     -   question: |
             Which of the following are valid database URLs that can be used in the dbal.url option in Symfony applications?

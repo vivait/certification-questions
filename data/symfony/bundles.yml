@@ -141,3 +141,11 @@ questions:
         answers:
             - {value: "It allows you to render a template without calling Twig", correct: true }
             - {value: "It allows you to modify the template rendered in the controller", correct: false }
+
+    -   question: |
+            Let's consider a controller making his job. Once the request handled, this controller returns a RedirectResponse in destination to another controller. Let's assume both of the following controllers extend AbstractController class from the Symfony FrameworkBundle. What is the best way for the first controller to send a message to the next one?
+        answers:
+            - {value: "$this->addFlash('info', 'Some message');", correct: true }
+            - {value: "$_SESSION['message'] = 'Some message';", correct: false }
+            - {value: "$this->addMessage('info', 'Some message');", correct: false }
+            - {value: "$this->get('session')->getFlashBag()->add('message', 'Some message');", correct: false }

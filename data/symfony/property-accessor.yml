@@ -20,8 +20,8 @@ questions:
 
             $firstName = $accessor->getValue($person, 'firstName');
         answers:
-            - { value: Wouter, correct: false}
             - { value: Ryan, correct: true }
+            - { value: Wouter, correct: false}
 
     -   question: "What is the method to call to check if getValue can safely be called?"
         answers:
@@ -67,3 +67,265 @@ questions:
             - { value: "The value of $age will be null.", correct: false }
             - { value: "A Symfony\\Component\\PropertyAccess\\Exception\\NoSuchPropertyException will be thrown.", correct: false }
             - { value: "A Symfony\\Component\\PropertyAccess\\Exception\\NoSuchIndexException will be thrown.", correct: true }
+    -   question: |
+            What will be the value of $firstName?
+
+            use Symfony\Component\PropertyAccess\PropertyAccess;
+
+            $accessor = PropertyAccess::createPropertyAccessor();
+
+            class Person {
+                public $firstName;
+
+                public function getFirstName()
+                {
+                    return 'Ryan';
+                }
+
+                public function isFirstName()
+                {
+                    return 'Another';
+                }
+            }
+            $person = new Person();
+            $person->firstName = 'Wouter';
+
+            $firstName = $accessor->getValue($person, 'firstName');
+        answers:
+            - { value: Ryan, correct: true }
+            - { value: Wouter, correct: false}
+            - { value: Another, correct: false}
+    -   question: |
+            What will be the value of $firstName?
+
+            use Symfony\Component\PropertyAccess\PropertyAccess;
+
+            $accessor = PropertyAccess::createPropertyAccessor();
+
+            class Person {
+                public $firstName;
+
+                public function isFirstName()
+                {
+                    return 'Another';
+                }
+            }
+            $person = new Person();
+            $person->firstName = 'Wouter';
+
+            $firstName = $accessor->getValue($person, 'firstName');
+        answers:
+            - { value: Another, correct: true}
+            - { value: Ryan, correct: false }
+            - { value: Wouter, correct: false}
+    -   question: |
+            What will be the value of $firstName?
+
+            use Symfony\Component\PropertyAccess\PropertyAccess;
+
+            $accessor = PropertyAccess::createPropertyAccessor();
+
+            class Person {
+                private $children = [
+                     'Wouter' => 12,
+                 ];
+
+                 public function __get($id)
+                 {
+                     return $this->children[$id];
+                 }
+            }
+            $person = new Person();
+
+            $firstName = $accessor->getValue($person, 'Wouter');
+        answers:
+            - { value: 12, correct: true}
+            - { value: Wouter, correct: false }
+            - { value: Null, correct: false}
+            - { value: An Exception, correct: false}
+    -   question: |
+            What will be the value of $firstName?
+
+            use Symfony\Component\PropertyAccess\PropertyAccess;
+
+            $accessor = PropertyAccess::createPropertyAccessor();
+
+            class Person {
+                private $children = [
+                     'Wouter' => 12,
+                 ];
+
+                 public function __call($name, $arguments)
+                 {
+                     return $this->children[$name];
+                 }
+            }
+            $person = new Person();
+
+            $firstName = $accessor->getValue($person, 'Wouter');
+        answers:
+            - { value: Null, correct: true}
+            - { value: 12, correct: true}
+            - { value: Wouter, correct: false }
+            - { value: An Exception, correct: false}
+    -   question: |
+            What will be the value of $firstName?
+
+            use Symfony\Component\PropertyAccess\PropertyAccess;
+
+            $accessor = PropertyAccess::createPropertyAccessorBuilder()
+                ->enableMagicCall()
+                ->getPropertyAccessor();
+
+            class Person {
+                private $children = [
+                     'Wouter' => 12,
+                 ];
+
+                 public function __call($name, $arguments)
+                 {
+                     return $this->children[$name];
+                 }
+            }
+            $person = new Person();
+
+            $firstName = $accessor->getValue($person, 'Wouter');
+        answers:
+            - { value: 12, correct: true}
+            - { value: Null, correct: false}
+            - { value: Wouter, correct: false }
+            - { value: An Exception, correct: false}
+    -   question: |
+            What is the output of the following?
+
+            use Symfony\Component\PropertyAccess\PropertyAccess;
+
+            $accessor = PropertyAccess::createPropertyAccessor();
+
+            $person = [];
+
+            $propertyAccessor->setValue($person, '[first_name]', 'Wouter');
+
+            echo $propertyAccessor->getValue($person, '[first_name]')
+        answers:
+            - { value: Wouter, correct: true }
+            - { value: 12, correct: false}
+            - { value: Null, correct: false}
+            - { value: An Exception, correct: false}
+    -   question: |
+            What is the output of the following?
+
+            use Symfony\Component\PropertyAccess\PropertyAccess;
+
+            $accessor = PropertyAccess::createPropertyAccessor();
+
+            $person = [];
+
+            $propertyAccessor->setValue($person, 'Wouter', '[first_name]');
+
+            echo $propertyAccessor->getValue($person, '[first_name]');
+        answers:
+            - { value: Null, correct: true}
+            - { value: Wouter, correct: false }
+            - { value: 12, correct: false}
+            - { value: An Exception, correct: false}
+    -   question: |
+            What will be the value of $firstName?
+
+            use Symfony\Component\PropertyAccess\PropertyAccess;
+
+            $accessor = PropertyAccess::createPropertyAccessor();
+
+            class Person {
+                public $firstName;
+
+                public function getFirstName()
+                {
+                    return $this->firstName;
+                }
+            }
+            $person = new Person();
+
+            $accessor->setValue($person, 'firstName', 'Wouter');
+
+            $firstName = $accessor->getValue($person, 'firstName');
+        answers:
+            - { value: Wouter, correct: true }
+            - { value: Null, correct: false }
+            - { value: 12, correct: false }
+            - { value: An Exception, correct: false }
+    -   question: |
+            What will be the value of $firstName?
+
+            use Symfony\Component\PropertyAccess\PropertyAccess;
+
+            $accessor = PropertyAccess::createPropertyAccessor();
+
+            class Person {
+                private $values;
+
+                public function __set($property, $value)
+                {
+                    $this->values[$property] = $value;
+                }
+
+                public function __get($property)
+                {
+                    return $this->values[$property];
+                }
+            }
+            $person = new Person();
+
+            $accessor->setValue($person, 'firstName', 'Wouter');
+
+            $firstName = $accessor->getValue($person, 'firstName');
+        answers:
+            - { value: Wouter, correct: true }
+            - { value: Null, correct: false }
+            - { value: 12, correct: false }
+            - { value: An Exception, correct: false }
+    -   question: |
+            What will be the value of $firstName?
+
+            use Symfony\Component\PropertyAccess\PropertyAccess;
+
+            $accessor = PropertyAccess::createPropertyAccessor();
+
+            class Person {
+                private $children = [];
+
+                public function getChildren(): array
+                {
+                    return $this->children;
+                }
+
+                 public function addChild(string $name): void
+                 {
+                 }
+
+                  public function removeChild(string $name): void
+                  {
+                  }
+            }
+
+            $person = new Person();
+            $propertyAccessor->setValue($person, 'children', ['kevin', 'wouter']);
+
+            $firstName = $accessor->getValue($person, 'children');
+        answers:
+            - { value: "[]", correct: true }
+            - { value: "['kevin', 'wouter']", correct: false }
+            - { value: An Exception, correct: false }
+            - { value: null, correct: false }
+    -   question: |
+            What method must one call to check if a value can be safely read?
+        answers:
+            - { value: "$accessor->isReadable($object, 'property');", correct: true }
+            - { value: "$accessor->exists($object, 'property');", correct: false }
+            - { value: "$accessor->isSafe($object, 'property');", correct: false }
+    -   question: |
+            What method must one call to check if a value can be safely wrote to?
+        answers:
+            - { value: "$accessor->isWritable($object, 'property');", correct: true }
+            - { value: "$accessor->exists($object, 'property');", correct: false }
+            - { value: "$accessor->isSafe($object, 'property');", correct: false }

@@ -153,8 +153,8 @@ questions:
         answers:
             - {value: registration, correct: true}
             - {value: User, correct: true}
-            - {value: default, correct: false}
             - {value: Default, correct: true}
+            - {value: default, correct: false}
             - {value: user, correct: false}
 
 
@@ -601,3 +601,21 @@ questions:
             - {value: Using the prune option., correct: false}
             - {value: Using the not option., correct: false}
             - {value: Using the inverse option., correct: false}
+
+    -   question: |
+            Will the following snippet throw an InvalidArgumentException ?
+
+            use Symfony\Component\Validator\Validation;
+            use Symfony\Component\Validator\Constraints\Blank;
+
+            $expectedBlank = [];
+
+            $validator = Validation::createValidator();
+            $violations = $validator->validate($expectedBlank, [new Blank()]);
+
+            if (0 !== count($violations)) {
+                throw new InvalidArgumentException('The value is not blank !');
+            }
+        answers:
+            - {value: True., correct: true}
+            - {value: False., correct: false}

@@ -114,10 +114,10 @@ questions:
 
             What will be the outcome of evaluating this Twig code?
         answers:
-            - {value: 'Twig will raise a Twig_Error_Syntax exception.', correct: false}
+            - {value: 'Twig will raise a Twig_Error_Syntax exception.', correct: true}
             - {value: 'The output will display the string Foo is FOO and Bar is FOO..', correct: false}
             - {value: 'The output will display the string Foo is and Bar is ..', correct: false}
-            - {value: 'The output will display the string Foo is FOO and Bar is ..', correct: true}
+            - {value: 'The output will display the string Foo is FOO and Bar is ..', correct: false}
         help: |
             https://twig.symfony.com/doc/3.x/tags/set.html
 
@@ -157,8 +157,8 @@ questions:
 
             What will be the outcome of evaluating this Twig code?
         answers:
-            - {value: 'Twig will raise a Twig_Error_Syntax exception.', correct: false}
             - {value: 'The output will display the string Foo is FOO and Bar is BAR.', correct: true}
+            - {value: 'Twig will raise a Twig_Error_Syntax exception.', correct: false}
             - {value: 'The output will display the string Foo is BAR and Bar is FOO.', correct: false}
             - {value: 'The output will display the string Foo is and Bar is FOO.', correct: false}
 
