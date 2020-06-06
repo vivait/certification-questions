@@ -1925,7 +1925,7 @@ questions:
             $b = new Bar;
             echo $b->baz();
         answers:
-            - { value: "Foo\Bar::baz", correct: true }
+            - { value: "Foo\\Bar::baz", correct: true }
             - { value: "Bar::baz", correct: false }
             - { value: "An error", correct: false }
             - { value: "baz", correct: false }
