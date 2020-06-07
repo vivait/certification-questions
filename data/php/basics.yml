@@ -1708,7 +1708,7 @@ questions:
         answers:
             - {value: 'string(5) "value"', correct: true }
             - {value: "NULL", correct: false }
-            - {value: "2", correct: false }
+            - {value: "'2'", correct: false }
     -   question: |
             What will be the output of the following script?
 
@@ -1757,8 +1757,8 @@ questions:
 
             echo strcmp(123, '123');
         answers:
-            - {value: '1', correct: true }
-            - {value: '0', correct: false }
+            - {value: '"1"', correct: true }
+            - {value: '"0"', correct: false }
             - {value: '-1', correct: false }
             - {value: 'An error', correct: false }
 
@@ -1807,9 +1807,9 @@ questions:
             What is the expected output when running this script?
         answers:
             - { value: "It's a syntax error.", correct: true }
-            - { value: '4', correct: false }
-            - { value: '5', correct: false }
-            - { value: '3', correct: false }
+            - { value: '"4"', correct: false }
+            - { value: '"5"', correct: false }
+            - { value: '"3"', correct: false }
 
     -   question: |
             Consider the following code snippet:
@@ -1821,8 +1821,130 @@ questions:
         answers:
             - { value: '5', correct: true }
             - { value: "It's a syntax error.", correct: false }
-            - { value: '4', correct: false }
-            - { value: '3', correct: false }
+            - { value: '"4"', correct: false }
+            - { value: '"3"', correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            list($a, $a) = [1, 2, 3, 4];
+            echo $a;
+
+            What is the expected output when running this script?
+        answers:
+            - { value: '"1"', correct: true }
+            - { value: "It's a syntax error.", correct: false }
+            - { value: '"2"', correct: false }
+            - { value: '"3"', correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            $a = array('7.1');
+            $exists = in_array('7.10', $a)
+            var_dump($exists);
+
+            What is the expected output when running this script?
+        answers:
+            - { value: '"bool(true)"', correct: true }
+            - { value: "It's a syntax error.", correct: false }
+            - { value: '"bool(false)"', correct: false }
+            - { value: '"7.1"', correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            $a = array('7.1');
+            $exists = in_array('7.10', $a)
+            var_dump($exists);
+
+            What is the expected output when running this script?
+        answers:
+            - { value: '"bool(true)"', correct: true }
+            - { value: "It's a syntax error.", correct: false }
+            - { value: '"bool(false)"', correct: false }
+            - { value: '"7.1"', correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            $a = 0;
+            var_dump(false == $a);
+
+            What is the expected output when running this script?
+        answers:
+            - { value: '"bool(true)"', correct: true }
+            - { value: "It's a syntax error.", correct: false }
+            - { value: '"bool(false)"', correct: false }
+            - { value: '"7.1"', correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            $a = 0;
+            $b = 'x';
+
+            var_dump($b == $a);
+
+            What is the expected output when running this script?
+        answers:
+            - { value: '"bool(true)"', correct: true }
+            - { value: "It's a syntax error.", correct: false }
+            - { value: '"bool(false)"', correct: false }
+            - { value: '"7.1"', correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            $b = 'x';
+
+            var_dump($b == true);
+
+            What is the expected output when running this script?
+        answers:
+            - { value: '"bool(true)"', correct: true }
+            - { value: "It's a syntax error.", correct: false }
+            - { value: '"bool(false)"', correct: false }
+            - { value: '"7.1"', correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            var_dump('b' == 0);
+
+            What is the expected output when running this script?
+        answers:
+            - { value: '"bool(true)"', correct: true }
+            - { value: "It's a syntax error.", correct: false }
+            - { value: '"bool(false)"', correct: false }
+            - { value: '"7.1"', correct: false }
+
+    -   question: |
+            Consider the following code snippet:
+
+            $a = .1 * .1;
+
+            var_dump($a == 0.01);
+
+            What is the expected output when running this script?
+        answers:
+            - { value: '"bool(false)"', correct: true }
+            - { value: '"bool(true)"', correct: false }
+            - { value: "It's a syntax error.", correct: false }
+            - { value: '"7.1"', correct: false }
+    -   question: |
+            Consider the following code snippet:
+
+            $a = .1 * .1;
+
+            var_dump(true ? 'Foo' : false ? 'Bar' : 'Baz');
+
+            What is the expected output when running this script?
+        answers:
+            - { value: '"Bar"', correct: true }
+            - { value: '"Baz"', correct: false }
+            - { value: "It's a syntax error.", correct: false }
+            - { value: '"Foo"', correct: false }
 
     -   question: |
             Consider the following code snippet:
@@ -1929,3 +2051,21 @@ questions:
             - { value: "Bar::baz", correct: false }
             - { value: "An error", correct: false }
             - { value: "baz", correct: false }
+    -   question: |
+            What will be the output of the following code?
+
+            <?php
+
+            var_dump(in_array('7.1', ['7.10'], true));
+        answers:
+            - { value: "bool(false)", correct: true }
+            - { value: "bool(true)", correct: false }
+    -   question: |
+            What will be the output of the following code?
+
+            <?php
+
+            var_dump(in_array('7.1', ['7.10']));
+        answers:
+            - { value: "bool(true)", correct: true }
+            - { value: "bool(false)", correct: false }

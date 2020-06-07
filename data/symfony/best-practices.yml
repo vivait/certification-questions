@@ -180,6 +180,36 @@ questions:
             - {value: "'3'", correct:  false }
 
     -   question: |
+            Which PHP version does Symfony 3.4 installed via the standard edition require?
+        answers:
+            - {value: "'5.5.9'", correct: true }
+            - {value: "'7.0.0'", correct:  false }
+            - {value: "'5.6.0'", correct:  false }
+            - {value: "'5.4.2'", correct:  false }
+            - {value: "'7.0.1'", correct:  false }
+            - {value: "'7.0.8'", correct:  false }
+
+    -   question: |
+            Which PHP version does Symfony 3.4 installed via the skeleton require?
+        answers:
+            - {value: "'7.0.8'", correct: true }
+            - {value: "'7.0.0'", correct:  false }
+            - {value: "'5.6.0'", correct:  false }
+            - {value: "'5.4.2'", correct:  false }
+            - {value: "'7.0.1'", correct:  false }
+            - {value: "'5.5.9'", correct:  false }
+
+    -   question: |
+            Which command can be run to check Symfony has the requirements?
+        answers:
+            - {value: "symfony check:requirements", correct: true }
+            - {value: "bin/console check:requirements", correct:  false }
+            - {value: "bin/console requirements:check", correct:  false }
+            - {value: "symfony requirements:check", correct:  false }
+            - {value: "symfony debug:requirements", correct:  false }
+            - {value: "bin/console debug:requirements", correct:  false }
+
+    -   question: |
             Which composer.json key must one specify for autoloading test dependencies?
         answers:
             - {value: "autoload-dev", correct: true }
