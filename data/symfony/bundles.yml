@@ -149,3 +149,21 @@ questions:
             - {value: "$_SESSION['message'] = 'Some message';", correct: false }
             - {value: "$this->addMessage('info', 'Some message');", correct: false }
             - {value: "$this->get('session')->getFlashBag()->add('message', 'Some message');", correct: false }
+    -   question: |
+            Which of the following annotations are defined by the SensioFrameworkExtraBundle?
+        answers:
+            - {value: "@Security", correct: true }
+            - {value: "@Template", correct: true }
+            - {value: "@ParamConverter", correct: true }
+            - {value: "@Cache", correct: true }
+            - {value: "@Post", correct: false }
+            - {value: "@Get", correct: false }
+
+    -   question: |
+            Which of the following annotations are defined by the SensioFrameworkExtraBundle?
+        answers:
+            - {value: "@Route", correct: true }
+            - {value: "@Method", correct: true }
+            - {value: "@Template", correct: true }
+            - {value: "@ParamConverter", correct: true }
+            - {value: "@Cache", correct: true }

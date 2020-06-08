@@ -323,14 +323,14 @@ questions:
             Which of the following are validation rules provided by Symfony\Component\Config\Definition\Builder\ExprBuilder?
         answers:
             - {value: ifInArray(), correct: true}
-            - {value: never(), correct: false}
             - {value: ifNotInArray(), correct: true}
             - {value: ifArray(), correct: true}
             - {value: always(), correct: true}
             - {value: ifString(), correct: true}
             - {value: ifNull(), correct: true}
-            - {value: ifNotNull(), correct: false}
             - {value: ifTrue(), correct: true}
+            - {value: never(), correct: false}
+            - {value: ifNotNull(), correct: false}
         help: |
             https://symfony.com/doc/current/components/config/definition.html#validation-rules
 

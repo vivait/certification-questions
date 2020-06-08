@@ -2069,3 +2069,57 @@ questions:
         answers:
             - { value: "bool(true)", correct: true }
             - { value: "bool(false)", correct: false }
+    -   question: |
+            What will be the output of the following code?
+
+            <?php
+
+            echo strcmp('K', 'M');
+        answers:
+            - { value: "-2", correct: true }
+            - { value: "0", correct: false }
+            - { value: "1", correct: false }
+            - { value: "-1", correct: false }
+    -   question: |
+            What will be the output of the following code?
+
+            <?php
+
+            echo strcmp(false, 'M');
+        answers:
+            - { value: "-1", correct: true }
+            - { value: "-2", correct: false }
+            - { value: "0", correct: false }
+            - { value: "1", correct: false }
+    -   question: |
+            Which interface(s) should an Object implement to be usable in a foreach statement?
+        answers:
+            - { value: "Traversable", correct: true }
+            - { value: "Iterator", correct: true }
+            - { value: "IteratorAggregate", correct: true }
+            - { value: "ArrayAccess", correct: false }
+    -   question: |
+            Which of the following classes/interfaces can application classes extend/implement?
+        answers:
+            - { value: "Iterator", correct: true }
+            - { value: "IteratorAggregate", correct: true }
+            - { value: "ArrayAccess", correct: true }
+            - { value: "Serializable", correct: true }
+            - { value: "WeakReference", correct: true }
+            - { value: "Throwable", correct: false }
+            - { value: "Traversable", correct: false }
+            - { value: "Closure", correct: false }
+            - { value: "Generator", correct: false }
+    -   question: |
+            What will be the output of the following code?
+
+            <?php
+
+            $a = ['foo', 'baz', ['foobar', 'baz']];
+
+            echo count($a, true);
+        answers:
+            - { value: "5", correct: true }
+            - { value: "4", correct: false }
+            - { value: "3", correct: false }
+            - { value: "2", correct: false }
