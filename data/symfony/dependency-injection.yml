@@ -812,3 +812,9 @@ questions:
                         class: AppBundle\Markdown\Parser
                         deprecated: true
               correct: false
+    -   question: |
+            What is the exact meaning of DIC?
+        answers:
+            - {value: "Dependency Injection Container", correct: true }
+            - {value: "Dependencies Injected Continuously.", correct: false }
+            - {value: "Dependencies Injection Component", correct: false }

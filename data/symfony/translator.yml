@@ -258,3 +258,13 @@ questions:
           - { value: "fourth argument of trans()", correct: false }
       help: |
           http://symfony.com/doc/current/components/translation/introduction.html#using-message-domains
+
+    - question: |
+            When you want to use a translation in another locale, you must specify the locale as:
+      answers:
+          - { value: "fourth argument of trans()", correct: true }
+          - { value: "third argument of trans()", correct: false }
+          - { value: "first argument of trans()", correct: false }
+          - { value: "second argument of trans()", correct: false }
+      help: |
+          https://github.com/symfony/symfony/blob/3.4/src/Symfony/Component/Translation/Translator.php#L192

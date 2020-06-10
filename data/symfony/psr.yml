@@ -306,3 +306,9 @@ questions:
             - {value: PSR-1, correct: true}
             - {value: PSR-4, correct: false}
             - {value: PSR-3, correct: false}
+
+    -   question: |
+            Which of the following are valid in PSR-2?
+        answers:
+            - { value: "final public function test() {}", correct: true }
+            - { value: "public final function test() {}", correct: false }

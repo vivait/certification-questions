@@ -620,15 +620,6 @@ questions:
             - {value: "$dom->appendElement($title, 'tet', 'Hello, World!');", correct: false }
             - {value: "$dom->createElement('text', 'Hello, World!');", correct: false }
 
-
-    -   question: |
-            $stmt = $conn->prepare('SELECT * FROM articles WHERE id IN (?)');
-            $stmt->bindValue(1, [1, 2, 3, 4, 5, 6], \Doctrine\DBAL\Connection::PARAM_INT_ARRAY);
-            $stmt->execute();
-        answers:
-            - {value: No, correct: true }
-            - {value: Yes, correct: false }
-
     -   question: Which of the following assertions is correct?
         answers:
             - {value: PHP is a loosely-typed imperative language., correct: true }
@@ -2123,3 +2114,103 @@ questions:
             - { value: "4", correct: false }
             - { value: "3", correct: false }
             - { value: "2", correct: false }
+    -   question: |
+            What will be the output of the following code?
+
+            <?php
+            class MyClass
+            {
+                public $var1 = 'value 1';
+                public $var2 = 'value 2';
+                public $var3 = 'value 3';
+                protected $var4 = 'value 4';
+                private $var5 = 'value 5';
+            }
+
+            foreach(new MyClass() as $key => $value) {
+                echo "$key => $value,";
+            }
+        answers:
+            - { value: "var1 => value 1,var2 => value 2,var3 => value 3,", correct: true }
+            - { value: "var1 => value 1,var2 => value 2,var3 => value 3,var4 => value 4,var5 => value 5,", correct: false }
+            - { value: "var1 => value 1,var2 => value 2,var3 => value 3,var4 => value 4,", correct: false }
+            - { value: "An error", correct: false }
+
+    -   question: |
+            What will be the output of the following code?
+
+            <?php
+            class MyClass {
+                const CONST_VALUE = 'A constant value';
+            }
+
+            $classname = 'MyClass';
+            echo $classname::CONST_VALUE;
+        answers:
+            - { value: "A constant value", correct: true }
+            - { value: "An error", correct: false }
+            - { value: "''", correct: false }
+    -   question: |
+            What will be the output of the following code?
+
+            <?php
+            class MyClass {
+                public static function test() {
+                    echo 'hello';
+                }
+            }
+
+            $classname = 'MyClass';
+            echo $classname::test();
+        answers:
+            - { value: "hello", correct: true }
+            - { value: "An error", correct: false }
+            - { value: "''", correct: false }
+    -   question: |
+            What will be the output of the following code?
+
+            <?php
+            class A {
+                public static function who() {
+                    echo __CLASS__;
+                }
+                public static function test() {
+                    static::who();
+                }
+            }
+
+            class B extends A {
+                public static function who() {
+                    echo __CLASS__;
+                }
+            }
+
+            B::test();
+        answers:
+            - { value: "B", correct: true }
+            - { value: "A", correct: false }
+            - { value: "An error", correct: false }
+    -   question: |
+            What will be the output of the following code?
+
+            <?php
+            class A {
+                public static function who() {
+                    echo __CLASS__;
+                }
+                public static function test() {
+                    self::who();
+                }
+            }
+
+            class B extends A {
+                public static function who() {
+                    echo __CLASS__;
+                }
+            }
+
+            B::test();
+        answers:
+            - { value: "A", correct: true }
+            - { value: "B", correct: false }
+            - { value: "An error", correct: false }
