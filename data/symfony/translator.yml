@@ -75,15 +75,15 @@ questions:
 
     -   question: "Which of the followings are part of the built-in loaders?"
         answers:
-            - { value: "CsvLoader", correct: false }
-            - { value: "PoFileLoader", correct: true }
-            - { value: "PhpLoader", correct: false }
             - { value: "XliffFileLoader", correct: true }
-            - { value: "JsonLoader", correct: false }
-            - { value: "IcuFileLoader", correct: false }
+            - { value: "PoFileLoader", correct: true }
             - { value: "IniFileLoader", correct: true }
             - { value: "MoFileLoader", correct: true }
             - { value: "YamlFileLoader", correct: true }
+            - { value: "CsvLoader", correct: false }
+            - { value: "PhpLoader", correct: false }
+            - { value: "JsonLoader", correct: false }
+            - { value: "IcuFileLoader", correct: false }
 
     -   question: "Is IniFileLoader a valid loader?"
         answers:
@@ -96,6 +96,11 @@ questions:
             - { value: "Yes", correct: false }
 
     -   question: "Is JsonLoader a valid loader?"
+        answers:
+            - { value: "No", correct: true }
+            - { value: "Yes", correct: false }
+
+    -   question: "Is IcuFileLoader a valid loader?"
         answers:
             - { value: "No", correct: true }
             - { value: "Yes", correct: false }

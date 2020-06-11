@@ -2067,10 +2067,10 @@ questions:
 
             echo strcmp('K', 'M');
         answers:
-            - { value: "-2", correct: true }
-            - { value: "0", correct: false }
-            - { value: "1", correct: false }
-            - { value: "-1", correct: false }
+            - { value: "'-2'", correct: true }
+            - { value: "'0'", correct: false }
+            - { value: "'1'", correct: false }
+            - { value: "'-1'", correct: false }
     -   question: |
             What will be the output of the following code?
 
@@ -2214,3 +2214,116 @@ questions:
             - { value: "A", correct: true }
             - { value: "B", correct: false }
             - { value: "An error", correct: false }
+    -   question: |
+            From which version is this code valid?
+
+            <?php
+
+            class First
+            {
+
+                public function accept(Second $first): void
+                {
+                }
+            }
+
+            class Second extends First
+            {
+                public function accept(First $second): void
+                {
+                    echo 'Works';
+                }
+            }
+
+            $object = new Second();
+            $object->accept($object);
+        answers:
+            - { value: "7.4", correct: true }
+            - { value: "7.4", correct: false }
+            - { value: "5.6", correct: false }
+            - { value: "5.3", correct: false }
+            - { value: "It's never valid", correct: false }
+    -   question: |
+            From which version is this code valid?
+
+            <?php
+
+            class First
+            {
+                public function accept(Second $first): First
+                {
+
+                }
+            }
+
+            class Second extends First
+            {
+                public function accept(Second $second): Second
+                {
+                    return $second;
+                }
+            }
+        answers:
+            - { value: "7.4", correct: true }
+            - { value: "7.4", correct: false }
+            - { value: "5.6", correct: false }
+            - { value: "5.3", correct: false }
+            - { value: "It's never valid", correct: false }
+    -   question: |
+            What will be the output of the following code?
+
+            <?php
+            $class = new class {
+                const CONST = '123';
+            }
+
+            echo $class::CONST;
+        answers:
+            - { value: "123", correct: true }
+            - { value: "An error", correct: false }
+    -   question: |
+            What will be the output of the following code in PHP 7.4?
+
+            <?php
+            $class = new class {
+
+                private const TWO = [
+                    1,
+                    2,
+                    3,
+                ];
+                public const ONE = [
+                    ...self::TWO,
+                    1,
+                    3,
+                ];
+            };
+
+            echo $class::ONE[4];
+        answers:
+            - { value: "3", correct: true }
+            - { value: "1", correct: false }
+            - { value: "An error", correct: false }
+    -   question: |
+            What will be the output of the following code in PHP 7.3?
+
+            <?php
+            $class = new class {
+
+                private const TWO = [
+                    1,
+                    2,
+                    3,
+                ];
+                public const ONE = [
+                    ...self::TWO,
+                    1,
+                    3,
+                ];
+            };
+
+            echo $class::ONE[4];
+        answers:
+            - { value: "An error", correct: true }
+            - { value: "3", correct: false }
+            - { value: "1", correct: false }

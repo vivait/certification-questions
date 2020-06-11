@@ -93,7 +93,6 @@ questions:
     -   question: |
             Which of the following are Filesystem methods?
         answers:
-            - { value: "move", correct: false }
             - { value: "chown", correct: true }
             - { value: "rename", correct: true }
             - { value: "touch", correct: true }
@@ -101,6 +100,7 @@ questions:
             - { value: "dumpFile", correct: true }
             - { value: "isAbsolutePath", correct: true }
             - { value: "duplicate", correct: false }
+            - { value: "move", correct: false }
 
     -   question: |
             What is the second argument of the mkDir() method?

@@ -361,3 +361,29 @@ questions:
             - {value: 'TargetPathTrait', correct: true}
             - {value: 'NextPathTrait', correct: false}
             - {value: 'LoginRedirectTrait', correct: false}
+
+    -   question: |
+            Which of the following methods is not defined by the Symfony\Component\Security\Guard\GuardAuthenticatorInterface only (not its parent)?
+        answers:
+            - {value: 'public function start(Request $request, AuthenticationException $authException = null);', correct: true}
+            - {value: 'public function getUser($credentials, UserProviderInterface $userProvider);', correct: false}
+            - {value: 'public function supportsRememberMe();', correct: false}
+            - {value: 'public function getCredentials(Request $request);', correct: false}
+            - {value: 'public function checkCredentials($credentials, UserInterface $user);', correct: false}
+            - {value: 'public function createAuthenticatedToken(UserInterface $user, $providerKey);', correct: false}
+            - {value: 'public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey);', correct: false}
+            - {value: 'public function onAuthenticationFailure(Request $request, AuthenticationException $exception);', correct: false}
+
+    -   question: |
+            Which of the following methods are defined by the Symfony\Component\Security\Guard\GuardAuthenticatorInterface only (not its parent)?
+        answers:
+            - {value: 'public function getUser($credentials, UserProviderInterface $userProvider);', correct: true}
+            - {value: 'public function supportsRememberMe();', correct: true}
+            - {value: 'public function getCredentials(Request $request);', correct: true}
+            - {value: 'public function checkCredentials($credentials, UserInterface $user);', correct: true}
+            - {value: 'public function createAuthenticatedToken(UserInterface $user, $providerKey);', correct: true}
+            - {value: 'public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey);', correct: true}
+            - {value: 'public function onAuthenticationFailure(Request $request, AuthenticationException $exception);', correct: true}
+            - {value: 'public function start(Request $request, AuthenticationException $authException = null);', correct: false}
+            - {value: 'public function handle(GetResponseEvent $event);', correct: false}
+            - {value: 'private function executeGuardAuthenticator($uniqueGuardKey, GuardAuthenticatorInterface $guardAuthenticator, GetResponseEvent $event);', correct: false}
