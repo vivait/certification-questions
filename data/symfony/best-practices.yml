@@ -214,9 +214,5 @@ questions:
         answers:
             - {value: "autoload-dev", correct: true }
             - {value: "autoload", correct:  false }
-
-    -   question: |
-            Which composer.json key must one specify for autoloading test dependencies?
-        answers:
-            - {value: "autoload-dev", correct: true }
-            - {value: "autoload", correct:  false }
+            - {value: "autoload-test", correct:  false }
+            - {value: "autoload-test", correct: false }

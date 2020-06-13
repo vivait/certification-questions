@@ -215,9 +215,101 @@ questions:
         answers:
             - { value: 'denyAccessUnlessGranted()', correct: true }
             - { value: 'isCsrfTokenValid()', correct: true }
+            - { value: 'redirectToRoute()', correct: true }
             - { value: 'generatePath()', correct: false }
             - { value: 'createXmlResponse()', correct: false }
-            - { value: 'redirectToRoute()', correct: true }
+        help: |
+            https://github.com/symfony/symfony/blob/3.0/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php
+
+    -   question: |
+            Which of the following are valid methods of the Symfony base controller class?
+        answers:
+            - { value: 'forward()', correct: true }
+            - { value: 'redirect()', correct: true }
+            - { value: 'addFlash()', correct: true }
+            - { value: 'generatePath()', correct: false }
+            - { value: 'createXmlResponse()', correct: false }
+        help: |
+            https://github.com/symfony/symfony/blob/3.0/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php
+
+    -   question: |
+            Which of the following are valid methods of the Symfony base controller class?
+        answers:
+            - { value: 'isGranted()', correct: true }
+            - { value: 'denyAccessUnlessGranted()', correct: true }
+            - { value: 'renderView()', correct: true }
+            - { value: 'generatePath()', correct: false }
+            - { value: 'getFormFactory()', correct: false }
+        help: |
+            https://github.com/symfony/symfony/blob/3.0/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php
+
+    -   question: |
+            Which of the following are valid methods of the Symfony base controller class?
+        answers:
+            - { value: 'render()', correct: true }
+            - { value: 'stream()', correct: true }
+            - { value: 'createNotFoundException()', correct: true }
+            - { value: 'generatePath()', correct: false }
+            - { value: 'getContainer()', correct: false }
+        help: |
+            https://github.com/symfony/symfony/blob/3.0/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php
+
+    -   question: |
+            Which of the following are valid methods of the Symfony base controller class?
+        answers:
+            - { value: 'isGranted()', correct: true }
+            - { value: 'denyAccessUnlessGranted()', correct: true }
+            - { value: 'renderView()', correct: true }
+            - { value: 'createJsonResponse()', correct: false }
+            - { value: 'getContainer()', correct: false }
+        help: |
+            https://github.com/symfony/symfony/blob/3.0/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php
+
+    -   question: |
+            Which of the following are valid methods of the Symfony base controller class?
+        answers:
+            - { value: 'createNotFoundException()', correct: true }
+            - { value: 'denyAccessUnlessGranted()', correct: true }
+            - { value: 'renderView()', correct: true }
+            - { value: 'createJsonResponse()', correct: false }
+            - { value: 'getContainer()', correct: false }
+            - { value: 'createResponse()', correct: false }
+        help: |
+            https://github.com/symfony/symfony/blob/3.0/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php
+
+    -   question: |
+            Which of the following are valid methods of the Symfony base controller class?
+        answers:
+            - { value: 'createForm()', correct: true }
+            - { value: 'createFormBuilder()', correct: true }
+            - { value: 'renderView()', correct: true }
+            - { value: 'createJsonResponse()', correct: false }
+            - { value: 'getContainer()', correct: false }
+            - { value: 'getFormFactory()', correct: false }
+        help: |
+            https://github.com/symfony/symfony/blob/3.0/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php
+
+    -   question: |
+            Which of the following are valid methods of the Symfony base controller class?
+        answers:
+            - { value: 'get()', correct: true }
+            - { value: 'getUser()', correct: true }
+            - { value: 'has()', correct: true }
+            - { value: 'createJsonResponse()', correct: false }
+            - { value: 'getContainer()', correct: false }
+            - { value: 'getFormFactory()', correct: false }
+        help: |
+            https://github.com/symfony/symfony/blob/3.0/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php
+
+    -   question: |
+            Which of the following are valid methods of the Symfony base controller class?
+        answers:
+            - { value: 'getDoctrine()', correct: true }
+            - { value: 'isCsrfTokenValid()', correct: true }
+            - { value: 'getParameter()', correct: true }
+            - { value: 'createJsonResponse()', correct: false }
+            - { value: 'getContainer()', correct: false }
+            - { value: 'getTwig()', correct: false }
         help: |
             https://github.com/symfony/symfony/blob/3.0/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php
 

@@ -818,3 +818,33 @@ questions:
             - {value: "Dependency Injection Container", correct: true }
             - {value: "Dependencies Injected Continuously.", correct: false }
             - {value: "Dependencies Injection Component", correct: false }
+
+    -   question: |
+            What does the following parameter change in Symfony 3.4?
+
+            parameters:
+                container.autowiring.strict_mode: true
+        answers:
+            - { value: "It ensures the container doesn't match dependencies by their type, but instead only by their alias or id", correct: true }
+            - { value: "It ensures that the container errors if there is it is ambiguous which service matches", correct: false }
+            - { value: "Nothing, it's just a parameter with no special behaviour", correct: false }
+
+    -   question: |
+            What does the following parameter change in Symfony 4.0?
+
+            parameters:
+                container.autowiring.strict_mode: true
+        answers:
+            - { value: "Nothing, it's just a parameter with no special behaviour", correct: true }
+            - { value: "It ensures the container doesn't match dependencies by their type, but instead only by their alias or id", correct: false }
+            - { value: "It ensures that the container errors if there is it is ambiguous which service matches", correct: false }
+
+    -   question: |
+            What does the following parameter change in Symfony 4.0?
+
+            parameters:
+                container.autowiring.strict_mode: true
+        answers:
+            - { value: "Nothing, it's just a parameter with no special behaviour", correct: true }
+            - { value: "It ensures the container doesn't match dependencies by their type, but instead only by their alias or id", correct: false }
+            - { value: "It ensures that the container errors if there is it is ambiguous which service matches", correct: false }
