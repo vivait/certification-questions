@@ -1,187 +1,321 @@
 category: Twig
 questions:
-    -   question: |
+    -
+        question: |
             Consider the following Twig snippet:
-
+            
             {% if block('footer', 'common_blocks.html.twig') is defined %}
                 ...
             {% endif %}
-
+            
             Which of the following statements are true?
+            
         answers:
-            -   value: "The if condition will be false if the footer block exists in the common_blocks.html.twig template but it's empty (it doesn't have any content inside)."
+            -
+                value: 'The if condition will be false if the footer block exists in the common_blocks.html.twig template but it''s empty (it doesn''t have any content inside).'
                 correct: false
-
-            -   value: "The code is wrong because the block() function doesn't allow to pass a second argument."
+            -
+                value: 'The code is wrong because the block() function doesn''t allow to pass a second argument.'
                 correct: false
-
-            -   value: "The code checks if the common_blocks.html.twig template contains a Twig block called footer"
+            -
+                value: 'The code checks if the common_blocks.html.twig template contains a Twig block called footer'
                 correct: true
-
-            -   value: "The code is wrong because the is defined test cannot be used with the block() function."
+            -
+                value: 'The code is wrong because the is defined test cannot be used with the block() function.'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             Consider the following Twig code snippet:
-
+            
             The {{ color }} car!
-
+            
             What will be the result of evaluating this template without passing it a color variable when the strict_variables global setting is off?
+            
         answers:
-            - {value: 'The template will be succesfully evaluated and the string The empty car! will be displayed in the web browser.', correct: false}
-            - {value: 'Twig will raise a Twig_Error_Runtime exception preventing the template from being evaluated.', correct: false}
-            - {value: 'The template will be succesfully evaluated and the string The car! will be displayed in the web browser.', correct: true}
-            - {value: 'The template will be partially evaluated and the string The will be displayed in the web browser.', correct: false}
-
-    -   question: |
+            -
+                value: 'The template will be succesfully evaluated and the string The empty car! will be displayed in the web browser.'
+                correct: false
+            -
+                value: 'Twig will raise a Twig_Error_Runtime exception preventing the template from being evaluated.'
+                correct: false
+            -
+                value: 'The template will be succesfully evaluated and the string The car! will be displayed in the web browser.'
+                correct: true
+            -
+                value: 'The template will be partially evaluated and the string The will be displayed in the web browser.'
+                correct: false
+    -
+        question: |
             Consider the following typical 3-level hierarchy of Twig templates:
               {# base.html.twig #}
                   <head>
                   <title>{% block title 'ACME' %}</title>
                   </head>
-
+            
               {# layout.html.twig #}
               {% extends 'base.html.twig' %}
               {% block title 'Welcome to ACME!' %}
-
+            
               {# index.html.twig #}
                 {% extends 'layout.html.twig' %}
                 {% block title %}
                 {{ block('title', 'base.html.twig') }}
               {% endblock %}
+            
         answers:
-            - {value: 'Welcome to ACME!', correct: false}
-            - {value: 'ACME', correct: true}
-            - {value: 'ACME Welcome to ACME!', correct: false}
-            - {value: 'This template will display an error because the block() function defines only one argument.', correct: false}
-
-    -   question: Which of the following $options allow a Twig_Filter decide how to escape data by itself?
+            -
+                value: 'Welcome to ACME!'
+                correct: false
+            -
+                value: ACME
+                correct: true
+            -
+                value: 'ACME Welcome to ACME!'
+                correct: false
+            -
+                value: 'This template will display an error because the block() function defines only one argument.'
+                correct: false
+    -
+        question: 'Which of the following $options allow a Twig_Filter decide how to escape data by itself?'
         answers:
-            - {value: "['is_safe' => true]", correct: false}
-            - {value: "['is_safe' => ['html']]", correct: true}
-            - {value: "['is_safe']", correct: false}
-            - {value: "['is_safe' => 'html']", correct: false}
-
-    -   question: Which of the following are built-in Twig functions?
+            -
+                value: '[''is_safe'' => true]'
+                correct: false
+            -
+                value: '[''is_safe'' => [''html'']]'
+                correct: true
+            -
+                value: '[''is_safe'']'
+                correct: false
+            -
+                value: '[''is_safe'' => ''html'']'
+                correct: false
+    -
+        question: 'Which of the following are built-in Twig functions?'
         answers:
-            - {value: source(), correct: true}
-            - {value: date(), correct: true}
-            - {value: dump(), correct: true}
-            - {value: max(), correct: true}
-            - {value: attribute(), correct: true}
-            - {value: render(), correct: false}
-            - {value: url(), correct: false}
-            - {value: path(), correct: false}
-
-    -   question: Is path() a Twig function?
+            -
+                value: source()
+                correct: true
+            -
+                value: date()
+                correct: true
+            -
+                value: dump()
+                correct: true
+            -
+                value: max()
+                correct: true
+            -
+                value: attribute()
+                correct: true
+            -
+                value: render()
+                correct: false
+            -
+                value: url()
+                correct: false
+            -
+                value: path()
+                correct: false
+    -
+        question: 'Is path() a Twig function?'
         answers:
-            - {value: No, correct: true}
-            - {value: Yes, correct: false}
-
-    -   question: Is render() a Twig function?
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: 'Is render() a Twig function?'
         answers:
-            - {value: No, correct: true}
-            - {value: Yes, correct: false}
-
-    -   question: Which of the following classes are Twig loaders available by default?
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: 'Which of the following classes are Twig loaders available by default?'
         answers:
-            - {value: ArrayLoader, correct: true}
-            - {value: FilesystemLoader, correct: true}
-            - {value: DoctrineLoader, correct: false}
-            - {value: CacheLoader, correct: false}
-            - {value: ChainLoader, correct: true}
-
-    -   question: |
+            -
+                value: ArrayLoader
+                correct: true
+            -
+                value: FilesystemLoader
+                correct: true
+            -
+                value: DoctrineLoader
+                correct: false
+            -
+                value: CacheLoader
+                correct: false
+            -
+                value: ChainLoader
+                correct: true
+    -
+        question: |
             What is the output of the following twig code?
-
+            
             {% for i in range(1, 10, 2) %}
                 {{ i }}{% if not loop.last %},{% endif %}
             {% endfor %}
+            
         answers:
-            - {value: '2,4,6,8,10', correct: false}
-            - {value: '1,10,1,10', correct: false}
-            - {value: '1,2,3,4,5,6,7,8,9,10', correct: false}
-            - {value: '1,3,5,7,9', correct: true}
-
-    -   question: |
+            -
+                value: '2,4,6,8,10'
+                correct: false
+            -
+                value: '1,10,1,10'
+                correct: false
+            -
+                value: '1,2,3,4,5,6,7,8,9,10'
+                correct: false
+            -
+                value: '1,3,5,7,9'
+                correct: true
+    -
+        question: |
             Consider the following code snippet:
-
+            
             {% set foo, bar = 'FOO' %}
-
+            
             <p>
               Foo is {{ foo }} and Bar is {{ bar }}.
             </p>
-
+            
             What will be the outcome of evaluating this Twig code?
+            
         answers:
-            - {value: 'Twig will raise a Twig_Error_Syntax exception.', correct: true}
-            - {value: 'The output will display the string Foo is FOO and Bar is FOO..', correct: false}
-            - {value: 'The output will display the string Foo is and Bar is ..', correct: false}
-            - {value: 'The output will display the string Foo is FOO and Bar is ..', correct: false}
+            -
+                value: 'Twig will raise a Twig_Error_Syntax exception.'
+                correct: true
+            -
+                value: 'The output will display the string Foo is FOO and Bar is FOO..'
+                correct: false
+            -
+                value: 'The output will display the string Foo is and Bar is ..'
+                correct: false
+            -
+                value: 'The output will display the string Foo is FOO and Bar is ..'
+                correct: false
         help: |
             https://twig.symfony.com/doc/3.x/tags/set.html
-
-    -   question: Which of the following is not a supported Twig tag?
+            
+    -
+        question: 'Which of the following is not a supported Twig tag?'
         answers:
-            - {value: for, correct: false}
-            - {value: flush, correct: false}
-            - {value: embed, correct: false}
-            - {value: include, correct: false}
-            - {value: do, correct: false}
-            - {value: verbatim, correct: false}
-            - {value: escape, correct: true}
-
-    -   question: |
+            -
+                value: for
+                correct: false
+            -
+                value: flush
+                correct: false
+            -
+                value: embed
+                correct: false
+            -
+                value: include
+                correct: false
+            -
+                value: do
+                correct: false
+            -
+                value: verbatim
+                correct: false
+            -
+                value: escape
+                correct: true
+    -
+        question: |
             Considering Twig filters, how to retrieve a, b and foo from a filter defined with a name *_path_*?
-
+            
             We assume using this filter in a template with:
-
+            
             {{ 'foo'|a_path_b }}
-
+            
             The callable function will be called with the given parameters respectively:
+            
         answers:
-            - {value: "('foo', 'a', 'b')", correct: false}
-            - {value: "('foo', ['patterns' => ['a', 'b']])", correct: false}
-            - {value: "('foo', 'a', 'b')", correct: false}
-            - {value: "('a', 'b', 'foo')", correct: true}
-            - {value: "('foo', ['a', 'b'])", correct: false}
-
-    -   question: |
+            -
+                value: '(''foo'', ''a'', ''b'')'
+                correct: false
+            -
+                value: '(''foo'', [''patterns'' => [''a'', ''b'']])'
+                correct: false
+            -
+                value: '(''foo'', ''a'', ''b'')'
+                correct: false
+            -
+                value: '(''a'', ''b'', ''foo'')'
+                correct: true
+            -
+                value: '(''foo'', [''a'', ''b''])'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             {% set foo, bar = 'foo', 'bar' %}
-
+            
             <p>
               Foo is {{ foo }} and Bar is {{ bar }}.
             </p>
-
+            
             What will be the outcome of evaluating this Twig code?
+            
         answers:
-            - {value: 'The output will display the string Foo is FOO and Bar is BAR.', correct: true}
-            - {value: 'Twig will raise a Twig_Error_Syntax exception.', correct: false}
-            - {value: 'The output will display the string Foo is BAR and Bar is FOO.', correct: false}
-            - {value: 'The output will display the string Foo is and Bar is FOO.', correct: false}
-
-    -   question: |
+            -
+                value: 'The output will display the string Foo is FOO and Bar is BAR.'
+                correct: true
+            -
+                value: 'Twig will raise a Twig_Error_Syntax exception.'
+                correct: false
+            -
+                value: 'The output will display the string Foo is BAR and Bar is FOO.'
+                correct: false
+            -
+                value: 'The output will display the string Foo is and Bar is FOO.'
+                correct: false
+    -
+        question: |
             What is the value of foo after the following Twig code not in strict mode?
-
+            
             {% set foo %}
                 <i id="pagination" />
             {% endset
+            
         answers:
-            - {value: '<i id="pagination" />', correct: true}
-            - {value: 'null', correct: false}
-            - {value: 'A Twig_Error_Syntax exception is thrown', correct: false}
-            - {value: '&lt;i id="pagination" /%gt;', correct: false}
-
-    -   question: |
+            -
+                value: '<i id="pagination" />'
+                correct: true
+            -
+                value: 'null'
+                correct: false
+            -
+                value: 'A Twig_Error_Syntax exception is thrown'
+                correct: false
+            -
+                value: '&lt;i id="pagination" /%gt;'
+                correct: false
+    -
+        question: |
             What is the value of foo after the following Twig code not in strict mode?
             {% list = ['item'] %}
             {% for item in list %}
                 {% set foo = item %}
             {% endfor %}
+            
         answers:
-            - {value: 'null', correct: true}
-            - {value: 'item', correct: false}
-            - {value: 'foo', correct: false}
-            - {value: 'A Twig_Error_Syntax exception is thrown', correct: false}
+            -
+                value: 'null'
+                correct: true
+            -
+                value: item
+                correct: false
+            -
+                value: foo
+                correct: false
+            -
+                value: 'A Twig_Error_Syntax exception is thrown'
+                correct: false

@@ -1,99 +1,142 @@
 category: Config
 questions:
-    - question: |
-          Assuming that the legacy_config.php file exists, is the following configuration valid?
-
-          <?xml version="1.0" encoding="UTF-8" ?>
-          <container xmlns="http://symfony.com/schema/dic/services"
-              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:schemaLocation="http://symfony.com/schema/dic/services
-                  https://symfony.com/schema/dic/services/services-1.0.xsd
-                  http://symfony.com/schema/dic/symfony
-                  https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
-
-              <imports>
-                  <import resource="legacy_config.php"/>
-              </imports>
-          </container>
-      answers:
-          - {value: Yes, correct: true}
-          - {value: No, correct: false}
-
-    - question: |
-          Assuming that the legacy_config.xml file exists, is the following configuration valid?
-
-          $loader->import('legacy_config.xml');
-      answers:
-          - {value: Yes, correct: true}
-          - {value: No, correct: false}
-
-    -   question: |
+    -
+        question: |
             Assuming that the legacy_config.php file exists, is the following configuration valid?
-
+            
+            <?xml version="1.0" encoding="UTF-8" ?>
+            <container xmlns="http://symfony.com/schema/dic/services"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://symfony.com/schema/dic/services
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
+                    http://symfony.com/schema/dic/symfony
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+            
+                <imports>
+                    <import resource="legacy_config.php"/>
+                </imports>
+            </container>
+            
+        answers:
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
+            Assuming that the legacy_config.xml file exists, is the following configuration valid?
+            
+            $loader->import('legacy_config.xml');
+            
+        answers:
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
+            Assuming that the legacy_config.php file exists, is the following configuration valid?
+            
             imports:
                 - { resource: 'legacy_config.php' }
+            
         answers:
-            - {value: Yes, correct: true}
-            - {value: No, correct: false}
-
-    - question: |
-          Assuming that the my_config_file.xml file doesn't exists, will the following configuration generate an
-          exception?
-
-          imports:
-              - { resource: 'my_config_file.xml', ignore_errors: true }
-      answers:
-          - {value: Yes, correct: false}
-          - {value: No, correct: true}
-
-    - question: |
-          Assuming that the my_config_file.yaml file doesn't exists, will the following configuration generate an
-          exception?
-
-          <!-- config/services.xml -->
-          <?xml version="1.0" encoding="UTF-8" ?>
-          <container xmlns="http://symfony.com/schema/dic/services"
-              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:schemaLocation="http://symfony.com/schema/dic/services
-                  https://symfony.com/schema/dic/services/services-1.0.xsd
-                  http://symfony.com/schema/dic/symfony
-                  https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
-
-              <imports>
-                  <import resource="my_config_file.yaml" ignore-errors="true"/>
-              </imports>
-
-              <!-- ... -->
-          </container>
-      answers:
-          - {value: Yes, correct: false}
-          - {value: No, correct: true}
-
-
-    - question: |
-          Assuming that the my_config_file.yaml file doesn't exists, will the following configuration generate an
-          exception?
-
-          $loader->import('my_config_file.yaml', null, true);
-      answers:
-          - {value: Yes, correct: false}
-          - {value: No, correct: true}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
+            Assuming that the my_config_file.xml file doesn't exists, will the following configuration generate an
+            exception?
+            
+            imports:
+                - { resource: 'my_config_file.xml', ignore_errors: true }
+            
+        answers:
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: |
+            Assuming that the my_config_file.yaml file doesn't exists, will the following configuration generate an
+            exception?
+            
+            <!-- config/services.xml -->
+            <?xml version="1.0" encoding="UTF-8" ?>
+            <container xmlns="http://symfony.com/schema/dic/services"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://symfony.com/schema/dic/services
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
+                    http://symfony.com/schema/dic/symfony
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+            
+                <imports>
+                    <import resource="my_config_file.yaml" ignore-errors="true"/>
+                </imports>
+            
+                <!-- ... -->
+            </container>
+            
+        answers:
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: |
+            Assuming that the my_config_file.yaml file doesn't exists, will the following configuration generate an
+            exception?
+            
+            $loader->import('my_config_file.yaml', null, true);
+            
+        answers:
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: |
             What encoding will the app.my_parameter parameter contain?
-
+            
             app.my_parameter: !!binary VGhpcyBpcyBhIEJlbGwgY2hhciAH
+            
         answers:
-            - {value: Base64, correct: false}
-            - {value: Binary encoding, correct: true}
-            - {value: They'll be no encoding, correct: false}
-            - {value: Base85, correct: false}
-            - {value: PHP, correct: false}
-            - {value: XML, correct: false}
-
-    -   question: |
+            -
+                value: Base64
+                correct: false
+            -
+                value: 'Binary encoding'
+                correct: true
+            -
+                value: 'They''ll be no encoding'
+                correct: false
+            -
+                value: Base85
+                correct: false
+            -
+                value: PHP
+                correct: false
+            -
+                value: XML
+                correct: false
+    -
+        question: |
             What encoding will the app.my_parameter parameter contain?
-
+            
             <!-- config/services.xml -->
             <?xml version="1.0" encoding="UTF-8" ?>
             <container xmlns="http://symfony.com/schema/dic/services"
@@ -103,34 +146,56 @@ questions:
                     https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
                     https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
-
+            
                 <parameters>
                     <parameter key="app.my_parameter" type="binary">VGhpcyBpcyBhIEJlbGwgY2hhciAH</parameter>
                 </parameters>
             </container>
+            
         answers:
-            - {value: Base64, correct: false}
-            - {value: Binary encoding, correct: true}
-            - {value: They'll be no encoding, correct: false}
-            - {value: Base85, correct: false}
-            - {value: PHP, correct: false}
-            - {value: XML, correct: false}
-
-    -   question: |
+            -
+                value: Base64
+                correct: false
+            -
+                value: 'Binary encoding'
+                correct: true
+            -
+                value: 'They''ll be no encoding'
+                correct: false
+            -
+                value: Base85
+                correct: false
+            -
+                value: PHP
+                correct: false
+            -
+                value: XML
+                correct: false
+    -
+        question: |
             Assuming that GLOBAL_CONSTANT is set to "Hello World" What value will the app.some_constant parameter
             contain?
-
+            
             app.some_constant: !php/const GLOBAL_CONSTANT
+            
         answers:
-            - {value: "Hello World", correct: true}
-            - {value: 'A reference to GLOBAL_CONSTANT', correct: false}
-            - {value: "Nothing, the container won't compile.", correct: false}
-            - {value: '!php/const GLOBAL_CONSTANT', correct: false}
-
-    -   question: |
+            -
+                value: 'Hello World'
+                correct: true
+            -
+                value: 'A reference to GLOBAL_CONSTANT'
+                correct: false
+            -
+                value: 'Nothing, the container won''t compile.'
+                correct: false
+            -
+                value: '!php/const GLOBAL_CONSTANT'
+                correct: false
+    -
+        question: |
             Assuming that GLOBAL_CONSTANT is set to "Hello World" What value will the app.some_constant parameter
             contain?
-
+            
             <!-- config/services.xml -->
             <?xml version="1.0" encoding="UTF-8" ?>
             <container xmlns="http://symfony.com/schema/dic/services"
@@ -140,275 +205,572 @@ questions:
                     https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
                     https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
-
+            
                 <parameters>
                     <parameter key="app.some_constant" type="constant">GLOBAL_CONSTANT</parameter>
                 </parameters>
             </container>
+            
         answers:
-            - {value: "Hello World", correct: true}
-            - {value: 'A reference to GLOBAL_CONSTANT', correct: false}
-            - {value: "Nothing, the container won't compile.", correct: false}
-            - {value: '!php/const GLOBAL_CONSTANT', correct: false}
-
-    -   question: |
+            -
+                value: 'Hello World'
+                correct: true
+            -
+                value: 'A reference to GLOBAL_CONSTANT'
+                correct: false
+            -
+                value: 'Nothing, the container won''t compile.'
+                correct: false
+            -
+                value: '!php/const GLOBAL_CONSTANT'
+                correct: false
+    -
+        question: |
             What value will the app.admin_email parameter contain?
-
+            
             <parameter key="app.admin_email">
                 something@example.com
             </parameter>
+            
         answers:
-            - {value: "\n    something@example.com\n", correct: true}
-            - {value: 'something@example.com', correct: false}
-            - {value: "    something@example.com.", correct: false}
-
-    -   question: |
+            -
+                value: |
+                    
+                    something@example.com
+                    
+                correct: true
+            -
+                value: something@example.com
+                correct: false
+            -
+                value: '    something@example.com.'
+                correct: false
+    -
+        question: |
             What value will the url_pattern parameter contain?
-
+            
             parameters:
                 url_pattern: 'https://symfony.com/?foo=%%s&amp;bar=%%d'
+            
         answers:
-            - {value: "https://symfony.com/?foo=%s&amp;bar=%d", correct: true}
-            - {value: "Nothing, there'll be an error.", correct: false}
-            - {value: "https://symfony.com/?foo=%%s&amp;bar=%%d", correct: false}
-
-    -   question: |
+            -
+                value: 'https://symfony.com/?foo=%s&amp;bar=%d'
+                correct: true
+            -
+                value: 'Nothing, there''ll be an error.'
+                correct: false
+            -
+                value: 'https://symfony.com/?foo=%%s&amp;bar=%%d'
+                correct: false
+    -
+        question: |
             What value will the url_pattern parameter contain?
-
+            
             <parameters>
                 <parameter key="url_pattern">http://symfony.com/?foo=%%s&amp;bar=%%d</parameter>
             </parameters>
+            
         answers:
-        - {value: "https://symfony.com/?foo=%s&amp;bar=%d", correct: true}
-        - {value: "Nothing, there'll be an error.", correct: false}
-        - {value: "https://symfony.com/?foo=%%s&amp;bar=%%d", correct: false}
-
-    -   question: |
+            -
+                value: 'https://symfony.com/?foo=%s&amp;bar=%d'
+                correct: true
+            -
+                value: 'Nothing, there''ll be an error.'
+                correct: false
+            -
+                value: 'https://symfony.com/?foo=%%s&amp;bar=%%d'
+                correct: false
+    -
+        question: |
             What value will the url_pattern parameter contain?
-
+            
             $container->setParameter('url_pattern', 'http://symfony.com/?foo=%%s&amp;bar=%%d');
+            
         answers:
-            - {value: "https://symfony.com/?foo=%s&amp;bar=%d", correct: true}
-            - {value: "Nothing, there'll be an error.", correct: false}
-            - {value: "https://symfony.com/?foo=%%s&amp;bar=%%d", correct: false}
-
-    -   question: |
+            -
+                value: 'https://symfony.com/?foo=%s&amp;bar=%d'
+                correct: true
+            -
+                value: 'Nothing, there''ll be an error.'
+                correct: false
+            -
+                value: 'https://symfony.com/?foo=%%s&amp;bar=%%d'
+                correct: false
+    -
+        question: |
             Is the following configuration valid?
-
+            
             imports:
                 - { resource: '%kernel.project_dir%/somefile.yaml' }
+            
         answers:
-            - {value: Yes, correct: false}
-            - {value: No, correct: true}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: |
             Is the following configuration valid?
-
+            
             <?xml version="1.0" encoding="UTF-8" ?>
             <container xmlns="http://symfony.com/schema/dic/services"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
                     https://symfony.com/schema/dic/services/services-1.0.xsd">
-
+            
                 <imports>
                     <import resource="%kernel.project_dir%/somefile.yaml"/>
                 </imports>
             </container>
+            
         answers:
-            - {value: Yes, correct: false}
-            - {value: No, correct: true}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: |
             Is the following configuration valid?
-
+            
             $loader->import('%kernel.project_dir%/somefile.yaml');
+            
         answers:
-            - {value: Yes, correct: false}
-            - {value: No, correct: true}
-
-    -   question: What is the purpose of environment variables in a Symfony application.
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: 'What is the purpose of environment variables in a Symfony application.'
         answers:
-            - {value: To configure settings that are different between machines, correct: true}
-            - {value: They should be avoided in all cases, correct: false}
-            - {value: Configuring all settings in an application, correct: false}
-
-    -   question: Which of these are built-in Environment Variable Processors?
+            -
+                value: 'To configure settings that are different between machines'
+                correct: true
+            -
+                value: 'They should be avoided in all cases'
+                correct: false
+            -
+                value: 'Configuring all settings in an application'
+                correct: false
+    -
+        question: 'Which of these are built-in Environment Variable Processors?'
         answers:
-            - {value: env(string:FOO), correct: true}
-            - {value: env(bool:FOO), correct: true}
-            - {value: env(int:FOO), correct: true}
-            - {value: env(float:FOO), correct: true}
-            - {value: env(const:FOO), correct: true}
-            - {value: env(file:FOO), correct: true}
-            - {value: env(object:FOO), correct: false}
-            - {value: env(reverse:FOO), correct: false}
-            - {value: env(lowercase:FOO), correct: false}
-            - {value: env(base64:FOO), correct: true}
-
-    -   question: Which of these are built-in Environment Variable Processors?
+            -
+                value: 'env(string:FOO)'
+                correct: true
+            -
+                value: 'env(bool:FOO)'
+                correct: true
+            -
+                value: 'env(int:FOO)'
+                correct: true
+            -
+                value: 'env(float:FOO)'
+                correct: true
+            -
+                value: 'env(const:FOO)'
+                correct: true
+            -
+                value: 'env(file:FOO)'
+                correct: true
+            -
+                value: 'env(object:FOO)'
+                correct: false
+            -
+                value: 'env(reverse:FOO)'
+                correct: false
+            -
+                value: 'env(lowercase:FOO)'
+                correct: false
+            -
+                value: 'env(base64:FOO)'
+                correct: true
+    -
+        question: 'Which of these are built-in Environment Variable Processors?'
         answers:
-            - {value: env(json:FOO), correct: true}
-            - {value: env(resolve:FOO), correct: true}
-            - {value: env(csv:FOO), correct: true}
-            - {value: env(require:FOO), correct: true}
-            - {value: env(trim:FOO), correct: true}
-            - {value: env(key:FOO:BAR), correct: true}
-            - {value: env(default:fallback_param:BAR), correct: true}
-            - {value: env(url:FOO), correct: true}
-            - {value: env(query_string:FOO), correct: true}
-            - {value: env(number:FOO), correct: false}
-            - {value: env(uppercase:FOO), correct: false}
-
-    -   question: Which version of Symfony were environment variable processors added?
+            -
+                value: 'env(json:FOO)'
+                correct: true
+            -
+                value: 'env(resolve:FOO)'
+                correct: true
+            -
+                value: 'env(csv:FOO)'
+                correct: true
+            -
+                value: 'env(require:FOO)'
+                correct: true
+            -
+                value: 'env(trim:FOO)'
+                correct: true
+            -
+                value: 'env(key:FOO:BAR)'
+                correct: true
+            -
+                value: 'env(default:fallback_param:BAR)'
+                correct: true
+            -
+                value: 'env(url:FOO)'
+                correct: true
+            -
+                value: 'env(query_string:FOO)'
+                correct: true
+            -
+                value: 'env(number:FOO)'
+                correct: false
+            -
+                value: 'env(uppercase:FOO)'
+                correct: false
+    -
+        question: 'Which version of Symfony were environment variable processors added?'
         answers:
-            - {value: 4.3, correct: true}
-            - {value: 4.4, correct: false}
-            - {value: 4.0, correct: false}
-            - {value: 3.2, correct: false}
-            - {value: 2.8, correct: false}
-
-    -   question: Which interface must be implemented to add a custom Environment Variable Processors?
+            -
+                value: 4.3
+                correct: true
+            -
+                value: 4.4
+                correct: false
+            -
+                value: !!float 4
+                correct: false
+            -
+                value: 3.2
+                correct: false
+            -
+                value: 2.8
+                correct: false
+    -
+        question: 'Which interface must be implemented to add a custom Environment Variable Processors?'
         answers:
-            - {value: Symfony\Component\DependencyInjection\EnvVarProcessorInterface, correct: true}
-            - {value: Symfony\Component\Dotenv\EnvVarProcessorInterface, correct: false}
-            - {value: Symfony\Bridge\Dotenv\EnvVarProcessorInterface, correct: false}
-            - {value: Symfony\Bridge\DependencyInjection\EnvVarProcessorInterface, correct: false}
-
-    -   question: What command can be ran to improve the performance of environment variables in production?
+            -
+                value: Symfony\Component\DependencyInjection\EnvVarProcessorInterface
+                correct: true
+            -
+                value: Symfony\Component\Dotenv\EnvVarProcessorInterface
+                correct: false
+            -
+                value: Symfony\Bridge\Dotenv\EnvVarProcessorInterface
+                correct: false
+            -
+                value: Symfony\Bridge\DependencyInjection\EnvVarProcessorInterface
+                correct: false
+    -
+        question: 'What command can be ran to improve the performance of environment variables in production?'
         answers:
-            - {value: composer dump-env prod, correct: true}
-            - {value: composer env-dump prod, correct: false}
-            - {value: composer optimize-env prod, correct: false}
-            - {value: bin/console dump:env --env=prod, correct: false}
-            - {value: bin/console dotenv:optimize--env=prod, correct: false}
-
-    -   question: Which PHP super globals or functions could expose environment variables in production?
+            -
+                value: 'composer dump-env prod'
+                correct: true
+            -
+                value: 'composer env-dump prod'
+                correct: false
+            -
+                value: 'composer optimize-env prod'
+                correct: false
+            -
+                value: 'bin/console dump:env --env=prod'
+                correct: false
+            -
+                value: 'bin/console dotenv:optimize--env=prod'
+                correct: false
+    -
+        question: 'Which PHP super globals or functions could expose environment variables in production?'
         answers:
-            - {value: $_SERVER, correct: true}
-            - {value: $_GLOBAL, correct: true}
-            - {value: phpinfo(), correct: true}
-            - {value: $_GET, correct: false}
-            - {value: $_SESSION, correct: false}
-    -   question: |
+            -
+                value: $_SERVER
+                correct: true
+            -
+                value: $_GLOBAL
+                correct: true
+            -
+                value: phpinfo()
+                correct: true
+            -
+                value: $_GET
+                correct: false
+            -
+                value: $_SESSION
+                correct: false
+    -
+        question: |
             What is the purpose of Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition::fixXmlConfig ?
+            
         answers:
-            - {value: "It ensures that single XML elements are turned into an array", correct: true}
-            - {value: "It applies a custom function to an XML element if an error occurs", correct: false}
-            - {value: 'It normalizes XML element name', correct: false}
-            - {value: 'It always applies a custom function to an XML element', correct: false}
-
-    -   question: |
+            -
+                value: 'It ensures that single XML elements are turned into an array'
+                correct: true
+            -
+                value: 'It applies a custom function to an XML element if an error occurs'
+                correct: false
+            -
+                value: 'It normalizes XML element name'
+                correct: false
+            -
+                value: 'It always applies a custom function to an XML element'
+                correct: false
+    -
+        question: |
             What is the 2nd argument of Symfony\Component\Config\ConfigCacheFactory::cache method ?
+            
         answers:
-            - {value: "A boolean to set the debug mode", correct: false}
-            - {value: 'An array of options', correct: false}
-            - {value: 'The resource filename', correct: false}
-            - {value: 'A callback executed if the cache has to be refreshed', correct: true}
-
-    -   question: |
+            -
+                value: 'A boolean to set the debug mode'
+                correct: false
+            -
+                value: 'An array of options'
+                correct: false
+            -
+                value: 'The resource filename'
+                correct: false
+            -
+                value: 'A callback executed if the cache has to be refreshed'
+                correct: true
+    -
+        question: |
             Which of the following are valid node types?
+            
         answers:
-            - {value: scalar, correct: true}
-            - {value: boolean, correct: true}
-            - {value: integer, correct: true}
-            - {value: float, correct: true}
-            - {value: enum, correct: true}
-            - {value: array, correct: true}
-            - {value: variable, correct: true}
-            - {value: object, correct: false}
-            - {value: number, correct: false}
-            - {value: string, correct: false}
-
-    -   question: |
+            -
+                value: scalar
+                correct: true
+            -
+                value: boolean
+                correct: true
+            -
+                value: integer
+                correct: true
+            -
+                value: float
+                correct: true
+            -
+                value: enum
+                correct: true
+            -
+                value: array
+                correct: true
+            -
+                value: variable
+                correct: true
+            -
+                value: object
+                correct: false
+            -
+                value: number
+                correct: false
+            -
+                value: string
+                correct: false
+    -
+        question: |
             Which of the following are validation rules provided by Symfony\Component\Config\Definition\Builder\ExprBuilder?
+            
         answers:
-            - {value: ifInArray(), correct: true}
-            - {value: ifNotInArray(), correct: true}
-            - {value: ifArray(), correct: true}
-            - {value: always(), correct: true}
-            - {value: ifString(), correct: true}
-            - {value: ifNull(), correct: true}
-            - {value: ifTrue(), correct: true}
-            - {value: never(), correct: false}
-            - {value: ifNotNull(), correct: false}
+            -
+                value: ifInArray()
+                correct: true
+            -
+                value: ifNotInArray()
+                correct: true
+            -
+                value: ifArray()
+                correct: true
+            -
+                value: always()
+                correct: true
+            -
+                value: ifString()
+                correct: true
+            -
+                value: ifNull()
+                correct: true
+            -
+                value: ifTrue()
+                correct: true
+            -
+                value: never()
+                correct: false
+            -
+                value: ifNotNull()
+                correct: false
         help: |
             https://symfony.com/doc/current/components/config/definition.html#validation-rules
-
-    -   question: |
+            
+    -
+        question: |
             Which configuration file format can be used to define PHP constants as parameters?
+            
         answers:
-            - {value: YAML, correct: true}
-            - {value: Annotation, correct: false}
-            - {value: XML, correct: true}
-            - {value: PHP, correct: true}
-            - {value: INI, correct: false}
-
-    -   question: |
+            -
+                value: YAML
+                correct: true
+            -
+                value: Annotation
+                correct: false
+            -
+                value: XML
+                correct: true
+            -
+                value: PHP
+                correct: true
+            -
+                value: INI
+                correct: false
+    -
+        question: |
             What is the purpose of Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition::fixXmlConfig ?
+            
         answers:
-            - {value: It normalizes XML element name, correct: false}
-            - {value: It ensures that single XML elements are turned into an array, correct: true}
-            - {value: It always applies a custom function to an XML element, correct: false}
-            - {value: It applies a custom function to an XML element if an error occurs, correct: false}
-
-    -   question: |
+            -
+                value: 'It normalizes XML element name'
+                correct: false
+            -
+                value: 'It ensures that single XML elements are turned into an array'
+                correct: true
+            -
+                value: 'It always applies a custom function to an XML element'
+                correct: false
+            -
+                value: 'It applies a custom function to an XML element if an error occurs'
+                correct: false
+    -
+        question: |
             How to overwrite a configuration array if the value is also defined in a second configuration array ?
+            
         answers:
-            - {value: By using ->performNoDeepMerging(), correct: true}
-            - {value: By using ->performDeepMerging(), correct: false}
-            - {value: By using ->canBeOverwritten(), correct: false}
-            - {value: By using ->enableMerging(), correct: false}
-
-    -   question: If debug mode is set to false, how ConfigCache determine if the cache has to be refresh ?
+            -
+                value: 'By using ->performNoDeepMerging()'
+                correct: true
+            -
+                value: 'By using ->performDeepMerging()'
+                correct: false
+            -
+                value: 'By using ->canBeOverwritten()'
+                correct: false
+            -
+                value: 'By using ->enableMerging()'
+                correct: false
+    -
+        question: 'If debug mode is set to false, how ConfigCache determine if the cache has to be refresh ?'
         answers:
-            - {value: By checking the last modification time of the resource, correct: false}
-            - {value: By checking that the resource exists, correct: true}
-            - {value: By checking timestamps in a .meta file present in the same directory as the cache file itself, correct: false}
-            - {value: It is always refreshed, correct: false}
-
-    -   question: |
+            -
+                value: 'By checking the last modification time of the resource'
+                correct: false
+            -
+                value: 'By checking that the resource exists'
+                correct: true
+            -
+                value: 'By checking timestamps in a .meta file present in the same directory as the cache file itself'
+                correct: false
+            -
+                value: 'It is always refreshed'
+                correct: false
+    -
+        question: |
             Which methods don't belong to Symfony\Component\Config\Definition\Builder\ExprBuilder ?
+            
         answers:
-            - {value: ifInteger, correct: true}
-            - {value: else, correct: true}
-            - {value: thenValid, correct: true}
-            - {value: thenSet, correct: true}
-            - {value: ifString, correct: false}
-            - {value: ifArray, correct: false}
-            - {value: then, correct: false}
-            - {value: ifEmpty, correct: false}
-
-    -   question: |
+            -
+                value: ifInteger
+                correct: true
+            -
+                value: else
+                correct: true
+            -
+                value: thenValid
+                correct: true
+            -
+                value: thenSet
+                correct: true
+            -
+                value: ifString
+                correct: false
+            -
+                value: ifArray
+                correct: false
+            -
+                value: then
+                correct: false
+            -
+                value: ifEmpty
+                correct: false
+    -
+        question: |
             How can you set true as default value for a Node Type?
+            
         answers:
-            - {value: ->defaultTrue();, correct: true}
-            - {value: ->defaultValue(true);, correct: true}
-            - {value: ->setDefault(true);, correct: false}
-            - {value: ->isTrue();, correct: false}
-            - {value: ->default(true);, correct: false}
-
-    -   question: |
+            -
+                value: '->defaultTrue();'
+                correct: true
+            -
+                value: '->defaultValue(true);'
+                correct: true
+            -
+                value: '->setDefault(true);'
+                correct: false
+            -
+                value: '->isTrue();'
+                correct: false
+            -
+                value: '->default(true);'
+                correct: false
+    -
+        question: |
             What is the purpose of ->arrayPrototype()?
+            
         answers:
-            - {value: It defines a node contains a multi-dimensional array with two layers, correct: true}
-            - {value: It defines a node contains a single dimensional array, correct: false}
-            - {value: It defines a node contains any array value, correct: false}
-
-    -   question: |
+            -
+                value: 'It defines a node contains a multi-dimensional array with two layers'
+                correct: true
+            -
+                value: 'It defines a node contains a single dimensional array'
+                correct: false
+            -
+                value: 'It defines a node contains any array value'
+                correct: false
+    -
+        question: |
             What is the purpose of ->arrayNode()?
+            
         answers:
-            - {value: It defines a node contains a single dimensional array, correct: true}
-            - {value: It defines a node contains a multi-dimensional array with two layers, correct: false}
-            - {value: It defines a node contains any array value, correct: false}
-
-    -   question: |
+            -
+                value: 'It defines a node contains a single dimensional array'
+                correct: true
+            -
+                value: 'It defines a node contains a multi-dimensional array with two layers'
+                correct: false
+            -
+                value: 'It defines a node contains any array value'
+                correct: false
+    -
+        question: |
             Which types are not valid Node Types ?
+            
         answers:
-            - {value: int, correct: true}
-            - {value: date, correct: true}
-            - {value: decimal, correct: true}
-            - {value: scalar, correct: false}
-            - {value: integer, correct: false}
-            - {value: float, correct: false}
-            - {value: enum, correct: false}
-            - {value: variable, correct: false}
+            -
+                value: int
+                correct: true
+            -
+                value: date
+                correct: true
+            -
+                value: decimal
+                correct: true
+            -
+                value: scalar
+                correct: false
+            -
+                value: integer
+                correct: false
+            -
+                value: float
+                correct: false
+            -
+                value: enum
+                correct: false
+            -
+                value: variable
+                correct: false

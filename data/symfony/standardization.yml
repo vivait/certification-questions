@@ -1,156 +1,314 @@
 category: Standardization
 questions:
-    -   question: How often does Symfony release a minor version?
+    -
+        question: 'How often does Symfony release a minor version?'
         answers:
-            - { value: Every 6 months, correct: true }
-            - { value: Every 3 months, correct: false }
-            - { value: Every month, correct: false }
-            - { value: Every year, correct: false }
-
-    -   question: How often does Symfony release a major version?
+            -
+                value: 'Every 6 months'
+                correct: true
+            -
+                value: 'Every 3 months'
+                correct: false
+            -
+                value: 'Every month'
+                correct: false
+            -
+                value: 'Every year'
+                correct: false
+    -
+        question: 'How often does Symfony release a major version?'
         answers:
-            - { value: Every 2 years, correct: true }
-            - { value: Every 6 months, correct: false }
-            - { value: Every year, correct: false }
-            - { value: Every 3 years, correct: false }
-
-    -   question: How long is a minor version open to security fixes for?
+            -
+                value: 'Every 2 years'
+                correct: true
+            -
+                value: 'Every 6 months'
+                correct: false
+            -
+                value: 'Every year'
+                correct: false
+            -
+                value: 'Every 3 years'
+                correct: false
+    -
+        question: 'How long is a minor version open to security fixes for?'
         answers:
-            - { value: "1 year and 2 months", correct: true }
-            - { value: "1 year and 6 months", correct: false }
-            - { value: "1 year and 3 months", correct: false }
-            - { value: "2 years and 8 months", correct: false }
-
-    -   question: How long is a minor version maintained for?
+            -
+                value: '1 year and 2 months'
+                correct: true
+            -
+                value: '1 year and 6 months'
+                correct: false
+            -
+                value: '1 year and 3 months'
+                correct: false
+            -
+                value: '2 years and 8 months'
+                correct: false
+    -
+        question: 'How long is a minor version maintained for?'
         answers:
-            - { value: "8 months", correct: true }
-            - { value: "4 months", correct: false }
-            - { value: "1 year", correct: false }
-            - { value: "3 years", correct: false }
-
-    -   question: How long is a major version maintained for?
+            -
+                value: '8 months'
+                correct: true
+            -
+                value: '4 months'
+                correct: false
+            -
+                value: '1 year'
+                correct: false
+            -
+                value: '3 years'
+                correct: false
+    -
+        question: 'How long is a major version maintained for?'
         answers:
-            - { value: "3 years", correct: true }
-            - { value: "8 months", correct: false }
-            - { value: "2 years", correct: false }
-            - { value: "5 year", correct: false }
-
-    -   question: How long is a major version open to security fixes for?
+            -
+                value: '3 years'
+                correct: true
+            -
+                value: '8 months'
+                correct: false
+            -
+                value: '2 years'
+                correct: false
+            -
+                value: '5 year'
+                correct: false
+    -
+        question: 'How long is a major version open to security fixes for?'
         answers:
-            - { value: "'4 years'", correct: true }
-            - { value: "'8 years'", correct: false }
-            - { value: "'5 years'", correct: false }
-            - { value: "'1 year'", correct: false }
-
-    -   question: Are experimental features covered by Symfony's Backward Compatibility Promise?
+            -
+                value: '''4 years'''
+                correct: true
+            -
+                value: '''8 years'''
+                correct: false
+            -
+                value: '''5 years'''
+                correct: false
+            -
+                value: '''1 year'''
+                correct: false
+    -
+        question: 'Are experimental features covered by Symfony''s Backward Compatibility Promise?'
         answers:
-            - { value: No, correct: true }
-            - { value: Yes, correct: false }
-
-    -   question: In which version of Symfony was the Backward Compatibility Promise introduced?
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: 'In which version of Symfony was the Backward Compatibility Promise introduced?'
         answers:
-            - { value: "'2.3'", correct: true }
-            - { value: "'2.8'", correct: false }
-            - { value: "'2.0'", correct: false }
-            - { value: "'2.5'", correct: false }
-
-    -   question: When will Symfony break their Backward Compatibility Promise?
+            -
+                value: '''2.3'''
+                correct: true
+            -
+                value: '''2.8'''
+                correct: false
+            -
+                value: '''2.0'''
+                correct: false
+            -
+                value: '''2.5'''
+                correct: false
+    -
+        question: 'When will Symfony break their Backward Compatibility Promise?'
         answers:
-            - { value: When a feature is Experimental Features, correct: true }
-            - { value: When the code is tagged @internal, correct: true }
-            - { value: When they have to fix a security issue, correct: true }
-            - { value: 'When code exists in a directory containing: *\Tests\', correct: true }
-            - { value: When a company pays to have a change, correct: false }
-            - { value: When it is fixing a bug, correct: false }
-
-    -   question: Does Symfony's Backward Compatibility Promise apply when you type hint against an interface?
+            -
+                value: 'When a feature is Experimental Features'
+                correct: true
+            -
+                value: 'When the code is tagged @internal'
+                correct: true
+            -
+                value: 'When they have to fix a security issue'
+                correct: true
+            -
+                value: 'When code exists in a directory containing: *\Tests\'
+                correct: true
+            -
+                value: 'When a company pays to have a change'
+                correct: false
+            -
+                value: 'When it is fixing a bug'
+                correct: false
+    -
+        question: 'Does Symfony''s Backward Compatibility Promise apply when you type hint against an interface?'
         answers:
-            - { value: Yes, correct: true }
-            - { value: No, correct: false }
-
-    -   question: Does Symfony's Backward Compatibility Promise apply when you implement an interface and add a method?
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: 'Does Symfony''s Backward Compatibility Promise apply when you implement an interface and add a method?'
         answers:
-            - { value: Yes, correct: true }
-            - { value: No, correct: false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Does Symfony's Backward Compatibility Promise apply when you implement an interface and add an argument?
+            
         answers:
-            - { value: Yes, correct: true }
-            - { value: No, correct: false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Does Symfony's Backward Compatibility Promise apply when you implement an interface and change return
             types on an implemented method?
+            
         answers:
-            - { value: Yes, correct: true }
-            - { value: No, correct: false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Does Symfony's Backward Compatibility Promise apply when you extend a class and add a new method?
+            
         answers:
-            - { value: No, correct: true }
-            - { value: Yes, correct: false }
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             Does Symfony's Backward Compatibility Promise apply when you extend a class and add a new property?
+            
         answers:
-            - { value: No, correct: true }
-            - { value: Yes, correct: false }
-
-    -   question: Can traits tagged with @internal be used in application code?
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: 'Can traits tagged with @internal be used in application code?'
         answers:
-            - { value: No, correct: true }
-            - { value: Yes, correct: false }
-
-    -   question: Can traits tagged with @internal be used in application code?
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: 'Can traits tagged with @internal be used in application code?'
         answers:
-            - { value: No, correct: true }
-            - { value: Yes, correct: false }
-
-    -   question: How often does Symfony remove deprecated code?
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: 'How often does Symfony remove deprecated code?'
         answers:
-            - { value: Every 2 years, correct: true }
-            - { value: Every year, correct: false }
-            - { value: Every 6 months, correct: false }
-            - { value: Every 3 months, correct: false }
-
-    -   question: How does Symfony recommend you name abstract classes?
+            -
+                value: 'Every 2 years'
+                correct: true
+            -
+                value: 'Every year'
+                correct: false
+            -
+                value: 'Every 6 months'
+                correct: false
+            -
+                value: 'Every 3 months'
+                correct: false
+    -
+        question: 'How does Symfony recommend you name abstract classes?'
         answers:
-            - { value: Prefix with the class name with Abstract, correct: true }
-            - { value: Suffix with the class name with Abstract, correct: false }
-            - { value: There is no required naming convention, correct: false }
-
-    -   question: How does Symfony recommend you name web assets?
+            -
+                value: 'Prefix with the class name with Abstract'
+                correct: true
+            -
+                value: 'Suffix with the class name with Abstract'
+                correct: false
+            -
+                value: 'There is no required naming convention'
+                correct: false
+    -
+        question: 'How does Symfony recommend you name web assets?'
         answers:
-            - { value: snake_case, correct: true }
-            - { value: camelCase, correct: false }
-            - { value: PascalCase, correct: false }
-
-    -   question: How does Symfony recommend you name interfaces?
+            -
+                value: snake_case
+                correct: true
+            -
+                value: camelCase
+                correct: false
+            -
+                value: PascalCase
+                correct: false
+    -
+        question: 'How does Symfony recommend you name interfaces?'
         answers:
-            - { value: Prefix with the class name with Interface, correct: true }
-            - { value: Suffix with the class name with Interface, correct: false }
-            - { value: There is no required naming convention, correct: false }
-
-    -   question: How does Symfony recommend you name classes that extend Exception?
+            -
+                value: 'Prefix with the class name with Interface'
+                correct: true
+            -
+                value: 'Suffix with the class name with Interface'
+                correct: false
+            -
+                value: 'There is no required naming convention'
+                correct: false
+    -
+        question: 'How does Symfony recommend you name classes that extend Exception?'
         answers:
-            - { value: Prefix with the class name with Exception, correct: true }
-            - { value: Suffix with the class name with Exception, correct: false }
-            - { value: There is no required naming convention, correct: false }
-
-    -   question: |
+            -
+                value: 'Prefix with the class name with Exception'
+                correct: true
+            -
+                value: 'Suffix with the class name with Exception'
+                correct: false
+            -
+                value: 'There is no required naming convention'
+                correct: false
+    -
+        question: |
             What is the output of the following?
-
+            
             <?php
-
+            
             echo strlen('😄');
+            
         answers:
-            - { value: bool, correct: true }
-            - { value: int, correct: true }
-            - { value: float, correct: true }
-            - { value: boolean, correct: false }
-            - { value: Boolean, correct: false }
-            - { value: integer, correct: false }
-            - { value: double, correct: false }
-            - { value: real, correct: false }
+            -
+                value: bool
+                correct: true
+            -
+                value: int
+                correct: true
+            -
+                value: float
+                correct: true
+            -
+                value: boolean
+                correct: false
+            -
+                value: Boolean
+                correct: false
+            -
+                value: integer
+                correct: false
+            -
+                value: double
+                correct: false
+            -
+                value: real
+                correct: false

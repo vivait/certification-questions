@@ -1,200 +1,421 @@
-category: Event Dispatcher
+category: 'Event Dispatcher'
 questions:
-    -   question: |
+    -
+        question: |
             Is the following code correct?
-
+            
             use Symfony\Component\EventDispatcher\EventDispatcher;
-
+            
             $dispatcher = new EventDispatcher();
-
+            
             $dispatcher->dispatch('article.published');
+            
         answers:
-            - { value: Yes, correct: true }
-            - { value: No, correct: false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             What is the argument passed to listeners of kernel.exception?
+            
         answers:
-            - { value: ResponseEvent, correct: false }
-            - { value: PostExceptionEvent, correct: false }
-            - { value: ExceptionEvent, correct: true }
-            - { value: PostResponseEvent, correct: false }
-            - { value: GetResponseExceptionEvent, correct: false }
-            - { value: GetResponseForExceptionEvent, correct: false }
-
-    -   question: |
+            -
+                value: ResponseEvent
+                correct: false
+            -
+                value: PostExceptionEvent
+                correct: false
+            -
+                value: ExceptionEvent
+                correct: true
+            -
+                value: PostResponseEvent
+                correct: false
+            -
+                value: GetResponseExceptionEvent
+                correct: false
+            -
+                value: GetResponseForExceptionEvent
+                correct: false
+    -
+        question: |
             What is the argument passed to listeners of kernel.exception prior to Symfony 4.3?
+            
         answers:
-            - { value: GetResponseForExceptionEvent, correct: true }
-            - { value: ResponseEvent, correct: false }
-            - { value: PostExceptionEvent, correct: false }
-            - { value: ExceptionEvent, correct: false }
-            - { value: PostResponseEvent, correct: false }
-            - { value: GetResponseExceptionEvent, correct: false }
-
-    -   question: |
+            -
+                value: GetResponseForExceptionEvent
+                correct: true
+            -
+                value: ResponseEvent
+                correct: false
+            -
+                value: PostExceptionEvent
+                correct: false
+            -
+                value: ExceptionEvent
+                correct: false
+            -
+                value: PostResponseEvent
+                correct: false
+            -
+                value: GetResponseExceptionEvent
+                correct: false
+    -
+        question: |
             What is returned by $dispatcher->dispatch('bar.event', $event) in the following code?
-
+            
             $event = new OrderPlacedEvent($order);
             $dispatcher->dispatch('bar.event', $event);
+            
         answers:
-            - { value: $dispatcher, correct: false }
-            - { value: Nothing, correct: false }
-            - { value: "true", correct: false }
-            - { value: $event, correct: true }
-
-    -   question: "What is the argument passed to listeners of kernel.view after Symfony 4.3?"
+            -
+                value: $dispatcher
+                correct: false
+            -
+                value: Nothing
+                correct: false
+            -
+                value: 'true'
+                correct: false
+            -
+                value: $event
+                correct: true
+    -
+        question: 'What is the argument passed to listeners of kernel.view after Symfony 4.3?'
         answers:
-            - { value: ViewEvent, correct: true }
-            - { value: ResponseEvent, correct: false }
-            - { value: ResponseViewEvent, correct: false }
-            - { value: GetResponseForControllerResultEvent, correct: false }
-            - { value: RequestViewEvent, correct: false }
-            - { value: FinishRequestEvent, correct: false }
-
-    -   question: "What is the argument passed to listeners of kernel.view before Symfony 4.3?"
+            -
+                value: ViewEvent
+                correct: true
+            -
+                value: ResponseEvent
+                correct: false
+            -
+                value: ResponseViewEvent
+                correct: false
+            -
+                value: GetResponseForControllerResultEvent
+                correct: false
+            -
+                value: RequestViewEvent
+                correct: false
+            -
+                value: FinishRequestEvent
+                correct: false
+    -
+        question: 'What is the argument passed to listeners of kernel.view before Symfony 4.3?'
         answers:
-            - { value: ViewEvent, correct: false }
-            - { value: ResponseEvent, correct: false }
-            - { value: GetControllerEvent, correct: false }
-            - { value: GetResponseForControllerResultEvent, correct: true }
-            - { value: GetViewEvent, correct: false }
-            - { value: GetRequestEvent, correct: false }
-
-    -   question: "What is the argument passed to listeners of kernel.request before Symfony 4.3?"
+            -
+                value: ViewEvent
+                correct: false
+            -
+                value: ResponseEvent
+                correct: false
+            -
+                value: GetControllerEvent
+                correct: false
+            -
+                value: GetResponseForControllerResultEvent
+                correct: true
+            -
+                value: GetViewEvent
+                correct: false
+            -
+                value: GetRequestEvent
+                correct: false
+    -
+        question: 'What is the argument passed to listeners of kernel.request before Symfony 4.3?'
         answers:
-            - { value: GetResponseEvent, correct: true }
-            - { value: ViewEvent, correct: false }
-            - { value: GetViewEvent, correct: false }
-            - { value: GetResponseForControllerResultEvent, correct: false }
-            - { value: GetRequestEvent, correct: false }
-            - { value: FinishRequestEvent, correct: false }
-
-    -   question: "What is the argument passed to listeners of kernel.request after Symfony 4.3?"
+            -
+                value: GetResponseEvent
+                correct: true
+            -
+                value: ViewEvent
+                correct: false
+            -
+                value: GetViewEvent
+                correct: false
+            -
+                value: GetResponseForControllerResultEvent
+                correct: false
+            -
+                value: GetRequestEvent
+                correct: false
+            -
+                value: FinishRequestEvent
+                correct: false
+    -
+        question: 'What is the argument passed to listeners of kernel.request after Symfony 4.3?'
         answers:
-            - { value: RequestEvent, correct: true }
-            - { value: ViewEvent, correct: false }
-            - { value: ResponseEvent, correct: false }
-            - { value: ResponseViewEvent, correct: false }
-            - { value: GetResponseForControllerResultEvent, correct: false }
-            - { value: RequestViewEvent, correct: false }
-            - { value: FinishRequestEvent, correct: false }
-
-    -   question: "What is the argument passed to listeners of kernel.controller before Symfony 4.3?"
+            -
+                value: RequestEvent
+                correct: true
+            -
+                value: ViewEvent
+                correct: false
+            -
+                value: ResponseEvent
+                correct: false
+            -
+                value: ResponseViewEvent
+                correct: false
+            -
+                value: GetResponseForControllerResultEvent
+                correct: false
+            -
+                value: RequestViewEvent
+                correct: false
+            -
+                value: FinishRequestEvent
+                correct: false
+    -
+        question: 'What is the argument passed to listeners of kernel.controller before Symfony 4.3?'
         answers:
-            - { value: FilterControllerEvent, correct: true }
-            - { value: GetResponseEvent, correct: false }
-            - { value: ViewEvent, correct: false }
-            - { value: GetResponseForControllerResultEvent, correct: false }
-            - { value: RequestViewEvent, correct: false }
-            - { value: FinishRequestEvent, correct: false }
-
-    -   question: "What is the argument passed to listeners of kernel.controller after Symfony 4.3?"
+            -
+                value: FilterControllerEvent
+                correct: true
+            -
+                value: GetResponseEvent
+                correct: false
+            -
+                value: ViewEvent
+                correct: false
+            -
+                value: GetResponseForControllerResultEvent
+                correct: false
+            -
+                value: RequestViewEvent
+                correct: false
+            -
+                value: FinishRequestEvent
+                correct: false
+    -
+        question: 'What is the argument passed to listeners of kernel.controller after Symfony 4.3?'
         answers:
-            - { value: ControllerEvent, correct: true }
-            - { value: RequestEvent, correct: false }
-            - { value: ViewEvent, correct: false }
-            - { value: GetResponseForControllerResultEvent, correct: false }
-            - { value: RequestViewEvent, correct: false }
-            - { value: FinishRequestEvent, correct: false }
-
-    -   question: "What is the argument passed to listeners of kernel.controller_arguments before Symfony 4.3?"
+            -
+                value: ControllerEvent
+                correct: true
+            -
+                value: RequestEvent
+                correct: false
+            -
+                value: ViewEvent
+                correct: false
+            -
+                value: GetResponseForControllerResultEvent
+                correct: false
+            -
+                value: RequestViewEvent
+                correct: false
+            -
+                value: FinishRequestEvent
+                correct: false
+    -
+        question: 'What is the argument passed to listeners of kernel.controller_arguments before Symfony 4.3?'
         answers:
-            - { value: FilterControllerArgumentsEvent, correct: true }
-            - { value: GetResponseEvent, correct: false }
-            - { value: ViewEvent, correct: false }
-            - { value: GetResponseForControllerResultEvent, correct: true }
-            - { value: RequestViewEvent, correct: false }
-            - { value: FinishRequestEvent, correct: false }
-
-    -   question: "What is the argument passed to listeners of kernel.controller_arguments after Symfony 4.3?"
+            -
+                value: FilterControllerArgumentsEvent
+                correct: true
+            -
+                value: GetResponseEvent
+                correct: false
+            -
+                value: ViewEvent
+                correct: false
+            -
+                value: GetResponseForControllerResultEvent
+                correct: true
+            -
+                value: RequestViewEvent
+                correct: false
+            -
+                value: FinishRequestEvent
+                correct: false
+    -
+        question: 'What is the argument passed to listeners of kernel.controller_arguments after Symfony 4.3?'
         answers:
-            - { value: ControllerArgumentsEvent, correct: false }
-            - { value: RequestEvent, correct: false }
-            - { value: ViewEvent, correct: false }
-            - { value: GetResponseForControllerResultEvent, correct: true }
-            - { value: RequestViewEvent, correct: false }
-            - { value: FinishRequestEvent, correct: false }
-
-    -   question: "From an Event instance, is it possible to get the EventDispatcher instance that dispatched this event?"
+            -
+                value: ControllerArgumentsEvent
+                correct: false
+            -
+                value: RequestEvent
+                correct: false
+            -
+                value: ViewEvent
+                correct: false
+            -
+                value: GetResponseForControllerResultEvent
+                correct: true
+            -
+                value: RequestViewEvent
+                correct: false
+            -
+                value: FinishRequestEvent
+                correct: false
+    -
+        question: 'From an Event instance, is it possible to get the EventDispatcher instance that dispatched this event?'
         answers:
-            - { value: Yes, correct: false }
-            - { value: No, correct: true }
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#event-name-introspection
-
-    -   question: "What happens if two listeners have the same priority?"
+            
+    -
+        question: 'What happens if two listeners have the same priority?'
         answers:
-            - { value: They are executed in the order that they were added to the dispatcher., correct: true }
-            - { value: It throws an InvalidPriorityException., correct: false }
-            - { value: They are executed in the alphanumeric order., correct: false }
+            -
+                value: 'They are executed in the order that they were added to the dispatcher.'
+                correct: true
+            -
+                value: 'It throws an InvalidPriorityException.'
+                correct: false
+            -
+                value: 'They are executed in the alphanumeric order.'
+                correct: false
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#event-name-introspection
-
-    -   question: "How does one connect a listener?"
+            
+    -
+        question: 'How does one connect a listener?'
         answers:
-            - { value: "$dispatcher->addListener('acme.foo.action', [$listener, 'onFooAction']);", correct: true }
-            - { value: "$dispatcher->addListener('acme.foo.action', $listener, 'onFooAction');", correct: false }
-            - { value: "$dispatcher->connectListener('acme.foo.action', $listener, 'onFooAction');", correct: false }
-            - { value: "$dispatcher->connectListener('acme.foo.action', [$listener, 'onFooAction']);", correct: false }
+            -
+                value: '$dispatcher->addListener(''acme.foo.action'', [$listener, ''onFooAction'']);'
+                correct: true
+            -
+                value: '$dispatcher->addListener(''acme.foo.action'', $listener, ''onFooAction'');'
+                correct: false
+            -
+                value: '$dispatcher->connectListener(''acme.foo.action'', $listener, ''onFooAction'');'
+                correct: false
+            -
+                value: '$dispatcher->connectListener(''acme.foo.action'', [$listener, ''onFooAction'']);'
+                correct: false
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#connecting-listeners
-
-    -   question: "How does one connect a listener with a priority of 3?"
+            
+    -
+        question: 'How does one connect a listener with a priority of 3?'
         answers:
-            - { value: "$dispatcher->addListener('acme.foo.action', [$listener, 'onFooAction'], 3);", correct: true }
-            - { value: "$dispatcher->addListener(3, 'acme.foo.action', 3, $listener, 'onFooAction');", correct: false }
-            - { value: "$dispatcher->connectListener('acme.foo.action', 3, $listener, 'onFooAction');", correct: false }
-            - { value: "$dispatcher->connectListener('acme.foo.action', [$listener, 'onFooAction'], 3);", correct: false }
+            -
+                value: '$dispatcher->addListener(''acme.foo.action'', [$listener, ''onFooAction''], 3);'
+                correct: true
+            -
+                value: '$dispatcher->addListener(3, ''acme.foo.action'', 3, $listener, ''onFooAction'');'
+                correct: false
+            -
+                value: '$dispatcher->connectListener(''acme.foo.action'', 3, $listener, ''onFooAction'');'
+                correct: false
+            -
+                value: '$dispatcher->connectListener(''acme.foo.action'', [$listener, ''onFooAction''], 3);'
+                correct: false
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#connecting-listeners
-
-    -   question: "Which of the following is a valid way to connect a listener?"
+            
+    -
+        question: 'Which of the following is a valid way to connect a listener?'
         answers:
-            - { value: "$dispatcher->addListener('acme.foo.action', function (Event $event) {});", correct: true }
-            - { value: "$dispatcher->addListener('acme.foo.action', [$listener, 'onFooAction']);", correct: true }
-            - { value: "$dispatcher->addListener('acme.foo.action', [$listener, 'onFooAction'], 3);", correct: true }
-            - { value: "$dispatcher->addListener('acme.foo.action', $listener, 'onFooAction');", correct: false }
-            - { value: "$dispatcher->connectListener('acme.foo.action', $listener, 'onFooAction');", correct: false }
-            - { value: "$dispatcher->connectListener('acme.foo.action', [$listener, 'onFooAction']);", correct: false }
-            - { value: "$dispatcher->connectListener('acme.foo.action', function (Event $event) {});", correct: false }
+            -
+                value: '$dispatcher->addListener(''acme.foo.action'', function (Event $event) {});'
+                correct: true
+            -
+                value: '$dispatcher->addListener(''acme.foo.action'', [$listener, ''onFooAction'']);'
+                correct: true
+            -
+                value: '$dispatcher->addListener(''acme.foo.action'', [$listener, ''onFooAction''], 3);'
+                correct: true
+            -
+                value: '$dispatcher->addListener(''acme.foo.action'', $listener, ''onFooAction'');'
+                correct: false
+            -
+                value: '$dispatcher->connectListener(''acme.foo.action'', $listener, ''onFooAction'');'
+                correct: false
+            -
+                value: '$dispatcher->connectListener(''acme.foo.action'', [$listener, ''onFooAction'']);'
+                correct: false
+            -
+                value: '$dispatcher->connectListener(''acme.foo.action'', function (Event $event) {});'
+                correct: false
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#connecting-listeners
-
-
-    -   question: "Which service container mechanisms could one use to connect event listeners registered as services?"
+            
+    -
+        question: 'Which service container mechanisms could one use to connect event listeners registered as services?'
         answers:
-            - { value: "Compiler passes", correct: true }
-            - { value: "Tags", correct: true }
-            - { value: "Service configurators", correct: false }
-            - { value: "Method calls on the listeners within the service container config", correct: false }
+            -
+                value: 'Compiler passes'
+                correct: true
+            -
+                value: Tags
+                correct: true
+            -
+                value: 'Service configurators'
+                correct: false
+            -
+                value: 'Method calls on the listeners within the service container config'
+                correct: false
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#connecting-listeners
-
-    -   question: "What class must one extend to create an event?"
+            
+    -
+        question: 'What class must one extend to create an event?'
         answers:
-            - { value: Symfony\Component\EventDispatcher\Event, correct: true }
-            - { value: Symfony\Bridge\EventDispatcher\Event, correct: false }
-            - { value: Symfony\Bridge\EventDispatcher\BaseEvent, correct: false }
-            - { value: Symfony\Bridge\EventDispatcher\BaseEvent, correct: false }
+            -
+                value: Symfony\Component\EventDispatcher\Event
+                correct: true
+            -
+                value: Symfony\Bridge\EventDispatcher\Event
+                correct: false
+            -
+                value: Symfony\Bridge\EventDispatcher\BaseEvent
+                correct: false
+            -
+                value: Symfony\Bridge\EventDispatcher\BaseEvent
+                correct: false
         help: |
             https://symfony.com/doc/3.4/components/event_dispatcher.html#creating-an-event-class
-
-    -   question: "What interface must an EventSubscriber extend?"
+            
+    -
+        question: 'What interface must an EventSubscriber extend?'
         answers:
-            - { value: Symfony\Component\EventDispatcher\EventSubscriberInterface, correct: true }
-            - { value: Symfony\Component\EventDispatcher\Subscriber\EventSubscriberInterface, correct: false }
-            - { value: Symfony\Component\EventDispatcher\EventSubscriber, correct: false }
-            - { value: Symfony\Component\DependencyInjection\EventSubscriber, correct: false }
-            - { value: Symfony\Component\DependencyInjection\EventSubscriberInterface, correct: false }
+            -
+                value: Symfony\Component\EventDispatcher\EventSubscriberInterface
+                correct: true
+            -
+                value: Symfony\Component\EventDispatcher\Subscriber\EventSubscriberInterface
+                correct: false
+            -
+                value: Symfony\Component\EventDispatcher\EventSubscriber
+                correct: false
+            -
+                value: Symfony\Component\DependencyInjection\EventSubscriber
+                correct: false
+            -
+                value: Symfony\Component\DependencyInjection\EventSubscriberInterface
+                correct: false
         help: |
             https://symfony.com/doc/3.4/components/event_dispatcher.html#using-event-subscribers
-
-    -   question: "What method must one use in order to attach a subscriber to the dispatcher?"
+            
+    -
+        question: 'What method must one use in order to attach a subscriber to the dispatcher?'
         answers:
-            - { value: "$dispatcher->addSubscriber($subscriber);", correct: true }
-            - { value: "$dispatcher->attachSubscriber($subscriber);", correct: false }
-            - { value: "$dispatcher->connectSubscriber($subscriber);", correct: false }
-            - { value: "You must manually traverse getSubscribedEvents() and connect listeners", correct: false }
+            -
+                value: $dispatcher->addSubscriber($subscriber);
+                correct: true
+            -
+                value: $dispatcher->attachSubscriber($subscriber);
+                correct: false
+            -
+                value: $dispatcher->connectSubscriber($subscriber);
+                correct: false
+            -
+                value: 'You must manually traverse getSubscribedEvents() and connect listeners'
+                correct: false
         help: |
             https://symfony.com/doc/3.4/components/event_dispatcher.html#using-event-subscribers
+            

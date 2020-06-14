@@ -1,314 +1,548 @@
-category: PHP Standards Recommendations
+category: 'PHP Standards Recommendations'
 questions:
-    -   question: 'Which are the standards followed by Symfony ?'
+    -
+        question: 'Which are the standards followed by Symfony ?'
         answers:
-            - {value: PSR-0, correct: false}
-            - {value: PSR-1,   correct: true}
-            - {value: PSR-2,   correct: true}
-            - {value: PSR-3,   correct: false}
-            - {value: PSR-4,  correct: true}
-            - {value: PSR-5, correct: false}
-            - {value: PSR-6, correct: false}
-            - {value: PSR-7, correct: false}
-
-    -   question: 'What is PSR-3?'
+            -
+                value: PSR-0
+                correct: false
+            -
+                value: PSR-1
+                correct: true
+            -
+                value: PSR-2
+                correct: true
+            -
+                value: PSR-3
+                correct: false
+            -
+                value: PSR-4
+                correct: true
+            -
+                value: PSR-5
+                correct: false
+            -
+                value: PSR-6
+                correct: false
+            -
+                value: PSR-7
+                correct: false
+    -
+        question: 'What is PSR-3?'
         answers:
-            - {value: A standard way to convert fully qualified names into file paths., correct: false}
-            - {value: A common logger interface.,   correct: true}
-            - {value: A utility to convert non-namespaced PHP classes into namespaced ones,   correct: false}
-            - {value: A coding style guide.,   correct: false}
-
-    -   question: 'Which PSR draft is meant to be a joke?'
+            -
+                value: 'A standard way to convert fully qualified names into file paths.'
+                correct: false
+            -
+                value: 'A common logger interface.'
+                correct: true
+            -
+                value: 'A utility to convert non-namespaced PHP classes into namespaced ones'
+                correct: false
+            -
+                value: 'A coding style guide.'
+                correct: false
+    -
+        question: 'Which PSR draft is meant to be a joke?'
         answers:
-            - {value: PSR-8, correct: true}
-            - {value: PSR-9,   correct: false}
-            - {value: PSR-0,   correct: false}
-            - {value: PSR-12,   correct: false}
-
-    -   question: 'Which Symfony component has been created to provide a PSR-6 implementation?'
+            -
+                value: PSR-8
+                correct: true
+            -
+                value: PSR-9
+                correct: false
+            -
+                value: PSR-0
+                correct: false
+            -
+                value: PSR-12
+                correct: false
+    -
+        question: 'Which Symfony component has been created to provide a PSR-6 implementation?'
         answers:
-            - {value: Filesystem, correct: false}
-            - {value: PropertyAccess,   correct: false}
-            - {value: Cache,   correct: true}
-            - {value: Inflector,   correct: false}
-            - {value: HTTP foundation,   correct: false}
-
-    -   question: 'What is PSR-7?'
+            -
+                value: Filesystem
+                correct: false
+            -
+                value: PropertyAccess
+                correct: false
+            -
+                value: Cache
+                correct: true
+            -
+                value: Inflector
+                correct: false
+            -
+                value: 'HTTP foundation'
+                correct: false
+    -
+        question: 'What is PSR-7?'
         answers:
-            - {value: HTTP message interface.,   correct: true}
-            - {value: A container interface., correct: false}
-            - {value: Huggable Interface.,   correct: false}
-            - {value: A logger interface.,   correct: false}
-
-    -   question: 'What is PSR-1?'
+            -
+                value: 'HTTP message interface.'
+                correct: true
+            -
+                value: 'A container interface.'
+                correct: false
+            -
+                value: 'Huggable Interface.'
+                correct: false
+            -
+                value: 'A logger interface.'
+                correct: false
+    -
+        question: 'What is PSR-1?'
         answers:
-            - {value: Basic Coding Standard.,   correct: true}
-            - {value: Autoloading Standard., correct: false}
-            - {value: Huggable Interface.,   correct: false}
-            - {value: A logger interface.,   correct: false}
-
-    -   question: 'What is PSR-4?'
+            -
+                value: 'Basic Coding Standard.'
+                correct: true
+            -
+                value: 'Autoloading Standard.'
+                correct: false
+            -
+                value: 'Huggable Interface.'
+                correct: false
+            -
+                value: 'A logger interface.'
+                correct: false
+    -
+        question: 'What is PSR-4?'
         answers:
-            - {value: Autoloading Standard.,   correct: true}
-            - {value: A logger interface., correct: false}
-            - {value: Huggable Interface.,   correct: false}
-            - {value: HTTP Message Interface.,   correct: false}
-
-    -   question: 'What is PSR-6?'
+            -
+                value: 'Autoloading Standard.'
+                correct: true
+            -
+                value: 'A logger interface.'
+                correct: false
+            -
+                value: 'Huggable Interface.'
+                correct: false
+            -
+                value: 'HTTP Message Interface.'
+                correct: false
+    -
+        question: 'What is PSR-6?'
         answers:
-            - {value: Caching Interface.,   correct: true}
-            - {value: Autoloading Standard., correct: false}
-            - {value: HTTP Client.,   correct: false}
-            - {value: A logger interface.,   correct: false}
-
-    -   question: 'What is PSR-11?'
+            -
+                value: 'Caching Interface.'
+                correct: true
+            -
+                value: 'Autoloading Standard.'
+                correct: false
+            -
+                value: 'HTTP Client.'
+                correct: false
+            -
+                value: 'A logger interface.'
+                correct: false
+    -
+        question: 'What is PSR-11?'
         answers:
-            - {value: Container Interface.,   correct: true}
-            - {value: Autoloading Standard., correct: false}
-            - {value: Huggable Interface.,   correct: false}
-            - {value: A logger interface.,   correct: false}
-
-    -   question: 'What is PSR-12?'
+            -
+                value: 'Container Interface.'
+                correct: true
+            -
+                value: 'Autoloading Standard.'
+                correct: false
+            -
+                value: 'Huggable Interface.'
+                correct: false
+            -
+                value: 'A logger interface.'
+                correct: false
+    -
+        question: 'What is PSR-12?'
         answers:
-            - {value: Extended Coding Style Guide.,   correct: true}
-            - {value: Autoloading Standard., correct: false}
-            - {value: Huggable Interface.,   correct: false}
-            - {value: A logger interface.,   correct: false}
-
-    -   question: 'What is PSR-13?'
+            -
+                value: 'Extended Coding Style Guide.'
+                correct: true
+            -
+                value: 'Autoloading Standard.'
+                correct: false
+            -
+                value: 'Huggable Interface.'
+                correct: false
+            -
+                value: 'A logger interface.'
+                correct: false
+    -
+        question: 'What is PSR-13?'
         answers:
-            - {value: Hypermedia Links.,   correct: true}
-            - {value: HTTP Handlers., correct: false}
-            - {value: HTTP Message Interface.,   correct: false}
-            - {value: A logger interface.,   correct: false}
-
-    -   question: 'What is PSR-14?'
+            -
+                value: 'Hypermedia Links.'
+                correct: true
+            -
+                value: 'HTTP Handlers.'
+                correct: false
+            -
+                value: 'HTTP Message Interface.'
+                correct: false
+            -
+                value: 'A logger interface.'
+                correct: false
+    -
+        question: 'What is PSR-14?'
         answers:
-            - {value: Event Dispatcher.,   correct: true}
-            - {value: Container Interface., correct: false}
-            - {value: Simple Cache.,   correct: false}
-            - {value: A logger interface.,   correct: false}
-
-    -   question: 'What is PSR-15?'
+            -
+                value: 'Event Dispatcher.'
+                correct: true
+            -
+                value: 'Container Interface.'
+                correct: false
+            -
+                value: 'Simple Cache.'
+                correct: false
+            -
+                value: 'A logger interface.'
+                correct: false
+    -
+        question: 'What is PSR-15?'
         answers:
-            - {value: HTTP Handlers.,   correct: true}
-            - {value: Hypermedia Links., correct: false}
-            - {value: Huggable Interface.,   correct: false}
-            - {value: Caching Interface.,   correct: false}
-
-    -   question: 'What is PSR-16?'
+            -
+                value: 'HTTP Handlers.'
+                correct: true
+            -
+                value: 'Hypermedia Links.'
+                correct: false
+            -
+                value: 'Huggable Interface.'
+                correct: false
+            -
+                value: 'Caching Interface.'
+                correct: false
+    -
+        question: 'What is PSR-16?'
         answers:
-            - {value: Simple Cache.,   correct: true}
-            - {value: Autoloading Standard., correct: false}
-            - {value: Huggable Interface.,   correct: false}
-            - {value: A logger interface.,   correct: false}
-
-    -   question: 'What is PSR-17?'
+            -
+                value: 'Simple Cache.'
+                correct: true
+            -
+                value: 'Autoloading Standard.'
+                correct: false
+            -
+                value: 'Huggable Interface.'
+                correct: false
+            -
+                value: 'A logger interface.'
+                correct: false
+    -
+        question: 'What is PSR-17?'
         answers:
-            - {value: HTTP Factories.,   correct: true}
-            - {value: Hypermedia Links., correct: false}
-            - {value: Huggable Interface.,   correct: false}
-            - {value: HTTP Message Interface.,   correct: false}
-
-    -   question: 'What is PSR-18?'
+            -
+                value: 'HTTP Factories.'
+                correct: true
+            -
+                value: 'Hypermedia Links.'
+                correct: false
+            -
+                value: 'Huggable Interface.'
+                correct: false
+            -
+                value: 'HTTP Message Interface.'
+                correct: false
+    -
+        question: 'What is PSR-18?'
         answers:
-            - {value: HTTP Client.,   correct: true}
-            - {value: HTTP Factories., correct: false}
-            - {value: Huggable Interface.,   correct: false}
-            - {value: HTTP Handlers.,   correct: false}
-
-    -   question: 'What is PSR-0?'
+            -
+                value: 'HTTP Client.'
+                correct: true
+            -
+                value: 'HTTP Factories.'
+                correct: false
+            -
+                value: 'Huggable Interface.'
+                correct: false
+            -
+                value: 'HTTP Handlers.'
+                correct: false
+    -
+        question: 'What is PSR-0?'
         answers:
-            - {value: Autoloading Standard.,   correct: true}
-            - {value: Basic Coding Standard., correct: false}
-            - {value: Huggable Interface.,   correct: false}
-            - {value: HTTP Handlers.,   correct: false}
-
-    -   question: 'What is PSR-2?'
+            -
+                value: 'Autoloading Standard.'
+                correct: true
+            -
+                value: 'Basic Coding Standard.'
+                correct: false
+            -
+                value: 'Huggable Interface.'
+                correct: false
+            -
+                value: 'HTTP Handlers.'
+                correct: false
+    -
+        question: 'What is PSR-2?'
         answers:
-            - {value: Coding Style Guide.,   correct: true}
-            - {value: HTTP Handlers., correct: false}
-            - {value: Huggable Interface.,   correct: false}
-            - {value: Huggable Interface.,   correct: false}
-
-    -   question: 'Which character encoding does PSR-1 require?'
+            -
+                value: 'Coding Style Guide.'
+                correct: true
+            -
+                value: 'HTTP Handlers.'
+                correct: false
+            -
+                value: 'Huggable Interface.'
+                correct: false
+            -
+                value: 'Huggable Interface.'
+                correct: false
+    -
+        question: 'Which character encoding does PSR-1 require?'
         answers:
-            - {value: UTF-8 without BOM, correct: true}
-            - {value: UTF-8, correct: false}
-            - {value: ASCII, correct: false}
-
-    -   question: |
+            -
+                value: 'UTF-8 without BOM'
+                correct: true
+            -
+                value: UTF-8
+                correct: false
+            -
+                value: ASCII
+                correct: false
+    -
+        question: |
             Is the following code valid in PSR-1?
             function foo()
             {
             }
-
+            
             if (! function_exists('bar')) {
                 function bar()
                 {
                 }
             }
+            
         answers:
-            - {value: Yes, correct: true}
-            - {value: No, correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Is the following code valid in PSR-1?
             echo "<html>\n";
-
+            
             function foo()
             {
             }
+            
         answers:
-            - {value: No, correct: true}
-            - {value: Yes, correct: false}
-
-    -   question: Does PSR-1 recommend a case for properties?
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: 'Does PSR-1 recommend a case for properties?'
         answers:
-            - {value: 'No but, whatever naming convention is used should be applied consistently', correct: true}
-            - {value: $StudlyCaps, correct: false}
-            - {value: $camelCase, correct: false}
-            - {value: $under_score, correct: false}
-
-
-    -   question: |
+            -
+                value: 'No but, whatever naming convention is used should be applied consistently'
+                correct: true
+            -
+                value: $StudlyCaps
+                correct: false
+            -
+                value: $camelCase
+                correct: false
+            -
+                value: $under_score
+                correct: false
+    -
+        question: |
             Is the following code valid in PSR-12 ?
-
+            
             <?php declare(strict_types=1);
-
+            
             class SomeClass {
             }
+            
         answers:
-            - {value: No, correct: true}
-            - {value: Yes, correct: false}
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             Is the following code valid in PSR-12 ?
-
+            
             <?php
-
+            
             declare(strict_types=1);
-
+            
             use \App\OtherClass;
-
+            
             class SomeClass
             {
             }
+            
         answers:
-            - {value: No, correct: true}
-            - {value: Yes, correct: false}
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             Is the following code valid in PSR-12 ?
-
+            
             <?php
-
+            
             declare(strict_types=1);
-
+            
             use App\OtherClass;
-
+            
             class SomeClass
             {
                 use FirstTrait, SecondTrait;
             }
+            
         answers:
-            - {value: No, correct: true}
-            - {value: Yes, correct: false}
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             Is the following code valid in PSR-12 ?
-
+            
             <?php
-
+            
             declare(strict_types=1);
-
+            
             use App\OtherClass;
-
+            
             class SomeClass
             {
                 use FirstTrait;
                 use SecondTrait;
             }
+            
         answers:
-            - {value: Yes, correct: true}
-            - {value: No, correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Is the following code valid in PSR-12 ?
-
+            
             <?php
-
+            
             declare(strict_types=1);
-
+            
             use App\OtherClass;
-
+            
             abstract class SomeClass
             {
-
+            
                 abstract public function test()
                 {
                 }
             }
+            
         answers:
-            - {value: Yes, correct: true}
-            - {value: No, correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Is the following code valid in PSR-12 ?
-
+            
             <?php
-
+            
             declare(strict_types=1);
-
+            
             use App\OtherClass;
-
+            
             abstract class SomeClass
             {
-
+            
                 public abstract function test()
                 {
                 }
             }
+            
         answers:
-            - {value: No, correct: true}
-            - {value: Yes, correct: false}
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             Is the following code valid in PSR-12 ?
-
+            
             <?php
-
+            
             $instance = new class extends Foo implements HandleableInterface
             {
-
+            
             };
+            
         answers:
-            - {value: No, correct: true}
-            - {value: Yes, correct: false}
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             Is the following code valid in PSR-12 ?
-
+            
             <?php
-
+            
             $instance = new class extends Foo implements HandleableInterface {
-
+            
             };
+            
         answers:
-            - {value: Yes, correct: true}
-            - {value: No, correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Which PSRs define coding guidelines to keep consistent coding styles across projects?
+            
         answers:
-            - {value: PSR-0, correct: false}
-            - {value: PSR-2, correct: true}
-            - {value: PSR-1, correct: true}
-            - {value: PSR-4, correct: false}
-            - {value: PSR-3, correct: false}
-
-    -   question: |
+            -
+                value: PSR-0
+                correct: false
+            -
+                value: PSR-2
+                correct: true
+            -
+                value: PSR-1
+                correct: true
+            -
+                value: PSR-4
+                correct: false
+            -
+                value: PSR-3
+                correct: false
+    -
+        question: |
             Which of the following are valid in PSR-2?
+            
         answers:
-            - { value: "final public function test() {}", correct: true }
-            - { value: "public final function test() {}", correct: false }
+            -
+                value: 'final public function test() {}'
+                correct: true
+            -
+                value: 'public final function test() {}'
+                correct: false

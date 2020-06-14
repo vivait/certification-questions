@@ -1,29 +1,42 @@
 category: Arrays
 questions:
-    -   question: |
+    -
+        question: |
             What is the output of the following PHP script?
             ```
             <?php
-
+            
             $values = [37, 5, '09'];
-
+            
             $sorted = sort($values);
-
+            
             foreach ($sorted as $v) {
                 echo $v;
             }
             ```
+            
         answers:
-            - {value: '50937', correct: false}
-            - {value: 'An error', correct: true}
-            - {value: '09537', correct: false}
-            - {value: '50937', correct: false}
-            - {value: '375509', correct: false}
-    -   question: |
+            -
+                value: '50937'
+                correct: false
+            -
+                value: 'An error'
+                correct: true
+            -
+                value: '09537'
+                correct: false
+            -
+                value: '50937'
+                correct: false
+            -
+                value: '375509'
+                correct: false
+    -
+        question: |
             What is the output of the following PHP script?
-
+            
             <?php
-
+            
             $values = [
                 10,
                 20,
@@ -31,19 +44,28 @@ questions:
                 '123hello',
                 'hello123'
             ];
-
+            
             echo array_sum($values);
+            
         answers:
-            - {value: "'276'", correct: false}
-            - {value: "'30'", correct: false}
-            - {value: "'153'", correct: true}
-            - {value: 'An error', correct: false}
-
-    -   question: |
+            -
+                value: '''276'''
+                correct: false
+            -
+                value: '''30'''
+                correct: false
+            -
+                value: '''153'''
+                correct: true
+            -
+                value: 'An error'
+                correct: false
+    -
+        question: |
             What line of code should be substituted with /** line **/ to achieve an output of a?
-
+            
             <?php
-
+            
             $fruitAndVeg = [
                 'c' => 'Carrot',
                 'p' => 'Tomato',
@@ -51,91 +73,134 @@ questions:
                 't' => 'Potato',
                 'a' => 'Apple'
             ];
-
+            
             /** line **/
-
+            
             $keys = array_keys($fruitAndVeg);
-
+            
             echo $keys[0];
+            
         answers:
-            - {value: 'krsort($fruitAndVeg);', correct: false}
-            - {value: 'usort($fruitAndVeg);', correct: false}
-            - {value: 'sort($fruitAndVeg);', correct: false}
-            - {value: 'ksort($fruitAndVeg);', correct: true}
-
-    -   question: |
+            -
+                value: krsort($fruitAndVeg);
+                correct: false
+            -
+                value: usort($fruitAndVeg);
+                correct: false
+            -
+                value: sort($fruitAndVeg);
+                correct: false
+            -
+                value: ksort($fruitAndVeg);
+                correct: true
+    -
+        question: |
             In the following code, what is the key of the element with value 25?
-
+            
             <?php
-
+            
             $myArray = [
                 'foo' => 'bar',
                 7 => 15,
                 28
             ];
-
+            
             $myArray[] = 25;
+            
         answers:
-            - {value: "'29'", correct: false}
-            - {value: "'8'", correct: false}
-            - {value: "'0'", correct: false}
-            - {value: "'9'", correct: true}
-
-    -   question: 'How do you add the value 10 to an array called $myArray?'
+            -
+                value: '''29'''
+                correct: false
+            -
+                value: '''8'''
+                correct: false
+            -
+                value: '''0'''
+                correct: false
+            -
+                value: '''9'''
+                correct: true
+    -
+        question: 'How do you add the value 10 to an array called $myArray?'
         answers:
-            - {value: 'array_shift($myArray, 10);', correct: false}
-            - {value: 'array_unshift($myArray, 10);', correct: true}
-            - {value: '$myArray = array_merge($myArray, [10]);', correct: true}
-            - {value: '$myArray = array_merge($myArray, 10);', correct: false}
-
-    -   question: |
+            -
+                value: 'array_shift($myArray, 10);'
+                correct: false
+            -
+                value: 'array_unshift($myArray, 10);'
+                correct: true
+            -
+                value: '$myArray = array_merge($myArray, [10]);'
+                correct: true
+            -
+                value: '$myArray = array_merge($myArray, 10);'
+                correct: false
+    -
+        question: |
             What is the output of the following PHP script?
-
+            
             <?php
-
+            
             $values = [37, 5, '09'];
-
+            
             $sorted = sort($values);
-
+            
             foreach ($sorted as $v) {
                 echo $v;
             }
+            
         answers:
-            - {value: '50937', correct: false}
-            - {value: 'An error', correct: true}
-            - {value: '375509', correct: false}
-            - {value: '09537', correct: false}
-
-    -   question: |
+            -
+                value: '50937'
+                correct: false
+            -
+                value: 'An error'
+                correct: true
+            -
+                value: '375509'
+                correct: false
+            -
+                value: '09537'
+                correct: false
+    -
+        question: |
             What is the output ?
-
+            
             <?php
             $base_array = ['red', 'green', 'yellow', 'white'];
             $replacements_array = [0 => 'orange', 4 => 'blue'];
-
+            
             $result = array_replace($base_array, $replacements_array);
             print_r($result);
+            
         answers:
-            - {value: 'Array ( [0] => yellow [1] => white [2] => blue [3] => green [4] => orange )', correct: false}
-            - {value: 'Array ( [0] => orange [1] => green [2] => yellow [3] => white [4] => blue )', correct: true}
-            - {value: 'An error', correct: false}
-            - {value: 'Array ( [0] => blue [1] => white [2] => yellow [3] => green [4] => orange )', correct: false}
-
-
-    -   question: |
+            -
+                value: 'Array ( [0] => yellow [1] => white [2] => blue [3] => green [4] => orange )'
+                correct: false
+            -
+                value: 'Array ( [0] => orange [1] => green [2] => yellow [3] => white [4] => blue )'
+                correct: true
+            -
+                value: 'An error'
+                correct: false
+            -
+                value: 'Array ( [0] => blue [1] => white [2] => yellow [3] => green [4] => orange )'
+                correct: false
+    -
+        question: |
             In the PHP script below, what line of code should be substituted with /** line **/ to achieve an output of eeeeee?
-
+            
             <?php
             function sortByLength($a, $b)
             {
                 $lenA = strlen($a);
                 $lenB = strlen($b);
-
+            
                 if ($lenA == $lenB) { return 0; }
-
+            
                 /** line **/
             }
-
+            
             $values = [
                 'ccc',
                 'a',
@@ -144,83 +209,142 @@ questions:
                 'bb',
                 'fffff'
             ];
-
+            
             usort($values, 'sortByLength');
             echo $values[5];
+            
         answers:
-            - {value: 'return $lenA <=> $lenB;', correct: true}
-            - {value: 'return $lenA < $lenB ? 0 : -1;', correct: false}
-            - {value: 'return $lenB <=> $lenA;', correct: false}
-            - {value: 'return $lenA < $lenB ? 1 : -1;', correct: false}
-
-    -   question: |
+            -
+                value: 'return $lenA <=> $lenB;'
+                correct: true
+            -
+                value: 'return $lenA < $lenB ? 0 : -1;'
+                correct: false
+            -
+                value: 'return $lenB <=> $lenA;'
+                correct: false
+            -
+                value: 'return $lenA < $lenB ? 1 : -1;'
+                correct: false
+    -
+        question: |
             What is the output ?
-
+            
             <?php
             $base_array = ['red', 'green', 'yellow', 'white'];
             $replacements_array = [0 => 'orange', 4 => 'blue'];
-
+            
             $result = array_replace($base_array, $replacements_array);
             print_r($result);
+            
         answers:
-            - {value: 'Array ( [0] => blue [1] => white [2] => yellow [3] => green [4] => orange )', correct: false}
-            - {value: 'An error', correct: false}
-            - {value: 'Array ( [0] => yellow [1] => white [2] => blue [3] => green [4] => orange )', correct: false}
-            - {value: 'Array ( [0] => orange [1] => green [2] => yellow [3] => white [4] => blue )', correct: true}
-
-    -   question: |
+            -
+                value: 'Array ( [0] => blue [1] => white [2] => yellow [3] => green [4] => orange )'
+                correct: false
+            -
+                value: 'An error'
+                correct: false
+            -
+                value: 'Array ( [0] => yellow [1] => white [2] => blue [3] => green [4] => orange )'
+                correct: false
+            -
+                value: 'Array ( [0] => orange [1] => green [2] => yellow [3] => white [4] => blue )'
+                correct: true
+    -
+        question: |
             Given the $info array defined below, what is the best way to assign the first value to a variable called $name and the third value to a variable called $country?
-
+            
             <?php
-
+            
             $info = [
                 'Paul',
                 31,
                 'Australia'
             ];
+            
         answers:
-            - {value: 'list($name, , $country) = $info;', correct: true}
-            - {value: 'list($name, $country) = $info;', correct: false}
-            - {value: 'list($name, $age, $country) = $info;', correct: false}
-            - {value: 'array_list($name, $age, $country) = $info;', correct: false}
-
-    -   question: |
+            -
+                value: 'list($name, , $country) = $info;'
+                correct: true
+            -
+                value: 'list($name, $country) = $info;'
+                correct: false
+            -
+                value: 'list($name, $age, $country) = $info;'
+                correct: false
+            -
+                value: 'array_list($name, $age, $country) = $info;'
+                correct: false
+    -
+        question: |
             How can you get a random value of the following array?
-
+            
             $values = ['foo', 'key' => 'bar', true, 'baz', 36];
+            
         answers:
-            - {value: '$values[array_rand($values)]', correct: true}
-            - {value: 'array_shuffle($values)', correct: false}
-            - {value: 'array_rand(array_flip($values))', correct: false}
-            - {value: '$values[shuffle($values)]', correct: false}
-            - {value: 'array_rand($values)', correct: false}
-
-    -   question: What is the average complexity of an insertion in a PHP array ?
+            -
+                value: '$values[array_rand($values)]'
+                correct: true
+            -
+                value: array_shuffle($values)
+                correct: false
+            -
+                value: array_rand(array_flip($values))
+                correct: false
+            -
+                value: '$values[shuffle($values)]'
+                correct: false
+            -
+                value: array_rand($values)
+                correct: false
+    -
+        question: 'What is the average complexity of an insertion in a PHP array ?'
         answers:
-            - {value: 'O(n log (n))', correct: false}
-            - {value: 'O(n2)', correct: false}
-            - {value: 'O(1)', correct: true}
-            - {value: 'O(n)', correct: false}
-            - {value: 'O(log (n))', correct: false}
+            -
+                value: 'O(n log (n))'
+                correct: false
+            -
+                value: O(n2)
+                correct: false
+            -
+                value: O(1)
+                correct: true
+            -
+                value: O(n)
+                correct: false
+            -
+                value: 'O(log (n))'
+                correct: false
         help: |
             https://en.wikipedia.org/wiki/Hash_table
-
-    -   question: |
+            
+    -
+        question: |
             What is the output ?
-
+            
             <?php
             array_combine([1, 2, 3, 6], [4,5,6]);
+            
         answers:
-            - {value: '[1 => 4, 2 => 5, 3 => 6]', correct: false}
-            - {value: '[1 => 2, 3 => 4, 5 => 6]', correct: false}
-            - {value: '[1, 2, 3, 4, 5, 6]', correct: false}
-            - {value: 'An error', correct: true}
+            -
+                value: '[1 => 4, 2 => 5, 3 => 6]'
+                correct: false
+            -
+                value: '[1 => 2, 3 => 4, 5 => 6]'
+                correct: false
+            -
+                value: '[1, 2, 3, 4, 5, 6]'
+                correct: false
+            -
+                value: 'An error'
+                correct: true
         help: |
             https://www.php.net/manual/en/function.array-combine.php
-
-    -   question: |
+            
+    -
+        question: |
             What is the result of the following script?
-
+            
             $values = [
                 15,
                 12,
@@ -228,50 +352,76 @@ questions:
                 34,
                 15 => 25
             ];
-
+            
             $key = array_search('15', $values);
-
+            
             if (! $key) {
                 echo "Not found...";
             } else {
                 echo $key . ' - ' . strtolower(gettype($values[$key]));
             }
+            
         answers:
-            - {value: 'Not found', correct: true}
-            - {value: '0 - integer', correct: false}
-            - {value: '4 - integer', correct: false}
-            - {value: '2 - string', correct: false}
+            -
+                value: 'Not found'
+                correct: true
+            -
+                value: '0 - integer'
+                correct: false
+            -
+                value: '4 - integer'
+                correct: false
+            -
+                value: '2 - string'
+                correct: false
         help: |
             https://www.php.net/array
             https://php.net/manual/en/function.array-search.php
             ((0 == false) === true)
-
-    -   question: |
+            
+    -
+        question: |
             What is the result of the following script?
-
+            
             $arr = [
                 -2 => 3,
                 'value'
             ];
-
+            
             var_dump(array_search('value', $arr));
+            
         answers:
-            - {value: '"0"', correct: true}
-            - {value: '"-1"', correct: false}
-            - {value: '"-3"', correct: false}
-
-    -   question: |
+            -
+                value: '"0"'
+                correct: true
+            -
+                value: '"-1"'
+                correct: false
+            -
+                value: '"-3"'
+                correct: false
+    -
+        question: |
             What is the result of the following script?
-
+            
             <?php
             $array = ['a1' => 'x', 'a2' => 'e', 'a3' => 'z'];
             asort($array);
-
+            
             foreach ($array as $keys => $values) {
                 print "$keys = $values";
             }
+            
         answers:
-            - {value: 'a2 = ea1 = xa3 = z', correct: true}
-            - {value: 'a1 = ea2 = xa3 = z', correct: false}
-            - {value: '"0 = e1 = x2 = z"', correct: false}
-            - {value: 'An error', correct: false}
+            -
+                value: 'a2 = ea1 = xa3 = z'
+                correct: true
+            -
+                value: 'a1 = ea2 = xa3 = z'
+                correct: false
+            -
+                value: '"0 = e1 = x2 = z"'
+                correct: false
+            -
+                value: 'An error'
+                correct: false

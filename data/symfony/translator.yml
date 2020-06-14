@@ -1,275 +1,533 @@
 category: Transalator
 questions:
-    -   question: |
+    -
+        question: |
             Which message displays these translated messages depending on a count variable.
-
+            
             0: No result
             1 to 10 included: Some results
             More than 10: Too much results
+            
         answers:
-            - {value: "{0} No result|[1,10] Some results|]10,Inf[ Too much results", correct: true}
-            - {value: "0 No result|[1,10] Some results|]10,Inf[ Too much results",   correct: false}
-            - {value: "[0] No result|[1,10] Some results|]10,Inf[ Too much results",  correct: false}
-            - {value: "{0} No result|{1,10} Some results|}10,Inf{ Too much results",    correct: false}
-
-
-    -   question: "What is the tag to register a custom service that extracts messages from a file?"
+            -
+                value: '{0} No result|[1,10] Some results|]10,Inf[ Too much results'
+                correct: true
+            -
+                value: '0 No result|[1,10] Some results|]10,Inf[ Too much results'
+                correct: false
+            -
+                value: '[0] No result|[1,10] Some results|]10,Inf[ Too much results'
+                correct: false
+            -
+                value: '{0} No result|{1,10} Some results|}10,Inf{ Too much results'
+                correct: false
+    -
+        question: 'What is the tag to register a custom service that extracts messages from a file?'
         answers:
-            - { value: "translation.extractor", correct: true }
-            - { value: "translator.extractor", correct: false }
-            - { value: "translator_extractor", correct: false }
-            - { value: "translation_extractor", correct: false }
-
-    -   question: "Which of the followings are not part of the built-in loaders?"
+            -
+                value: translation.extractor
+                correct: true
+            -
+                value: translator.extractor
+                correct: false
+            -
+                value: translator_extractor
+                correct: false
+            -
+                value: translation_extractor
+                correct: false
+    -
+        question: 'Which of the followings are not part of the built-in loaders?'
         answers:
-            - { value: "CsvLoader", correct: true }
-            - { value: "JsonLoader", correct: true }
-            - { value: "ArrayLoader", correct: false }
-            - { value: "PoFileLoader", correct: false }
-            - { value: "PhpFileLoader", correct: false }
-            - { value: "QtFileLoader", correct: false }
-            - { value: "CsvFileLoader", correct: false }
-            - { value: "JsonFileLoader", correct: false }
-            - { value: "MoFileLoader", correct: false }
-
-    -   question: What is the correct option to add other directories in the translator configuration?
+            -
+                value: CsvLoader
+                correct: true
+            -
+                value: JsonLoader
+                correct: true
+            -
+                value: ArrayLoader
+                correct: false
+            -
+                value: PoFileLoader
+                correct: false
+            -
+                value: PhpFileLoader
+                correct: false
+            -
+                value: QtFileLoader
+                correct: false
+            -
+                value: CsvFileLoader
+                correct: false
+            -
+                value: JsonFileLoader
+                correct: false
+            -
+                value: MoFileLoader
+                correct: false
+    -
+        question: 'What is the correct option to add other directories in the translator configuration?'
         answers:
-            - value: |
-                  # config/packages/translation.yaml
-                  framework:
-                      translator:
-                          paths:
-                              - '%kernel.project_dir%/translations'
-              correct: true
-
-            - value: |
-                  # config/packages/translation.yaml
-                  framework:
-                      translator:
-                          add_paths:
-                              - '%kernel.project_dir%/translations'
-              correct: false
-
-            - value: |
-                  # config/packages/translation.yaml
-                  framework:
-                      translator:
-                          directories:
-                              - '%kernel.project_dir%/translations'
-              correct: false
-
-    -   question: "Which of the following are not valid interval notations ?"
+            -
+                value: |
+                    # config/packages/translation.yaml
+                    framework:
+                        translator:
+                            paths:
+                                - '%kernel.project_dir%/translations'
+                    
+                correct: true
+            -
+                value: |
+                    # config/packages/translation.yaml
+                    framework:
+                        translator:
+                            add_paths:
+                                - '%kernel.project_dir%/translations'
+                    
+                correct: false
+            -
+                value: |
+                    # config/packages/translation.yaml
+                    framework:
+                        translator:
+                            directories:
+                                - '%kernel.project_dir%/translations'
+                    
+                correct: false
+    -
+        question: 'Which of the following are not valid interval notations ?'
         answers:
-            - { value: "]-Inf,Inf[", correct: false }
-            - { value: "{0,10,100,1000,Inf}", correct: true }
-            - { value: "]Inf, 0]", correct: true }
-            - { value: "[1,+Inf[", correct: false }
-            - { value: "]1,Inf]", correct: false }
-
-    -   question: "What is the way to add a resources to the translator ?"
+            -
+                value: ']-Inf,Inf['
+                correct: false
+            -
+                value: '{0,10,100,1000,Inf}'
+                correct: true
+            -
+                value: ']Inf, 0]'
+                correct: true
+            -
+                value: '[1,+Inf['
+                correct: false
+            -
+                value: ']1,Inf]'
+                correct: false
+    -
+        question: 'What is the way to add a resources to the translator ?'
         answers:
-            - { value: "$translator->addResource('yaml', 'path/to/messages.fr.yml', 'fr_FR');", correct: true }
-            - { value: "$translator->loadResource('path/to/messages.fr.yml', 'yaml',  'fr_FR');", correct: false }
-            - { value: "$translator->addResource('path/to/messages.fr.yml', 'yaml',  'fr_FR');", correct: false }
-            - { value: "$translator->loadResource('yaml', 'path/to/messages.fr.yml', 'fr_FR');", correct: false }
-
-    -   question: "Which of the followings are part of the built-in loaders?"
+            -
+                value: '$translator->addResource(''yaml'', ''path/to/messages.fr.yml'', ''fr_FR'');'
+                correct: true
+            -
+                value: '$translator->loadResource(''path/to/messages.fr.yml'', ''yaml'',  ''fr_FR'');'
+                correct: false
+            -
+                value: '$translator->addResource(''path/to/messages.fr.yml'', ''yaml'',  ''fr_FR'');'
+                correct: false
+            -
+                value: '$translator->loadResource(''yaml'', ''path/to/messages.fr.yml'', ''fr_FR'');'
+                correct: false
+    -
+        question: 'Which of the followings are part of the built-in loaders?'
         answers:
-            - { value: "XliffFileLoader", correct: true }
-            - { value: "PoFileLoader", correct: true }
-            - { value: "IniFileLoader", correct: true }
-            - { value: "MoFileLoader", correct: true }
-            - { value: "YamlFileLoader", correct: true }
-            - { value: "CsvLoader", correct: false }
-            - { value: "PhpLoader", correct: false }
-            - { value: "JsonLoader", correct: false }
-            - { value: "IcuFileLoader", correct: false }
-
-    -   question: "Is IniFileLoader a valid loader?"
+            -
+                value: XliffFileLoader
+                correct: true
+            -
+                value: PoFileLoader
+                correct: true
+            -
+                value: IniFileLoader
+                correct: true
+            -
+                value: MoFileLoader
+                correct: true
+            -
+                value: YamlFileLoader
+                correct: true
+            -
+                value: CsvLoader
+                correct: false
+            -
+                value: PhpLoader
+                correct: false
+            -
+                value: JsonLoader
+                correct: false
+            -
+                value: IcuFileLoader
+                correct: false
+    -
+        question: 'Is IniFileLoader a valid loader?'
         answers:
-            - { value: "No", correct: false }
-            - { value: "Yes", correct: true }
-
-    -   question: "Is PhpLoader a valid loader?"
+            -
+                value: 'No'
+                correct: false
+            -
+                value: 'Yes'
+                correct: true
+    -
+        question: 'Is PhpLoader a valid loader?'
         answers:
-            - { value: "No", correct: true }
-            - { value: "Yes", correct: false }
-
-    -   question: "Is JsonLoader a valid loader?"
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: 'Is JsonLoader a valid loader?'
         answers:
-            - { value: "No", correct: true }
-            - { value: "Yes", correct: false }
-
-    -   question: "Is IcuFileLoader a valid loader?"
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: 'Is IcuFileLoader a valid loader?'
         answers:
-            - { value: "No", correct: true }
-            - { value: "Yes", correct: false }
-
-    -   question: "Is CsvFileLoader a valid loader?"
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: 'Is CsvFileLoader a valid loader?'
         answers:
-            - { value: "Yes", correct: true }
-            - { value: "No", correct: false }
-
-    -   question: "Is CsvLoader a valid loader?"
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: 'Is CsvLoader a valid loader?'
         answers:
-            - { value: "Yes", correct: true }
-            - { value: "No", correct: false }
-
-    -   question: "What is the command to view all messages for French?"
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: 'What is the command to view all messages for French?'
         answers:
-            - { value: "php bin/console debug:translation fr", correct: true }
-            - { value: "php bin/console translator:list fr", correct: false }
-            - { value: "php bin/console translator:translations:list fr", correct: false }
-            - { value: "php bin/console translator:detect fr", correct: false }
-
-    -   question: "What is the command to check which translations are used?"
+            -
+                value: 'php bin/console debug:translation fr'
+                correct: true
+            -
+                value: 'php bin/console translator:list fr'
+                correct: false
+            -
+                value: 'php bin/console translator:translations:list fr'
+                correct: false
+            -
+                value: 'php bin/console translator:detect fr'
+                correct: false
+    -
+        question: 'What is the command to check which translations are used?'
         answers:
-            - { value: "php bin/console debug:translation fr --only-unused", correct: true }
-            - { value: "php bin/console debug:translation fr --unused", correct: true }
-            - { value: "php bin/console translator:list fr --only-unused", correct: false }
-            - { value: "php bin/console translator:list fr --unused", correct: false }
-            - { value: "php bin/console translator:translations:list fr --only-unused", correct: false }
-            - { value: "php bin/console translator:translations:list fr --unused", correct: false }
-            - { value: "php bin/console translator:detect fr --only-unused", correct: false }
-            - { value: "php bin/console translator:detect fr --unused", correct: false }
-
-    -   question: |
+            -
+                value: 'php bin/console debug:translation fr --only-unused'
+                correct: true
+            -
+                value: 'php bin/console debug:translation fr --unused'
+                correct: true
+            -
+                value: 'php bin/console translator:list fr --only-unused'
+                correct: false
+            -
+                value: 'php bin/console translator:list fr --unused'
+                correct: false
+            -
+                value: 'php bin/console translator:translations:list fr --only-unused'
+                correct: false
+            -
+                value: 'php bin/console translator:translations:list fr --unused'
+                correct: false
+            -
+                value: 'php bin/console translator:detect fr --only-unused'
+                correct: false
+            -
+                value: 'php bin/console translator:detect fr --unused'
+                correct: false
+    -
+        question: |
             Which of theses are methods of Symfony\Component\Translation\TranslatorInterface?
+            
         answers:
-            - { value: "trans()", correct: true }
-            - { value: "transChoice()", correct: true }
-            - { value: "translate()", correct: false }
-            - { value: "getTranslations()", correct: false }
-            - { value: "getTranslation()", correct: false }
-
-    -   question: |
+            -
+                value: trans()
+                correct: true
+            -
+                value: transChoice()
+                correct: true
+            -
+                value: translate()
+                correct: false
+            -
+                value: getTranslations()
+                correct: false
+            -
+                value: getTranslation()
+                correct: false
+    -
+        question: |
             What is a PO file?
+            
         answers:
-            - { value: "A human readable key value storage", correct: true }
-            - { value: "An XML document with a custom schema", correct: false }
-            - { value: "A Symfony format for storing translations", correct: false }
-
-    - question: |
-          What is a Xliff file?
-      answers:
-          - { value: "An XML document with a custom schema", correct: true }
-          - { value: "A human readable key value storage", correct: false }
-          - { value: "A Symfony format for storing translations", correct: false }
-
-    - question: |
-        What is the way to add a resource to the translator ?
-      answers:
-          - { value: "$translator->addResource('yaml', 'path/to/messages.fr.yml', 'fr_FR');", correct: true }
-          - { value: "$translator->loadResource('yaml', 'path/to/messages.fr.yml', 'fr_FR');", correct: false }
-          - { value: "$translator->loadResource('path/to/messages.fr.yml', 'yaml',  'fr_FR');", correct: false }
-          - { value: "$translator->addResource('path/to/messages.fr.yml', 'yaml',  'fr_FR');", correct: false }
-
-    - question: |
-        Is the following a valid way to create a translator?
-
-        $translator = new Translator('fr_FR', new MessageSelector());
-      answers:
-        - { value: "Yes", correct: true }
-        - { value: "No", correct: false }
-
-    - question: |
-        Is the following a valid way to create a translator?
-
-        $translator = new Translator('fr_FR');
-      answers:
-        - { value: "Yes", correct: true }
-        - { value: "No", correct: false }
-
-    - question: |
-        Is the following a valid way to create a translator?
-
-        $translator = new Translator(new MessageSelector());
-      answers:
-        - { value: "No", correct: true }
-        - { value: "Yes", correct: false }
-
-    - question: |
-        Is the following a valid way to create a translator?
-
-        $translator = new Translator(new MessageSelector(), 'fr_FR');
-      answers:
-        - { value: "No", correct: true }
-        - { value: "Yes", correct: false }
-
-    - question: |
-        Which components are required in order to use the YamlFileLoader?
-      answers:
-        - { value: "Yaml Component", correct: true }
-        - { value: "Config Component", correct: true }
-        - { value: "Finder Component", correct: false }
-        - { value: "Filesystem Component", correct: false }
-
-    - question: |
-        Which components are required in order to use the YamlFileLoader?
-      answers:
-        - { value: "Yaml Component", correct: true }
-        - { value: "Config Component", correct: true }
-        - { value: "Finder Component", correct: false }
-        - { value: "Filesystem Component", correct: false }
-
-    - question: |
-          It is possible to find missing or unused translation messages from templates?
-      answers:
-          - { value: "Yes, with the debug:translation command", correct: true }
-          - { value: "No, it is not possible.", correct: false }
-          - { value: "Yes, with the debug:translate command", correct: false }
-          - { value: "Yes, with the debug:translator command", correct: false }
-          - { value: "Yes, with the debug:i18n command", correct: false }
-
-    - question: |
-          What is the required arguments to the debug:translation command?
-      answers:
-          - { value: "the locale", correct: true }
-          - { value: "the translation file", correct: false }
-          - { value: "the key of a translation to debug", correct: false }
-
-    - question: |
-          What is the required arguments to the debug:translation command?
-      answers:
-          - { value: "the locale", correct: true }
-          - { value: "the translation file", correct: false }
-          - { value: "the key of a translation to debug", correct: false }
-
-    - question: |
-          Which of this following code is correct to use the percent character % in a translated string ?
-      answers:
-          - { value: "{% trans %}Percent: %percent%%%{% endtrans %}", correct: true }
-          - { value: "{% trans %}Percent: %percent%\\%{% endtrans %}", correct: false }
-          - { value: "{% trans %}Percent: %percent%[%]{% endtrans %}", correct: false }
-          - { value: "{% trans %}Percent: %percent%{%}{% endtrans %}", correct: false }
-      help: |
-          https://symfony.com/doc/current/translation/templates.html#using-twig-tags
-
-    - question: |
-          What is the correct way to manually set a translation domain of 'app' in a Twig block?
-      answers:
-          - { value: "{% trans from 'app' %}Hello %name%{% endtrans %}", correct: true }
-          - { value: "{% trans('app') %}Hello %name%{% endtrans %}", correct: false }
-          - { value: "{{ trans('Hello %name%','app') }}", correct: false }
-      help: |
-          https://symfony.com/doc/current/translation/templates.html#using-twig-tags
-
-    - question: |
-          When you want to use a translation in another domain than the default domain, you must specify the domain as:
-      answers:
-          - { value: "third argument of trans()", correct: true }
-          - { value: "first argument of trans()", correct: false }
-          - { value: "second argument of trans()", correct: false }
-          - { value: "fourth argument of trans()", correct: false }
-      help: |
-          http://symfony.com/doc/current/components/translation/introduction.html#using-message-domains
-
-    - question: |
+            -
+                value: 'A human readable key value storage'
+                correct: true
+            -
+                value: 'An XML document with a custom schema'
+                correct: false
+            -
+                value: 'A Symfony format for storing translations'
+                correct: false
+    -
+        question: |
+            What is a Xliff file?
+            
+        answers:
+            -
+                value: 'An XML document with a custom schema'
+                correct: true
+            -
+                value: 'A human readable key value storage'
+                correct: false
+            -
+                value: 'A Symfony format for storing translations'
+                correct: false
+    -
+        question: |
+            What is the way to add a resource to the translator ?
+            
+        answers:
+            -
+                value: '$translator->addResource(''yaml'', ''path/to/messages.fr.yml'', ''fr_FR'');'
+                correct: true
+            -
+                value: '$translator->loadResource(''yaml'', ''path/to/messages.fr.yml'', ''fr_FR'');'
+                correct: false
+            -
+                value: '$translator->loadResource(''path/to/messages.fr.yml'', ''yaml'',  ''fr_FR'');'
+                correct: false
+            -
+                value: '$translator->addResource(''path/to/messages.fr.yml'', ''yaml'',  ''fr_FR'');'
+                correct: false
+    -
+        question: |
+            Is the following a valid way to create a translator?
+            
+            $translator = new Translator('fr_FR', new MessageSelector());
+            
+        answers:
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
+            Is the following a valid way to create a translator?
+            
+            $translator = new Translator('fr_FR');
+            
+        answers:
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
+            Is the following a valid way to create a translator?
+            
+            $translator = new Translator(new MessageSelector());
+            
+        answers:
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
+            Is the following a valid way to create a translator?
+            
+            $translator = new Translator(new MessageSelector(), 'fr_FR');
+            
+        answers:
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
+            Which components are required in order to use the YamlFileLoader?
+            
+        answers:
+            -
+                value: 'Yaml Component'
+                correct: true
+            -
+                value: 'Config Component'
+                correct: true
+            -
+                value: 'Finder Component'
+                correct: false
+            -
+                value: 'Filesystem Component'
+                correct: false
+    -
+        question: |
+            Which components are required in order to use the YamlFileLoader?
+            
+        answers:
+            -
+                value: 'Yaml Component'
+                correct: true
+            -
+                value: 'Config Component'
+                correct: true
+            -
+                value: 'Finder Component'
+                correct: false
+            -
+                value: 'Filesystem Component'
+                correct: false
+    -
+        question: |
+            It is possible to find missing or unused translation messages from templates?
+            
+        answers:
+            -
+                value: 'Yes, with the debug:translation command'
+                correct: true
+            -
+                value: 'No, it is not possible.'
+                correct: false
+            -
+                value: 'Yes, with the debug:translate command'
+                correct: false
+            -
+                value: 'Yes, with the debug:translator command'
+                correct: false
+            -
+                value: 'Yes, with the debug:i18n command'
+                correct: false
+    -
+        question: |
+            What is the required arguments to the debug:translation command?
+            
+        answers:
+            -
+                value: 'the locale'
+                correct: true
+            -
+                value: 'the translation file'
+                correct: false
+            -
+                value: 'the key of a translation to debug'
+                correct: false
+    -
+        question: |
+            What is the required arguments to the debug:translation command?
+            
+        answers:
+            -
+                value: 'the locale'
+                correct: true
+            -
+                value: 'the translation file'
+                correct: false
+            -
+                value: 'the key of a translation to debug'
+                correct: false
+    -
+        question: |
+            Which of this following code is correct to use the percent character % in a translated string ?
+            
+        answers:
+            -
+                value: '{% trans %}Percent: %percent%%%{% endtrans %}'
+                correct: true
+            -
+                value: '{% trans %}Percent: %percent%\%{% endtrans %}'
+                correct: false
+            -
+                value: '{% trans %}Percent: %percent%[%]{% endtrans %}'
+                correct: false
+            -
+                value: '{% trans %}Percent: %percent%{%}{% endtrans %}'
+                correct: false
+        help: |
+            https://symfony.com/doc/current/translation/templates.html#using-twig-tags
+            
+    -
+        question: |
+            What is the correct way to manually set a translation domain of 'app' in a Twig block?
+            
+        answers:
+            -
+                value: '{% trans from ''app'' %}Hello %name%{% endtrans %}'
+                correct: true
+            -
+                value: '{% trans(''app'') %}Hello %name%{% endtrans %}'
+                correct: false
+            -
+                value: '{{ trans(''Hello %name%'',''app'') }}'
+                correct: false
+        help: |
+            https://symfony.com/doc/current/translation/templates.html#using-twig-tags
+            
+    -
+        question: |
+            When you want to use a translation in another domain than the default domain, you must specify the domain as:
+            
+        answers:
+            -
+                value: 'third argument of trans()'
+                correct: true
+            -
+                value: 'first argument of trans()'
+                correct: false
+            -
+                value: 'second argument of trans()'
+                correct: false
+            -
+                value: 'fourth argument of trans()'
+                correct: false
+        help: |
+            http://symfony.com/doc/current/components/translation/introduction.html#using-message-domains
+            
+    -
+        question: |
             When you want to use a translation in another locale, you must specify the locale as:
-      answers:
-          - { value: "fourth argument of trans()", correct: true }
-          - { value: "third argument of trans()", correct: false }
-          - { value: "first argument of trans()", correct: false }
-          - { value: "second argument of trans()", correct: false }
-      help: |
-          https://github.com/symfony/symfony/blob/3.4/src/Symfony/Component/Translation/Translator.php#L192
+            
+        answers:
+            -
+                value: 'fourth argument of trans()'
+                correct: true
+            -
+                value: 'third argument of trans()'
+                correct: false
+            -
+                value: 'first argument of trans()'
+                correct: false
+            -
+                value: 'second argument of trans()'
+                correct: false
+        help: |
+            https://github.com/symfony/symfony/blob/3.4/src/Symfony/Component/Translation/Translator.php#L192
+            

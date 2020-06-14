@@ -1,100 +1,215 @@
 category: Lock
 questions:
-    -   question: "Which of the following are valid lock stores in the component?"
+    -
+        question: 'Which of the following are valid lock stores in the component?'
         answers:
-            - { value: "FlockStore", correct: true }
-            - { value: "MemcachedStore", correct: true }
-            - { value: "RedisStore", correct: true }
-            - { value: "SemaphoreStore", correct: true }
-            - { value: "CombinedStore", correct: true }
-            - { value: "DoctrineStore", correct: false }
-            - { value: "MySqlStore", correct: false }
-            - { value: "ArrayStore", correct: false }
-            - { value: "MemoryStore", correct: false }
-
-    -   question: "What is the method(s) to take and check a lock?"
+            -
+                value: FlockStore
+                correct: true
+            -
+                value: MemcachedStore
+                correct: true
+            -
+                value: RedisStore
+                correct: true
+            -
+                value: SemaphoreStore
+                correct: true
+            -
+                value: CombinedStore
+                correct: true
+            -
+                value: DoctrineStore
+                correct: false
+            -
+                value: MySqlStore
+                correct: false
+            -
+                value: ArrayStore
+                correct: false
+            -
+                value: MemoryStore
+                correct: false
+    -
+        question: 'What is the method(s) to take and check a lock?'
         answers:
-            - { value: "acquire()", correct: true }
-            - { value: "lock() and check()", correct: false }
-            - { value: "allocate()", correct: false }
-
-    -   question: "What is the method to destroy a lock?"
+            -
+                value: acquire()
+                correct: true
+            -
+                value: 'lock() and check()'
+                correct: false
+            -
+                value: allocate()
+                correct: false
+    -
+        question: 'What is the method to destroy a lock?'
         answers:
-            - { value: "release()", correct: true }
-            - { value: "unset()", correct: false }
-            - { value: "remove()", correct: false }
-            - { value: "destroy()", correct: false }
-
-    -   question: "What is happens if acquire() is called on an already acquired lock?"
+            -
+                value: release()
+                correct: true
+            -
+                value: unset()
+                correct: false
+            -
+                value: remove()
+                correct: false
+            -
+                value: destroy()
+                correct: false
+    -
+        question: 'What is happens if acquire() is called on an already acquired lock?'
         answers:
-            - { value: "An exception is thrown", correct: true }
-            - { value: "It will return false", correct: false }
-
-    -   question: "What is the class and method to create locks in Symfony 3.4?"
+            -
+                value: 'An exception is thrown'
+                correct: true
+            -
+                value: 'It will return false'
+                correct: false
+    -
+        question: 'What is the class and method to create locks in Symfony 3.4?'
         answers:
-            - { value: "Symfony\\Component\\Lock\\Factory::createLock", correct: true }
-            - { value: "Symfony\\Component\\Lock\\LockFactory::createLock", correct: false }
-            - { value: "Symfony\\Component\\Lock\\Factory\\LockFactory::createLock", correct: false }
-            - { value: "Symfony\\Component\\Lock\\Factory\\Lock::createLock", correct: false }
-            - { value: "Symfony\\Component\\Lock\\Factory::create", correct: false }
-            - { value: "Symfony\\Component\\Lock\\LockFactory::create", correct: false }
-            - { value: "Symfony\\Component\\Lock\\Factory\\LockFactory::create", correct: false }
-            - { value: "Symfony\\Component\\Lock\\Factory\\Lock::create", correct: false }
-
-    -   question: "What is the signature of Symfony\\Component\\Lock\\Factory::createLock?"
+            -
+                value: 'Symfony\Component\Lock\Factory::createLock'
+                correct: true
+            -
+                value: 'Symfony\Component\Lock\LockFactory::createLock'
+                correct: false
+            -
+                value: 'Symfony\Component\Lock\Factory\LockFactory::createLock'
+                correct: false
+            -
+                value: 'Symfony\Component\Lock\Factory\Lock::createLock'
+                correct: false
+            -
+                value: 'Symfony\Component\Lock\Factory::create'
+                correct: false
+            -
+                value: 'Symfony\Component\Lock\LockFactory::create'
+                correct: false
+            -
+                value: 'Symfony\Component\Lock\Factory\LockFactory::create'
+                correct: false
+            -
+                value: 'Symfony\Component\Lock\Factory\Lock::create'
+                correct: false
+    -
+        question: 'What is the signature of Symfony\Component\Lock\Factory::createLock?'
         answers:
-            - { value: "createLock($resource, $ttl = 300.0, $autoRelease = true)", correct: true }
-            - { value: "createLock($resource, $autoRelease = true, $ttl = 300.0)", correct: false }
-            - { value: "createLock($resource, $ttl = 150, $autoRelease = true)", correct: false }
-            - { value: "createLock($resource, $autoRelease = true, $ttl = 150.0)", correct: false }
-            - { value: "createLock($resource, $ttl = 300.0)", correct: false }
-            - { value: "createLock($resource, $ttl = 150.0)", correct: false }
-
-    -   question: "What is the purpose of the third argument Symfony\\Component\\Lock\\Factory::createLock?"
+            -
+                value: 'createLock($resource, $ttl = 300.0, $autoRelease = true)'
+                correct: true
+            -
+                value: 'createLock($resource, $autoRelease = true, $ttl = 300.0)'
+                correct: false
+            -
+                value: 'createLock($resource, $ttl = 150, $autoRelease = true)'
+                correct: false
+            -
+                value: 'createLock($resource, $autoRelease = true, $ttl = 150.0)'
+                correct: false
+            -
+                value: 'createLock($resource, $ttl = 300.0)'
+                correct: false
+            -
+                value: 'createLock($resource, $ttl = 150.0)'
+                correct: false
+    -
+        question: 'What is the purpose of the third argument Symfony\Component\Lock\Factory::createLock?'
         answers:
-            - { value: "When set to false in ensures that the lock is not released at the end of the request", correct: true }
-            - { value: "It allows to supply a time to live for the lock", correct: false }
-            - { value: "It allows to supply a Store for the lock", correct: false }
-
-    -   question: "What is the purpose of the second argument Symfony\\Component\\Lock\\Factory::createLock?"
+            -
+                value: 'When set to false in ensures that the lock is not released at the end of the request'
+                correct: true
+            -
+                value: 'It allows to supply a time to live for the lock'
+                correct: false
+            -
+                value: 'It allows to supply a Store for the lock'
+                correct: false
+    -
+        question: 'What is the purpose of the second argument Symfony\Component\Lock\Factory::createLock?'
         answers:
-            - { value: "It allows to supply a time to live for the lock", correct: true }
-            - { value: "When set to false in ensures that the lock is not released at the end of the request", correct: false }
-            - { value: "It allows to supply a Store for the lock", correct: false }
-
-    -   question: "Is it possible to have a lock block the current request until the lock can be acquired without using a while loop?"
+            -
+                value: 'It allows to supply a time to live for the lock'
+                correct: true
+            -
+                value: 'When set to false in ensures that the lock is not released at the end of the request'
+                correct: false
+            -
+                value: 'It allows to supply a Store for the lock'
+                correct: false
+    -
+        question: 'Is it possible to have a lock block the current request until the lock can be acquired without using a while loop?'
         answers:
-            - { value: "Yes, pass true to the acquire() method of the lock", correct: true }
-            - { value: "No", correct: false }
-            - { value: "Yes, pass false to the acquire() method of the lock", correct: false }
-
-    -   question: "Which of the following is the best practice relating to the release of locks?"
+            -
+                value: 'Yes, pass true to the acquire() method of the lock'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+            -
+                value: 'Yes, pass false to the acquire() method of the lock'
+                correct: false
+    -
+        question: 'Which of the following is the best practice relating to the release of locks?'
         answers:
-            - { value: "You should encapsulate the release call of the lock in a finally block", correct: true }
-            - { value: "You should never manually release the lock unless the process for the lock fails", correct: false }
-            - { value: "You should never release the lock before the end of its TTL", correct: false }
-
-    -   question: "Is it possible to renew the TTL of a lock?"
+            -
+                value: 'You should encapsulate the release call of the lock in a finally block'
+                correct: true
+            -
+                value: 'You should never manually release the lock unless the process for the lock fails'
+                correct: false
+            -
+                value: 'You should never release the lock before the end of its TTL'
+                correct: false
+    -
+        question: 'Is it possible to renew the TTL of a lock?'
         answers:
-            - { value: "You can call refresh() on the lock", correct: true }
-            - { value: "You can call extend() on the lock", correct: false }
-            - { value: "No it's not possible", correct: false }
-
-    -   question: "Is it possible to renew a using a custom TLL?"
+            -
+                value: 'You can call refresh() on the lock'
+                correct: true
+            -
+                value: 'You can call extend() on the lock'
+                correct: false
+            -
+                value: 'No it''s not possible'
+                correct: false
+    -
+        question: 'Is it possible to renew a using a custom TLL?'
         answers:
-            - { value: "You can call refresh() on the lock, the first argument is the new TTL", correct: true }
-            - { value: "You can call extend() on the lock, the first argument is the new TTL", correct: false }
-            - { value: "You can call refresh() on the lock, the second argument is the new TTL", correct: false }
-            - { value: "You can call extend() on the lock, the second argument is the new TTL", correct: false }
-            - { value: "No it's not possible to extend to a custom TTL", correct: false }
-            - { value: "No it's not possible to extend to a lock TTL", correct: false }
-
-    -   question: "Is it possible to view when a lock will expire?"
+            -
+                value: 'You can call refresh() on the lock, the first argument is the new TTL'
+                correct: true
+            -
+                value: 'You can call extend() on the lock, the first argument is the new TTL'
+                correct: false
+            -
+                value: 'You can call refresh() on the lock, the second argument is the new TTL'
+                correct: false
+            -
+                value: 'You can call extend() on the lock, the second argument is the new TTL'
+                correct: false
+            -
+                value: 'No it''s not possible to extend to a custom TTL'
+                correct: false
+            -
+                value: 'No it''s not possible to extend to a lock TTL'
+                correct: false
+    -
+        question: 'Is it possible to view when a lock will expire?'
         answers:
-            - { value: "Yes", correct: true }
-            - { value: "No", correct: false }
-
-    -   question: "Is it possible to check if a lock is expired?"
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: 'Is it possible to check if a lock is expired?'
         answers:
-            - { value: "Yes", correct: true }
-            - { value: "No", correct: false }
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false

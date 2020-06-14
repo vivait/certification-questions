@@ -1,396 +1,798 @@
 category: Security
 questions:
-    -   question: 'When using HTTP basic, how does the server starts the authentication process?'
+    -
+        question: 'When using HTTP basic, how does the server starts the authentication process?'
         answers:
-            - {value: "Sending the WWW-Authenticate HTTP header with the HTTP 401 Not Authorized status code.", correct: true}
-            - {value: "Sending the status code HTTP 418 Authentication Required.",   correct: false}
-            - {value: "Redirecting the request to the port 443.",  correct: false}
-            - {value: "Rendering a login form with the fields _user and _password.",    correct: false}
-    -   question: "Which is the interface used for creating all security authentication listeners?"
+            -
+                value: 'Sending the WWW-Authenticate HTTP header with the HTTP 401 Not Authorized status code.'
+                correct: true
+            -
+                value: 'Sending the status code HTTP 418 Authentication Required.'
+                correct: false
+            -
+                value: 'Redirecting the request to the port 443.'
+                correct: false
+            -
+                value: 'Rendering a login form with the fields _user and _password.'
+                correct: false
+    -
+        question: 'Which is the interface used for creating all security authentication listeners?'
         answers:
-            - {value: "Symfony\\Component\\Security\\Core\\Authentication\\AuthenticationManagerInterface", correct: false}
-            - {value: 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\SecurityListenerInterface', correct: false}
-            - {value: 'Symfony\\Bundle\\SecurityBundle\\DependencyInjection\\Security\\Factory\\SecurityFactoryInterface', correct: true}
-            - {value: 'Symfony\\Component\\Security\\Guard\\GuardAuthenticatorInterface', correct: false}
-    -   question: "Which command allows you to encode passwords?"
+            -
+                value: Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface
+                correct: false
+            -
+                value: Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\SecurityListenerInterface
+                correct: false
+            -
+                value: Symfony\\Bundle\\SecurityBundle\\DependencyInjection\\Security\\Factory\\SecurityFactoryInterface
+                correct: true
+            -
+                value: Symfony\\Component\\Security\\Guard\\GuardAuthenticatorInterface
+                correct: false
+    -
+        question: 'Which command allows you to encode passwords?'
         answers:
-            - {value: "security:encoder-password", correct: false}
-            - {value: 'security:password-encode', correct: false}
-            - {value: 'security:password-encoder', correct: false}
-            - {value: 'security:encode-password', correct: true}
-
-    -   question: "Authorization is the process that makes sure that a user is who he claims to be?"
+            -
+                value: 'security:encoder-password'
+                correct: false
+            -
+                value: 'security:password-encode'
+                correct: false
+            -
+                value: 'security:password-encoder'
+                correct: false
+            -
+                value: 'security:encode-password'
+                correct: true
+    -
+        question: 'Authorization is the process that makes sure that a user is who he claims to be?'
         answers:
-            - {value: "True", correct: false}
-            - {value: "False", correct: true}
-
-    -   question: "Which role allows you to check that a user is logged in (by any means) ?"
+            -
+                value: 'True'
+                correct: false
+            -
+                value: 'False'
+                correct: true
+    -
+        question: 'Which role allows you to check that a user is logged in (by any means) ?'
         answers:
-            - {value: "IS_AUTHENTICATED_REMEMBERED", correct: true}
-            - {value: "IS_AUTHENTICATED_ANONYMOUSLY", correct: false}
-            - {value: "IS_AUTHENTICATED_FULLY", correct: false}
-            - {value: "IS_FULLY_AUTHENTICATED", correct: false}
-            - {value: "IS_AUTHENTICATED", correct: false}
-
-    -   question: "Which of the following is the AccessDecisionManager default strategy?"
+            -
+                value: IS_AUTHENTICATED_REMEMBERED
+                correct: true
+            -
+                value: IS_AUTHENTICATED_ANONYMOUSLY
+                correct: false
+            -
+                value: IS_AUTHENTICATED_FULLY
+                correct: false
+            -
+                value: IS_FULLY_AUTHENTICATED
+                correct: false
+            -
+                value: IS_AUTHENTICATED
+                correct: false
+    -
+        question: 'Which of the following is the AccessDecisionManager default strategy?'
         answers:
-            - {value: "affirmative", correct: true}
-            - {value: "consensus", correct: false}
-            - {value: "unanimous", correct: false}
-
-    -   question: "Which is the interface used for all security authentication listeners?"
+            -
+                value: affirmative
+                correct: true
+            -
+                value: consensus
+                correct: false
+            -
+                value: unanimous
+                correct: false
+    -
+        question: 'Which is the interface used for all security authentication listeners?'
         answers:
-            - {value: Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface, correct: true}
-            - {value: Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface, correct: false}
-            - {value: Sensio\Bundle\FrameworkExtraBundle\EventListener\SecurityListenerInterface, correct: false}
-            - {value: Symfony\Component\Security\Guard\GuardAuthenticatorInterface, correct: false}
-
-    -   question: Which of the following "roles" are built-in ?
+            -
+                value: Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface
+                correct: true
+            -
+                value: Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface
+                correct: false
+            -
+                value: Sensio\Bundle\FrameworkExtraBundle\EventListener\SecurityListenerInterface
+                correct: false
+            -
+                value: Symfony\Component\Security\Guard\GuardAuthenticatorInterface
+                correct: false
+    -
+        question: 'Which of the following "roles" are built-in ?'
         answers:
-            - {value: IS_FULLY_AUTHENTICATED, correct: false}
-            - {value: IS_AUTHENTICATED_REMEMBERED, correct: true}
-            - {value: IS_AUTHENTICATED_INTERACTIVE, correct: false}
-            - {value: IS_AUTHENTICATED_ANONYMOUSLY, correct: true}
-            - {value: IS_ANONYMOUS, correct: false}
-            - {value: IS_NOT_AUTHENTICATED, correct: false}
-            - {value: IS_AUTHENTICATED_FULLY, correct: true}
-
-    -   question: Can the check_path route be behind another firewall than the main one?
+            -
+                value: IS_FULLY_AUTHENTICATED
+                correct: false
+            -
+                value: IS_AUTHENTICATED_REMEMBERED
+                correct: true
+            -
+                value: IS_AUTHENTICATED_INTERACTIVE
+                correct: false
+            -
+                value: IS_AUTHENTICATED_ANONYMOUSLY
+                correct: true
+            -
+                value: IS_ANONYMOUS
+                correct: false
+            -
+                value: IS_NOT_AUTHENTICATED
+                correct: false
+            -
+                value: IS_AUTHENTICATED_FULLY
+                correct: true
+    -
+        question: 'Can the check_path route be behind another firewall than the main one?'
         answers:
-            - {value: Yes, correct: false}
-            - {value: No, correct: true}
-
-    -   question: What is the signature of the voteOnAttribute() method from Symfony\Component\Security\Core\Authorization\Voter\Voter abstract class?
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: 'What is the signature of the voteOnAttribute() method from Symfony\Component\Security\Core\Authorization\Voter\Voter abstract class?'
         answers:
-            - {value: 'voteOnAttribute($attribute, TokenInterface $token, $subject)', correct: false}
-            - {value: 'voteOnAttribute(TokenInterface $token, $subject, $attribute)', correct: false}
-            - {value: 'voteOnAttribute(TokenInterface $token, $attribute, $subject)', correct: false}
-            - {value: 'voteOnAttribute($attribute, $subject, TokenInterface $token)', correct: true}
-
-    -   question: Which are the constants defined in Symfony\Component\Security\Core\Security class?
+            -
+                value: 'voteOnAttribute($attribute, TokenInterface $token, $subject)'
+                correct: false
+            -
+                value: 'voteOnAttribute(TokenInterface $token, $subject, $attribute)'
+                correct: false
+            -
+                value: 'voteOnAttribute(TokenInterface $token, $attribute, $subject)'
+                correct: false
+            -
+                value: 'voteOnAttribute($attribute, $subject, TokenInterface $token)'
+                correct: true
+    -
+        question: 'Which are the constants defined in Symfony\Component\Security\Core\Security class?'
         answers:
-            - {value: WRONG_PASSWORD, correct: false}
-            - {value: AUTHENTICATION_ERROR, correct: true}
-            - {value: AUTHENTICATION_FAILURE, correct: false}
-            - {value: LAST_USERNAME, correct: true}
-            - {value: ACCESS_DENIED_ERROR, correct: true}
-            - {value: MAX_USERNAME_LENGTH, correct: true}
-            - {value: BAD_CREDENTIALS, correct: false}
-
-    -   question: In order to create a custom password encoder, what must you do
+            -
+                value: WRONG_PASSWORD
+                correct: false
+            -
+                value: AUTHENTICATION_ERROR
+                correct: true
+            -
+                value: AUTHENTICATION_FAILURE
+                correct: false
+            -
+                value: LAST_USERNAME
+                correct: true
+            -
+                value: ACCESS_DENIED_ERROR
+                correct: true
+            -
+                value: MAX_USERNAME_LENGTH
+                correct: true
+            -
+                value: BAD_CREDENTIALS
+                correct: false
+    -
+        question: 'In order to create a custom password encoder, what must you do'
         answers:
-            - {value: Implement the Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface, correct: true}
-            - {value: Implement the encodePassword() method, correct: true}
-            - {value: Implement the isPasswordValid() method, correct: true}
-            - {value: Implement the isPasswordTooLong() method, correct: false}
-            - {value: Implement the validate() method, correct: false}
-
-    -   question: |
+            -
+                value: 'Implement the Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface'
+                correct: true
+            -
+                value: 'Implement the encodePassword() method'
+                correct: true
+            -
+                value: 'Implement the isPasswordValid() method'
+                correct: true
+            -
+                value: 'Implement the isPasswordTooLong() method'
+                correct: false
+            -
+                value: 'Implement the validate() method'
+                correct: false
+    -
+        question: |
             Which of the following methods should be defined in order to implement the
             Symfony\Bundle\SecurityBundle\DependencyInjection\Security
+            
         answers:
-            -   value: public function addConfiguration(NodeDefinition $builder);
+            -
+                value: 'public function addConfiguration(NodeDefinition $builder);'
                 correct: true
-            -   value: public function getPosition();
+            -
+                value: 'public function getPosition();'
                 correct: true
-            -   value: public function getKey();
+            -
+                value: 'public function getKey();'
                 correct: true
-            -   value: |
+            -
+                value: |
                     public function create(ContainerBuilder $container, $id, $config, $userProvider $defaultEntryPoint);
+                    
                 correct: true
-
-            -   value: public function supports(TokenInterface $token);
+            -
+                value: 'public function supports(TokenInterface $token);'
                 correct: false
-            -   value: public function add(NodeDefinition $builder);
+            -
+                value: 'public function add(NodeDefinition $builder);'
                 correct: false
-            -   value: public function getToken();
+            -
+                value: 'public function getToken();'
                 correct: false
-
-    -   question: By default, what priority does a voter has?
+    -
+        question: 'By default, what priority does a voter has?'
         answers:
-            -   value: 0
+            -
+                value: 0
                 correct: true
-            -   value: The highest.
+            -
+                value: 'The highest.'
                 correct: false
-            -   value: 1024
+            -
+                value: 1024
                 correct: false
-            -   value: -1
+            -
+                value: -1
                 correct: false
-
-    -   question: "What is the parent of Symfony\\Component\\Security\\Guard\\GuardAuthenticatorInterface?"
+    -
+        question: 'What is the parent of Symfony\Component\Security\Guard\GuardAuthenticatorInterface?'
         answers:
-            - {value: None, correct: false}
-            - {value: Symfony\Component\Security\AuthenticatorInterface, correct: false}
-            - {value: Symfony\Component\Security\Http\EntryPoint\AuthenticationEntryPointInterface, correct: true}
-            - {value: Symfony\Component\Security\Authenticator\AuthenticatorInterface, correct: false}
-            - {value: Symfony\Component\Security\Http\AuthenticatorInterface, correct: false}
-
-    -   question: "By default, what is the form field containing the CSRF token?"
+            -
+                value: None
+                correct: false
+            -
+                value: Symfony\Component\Security\AuthenticatorInterface
+                correct: false
+            -
+                value: Symfony\Component\Security\Http\EntryPoint\AuthenticationEntryPointInterface
+                correct: true
+            -
+                value: Symfony\Component\Security\Authenticator\AuthenticatorInterface
+                correct: false
+            -
+                value: Symfony\Component\Security\Http\AuthenticatorInterface
+                correct: false
+    -
+        question: 'By default, what is the form field containing the CSRF token?'
         answers:
-            - {value: _secret, correct: false}
-            - {value: _token, correct: true}
-            - {value: ThisTokenIsNotSoSecretChangeIt, correct: false}
-            - {value: _csrf, correct: false}
-
-    -   question: What is the aim of the security switch_user option?
+            -
+                value: _secret
+                correct: false
+            -
+                value: _token
+                correct: true
+            -
+                value: ThisTokenIsNotSoSecretChangeIt
+                correct: false
+            -
+                value: _csrf
+                correct: false
+    -
+        question: 'What is the aim of the security switch_user option?'
         answers:
-            - {value: To let some user be able to switch from one to another., correct: true}
-            - {value: To be able to have several accounts and switch easily., correct: false}
-            - {value: To change the roles of the user easily., correct: false}
-
-    -   question: |
+            -
+                value: 'To let some user be able to switch from one to another.'
+                correct: true
+            -
+                value: 'To be able to have several accounts and switch easily.'
+                correct: false
+            -
+                value: 'To change the roles of the user easily.'
+                correct: false
+    -
+        question: |
             By default, what parameter can you use inside the login form to specify the target of the redirection ?
+            
         answers:
-            -   value: _target_path
+            -
+                value: _target_path
                 correct: true
-            -   value: _default_target
+            -
+                value: _default_target
                 correct: false
-            -   value: _path_target
+            -
+                value: _path_target
                 correct: false
-            -   value: _target
+            -
+                value: _target
                 correct: false
-            -   value: _path
+            -
+                value: _path
                 correct: false
         help: |
             https://symfony.com/doc/current/security/form_login.html#control-the-redirect-url-from-inside-the-form
-
-    -   question: What is the purpose the IS_AUTHENTICATED_FULLY role?
+            
+    -
+        question: 'What is the purpose the IS_AUTHENTICATED_FULLY role?'
         answers:
-            - {value: "A user has the role when they're logged in using any method except by remember me", correct: true}
-            - {value: "A user has the role when they're logged in using any method", correct: false}
-            - {value: "A user has the role when they're able to login after signup", correct: false}
-
-    -   question: What is the purpose the IS_AUTHENTICATED_ANONYMOUSLY role?
+            -
+                value: 'A user has the role when they''re logged in using any method except by remember me'
+                correct: true
+            -
+                value: 'A user has the role when they''re logged in using any method'
+                correct: false
+            -
+                value: 'A user has the role when they''re able to login after signup'
+                correct: false
+    -
+        question: 'What is the purpose the IS_AUTHENTICATED_ANONYMOUSLY role?'
         answers:
-            - {value: "Every user has this role", correct: true}
-            - {value: "Only anonymous users have this role", correct: false}
-            - {value: "A user which had a session just expire has this role", correct: false}
-
-    -   question: Which class can be used to extracts security errors from a Request?
+            -
+                value: 'Every user has this role'
+                correct: true
+            -
+                value: 'Only anonymous users have this role'
+                correct: false
+            -
+                value: 'A user which had a session just expire has this role'
+                correct: false
+    -
+        question: 'Which class can be used to extracts security errors from a Request?'
         answers:
-            - {value: "AuthenticationUtils", correct: true}
-            - {value: "RequestUtils", correct: false}
-            - {value: "SecurityUtils", correct: false}
-            - {value: "FrameworkUtils", correct: false}
-            - {value: "HttpUtils", correct: false}
-
-
-    -   question: Which ROLE allows you to impersonate a user?
+            -
+                value: AuthenticationUtils
+                correct: true
+            -
+                value: RequestUtils
+                correct: false
+            -
+                value: SecurityUtils
+                correct: false
+            -
+                value: FrameworkUtils
+                correct: false
+            -
+                value: HttpUtils
+                correct: false
+    -
+        question: 'Which ROLE allows you to impersonate a user?'
         answers:
-            - {value: "ROLE_ALLOWED_TO_SWITCH", correct: true}
-            - {value: "ROLE_ADMIN", correct: false}
-            - {value: "ROLE_USER_ALLOWED_TO_SWITCH", correct: false}
-            - {value: "ROLE_ADMIN_ALLOWED_TO_SWITCH", correct: false}
-
-    -   question: |
+            -
+                value: ROLE_ALLOWED_TO_SWITCH
+                correct: true
+            -
+                value: ROLE_ADMIN
+                correct: false
+            -
+                value: ROLE_USER_ALLOWED_TO_SWITCH
+                correct: false
+            -
+                value: ROLE_ADMIN_ALLOWED_TO_SWITCH
+                correct: false
+    -
+        question: |
             Which of the following services exist since Symfony 2.3 and still exist in any Symfony 3.x versions?
+            
         answers:
-            - {value: "security.encoder_factory", correct: true}
-            - {value: "security.authentication_utils", correct: false}
-            - {value: "security.secure_random", correct: false}
-            - {value: "security.firewall", correct: true}
-            - {value: "security.context", correct: false}
-
-    -   question: |
+            -
+                value: security.encoder_factory
+                correct: true
+            -
+                value: security.authentication_utils
+                correct: false
+            -
+                value: security.secure_random
+                correct: false
+            -
+                value: security.firewall
+                correct: true
+            -
+                value: security.context
+                correct: false
+    -
+        question: |
             What is the purpose of the login_path firewall option?
+            
         answers:
-            - {value: "It provides a path to redirect the user to when they are not authenticated", correct: true}
-            - {value: "It provides the overall path to redirect ", correct: false}
-            - {value: "security.secure_random", correct: false}
-            - {value: "security.firewall", correct: true}
-            - {value: "security.context", correct: false}
-
-    -   question: |
+            -
+                value: 'It provides a path to redirect the user to when they are not authenticated'
+                correct: true
+            -
+                value: 'It provides the overall path to redirect '
+                correct: false
+            -
+                value: security.secure_random
+                correct: false
+            -
+                value: security.firewall
+                correct: true
+            -
+                value: security.context
+                correct: false
+    -
+        question: |
             Does Symfony forms work with PHP superglobal information?
+            
         answers:
-            - {value: "Yes", correct: true}
-            - {value: "No", correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             What is the correct way to make Symfony forms support HttpFoundation requests?
+            
         answers:
-            - {value: "By calling ->addExtension() on a FormBuilder object with a HttpFoundationExtension object", correct: true}
-            - {value: "By calling ->addExtension() on a Form object with a HttpFoundationExtension object", correct: false}
-            - {value: "By calling ->enableExtension() on a Form object with a HttpFoundationExtension object", correct: false}
-            - {value: "By calling ->enableExtension() on a FormBuilder object with a HttpFoundationExtension object", correct: false}
-            - {value: "By calling ->enableSymfonyRequest() on a Form object", correct: false}
-            - {value: "By calling ->enableSymfonyRequest() on a FormBuilder object", correct: false}
-
-    -   question: |
+            -
+                value: 'By calling ->addExtension() on a FormBuilder object with a HttpFoundationExtension object'
+                correct: true
+            -
+                value: 'By calling ->addExtension() on a Form object with a HttpFoundationExtension object'
+                correct: false
+            -
+                value: 'By calling ->enableExtension() on a Form object with a HttpFoundationExtension object'
+                correct: false
+            -
+                value: 'By calling ->enableExtension() on a FormBuilder object with a HttpFoundationExtension object'
+                correct: false
+            -
+                value: 'By calling ->enableSymfonyRequest() on a Form object'
+                correct: false
+            -
+                value: 'By calling ->enableSymfonyRequest() on a FormBuilder object'
+                correct: false
+    -
+        question: |
             What Symfony component is required to support CSRF protection on Symfony forms?
+            
         answers:
-            - {value: 'symfony/security-csrf', correct: true}
-            - {value: 'symfony/csrf', correct: false}
-            - {value: 'symfony/form-csrf', correct: false}
-
-    -   question: |
+            -
+                value: symfony/security-csrf
+                correct: true
+            -
+                value: symfony/csrf
+                correct: false
+            -
+                value: symfony/form-csrf
+                correct: false
+    -
+        question: |
             What Symfony component is required to support CSRF protection on Symfony forms?
+            
         answers:
-            - {value: 'symfony/security-csrf', correct: true}
-            - {value: 'symfony/csrf', correct: false}
-            - {value: 'symfony/form-csrf', correct: false}
-
-    -   question: |
+            -
+                value: symfony/security-csrf
+                correct: true
+            -
+                value: symfony/csrf
+                correct: false
+            -
+                value: symfony/form-csrf
+                correct: false
+    -
+        question: |
             What is the name of the form field where the CSRF code is stored?
+            
         answers:
-            - {value: '_token', correct: true}
-            - {value: '_code', correct: false}
-            - {value: 'token', correct: false}
-            - {value: 'code', correct: false}
-            - {value: 'csrf', correct: false}
-            - {value: '_csrf', correct: false}
-
-    -   question: |
+            -
+                value: _token
+                correct: true
+            -
+                value: _code
+                correct: false
+            -
+                value: token
+                correct: false
+            -
+                value: code
+                correct: false
+            -
+                value: csrf
+                correct: false
+            -
+                value: _csrf
+                correct: false
+    -
+        question: |
             How can one disable CSRF validation on a form?
+            
         answers:
-            - {value: 'Settings the csrf_protection option to false', correct: true}
-            - {value: 'Settings the disable_csrf_protection option to true', correct: false}
-            - {value: 'Settings the csrf_protection_name option to false', correct: false}
-            - {value: 'Settings the csrf_protection_form_name option to false', correct: false}
-
-    -   question: |
+            -
+                value: 'Settings the csrf_protection option to false'
+                correct: true
+            -
+                value: 'Settings the disable_csrf_protection option to true'
+                correct: false
+            -
+                value: 'Settings the csrf_protection_name option to false'
+                correct: false
+            -
+                value: 'Settings the csrf_protection_form_name option to false'
+                correct: false
+    -
+        question: |
             Which of these are Symfony built-in security providers configuration name?
+            
         answers:
-            - {value: 'memory', correct: true}
-            - {value: 'ldap', correct: true}
-            - {value: 'chain', correct: true}
-            - {value: 'in_memory', correct: false}
-            - {value: 'doctrine', correct: false}
-
-    -   question: |
+            -
+                value: memory
+                correct: true
+            -
+                value: ldap
+                correct: true
+            -
+                value: chain
+                correct: true
+            -
+                value: in_memory
+                correct: false
+            -
+                value: doctrine
+                correct: false
+    -
+        question: |
             What methods exist in Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface?
+            
         answers:
-            - {value: 'public function create(ContainerBuilder $container, $id, $config, $userProvider, $defaultEntryPoint);', correct: true}
-            - {value: 'public function getPosition();', correct: true}
-            - {value: 'public function getKey();', correct: true}
-            - {value: 'public function addConfiguration(NodeDefinition $builder);', correct: true}
-
-    -   question: |
+            -
+                value: 'public function create(ContainerBuilder $container, $id, $config, $userProvider, $defaultEntryPoint);'
+                correct: true
+            -
+                value: 'public function getPosition();'
+                correct: true
+            -
+                value: 'public function getKey();'
+                correct: true
+            -
+                value: 'public function addConfiguration(NodeDefinition $builder);'
+                correct: true
+    -
+        question: |
             What is the purpose of Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface?
+            
         answers:
-            - {value: 'It attaches authentication related services based on the config', correct: true}
-            - {value: 'It creates security firewalls based on the config', correct: false}
-
-    -   question: |
+            -
+                value: 'It attaches authentication related services based on the config'
+                correct: true
+            -
+                value: 'It creates security firewalls based on the config'
+                correct: false
+    -
+        question: |
             Where should one configure security configuration in Symfony 3.4?
+            
         answers:
-            - {value: 'app/config/security.yml', correct: true}
-            - {value: 'app/config/config.yml', correct: false}
-            - {value: 'app/config/security/main.yml', correct: false}
-
-    -   question: |
+            -
+                value: app/config/security.yml
+                correct: true
+            -
+                value: app/config/config.yml
+                correct: false
+            -
+                value: app/config/security/main.yml
+                correct: false
+    -
+        question: |
             What option must one configure to allow any user to view a page?
+            
         answers:
-            - {value: 'anonymous: ~', correct: true}
-            - {value: 'login: false', correct: false}
-            - {value: 'open: true', correct: false}
-            - {value: 'secure: false', correct: false}
-
-    -   question: |
+            -
+                value: 'anonymous: ~'
+                correct: true
+            -
+                value: 'login: false'
+                correct: false
+            -
+                value: 'open: true'
+                correct: false
+            -
+                value: 'secure: false'
+                correct: false
+    -
+        question: |
             How does one configure HTTP basic authentication?
+            
         answers:
-            - {value: 'One must add the http_basic key under a firewall they want to configure it for', correct: true}
-            - {value: 'One can add the http_basic key under the security key', correct: false}
-            - {value: 'One can add the http_basic provider', correct: false}
-
-    -   question: |
+            -
+                value: 'One must add the http_basic key under a firewall they want to configure it for'
+                correct: true
+            -
+                value: 'One can add the http_basic key under the security key'
+                correct: false
+            -
+                value: 'One can add the http_basic provider'
+                correct: false
+    -
+        question: |
             Which key must one configure under security to make certain set of routes require a role?
+            
         answers:
-            - {value: 'access_control', correct: true}
-            - {value: 'required_role', correct: false}
-            - {value: 'access_roles', correct: false}
-            - {value: 'roles', correct: false}
-
-    -   question: |
+            -
+                value: access_control
+                correct: true
+            -
+                value: required_role
+                correct: false
+            -
+                value: access_roles
+                correct: false
+            -
+                value: roles
+                correct: false
+    -
+        question: |
             What security providers must one use to configure the users in configuration files?
+            
         answers:
-            - {value: 'users_in_memory', correct: true}
-            - {value: 'configuration_users', correct: false}
-            - {value: 'memory_users', correct: false}
-
-    -   question: |
+            -
+                value: users_in_memory
+                correct: true
+            -
+                value: configuration_users
+                correct: false
+            -
+                value: memory_users
+                correct: false
+    -
+        question: |
             Is it possible for different file walls to get users from different locations?
+            
         answers:
-            - {value: 'Yes', correct: true}
-            - {value: 'No', correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Is the following a valid way to configure an encoder?
-
+            
             security:
                 # ...
-
+            
                 encoders:
                     Symfony\Component\Security\Core\User\User: plaintext
+            
         answers:
-            - {value: 'Yes', correct: true}
-            - {value: 'No', correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Is the following a valid way to configure an encoder?
-
+            
             security:
                 # ...
                 encoders:
                     Symfony\Component\Security\Core\Encoder\PlaintextPasswordEncoder:
                         users:
                             - Symfony\Component\Security\Core\User\User
+            
         answers:
-            - {value: 'No', correct: true}
-            - {value: 'Yes', correct: false}
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             Which of the followig is correct option to configure a redirection route on login failure?
+            
         answers:
-            - {value: 'failure_path: login_failure_route_name', correct: true}
-            - {value: 'failure_path: /failure', correct: false}
-            - {value: 'on_failure: login_failure_route_name', correct: false}
-            - {value: 'on_failure:  /failure', correct: false}
-
-    -   question: |
+            -
+                value: 'failure_path: login_failure_route_name'
+                correct: true
+            -
+                value: 'failure_path: /failure'
+                correct: false
+            -
+                value: 'on_failure: login_failure_route_name'
+                correct: false
+            -
+                value: 'on_failure:  /failure'
+                correct: false
+    -
+        question: |
             By default, what parameter can you use inside the login form to specify the failure target of the redirection ?
+            
         answers:
-            - {value: '_failure_path', correct: true}
-            - {value: '_failure', correct: false}
-            - {value: '_failure_redirection_path', correct: false}
-            - {value: '_failure_redirection_route', correct: false}
-
-    -   question: |
+            -
+                value: _failure_path
+                correct: true
+            -
+                value: _failure
+                correct: false
+            -
+                value: _failure_redirection_path
+                correct: false
+            -
+                value: _failure_redirection_route
+                correct: false
+    -
+        question: |
             What is the name of the trait to redirect the user to a they were trying to access?
+            
         answers:
-            - {value: 'TargetPathTrait', correct: true}
-            - {value: 'NextPathTrait', correct: false}
-            - {value: 'LoginRedirectTrait', correct: false}
-
-    -   question: |
+            -
+                value: TargetPathTrait
+                correct: true
+            -
+                value: NextPathTrait
+                correct: false
+            -
+                value: LoginRedirectTrait
+                correct: false
+    -
+        question: |
             Which of the following methods is not defined by the Symfony\Component\Security\Guard\GuardAuthenticatorInterface only (not its parent)?
+            
         answers:
-            - {value: 'public function start(Request $request, AuthenticationException $authException = null);', correct: true}
-            - {value: 'public function getUser($credentials, UserProviderInterface $userProvider);', correct: false}
-            - {value: 'public function supportsRememberMe();', correct: false}
-            - {value: 'public function getCredentials(Request $request);', correct: false}
-            - {value: 'public function checkCredentials($credentials, UserInterface $user);', correct: false}
-            - {value: 'public function createAuthenticatedToken(UserInterface $user, $providerKey);', correct: false}
-            - {value: 'public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey);', correct: false}
-            - {value: 'public function onAuthenticationFailure(Request $request, AuthenticationException $exception);', correct: false}
-
-    -   question: |
+            -
+                value: 'public function start(Request $request, AuthenticationException $authException = null);'
+                correct: true
+            -
+                value: 'public function getUser($credentials, UserProviderInterface $userProvider);'
+                correct: false
+            -
+                value: 'public function supportsRememberMe();'
+                correct: false
+            -
+                value: 'public function getCredentials(Request $request);'
+                correct: false
+            -
+                value: 'public function checkCredentials($credentials, UserInterface $user);'
+                correct: false
+            -
+                value: 'public function createAuthenticatedToken(UserInterface $user, $providerKey);'
+                correct: false
+            -
+                value: 'public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey);'
+                correct: false
+            -
+                value: 'public function onAuthenticationFailure(Request $request, AuthenticationException $exception);'
+                correct: false
+    -
+        question: |
             Which of the following methods are defined by the Symfony\Component\Security\Guard\GuardAuthenticatorInterface only (not its parent)?
+            
         answers:
-            - {value: 'public function getUser($credentials, UserProviderInterface $userProvider);', correct: true}
-            - {value: 'public function supportsRememberMe();', correct: true}
-            - {value: 'public function getCredentials(Request $request);', correct: true}
-            - {value: 'public function checkCredentials($credentials, UserInterface $user);', correct: true}
-            - {value: 'public function createAuthenticatedToken(UserInterface $user, $providerKey);', correct: true}
-            - {value: 'public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey);', correct: true}
-            - {value: 'public function onAuthenticationFailure(Request $request, AuthenticationException $exception);', correct: true}
-            - {value: 'public function start(Request $request, AuthenticationException $authException = null);', correct: false}
-            - {value: 'public function handle(GetResponseEvent $event);', correct: false}
-            - {value: 'private function executeGuardAuthenticator($uniqueGuardKey, GuardAuthenticatorInterface $guardAuthenticator, GetResponseEvent $event);', correct: false}
-
-    -   question: |
+            -
+                value: 'public function getUser($credentials, UserProviderInterface $userProvider);'
+                correct: true
+            -
+                value: 'public function supportsRememberMe();'
+                correct: true
+            -
+                value: 'public function getCredentials(Request $request);'
+                correct: true
+            -
+                value: 'public function checkCredentials($credentials, UserInterface $user);'
+                correct: true
+            -
+                value: 'public function createAuthenticatedToken(UserInterface $user, $providerKey);'
+                correct: true
+            -
+                value: 'public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey);'
+                correct: true
+            -
+                value: 'public function onAuthenticationFailure(Request $request, AuthenticationException $exception);'
+                correct: true
+            -
+                value: 'public function start(Request $request, AuthenticationException $authException = null);'
+                correct: false
+            -
+                value: 'public function handle(GetResponseEvent $event);'
+                correct: false
+            -
+                value: 'private function executeGuardAuthenticator($uniqueGuardKey, GuardAuthenticatorInterface $guardAuthenticator, GetResponseEvent $event);'
+                correct: false
+    -
+        question: |
             What is the purpose of the AuthenticationProviderInterface::authenticate() method?
+            
         answers:
-            - {value: 'It authenticates the token if the credentials provided are correct', correct: true}
-            - {value: 'It creates a token with credentials in the request if the credentials provided are correct', correct: false}
-            - {value: 'It creates a user matching credentials in the request if the credentials provided are correct', correct: false}
+            -
+                value: 'It authenticates the token if the credentials provided are correct'
+                correct: true
+            -
+                value: 'It creates a token with credentials in the request if the credentials provided are correct'
+                correct: false
+            -
+                value: 'It creates a user matching credentials in the request if the credentials provided are correct'
+                correct: false

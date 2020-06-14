@@ -1,105 +1,199 @@
 category: DBAL
 questions:
-    -   question: "Which databases are supported out of the box by doctrine DBAL?"
+    -
+        question: 'Which databases are supported out of the box by doctrine DBAL?'
         answers:
-            - { value: Microsoft SQL Server, correct: true }
-            - { value: SQLite, correct: true }
-            - { value: Drizzle, correct: false }
-            - { value: SAP Sybase SQL Anywhere, correct: true }
-            - { value: MySQL, correct: true }
-            - { value: Microsoft Access, correct: false }
-            - { value: Firebird, correct: false }
-            - { value: DB2, correct: false }
-            - { value: Oracle, correct: true }
-            - { value: PostgreSQL, correct: true }
-
-    -   question: |
+            -
+                value: 'Microsoft SQL Server'
+                correct: true
+            -
+                value: SQLite
+                correct: true
+            -
+                value: Drizzle
+                correct: false
+            -
+                value: 'SAP Sybase SQL Anywhere'
+                correct: true
+            -
+                value: MySQL
+                correct: true
+            -
+                value: 'Microsoft Access'
+                correct: false
+            -
+                value: Firebird
+                correct: false
+            -
+                value: DB2
+                correct: false
+            -
+                value: Oracle
+                correct: true
+            -
+                value: PostgreSQL
+                correct: true
+    -
+        question: |
             Will the following code update your database with the changes made to the $user object?
-
+            
             $user = $entityManager->find("User", 1);
             $user->setProfession("Wizard");
             $entityManager->flush();
+            
         answers:
-            - { value: Yes, correct: true }
-            - { value: 'No, there is a missing $entityManager->persist($user);', correct: false }
-
-    -   question: "Which of the following APIs are designed to be SAFE from SQL injections?"
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No, there is a missing $entityManager->persist($user);'
+                correct: false
+    -
+        question: 'Which of the following APIs are designed to be SAFE from SQL injections?'
         answers:
-            - { value: 'Doctrine\DBAL\Query\QueryBuilder#setFirstResult($offset)', correct: true }
-            - { value: 'Doctrine\DBAL\Platforms\AbstractPlatform#modifyLimitQuery($sql, $limit, $offset)', correct: true }
-            - { value: 'Doctrine\DBAL\Connection#update($table, $values, $where, $types)', correct: true }
-            - { value: 'Doctrine\DBAL\Query\QueryBuilder#setMaxResults($limit)', correct: true }
-            - { value: 'Doctrine\DBAL\Connection#insert($table, $values, $types)', correct: true }
-            - { value: 'Doctrine\DBAL\Connection#delete($table, $where, $types)', correct: true }
-            - { value: 'Query methods on the Connection.', correct: false }
-            - { value: 'The QueryBuilder API.', correct: false }
+            -
+                value: 'Doctrine\DBAL\Query\QueryBuilder#setFirstResult($offset)'
+                correct: true
+            -
+                value: 'Doctrine\DBAL\Platforms\AbstractPlatform#modifyLimitQuery($sql, $limit, $offset)'
+                correct: true
+            -
+                value: 'Doctrine\DBAL\Connection#update($table, $values, $where, $types)'
+                correct: true
+            -
+                value: 'Doctrine\DBAL\Query\QueryBuilder#setMaxResults($limit)'
+                correct: true
+            -
+                value: 'Doctrine\DBAL\Connection#insert($table, $values, $types)'
+                correct: true
+            -
+                value: 'Doctrine\DBAL\Connection#delete($table, $where, $types)'
+                correct: true
+            -
+                value: 'Query methods on the Connection.'
+                correct: false
+            -
+                value: 'The QueryBuilder API.'
+                correct: false
         help: |
-             https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/security.html#sql-injection-safe-and-unsafe-apis-for-user-input
-
-             Doctrine\DBAL\Platforms\AbstractPlatform#modifyLimitQuery($sql, $limit, $offset) for the $limit and $offset parameters.
-
-    -   question: |
+            https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/security.html#sql-injection-safe-and-unsafe-apis-for-user-input
+            
+            Doctrine\DBAL\Platforms\AbstractPlatform#modifyLimitQuery($sql, $limit, $offset) for the $limit and $offset parameters.
+            
+    -
+        question: |
             Which of the following are valid database URLs that can be used in the dbal.url option in Symfony applications?
-
+            
             # config/packages/doctrine.yaml
             doctrine:
                 dbal:
                     url: ...
+            
         answers:
-            - { value: 'sqlite:///:memory:', correct: true }
-            - { value: 'mysql://localhost:4486/foo?charset=UTF-8', correct: true }
-            - { value: 'sqlite:///data.db', correct: true }
-            - { value: 'mysql://localhost/mydb@user:secret', correct: false }
-            - { value: 'pgsql://localhost:5432', correct: false}
+            -
+                value: 'sqlite:///:memory:'
+                correct: true
+            -
+                value: 'mysql://localhost:4486/foo?charset=UTF-8'
+                correct: true
+            -
+                value: 'sqlite:///data.db'
+                correct: true
+            -
+                value: 'mysql://localhost/mydb@user:secret'
+                correct: false
+            -
+                value: 'pgsql://localhost:5432'
+                correct: false
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html
-
-    -   question: Does Doctrine support passing arrays as parameters?
+            
+    -
+        question: 'Does Doctrine support passing arrays as parameters?'
         answers:
-            - { value: 'Yes', correct: true }
-            - { value: 'No', correct: false }
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/data-retrieval-and-manipulation.html#list-of-parameters-conversion
-
-    -   question: Is it possible to change the type of each item in an array in a Doctrine query?
+            
+    -
+        question: 'Is it possible to change the type of each item in an array in a Doctrine query?'
         answers:
-            - { value: 'Yes', correct: true }
-            - { value: 'No', correct: false }
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/data-retrieval-and-manipulation.html#list-of-parameters-conversion
-
-
-    -   question: In which of these cases will $result contain the number of affected rows?
+            
+    -
+        question: 'In which of these cases will $result contain the number of affected rows?'
         answers:
-            - { value: "$result = $conn->delete('user', ['id' => 1]);", correct: true }
-            - { value: "$result = $conn->executeUpdate('DELETE FROM user WHERE id = 1');", correct: true }
-            - { value: "$result = $conn->prepare('DELETE FROM user WHERE id = 1')->execute();", correct: false }
-            - { value: "$result = $conn->executeQuery('DELETE FROM user WHERE id = 1');", correct: false }
+            -
+                value: '$result = $conn->delete(''user'', [''id'' => 1]);'
+                correct: true
+            -
+                value: '$result = $conn->executeUpdate(''DELETE FROM user WHERE id = 1'');'
+                correct: true
+            -
+                value: '$result = $conn->prepare(''DELETE FROM user WHERE id = 1'')->execute();'
+                correct: false
+            -
+                value: '$result = $conn->executeQuery(''DELETE FROM user WHERE id = 1'');'
+                correct: false
         help: |
             Doctrine\DBAL\Connection#executeQueryreturns a Doctrine\DBAL\Driver\Statement https://github.com/doctrine/dbal/blob/2.5/lib/Doctrine/DBAL/Connection.php#L827
-
+            
             Doctrine\DBAL\Driver\Statement#execute returns true or false. https://github.com/doctrine/dbal/blob/2.5/lib/Doctrine/DBAL/Driver/Statement.php#L112
-
+            
             In both case we can call Doctrine\DBAL\Driver\Statement#rowCount to get the number of affected rows.
-
-    -   question: Which of the following are reserved words?
+            
+    -
+        question: 'Which of the following are reserved words?'
         answers:
-            - { value: 'ADD', correct: true }
-            - { value: 'AND', correct: true }
-            - { value: 'BOTH', correct: true }
-            - { value: 'CONDITION', correct: true }
-            - { value: 'NUMERIC', correct: true }
-            - { value: 'FETCH', correct: true }
-            - { value: 'KILL', correct: true }
-            - { value: 'DIFF', correct: false }
-            - { value: 'ORGANIZE', correct: false }
-            - { value: 'PAYLOAD', correct: false }
+            -
+                value: ADD
+                correct: true
+            -
+                value: AND
+                correct: true
+            -
+                value: BOTH
+                correct: true
+            -
+                value: CONDITION
+                correct: true
+            -
+                value: NUMERIC
+                correct: true
+            -
+                value: FETCH
+                correct: true
+            -
+                value: KILL
+                correct: true
+            -
+                value: DIFF
+                correct: false
+            -
+                value: ORGANIZE
+                correct: false
+            -
+                value: PAYLOAD
+                correct: false
         help: |
             https://dev.mysql.com/doc/refman/5.5/en/keywords.html
-
-    -   question: |
+            
+    -
+        question: |
             Is the following the correct way to create a MySQL database connection?
-
+            
             $connectionParams = array(
                 'dbname' => 'mydb',
                 'user' => 'user',
@@ -107,146 +201,247 @@ questions:
                 'host' => 'localhost',
                 'driver' => 'pdo_mysql',
             );
-
+            
             $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
+            
         answers:
-            - { value: 'Yes', correct: true }
-            - { value: 'No', correct: false }
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#getting-a-connection
-
-    -   question: |
+            
+    -
+        question: |
             Is the following the correct way to create a MySQL database connection?
-
+            
             $connectionParams = array(
                 'dbname' => 'mydb',
                 'user' => 'user',
                 'password' => 'secret',
                 'host' => 'localhost',
             );
-
+            
             $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
+            
         answers:
-            - { value: 'Yes', correct: false }
-            - { value: 'No', correct: true }
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#getting-a-connection
-
-    -   question: |
+            
+    -
+        question: |
             Is the following the correct way to create a MySQL database connection?
-
+            
             $connectionParams = array(
                 'dbname' => 'mydb',
                 'user' => 'user',
                 'password' => 'secret',
                 'host' => 'localhost',
             );
-
+            
             $conn = \Doctrine\DBAL\DriverFactory::create($connectionParams);
+            
         answers:
-            - { value: 'Yes', correct: false }
-            - { value: 'No', correct: true }
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#getting-a-connection
-
-    -   question: |
+            
+    -
+        question: |
             Is the following the correct way to create a MySQL database connection?
-
+            
             $connectionParams = array(
                 'url' => 'mysql://user:secret@localhost/mydb',
             );
-
+            
             $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
+            
         answers:
-            - { value: 'Yes', correct: true }
-            - { value: 'No', correct: false }
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#getting-a-connection
-
-    -   question: |
+            
+    -
+        question: |
             Is the following the correct way to create a MySQL database connection?
-
+            
             $connectionParams = array(
                 'url' => 'mysql://user:secret@localhost/mydb',
             );
-
+            
             $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
+            
         answers:
-            - { value: 'Yes', correct: true }
-            - { value: 'No', correct: false }
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#getting-a-connection
-
-    -   question: Which of the following are valid driver url schemes?
+            
+    -
+        question: 'Which of the following are valid driver url schemes?'
         answers:
-            - { value: 'db2', correct: true }
-            - { value: 'mssql', correct: true }
-            - { value: 'mysql', correct: true }
-            - { value: 'pgsql', correct: true }
-            - { value: 'ibm', correct: false }
-            - { value: 'pg', correct: false }
-            - { value: 'sqlite2', correct: false }
-            - { value: 'sqlite2', correct: false }
+            -
+                value: db2
+                correct: true
+            -
+                value: mssql
+                correct: true
+            -
+                value: mysql
+                correct: true
+            -
+                value: pgsql
+                correct: true
+            -
+                value: ibm
+                correct: false
+            -
+                value: pg
+                correct: false
+            -
+                value: sqlite2
+                correct: false
+            -
+                value: sqlite2
+                correct: false
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#connecting-using-a-url
-
-    -   question: Which of the following are valid driver url schemes?
+            
+    -
+        question: 'Which of the following are valid driver url schemes?'
         answers:
-            - { value: 'postgres', correct: true }
-            - { value: 'postgresql', correct: true }
-            - { value: 'sqlite', correct: true }
-            - { value: 'sqlite3', correct: true }
-            - { value: 'ibm', correct: false }
-            - { value: 'sqlite2', correct: false }
-            - { value: 'pg', correct: false }
+            -
+                value: postgres
+                correct: true
+            -
+                value: postgresql
+                correct: true
+            -
+                value: sqlite
+                correct: true
+            -
+                value: sqlite3
+                correct: true
+            -
+                value: ibm
+                correct: false
+            -
+                value: sqlite2
+                correct: false
+            -
+                value: pg
+                correct: false
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#connecting-using-a-url
-
-    -   question: Unlike a database such as MySQL, SQLite columns are not explicitely typed. Instead, SQLite categorizes data into which of the following categories ?
+            
+    -
+        question: 'Unlike a database such as MySQL, SQLite columns are not explicitely typed. Instead, SQLite categorizes data into which of the following categories ?'
         answers:
-            - { value: 'numeric', correct: true }
-            - { value: 'binary', correct: false }
-            - { value: 'textual', correct: true }
-            - { value: 'constant', correct: false }
-            - { value: 'unicode', correct: false }
+            -
+                value: numeric
+                correct: true
+            -
+                value: binary
+                correct: false
+            -
+                value: textual
+                correct: true
+            -
+                value: constant
+                correct: false
+            -
+                value: unicode
+                correct: false
         help: |
             https://sqlite.org/docs.html
-
-    -   question: What class must a custom driver wrapper extension extend?
+            
+    -
+        question: 'What class must a custom driver wrapper extension extend?'
         answers:
-            - { value: 'Doctrine\DBAL\Connection', correct: true }
-            - { value: 'Doctrine\DBAL\Wrapper', correct: false }
-            - { value: 'Doctrine\DBAL\DriverExtension', correct: false }
+            -
+                value: Doctrine\DBAL\Connection
+                correct: true
+            -
+                value: Doctrine\DBAL\Wrapper
+                correct: false
+            -
+                value: Doctrine\DBAL\DriverExtension
+                correct: false
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#wrapper-class
-
-    -   question: In which of these cases will $result contain the number of affected rows?
+            
+    -
+        question: 'In which of these cases will $result contain the number of affected rows?'
         answers:
-            - { value: "$result = $conn->executeUpdate('DELETE FROM user WHERE id = 1');", correct: true }
-            - { value: "$result = $conn->delete('user', ['id' => 1]);", correct: false }
-            - { value: "$result = $conn->executeQuery('DELETE FROM user WHERE id = 1');", correct: false }
-            - { value: "$result = $conn->prepare('DELETE FROM user WHERE id = 1')->execute();", correct: false }
+            -
+                value: '$result = $conn->executeUpdate(''DELETE FROM user WHERE id = 1'');'
+                correct: true
+            -
+                value: '$result = $conn->delete(''user'', [''id'' => 1]);'
+                correct: false
+            -
+                value: '$result = $conn->executeQuery(''DELETE FROM user WHERE id = 1'');'
+                correct: false
+            -
+                value: '$result = $conn->prepare(''DELETE FROM user WHERE id = 1'')->execute();'
+                correct: false
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#wrapper-class
-    -   question: |
+            
+    -
+        question: |
             Will this prepared statement work?
-
+            
             $stmt = $conn->executeQuery(
                 'SELECT * FROM user WHERE id IN (?)',
                 [[1, 2, 3, 4, 5, 6]],
                 [\Doctrine\DBAL\Connection::PARAM_INT_ARRAY]
             );
             $users = $stmt->fetchAll();
+            
         answers:
-            - { value: "Yes", correct: true }
-            - { value: "No", correct: false }
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
         help: |
             https://www.doctrine-project.org/projects/doctrine-dbal/en/2.10/reference/configuration.html#wrapper-class
-
-    -   question: |
+            
+    -
+        question: |
             $stmt = $conn->prepare('SELECT * FROM articles WHERE id IN (?)');
             $stmt->bindValue(1, [1, 2, 3, 4, 5, 6], \Doctrine\DBAL\Connection::PARAM_INT_ARRAY);
             $stmt->execute();
+            
         answers:
-            - {value: No, correct: true }
-            - {value: Yes, correct: false }
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false

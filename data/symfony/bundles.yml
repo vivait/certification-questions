@@ -1,169 +1,294 @@
 category: Bundles
 questions:
-    -   question: 'What kind of help provides the config:dump-reference command?'
+    -
+        question: 'What kind of help provides the config:dump-reference command?'
         answers:
-            - {value: Adds the default configuration of a bundle in the app/config/config.yml file, correct: false}
-            - {value: Dumps the default configuration of a bundle, correct: true}
-            - {value: Dumps the current configuration in .htaccess format using the php_value directive, correct: false}
-            - {value: Dumps the current configuration of a bundle, correct: false}
-
-    -   question: 'What value type is returned by the Symfony\Bundle\FrameworkBundle\Controller\Controller::renderView() method?'
+            -
+                value: 'Adds the default configuration of a bundle in the app/config/config.yml file'
+                correct: false
+            -
+                value: 'Dumps the default configuration of a bundle'
+                correct: true
+            -
+                value: 'Dumps the current configuration in .htaccess format using the php_value directive'
+                correct: false
+            -
+                value: 'Dumps the current configuration of a bundle'
+                correct: false
+    -
+        question: 'What value type is returned by the Symfony\Bundle\FrameworkBundle\Controller\Controller::renderView() method?'
         answers:
-            - {value: An instance of Symfony\Component\View\View., correct: false}
-            - {value: An instance of Symfony\Component\HttpFoundation\Response., correct: false}
-            - {value: A string., correct: true}
-            - {value: An instance of Symfony\Component\BrowserKit\Response., correct: false}
-
-    -   question: 'What is the tag to use to create a custom form type extension?'
+            -
+                value: 'An instance of Symfony\Component\View\View.'
+                correct: false
+            -
+                value: 'An instance of Symfony\Component\HttpFoundation\Response.'
+                correct: false
+            -
+                value: 'A string.'
+                correct: true
+            -
+                value: 'An instance of Symfony\Component\BrowserKit\Response.'
+                correct: false
+    -
+        question: 'What is the tag to use to create a custom form type extension?'
         answers:
-            - {value: form.type.extension, correct: false}
-            - {value: form.extension, correct: false}
-            - {value: form_extension, correct: false}
-            - {value: form.type_extension, correct: true}
-            - {value: type_extension, correct: false}
-
-    -   question: 'What is the tag to allow remember me authentication?'
+            -
+                value: form.type.extension
+                correct: false
+            -
+                value: form.extension
+                correct: false
+            -
+                value: form_extension
+                correct: false
+            -
+                value: form.type_extension
+                correct: true
+            -
+                value: type_extension
+                correct: false
+    -
+        question: 'What is the tag to allow remember me authentication?'
         answers:
-            - {value: security.remember_me_aware, correct: true}
-            - {value: security.remember_me_auth, correct: false}
-            - {value: security.remember_me_authentication, correct: false}
-            - {value: security.remember_me, correct: false}
-
-    -   question: 'What is the name of the special request attribute used by the RouterListener object to know which callable to invoke through the HttpKernel engine?'
+            -
+                value: security.remember_me_aware
+                correct: true
+            -
+                value: security.remember_me_auth
+                correct: false
+            -
+                value: security.remember_me_authentication
+                correct: false
+            -
+                value: security.remember_me
+                correct: false
+    -
+        question: 'What is the name of the special request attribute used by the RouterListener object to know which callable to invoke through the HttpKernel engine?'
         answers:
-            - {value: _action, correct: false}
-            - {value: _request, correct: false}
-            - {value: _route, correct: false}
-            - {value: _controller, correct: true}
-
-    -   question: 'What value type is returned by the Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller::renderView() method?'
+            -
+                value: _action
+                correct: false
+            -
+                value: _request
+                correct: false
+            -
+                value: _route
+                correct: false
+            -
+                value: _controller
+                correct: true
+    -
+        question: 'What value type is returned by the Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller::renderView() method?'
         answers:
-            - {value: An instance of Symfony\Component\BrowserKit\Response., correct: false}
-            - {value: A string., correct: true}
-            - {value: An instance of Symfony\Component\HttpFoundation\Response., correct: false}
-            - {value: An instance of Symfony\Component\View\View., correct: false}
-
-
-    -   question: |
+            -
+                value: 'An instance of Symfony\Component\BrowserKit\Response.'
+                correct: false
+            -
+                value: 'A string.'
+                correct: true
+            -
+                value: 'An instance of Symfony\Component\HttpFoundation\Response.'
+                correct: false
+            -
+                value: 'An instance of Symfony\Component\View\View.'
+                correct: false
+    -
+        question: |
             Lets assume, we have a controller declared as a service.
             How to add routing to this controller using annotations ?
+            
         answers:
-            - value: |
-                  namespace AcmeBundle\Controller;
-
-                  use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-
-                  /**
-                   * @Route(service="my_post_controller_service")
-                   */
-                  class PostController
-                  {
-                      // ...
-                  }
-              correct: true
-
-            - value: |
-                  namespace AcmeBundle\Controller;
-
-                  use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-
-                  /**
-                   * @Route(service_id="my_post_controller_service")
-                   */
-                  class PostController
-                  {
-                      // ...
-                  }
-              correct: false
-
-            - value: |
-                  namespace AcmeBundle\Controller;
-
-                  use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-
-                  /**
-                   * @Route
-                   */
-                  class PostController
-                  {
-                      // ...
-                  }
-              correct: false
-
-            - value: It's not possible
-              correct: false
-
-    -   question: 'What is the command to display the debug information of the container?'
+            -
+                value: |
+                    namespace AcmeBundle\Controller;
+                    
+                    use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+                    
+                    /**
+                     * @Route(service="my_post_controller_service")
+                     */
+                    class PostController
+                    {
+                        // ...
+                    }
+                    
+                correct: true
+            -
+                value: |
+                    namespace AcmeBundle\Controller;
+                    
+                    use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+                    
+                    /**
+                     * @Route(service_id="my_post_controller_service")
+                     */
+                    class PostController
+                    {
+                        // ...
+                    }
+                    
+                correct: false
+            -
+                value: |
+                    namespace AcmeBundle\Controller;
+                    
+                    use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+                    
+                    /**
+                     * @Route
+                     */
+                    class PostController
+                    {
+                        // ...
+                    }
+                    
+                correct: false
+            -
+                value: 'It''s not possible'
+                correct: false
+    -
+        question: 'What is the command to display the debug information of the container?'
         answers:
-            - {value: debug:container, correct: true}
-            - {value: services:debug, correct: false}
-            - {value: debug:services, correct: false}
-            - {value: container:info, correct: false}
-            - {value: container:debug, correct: false}
-
-
-    -   question: |
+            -
+                value: 'debug:container'
+                correct: true
+            -
+                value: 'services:debug'
+                correct: false
+            -
+                value: 'debug:services'
+                correct: false
+            -
+                value: 'container:info'
+                correct: false
+            -
+                value: 'container:debug'
+                correct: false
+    -
+        question: |
             What is the output of the following controller?
-
-
+            
+            
             use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+            
             class HelloController extends Controller
             {
                 public function helloAction()
                 {
                     $filename = tempnam(sys_get_temp_dir(), 'sf');
                     file_put_contents($filename, 'hello {{ 1 + 1 }}');
-
+            
                     return $this->forward('FrameworkBundle:Template:template', [
                         'template' => $filename
                     ]);
                 }
             }
+            
         answers:
-            - {value: "Error: The controller must return a response", correct: false }
-            - {value: "Error: Controller requires that you provide a value for the “$variables” argument.", correct: false }
-            - {value: "hello 2", correct: true }
-            - {value: "hello", correct: false }
-            - {value: "Error: Route `FrameworkBundle:Template:template` does not exist.", correct: false }
-
-    -   question: |
+            -
+                value: 'Error: The controller must return a response'
+                correct: false
+            -
+                value: 'Error: Controller requires that you provide a value for the “$variables” argument.'
+                correct: false
+            -
+                value: 'hello 2'
+                correct: true
+            -
+                value: hello
+                correct: false
+            -
+                value: 'Error: Route `FrameworkBundle:Template:template` does not exist.'
+                correct: false
+    -
+        question: |
             What are the valid ways to get the Session object if the controller class inherits from the base FrameworkBundle's Controller class?
+            
         answers:
-            - {value: "$session = $request->getSession();", correct: true }
-            - {value: "$session = $this->get('session');", correct: true }
-            - {value: "$session = $this->getSession();", correct: false }
-            - {value: "$session = $this->getUser()->getSession();", correct: false }
-            - {value: "$session = $this->container->getSession();", correct: false }
-
-    -   question: |
+            -
+                value: '$session = $request->getSession();'
+                correct: true
+            -
+                value: '$session = $this->get(''session'');'
+                correct: true
+            -
+                value: '$session = $this->getSession();'
+                correct: false
+            -
+                value: '$session = $this->getUser()->getSession();'
+                correct: false
+            -
+                value: '$session = $this->container->getSession();'
+                correct: false
+    -
+        question: |
             What is the purpose of @Template?
+            
         answers:
-            - {value: "It allows you to render a template without calling Twig", correct: true }
-            - {value: "It allows you to modify the template rendered in the controller", correct: false }
-
-    -   question: |
+            -
+                value: 'It allows you to render a template without calling Twig'
+                correct: true
+            -
+                value: 'It allows you to modify the template rendered in the controller'
+                correct: false
+    -
+        question: |
             Let's consider a controller making his job. Once the request handled, this controller returns a RedirectResponse in destination to another controller. Let's assume both of the following controllers extend AbstractController class from the Symfony FrameworkBundle. What is the best way for the first controller to send a message to the next one?
+            
         answers:
-            - {value: "$this->addFlash('info', 'Some message');", correct: true }
-            - {value: "$_SESSION['message'] = 'Some message';", correct: false }
-            - {value: "$this->addMessage('info', 'Some message');", correct: false }
-            - {value: "$this->get('session')->getFlashBag()->add('message', 'Some message');", correct: false }
-    -   question: |
+            -
+                value: '$this->addFlash(''info'', ''Some message'');'
+                correct: true
+            -
+                value: '$_SESSION[''message''] = ''Some message'';'
+                correct: false
+            -
+                value: '$this->addMessage(''info'', ''Some message'');'
+                correct: false
+            -
+                value: '$this->get(''session'')->getFlashBag()->add(''message'', ''Some message'');'
+                correct: false
+    -
+        question: |
             Which of the following annotations are defined by the SensioFrameworkExtraBundle?
+            
         answers:
-            - {value: "@Security", correct: true }
-            - {value: "@Template", correct: true }
-            - {value: "@ParamConverter", correct: true }
-            - {value: "@Cache", correct: true }
-            - {value: "@Post", correct: false }
-            - {value: "@Get", correct: false }
-
-    -   question: |
+            -
+                value: '@Security'
+                correct: true
+            -
+                value: '@Template'
+                correct: true
+            -
+                value: '@ParamConverter'
+                correct: true
+            -
+                value: '@Cache'
+                correct: true
+            -
+                value: '@Post'
+                correct: false
+            -
+                value: '@Get'
+                correct: false
+    -
+        question: |
             Which of the following annotations are defined by the SensioFrameworkExtraBundle?
+            
         answers:
-            - {value: "@Route", correct: true }
-            - {value: "@Method", correct: true }
-            - {value: "@Template", correct: true }
-            - {value: "@ParamConverter", correct: true }
-            - {value: "@Cache", correct: true }
+            -
+                value: '@Route'
+                correct: true
+            -
+                value: '@Method'
+                correct: true
+            -
+                value: '@Template'
+                correct: true
+            -
+                value: '@ParamConverter'
+                correct: true
+            -
+                value: '@Cache'
+                correct: true

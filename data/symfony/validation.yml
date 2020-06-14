@@ -1,13 +1,14 @@
 category: Validation
 questions:
-    -   question: |
+    -
+        question: |
             Is the following code correct ?
-
+            
             namespace Acme\User;
-
+            
             use Symfony\Component\Security\Core\User\UserInterface;
             use Symfony\Component\Validator\Constraints as Assert;
-
+            
             /**
              * @Assert\GroupSequence({"Default", "User"})
              */
@@ -17,12 +18,12 @@ questions:
                 * @Assert\NotBlank
                 */
                 private $username;
-
+            
                 /**
                 * @Assert\NotBlank
                 */
                 private $password;
-
+            
                 /**
                  * @Assert\True(message="The password cannot match your username", groups={"Strict"})
                  */
@@ -30,16 +31,21 @@ questions:
                 {
                     return ($this->username !== $this->password);
                 }
-
+            
                 // ...
             }
+            
         answers:
-            - {value: Yes, correct: false}
-            - {value: No, correct: true}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: |
             Assuming that the validate() method detects no violations, what will the Response object contain?
-
+            
             // Controller/BookController.php
             public function indexAction(
             {
@@ -48,574 +54,1125 @@ questions:
                 $errors = $validator->validate($book);
                 return new Response((string) $errors);
             }
+            
         answers:
-            - {value: "Notice: Array to string conversion.", correct: false}
-            - {value: An empty string, correct: true}
-            - {value: 'False', correct: false}
-            - {value: "Fatal error: Object of class ConstraintViolationList could not be converted to string.", correct: false}
-
-    -   question: "What does the CardScheme Constraint stand for ?"
+            -
+                value: 'Notice: Array to string conversion.'
+                correct: false
+            -
+                value: 'An empty string'
+                correct: true
+            -
+                value: 'False'
+                correct: false
+            -
+                value: 'Fatal error: Object of class ConstraintViolationList could not be converted to string.'
+                correct: false
+    -
+        question: 'What does the CardScheme Constraint stand for ?'
         answers:
-            - {value: It validates that a card number is valid for a given credit card company, correct: true}
-            - {value: It validates if a credit card is a VISA one, correct: false}
-            - {value: It validates a credit card number, correct: false}
-            - {value: It doesn't exist, correct: false}
-
-    -   question: |
+            -
+                value: 'It validates that a card number is valid for a given credit card company'
+                correct: true
+            -
+                value: 'It validates if a credit card is a VISA one'
+                correct: false
+            -
+                value: 'It validates a credit card number'
+                correct: false
+            -
+                value: 'It doesn''t exist'
+                correct: false
+    -
+        question: |
             Will the following snippet throw an InvalidArgumentException ?
-
+            
             use Symfony\Component\Validator\Validation;
             use Symfony\Component\Validator\Constraints\Blank;
-
+            
             $expectedBlank = [];
-
+            
             $validator = Validation::createValidator();
             $violations = $validator->validate($expectedBlank, [new Blank()]);
-
+            
             if (0 !== count($violations)) {
                 throw new InvalidArgumentException('The value is not blank !');
             }
+            
         answers:
-            - {value: Yes, correct: true}
-            - {value: No, correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Will the following snippet throw an InvalidArgumentException ?
-
+            
             use Symfony\Component\Validator\Validation;
             use Symfony\Component\Validator\Constraints\IsFalse;
-
+            
             $expectedFalse = '0';
-
+            
             $validator = Validation::createValidator();
             $violations = $validator->validate($expectedFalse, [new IsFalse()]);
-
+            
             if (0 !== count($violations)) {
                 throw new InvalidArgumentException('The value is not false !');
             }
+            
         answers:
-            - {value: Yes, correct: false}
-            - {value: No, correct: true}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: |
             Which of the following values will fail Symfony\Component\Validator\Constraints\Blank's validation?
+            
         answers:
-            - {value: "''", correct: false}
-            - {value: "null", correct: false}
-            - {value: '[]', correct: true}
-            - {value: 'new \stdClass', correct: true}
-            - {value: '0', correct: true}
-
-    -   question: Which of the following can a contraint apply to?
+            -
+                value: ''''''
+                correct: false
+            -
+                value: 'null'
+                correct: false
+            -
+                value: '[]'
+                correct: true
+            -
+                value: 'new \stdClass'
+                correct: true
+            -
+                value: '0'
+                correct: true
+    -
+        question: 'Which of the following can a contraint apply to?'
         answers:
-            - {value: Property, correct: true}
-            - {value: public method whose name starts with "has", correct: true}
-            - {value: public method whose name starts with "get", correct: true}
-            - {value: public method whose name starts with "is", correct: true}
-
-    -   question: Which of the following formats are available to define validation rules or constraints?
+            -
+                value: Property
+                correct: true
+            -
+                value: 'public method whose name starts with "has"'
+                correct: true
+            -
+                value: 'public method whose name starts with "get"'
+                correct: true
+            -
+                value: 'public method whose name starts with "is"'
+                correct: true
+    -
+        question: 'Which of the following formats are available to define validation rules or constraints?'
         answers:
-            - {value: YAML, correct: true}
-            - {value: Annotations, correct: true}
-            - {value: XML, correct: true}
-            - {value: JSON, correct: false}
-            - {value: PHP, correct: true}
-
-    -   question: |
+            -
+                value: YAML
+                correct: true
+            -
+                value: Annotations
+                correct: true
+            -
+                value: XML
+                correct: true
+            -
+                value: JSON
+                correct: false
+            -
+                value: PHP
+                correct: true
+    -
+        question: |
             What are the validation groups defined by this code?
-
+            
             <?php
-
+            
             // src/Entity/User.php
             namespace App\Entity;
-
+            
             use Symfony\Component\Security\Core\User\UserInterface;
             use Symfony\Component\Validator\Constraints as Assert;
-
+            
             class User implements UserInterface
             {
                 /**
                 * @Assert\Email(groups={"registration"})
                 */
                 private $email;
-
+            
                 /**
                 * @Assert\NotBlank(groups={"registration"})
                 * @Assert\Length(min=7, groups={"registration"})
                 */
                 private $password;
-
+            
                 /**
                 * @Assert\Length(min=2)
                 */
                 private $city;
             }
+            
         answers:
-            - {value: registration, correct: true}
-            - {value: User, correct: true}
-            - {value: Default, correct: true}
-            - {value: default, correct: false}
-            - {value: user, correct: false}
-
-
-    -   question: |
+            -
+                value: registration
+                correct: true
+            -
+                value: User
+                correct: true
+            -
+                value: Default
+                correct: true
+            -
+                value: default
+                correct: false
+            -
+                value: user
+                correct: false
+    -
+        question: |
             Which of the following are valid values for the type option of the Symfony\Component\Validator\Constraints\Type
             validation constraint ?
+            
         answers:
-            - {value: xml, correct: false}
-            - {value: digit, correct: true}
-            - {value: alpha, correct: true}
-            - {value: integer, correct: true}
-            - {value: email, correct: false}
-            - {value: graph, correct: true}
-
-    -   question: Which of the following elements can contain validation constraints?
+            -
+                value: xml
+                correct: false
+            -
+                value: digit
+                correct: true
+            -
+                value: alpha
+                correct: true
+            -
+                value: integer
+                correct: true
+            -
+                value: email
+                correct: false
+            -
+                value: graph
+                correct: true
+    -
+        question: 'Which of the following elements can contain validation constraints?'
         answers:
-            - {value: Public getters/issers, correct: true}
-            - {value: Classes, correct: true}
-            - {value: Private and protected properties, correct: false}
-            - {value: Public properties, correct: true}
-            - {value: Private and protected getters/issers, correct: false}
-
-    -   question: |
+            -
+                value: 'Public getters/issers'
+                correct: true
+            -
+                value: Classes
+                correct: true
+            -
+                value: 'Private and protected properties'
+                correct: false
+            -
+                value: 'Public properties'
+                correct: true
+            -
+                value: 'Private and protected getters/issers'
+                correct: false
+    -
+        question: |
             With this following simple code:
-
+            
             use Symfony\Component\Validator\Validation;
-
+            
             $validator = Validation::createValidator();
-
+            
             Which variables types this $validator object can validate ?
+            
         answers:
-            - {value: objects, correct: false}
-            - {value: arrays, correct: true}
-            - {value: strings, correct: true}
-            - {value: numbers, correct: true}
-
-    -   question: |
+            -
+                value: objects
+                correct: false
+            -
+                value: arrays
+                correct: true
+            -
+                value: strings
+                correct: true
+            -
+                value: numbers
+                correct: true
+    -
+        question: |
             The Symfony validator is based on…?
+            
         answers:
-            - {value: RFC 2616, correct: false}
-            - {value: PSR-2, correct: false}
-            - {value: 'CVE-2015-2308', correct: false}
-            - {value: JSR 303, correct: true}
-
-    -   question: |
+            -
+                value: 'RFC 2616'
+                correct: false
+            -
+                value: PSR-2
+                correct: false
+            -
+                value: CVE-2015-2308
+                correct: false
+            -
+                value: 'JSR 303'
+                correct: true
+    -
+        question: |
             Which of the following values match the IsFalse constraint?
+            
         answers:
-            - {value: 'false', correct: true}
-            - {value: '0', correct: true}
-            - {value: "'0'", correct: true}
-            - {value: "''", correct: false}
-            - {value: "null", correct: false}
-            - {value: "new class {}", correct: false}
-            - {value: "[]", correct: false}
-
-
-    -   question: |
+            -
+                value: 'false'
+                correct: true
+            -
+                value: '0'
+                correct: true
+            -
+                value: '''0'''
+                correct: true
+            -
+                value: ''''''
+                correct: false
+            -
+                value: 'null'
+                correct: false
+            -
+                value: 'new class {}'
+                correct: false
+            -
+                value: '[]'
+                correct: false
+    -
+        question: |
             Which of the following values match the IsTrue constraint?
+            
         answers:
-            - {value: 'true', correct: true}
-            - {value: '1', correct: true}
-            - {value: "'1'", correct: true}
-            - {value: "''", correct: false}
-            - {value: "null", correct: false}
-            - {value: "new class {}", correct: false}
-            - {value: "[]", correct: false}
-
-
-    -   question: |
+            -
+                value: 'true'
+                correct: true
+            -
+                value: '1'
+                correct: true
+            -
+                value: '''1'''
+                correct: true
+            -
+                value: ''''''
+                correct: false
+            -
+                value: 'null'
+                correct: false
+            -
+                value: 'new class {}'
+                correct: false
+            -
+                value: '[]'
+                correct: false
+    -
+        question: |
             What is result returned from the validate() method?
+            
         answers:
-            - {value: 'a ConstraintViolationListInterface', correct: true}
-            - {value: 'null', correct: false}
-            - {value: 'an array', correct: false}
-            - {value: 'a string', correct: false}
-
-    -   question: |
+            -
+                value: 'a ConstraintViolationListInterface'
+                correct: true
+            -
+                value: 'null'
+                correct: false
+            -
+                value: 'an array'
+                correct: false
+            -
+                value: 'a string'
+                correct: false
+    -
+        question: |
             Which of the following are valid methods on the ConstraintViolationInterface?
+            
         answers:
-            - {value: 'getMessage', correct: true}
-            - {value: 'getMessageTemplate', correct: true}
-            - {value: 'getParameters', correct: true}
-            - {value: 'getPlural', correct: true}
-            - {value: 'getInfo', correct: false}
-            - {value: 'getMetaData', correct: false}
-            - {value: 'getConstraint', correct: false}
-
-    -   question: |
+            -
+                value: getMessage
+                correct: true
+            -
+                value: getMessageTemplate
+                correct: true
+            -
+                value: getParameters
+                correct: true
+            -
+                value: getPlural
+                correct: true
+            -
+                value: getInfo
+                correct: false
+            -
+                value: getMetaData
+                correct: false
+            -
+                value: getConstraint
+                correct: false
+    -
+        question: |
             Which of the following are valid methods on the ConstraintViolationInterface?
+            
         answers:
-            - {value: 'getRoot', correct: true}
-            - {value: 'getPropertyPath', correct: true}
-            - {value: 'getInvalidValue', correct: true}
-            - {value: 'getCode', correct: true}
-            - {value: 'getInfo', correct: false}
-            - {value: 'getMetaData', correct: false}
-            - {value: 'getConstraint', correct: false}
-
-    -   question: |
+            -
+                value: getRoot
+                correct: true
+            -
+                value: getPropertyPath
+                correct: true
+            -
+                value: getInvalidValue
+                correct: true
+            -
+                value: getCode
+                correct: true
+            -
+                value: getInfo
+                correct: false
+            -
+                value: getMetaData
+                correct: false
+            -
+                value: getConstraint
+                correct: false
+    -
+        question: |
             What is the purpose of the ConstraintViolationInterface::getRoot() method?
+            
         answers:
-            - {value: 'The value that was originally passed to the validator', correct: true}
-            - {value: 'The directory which the validator ran in', correct: false}
-            - {value: 'Gets the parent validator for the constraint', correct: false}
-            - {value: 'Gets the object where the value came from', correct: false}
-
-    -   question: |
+            -
+                value: 'The value that was originally passed to the validator'
+                correct: true
+            -
+                value: 'The directory which the validator ran in'
+                correct: false
+            -
+                value: 'Gets the parent validator for the constraint'
+                correct: false
+            -
+                value: 'Gets the object where the value came from'
+                correct: false
+    -
+        question: |
             What is the purpose of the ConstraintViolationInterface::getInvalidValue()?
+            
         answers:
-            - {value: 'Returns the value that triggered the violation', correct: true}
-            - {value: 'Returns the value that could not run with the constraint', correct: false}
-            - {value: 'Returns the value that could not run with the validator', correct: false}
-            - {value: 'Returns invalid configuration options', correct: false}
-
-    -   question: |
+            -
+                value: 'Returns the value that triggered the violation'
+                correct: true
+            -
+                value: 'Returns the value that could not run with the constraint'
+                correct: false
+            -
+                value: 'Returns the value that could not run with the validator'
+                correct: false
+            -
+                value: 'Returns invalid configuration options'
+                correct: false
+    -
+        question: |
             What is the purpose of the ConstraintViolationInterface::getInvalidValue()?
+            
         answers:
-            - {value: 'Returns the value that triggered the violation', correct: true}
-            - {value: 'Returns the value that could not run with the constraint', correct: false}
-            - {value: 'Returns the value that could not run with the validator', correct: false}
-            - {value: 'Returns invalid configuration options', correct: false}
-
-    -   question: |
+            -
+                value: 'Returns the value that triggered the violation'
+                correct: true
+            -
+                value: 'Returns the value that could not run with the constraint'
+                correct: false
+            -
+                value: 'Returns the value that could not run with the validator'
+                correct: false
+            -
+                value: 'Returns invalid configuration options'
+                correct: false
+    -
+        question: |
             Which getters can be validated against for a property?
+            
         answers:
-            - {value: 'get*', correct: true}
-            - {value: 'has*', correct: true}
-            - {value: 'is*', correct: true}
-            - {value: '*', correct: false}
-            - {value: 'had*', correct: false}
-            - {value: 'had*', correct: false}
-
-    -   question: |
+            -
+                value: 'get*'
+                correct: true
+            -
+                value: 'has*'
+                correct: true
+            -
+                value: 'is*'
+                correct: true
+            -
+                value: '*'
+                correct: false
+            -
+                value: 'had*'
+                correct: false
+            -
+                value: 'had*'
+                correct: false
+    -
+        question: |
             Can a full object be validated?
+            
         answers:
-            - {value: 'Yes', correct: true}
-            - {value: 'No', correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             What method should be called on the validator builder to allow a class to create validator metadata for itself?
+            
         answers:
-            - {value: 'addMethodMapping()', correct: true}
-            - {value: 'addValidationDetails()', correct: false}
-            - {value: 'loadValidatorMetadata()', correct: false}
-
-    -   question: |
+            -
+                value: addMethodMapping()
+                correct: true
+            -
+                value: addValidationDetails()
+                correct: false
+            -
+                value: loadValidatorMetadata()
+                correct: false
+    -
+        question: |
             Which configuration file formats are supported by the validator by default?
+            
         answers:
-            - {value: 'YAML', correct: true}
-            - {value: 'XML', correct: true}
-            - {value: 'Annotations', correct: true}
-            - {value: 'INI', correct: false}
-            - {value: 'Array', correct: false}
-            - {value: 'PHP', correct: false}
-
-    -   question: |
+            -
+                value: YAML
+                correct: true
+            -
+                value: XML
+                correct: true
+            -
+                value: Annotations
+                correct: true
+            -
+                value: INI
+                correct: false
+            -
+                value: Array
+                correct: false
+            -
+                value: PHP
+                correct: false
+    -
+        question: |
             What method should be called on the validator builder to allow a class to be validated by annotations?
+            
         answers:
-            - {value: 'enableAnnotationMapping()', correct: true}
-            - {value: 'enableAnnotations()', correct: false}
-            - {value: 'enableAnnotationsMapping()', correct: false}
-            - {value: 'enableAnnotation()', correct: false}
-
-    -   question: |
+            -
+                value: enableAnnotationMapping()
+                correct: true
+            -
+                value: enableAnnotations()
+                correct: false
+            -
+                value: enableAnnotationsMapping()
+                correct: false
+            -
+                value: enableAnnotation()
+                correct: false
+    -
+        question: |
             What method should be called on the validator builder to allow a class to be validated by annotations?
+            
         answers:
-            - {value: 'disableAnnotationMapping()', correct: true}
-            - {value: 'disableAnnotationsMapping()', correct: false}
-            - {value: 'disableAnnotation()', correct: false}
-            - {value: 'disableAnnotations()', correct: false}
-
-    -   question: |
+            -
+                value: disableAnnotationMapping()
+                correct: true
+            -
+                value: disableAnnotationsMapping()
+                correct: false
+            -
+                value: disableAnnotation()
+                correct: false
+            -
+                value: disableAnnotations()
+                correct: false
+    -
+        question: |
             When using the Symfony\Component\Validator\Constraints\Url validation constraint, what protocols are allowed
             by default ?
+            
         answers:
-            - {value: 'HTTP and HTTPS.', correct: true}
-            - {value: 'Only HTTP.', correct: false}
-            - {value: 'Any protocol.', correct: false}
-            - {value: 'HTTP, HTTPS, FTP and SMTP.', correct: false}
-
-    -   question: |
+            -
+                value: 'HTTP and HTTPS.'
+                correct: true
+            -
+                value: 'Only HTTP.'
+                correct: false
+            -
+                value: 'Any protocol.'
+                correct: false
+            -
+                value: 'HTTP, HTTPS, FTP and SMTP.'
+                correct: false
+    -
+        question: |
             What is the pupose of the normalizer option for the URL constaint?
+            
         answers:
-            - {value: 'It is a PHP callable in order to modify the url before validation', correct: true}
-            - {value: 'When true it trims and makes the URL lowercase URL before validation', correct: false}
-            - {value: 'When true it modify the value validated to ensure it is consistent', correct: false}
-
-    -   question: |
+            -
+                value: 'It is a PHP callable in order to modify the url before validation'
+                correct: true
+            -
+                value: 'When true it trims and makes the URL lowercase URL before validation'
+                correct: false
+            -
+                value: 'When true it modify the value validated to ensure it is consistent'
+                correct: false
+    -
+        question: |
             What is the pupose of the payload option for a constaint?
+            
         answers:
-            - {value: 'It allows the passing of arbitrary domain-specific data', correct: true}
-            - {value: 'It is the data that is passed to the constraint validator', correct: false}
-            - {value: 'It allows modification of the original structure passed to the validator', correct: false}
-
-    -   question: |
+            -
+                value: 'It allows the passing of arbitrary domain-specific data'
+                correct: true
+            -
+                value: 'It is the data that is passed to the constraint validator'
+                correct: false
+            -
+                value: 'It allows modification of the original structure passed to the validator'
+                correct: false
+    -
+        question: |
             How many types of mapping can be configurated in the validation builder?
+            
         answers:
-            - {value: 'unlimited', correct: true}
-            - {value: '1', correct: false}
-            - {value: '10', correct: false}
-
-    -   question: |
+            -
+                value: unlimited
+                correct: true
+            -
+                value: '1'
+                correct: false
+            -
+                value: '10'
+                correct: false
+    -
+        question: |
             Using the validation builder how can one add a new MetaData factory?
+            
         answers:
-            - {value: 'Implement Symfony\Component\Validator\Mapping\Factory', correct: true}
-            - {value: 'Pass a Symfony\Component\Validator\Mapping\Factory instance to setMetadataFactory()', correct: true}
-            - {value: 'Pass a Symfony\Component\Validator\Mapping\Factory instance to addMetadataFactory()', correct: false}
-            - {value: 'Implement Symfony\Component\Validator\Factory', correct: false}
-            - {value: 'Pass a Symfony\Component\Validator\Factory instance to setMetadataFactory()', correct: false}
-            - {value: 'Pass a Symfony\Component\Validator\Factory instance to addMetadataFactory()', correct: false}
-            - {value: 'Pass a callable to setMetadataFactory()', correct: false}
-            - {value: 'Pass a callable to addMetadataFactory()', correct: false}
-
-    -   question: |
+            -
+                value: 'Implement Symfony\Component\Validator\Mapping\Factory'
+                correct: true
+            -
+                value: 'Pass a Symfony\Component\Validator\Mapping\Factory instance to setMetadataFactory()'
+                correct: true
+            -
+                value: 'Pass a Symfony\Component\Validator\Mapping\Factory instance to addMetadataFactory()'
+                correct: false
+            -
+                value: 'Implement Symfony\Component\Validator\Factory'
+                correct: false
+            -
+                value: 'Pass a Symfony\Component\Validator\Factory instance to setMetadataFactory()'
+                correct: false
+            -
+                value: 'Pass a Symfony\Component\Validator\Factory instance to addMetadataFactory()'
+                correct: false
+            -
+                value: 'Pass a callable to setMetadataFactory()'
+                correct: false
+            -
+                value: 'Pass a callable to addMetadataFactory()'
+                correct: false
+    -
+        question: |
             If a User class extends a BaseUser class, and the applied validation group is User. Will the constraints present in the BaseUser class be applied ?
+            
         answers:
-            - {value: Yes, correct: true}
-            - {value: No, correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Is the following XML config valid to ensure that App\Entity\Author::name is not blank?
-
+            
             <?xml version="1.0" encoding="UTF-8" ?>
             <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
                     https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
-
+            
                 <class name="App\Entity\Author">
                     <property name="name">
                         <constraint name="NotBlank"/>
                     </property>
                 </class>
             </constraint-mapping>
+            
         answers:
-            - {value: 'Yes', correct: true}
-            - {value: 'No', correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Is the following XML config valid to ensure that App\Entity\Author::name is not blank?
-
+            
             <?xml version="1.0" encoding="UTF-8" ?>
             <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
                     https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
-
+            
                 <class name="App\Entity\Author">
                     <property name="name">
                         <constraint class="Symfony\Component\Validator\Constraints\NotBlank"/>
                     </property>
                 </class>
             </constraint-mapping>
+            
         answers:
-            - {value: 'No', correct: true}
-            - {value: 'Yes', correct: false}
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             Is the following PHP snippet a valid way to echo all error messages for validation in?
-
+            
             $errors = $validator->validate($someObject);
-
+            
             foreach($errors as $error) {
                 echo $error->getMessage();
             }
+            
         answers:
-            - {value: 'Yes', correct: true}
-            - {value: 'No', correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Is the following PHP snippet a valid way to echo all error messages for validation in?
-
+            
             $errors = $validator->validate($someObject);
-
+            
             foreach($errors as $error) {
                 echo $error->getText();
             }
+            
         answers:
-            - {value: 'Yes', correct: false}
-            - {value: 'No', correct: true}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: |
             Which class represents validation errors?
+            
         answers:
-            - {value: Symfony\Component\Validator\ConstraintViolation, correct: true}
-            - {value: Symfony\Component\Validator\ValidationError, correct: false}
-            - {value: Symfony\Component\Validator\Error, correct: false}
-            - {value: Symfony\Component\Validator\ConstraintError, correct: false}
-            - {value: Symfony\Component\Validator\Violation, correct: false}
-
-    -   question: |
+            -
+                value: Symfony\Component\Validator\ConstraintViolation
+                correct: true
+            -
+                value: Symfony\Component\Validator\ValidationError
+                correct: false
+            -
+                value: Symfony\Component\Validator\Error
+                correct: false
+            -
+                value: Symfony\Component\Validator\ConstraintError
+                correct: false
+            -
+                value: Symfony\Component\Validator\Violation
+                correct: false
+    -
+        question: |
             Must one enable validation before using it in Full-Stack Symfony projects?
+            
         answers:
-            - {value: Yes, correct: true}
-            - {value: No, correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Which of the following are valid constraints?
+            
         answers:
-            - {value: NotBlank, correct: true}
-            - {value: Blank, correct: true}
-            - {value: NotNull, correct: true}
-            - {value: IsNull, correct: true}
-            - {value: Null, correct: false}
-            - {value: IsBlank, correct: false}
-
-    -   question: |
+            -
+                value: NotBlank
+                correct: true
+            -
+                value: Blank
+                correct: true
+            -
+                value: NotNull
+                correct: true
+            -
+                value: IsNull
+                correct: true
+            -
+                value: null
+                correct: false
+            -
+                value: IsBlank
+                correct: false
+    -
+        question: |
             Which of the following are valid constraints?
+            
         answers:
-            - {value: IsTrue, correct: true}
-            - {value: IsFalse, correct: true}
-            - {value: Type, correct: true}
-            - {value: NotType, correct: false}
-            - {value: "Null", correct: false}
-            - {value: IsBlank, correct: false}
-
-    -   question: |
+            -
+                value: IsTrue
+                correct: true
+            -
+                value: IsFalse
+                correct: true
+            -
+                value: Type
+                correct: true
+            -
+                value: NotType
+                correct: false
+            -
+                value: 'Null'
+                correct: false
+            -
+                value: IsBlank
+                correct: false
+    -
+        question: |
             Which of the following are valid constraints?
+            
         answers:
-            - {value: Email, correct: true}
-            - {value: Length, correct: true}
-            - {value: Url, correct: true}
-            - {value: Regex, correct: true}
-            - {value: Password, correct: false}
-            - {value: DateString, correct: false}
-
-    -   question: |
+            -
+                value: Email
+                correct: true
+            -
+                value: Length
+                correct: true
+            -
+                value: Url
+                correct: true
+            -
+                value: Regex
+                correct: true
+            -
+                value: Password
+                correct: false
+            -
+                value: DateString
+                correct: false
+    -
+        question: |
             Which of the following are valid constraints?
+            
         answers:
-            - {value: Ip, correct: true}
-            - {value: Uuid, correct: true}
-            - {value: UserPassword, correct: true}
-            - {value: String, correct: false}
-            - {value: Password, correct: false}
-            - {value: DateString, correct: false}
-
-
-    -   question: |
+            -
+                value: Ip
+                correct: true
+            -
+                value: Uuid
+                correct: true
+            -
+                value: UserPassword
+                correct: true
+            -
+                value: String
+                correct: false
+            -
+                value: Password
+                correct: false
+            -
+                value: DateString
+                correct: false
+    -
+        question: |
             Which of the following are valid constraints?
+            
         answers:
-            - {value: EqualTo, correct: true}
-            - {value: NotEqualTo, correct: true}
-            - {value: IdenticalTo, correct: true}
-            - {value: SameAs, correct: false}
-            - {value: Equal, correct: false}
-            - {value: Identical, correct: false}
-            - {value: NotEqual, correct: false}
-            - {value: Same, correct: false}
-
-    -   question: |
+            -
+                value: EqualTo
+                correct: true
+            -
+                value: NotEqualTo
+                correct: true
+            -
+                value: IdenticalTo
+                correct: true
+            -
+                value: SameAs
+                correct: false
+            -
+                value: Equal
+                correct: false
+            -
+                value: Identical
+                correct: false
+            -
+                value: NotEqual
+                correct: false
+            -
+                value: Same
+                correct: false
+    -
+        question: |
             Which of the following are valid constraints?
+            
         answers:
-            - {value: NotIdenticalTo, correct: true}
-            - {value: LessThan, correct: true}
-            - {value: LessThanOrEqual, correct: true}
-            - {value: SameAs, correct: false}
-            - {value: NotIdentical, correct: false}
-            - {value: Identical, correct: false}
-            - {value: Less, correct: false}
-            - {value: Same, correct: false}
-
-    -   question: |
+            -
+                value: NotIdenticalTo
+                correct: true
+            -
+                value: LessThan
+                correct: true
+            -
+                value: LessThanOrEqual
+                correct: true
+            -
+                value: SameAs
+                correct: false
+            -
+                value: NotIdentical
+                correct: false
+            -
+                value: Identical
+                correct: false
+            -
+                value: Less
+                correct: false
+            -
+                value: Same
+                correct: false
+    -
+        question: |
             Which of the following are valid constraints?
+            
         answers:
-            - {value: GreaterThan, correct: true}
-            - {value: GreaterThanOrEqual, correct: true}
-            - {value: Range, correct: true}
-            - {value: SameAs, correct: false}
-            - {value: NotIdentical, correct: false}
-            - {value: Greater, correct: false}
-            - {value: Less, correct: false}
-            - {value: Same, correct: false}
-
-    -   question: |
+            -
+                value: GreaterThan
+                correct: true
+            -
+                value: GreaterThanOrEqual
+                correct: true
+            -
+                value: Range
+                correct: true
+            -
+                value: SameAs
+                correct: false
+            -
+                value: NotIdentical
+                correct: false
+            -
+                value: Greater
+                correct: false
+            -
+                value: Less
+                correct: false
+            -
+                value: Same
+                correct: false
+    -
+        question: |
             Which of the following are valid constraints?
+            
         answers:
-            - {value: Date, correct: true}
-            - {value: DateTime, correct: true}
-            - {value: Time, correct: true}
-            - {value: Timezone, correct: false}
-
-    -   question: |
+            -
+                value: Date
+                correct: true
+            -
+                value: DateTime
+                correct: true
+            -
+                value: Time
+                correct: true
+            -
+                value: Timezone
+                correct: false
+    -
+        question: |
             Which of the following are valid constraints?
+            
         answers:
-            - {value: Choice, correct: true}
-            - {value: Language, correct: true}
-            - {value: Locale, correct: true}
-            - {value: Country, correct: true}
-            - {value: Geo, correct: false}
-
-    -   question: |
+            -
+                value: Choice
+                correct: true
+            -
+                value: Language
+                correct: true
+            -
+                value: Locale
+                correct: true
+            -
+                value: Country
+                correct: true
+            -
+                value: Geo
+                correct: false
+    -
+        question: |
             Which of the following are valid constraints?
+            
         answers:
-            - {value: File, correct: true}
-            - {value: Image, correct: true}
-            - {value: UploadedFile, correct: false}
-            - {value: Stream, correct: false}
-
-    -   question: |
+            -
+                value: File
+                correct: true
+            -
+                value: Image
+                correct: true
+            -
+                value: UploadedFile
+                correct: false
+            -
+                value: Stream
+                correct: false
+    -
+        question: |
             Which of the following are valid constraints?
+            
         answers:
-            - {value: Bic, correct: true}
-            - {value: CardScheme, correct: true}
-            - {value: Currency, correct: true}
-            - {value: Luhn, correct: true}
-            - {value: Iban, correct: true}
-            - {value: Isbn, correct: true}
-            - {value: Issn, correct: true}
-            - {value: Money, correct: false}
-            - {value: Ibn, correct: false}
-            - {value: SortCode, correct: false}
-            - {value: AccountNumber, correct: false}
-            - {value: Visa, correct: false}
-            - {value: Ssp, correct: false}
-
-    -   question: |
+            -
+                value: Bic
+                correct: true
+            -
+                value: CardScheme
+                correct: true
+            -
+                value: Currency
+                correct: true
+            -
+                value: Luhn
+                correct: true
+            -
+                value: Iban
+                correct: true
+            -
+                value: Isbn
+                correct: true
+            -
+                value: Issn
+                correct: true
+            -
+                value: Money
+                correct: false
+            -
+                value: Ibn
+                correct: false
+            -
+                value: SortCode
+                correct: false
+            -
+                value: AccountNumber
+                correct: false
+            -
+                value: Visa
+                correct: false
+            -
+                value: Ssp
+                correct: false
+    -
+        question: |
             Which of the following are valid constraints?
+            
         answers:
-            - {value: Callback, correct: true}
-            - {value: Expression, correct: true}
-            - {value: All, correct: true}
-            - {value: Valid, correct: true}
-            - {value: Collection, correct: true}
-            - {value: Array, correct: false}
-            - {value: Length, correct: false}
-            - {value: Traversable, correct: false}
-            - {value: Iterable, correct: false}
-
-    -   question: |
+            -
+                value: Callback
+                correct: true
+            -
+                value: Expression
+                correct: true
+            -
+                value: All
+                correct: true
+            -
+                value: Valid
+                correct: true
+            -
+                value: Collection
+                correct: true
+            -
+                value: Array
+                correct: false
+            -
+                value: Length
+                correct: false
+            -
+                value: Traversable
+                correct: false
+            -
+                value: Iterable
+                correct: false
+    -
+        question: |
             Which of the following are valid constraints?
+            
         answers:
-            - {value: Count, correct: true}
-            - {value: UniqueEntity, correct: true}
-            - {value: Traverse, correct: true}
-            - {value: Array, correct: false}
-            - {value: Length, correct: false}
-            - {value: Traversable, correct: false}
-            - {value: Iterable, correct: false}
-
-    -   question: |
+            -
+                value: Count
+                correct: true
+            -
+                value: UniqueEntity
+                correct: true
+            -
+                value: Traverse
+                correct: true
+            -
+                value: Array
+                correct: false
+            -
+                value: Length
+                correct: false
+            -
+                value: Traversable
+                correct: false
+            -
+                value: Iterable
+                correct: false
+    -
+        question: |
             How can you inverse the result of the validation when using a Symfony\Component\Validator\Constraints\Regex validation constraint ?
+            
         answers:
-            - {value: Using the match option., correct: true}
-            - {value: Using the prune option., correct: false}
-            - {value: Using the not option., correct: false}
-            - {value: Using the inverse option., correct: false}
-
-    -   question: |
+            -
+                value: 'Using the match option.'
+                correct: true
+            -
+                value: 'Using the prune option.'
+                correct: false
+            -
+                value: 'Using the not option.'
+                correct: false
+            -
+                value: 'Using the inverse option.'
+                correct: false
+    -
+        question: |
             Will the following snippet throw an InvalidArgumentException ?
-
+            
             use Symfony\Component\Validator\Validation;
             use Symfony\Component\Validator\Constraints\Blank;
-
+            
             $expectedBlank = [];
-
+            
             $validator = Validation::createValidator();
             $violations = $validator->validate($expectedBlank, [new Blank()]);
-
+            
             if (0 !== count($violations)) {
                 throw new InvalidArgumentException('The value is not blank !');
             }
+            
         answers:
-            - {value: True., correct: true}
-            - {value: False., correct: false}
+            -
+                value: True.
+                correct: true
+            -
+                value: False.
+                correct: false

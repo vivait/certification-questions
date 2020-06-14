@@ -1,258 +1,426 @@
 category: ORM
 questions:
-    -   question: 'What is true about composite primary keys?'
+    -
+        question: 'What is true about composite primary keys?'
         answers:
-            - { value: The @Id annotation must be used on more than one column., correct: true }
-            - { value: Composite keys must be avoided as much as possible., correct: true }
-            - { value: Composite keys must only consist of the primitives types integer and string., correct: true }
-            - { value: An auto increment strategy can be used for one of the key using the @GeneratedValue annotation., correct: false }
+            -
+                value: 'The @Id annotation must be used on more than one column.'
+                correct: true
+            -
+                value: 'Composite keys must be avoided as much as possible.'
+                correct: true
+            -
+                value: 'Composite keys must only consist of the primitives types integer and string.'
+                correct: true
+            -
+                value: 'An auto increment strategy can be used for one of the key using the @GeneratedValue annotation.'
+                correct: false
         help: |
             http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#composite-keys
             http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/best-practices.html#avoid-composite-keys
             http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/tutorials/composite-primary-keys.html#general-considerations
-
-    -   question: 'You query for an object joining on a single-valued association object that is configured LAZY.'
+            
+    -
+        question: 'You query for an object joining on a single-valued association object that is configured LAZY.'
         answers:
-            - { value: Doctrine will create a proxy of this association object., correct: false }
-            - { value: Doctrine will eager load this association object., correct: true }
-
-    -   question: 'What is the default change tracking policy?'
+            -
+                value: 'Doctrine will create a proxy of this association object.'
+                correct: false
+            -
+                value: 'Doctrine will eager load this association object.'
+                correct: true
+    -
+        question: 'What is the default change tracking policy?'
         answers:
-            - { value: NOTIFY, correct: false }
-            - { value: DEFERRED_EXPLICIT, correct: false }
-            - { value: DEFERRED_IMPLICIT, correct: true }
-
-    -   question: |
+            -
+                value: NOTIFY
+                correct: false
+            -
+                value: DEFERRED_EXPLICIT
+                correct: false
+            -
+                value: DEFERRED_IMPLICIT
+                correct: true
+    -
+        question: |
             Considering the following code, which assertions are true?
-
+            
             $object = $this->entityManager->getReference('App\Entity\User', 1);
+            
         answers:
-            - { value: $object is an instance of App\Entity\User., correct: true }
-            - { value: $object is an instance of Doctrine\ORM\Proxy\Proxy., correct: true }
-            - { value: $object is an instance of Doctrine\ORM\Reference., correct: false }
-            - { value: $object is an instance of Proxies\__CG__\App\Entity\User, correct: true }
-
-    -   question: 'Which of the following rules are true about bidirectional associations ?'
+            -
+                value: '$object is an instance of App\Entity\User.'
+                correct: true
+            -
+                value: '$object is an instance of Doctrine\ORM\Proxy\Proxy.'
+                correct: true
+            -
+                value: '$object is an instance of Doctrine\ORM\Reference.'
+                correct: false
+            -
+                value: '$object is an instance of Proxies\__CG__\App\Entity\User'
+                correct: true
+    -
+        question: 'Which of the following rules are true about bidirectional associations ?'
         answers:
-            - value: |
-                The inverse side has to use the mappedBy attribute and the owning side the inversedBy attribute of
-                the OneToOne, ManyToOne, or ManyToMany mapping declaration.
-              correct: true
-            - value: |
-                ManyToOne is always the owning side and OneToMany the inverse side of a bidirectional association.
-              correct: true
-            - value: |
-                The owning side has to use the mappedBy attribute and the inverse side the inversedBy attribute
-                of the OneToOne, ManyToOne, or ManyToMany mapping declaration.
-              correct: false
-            - value: |
-                 OneToMany is always the owning side and ManyToOne the inverse side of a bidirectional association.
-              correct: false
-
-    -   question: |
+            -
+                value: |
+                    The inverse side has to use the mappedBy attribute and the owning side the inversedBy attribute of
+                    the OneToOne, ManyToOne, or ManyToMany mapping declaration.
+                    
+                correct: true
+            -
+                value: |
+                    ManyToOne is always the owning side and OneToMany the inverse side of a bidirectional association.
+                    
+                correct: true
+            -
+                value: |
+                    The owning side has to use the mappedBy attribute and the inverse side the inversedBy attribute
+                    of the OneToOne, ManyToOne, or ManyToMany mapping declaration.
+                    
+                correct: false
+            -
+                value: |
+                    OneToMany is always the owning side and ManyToOne the inverse side of a bidirectional association.
+                    
+                correct: false
+    -
+        question: |
             What is wrong with this repository method ?
-
+            
             public function filterBooks(array $filters)
             {
                 $qb = $this->createQueryBuild('b');
                 $qb->where('b.year = :year');
                 $qb->setParameters(['year' => $filters['year']]);
-
+            
                 $qb->andWhere('b.gender = :gender');
                 $qb->setParameters(['gender' => $filters['gender']]);
-
+            
                 return $qb->getResults();
+            }
+            
         answers:
-            - value: |
-                  The method getResults does not exists. You should use getResult().
-              correct: true
-            -   value: |
-                  The query builder does not have a getResults() method.
-                  You should use getQuery().
+            -
+                value: |
+                    The method getResults does not exists. You should use getResult().
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
+                    The query builder does not have a getResults() method.
+                    You should use getQuery().
+                    
+                correct: true
+            -
+                value: |
                     The second call setParameters(...) will erase data set in the first call.
                     So year will be deleted from the parameters list. You should use setParameter($name, $value).
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     $qb is never updated after its initialization.
                     You should do methods chaining.
+                    
                 correct: false
-
-    -   question: What is the behaviour of the deferred implicit change policy?
+    -
+        question: 'What is the behaviour of the deferred implicit change policy?'
         answers:
-            -   value: |
+            -
+                value: |
                     Doctrine checks all managed entities at the time of flush using a property-by-property comparision.
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     Doctrine checks persisted entities, or entities that'd save because of a cascade, it'll happen at the
                     time of flush using a property-by-property comparision.
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     Doctrine injects a set of services into an entity, they must be invoked with details about a change in
                     a property.
+                    
                 correct: false
-
-    -   question: What is the behaviour of the deferred explicit change policy?
+    -
+        question: 'What is the behaviour of the deferred explicit change policy?'
         answers:
-            -   value: |
+            -
+                value: |
                     Doctrine checks all managed entities at the time of flush using a property-by-property comparision.
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     Doctrine checks persisted entities, or entities that'd save because of a cascade, it'll happen at the
                     time of flush using a property-by-property comparision.
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     Doctrine injects a set of services into an entity, they must be invoked with details about a change in
                     a property.
+                    
                 correct: false
-
-    -   question: What is the behaviour of the notify change policy?
+    -
+        question: 'What is the behaviour of the notify change policy?'
         answers:
-            -   value: |
+            -
+                value: |
                     Doctrine checks all managed entities at the time of flush using a property-by-property comparision.
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     Doctrine checks persisted entities, or entities that'd save because of a cascade, it'll happen at the
                     time of flush using a property-by-property comparision.
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     Doctrine passes objects into an entity, the objects must be invoked with details about a change any
                     of the properties.
+                    
                 correct: true
-
-    -   question: |
+    -
+        question: |
             Assuming there is an article with the title “Hello World” and the id 1234, what will be the output ?
-
+            
             $article = $entityManager->find('Article', 1234);
             $article->setTitle('Hello World dude!');
-
+            
             $article2 = $entityManager->find('Article', 1234);
             echo $article2->getTitle();
+            
         answers:
-            -   value: |
+            -
+                value: |
                     Hello World dude!
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     Hello World
+                    
                 correct: false
-
-    -   question: |
+    -
+        question: |
             Which of the following are built-in Doctrine DBAL data types?
+            
         answers:
-            -   value: hash
+            -
+                value: hash
                 correct: false
-            -   value: datetimetz
+            -
+                value: datetimetz
                 correct: true
-            -   value: numeric
+            -
+                value: numeric
                 correct: false
-            -   value: guid
+            -
+                value: guid
                 correct: true
-            -   value: varchar
+            -
+                value: varchar
                 correct: false
-
-    -   question: |
+    -
+        question: |
             Which of the following are built-in Doctrine DBAL data types?
+            
         answers:
-            -   value: password
+            -
+                value: password
                 correct: false
-            -   value: guid
+            -
+                value: guid
                 correct: true
-            -   value: numeric
+            -
+                value: numeric
                 correct: false
-            -   value: date
+            -
+                value: date
                 correct: true
-            -   value: bin
+            -
+                value: bin
                 correct: false
-
-    -   question: |
+    -
+        question: |
             Which of the following are built-in Doctrine DBAL data types?
+            
         answers:
-            -   value: dateinterval
+            -
+                value: dateinterval
                 correct: true
-            -   value: time
+            -
+                value: time
                 correct: true
-            -   value: numeric
+            -
+                value: numeric
                 correct: false
-            -   value: date
+            -
+                value: date
                 correct: true
-            -   value: bin
+            -
+                value: bin
                 correct: false
-            -   value: xml
+            -
+                value: xml
                 correct: false
-
-    -   question: |
+    -
+        question: |
             Which of the following are built-in Doctrine DBAL data types?
+            
         answers:
-            -   value: smallint
+            -
+                value: smallint
                 correct: true
-            -   value: simple_array
+            -
+                value: simple_array
                 correct: true
-            -   value: numeric
+            -
+                value: numeric
                 correct: false
-            -   value: object
+            -
+                value: object
                 correct: true
-            -   value: bin
+            -
+                value: bin
                 correct: false
-            -   value: xml
+            -
+                value: xml
                 correct: false
-
-    -   question: 'Which usually is the owning side?'
+    -
+        question: 'Which usually is the owning side?'
         answers:
-            - { value: ManyToOne, correct: true }
-            - { value: OneToMany, correct: false }
-
-    -   question: 'What does the type of the query builder mean?'
+            -
+                value: ManyToOne
+                correct: true
+            -
+                value: OneToMany
+                correct: false
+    -
+        question: 'What does the type of the query builder mean?'
         answers:
-            - { value: The operation that will performed on the database (e.g SELECT, DELETE and UPDATE), correct: true }
-            - { value: It represents if there is an entity attached, correct: false }
-
-    -   question: 'Which methods exist in the QueryBuilder?'
+            -
+                value: 'The operation that will performed on the database (e.g SELECT'
+                DELETE: true
+            -
+                value: 'It represents if there is an entity attached'
+                correct: false
+    -
+        question: 'Which methods exist in the QueryBuilder?'
         answers:
-            - { value: "public function select($select = null)", correct: true }
-            - { value: "public function addSelect($select = null)", correct: true }
-            - { value: "public function delete($delete = null, $alias = null)", correct: true }
-            - { value: "public function addDelete($delete = null, $alias = null)", correct: false }
-            - { value: "public function addLeftJoin($delete = null, $alias = null)", correct: false }
-
-    -   question: 'Which methods exist in the QueryBuilder?'
+            -
+                value: 'public function select($select = null)'
+                correct: true
+            -
+                value: 'public function addSelect($select = null)'
+                correct: true
+            -
+                value: 'public function delete($delete = null, $alias = null)'
+                correct: true
+            -
+                value: 'public function addDelete($delete = null, $alias = null)'
+                correct: false
+            -
+                value: 'public function addLeftJoin($delete = null, $alias = null)'
+                correct: false
+    -
+        question: 'Which methods exist in the QueryBuilder?'
         answers:
-            - { value: "public function delete($delete = null, $alias = null)", correct: true }
-            - { value: "public function update($update = null, $alias = null)", correct: true }
-            - { value: "public function set($key, $value)", correct: true }
-            - { value: "public function addSet($delete = null, $alias = null)", correct: false }
-            - { value: "public function addUpdate($delete = null, $alias = null)", correct: false }
-
-    -   question: 'Which methods exist in the QueryBuilder?'
+            -
+                value: 'public function delete($delete = null, $alias = null)'
+                correct: true
+            -
+                value: 'public function update($update = null, $alias = null)'
+                correct: true
+            -
+                value: 'public function set($key, $value)'
+                correct: true
+            -
+                value: 'public function addSet($delete = null, $alias = null)'
+                correct: false
+            -
+                value: 'public function addUpdate($delete = null, $alias = null)'
+                correct: false
+    -
+        question: 'Which methods exist in the QueryBuilder?'
         answers:
-            - { value: "public function delete($delete = null, $alias = null)", correct: true }
-            - { value: "public function update($update = null, $alias = null)", correct: true }
-            - { value: "public function set($key, $value)", correct: true }
-            - { value: "public function addSet($delete = null, $alias = null)", correct: false }
-            - { value: "public function addUpdate($delete = null, $alias = null)", correct: false }
-
-    -   question: 'Which methods exist in the QueryBuilder?'
+            -
+                value: 'public function delete($delete = null, $alias = null)'
+                correct: true
+            -
+                value: 'public function update($update = null, $alias = null)'
+                correct: true
+            -
+                value: 'public function set($key, $value)'
+                correct: true
+            -
+                value: 'public function addSet($delete = null, $alias = null)'
+                correct: false
+            -
+                value: 'public function addUpdate($delete = null, $alias = null)'
+                correct: false
+    -
+        question: 'Which methods exist in the QueryBuilder?'
         answers:
-            - { value: "public function delete($delete = null, $alias = null)", correct: true }
-            - { value: "public function update($update = null, $alias = null)", correct: true }
-            - { value: "public function set($key, $value)", correct: true }
-            - { value: "public function addSet($delete = null, $alias = null)", correct: false }
-            - { value: "public function addUpdate($delete = null, $alias = null)", correct: false }
-            - { value: "public function addWhere($delete = null, $alias = null)", correct: false }
-
-    -   question: 'Which methods exist in the QueryBuilder?'
+            -
+                value: 'public function delete($delete = null, $alias = null)'
+                correct: true
+            -
+                value: 'public function update($update = null, $alias = null)'
+                correct: true
+            -
+                value: 'public function set($key, $value)'
+                correct: true
+            -
+                value: 'public function addSet($delete = null, $alias = null)'
+                correct: false
+            -
+                value: 'public function addUpdate($delete = null, $alias = null)'
+                correct: false
+            -
+                value: 'public function addWhere($delete = null, $alias = null)'
+                correct: false
+    -
+        question: 'Which methods exist in the QueryBuilder?'
         answers:
-            - { value: "public function from($from, $alias, $indexBy = null)", correct: true }
-            - { value: "public function join($join, $alias, $conditionType = null, $condition = null, $indexBy = null)", correct: true }
-            - { value: "public function innerJoin($join, $alias, $conditionType = null, $condition = null, $indexBy = null)", correct: true }
-            - { value: "public function addSet($delete = null, $alias = null)", correct: false }
-            - { value: "public function addWhere($delete = null, $alias = null)", correct: false }
-
-    -   question: 'Which methods exist in the QueryBuilder?'
+            -
+                value: 'public function from($from, $alias, $indexBy = null)'
+                correct: true
+            -
+                value: 'public function join($join, $alias, $conditionType = null, $condition = null, $indexBy = null)'
+                correct: true
+            -
+                value: 'public function innerJoin($join, $alias, $conditionType = null, $condition = null, $indexBy = null)'
+                correct: true
+            -
+                value: 'public function addSet($delete = null, $alias = null)'
+                correct: false
+            -
+                value: 'public function addWhere($delete = null, $alias = null)'
+                correct: false
+    -
+        question: 'Which methods exist in the QueryBuilder?'
         answers:
-            - { value: "public function rightJoin($join, $alias, $conditionType = null, $condition = null, $indexBy = null)", correct: true }
-            - { value: "public function addGroupBy($groupBy)", correct: true }
-            - { value: "public function having($having)", correct: true }
-            - { value: "public function having($having)", correct: true }
-            - { value: "public function addSet($delete = null, $alias = null)", correct: false }
-            - { value: "public function addOrderBy($sort, $order = null)", correct: false }
+            -
+                value: 'public function rightJoin($join, $alias, $conditionType = null, $condition = null, $indexBy = null)'
+                correct: true
+            -
+                value: 'public function addGroupBy($groupBy)'
+                correct: true
+            -
+                value: 'public function having($having)'
+                correct: true
+            -
+                value: 'public function having($having)'
+                correct: true
+            -
+                value: 'public function addSet($delete = null, $alias = null)'
+                correct: false
+            -
+                value: 'public function addOrderBy($sort, $order = null)'
+                correct: false

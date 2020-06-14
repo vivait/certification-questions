@@ -1,157 +1,280 @@
 category: Yaml
 questions:
-    -   question: "What are the correct ways to parse the 1983-07-01 date into an DateTime object?"
+    -
+        question: 'What are the correct ways to parse the 1983-07-01 date into an DateTime object?'
         answers:
-            - { value: "Yaml::parse('1983-07-01', 32)", correct: true }
-            - { value: "Yaml::parse('1983-07-01', false)", correct: false }
-            - { value: "Yaml::parse('1983-07-01', Yaml::PARSE_DATETIME)", correct: true }
-            - { value: "Yaml::parse('1983-07-01', Yaml::DATETIME)", correct: false }
-            - { value: "Yaml::parse('1983-07-01')", correct: false }
-            - { value: "Yaml::parse('1983-07-01', true)", correct: false }
-
-    -   question: |
+            -
+                value: 'Yaml::parse(''1983-07-01'', 32)'
+                correct: true
+            -
+                value: 'Yaml::parse(''1983-07-01'', false)'
+                correct: false
+            -
+                value: 'Yaml::parse(''1983-07-01'', Yaml::PARSE_DATETIME)'
+                correct: true
+            -
+                value: 'Yaml::parse(''1983-07-01'', Yaml::DATETIME)'
+                correct: false
+            -
+                value: 'Yaml::parse(''1983-07-01'')'
+                correct: false
+            -
+                value: 'Yaml::parse(''1983-07-01'', true)'
+                correct: false
+    -
+        question: |
             $string = array("string" => "Multiple
             Line
             String");
             $yaml = Yaml::dump($string);
             echo $yaml;
+            
         answers:
-            -   value: |
+            -
+                value: |
                     string: "Multiple\nLine\nString"
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     string: |
                         Multiple
                         Line
                         String
                         Multiple\nLine\nString
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     string: "Multiple
                     Line
                     String"
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     string: Multiple\nLine\nString
                         "Multiple\nLine\nString"
+                    
                 correct: false
-
-    -   question: |
+    -
+        question: |
             What will be the value of $yaml with the following code:
-
+            
             use Symfony\Component\Yaml\Yaml;
-
+            
             $yaml = Yaml::parse('1983-07-01');
+            
         answers:
-            - { value: 425865600, correct: true }
-            - { value: 983-07-01, correct: false }
-            - { value: An array, correct: false }
-            - { value: A DateTime object, correct: false }
-            - { value: "1983-07-01", correct: false }
-
-    -   question: What is the method to write YAML?
+            -
+                value: 425865600
+                correct: true
+            -
+                value: 983-07-01
+                correct: false
+            -
+                value: 'An array'
+                correct: false
+            -
+                value: 'A DateTime object'
+                correct: false
+            -
+                value: '1983-07-01'
+                correct: false
+    -
+        question: 'What is the method to write YAML?'
         answers:
-            - { value: Symfony\Component\Yaml\Yaml::toYaml, correct: false }
-            - { value: Symfony\Component\Yaml\Yaml::yaml, correct: false }
-            - { value: Symfony\Component\Yaml\Yaml::write, correct: false }
-            - { value: Symfony\Component\Yaml\Yaml::dump, correct: true }
-
-
-    -   question: |
+            -
+                value: 'Symfony\Component\Yaml\Yaml::toYaml'
+                correct: false
+            -
+                value: 'Symfony\Component\Yaml\Yaml::yaml'
+                correct: false
+            -
+                value: 'Symfony\Component\Yaml\Yaml::write'
+                correct: false
+            -
+                value: 'Symfony\Component\Yaml\Yaml::dump'
+                correct: true
+    -
+        question: |
             How would one make YAML dump in the following format?
-
+            
             foo: bar
             bar:
                 foo: bar
                 bar: baz
+            
         answers:
-            - { value: 'Yaml::dump($array, 2);', correct: true }
-            - { value: 'Yaml::dump($array, 3);', correct: false }
-            - { value: 'Yaml::dump($array, null, 2);', correct: false }
-            - { value: 'Yaml::dump($array, Yaml::NEW_LINE);', correct: true }
-
-    -   question: Which method is used to parse YAML from a file?
+            -
+                value: 'Yaml::dump($array, 2);'
+                correct: true
+            -
+                value: 'Yaml::dump($array, 3);'
+                correct: false
+            -
+                value: 'Yaml::dump($array, null, 2);'
+                correct: false
+            -
+                value: 'Yaml::dump($array, Yaml::NEW_LINE);'
+                correct: true
+    -
+        question: 'Which method is used to parse YAML from a file?'
         answers:
-            - { value: 'Yaml::parseFile', correct: true }
-            - { value: 'Yaml::parse', correct: false }
-            - { value: 'YamlParser::parse', correct: false }
-            - { value: 'YamlParser::parseFile', correct: false }
-
-    -   question: |
+            -
+                value: 'Yaml::parseFile'
+                correct: true
+            -
+                value: 'Yaml::parse'
+                correct: false
+            -
+                value: 'YamlParser::parse'
+                correct: false
+            -
+                value: 'YamlParser::parseFile'
+                correct: false
+    -
+        question: |
             How would one make YAML dump in the following format?
-
+            
             foo: bar
             bar:
                     foo: bar
                     bar: baz
+            
         answers:
-            - { value: 'Yaml::dump($array, 2, 8);', correct: true }
-            - { value: 'Yaml::dump($array, 8, 2);', correct: false }
-            - { value: 'Yaml::dump($array);', correct: false }
-            - { value: 'Yaml::dump($array, Yaml::NEW_LINE|Yaml::INDENT_SPACES);', correct: false }
-
-    -   question: |
+            -
+                value: 'Yaml::dump($array, 2, 8);'
+                correct: true
+            -
+                value: 'Yaml::dump($array, 8, 2);'
+                correct: false
+            -
+                value: 'Yaml::dump($array);'
+                correct: false
+            -
+                value: 'Yaml::dump($array, Yaml::NEW_LINE|Yaml::INDENT_SPACES);'
+                correct: false
+    -
+        question: |
             What will the following YAML output in PHP?
-
+            
             value: 10_000_000_000
+            
         answers:
-            - { value: "'value' => 10000000000", correct: true }
-            - { value: "'value' => '10_000_000_000'", correct: false }
-            - { value: "'value' => '10,000,000,000'", correct: false }
-
-    -   question: |
+            -
+                value: '''value'' => 10000000000'
+                correct: true
+            -
+                value: '''value'' => ''10_000_000_000'''
+                correct: false
+            -
+                value: '''value'' => ''10,000,000,000'''
+                correct: false
+    -
+        question: |
             What will the following script output?
-
+            
             $string = ["string" => "Multiple\nLine\nString"];
             $yaml = Yaml::dump($string, 2, 4, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
             echo $yaml;
+            
         answers:
-            - value: |
+            -
+                value: |
                     string: |
                          Multiple
                          Line
                          String
-              correct: true
-            - { value: "Multiple\nLine\nString", correct: false }
-
-    -   question: What is the correct way to output a twig variable for debug when a template can be modified?
+                    
+                correct: true
+            -
+                value: |
+                    Multiple
+                    Line
+                    String
+                    
+                correct: false
+    -
+        question: 'What is the correct way to output a twig variable for debug when a template can be modified?'
         answers:
-            - {value: "{{ dump(var) }}", correct: true}
-            - {value: "{{ debug(var) }}", correct: false}
-            - {value: "{% dump articles %}", correct: false}
-            - {value: "{% debug articles %}", correct: false}
-            - {value: "{% var_dump articles %}", correct: false}
-            - {value: "{{ var_dump(var) }}", correct: false}
-
-    -   question: What is the correct way to output a twig variable for debug when a template cannot be modified?
+            -
+                value: '{{ dump(var) }}'
+                correct: true
+            -
+                value: '{{ debug(var) }}'
+                correct: false
+            -
+                value: '{% dump articles %}'
+                correct: false
+            -
+                value: '{% debug articles %}'
+                correct: false
+            -
+                value: '{% var_dump articles %}'
+                correct: false
+            -
+                value: '{{ var_dump(var) }}'
+                correct: false
+    -
+        question: 'What is the correct way to output a twig variable for debug when a template cannot be modified?'
         answers:
-            - {value: "{{ dump(var) }}", correct: false}
-            - {value: "{{ debug(var) }}", correct: false}
-            - {value: "{% dump articles %}", correct: true}
-            - {value: "{% debug articles %}", correct: false}
-            - {value: "{% var_dump articles %}", correct: false}
-            - {value: "{{ var_dump(var) }}", correct: false}
-
-    -   question: |
+            -
+                value: '{{ dump(var) }}'
+                correct: false
+            -
+                value: '{{ debug(var) }}'
+                correct: false
+            -
+                value: '{% dump articles %}'
+                correct: true
+            -
+                value: '{% debug articles %}'
+                correct: false
+            -
+                value: '{% var_dump articles %}'
+                correct: false
+            -
+                value: '{{ var_dump(var) }}'
+                correct: false
+    -
+        question: |
             What will the result of running the following Twig in production?
-
+            
             {% set var = 'hello world' %}
-
+            
             {{ dump(var) }}
+            
         answers:
-            - {value: An error, correct: true}
-            - {value: The contents of the var variable in a HTML format, correct: false}
-            - {value: 'string("hello world")', correct: false}
-
-    -   question: |
+            -
+                value: 'An error'
+                correct: true
+            -
+                value: 'The contents of the var variable in a HTML format'
+                correct: false
+            -
+                value: 'string("hello world")'
+                correct: false
+    -
+        question: |
             What will be the value of the b parameter?
-
+            
             a: "%%b%%"
             b: "%a%%"
+            
         answers:
-            - {value: None, there will be a ParameterCircularReferenceException, correct: false}
-            - {value: %a%%, correct: false}
-            - {value: %b%%, correct: true}
-            - {value: %%b%%%, correct: false}
-            - {value: %a%, correct: false}
-
+            -
+                value: None
+                there: false
+            -
+                value: '%a%%'
+                correct: false
+            -
+                value: '%b%%'
+                correct: true
+            -
+                value: '%%b%%%'
+                correct: false
+            -
+                value: '%a%'
+                correct: false

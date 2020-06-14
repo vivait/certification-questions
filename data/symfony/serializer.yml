@@ -1,155 +1,181 @@
 category: Serializer
 questions:
-    -   question: "What is the way to initialize the ClassMetadataFactory in order to use annotations for the definitions of serialization?"
+    -
+        question: 'What is the way to initialize the ClassMetadataFactory in order to use annotations for the definitions of serialization?'
         answers:
-            -   value: |
+            -
+                value: |
                     use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
                     use Doctrine\Common\Annotations\AnnotationReader;
                     use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
-
+                    
                     $classMetadataFactory = new ClassMetadataFactory(new AnnotationReader(new AnnotationLoader()));
+                    
                 correct: false
-
-            -   value: |
+            -
+                value: |
                     use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
                     use Doctrine\Common\Annotations\AnnotationReader;
                     use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
-
+                    
                     $classMetadataFactory = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()));
+                    
                 correct: true
-
-            -   value: |
+            -
+                value: |
                     use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
                     use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
-
+                    
                     $classMetadataFactory = new ClassMetadataFactory(new AnnotationLoader());
+                    
                 correct: false
-
-    -   question: |
+    -
+        question: |
             With the following code:
-
+            
             use Acme\Person;
-
+            
             $person1 = new Person();
             $person1->setName('foo');
             $person1->setAge(99);
             $person1->setSportsman(false);
-
+            
             $person2 = new Person();
             $person2->setName('bar');
             $person2->setAge(33);
             $person2->setSportsman(true);
-
+            
             $persons = array($person1, $person2);
             $data = $serializer->serialize($persons, 'json');
             PHP
             what is the correct way to deserialize the $data into an $persons array of Acme\Person objects?
+            
         answers:
-            -   value: |
+            -
+                value: |
                     use Symfony\Component\Serializer\Encoder\JsonEncoder;
                     use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
                     use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
                     use Symfony\Component\Serializer\Serializer;
-
+                    
                     $serializer = new Serializer(
                     array(new GetSetMethodNormalizer(), new ArrayDenormalizer()),
                     array(new JsonEncoder())
                     );
-
+                    
                     $persons = $serializer->deserialize($data, 'Acme\Person', 'json', true);
+                    
                 correct: false
-
-            -   value: |
+            -
+                value: |
                     use Symfony\Component\Serializer\Encoder\JsonEncoder;
                     use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
                     use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
                     use Symfony\Component\Serializer\Serializer;
-
+                    
                     $serializer = new Serializer(
                     array(new GetSetMethodNormalizer(), new ArrayDenormalizer()),
                     array(new JsonEncoder())
                     );
-
+                    
                     $persons = $serializer->deserialize($data, 'Acme\Person[]', 'json');
+                    
                 correct: true
-
-            -   value: |
+            -
+                value: |
                     use Symfony\Component\Serializer\Encoder\JsonEncoder;
                     use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
                     use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
                     use Symfony\Component\Serializer\Serializer;
-
+                    
                     $serializer = new Serializer(
                         array(new GetSetMethodNormalizer(), new ArrayDenormalizer()),
                         array(new JsonEncoder())
                     );
-
+                    
                     $persons = array();
                     $persons = $serializer->deserialize($data, 'Acme\Person', 'json', $persons);
+                    
                 correct: false
-
-            -   value: |
+            -
+                value: |
                     use Symfony\Component\Serializer\Encoder\JsonEncoder;
                     use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
                     use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
                     use Symfony\Component\Serializer\Serializer;
-
+                    
                     $serializer = new Serializer(
                         array(new GetSetMethodNormalizer(), new ArrayDenormalizer()),
                         array(new JsonEncoder())
                     );
-
+                    
                     $persons = $serializer->deserialize($data, 'Acme\Person[]', 'json', 'array');
+                    
                 correct: false
-
-    -   question: "Which of these methods are automatically detected and used by the Serializer ?"
+    -
+        question: 'Which of these methods are automatically detected and used by the Serializer ?'
         answers:
-            -   value:  remove*
+            -
+                value: 'remove*'
                 correct: true
-            -   value:  get*
+            -
+                value: 'get*'
                 correct: true
-            -   value:  has*
+            -
+                value: 'has*'
                 correct: true
-            -   value: add*
+            -
+                value: 'add*'
                 correct: true
-            -   value: is*
+            -
+                value: 'is*'
                 correct: true
-
-    -   question: "What is the signature of the Serializer constructor?"
+    -
+        question: 'What is the signature of the Serializer constructor?'
         answers:
-            -   value:  __construct(array $normalizers = [], array $encoders = [])
+            -
+                value: '__construct(array $normalizers = [], array $encoders = [])'
                 correct: true
-            -   value:  __construct(array $encoders = [], array $normalizers = [])
+            -
+                value: '__construct(array $encoders = [], array $normalizers = [])'
                 correct: false
-            -   value:  __construct(EncoderCollection $encoders, NormalizerCollection $normalizers)
+            -
+                value: '__construct(EncoderCollection $encoders, NormalizerCollection $normalizers)'
                 correct: false
-            -   value: __construct(NormalizerCollection $normalizers, EncoderCollection $encoders)
+            -
+                value: '__construct(NormalizerCollection $normalizers, EncoderCollection $encoders)'
                 correct: false
-
-    -   question: "What is the signature of Serializer::serialize?"
+    -
+        question: 'What is the signature of Serializer::serialize?'
         answers:
-            -   value:  serialize($data, $format, array $context = [])
+            -
+                value: 'serialize($data, $format, array $context = [])'
                 correct: true
-            -   value:  serialize($data, array $context, $format)
+            -
+                value: 'serialize($data, array $context, $format)'
                 correct: false
-            -   value:  serialize(array $context, $format, $data)
+            -
+                value: 'serialize(array $context, $format, $data)'
                 correct: false
-
-    -   question: "What is the signature of Serializer::serialize?"
+    -
+        question: 'What is the signature of Serializer::serialize?'
         answers:
-            -   value:  deserialize($data, $type, $format, array $context = [])
+            -
+                value: 'deserialize($data, $type, $format, array $context = [])'
                 correct: true
-            -   value:  deserialize($data, $format, $type, array $context = [])
+            -
+                value: 'deserialize($data, $format, $type, array $context = [])'
                 correct: false
-            -   value:  deserialize($format, $data, $type, array $context = [])
+            -
+                value: 'deserialize($format, $data, $type, array $context = [])'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             class Person {
                 public $name;
                 public $age;
             }
-
+            
             $data = <<<EOF
             <person>
                 <name>foo</name>
@@ -157,24 +183,28 @@ questions:
                 <city>Paris</city>
             </person>
             EOF;
-
+            
             ...
-
+            
             $person = $serializer->deserialize($data, '\Person', 'xml', ['allow_extra_attributes' => false]);
+            
         answers:
-            -   value:  It will throw a Symfony\Component\Serializer\Exception\ExtraAttributesException.
+            -
+                value: 'It will throw a Symfony\Component\Serializer\Exception\ExtraAttributesException.'
                 correct: true
-            -   value:  It will throw a Symfony\Component\Serializer\Exception\MissingPropertyException.
+            -
+                value: 'It will throw a Symfony\Component\Serializer\Exception\MissingPropertyException.'
                 correct: false
-            -   value: It create a populated person object.
+            -
+                value: 'It create a populated person object.'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             class Person {
                 public $name;
                 public $age;
             }
-
+            
             $data = <<<EOF
             <person>
                 <name>foo</name>
@@ -182,24 +212,28 @@ questions:
                 <city>Paris</city>
             </person>
             EOF;
-
+            
             ...
-
+            
             $person = $serializer->deserialize($data, '\Person', 'xml');
+            
         answers:
-            -   value:  It will throw a Symfony\Component\Serializer\Exception\ExtraAttributesException.
+            -
+                value: 'It will throw a Symfony\Component\Serializer\Exception\ExtraAttributesException.'
                 correct: false
-            -   value:  It will throw a Symfony\Component\Serializer\Exception\MissingPropertyException.
+            -
+                value: 'It will throw a Symfony\Component\Serializer\Exception\MissingPropertyException.'
                 correct: false
-            -   value: It create a populated person object.
+            -
+                value: 'It create a populated person object.'
                 correct: true
-
-    -   question: |
+    -
+        question: |
             class Person {
                 public $name;
                 public $age;
             }
-
+            
             $data = <<<EOF
             <person>
                 <name>foo</name>
@@ -207,98 +241,131 @@ questions:
                 <city>Paris</city>
             </person>
             EOF;
-
+            
             ...
-
+            
             $person = $serializer->deserialize($data, '\Person', 'xml');
+            
         answers:
-            -   value:  It will throw a Symfony\Component\Serializer\Exception\ExtraAttributesException.
+            -
+                value: 'It will throw a Symfony\Component\Serializer\Exception\ExtraAttributesException.'
                 correct: false
-            -   value:  It will throw a Symfony\Component\Serializer\Exception\MissingPropertyException.
+            -
+                value: 'It will throw a Symfony\Component\Serializer\Exception\MissingPropertyException.'
                 correct: false
-            -   value: It create a populated person object.
+            -
+                value: 'It create a populated person object.'
                 correct: true
-
-    -   question: |
+    -
+        question: |
             What interface must one use have custom names for serialized fields?
+            
         answers:
-            -   value:  Symfony\Component\Serializer\NameConverter\NameConverterInterface
+            -
+                value: Symfony\Component\Serializer\NameConverter\NameConverterInterface
                 correct: true
-            -   value:  Symfony\Component\Serializer\NameConverterInterface
+            -
+                value: Symfony\Component\Serializer\NameConverterInterface
                 correct: false
-            -   value: Symfony\Component\Serializer\CustomNameFactoryInterface
+            -
+                value: Symfony\Component\Serializer\CustomNameFactoryInterface
                 correct: false
-            -   value: Symfony\Component\Serializer\NameConverter\CustomNameFactoryInterface
+            -
+                value: Symfony\Component\Serializer\NameConverter\CustomNameFactoryInterface
                 correct: false
-
-    -   question: |
+    -
+        question: |
             Which of the followings are built-in normalizers?
+            
         answers:
-            -   value:  XmlNormalizer
+            -
+                value: XmlNormalizer
                 correct: false
-            -   value:  CustomNormalizer
+            -
+                value: CustomNormalizer
                 correct: true
-            -   value: DataUriNormalizer
+            -
+                value: DataUriNormalizer
                 correct: true
-            -   value: ObjectNormalizer
+            -
+                value: ObjectNormalizer
                 correct: true
-            -   value: TimeNormalizer
+            -
+                value: TimeNormalizer
                 correct: false
-            -   value: DateTimeNormalizer
+            -
+                value: DateTimeNormalizer
                 correct: true
-            -   value: GetSetMethodNormalizer
+            -
+                value: GetSetMethodNormalizer
                 correct: true
-            -   value: DateNormalizer
+            -
+                value: DateNormalizer
                 correct: false
-            -   value: JsonNormalizer
+            -
+                value: JsonNormalizer
                 correct: false
-
-    -   question: |
+    -
+        question: |
             What is the purpose of the CustomNormalizer?
             #https://github.com/symfony/symfony/blob/3.1/src/Symfony/Component/Serializer/Normalizer/CustomNormalizer.php
+            
         answers:
-            -   value:  Allows a NormalizableInterface object to normalize and denormalize itself
+            -
+                value: 'Allows a NormalizableInterface object to normalize and denormalize itself'
                 correct: true
-            -   value:  Allows normalize and denormalize via a callback
+            -
+                value: 'Allows normalize and denormalize via a callback'
                 correct: false
-            -   value:  It is an abstract class which can be extended to provide basic utilities for normalizing and denormalizing
+            -
+                value: 'It is an abstract class which can be extended to provide basic utilities for normalizing and denormalizing'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             What is an example of the normalized format of the DataUriNormalizer?
+            
         answers:
-            -   value:  data:application/json;base64,U29tZSB0ZXh0IHRoYXQgaXMgbm90IHNvIHNlY3JldA==,
+            -
+                value: 'data:application/json;base64,U29tZSB0ZXh0IHRoYXQgaXMgbm90IHNvIHNlY3JldA==,'
                 correct: true
-            -   value:  U29tZSB0ZXh0IHRoYXQgaXMgbm90IHNvIHNlY3JldA
+            -
+                value: U29tZSB0ZXh0IHRoYXQgaXMgbm90IHNvIHNlY3JldA
                 correct: false
-            -   value: "{'some': 'data}"
+            -
+                value: '{''some'': ''data}'
                 correct: false
-            -   value: 'a:1:{s:4:"some";s:5:"value";}'
+            -
+                value: 'a:1:{s:4:"some";s:5:"value";}'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             Assuming the $serialiser is configured with GetSetMethodNormalizer what is the result of the following?
-
+            
             class Organization {
                 public $name;
                 public $members;
             }
-
+            
             class Member {
                 public $name;
                 public $organization;
             }
-
+            
             $member = new Member();
             $member->name = 'Kévin';
-
+            
             $org = new Organization();
             $org->name = 'Les-Tilleuls.coop';
             $org->members = [$member];
-
+            
             $member->organization = $org;
-
+            
             echo $serializer->serialize($org, 'json');
+            
         answers:
-            - {value: It will throw an exception,   correct: true}
-            - {value: '{"name": "Les-Tilleuls.coop", "members": [{"name": "Kévin"}]}', correct: false}
+            -
+                value: 'It will throw an exception'
+                correct: true
+            -
+                value: '{"name": "Les-Tilleuls.coop", "members": [{"name": "Kévin"}]}'
+                correct: false

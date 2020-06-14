@@ -1,44 +1,67 @@
 category: Basics
 questions:
-    -   question: |
+    -
+        question: |
             What will be the value of $bool and $bool2?
             ```
             $bool = filter_var("true", FILTER_VALIDATE_BOOLEAN);
             $bool2 = filter_var(2, FILTER_VALIDATE_BOOLEAN);
             ```
+            
         answers:
-            - {value: 'true and true', correct: false}
-            - {value: 'false and true', correct: false}
-            - {value: 'false and false', correct: false}
-            - {value: 'true and false', correct: true}
-
-    -   question: |
+            -
+                value: 'true and true'
+                correct: false
+            -
+                value: 'false and true'
+                correct: false
+            -
+                value: 'false and false'
+                correct: false
+            -
+                value: 'true and false'
+                correct: true
+    -
+        question: |
             Consider the following code snippet:
             ```
             class Bar
             {
                 private $foo = 'private';
             }
-
+            
             function getter()
             {
                 return function() {
                     return $this->foo;
                 };
             }
-
+            
             ????
             ```
             Which statement does the ???? placeholder replace in order to make this code snippet output the string private?
+            
         answers:
-            - {value: 'echo getter()->bindTo(new Bar())();', correct: false}
-            - {value: 'echo getter()->bindTo(new Bar(), new Bar())();', correct: false}
-            - {value: 'This is not possible.', correct: false}
-            - {value: "echo getter()->bindTo(new Bar(), 'Bar')();", correct: true}
-            - {value: "echo getter()->bindTo('Bar', 'Bar')();", correct: false}
-            - {value: 'echo getter()->bindTo(new Bar())();', correct: false}
-
-    -   question: |
+            -
+                value: 'echo getter()->bindTo(new Bar())();'
+                correct: false
+            -
+                value: 'echo getter()->bindTo(new Bar(), new Bar())();'
+                correct: false
+            -
+                value: 'This is not possible.'
+                correct: false
+            -
+                value: 'echo getter()->bindTo(new Bar(), ''Bar'')();'
+                correct: true
+            -
+                value: 'echo getter()->bindTo(''Bar'', ''Bar'')();'
+                correct: false
+            -
+                value: 'echo getter()->bindTo(new Bar())();'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
             ```
             try {
@@ -57,357 +80,571 @@ questions:
             }
             ```
             What is the expected output when executing this script?
+            
         answers:
-            - {value: 'a-b-caught-finished-end-', correct: false}
-            - {value: 'a-b-caught-end-', correct: false}
-            - {value: 'a-caught-finished-end-', correct: true}
-            - {value: 'a-caught-end-', correct: false }
-            - {value: 'a-caught-end-finished-', correct: false }
-
-    -   question: "Which of the following is not a predefined PHP variable?"
+            -
+                value: a-b-caught-finished-end-
+                correct: false
+            -
+                value: a-b-caught-end-
+                correct: false
+            -
+                value: a-caught-finished-end-
+                correct: true
+            -
+                value: a-caught-end-
+                correct: false
+            -
+                value: a-caught-end-finished-
+                correct: false
+    -
+        question: 'Which of the following is not a predefined PHP variable?'
         answers:
-            - {value: $_GLOBALS, correct: true }
-            - {value: $php_errormsg, correct: false }
-            - {value: $http_response_header, correct: false }
-            - {value: $argc, correct: false }
-            - {value: $_POST, correct: false }
-
-    -   question: |
+            -
+                value: $_GLOBALS
+                correct: true
+            -
+                value: $php_errormsg
+                correct: false
+            -
+                value: $http_response_header
+                correct: false
+            -
+                value: $argc
+                correct: false
+            -
+                value: $_POST
+                correct: false
+    -
+        question: |
             As of which PHP version should the following code not throw an error?
-
+            
             class A
             {
                 const foo = [ /*...*/ ];
             }
+            
         answers:
-            - {value: 5.6, correct: true }
-            - {value: 5.5, correct: false }
-            - {value: 7.0, correct: false }
-            - {value: 5.4, correct: false }
-
-    -   question: "What SAPI does not exist in PHP ?"
+            -
+                value: 5.6
+                correct: true
+            -
+                value: 5.5
+                correct: false
+            -
+                value: !!float 7
+                correct: false
+            -
+                value: 5.4
+                correct: false
+    -
+        question: 'What SAPI does not exist in PHP ?'
         answers:
-            - {value: apxs2, correct: false }
-            - {value: fpm, correct: false }
-            - {value: nginx, correct: true }
-            - {value: cli, correct: false }
-            - {value: cgi, correct: false }
-
-    -   question: |
+            -
+                value: apxs2
+                correct: false
+            -
+                value: fpm
+                correct: false
+            -
+                value: nginx
+                correct: true
+            -
+                value: cli
+                correct: false
+            -
+                value: cgi
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             $a = 20;
-
+            
             function my_function($b)
             {
                 $a = 30;
                 global $a, $c;
-
+            
                 return $c = ($b + $a);
             }
-
+            
             print my_function(40) + $c;
-
+            
             What does this script output when it's executed with PHP?
+            
         answers:
-            - {value: "An error saying something like Undefined variable: ....", correct: false }
-            - {value: 70, correct: false }
-            - {value: 60, correct: false }
-            - {value: 120, correct: true }
-            - {value: 110, correct: false }
-
-    -   question: "Can PHP open and work natively with Zip file?"
+            -
+                value: 'An error saying something like Undefined variable: ....'
+                correct: false
+            -
+                value: 70
+                correct: false
+            -
+                value: 60
+                correct: false
+            -
+                value: 120
+                correct: true
+            -
+                value: 110
+                correct: false
+    -
+        question: 'Can PHP open and work natively with Zip file?'
         answers:
-            - {value: "Yes", correct: false }
-            - {value: No, correct: true }
-
-    -   question: "How would you access the file data sent to your PHP server using the PUT HTTP method ?"
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: 'How would you access the file data sent to your PHP server using the PUT HTTP method ?'
         answers:
-            - {value: Using $_PUT, correct: false }
-            - {value: Using $HTTP_PUT_VARS, correct: false }
-            - {value: It is not possible, correct: false }
-            - {value: Using the php://input stream, correct: true }
-            - {value: Using $_POST, correct: false }
-
-    -   question: "What is the default timeout of a PHP session cookie ?"
+            -
+                value: 'Using $_PUT'
+                correct: false
+            -
+                value: 'Using $HTTP_PUT_VARS'
+                correct: false
+            -
+                value: 'It is not possible'
+                correct: false
+            -
+                value: 'Using the php://input stream'
+                correct: true
+            -
+                value: 'Using $_POST'
+                correct: false
+    -
+        question: 'What is the default timeout of a PHP session cookie ?'
         answers:
-            - {value: Depends on the web server, correct: false }
-            - {value: Until the browser is closed, correct: true }
-            - {value: 20 minutes, correct: false }
-            - {value: 10 minutes, correct: false }
+            -
+                value: 'Depends on the web server'
+                correct: false
+            -
+                value: 'Until the browser is closed'
+                correct: true
+            -
+                value: '20 minutes'
+                correct: false
+            -
+                value: '10 minutes'
+                correct: false
         help: |
             https://www.php.net/manual/en/session.configuration.php#ini.session.cookie-lifetime
-
-    -   question: |
+            
+    -
+        question: |
             <?php
             $bool = true;
             $array = array();
             $a = 14;
             $a = $a + $bool - $array;
             echo $a;
+            
         answers:
-            - {value: 15, correct: false }
-            - {value: An error, correct: true }
-            - {value: 14, correct: false }
-
-    -   question: |
+            -
+                value: 15
+                correct: false
+            -
+                value: 'An error'
+                correct: true
+            -
+                value: 14
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             echo print('hello');
-
+            
             What will be the output when running this script?
+            
         answers:
-            - {value: hello1, correct: true }
-            - {value: hellotrue, correct: false }
-            - {value: hello5, correct: false }
-            - {value: hello0, correct: false }
-            - {value: hello, correct: false }
-
-
-    -   question: |
+            -
+                value: hello1
+                correct: true
+            -
+                value: hellotrue
+                correct: false
+            -
+                value: hello5
+                correct: false
+            -
+                value: hello0
+                correct: false
+            -
+                value: hello
+                correct: false
+    -
+        question: |
             What will output the following code ?
-
+            
             $input = <<<'EOF'
             1;PHP;Likes dollar signs
             2;Python;Likes whitespace
             3;Ruby;Likes blocks
             EOF;
-
+            
             function input_parser($input) {
                 foreach (explode("\n", $input) as $line) {
                     $fields = explode(';', $line);
                     $id = array_shift($fields);
-
+            
                     yield $id => $fields;
                 }
             }
-
+            
             foreach (input_parser($input) as $id => $fields) {
                 echo "$id:\n";
                 echo "    $fields[0]\n";
                 echo "    $fields[1]\n";
             }
+            
         answers:
-            - value: |
-                  1: PHP Likes dollar signs
-                  2: Python Likes whitespace
-                  3: Ruby Likes blocks
-              correct: false
-            - value: |
-                  1;PHP;Likes dollar signs
-                  2;Python;Likes whitespace
-                  3;Ruby;Likes blocks
-              correct: false
-            - value: |
-                  1:
-                      PHP
-                      Likes dollar signs
-                  2:
-                      Python
-                      Likes whitespace
-                  3:
-                      Ruby
-                      Likes blocks
-              correct: true
-            - value: |
-                 An error
-              correct: false
-
-    -   question: "How can you get the value of the current configuration directives (php.ini) of a PHP extension?"
+            -
+                value: |
+                    1: PHP Likes dollar signs
+                    2: Python Likes whitespace
+                    3: Ruby Likes blocks
+                    
+                correct: false
+            -
+                value: |
+                    1;PHP;Likes dollar signs
+                    2;Python;Likes whitespace
+                    3;Ruby;Likes blocks
+                    
+                correct: false
+            -
+                value: |
+                    1:
+                        PHP
+                        Likes dollar signs
+                    2:
+                        Python
+                        Likes whitespace
+                    3:
+                        Ruby
+                        Likes blocks
+                    
+                correct: true
+            -
+                value: |
+                    An error
+                    
+                correct: false
+    -
+        question: 'How can you get the value of the current configuration directives (php.ini) of a PHP extension?'
         answers:
-            - {value: With php://config stream, correct: false }
-            - {value: With ini_get_all(), correct: true }
-            - {value: With the $GLOBALS array, correct: false }
-            - {value: With the reflection API, correct: true }
-            - {value: With get_loaded_extensions(), correct: false }
-
-    -   question: "How do you retrieve a cookie in PHP?"
+            -
+                value: 'With php://config stream'
+                correct: false
+            -
+                value: 'With ini_get_all()'
+                correct: true
+            -
+                value: 'With the $GLOBALS array'
+                correct: false
+            -
+                value: 'With the reflection API'
+                correct: true
+            -
+                value: 'With get_loaded_extensions()'
+                correct: false
+    -
+        question: 'How do you retrieve a cookie in PHP?'
         answers:
-            - {value: "get_cookie('mycookie')", correct: false }
-            - {value: "cookies::get('mycookie')", correct: false }
-            - {value: "$_COOKIE['mycookie']", correct: true }
-            - {value: "$_SERVER['cookies']['mycookie']", correct: false }
-
-    -   question: |
+            -
+                value: 'get_cookie(''mycookie'')'
+                correct: false
+            -
+                value: 'cookies::get(''mycookie'')'
+                correct: false
+            -
+                value: '$_COOKIE[''mycookie'']'
+                correct: true
+            -
+                value: '$_SERVER[''cookies''][''mycookie'']'
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
-
+            
             $a = (object) ["a" => "b"];
             $b = (object) ["a" => "c"];
             echo $a <=> $b;
+            
         answers:
-            - {value: "'0'", correct: false }
-            - {value: "'-1'", correct: false }
-            - {value: "'1'", correct: true }
-
-    -   question: Which is a valid way to set a header on a response in PHP?
+            -
+                value: '''0'''
+                correct: false
+            -
+                value: '''-1'''
+                correct: false
+            -
+                value: '''1'''
+                correct: true
+    -
+        question: 'Which is a valid way to set a header on a response in PHP?'
         answers:
-            - {value: "header('Content-Type: text/html');", correct: true }
-            - {value: "set_header('Content-Type: text/html');", correct: false }
-            - {value: "send_header('Content-Type', 'text/html');", correct: false }
-
-    -   question: |
+            -
+                value: 'header(''Content-Type: text/html'');'
+                correct: true
+            -
+                value: 'set_header(''Content-Type: text/html'');'
+                correct: false
+            -
+                value: 'send_header(''Content-Type'', ''text/html'');'
+                correct: false
+    -
+        question: |
             Will the following PHP work?
             <html>
             <?php
             namespace MyProject;
             ?>
+            
         answers:
-            - {value: No, correct: true }
-            - {value: Yes, correct: false }
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             Will the following PHP work?
             <html>
             <?php
             namespace MyProject;
             ?>
+            
         answers:
-            - {value: No, correct: true }
-            - {value: Yes, correct: false }
-
-    -   question: Can PHP support multiple namespaces within a single file?
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: 'Can PHP support multiple namespaces within a single file?'
         answers:
-            - {value: No, correct: false }
-            - {value: Yes, correct: true }
-
-    -   question: Can PHP support multiple namespaces within a single file?
+            -
+                value: 'No'
+                correct: false
+            -
+                value: 'Yes'
+                correct: true
+    -
+        question: 'Can PHP support multiple namespaces within a single file?'
         answers:
-            - {value: No, correct: false }
-            - {value: Yes, correct: true }
-
-    -   question: |
+            -
+                value: 'No'
+                correct: false
+            -
+                value: 'Yes'
+                correct: true
+    -
+        question: |
             Will the following code trigger an error?
-
+            
             <?php
             namespace a;
-
+            
             echo "I belong to namespace a";
-
+            
             namespace b {
                 echo "I'm from namespace b";
             }
+            
         answers:
-            - {value: No, correct: false }
-            - {value: Yes, correct: true }
-
-    -   question: |
+            -
+                value: 'No'
+                correct: false
+            -
+                value: 'Yes'
+                correct: true
+    -
+        question: |
             From the script below, how would you display the error messages thrown by the 'ls' command ?
-
+            
             $null = fopen('/dev/null', 'r+');
             $descriptorspec = [  0 => $null,  1 => $null,  2 => array["pipe", "w"] ];
-
+            
             $process = proc_open("ls /foo", $descriptorspec, $pipes);
             echo __________________
+            
         answers:
-            - {value: 'proc_errors($process);', correct: false }
-            - {value: 'fgets($pipes[2]);', correct: true }
-            - {value: 'stream_errors($pipes);', correct: false }
-            - {value: 'fread($null, 128);', correct: false }
-
-    -   question: |
+            -
+                value: proc_errors($process);
+                correct: false
+            -
+                value: 'fgets($pipes[2]);'
+                correct: true
+            -
+                value: stream_errors($pipes);
+                correct: false
+            -
+                value: 'fread($null, 128);'
+                correct: false
+    -
+        question: |
             $subs = [
                 'at' => '@',
                 'com' => 'net'
             ];
-
+            
             $email = 'comnet@example.com';
-
+            
             echo strtr($email, $subs);
+            
         answers:
-            - {value: 'netnet@example.net', correct: true }
-            - {value: 'comnet@example.com', correct: false }
-            - {value: 'comnetatexample.net', correct: false }
-            - {value: 'netnet@example.com', correct: false }
-
-    -   question: Which version of PHP introduced abstract classes?
+            -
+                value: netnet@example.net
+                correct: true
+            -
+                value: comnet@example.com
+                correct: false
+            -
+                value: comnetatexample.net
+                correct: false
+            -
+                value: netnet@example.com
+                correct: false
+    -
+        question: 'Which version of PHP introduced abstract classes?'
         answers:
-            - {value: '5.0', correct: true }
-            - {value: '5.6', correct: false }
-            - {value: '4.0', correct: false }
-            - {value: '7.0', correct: false }
-
-    -   question: |
+            -
+                value: '5.0'
+                correct: true
+            -
+                value: '5.6'
+                correct: false
+            -
+                value: '4.0'
+                correct: false
+            -
+                value: '7.0'
+                correct: false
+    -
+        question: |
             Is the following interface valid?
-
+            
             interface Mine {
                 protected function test ();
             }
+            
         answers:
-            - {value: No, correct: true }
-            - {value: Yes, correct: false }
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             Is the following interface valid?
-
+            
             interface Mine {
                 public function test ();
             }
+            
         answers:
-            - {value: Yes, correct: true }
-            - {value: No, correct: false }
-
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Is the following code valid?
-
+            
             interface Mine {
                 public const TEST = '123';
             }
-
+            
             class Two implements Mine {
                 public const TEST = '321';
             }
+            
         answers:
-            - {value: No, correct: true }
-            - {value: Yes, correct: false }
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             Is the following code valid?
-
+            
             class Mine {
                 public const TEST = '123';
             }
-
+            
             class Two extends Mine {
                 public const TEST = '321';
             }
+            
         answers:
-            - {value: Yes, correct: true }
-            - {value: No, correct: false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Is the following code valid?
-
+            
             $object = new class {};
             $string = 'class';
             var_dump($object instanceof $string);
+            
         answers:
-            - {value: Yes, correct: true }
-            - {value: No, correct: false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Is the following code valid?
-
+            
             $object = new class {};
             $stdClass = new stdClass;
             var_dump($object instanceof $stdClass);
+            
         answers:
-            - {value: Yes, correct: true }
-            - {value: No, correct: false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             What is the output of the following script?
-
+            
             $object = new stdClass;
             const STRING = 'stdClass';
             var_dump($object instanceof STRING);
+            
         answers:
-            - {value: bool(false), correct: true }
-            - {value: bool(true), correct: false }
-
-    -   question: |
+            -
+                value: bool(false)
+                correct: true
+            -
+                value: bool(true)
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             function redirect($url)
             {
                 $header = sprintf('Location: %s', $url);
@@ -417,32 +654,54 @@ questions:
                     exit;
                 }
             }
-
+            
             redirect('https://google.com');
-
+            
             Which statement does the ??? placeholder replace in order to make this code work properly?
+            
         answers:
-            - {value: "!in_array($header, headers_list())", correct: true }
-            - {value: "!headers_sent()", correct: true }
-            - {value: "!http_redirect_to($url)", correct: false }
-            - {value: "$_SERVER['HTTP_LOCATION'] != $url", correct: false }
-
-    -   question: |
+            -
+                value: '!in_array($header, headers_list())'
+                correct: true
+            -
+                value: '!headers_sent()'
+                correct: true
+            -
+                value: '!http_redirect_to($url)'
+                correct: false
+            -
+                value: '$_SERVER[''HTTP_LOCATION''] != $url'
+                correct: false
+    -
+        question: |
             Which function would best parse the following string by the tab (\t) and newline (\n) characters ?
-
+            
             $string = "John\tMark\nTed\tLarry";
+            
         answers:
-            - {value: 'strtok($string, "\t\n");', correct: true }
-            - {value: 'strstr($string, "\t\n");', correct: false }
-            - {value: 'explode($string, "\t\n");', correct: false }
-            - {value: 'str_split($string, "\t\n");', correct: false }
-
-    -   question: Is content automatically escaped in PHP templates?
+            -
+                value: 'strtok($string, "\t\n");'
+                correct: true
+            -
+                value: 'strstr($string, "\t\n");'
+                correct: false
+            -
+                value: 'explode($string, "\t\n");'
+                correct: false
+            -
+                value: 'str_split($string, "\t\n");'
+                correct: false
+    -
+        question: 'Is content automatically escaped in PHP templates?'
         answers:
-            - {value: "No", correct: true }
-            - {value: "Yes", correct: false }
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             function dot($n)
             {
                 if ($n > 0) {
@@ -453,47 +712,89 @@ questions:
                 }
             }
             dot(4);
+            
         answers:
-            - {value: "An error.", correct: false }
-            - {value: ".....", correct: false }
-            - {value: "...", correct: false }
-            - {value: "....", correct: true }
-            - {value: "...0", correct: false }
-
-    -   question: |
+            -
+                value: 'An error.'
+                correct: false
+            -
+                value: .....
+                correct: false
+            -
+                value: ...
+                correct: false
+            -
+                value: ....
+                correct: true
+            -
+                value: ...0
+                correct: false
+    -
+        question: |
             What is the output ?
-
+            
             <?php
             $a = 4 << 2 + 1;
             echo $a;
             ?>
+            
         answers:
-            - {value: "'32'", correct: true }
-            - {value: "'17'", correct: false }
-            - {value: "'1'", correct: false }
-            - {value: "'16'", correct: false }
-            - {value: "'9'", correct: false }
-
-    -   question: |
+            -
+                value: '''32'''
+                correct: true
+            -
+                value: '''17'''
+                correct: false
+            -
+                value: '''1'''
+                correct: false
+            -
+                value: '''16'''
+                correct: false
+            -
+                value: '''9'''
+                correct: false
+    -
+        question: |
             How many HTTP requests (without using JavaScript) are required to determine whether or not a client supports cookies?
+            
         answers:
-            - {value: '"2"', correct: true }
-            - {value: This is not possible without javascript., correct: false }
-            - {value: '"0"', correct: false }
-            - {value: '"1"', correct: false }
-
-    -   question: |
+            -
+                value: '"2"'
+                correct: true
+            -
+                value: 'This is not possible without javascript.'
+                correct: false
+            -
+                value: '"0"'
+                correct: false
+            -
+                value: '"1"'
+                correct: false
+    -
+        question: |
             Which of the following is not a magic method?
+            
         answers:
-            - {value: __serialize(), correct: true }
-            - {value: __wakeup(), correct: false }
-            - {value: __invoke(), correct: false }
-            - {value: __get(), correct: false }
-            - {value: __set_state(), correct: false }
-
-    -   question: |
+            -
+                value: __serialize()
+                correct: true
+            -
+                value: __wakeup()
+                correct: false
+            -
+                value: __invoke()
+                correct: false
+            -
+                value: __get()
+                correct: false
+            -
+                value: __set_state()
+                correct: false
+    -
+        question: |
             What is the output ?
-
+            
             <?php
             $a = 10;
             echo strlen($a) . count($a);
@@ -501,62 +802,107 @@ questions:
                echo $a . "elephpant ";
                $a++;
             } while($a <= 1);
+            
         answers:
-            - {value: "'12'", correct: false }
-            - {value: "'2110elephpant'", correct: true }
-            - {value: "'21'", correct: false }
-            - {value: "'1210elephpant'", correct: false }
-            - {value: "'10elephpant'", correct: false }
-
-    -   question: |
+            -
+                value: '''12'''
+                correct: false
+            -
+                value: '''2110elephpant'''
+                correct: true
+            -
+                value: '''21'''
+                correct: false
+            -
+                value: '''1210elephpant'''
+                correct: false
+            -
+                value: '''10elephpant'''
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             function foo(&$a = 8)
             {
                 $b = &$a;
                 $b -= $a + 3;
-
+            
                 return $b;
             }
-
+            
             $a = foo(4);
             echo $a;
-
+            
             What will be the outcome of executing this script?
+            
         answers:
-            - {value: A PHP fatal error., correct: true }
-            - {value: '-3', correct: false }
-            - {value: '3', correct: false }
-            - {value: '8', correct: false }
-            - {value: '-4', correct: false }
-
-    -   question: |
+            -
+                value: 'A PHP fatal error.'
+                correct: true
+            -
+                value: '-3'
+                correct: false
+            -
+                value: '3'
+                correct: false
+            -
+                value: '8'
+                correct: false
+            -
+                value: '-4'
+                correct: false
+    -
+        question: |
             What will be the output of the following script ?
-
+            
             $str = printf('%.1f', 1/8);
             echo 'Total is ';
             echo $str;
+            
         answers:
-            - {value: 0.1Total is 3, correct: true }
-            - {value: 0.125Total is 0.125, correct: false }
-            - {value: 3Total is 3, correct: false }
-            - {value: 0.125Total is 0.1, correct: false }
-            - {value: 1/8Total is 1/8, correct: false }
-
-    -   question: From which global arrays is it possible to read submitted form data?
+            -
+                value: '0.1Total is 3'
+                correct: true
+            -
+                value: '0.125Total is 0.125'
+                correct: false
+            -
+                value: '3Total is 3'
+                correct: false
+            -
+                value: '0.125Total is 0.1'
+                correct: false
+            -
+                value: '1/8Total is 1/8'
+                correct: false
+    -
+        question: 'From which global arrays is it possible to read submitted form data?'
         answers:
-            - {value: $_COOKIE, correct: false }
-            - {value: $_SESSION, correct: false }
-            - {value: $_GET, correct: true }
-            - {value: $_ENV, correct: false }
-            - {value: $_REQUEST, correct: true }
-            - {value: $_POST, correct: true }
-
-    -   question: |
+            -
+                value: $_COOKIE
+                correct: false
+            -
+                value: $_SESSION
+                correct: false
+            -
+                value: $_GET
+                correct: true
+            -
+                value: $_ENV
+                correct: false
+            -
+                value: $_REQUEST
+                correct: true
+            -
+                value: $_POST
+                correct: true
+    -
+        question: |
             What line of code should be substituted with /** line **/ to achieve an output of a?
-
+            
             <?php
-
+            
             $fruitAndVeg = [
                 'c' => 'Carrot',
                 'p' => 'Tomato',
@@ -564,21 +910,30 @@ questions:
                 't' => 'Potato',
                 'a' => 'Apple'
             ];
-
+            
             /** line **/
-
+            
             $keys = array_keys($fruitAndVeg);
-
+            
             echo $keys[0];
+            
         answers:
-            - {value: ksort($fruitAndVeg);, correct: true }
-            - {value: usort($fruitAndVeg);, correct: false }
-            - {value: krsort($fruitAndVeg);, correct: false }
-            - {value: sort($fruitAndVeg);, correct: false }
-
-    -   question: |
+            -
+                value: ksort($fruitAndVeg);
+                correct: true
+            -
+                value: usort($fruitAndVeg);
+                correct: false
+            -
+                value: krsort($fruitAndVeg);
+                correct: false
+            -
+                value: sort($fruitAndVeg);
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
-
+            
             class Foo {
                 public $value = 42;
                 public function &getValue() {
@@ -588,77 +943,122 @@ questions:
             $foo = new Foo;
             $myValue = &$foo->getValue();
             $foo->value = 2;
-
+            
             echo $myValue;
+            
         answers:
-            - {value: "'5'", correct: false }
-            - {value: "null", correct: false }
-            - {value: "'2'", correct: true }
-            - {value: 42, correct: false }
-
-    -   question: |
+            -
+                value: '''5'''
+                correct: false
+            -
+                value: 'null'
+                correct: false
+            -
+                value: '''2'''
+                correct: true
+            -
+                value: 42
+                correct: false
+    -
+        question: |
             What should ????? be replaced with to add a <title> node with the value of "Hello, World!"?
-
+            
             $title = $dom->createElement('title');
-
+            
             $node = ?????????
-
+            
             $title->appendChild($node);
             $head->appendChild($title);
+            
         answers:
-            - {value: '$dom->appendTextNode($title, "Hello, World!");', correct: false }
-            - {value: "$dom->createTextNode('Hello, World!');", correct: true }
-            - {value: "$dom->appendElement($title, 'tet', 'Hello, World!');", correct: false }
-            - {value: "$dom->createElement('text', 'Hello, World!');", correct: false }
-
-    -   question: Which of the following assertions is correct?
+            -
+                value: '$dom->appendTextNode($title, "Hello, World!");'
+                correct: false
+            -
+                value: '$dom->createTextNode(''Hello, World!'');'
+                correct: true
+            -
+                value: '$dom->appendElement($title, ''tet'', ''Hello, World!'');'
+                correct: false
+            -
+                value: '$dom->createElement(''text'', ''Hello, World!'');'
+                correct: false
+    -
+        question: 'Which of the following assertions is correct?'
         answers:
-            - {value: PHP is a loosely-typed imperative language., correct: true }
-            - {value: PHP is a strongly-typed imperative language., correct: false }
-            - {value: PHP is a strongly-typed, functionnal language., correct: false }
-            - {value: PHP is a loosely-typed functionnal language., correct: false }
-            - {value: PHP is a loosely-typed declarative language., correct: false }
-
-    -   question: |
+            -
+                value: 'PHP is a loosely-typed imperative language.'
+                correct: true
+            -
+                value: 'PHP is a strongly-typed imperative language.'
+                correct: false
+            -
+                value: 'PHP is a strongly-typed'
+                functionnal: false
+            -
+                value: 'PHP is a loosely-typed functionnal language.'
+                correct: false
+            -
+                value: 'PHP is a loosely-typed declarative language.'
+                correct: false
+    -
+        question: |
             What will be the value $bool ?
-
+            
             $bool = (bool) "false"
+            
         answers:
-            - {value: "true", correct: true }
-            - {value: "false", correct: false }
-            - {value: "Error : you cannot cast a String as a Boolean", correct: false }
-
-    -   question: |
+            -
+                value: 'true'
+                correct: true
+            -
+                value: 'false'
+                correct: false
+            -
+                value: 'Error : you cannot cast a String as a Boolean'
+                correct: false
+    -
+        question: |
             What is the output of the following controller?
-
-
+            
+            
             use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+            
             class HelloController extends Controller
             {
                 public function helloAction()
                 {
                     $filename = tempnam(sys_get_temp_dir(), 'sf');
                     file_put_contents($filename, 'hello {{ 1 + 1 }}');
-
+            
                     return $this->forward('FrameworkBundle:Template:template', [
                         'template' => $filename
                     ]);
                 }
             }
+            
         answers:
-            - {value: "Error: The controller must return a response", correct: false }
-            - {value: "Error: Controller requires that you provide a value for the “$variables” argument.", correct: false }
-            - {value: "hello 2", correct: true }
-            - {value: "hello", correct: false }
-            - {value: "Error: Route `FrameworkBundle:Template:template` does not exist.", correct: false }
-
-
-    -   question: |
+            -
+                value: 'Error: The controller must return a response'
+                correct: false
+            -
+                value: 'Error: Controller requires that you provide a value for the “$variables” argument.'
+                correct: false
+            -
+                value: 'hello 2'
+                correct: true
+            -
+                value: hello
+                correct: false
+            -
+                value: 'Error: Route `FrameworkBundle:Template:template` does not exist.'
+                correct: false
+    -
+        question: |
             What is the value of $value?
-
+            
             <?php
-
+            
             function inner() {
                 yield 1;
                 yield 2;
@@ -669,19 +1069,28 @@ questions:
                 yield from inner();
                 yield 4;
             }
-
+            
             $value = iterator_to_array(gen());
+            
         answers:
-            - {value: "[0 => 1, 1 => 4, 2 => 3]", correct: true }
-            - {value: "[0 => 1, 1 => 1, 2 => 2, 3 => 3, 4 => 4]", correct: false }
-            - {value: "The script won't execute", correct: false }
-            - {value: "[0 => 0, 1 => [0 => 1, 1 => 2, 2 => 3], 2 => 4]", correct: false }
-
-    -   question: |
+            -
+                value: '[0 => 1, 1 => 4, 2 => 3]'
+                correct: true
+            -
+                value: '[0 => 1, 1 => 1, 2 => 2, 3 => 3, 4 => 4]'
+                correct: false
+            -
+                value: 'The script won''t execute'
+                correct: false
+            -
+                value: '[0 => 0, 1 => [0 => 1, 1 => 2, 2 => 3], 2 => 4]'
+                correct: false
+    -
+        question: |
             What is the value of $value?
-
+            
             <?php
-
+            
             function inner() {
                 yield 1;
                 yield 2;
@@ -692,94 +1101,148 @@ questions:
                 yield from inner();
                 yield 4;
             }
-
+            
             $value = iterator_to_array(gen(), false);
+            
         answers:
-            - {value: "[0 => 1, 1 => 1, 2 => 2, 3 => 3, 4 => 4]", correct: true }
-            - {value: "[0 => 1, 1 => 4, 2 => 3]", correct: false }
-            - {value: "The script won't execute", correct: false }
-            - {value: "[0 => 0, 1 => [0 => 1, 1 => 2, 2 => 3], 2 => 4]", correct: false }
-
-
-    -   question: |
+            -
+                value: '[0 => 1, 1 => 1, 2 => 2, 3 => 3, 4 => 4]'
+                correct: true
+            -
+                value: '[0 => 1, 1 => 4, 2 => 3]'
+                correct: false
+            -
+                value: 'The script won''t execute'
+                correct: false
+            -
+                value: '[0 => 0, 1 => [0 => 1, 1 => 2, 2 => 3], 2 => 4]'
+                correct: false
+    -
+        question: |
             What is the output of the following script?
-
+            
             <?php
-
+            
             echo '10', 10;
+            
         answers:
-            - {value: "1010", correct: true }
-            - {value: "An error", correct: false }
-            - {value: "10", correct: false }
-
-    -   question: |
+            -
+                value: '1010'
+                correct: true
+            -
+                value: 'An error'
+                correct: false
+            -
+                value: '10'
+                correct: false
+    -
+        question: |
             What is the output of the following script?
-
+            
             <?php
-
+            
             $val = 1;
-
+            
             switch ($val) {
                 case 1:
                     echo 'Hello';
                 case 2:
                     echo 'World';
             }
+            
         answers:
-            - {value: "HelloWorld", correct: true }
-            - {value: "Hello", correct: false }
-            - {value: "An error", correct: false }
-
-
-    -   question: |
+            -
+                value: HelloWorld
+                correct: true
+            -
+                value: Hello
+                correct: false
+            -
+                value: 'An error'
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             <?php
-
+            
             $a = ['foo', 'bar' => 'baz', ['foobar', 'baz']];
-
+            
             echo count($a, true);
+            
         answers:
-            - {value: "'4'", correct: false }
-            - {value: "'5'", correct: true }
-            - {value: "An error", correct: false }
-            - {value: "'2'", correct: false }
-            - {value: "'3'", correct: false }
-
-    -   question: |
+            -
+                value: '''4'''
+                correct: false
+            -
+                value: '''5'''
+                correct: true
+            -
+                value: 'An error'
+                correct: false
+            -
+                value: '''2'''
+                correct: false
+            -
+                value: '''3'''
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             $name = 'Jean Luc';
             $age  = 9;
-
+            
             printf("My name is %2$.4s and I'm %1$02d", $age, $name);
+            
         answers:
-            - {value: "My name is Jean and I'm 09", correct: true }
-            - {value: "My name is Jean Luc and I'm 9", correct: false }
-            - {value: "My name is 9 and I'm Jean Luc", correct: false }
-            - {value: "My name is $Jean Luc and I'm $9", correct: false }
-            - {value: "My name is Jean 9 and I'm Luc", correct: false }
-
-    -   question: |
+            -
+                value: 'My name is Jean and I''m 09'
+                correct: true
+            -
+                value: 'My name is Jean Luc and I''m 9'
+                correct: false
+            -
+                value: 'My name is 9 and I''m Jean Luc'
+                correct: false
+            -
+                value: 'My name is $Jean Luc and I''m $9'
+                correct: false
+            -
+                value: 'My name is Jean 9 and I''m Luc'
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             $name = 'Jean Luc';
             $age  = 9;
-
+            
             printf("My name is %2$.1s and I'm %1$04d", $age, $name);
+            
         answers:
-            - {value: "My name is J and I'm 0009", correct: true }
-            - {value: "My name is Jean Luc and I'm 9", correct: false }
-            - {value: "My name is 9 and I'm Jean Luc", correct: false }
-            - {value: "My name is $Jean Luc and I'm $9", correct: false }
-            - {value: "My name is Jean 9 and I'm Luc", correct: false }
-
-    -   question: |
+            -
+                value: 'My name is J and I''m 0009'
+                correct: true
+            -
+                value: 'My name is Jean Luc and I''m 9'
+                correct: false
+            -
+                value: 'My name is 9 and I''m Jean Luc'
+                correct: false
+            -
+                value: 'My name is $Jean Luc and I''m $9'
+                correct: false
+            -
+                value: 'My name is Jean 9 and I''m Luc'
+                correct: false
+    -
+        question: |
             What is the result of the following script?
-
+            
             class MyClass
             {
-
+            
                 function myMethod()
                 {
                     return function () {
@@ -787,108 +1250,213 @@ questions:
                     };
                 }
             }
-
+            
             class AnotherClass
             {
-
+            
                 function myMethod()
                 {
                     (new MyClass)->myMethod()();
                 }
             }
-
+            
             (new AnotherClass)->myMethod();
+            
         answers:
-            - {value: "string(MyClass)", correct: true }
-            - {value: "string(AnotherClass)", correct: false }
-            - {value: "An error", correct: false }
-
-
-    -   question: |
+            -
+                value: string(MyClass)
+                correct: true
+            -
+                value: string(AnotherClass)
+                correct: false
+            -
+                value: 'An error'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             <ul>
             <?php foreach ($letters as $letter) : ?>
                 <li><?= $letter ?></li>
             <?php endforeach ?>
             </ul>
-
+            
             Which of the following $letters variable declarations will make this script generate an HTML list of the 26 alphabet letters on any PHP versions?
+            
         answers:
-            - {value: "$letters = range('A', 'Z');", correct: true }
-            - {value: "$letters = str_split('ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: true }
-            - {value: "$letters = explode('', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: false }
-            - {value: "$letters = split('//', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');", correct: false }
-            - {value: "$letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';", correct: false }
-
-    -   question: |
+            -
+                value: '$letters = range(''A'', ''Z'');'
+                correct: true
+            -
+                value: '$letters = str_split(''ABCDEFGHIJKLMNOPQRSTUVWXYZ'');'
+                correct: true
+            -
+                value: '$letters = explode('''', ''ABCDEFGHIJKLMNOPQRSTUVWXYZ'');'
+                correct: false
+            -
+                value: '$letters = split(''//'', ''ABCDEFGHIJKLMNOPQRSTUVWXYZ'');'
+                correct: false
+            -
+                value: '$letters = ''ABCDEFGHIJKLMNOPQRSTUVWXYZ'';'
+                correct: false
+    -
+        question: |
             What is the $result of the following:
-
+            
             array_map('var_dump', str_split('AAABBBCCC', 2));
+            
         answers:
-            - {value: "AA AB BB CC C", correct: true }
-            - {value: "AAABBBCCC", correct: false }
-            - {value: "AAA BBB CCC", correct: false }
-            - {value: "A A A B B B C C C", correct: false }
-
-    -   question: |
+            -
+                value: 'AA AB BB CC C'
+                correct: true
+            -
+                value: AAABBBCCC
+                correct: false
+            -
+                value: 'AAA BBB CCC'
+                correct: false
+            -
+                value: 'A A A B B B C C C'
+                correct: false
+    -
+        question: |
             Which of the following is not a predefined PHP variable?
+            
         answers:
-            - {value: "$php_errormsg", correct: false }
-            - {value: "$http_response_header", correct: false }
-            - {value: "$_POST", correct: false }
-            - {value: "$_GLOBALS", correct: true }
-            - {value: "$argc", correct: false }
-
-    -   question: |
+            -
+                value: $php_errormsg
+                correct: false
+            -
+                value: $http_response_header
+                correct: false
+            -
+                value: $_POST
+                correct: false
+            -
+                value: $_GLOBALS
+                correct: true
+            -
+                value: $argc
+                correct: false
+    -
+        question: |
             What is the purpose of $php_errormsg?
+            
         answers:
-            - {value: "It contains the previous error message", correct: true }
-            - {value: "It contains an object of the last error", correct: false }
-            - {value: "It has no special meaning it's just a variable", correct: false }
-
-    -   question: |
+            -
+                value: 'It contains the previous error message'
+                correct: true
+            -
+                value: 'It contains an object of the last error'
+                correct: false
+            -
+                value: 'It has no special meaning it''s just a variable'
+                correct: false
+    -
+        question: |
             What is the purpose of $argc?
+            
         answers:
-            - {value: "It contains the number of arguments passed to the script", correct: true }
-            - {value: "It contains a list of arguments passed to the script", correct: false }
-
-    -   question: |
+            -
+                value: 'It contains the number of arguments passed to the script'
+                correct: true
+            -
+                value: 'It contains a list of arguments passed to the script'
+                correct: false
+    -
+        question: |
             Which of the following are predefined PHP variables?
+            
         answers:
-            - {value: "$GLOBALS", correct: true }
-            - {value: "$_GLOBALS", correct: false }
-            - {value: "$_SERVER", correct: true }
-            - {value: "$SERVER", correct: false }
-            - {value: "$_GET", correct: true }
-            - {value: "$GET", correct: false }
-            - {value: "$_POST", correct: true }
-            - {value: "$POST", correct: false }
-            - {value: "$_FILES", correct: true }
-            - {value: "$FILES", correct: false }
-            - {value: "$_REQUEST", correct: true }
-            - {value: "$REQUEST", correct: false }
-            - {value: "$_SESSION", correct: true }
-            - {value: "$SESSION", correct: false }
-            - {value: "$_ENV", correct: true }
-            - {value: "$ENV", correct: false }
-            - {value: "$_COOKIE", correct: true }
-            - {value: "$COOKIE", correct: false }
-            - {value: "$php_errormsg", correct: true }
-            - {value: "$_errormsg", correct: false }
-            - {value: "$HTTP_RAW_POST_DATA", correct: true }
-            - {value: "$PHP_HTTP_RAW_POST_DATA", correct: false }
-            - {value: "$http_response_header", correct: true }
-            - {value: "$HTTP_RESPONSE_HEADER", correct: false }
-            - {value: "$argc", correct: true }
-            - {value: "$php_argc", correct: false }
-            - {value: "$argv", correct: true }
-            - {value: "$php_argv", correct: false }
-
-
-    -   question: |
+            -
+                value: $GLOBALS
+                correct: true
+            -
+                value: $_GLOBALS
+                correct: false
+            -
+                value: $_SERVER
+                correct: true
+            -
+                value: $SERVER
+                correct: false
+            -
+                value: $_GET
+                correct: true
+            -
+                value: $GET
+                correct: false
+            -
+                value: $_POST
+                correct: true
+            -
+                value: $POST
+                correct: false
+            -
+                value: $_FILES
+                correct: true
+            -
+                value: $FILES
+                correct: false
+            -
+                value: $_REQUEST
+                correct: true
+            -
+                value: $REQUEST
+                correct: false
+            -
+                value: $_SESSION
+                correct: true
+            -
+                value: $SESSION
+                correct: false
+            -
+                value: $_ENV
+                correct: true
+            -
+                value: $ENV
+                correct: false
+            -
+                value: $_COOKIE
+                correct: true
+            -
+                value: $COOKIE
+                correct: false
+            -
+                value: $php_errormsg
+                correct: true
+            -
+                value: $_errormsg
+                correct: false
+            -
+                value: $HTTP_RAW_POST_DATA
+                correct: true
+            -
+                value: $PHP_HTTP_RAW_POST_DATA
+                correct: false
+            -
+                value: $http_response_header
+                correct: true
+            -
+                value: $HTTP_RESPONSE_HEADER
+                correct: false
+            -
+                value: $argc
+                correct: true
+            -
+                value: $php_argc
+                correct: false
+            -
+                value: $argv
+                correct: true
+            -
+                value: $php_argv
+                correct: false
+    -
+        question: |
             What is the expected output when executing this script?
-
+            
             $iterator = new LimitIterator(
                 new InfiniteIterator(
                     new ArrayIterator(range('a', 'z'))
@@ -896,98 +1464,178 @@ questions:
                 10,
                 2
             );
-
+            
             print_r(iterator_to_array($iterator));
+            
         answers:
-            - {value: "['k', 'l']", correct: true }
-            - {value: "['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']", correct: false }
-            - {value: "['a', 'b']", correct: false }
-
-    -   question: |
+            -
+                value: '[''k'', ''l'']'
+                correct: true
+            -
+                value: '[''a'', ''b'', ''c'', ''d'', ''e'', ''f'', ''g'', ''h'', ''i'', ''j'']'
+                correct: false
+            -
+                value: '[''a'', ''b'']'
+                correct: false
+    -
+        question: |
             How can you make it harder for JavaScript code to read out session IDs ?
+            
         answers:
-            - {value: "Use session_set_cookie_param() function", correct: false }
-            - {value: "Use session.use_only_cookies php.ini setting", correct: true }
-            - {value: "Use session_regenerate_id() function", correct: false }
-            - {value: "Use session.cookie_httponly php.ini setting", correct: true }
-
-    -   question: |
+            -
+                value: 'Use session_set_cookie_param() function'
+                correct: false
+            -
+                value: 'Use session.use_only_cookies php.ini setting'
+                correct: true
+            -
+                value: 'Use session_regenerate_id() function'
+                correct: false
+            -
+                value: 'Use session.cookie_httponly php.ini setting'
+                correct: true
+    -
+        question: |
             What is the purpose of the InfiniteIterator?
+            
         answers:
-            - {value: "Allows infinite iteration over an array", correct: true }
-            - {value: "Allows the user to add as many items as they like", correct: false }
-            - {value: "Allows for rewinding at any point during the iteration", correct: false }
-
-    -   question: |
+            -
+                value: 'Allows infinite iteration over an array'
+                correct: true
+            -
+                value: 'Allows the user to add as many items as they like'
+                correct: false
+            -
+                value: 'Allows for rewinding at any point during the iteration'
+                correct: false
+    -
+        question: |
             Which PHP superglobal variable contains the command line arguments when the script runs in CLI mode?
+            
         answers:
-            - {value: "$_SERVER", correct: true }
-            - {value: "$GLOBALS", correct: false }
-            - {value: "$_CLI", correct: false }
-            - {value: "$_POST", correct: false }
-            - {value: "PHP cannot run from the command line interface.", correct: false }
-            - {value: "$_ENV", correct: false }
-
-    -   question: |
+            -
+                value: $_SERVER
+                correct: true
+            -
+                value: $GLOBALS
+                correct: false
+            -
+                value: $_CLI
+                correct: false
+            -
+                value: $_POST
+                correct: false
+            -
+                value: 'PHP cannot run from the command line interface.'
+                correct: false
+            -
+                value: $_ENV
+                correct: false
+    -
+        question: |
             Which PHP superglobal variable contains the command line arguments when the script runs in CLI mode?
+            
         answers:
-            - {value: "$_SERVER", correct: true }
-            - {value: "$GLOBALS", correct: false }
-            - {value: "$_CLI", correct: false }
-            - {value: "$_POST", correct: false }
-            - {value: "PHP cannot run from the command line interface.", correct: false }
-            - {value: "$_ENV", correct: false }
-
-    -   question: |
+            -
+                value: $_SERVER
+                correct: true
+            -
+                value: $GLOBALS
+                correct: false
+            -
+                value: $_CLI
+                correct: false
+            -
+                value: $_POST
+                correct: false
+            -
+                value: 'PHP cannot run from the command line interface.'
+                correct: false
+            -
+                value: $_ENV
+                correct: false
+    -
+        question: |
             In which version of PHP were late static binding added?
+            
         answers:
-            - {value: "5.3", correct: true }
-            - {value: "5.2", correct: false }
-            - {value: "5.4", correct: false }
-            - {value: "5.5", correct: false }
-            - {value: "5.6", correct: false }
-            - {value: "7.0", correct: false }
-
-    -   question: |
+            -
+                value: '5.3'
+                correct: true
+            -
+                value: '5.2'
+                correct: false
+            -
+                value: '5.4'
+                correct: false
+            -
+                value: '5.5'
+                correct: false
+            -
+                value: '5.6'
+                correct: false
+            -
+                value: '7.0'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             function func1() {
                 goto label1;
                 echo 'World';
             }
-
+            
             function func2() {
                 label1:
                 echo 'Hello';
             }
-
+            
             func1();
+            
         answers:
-            - {value: "A fatal error", correct: true }
-            - {value: "Hello", correct: false }
-            - {value: "World", correct: false }
-            - {value: "Hello World", correct: false }
-
-    -   question: |
+            -
+                value: 'A fatal error'
+                correct: true
+            -
+                value: Hello
+                correct: false
+            -
+                value: World
+                correct: false
+            -
+                value: 'Hello World'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             goto label1;
             echo 'World';
-
+            
             if (false) {
                 label1:
                 echo 'Hello';
                 return;
             }
+            
         answers:
-            - {value: "Hello", correct: true }
-            - {value: "World", correct: false }
-            - {value: "A fatal error", correct: false }
-            - {value: "Hello World", correct: false }
-
-    -   question: |
+            -
+                value: Hello
+                correct: true
+            -
+                value: World
+                correct: false
+            -
+                value: 'A fatal error'
+                correct: false
+            -
+                value: 'Hello World'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             for($i=0,$j=50; $i<100; $i++) {
               while($j--) {
                 if($j==17) goto end;
@@ -996,15 +1644,24 @@ questions:
             echo "i = $i";
             end:
             echo 'j hit 17';
+            
         answers:
-            - {value: "j hit 17", correct: true }
-            - {value: "i = 33", correct: false }
-            - {value: "i = 32", correct: false }
-            - {value: "It will throw a fatal error", correct: false }
-
-    -   question: |
+            -
+                value: 'j hit 17'
+                correct: true
+            -
+                value: 'i = 33'
+                correct: false
+            -
+                value: 'i = 32'
+                correct: false
+            -
+                value: 'It will throw a fatal error'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             goto loop;
             for($i=0,$j=50; $i<100; $i++) {
               while($j--) {
@@ -1012,331 +1669,527 @@ questions:
               }
             }
             echo "$i = $i";
+            
         answers:
-            - {value: "It will throw a fatal error", correct: true }
-            - {value: "i = 99", correct: false }
-            - {value: "i = 100", correct: false }
-            - {value: "i = 101", correct: false }
-    -   question: |
+            -
+                value: 'It will throw a fatal error'
+                correct: true
+            -
+                value: 'i = 99'
+                correct: false
+            -
+                value: 'i = 100'
+                correct: false
+            -
+                value: 'i = 101'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             goto next;
-
+            
             next: {
                 echo "Hello";
             }
+            
         answers:
-            - {value: "Hello", correct: true }
-            - {value: "A fatal error", correct: false }
-
-    -   question: |
+            -
+                value: Hello
+                correct: true
+            -
+                value: 'A fatal error'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             goto next;
-
+            
             next: (
                 echo "Hello";
             )
+            
         answers:
-            - {value: "A fatal error", correct: true }
-            - {value: "Hello", correct: false }
-
-    -   question: |
+            -
+                value: 'A fatal error'
+                correct: true
+            -
+                value: Hello
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             echo <<<EOD
             \\
             EOD;
+            
         answers:
-            - {value: '\', correct: true }
-            - {value: '\\', correct: false }
-            - {value: '', correct: false }
-
-    -   question: |
+            -
+                value: \
+                correct: true
+            -
+                value: \\
+                correct: false
+            -
+                value: ''
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             echo <<<'EOD'
             \\
             EOD;
+            
         answers:
-            - {value: '\\', correct: true }
-            - {value: '\', correct: false }
-            - {value: '', correct: false }
-
-    -   question: |
+            -
+                value: \\
+                correct: true
+            -
+                value: \
+                correct: false
+            -
+                value: ''
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             $var = 'var';
             echo <<<EOD
             {$var}
             EOD;
+            
         answers:
-            - {value: 'var', correct: true }
-            - {value: '{$var}', correct: false }
-            - {value: "'var'", correct: false }
-
-    -   question: |
+            -
+                value: var
+                correct: true
+            -
+                value: '{$var}'
+                correct: false
+            -
+                value: '''var'''
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             $var = 'var';
             echo <<<'EOD'
             {$var}
             EOD;
+            
         answers:
-            - {value: '{$var}', correct: true }
-            - {value: 'var', correct: false }
-            - {value: "'var'", correct: false }
-
-    -   question: |
+            -
+                value: '{$var}'
+                correct: true
+            -
+                value: var
+                correct: false
+            -
+                value: '''var'''
+                correct: false
+    -
+        question: |
             What mechinism is used to create the string Hello world?
             $var <<<'EOD'
             Hello world
             EOD;
+            
         answers:
-            - {value: 'Nowdoc', correct: true }
-            - {value: 'Heredoc', correct: false }
-
-    -   question: |
+            -
+                value: Nowdoc
+                correct: true
+            -
+                value: Heredoc
+                correct: false
+    -
+        question: |
             What mechinism is used to create the string Hello world?
             $var <<<EOD
             Hello world
             EOD;
+            
         answers:
-            - {value: 'Heredoc', correct: true }
-            - {value: 'Nowdoc', correct: false }
-
-    -   question: |
+            -
+                value: Heredoc
+                correct: true
+            -
+                value: Nowdoc
+                correct: false
+    -
+        question: |
             What mechinism is used to create the string Hello world?
             $var <<<"EOD"
             Hello world
             EOD;
+            
         answers:
-            - {value: 'Heredoc', correct: true }
-            - {value: 'Nowdoc', correct: false }
-    -   question: |
+            -
+                value: Heredoc
+                correct: true
+            -
+                value: Nowdoc
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             class Test {
               public static $bar = <<<EOT
             bar
               EOT;
              }
-
+            
             echo Test::$bar;
+            
         answers:
-            - {value: "A fatal error", correct: true }
-            - {value: 'bar', correct: false }
-            - {value: '\n bar', correct: false }
-
-    -   question: |
+            -
+                value: 'A fatal error'
+                correct: true
+            -
+                value: bar
+                correct: false
+            -
+                value: '\n bar'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             class Test {
               public static $bar = <<<EOT
               bar
               EOT;
              }
-
+            
             echo Test::$bar;
+            
         answers:
-            - {value: 'bar', correct: true }
-            - {value: "A fatal error", correct: false }
-            - {value: '\n bar', correct: false }
-    -   question: |
+            -
+                value: bar
+                correct: true
+            -
+                value: 'A fatal error'
+                correct: false
+            -
+                value: '\n bar'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             class Test {
               public static $bar = <<<"EOT"
               bar
               EOT;
              }
-
+            
             echo Test::$bar;
+            
         answers:
-            - {value: 'bar', correct: true }
-            - {value: "A fatal error", correct: false }
-            - {value: '\n bar', correct: false }
-    -   question: |
+            -
+                value: bar
+                correct: true
+            -
+                value: 'A fatal error'
+                correct: false
+            -
+                value: '\n bar'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             class Test {
               public static $bar = <<<EOT
                 bar
               EOT;
              }
-
+            
             echo Test::$bar;
+            
         answers:
-            - {value: '  bar', correct: true }
-            - {value: 'bar', correct: false }
-            - {value: "A fatal error", correct: false }
-            - {value: '\n bar', correct: false }
-
-    -   question: |
+            -
+                value: '  bar'
+                correct: true
+            -
+                value: bar
+                correct: false
+            -
+                value: 'A fatal error'
+                correct: false
+            -
+                value: '\n bar'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             class Test {
               public static $bar = <<<"EOT"
                 bar
               EOT;
              }
-
+            
             echo Test::$bar;
+            
         answers:
-            - {value: '  bar', correct: true }
-            - {value: 'bar', correct: false }
-            - {value: "A fatal error", correct: false }
-            - {value: '\n bar', correct: false }
-
-    -   question: |
+            -
+                value: '  bar'
+                correct: true
+            -
+                value: bar
+                correct: false
+            -
+                value: 'A fatal error'
+                correct: false
+            -
+                value: '\n bar'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             echo 2 ** 3;
+            
         answers:
-            - {value: '8', correct: true }
-            - {value: "A fatal error", correct: false }
-            - {value: '6', correct: false }
-            - {value: '5', correct: false }
-
-    -   question: |
+            -
+                value: '8'
+                correct: true
+            -
+                value: 'A fatal error'
+                correct: false
+            -
+                value: '6'
+                correct: false
+            -
+                value: '5'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             $a = gmp_init(42);
             $b = gmp_init(17);
-
+            
             echo $a + $b;
+            
         answers:
-            - {value: '59', correct: true }
-            - {value: "A fatal error", correct: false }
-            - {value: '2', correct: false }
-            - {value: '0', correct: false }
-
-    -   question: |
+            -
+                value: '59'
+                correct: true
+            -
+                value: 'A fatal error'
+                correct: false
+            -
+                value: '2'
+                correct: false
+            -
+                value: '0'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             $array = [
                 [1, 2],
             ];
-
+            
             foreach ($array as list($a, $b)) {
                 echo "A: $a; B: $b";
             }
+            
         answers:
-            - {value: 'A: 1; B: 2', correct: true }
-            - {value: "A fatal error", correct: false }
-            - {value: 'A: 2; B: 1', correct: false }
-            - {value: 'A: $a; B: $b', correct: false }
-
-    -   question: |
+            -
+                value: 'A: 1; B: 2'
+                correct: true
+            -
+                value: 'A fatal error'
+                correct: false
+            -
+                value: 'A: 2; B: 1'
+                correct: false
+            -
+                value: 'A: $a; B: $b'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             $array = [
                 [1, 2],
             ];
-
+            
             foreach ($array as $a, $b) {
                 echo "A: $a; B: $b";
             }
+            
         answers:
-            - {value: "A fatal error", correct: true }
-            - {value: 'A: 1; B: 2', correct: false }
-            - {value: 'A: 2; B: 1', correct: false }
-            - {value: 'A: $a; B: $b', correct: false }
-
-    -   question: |
+            -
+                value: 'A fatal error'
+                correct: true
+            -
+                value: 'A: 1; B: 2'
+                correct: false
+            -
+                value: 'A: 2; B: 1'
+                correct: false
+            -
+                value: 'A: $a; B: $b'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             $array = [
                 [1, 2],
             ];
-
+            
             foreach ($array as [$a, $b]) {
                 echo "A: $a; B: $b";
             }
+            
         answers:
-            - {value: 'A: 1; B: 2', correct: true }
-            - {value: "A fatal error", correct: false }
-            - {value: 'A: 2; B: 1', correct: false }
-            - {value: 'A: $a; B: $b', correct: false }
-
-    -   question: |
+            -
+                value: 'A: 1; B: 2'
+                correct: true
+            -
+                value: 'A fatal error'
+                correct: false
+            -
+                value: 'A: 2; B: 1'
+                correct: false
+            -
+                value: 'A: $a; B: $b'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             $class1 = new stdClass();
             $class1->a = new class {
-
+            
                 private $b = 'Hello';
-
+            
                 public function __toString()
                 {
                     return 'World';
                 }
             };
-
+            
             $iterator = new RecursiveArrayIterator(
                 [
                     $class1
                 ]
             );
             echo $iterator->getChildren()->current();
+            
         answers:
-            - {value: 'World', correct: true }
-            - {value: "Hello", correct: false }
-            - {value: 'Fatal error', correct: false }
-
-    -   question: |
+            -
+                value: World
+                correct: true
+            -
+                value: Hello
+                correct: false
+            -
+                value: 'Fatal error'
+                correct: false
+    -
+        question: |
             What is the result of running the following code?
-
+            
             echo print('test');
+            
         answers:
-            - {value: 'test1', correct: true }
-            - {value: "test4", correct: false }
-            - {value: 'test0', correct: false }
-            - {value: 'test', correct: false }
-
-    -   question: |
+            -
+                value: test1
+                correct: true
+            -
+                value: test4
+                correct: false
+            -
+                value: test0
+                correct: false
+            -
+                value: test
+                correct: false
+    -
+        question: |
             What is the output of the following code?
-
+            
             <?php
             $myArray = [];
-
+            
             array_unshift($myArray, 10, 20);
-
+            
             echo $myArray[0];
+            
         answers:
-            - {value: '10', correct: true }
-            - {value: "200", correct: false }
-            - {value: '20', correct: false }
-            - {value: '30', correct: false }
-            - {value: 'An error', correct: false }
-
-
-    -   question: |
+            -
+                value: '10'
+                correct: true
+            -
+                value: '200'
+                correct: false
+            -
+                value: '20'
+                correct: false
+            -
+                value: '30'
+                correct: false
+            -
+                value: 'An error'
+                correct: false
+    -
+        question: |
             Which of the following is not a built-in function anymore as of PHP 7.0?
+            
         answers:
-            - {value: 'mysql_connect()', correct: true }
-            - {value: "metaphone()", correct: false }
-            - {value: 'date()', correct: false }
-            - {value: 'in_array()', correct: false }
-
-    -   question: |
-          What should replace the /* ... */ to create a Zlib-compressed file foo.gz with a compression level of 9 ?
-
-          $file = /* ... */;
-
-          $f = fopen($file, 'wb9');
-          fwrite($f, $data);
-          fclose($f);
+            -
+                value: mysql_connect()
+                correct: true
+            -
+                value: metaphone()
+                correct: false
+            -
+                value: date()
+                correct: false
+            -
+                value: in_array()
+                correct: false
+    -
+        question: |
+            What should replace the /* ... */ to create a Zlib-compressed file foo.gz with a compression level of 9 ?
+            
+            $file = /* ... */;
+            
+            $f = fopen($file, 'wb9');
+            fwrite($f, $data);
+            fclose($f);
+            
         answers:
-          - {value: 'compress.zlib://foo.gz', correct: true }
-          - {value: 'compress.zip://foo.gz?level=9', correct: false }
-          - {value: 'compress.gzip://foo.gz?level=9', correct: false }
-          - {value: 'zlib://foo.gz', correct: false }
-          - {value: 'gzip://foo.gz?level=9', correct: false }
-
-    -   question: |
+            -
+                value: 'compress.zlib://foo.gz'
+                correct: true
+            -
+                value: 'compress.zip://foo.gz?level=9'
+                correct: false
+            -
+                value: 'compress.gzip://foo.gz?level=9'
+                correct: false
+            -
+                value: 'zlib://foo.gz'
+                correct: false
+            -
+                value: 'gzip://foo.gz?level=9'
+                correct: false
+    -
+        question: |
             In the following code, what are the values required in $a, $b, $c and $d to output 40?
-
+            
             <?php
             $values = [
                 [
@@ -1351,17 +2204,26 @@ questions:
                     ],
                 ],
             ];
-
+            
             echo $values[$a][$b][$c][$d];
+            
         answers:
-            - {value: '$a = 0, $b = 3, $c = 1, $d = 0', correct: true }
-            - {value: '$a = 0, $b = 1, $c = 1, $d = 0', correct: false }
-            - {value: '$a = 0, $b = 1, $c = 0, $d = 0', correct: false }
-            - {value: '$a = 1, $b = 3, $c = 1, $d = 0', correct: false }
-
-    -   question: |
+            -
+                value: '$a = 0, $b = 3, $c = 1, $d = 0'
+                correct: true
+            -
+                value: '$a = 0, $b = 1, $c = 1, $d = 0'
+                correct: false
+            -
+                value: '$a = 0, $b = 1, $c = 0, $d = 0'
+                correct: false
+            -
+                value: '$a = 1, $b = 3, $c = 1, $d = 0'
+                correct: false
+    -
+        question: |
             What is the ouput of the following?
-
+            
             <?php
             $myArray = [
                 0,
@@ -1370,235 +2232,380 @@ questions:
                 '0',
                 -1
             ];
-
+            
             echo count(
                 array_filter($myArray)
             );
+            
         answers:
-            - {value: '1', correct: true }
-            - {value: '4', correct: false }
-            - {value: '3', correct: false }
-            - {value: '5', correct: false }
-            - {value: 'An error', correct: false }
-
-    -   question: |
+            -
+                value: '1'
+                correct: true
+            -
+                value: '4'
+                correct: false
+            -
+                value: '3'
+                correct: false
+            -
+                value: '5'
+                correct: false
+            -
+                value: 'An error'
+                correct: false
+    -
+        question: |
             What is the ouput of the following?
-
+            
             <?php
-
+            
             var_dump(0 == false);
+            
         answers:
-            - {value: 'bool(true)', correct: true }
-            - {value: 'bool(false)', correct: false }
-
-    -   question: |
+            -
+                value: bool(true)
+                correct: true
+            -
+                value: bool(false)
+                correct: false
+    -
+        question: |
             What is the ouput of the following?
-
+            
             <?php
-
+            
             var_dump(NULL == false);
+            
         answers:
-            - {value: 'bool(true)', correct: true }
-            - {value: 'bool(false)', correct: false }
-
-    -   question: |
+            -
+                value: bool(true)
+                correct: true
+            -
+                value: bool(false)
+                correct: false
+    -
+        question: |
             What is the ouput of the following?
-
+            
             <?php
-
+            
             var_dump('' == false);
+            
         answers:
-            - {value: 'bool(true)', correct: true }
-            - {value: 'bool(false)', correct: false }
-
-    -   question: |
+            -
+                value: bool(true)
+                correct: true
+            -
+                value: bool(false)
+                correct: false
+    -
+        question: |
             What is the ouput of the following?
-
+            
             <?php
-
+            
             var_dump('0' == false);
+            
         answers:
-            - {value: 'bool(true)', correct: true }
-            - {value: 'bool(false)', correct: false }
-
-
-    -   question: |
+            -
+                value: bool(true)
+                correct: true
+            -
+                value: bool(false)
+                correct: false
+    -
+        question: |
             What is the ouput of the following?
-
+            
             <?php
-
+            
             var_dump('' === false);
+            
         answers:
-            - {value: 'bool(false)', correct: true }
-            - {value: 'bool(true)', correct: false }
-
-    -   question: |
+            -
+                value: bool(false)
+                correct: true
+            -
+                value: bool(true)
+                correct: false
+    -
+        question: |
             What is the ouput of the following?
-
+            
             <?php
-
+            
             var_dump('0' === false);
+            
         answers:
-            - {value: 'bool(false)', correct: true }
-            - {value: 'bool(true)', correct: false }
-
-    -   question: |
+            -
+                value: bool(false)
+                correct: true
+            -
+                value: bool(true)
+                correct: false
+    -
+        question: |
             What is the ouput of the following?
-
+            
             <?php
-
+            
             var_dump(-1 == false);
+            
         answers:
-            - {value: 'bool(true)', correct: false }
-            - {value: 'bool(false)', correct: true }
-
-
-    -   question: |
+            -
+                value: bool(true)
+                correct: false
+            -
+                value: bool(false)
+                correct: true
+    -
+        question: |
             What is the ouput of the following?
-
+            
             <?php
-
+            
             var_dump(-1 === false);
+            
         answers:
-            - {value: 'bool(true)', correct: false }
-            - {value: 'bool(false)', correct: true }
-
-    -   question: |
+            -
+                value: bool(true)
+                correct: false
+            -
+                value: bool(false)
+                correct: true
+    -
+        question: |
             What is the ouput of the following?
-
+            
             <?php
             function fsplit()
             {
                 $spl = 1;
             ?>
-
+            
             <?php
                echo $spl;
             }
-
+            
             fsplit();
+            
         answers:
-            - {value: '1', correct: true }
-            - {value: 'Error, function declarations can not be split over multiple PHP segments', correct: false }
-            - {value: 'Noting', correct: false }
-
-    -   question: |
+            -
+                value: '1'
+                correct: true
+            -
+                value: 'Error, function declarations can not be split over multiple PHP segments'
+                correct: false
+            -
+                value: Noting
+                correct: false
+    -
+        question: |
             Which of the following statements allows to retrieve the value of the User-Agent HTTP request header field?
+            
         answers:
-            - {value: "$HTTP_HEADERS_VARS['USER_AGENT'];", correct: true }
-            - {value: "http_get_request_header('User-Agent');", correct: false }
-            - {value: "It is not possible to read an HTTP request header field value with PHP.", correct: false }
-            - {value: "$_SERVER['HTTP_USER_AGENT'];", correct: false }
-
-    -   question: |
+            -
+                value: '$HTTP_HEADERS_VARS[''USER_AGENT''];'
+                correct: true
+            -
+                value: 'http_get_request_header(''User-Agent'');'
+                correct: false
+            -
+                value: 'It is not possible to read an HTTP request header field value with PHP.'
+                correct: false
+            -
+                value: '$_SERVER[''HTTP_USER_AGENT''];'
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
             $a = (object) ["a" => "b"];
             $b = (object) ["a" => "c"];
-
+            
             echo $a <=> $b;
+            
         answers:
-            - {value: "-1", correct: true }
-            - {value: "0", correct: false }
-            - {value: "1", correct: false }
-
-    -   question: |
+            -
+                value: '-1'
+                correct: true
+            -
+                value: '0'
+                correct: false
+            -
+                value: '1'
+                correct: false
+    -
+        question: |
             What is the value of $value?
-
+            
             $value = 'a' > 'b';
+            
         answers:
-            - {value: "false", correct: true }
-            - {value: "true", correct: false }
-
-    -   question: |
+            -
+                value: 'false'
+                correct: true
+            -
+                value: 'true'
+                correct: false
+    -
+        question: |
             What is the value of $value?
-
+            
             $value = 'A' > 'b';
+            
         answers:
-            - {value: "false", correct: true }
-            - {value: "true", correct: false }
-
-    -   question: |
+            -
+                value: 'false'
+                correct: true
+            -
+                value: 'true'
+                correct: false
+    -
+        question: |
             What is the value of $value?
-
+            
             $value = 'B' > 'a';
+            
         answers:
-            - {value: "false", correct: true }
-            - {value: "true", correct: false }
-
-    -   question: |
+            -
+                value: 'false'
+                correct: true
+            -
+                value: 'true'
+                correct: false
+    -
+        question: |
             What is the value of $value?
-
+            
             $value = 'b' > 'a';
+            
         answers:
-            - {value: "true", correct: true }
-            - {value: "false", correct: false }
-
-    -   question: |
+            -
+                value: 'true'
+                correct: true
+            -
+                value: 'false'
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             echo (true ? 'Foo' : false ? 'Bar' : 'Baz');
+            
         answers:
-            - {value: "Bar", correct: true }
-            - {value: "Baz", correct: false }
-            - {value: "Parse error: syntax error, unexpected ':'", correct: false }
-            - {value: "Foo", correct: false }
-
-    -   question: |
+            -
+                value: Bar
+                correct: true
+            -
+                value: Baz
+                correct: false
+            -
+                value: 'Parse error: syntax error, unexpected '':'''
+                correct: false
+            -
+                value: Foo
+                correct: false
+    -
+        question: |
             What PHP function is used to create a new array pre-filled with a sequential series of values?
+            
         answers:
-            - {value: "range", correct: true }
-            - {value: "array_construct", correct: false }
-            - {value: "array_combine", correct: false }
-            - {value: "array_fill", correct: false }
-
-    -   question: |
+            -
+                value: range
+                correct: true
+            -
+                value: array_construct
+                correct: false
+            -
+                value: array_combine
+                correct: false
+            -
+                value: array_fill
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             var_dump(array_change_key_case(['hello' => '1'])['HELLO'] ?? null);
+            
         answers:
-            - {value: "NULL", correct: true }
-            - {value: "int(1)", correct: false }
-            - {value: "false", correct: false }
-
-    -   question: |
+            -
+                value: 'NULL'
+                correct: true
+            -
+                value: int(1)
+                correct: false
+            -
+                value: 'false'
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             var_dump(array_change_key_case(['hello' => '1'], 1)['HELLO'] ?? null);
+            
         answers:
-            - {value: "int(1)", correct: true }
-            - {value: "NULL", correct: false }
-            - {value: "false", correct: false }
-
-    -   question: |
+            -
+                value: int(1)
+                correct: true
+            -
+                value: 'NULL'
+                correct: false
+            -
+                value: 'false'
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             var_dump(array_change_key_case(['hello' => '1'], 1)['HELLO'] ?? null);
+            
         answers:
-            - {value: "int(1)", correct: true }
-            - {value: "NULL", correct: false }
-            - {value: "false", correct: false }
-
-    -   question: |
+            -
+                value: int(1)
+                correct: true
+            -
+                value: 'NULL'
+                correct: false
+            -
+                value: 'false'
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             var_dump(array_change_key_case(['hello' => '1'], CASE_UPPER)['HELLO'] ?? null);
+            
         answers:
-            - {value: "int(1)", correct: true }
-            - {value: "NULL", correct: false }
-            - {value: "false", correct: false }
-
-    -   question: |
+            -
+                value: int(1)
+                correct: true
+            -
+                value: 'NULL'
+                correct: false
+            -
+                value: 'false'
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             var_dump(array_change_key_case(['hello' => '1'], CASE_LOWER)['HELLO'] ?? null);
+            
         answers:
-            - {value: "NULL", correct: true }
-            - {value: "int(1)", correct: false }
-            - {value: "false", correct: false }
-
-    -   question: |
+            -
+                value: 'NULL'
+                correct: true
+            -
+                value: int(1)
+                correct: false
+            -
+                value: 'false'
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             var_dump(
                 array_chunk(
                     [
@@ -1609,27 +2616,32 @@ questions:
                     2
                 )[0]
             );
+            
         answers:
-            - value: |
-                  array(2) {
-                    [0]=>
-                    string(6) "hello1"
-                    [1]=>
-                    string(6) "hello2"
-                  }
-              correct: true
-            - value: |
-                  array(2) {
-                    ["hello1"]=>
-                    string(6) "hello1"
-                    ["hello2"]=>
-                    string(6) "hello2"
-                  }
-              correct: false
-
-    -   question: |
+            -
+                value: |
+                    array(2) {
+                      [0]=>
+                      string(6) "hello1"
+                      [1]=>
+                      string(6) "hello2"
+                    }
+                    
+                correct: true
+            -
+                value: |
+                    array(2) {
+                      ["hello1"]=>
+                      string(6) "hello1"
+                      ["hello2"]=>
+                      string(6) "hello2"
+                    }
+                    
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             var_dump(
                 array_chunk(
                     [
@@ -1641,27 +2653,32 @@ questions:
                     true
                 )[0]
             );
+            
         answers:
-            - value: |
-                  array(2) {
-                    ["hello1"]=>
-                    string(6) "hello1"
-                    ["hello2"]=>
-                    string(6) "hello2"
-                  }
-              correct: true
-            - value: |
-                  array(2) {
-                    [0]=>
-                    string(6) "hello1"
-                    [1]=>
-                    string(6) "hello2"
-                  }
-              correct: false
-
-    -   question: |
+            -
+                value: |
+                    array(2) {
+                      ["hello1"]=>
+                      string(6) "hello1"
+                      ["hello2"]=>
+                      string(6) "hello2"
+                    }
+                    
+                correct: true
+            -
+                value: |
+                    array(2) {
+                      [0]=>
+                      string(6) "hello1"
+                      [1]=>
+                      string(6) "hello2"
+                    }
+                    
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             var_dump(
                 array_count_values(
                     [
@@ -1671,38 +2688,73 @@ questions:
                     ]
                 )['value1'] ?? null
             );
+            
         answers:
-            - {value: "int(2)", correct: true }
-            - {value: "NULL", correct: false }
-            - {value: "int(1)", correct: false }
-            - {value: "false", correct: false }
-
-    -   question: |
+            -
+                value: int(2)
+                correct: true
+            -
+                value: 'NULL'
+                correct: false
+            -
+                value: int(1)
+                correct: false
+            -
+                value: 'false'
+                correct: false
+    -
+        question: |
             What the purpose of array_diff_assoc()?
+            
         answers:
-            - {value: "Computes the difference of arrays with additional index check", correct: true }
-            - {value: "Computes the difference of arrays", correct: false }
-            - {value: "Computes the differences between arrays' indexes", correct: false }
-    -   question: |
+            -
+                value: 'Computes the difference of arrays with additional index check'
+                correct: true
+            -
+                value: 'Computes the difference of arrays'
+                correct: false
+            -
+                value: 'Computes the differences between arrays'' indexes'
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             var_dump(array_fill_keys([0, 1, 2], 'value')[2] ?? null);
+            
         answers:
-            - {value: 'string(5) "value"', correct: true }
-            - {value: "NULL", correct: false }
-            - {value: "'2'", correct: false }
-    -   question: |
+            -
+                value: 'string(5) "value"'
+                correct: true
+            -
+                value: 'NULL'
+                correct: false
+            -
+                value: '''2'''
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             var_dump(array_key_first(array_fill_keys([5, 1, 0, 2, 4], 'value')));
+            
         answers:
-            - {value: 'int(5)', correct: true }
-            - {value: "int(0)", correct: false }
-            - {value: 'string(5) "value"', correct: false }
-            - {value: 'NULL', correct: false }
-    -   question: |
+            -
+                value: int(5)
+                correct: true
+            -
+                value: int(0)
+                correct: false
+            -
+                value: 'string(5) "value"'
+                correct: false
+            -
+                value: 'NULL'
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             var_dump(
                 array_merge_recursive(
                     [
@@ -1713,13 +2765,21 @@ questions:
                     ]
                 )['a'][0] ?? null
             );
+            
         answers:
-            - {value: 'string(1) "b"', correct: true }
-            - {value: 'string(1) "c"', correct: false }
-            - {value: 'NULL', correct: false }
-    -   question: |
+            -
+                value: 'string(1) "b"'
+                correct: true
+            -
+                value: 'string(1) "c"'
+                correct: false
+            -
+                value: 'NULL'
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             var_dump(
                 array_merge_recursive(
                     [
@@ -1730,294 +2790,555 @@ questions:
                     ],
                 )['a'][0] ?? null
             );
+            
         answers:
-            - {value: 'string(1) "c"', correct: true }
-            - {value: 'string(1) "b"', correct: false }
-            - {value: 'NULL', correct: false }
-    -   question: |
+            -
+                value: 'string(1) "c"'
+                correct: true
+            -
+                value: 'string(1) "b"'
+                correct: false
+            -
+                value: 'NULL'
+                correct: false
+    -
+        question: |
             What will be the output of the following script?
-
+            
             echo strcmp(123, '123');
+            
         answers:
-            - {value: '"1"', correct: true }
-            - {value: '"0"', correct: false }
-            - {value: '-1', correct: false }
-            - {value: 'An error', correct: false }
-
-    -   question: |
+            -
+                value: '"1"'
+                correct: true
+            -
+                value: '"0"'
+                correct: false
+            -
+                value: '-1'
+                correct: false
+            -
+                value: 'An error'
+                correct: false
+    -
+        question: |
             Which of the following are not true about streams ?
+            
         answers:
-            - { value: 'When used properly, they significantly reduce memory consumption.', correct: true }
-            - { value: 'They are always bi-directional.', correct: true }
-            - { value: 'They can be applied to any data source.', correct: true }
-            - { value: 'They can be filtered.', correct: false }
-            - { value: 'They are always seekable.', correct: false }
-
-    -   question: |
+            -
+                value: 'When used properly, they significantly reduce memory consumption.'
+                correct: true
+            -
+                value: 'They are always bi-directional.'
+                correct: true
+            -
+                value: 'They can be applied to any data source.'
+                correct: true
+            -
+                value: 'They can be filtered.'
+                correct: false
+            -
+                value: 'They are always seekable.'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             $a = 4;
-
+            
             echo $a+++$a++;
-
+            
             What is the expected output when running this script?
+            
         answers:
-            - { value: '9', correct: true }
-            - { value: "It's a syntax error.", correct: false }
-            - { value: '8', correct: false }
-            - { value: '10', correct: false }
-
-    -   question: |
+            -
+                value: '9'
+                correct: true
+            -
+                value: 'It''s a syntax error.'
+                correct: false
+            -
+                value: '8'
+                correct: false
+            -
+                value: '10'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             $a = 4;
             echo $a++;
-
+            
             What is the expected output when running this script?
+            
         answers:
-            - { value: '"4"', correct: true }
-            - { value: "It's a syntax error.", correct: false }
-            - { value: '"5"', correct: false }
-            - { value: '"3"', correct: false }
-
-    -   question: |
+            -
+                value: '"4"'
+                correct: true
+            -
+                value: 'It''s a syntax error.'
+                correct: false
+            -
+                value: '"5"'
+                correct: false
+            -
+                value: '"3"'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             $a = 4;
             echo ++$a++;
-
+            
             What is the expected output when running this script?
+            
         answers:
-            - { value: "It's a syntax error.", correct: true }
-            - { value: '"4"', correct: false }
-            - { value: '"5"', correct: false }
-            - { value: '"3"', correct: false }
-
-    -   question: |
+            -
+                value: 'It''s a syntax error.'
+                correct: true
+            -
+                value: '"4"'
+                correct: false
+            -
+                value: '"5"'
+                correct: false
+            -
+                value: '"3"'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             $a = 4;
             echo ++$a;
-
+            
             What is the expected output when running this script?
+            
         answers:
-            - { value: '5', correct: true }
-            - { value: "It's a syntax error.", correct: false }
-            - { value: '"4"', correct: false }
-            - { value: '"3"', correct: false }
-
-    -   question: |
+            -
+                value: '5'
+                correct: true
+            -
+                value: 'It''s a syntax error.'
+                correct: false
+            -
+                value: '"4"'
+                correct: false
+            -
+                value: '"3"'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             list($a, $a) = [1, 2, 3, 4];
             echo $a;
-
+            
             What is the expected output when running this script?
+            
         answers:
-            - { value: '"1"', correct: true }
-            - { value: "It's a syntax error.", correct: false }
-            - { value: '"2"', correct: false }
-            - { value: '"3"', correct: false }
-
-    -   question: |
+            -
+                value: '"1"'
+                correct: true
+            -
+                value: 'It''s a syntax error.'
+                correct: false
+            -
+                value: '"2"'
+                correct: false
+            -
+                value: '"3"'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             $a = array('7.1');
             $exists = in_array('7.10', $a)
             var_dump($exists);
-
+            
             What is the expected output when running this script?
+            
         answers:
-            - { value: '"bool(true)"', correct: true }
-            - { value: "It's a syntax error.", correct: false }
-            - { value: '"bool(false)"', correct: false }
-            - { value: '"7.1"', correct: false }
-
-    -   question: |
+            -
+                value: '"bool(true)"'
+                correct: true
+            -
+                value: 'It''s a syntax error.'
+                correct: false
+            -
+                value: '"bool(false)"'
+                correct: false
+            -
+                value: '"7.1"'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             $a = array('7.1');
             $exists = in_array('7.10', $a)
             var_dump($exists);
-
+            
             What is the expected output when running this script?
+            
         answers:
-            - { value: '"bool(true)"', correct: true }
-            - { value: "It's a syntax error.", correct: false }
-            - { value: '"bool(false)"', correct: false }
-            - { value: '"7.1"', correct: false }
-
-    -   question: |
+            -
+                value: '"bool(true)"'
+                correct: true
+            -
+                value: 'It''s a syntax error.'
+                correct: false
+            -
+                value: '"bool(false)"'
+                correct: false
+            -
+                value: '"7.1"'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             $a = 0;
             var_dump(false == $a);
-
+            
             What is the expected output when running this script?
+            
         answers:
-            - { value: '"bool(true)"', correct: true }
-            - { value: "It's a syntax error.", correct: false }
-            - { value: '"bool(false)"', correct: false }
-            - { value: '"7.1"', correct: false }
-
-    -   question: |
+            -
+                value: '"bool(true)"'
+                correct: true
+            -
+                value: 'It''s a syntax error.'
+                correct: false
+            -
+                value: '"bool(false)"'
+                correct: false
+            -
+                value: '"7.1"'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             $a = 0;
             $b = 'x';
-
+            
             var_dump($b == $a);
-
+            
             What is the expected output when running this script?
+            
         answers:
-            - { value: '"bool(true)"', correct: true }
-            - { value: "It's a syntax error.", correct: false }
-            - { value: '"bool(false)"', correct: false }
-            - { value: '"7.1"', correct: false }
-
-    -   question: |
+            -
+                value: '"bool(true)"'
+                correct: true
+            -
+                value: 'It''s a syntax error.'
+                correct: false
+            -
+                value: '"bool(false)"'
+                correct: false
+            -
+                value: '"7.1"'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             $b = 'x';
-
+            
             var_dump($b == true);
-
+            
             What is the expected output when running this script?
+            
         answers:
-            - { value: '"bool(true)"', correct: true }
-            - { value: "It's a syntax error.", correct: false }
-            - { value: '"bool(false)"', correct: false }
-            - { value: '"7.1"', correct: false }
-
-    -   question: |
+            -
+                value: '"bool(true)"'
+                correct: true
+            -
+                value: 'It''s a syntax error.'
+                correct: false
+            -
+                value: '"bool(false)"'
+                correct: false
+            -
+                value: '"7.1"'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             var_dump('b' == 0);
-
+            
             What is the expected output when running this script?
+            
         answers:
-            - { value: '"bool(true)"', correct: true }
-            - { value: "It's a syntax error.", correct: false }
-            - { value: '"bool(false)"', correct: false }
-            - { value: '"7.1"', correct: false }
-
-    -   question: |
+            -
+                value: '"bool(true)"'
+                correct: true
+            -
+                value: 'It''s a syntax error.'
+                correct: false
+            -
+                value: '"bool(false)"'
+                correct: false
+            -
+                value: '"7.1"'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             $a = .1 * .1;
-
+            
             var_dump($a == 0.01);
-
+            
             What is the expected output when running this script?
+            
         answers:
-            - { value: '"bool(false)"', correct: true }
-            - { value: '"bool(true)"', correct: false }
-            - { value: "It's a syntax error.", correct: false }
-            - { value: '"7.1"', correct: false }
-    -   question: |
+            -
+                value: '"bool(false)"'
+                correct: true
+            -
+                value: '"bool(true)"'
+                correct: false
+            -
+                value: 'It''s a syntax error.'
+                correct: false
+            -
+                value: '"7.1"'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             $a = .1 * .1;
-
+            
             var_dump(true ? 'Foo' : false ? 'Bar' : 'Baz');
-
+            
             What is the expected output when running this script?
+            
         answers:
-            - { value: '"Bar"', correct: true }
-            - { value: '"Baz"', correct: false }
-            - { value: "It's a syntax error.", correct: false }
-            - { value: '"Foo"', correct: false }
-
-    -   question: |
+            -
+                value: '"Bar"'
+                correct: true
+            -
+                value: '"Baz"'
+                correct: false
+            -
+                value: 'It''s a syntax error.'
+                correct: false
+            -
+                value: '"Foo"'
+                correct: false
+    -
+        question: |
             Consider the following code snippet:
-
+            
             <?php
             $array = [1.1 => '1', 1.2 => '1'];
             echo count ($array);
+            
         answers:
-            - { value: "'1'", correct: true }
-            - { value: "'0'", correct: false }
-            - { value: "'2'", correct: false }
-            - { value: "'4'", correct: false }
-
-    -   question: |
+            -
+                value: '''1'''
+                correct: true
+            -
+                value: '''0'''
+                correct: false
+            -
+                value: '''2'''
+                correct: false
+            -
+                value: '''4'''
+                correct: false
+    -
+        question: |
             What type is the __debugInfo() magic method supposed to return?
+            
         answers:
-            - { value: "Array", correct: true }
-            - { value: "Boolean", correct: false }
-            - { value: "Object", correct: false }
-            - { value: "String", correct: false }
-            - { value: "Any type", correct: false }
-    -   question: |
+            -
+                value: Array
+                correct: true
+            -
+                value: Boolean
+                correct: false
+            -
+                value: Object
+                correct: false
+            -
+                value: String
+                correct: false
+            -
+                value: 'Any type'
+                correct: false
+    -
+        question: |
             What type is the __set_state() magic method supposed to return?
+            
         answers:
-            - { value: "Object", correct: true }
-            - { value: "Array", correct: false }
-            - { value: "Boolean", correct: false }
-            - { value: "String", correct: false }
-            - { value: "Any type", correct: false }
-    -   question: |
+            -
+                value: Object
+                correct: true
+            -
+                value: Array
+                correct: false
+            -
+                value: Boolean
+                correct: false
+            -
+                value: String
+                correct: false
+            -
+                value: 'Any type'
+                correct: false
+    -
+        question: |
             What type is the __serialize() magic method supposed to return?
+            
         answers:
-            - { value: "Array", correct: true }
-            - { value: "Object", correct: false }
-            - { value: "Boolean", correct: false }
-            - { value: "String", correct: false }
-            - { value: "Any type", correct: false }
-    -   question: |
+            -
+                value: Array
+                correct: true
+            -
+                value: Object
+                correct: false
+            -
+                value: Boolean
+                correct: false
+            -
+                value: String
+                correct: false
+            -
+                value: 'Any type'
+                correct: false
+    -
+        question: |
             What type is the __unserialize() magic method supposed to return?
+            
         answers:
-            - { value: "Nothing", correct: true }
-            - { value: "Array", correct: false }
-            - { value: "Object", correct: false }
-            - { value: "Boolean", correct: false }
-            - { value: "String", correct: false }
-            - { value: "Any type", correct: false }
-    -   question: |
+            -
+                value: Nothing
+                correct: true
+            -
+                value: Array
+                correct: false
+            -
+                value: Object
+                correct: false
+            -
+                value: Boolean
+                correct: false
+            -
+                value: String
+                correct: false
+            -
+                value: 'Any type'
+                correct: false
+    -
+        question: |
             What type is the __sleep() magic method supposed to return?
+            
         answers:
-            - { value: "Array containing the field names to serialize", correct: true }
-            - { value: "Array containing a representation of the object", correct: false }
-            - { value: "Nothing", correct: false }
-            - { value: "Object", correct: false }
-            - { value: "Boolean", correct: false }
-            - { value: "String", correct: false }
-            - { value: "Any type", correct: false }
-    -   question: |
+            -
+                value: 'Array containing the field names to serialize'
+                correct: true
+            -
+                value: 'Array containing a representation of the object'
+                correct: false
+            -
+                value: Nothing
+                correct: false
+            -
+                value: Object
+                correct: false
+            -
+                value: Boolean
+                correct: false
+            -
+                value: String
+                correct: false
+            -
+                value: 'Any type'
+                correct: false
+    -
+        question: |
             From what types of data sources SimpleXMLElement objects can be created?
+            
         answers:
-            - { value: "A string", correct: true }
-            - { value: "An URI", correct: true }
-            - { value: "A DomDocument object", correct: true }
-            - { value: "A Database resource", correct: false }
-            - { value: "An array", correct: false }
-    -   question: |
+            -
+                value: 'A string'
+                correct: true
+            -
+                value: 'An URI'
+                correct: true
+            -
+                value: 'A DomDocument object'
+                correct: true
+            -
+                value: 'A Database resource'
+                correct: false
+            -
+                value: 'An array'
+                correct: false
+    -
+        question: |
             What function must one use to create a SimpleXMLElement from a DomDocument?
+            
         answers:
-            - { value: "simplexml_import_dom", correct: true }
-            - { value: "simplexml_load_file", correct: false }
-            - { value: "simplexml_load_string ", correct: false }
-    -   question: |
+            -
+                value: simplexml_import_dom
+                correct: true
+            -
+                value: simplexml_load_file
+                correct: false
+            -
+                value: 'simplexml_load_string '
+                correct: false
+    -
+        question: |
             What function must one use to create a SimpleXMLElement from a DomDocument?
+            
         answers:
-            - { value: "simplexml_import_dom", correct: true }
-            - { value: "simplexml_load_file", correct: false }
-            - { value: "simplexml_load_string ", correct: false }
-    -   question: |
+            -
+                value: simplexml_import_dom
+                correct: true
+            -
+                value: simplexml_load_file
+                correct: false
+            -
+                value: 'simplexml_load_string '
+                correct: false
+    -
+        question: |
             Which of the following PHP scripts are guaranteed to always output the string Hello World! on any PHP versions?
+            
         answers:
-            - { value: "<?php echo 'Hello World'; ?>", correct: true }
-            - { value: "<? echo 'Hello World'; ?> ", correct: true }
-            - { value: "<?= 'Hello World'; ?> ", correct: false }
-            - { value: "<% echo 'Hello World'; %>", correct: false }
-            - { value: <script language="php">echo 'Hello World';</script>, correct: false }
-    -   question: |
+            -
+                value: '<?php echo ''Hello World''; ?>'
+                correct: true
+            -
+                value: '<? echo ''Hello World''; ?> '
+                correct: true
+            -
+                value: '<?= ''Hello World''; ?> '
+                correct: false
+            -
+                value: '<% echo ''Hello World''; %>'
+                correct: false
+            -
+                value: '<script language="php">echo ''Hello World'';</script>'
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
-
+            
             <?php
-
+            
             namespace Foo;
-
+            
             class Bar
             {
                 public function baz()
@@ -2025,89 +3346,171 @@ questions:
                     return __METHOD__;
                 }
             }
-
+            
             $b = new Bar;
             echo $b->baz();
+            
         answers:
-            - { value: "Foo\\Bar::baz", correct: true }
-            - { value: "Bar::baz", correct: false }
-            - { value: "An error", correct: false }
-            - { value: "baz", correct: false }
-    -   question: |
+            -
+                value: 'Foo\Bar::baz'
+                correct: true
+            -
+                value: 'Bar::baz'
+                correct: false
+            -
+                value: 'An error'
+                correct: false
+            -
+                value: baz
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
-
+            
             <?php
-
+            
             var_dump(in_array('7.1', ['7.10'], true));
+            
         answers:
-            - { value: "bool(false)", correct: true }
-            - { value: "bool(true)", correct: false }
-    -   question: |
+            -
+                value: bool(false)
+                correct: true
+            -
+                value: bool(true)
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
-
+            
             <?php
-
+            
             var_dump(in_array('7.1', ['7.10']));
+            
         answers:
-            - { value: "bool(true)", correct: true }
-            - { value: "bool(false)", correct: false }
-    -   question: |
+            -
+                value: bool(true)
+                correct: true
+            -
+                value: bool(false)
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
-
+            
             <?php
-
+            
             echo strcmp('K', 'M');
+            
         answers:
-            - { value: "'-2'", correct: true }
-            - { value: "'0'", correct: false }
-            - { value: "'1'", correct: false }
-            - { value: "'-1'", correct: false }
-    -   question: |
+            -
+                value: '''-2'''
+                correct: true
+            -
+                value: '''0'''
+                correct: false
+            -
+                value: '''1'''
+                correct: false
+            -
+                value: '''-1'''
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
-
+            
             <?php
-
+            
             echo strcmp(false, 'M');
+            
         answers:
-            - { value: "-1", correct: true }
-            - { value: "-2", correct: false }
-            - { value: "0", correct: false }
-            - { value: "1", correct: false }
-    -   question: |
+            -
+                value: '-1'
+                correct: true
+            -
+                value: '-2'
+                correct: false
+            -
+                value: '0'
+                correct: false
+            -
+                value: '1'
+                correct: false
+    -
+        question: |
             Which interface(s) should an Object implement to be usable in a foreach statement?
+            
         answers:
-            - { value: "Traversable", correct: true }
-            - { value: "Iterator", correct: true }
-            - { value: "IteratorAggregate", correct: true }
-            - { value: "ArrayAccess", correct: false }
-    -   question: |
+            -
+                value: Traversable
+                correct: true
+            -
+                value: Iterator
+                correct: true
+            -
+                value: IteratorAggregate
+                correct: true
+            -
+                value: ArrayAccess
+                correct: false
+    -
+        question: |
             Which of the following classes/interfaces can application classes extend/implement?
+            
         answers:
-            - { value: "Iterator", correct: true }
-            - { value: "IteratorAggregate", correct: true }
-            - { value: "ArrayAccess", correct: true }
-            - { value: "Serializable", correct: true }
-            - { value: "WeakReference", correct: true }
-            - { value: "Throwable", correct: false }
-            - { value: "Traversable", correct: false }
-            - { value: "Closure", correct: false }
-            - { value: "Generator", correct: false }
-    -   question: |
+            -
+                value: Iterator
+                correct: true
+            -
+                value: IteratorAggregate
+                correct: true
+            -
+                value: ArrayAccess
+                correct: true
+            -
+                value: Serializable
+                correct: true
+            -
+                value: WeakReference
+                correct: true
+            -
+                value: Throwable
+                correct: false
+            -
+                value: Traversable
+                correct: false
+            -
+                value: Closure
+                correct: false
+            -
+                value: Generator
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
-
+            
             <?php
-
+            
             $a = ['foo', 'baz', ['foobar', 'baz']];
-
+            
             echo count($a, true);
+            
         answers:
-            - { value: "5", correct: true }
-            - { value: "4", correct: false }
-            - { value: "3", correct: false }
-            - { value: "2", correct: false }
-    -   question: |
+            -
+                value: '5'
+                correct: true
+            -
+                value: '4'
+                correct: false
+            -
+                value: '3'
+                correct: false
+            -
+                value: '2'
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
-
+            
             <?php
             class MyClass
             {
@@ -2117,49 +3520,74 @@ questions:
                 protected $var4 = 'value 4';
                 private $var5 = 'value 5';
             }
-
+            
             foreach(new MyClass() as $key => $value) {
                 echo "$key => $value,";
             }
+            
         answers:
-            - { value: "var1 => value 1,var2 => value 2,var3 => value 3,", correct: true }
-            - { value: "var1 => value 1,var2 => value 2,var3 => value 3,var4 => value 4,var5 => value 5,", correct: false }
-            - { value: "var1 => value 1,var2 => value 2,var3 => value 3,var4 => value 4,", correct: false }
-            - { value: "An error", correct: false }
-
-    -   question: |
+            -
+                value: 'var1 => value 1,var2 => value 2,var3 => value 3,'
+                correct: true
+            -
+                value: 'var1 => value 1,var2 => value 2,var3 => value 3,var4 => value 4,var5 => value 5,'
+                correct: false
+            -
+                value: 'var1 => value 1,var2 => value 2,var3 => value 3,var4 => value 4,'
+                correct: false
+            -
+                value: 'An error'
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
-
+            
             <?php
             class MyClass {
                 const CONST_VALUE = 'A constant value';
             }
-
+            
             $classname = 'MyClass';
             echo $classname::CONST_VALUE;
+            
         answers:
-            - { value: "A constant value", correct: true }
-            - { value: "An error", correct: false }
-            - { value: "''", correct: false }
-    -   question: |
+            -
+                value: 'A constant value'
+                correct: true
+            -
+                value: 'An error'
+                correct: false
+            -
+                value: ''''''
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
-
+            
             <?php
             class MyClass {
                 public static function test() {
                     echo 'hello';
                 }
             }
-
+            
             $classname = 'MyClass';
             echo $classname::test();
+            
         answers:
-            - { value: "hello", correct: true }
-            - { value: "An error", correct: false }
-            - { value: "''", correct: false }
-    -   question: |
+            -
+                value: hello
+                correct: true
+            -
+                value: 'An error'
+                correct: false
+            -
+                value: ''''''
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
-
+            
             <?php
             class A {
                 public static function who() {
@@ -2169,21 +3597,29 @@ questions:
                     static::who();
                 }
             }
-
+            
             class B extends A {
                 public static function who() {
                     echo __CLASS__;
                 }
             }
-
+            
             B::test();
+            
         answers:
-            - { value: "B", correct: true }
-            - { value: "A", correct: false }
-            - { value: "An error", correct: false }
-    -   question: |
+            -
+                value: B
+                correct: true
+            -
+                value: A
+                correct: false
+            -
+                value: 'An error'
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
-
+            
             <?php
             class A {
                 public static function who() {
@@ -2193,31 +3629,39 @@ questions:
                     self::who();
                 }
             }
-
+            
             class B extends A {
                 public static function who() {
                     echo __CLASS__;
                 }
             }
-
+            
             B::test();
+            
         answers:
-            - { value: "A", correct: true }
-            - { value: "B", correct: false }
-            - { value: "An error", correct: false }
-    -   question: |
+            -
+                value: A
+                correct: true
+            -
+                value: B
+                correct: false
+            -
+                value: 'An error'
+                correct: false
+    -
+        question: |
             From which version is this code valid?
-
+            
             <?php
-
+            
             class First
             {
-
+            
                 public function accept(Second $first): void
                 {
                 }
             }
-
+            
             class Second extends First
             {
                 public function accept(First $second): void
@@ -2225,28 +3669,40 @@ questions:
                     echo 'Works';
                 }
             }
-
+            
             $object = new Second();
             $object->accept($object);
+            
         answers:
-            - { value: "7.4", correct: true }
-            - { value: "7.4", correct: false }
-            - { value: "5.6", correct: false }
-            - { value: "5.3", correct: false }
-            - { value: "It's never valid", correct: false }
-    -   question: |
+            -
+                value: '7.4'
+                correct: true
+            -
+                value: '7.4'
+                correct: false
+            -
+                value: '5.6'
+                correct: false
+            -
+                value: '5.3'
+                correct: false
+            -
+                value: 'It''s never valid'
+                correct: false
+    -
+        question: |
             From which version is this code valid?
-
+            
             <?php
-
+            
             class First
             {
                 public function accept(Second $first): First
                 {
-
+            
                 }
             }
-
+            
             class Second extends First
             {
                 public function accept(Second $second): Second
@@ -2254,30 +3710,48 @@ questions:
                     return $second;
                 }
             }
+            
         answers:
-            - { value: "7.4", correct: true }
-            - { value: "7.4", correct: false }
-            - { value: "5.6", correct: false }
-            - { value: "5.3", correct: false }
-            - { value: "It's never valid", correct: false }
-    -   question: |
+            -
+                value: '7.4'
+                correct: true
+            -
+                value: '7.4'
+                correct: false
+            -
+                value: '5.6'
+                correct: false
+            -
+                value: '5.3'
+                correct: false
+            -
+                value: 'It''s never valid'
+                correct: false
+    -
+        question: |
             What will be the output of the following code?
-
+            
             <?php
             $class = new class {
                 const CONST = '123';
             }
-
+            
             echo $class::CONST;
+            
         answers:
-            - { value: "123", correct: true }
-            - { value: "An error", correct: false }
-    -   question: |
+            -
+                value: '123'
+                correct: true
+            -
+                value: 'An error'
+                correct: false
+    -
+        question: |
             What will be the output of the following code in PHP 7.4?
-
+            
             <?php
             $class = new class {
-
+            
                 private const TWO = [
                     1,
                     2,
@@ -2289,18 +3763,26 @@ questions:
                     3,
                 ];
             };
-
+            
             echo $class::ONE[4];
+            
         answers:
-            - { value: "3", correct: true }
-            - { value: "1", correct: false }
-            - { value: "An error", correct: false }
-    -   question: |
+            -
+                value: '3'
+                correct: true
+            -
+                value: '1'
+                correct: false
+            -
+                value: 'An error'
+                correct: false
+    -
+        question: |
             What will be the output of the following code in PHP 7.3?
-
+            
             <?php
             $class = new class {
-
+            
                 private const TWO = [
                     1,
                     2,
@@ -2312,87 +3794,174 @@ questions:
                     3,
                 ];
             };
-
+            
             echo $class::ONE[4];
+            
         answers:
-            - { value: "An error", correct: true }
-            - { value: "3", correct: false }
-            - { value: "1", correct: false }
-    -   question: |
+            -
+                value: 'An error'
+                correct: true
+            -
+                value: '3'
+                correct: false
+            -
+                value: '1'
+                correct: false
+    -
+        question: |
             What is the output of the time() function?
+            
         answers:
-            - { value: "The current time in seconds", correct: true }
-            - { value: "The current time ATOM formatted", correct: false }
-            - { value: "The current time formatted for the server's locale", correct: false }
-    -   question: |
+            -
+                value: 'The current time in seconds'
+                correct: true
+            -
+                value: 'The current time ATOM formatted'
+                correct: false
+            -
+                value: 'The current time formatted for the server''s locale'
+                correct: false
+    -
+        question: |
             What is the output of the chdir() function?
+            
         answers:
-            - { value: "Change directory", correct: true }
-            - { value: "Change the root directory", correct: false }
-            - { value: "Return an instance of the Directory class", correct: false }
-    -   question: |
+            -
+                value: 'Change directory'
+                correct: true
+            -
+                value: 'Change the root directory'
+                correct: false
+            -
+                value: 'Return an instance of the Directory class'
+                correct: false
+    -
+        question: |
             What is the output of the chroot() function?
+            
         answers:
-            - { value: "Change the root directory", correct: true }
-            - { value: "Change directory", correct: false }
-            - { value: "Return an instance of the Directory class", correct: false }
-    -   question: |
+            -
+                value: 'Change the root directory'
+                correct: true
+            -
+                value: 'Change directory'
+                correct: false
+            -
+                value: 'Return an instance of the Directory class'
+                correct: false
+    -
+        question: |
             What is Apache ZooKeeper?
+            
         answers:
-            - { value: "It manages configuration for distributed systems", correct: true }
-            - { value: "It manages multiple running processes", correct: false }
-            - { value: "It a messaging library", correct: false }
-
-    -   question: |
+            -
+                value: 'It manages configuration for distributed systems'
+                correct: true
+            -
+                value: 'It manages multiple running processes'
+                correct: false
+            -
+                value: 'It a messaging library'
+                correct: false
+    -
+        question: |
             What is the output of the following?
-
+            
             <?php
-
+            
             echo strlen('🦒');
+            
         answers:
-            - { value: 4, correct: true }
-            - { value: 3, correct: false }
-            - { value: 2, correct: false }
-            - { value: 1, correct: false }
-            - { value: 0, correct: false }
-
-    -   question: |
+            -
+                value: 4
+                correct: true
+            -
+                value: 3
+                correct: false
+            -
+                value: 2
+                correct: false
+            -
+                value: 1
+                correct: false
+            -
+                value: 0
+                correct: false
+    -
+        question: |
             What is the output of the following?
-
+            
             <?php
-
+            
             echo mb_strlen('🦒');
+            
         answers:
-            - { value: 1, correct: true }
-            - { value: 4, correct: false }
-            - { value: 3, correct: false }
-            - { value: 2, correct: false }
-            - { value: 0, correct: false }
-
-    -   question: |
+            -
+                value: 1
+                correct: true
+            -
+                value: 4
+                correct: false
+            -
+                value: 3
+                correct: false
+            -
+                value: 2
+                correct: false
+            -
+                value: 0
+                correct: false
+    -
+        question: |
             What is the output of the following?
-
+            
             <?php
-
+            
             echo strlen('Υειά σας');
+            
         answers:
-            - { value: 15, correct: true }
-            - { value: 8, correct: false }
-            - { value: 14, correct: false }
-            - { value: 16, correct: false }
-            - { value: 9, correct: false }
-            - { value: 0, correct: false }
-
-    -   question: |
+            -
+                value: 15
+                correct: true
+            -
+                value: 8
+                correct: false
+            -
+                value: 14
+                correct: false
+            -
+                value: 16
+                correct: false
+            -
+                value: 9
+                correct: false
+            -
+                value: 0
+                correct: false
+    -
+        question: |
             What is the output of the following?
-
+            
             <?php
-
+            
             echo mb_strlen('Υειά σας');
+            
         answers:
-            - { value: 8, correct: true }
-            - { value: 15, correct: false }
-            - { value: 14, correct: false }
-            - { value: 16, correct: false }
-            - { value: 9, correct: false }
-            - { value: 0, correct: false }
+            -
+                value: 8
+                correct: true
+            -
+                value: 15
+                correct: false
+            -
+                value: 14
+                correct: false
+            -
+                value: 16
+                correct: false
+            -
+                value: 9
+                correct: false
+            -
+                value: 0
+                correct: false

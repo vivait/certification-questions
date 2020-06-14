@@ -1,35 +1,63 @@
 category: OOP
 questions:
-    -   question: 'Which of the following is not a magic method?'
+    -
+        question: 'Which of the following is not a magic method?'
         answers:
-            - {value: '__wakeup()', correct: false}
-            - {value: '__invoke()', correct: false}
-            - {value: '__get()', correct: false}
-            - {value: '__serialize()', correct: false}
-            - {value: '__wakeup()', correct: false}
-            - {value: '__set_state()', correct: true}
-
-    -   question: 'Is it possible to create a new instance of a class without using the special new keyword and invoking its __construct() method?'
+            -
+                value: __wakeup()
+                correct: false
+            -
+                value: __invoke()
+                correct: false
+            -
+                value: __get()
+                correct: false
+            -
+                value: __serialize()
+                correct: false
+            -
+                value: __wakeup()
+                correct: false
+            -
+                value: __set_state()
+                correct: true
+    -
+        question: 'Is it possible to create a new instance of a class without using the special new keyword and invoking its __construct() method?'
         answers:
-            - {value: 'No', correct: false}
-            - {value: 'Yes', correct: true}
-
-    -   question: |
+            -
+                value: 'No'
+                correct: false
+            -
+                value: 'Yes'
+                correct: true
+    -
+        question: |
             Starting from which version of PHP is this code valid?
-
+            
             class A
             {
                 const foo = 1/2;
                 const bar = 100 * self::foo;
             }
+            
         answers:
-            - {value: '7.1', correct: false}
-            - {value: '5.5', correct: false}
-            - {value: '5.6', correct: true}
-            - {value: '7.0', correct: false}
-            - {value: '5.4', correct: false}
-
-    -   question: |
+            -
+                value: '7.1'
+                correct: false
+            -
+                value: '5.5'
+                correct: false
+            -
+                value: '5.6'
+                correct: true
+            -
+                value: '7.0'
+                correct: false
+            -
+                value: '5.4'
+                correct: false
+    -
+        question: |
             class A
             {
                 public function get() : self
@@ -37,7 +65,7 @@ questions:
                     return $this;
                 }
             }
-
+            
             class B extends A
             {
                 public function get() : self
@@ -45,20 +73,29 @@ questions:
                     return parent::get();
                 }
             }
-
+            
             $b = new B();
             $b = $b->get();
+            
         answers:
-            - {value: 'PHP Fatal error: Declaration of B::get(): B must be compatible with A::get(): A', correct: true }
-            - {value: 'PHP Fatal error: Uncaught TypeError: Return value of A::get() must be an instance of A', correct: false}
-            - {value: '$b will be an instance of the B class', correct: false}
-            - {value: '$b will be an instance of the A class', correct: false}
-
-    -   question: |
+            -
+                value: 'PHP Fatal error: Declaration of B::get(): B must be compatible with A::get(): A'
+                correct: true
+            -
+                value: 'PHP Fatal error: Uncaught TypeError: Return value of A::get() must be an instance of A'
+                correct: false
+            -
+                value: '$b will be an instance of the B class'
+                correct: false
+            -
+                value: '$b will be an instance of the A class'
+                correct: false
+    -
+        question: |
             What is the output of this code?
-
+            
             <?php
-
+            
             class M {
                function m() {
                   echo "M";
@@ -67,374 +104,517 @@ questions:
                   echo "mmm";
                }
             }
-
+            
             $m = new M();
             $m->m();
+            
         answers:
-            - {value: 'MM', correct: true}
-            - {value: 'mmmM', correct: false}
-            - {value: 'M', correct: false}
-            - {value: 'An error', correct: false}
-
-    -   question: |
+            -
+                value: MM
+                correct: true
+            -
+                value: mmmM
+                correct: false
+            -
+                value: M
+                correct: false
+            -
+                value: 'An error'
+                correct: false
+    -
+        question: |
             What is the output of this code?
-
+            
             <?php
-
+            
             $classA = new stdClass()
             $classB = $classA;
             $classA->d = 123;
             var_dump($classA === $classB)
+            
         answers:
-            - {value: 'true', correct: true}
-            - {value: 'false', correct: false}
-
-    -   question: |
+            -
+                value: 'true'
+                correct: true
+            -
+                value: 'false'
+                correct: false
+    -
+        question: |
             From which version of PHP will the following code not error?
             $class = new class ()
             {
                 private $prop = 'hi';
-
+            
                 public function myFunc()
                 {
                     return $this->prop;
                 }
             };
-
+            
             $class::myFunc();
+            
         answers:
-            - {value: '7.0.0', correct: true}
-            - {value: '7.1.0', correct: false}
-            - {value: '5.6.0', correct: false}
-            - {value: '5.0.0', correct: false}
-
-    -   question: |
+            -
+                value: 7.0.0
+                correct: true
+            -
+                value: 7.1.0
+                correct: false
+            -
+                value: 5.6.0
+                correct: false
+            -
+                value: 5.0.0
+                correct: false
+    -
+        question: |
             Will the following PHP run in 7.0 without errors:
-
+            
             $class = stdClass::class;
             new $class();
+            
         answers:
-            - {value: 'Yes', correct: true}
-            - {value: 'No', correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             What is the value of $instance in the following script?
-
+            
             $instance = new SimpleClass();
-
+            
             $assigned   =  $instance;
             $reference  =& $instance;
-
+            
             $instance = null;
+            
         answers:
-            - {value: 'Null', correct: true}
-            - {value: 'An instance of SimpleClass', correct: false}
-
-    -   question: |
+            -
+                value: 'Null'
+                correct: true
+            -
+                value: 'An instance of SimpleClass'
+                correct: false
+    -
+        question: |
             What is the value of $assigned in the following script?
-
+            
             $instance = new SimpleClass();
-
+            
             $assigned   =  $instance;
             $reference  =& $instance;
-
+            
             $instance = null;
+            
         answers:
-            - {value: 'Null', correct: false}
-            - {value: 'An instance of SimpleClass', correct: true}
-
-    -   question: |
+            -
+                value: 'Null'
+                correct: false
+            -
+                value: 'An instance of SimpleClass'
+                correct: true
+    -
+        question: |
             From which version of PHP is the following code valid?
-
+            
             echo (new DateTime())->format('Y');
+            
         answers:
-            - {value: '5.4.0', correct: true}
-            - {value: '5.6.0', correct: false}
-            - {value: '5.2.0', correct: false}
-            - {value: '7.0.0', correct: false}
-
-    -   question: |
+            -
+                value: 5.4.0
+                correct: true
+            -
+                value: 5.6.0
+                correct: false
+            -
+                value: 5.2.0
+                correct: false
+            -
+                value: 7.0.0
+                correct: false
+    -
+        question: |
             Is the following class definition valid?
-
+            
             class Foo
             {
                 public $bar = 'property';
-
+            
                 public function bar() {
                     return 'method';
                 }
             }
+            
         answers:
-            - {value: 'Yes', correct: true}
-            - {value: 'No', correct: false}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             From which version of PHP is the following code valid?
-
+            
             class Foo
             {
                 public $bar;
-
+            
                 public function __construct() {
                     $this->bar = function() {
                         return 42;
                     };
                 }
             }
-
+            
             ($obj->bar)();
+            
         answers:
-            - {value: '7.0.0', correct: true}
-            - {value: '5.6.0', correct: false}
-            - {value: '5.2.0', correct: false}
-            - {value: '7.1.0', correct: false}
-
-    -   question: |
+            -
+                value: 7.0.0
+                correct: true
+            -
+                value: 5.6.0
+                correct: false
+            -
+                value: 5.2.0
+                correct: false
+            -
+                value: 7.1.0
+                correct: false
+    -
+        question: |
             What is the output of the following script?
-
+            
             class First {
                 function test () {
                     return get_class($this);
                 }
             }
-
+            
             class Second extends First {
             }
-
+            
             echo (new Second())->test();
+            
         answers:
-            - {value: 'Second', correct: true}
-            - {value: 'First', correct: false}
-
-    -   question: |
+            -
+                value: Second
+                correct: true
+            -
+                value: First
+                correct: false
+    -
+        question: |
             From which version of PHP is the following code valid?
-
+            
             class First {
                 private const TEST = '123';
             }
+            
         answers:
-            - {value: '7.1.0', correct: true}
-            - {value: '7.0.0', correct: false}
-            - {value: '7.2.0', correct: false}
-            - {value: '5.6.0', correct: false}
-
-    -   question: |
+            -
+                value: 7.1.0
+                correct: true
+            -
+                value: 7.0.0
+                correct: false
+            -
+                value: 7.2.0
+                correct: false
+            -
+                value: 5.6.0
+                correct: false
+    -
+        question: |
             What is the output of the following script?
-
+            
             class One {
                 function __construct()
                 {
                     echo 'Hello world';
                 }
             }
-
+            
             class Two {
-
+            
             }
-
+            
             new Two();
+            
         answers:
-            - {value: 'An empty string', correct: true}
-            - {value: 'Hello world', correct: false}
-
-    -   question: When is the destructor method called on a PHP class?
+            -
+                value: 'An empty string'
+                correct: true
+            -
+                value: 'Hello world'
+                correct: false
+    -
+        question: 'When is the destructor method called on a PHP class?'
         answers:
-            - {value: 'When there are no reference pointing to it', correct: true}
-            - {value: 'During the shutdown sequence', correct: true}
-            - {value: 'When the class has its first method called', correct: false}
-            - {value: "Once the class's constructor has finished running", correct: false}
-            - {value: "During PHP's garbage collection", correct: false}
-
-    -   question: |
+            -
+                value: 'When there are no reference pointing to it'
+                correct: true
+            -
+                value: 'During the shutdown sequence'
+                correct: true
+            -
+                value: 'When the class has its first method called'
+                correct: false
+            -
+                value: 'Once the class''s constructor has finished running'
+                correct: false
+            -
+                value: 'During PHP''s garbage collection'
+                correct: false
+    -
+        question: |
             What is the output of the following script?
-
+            
             class One {
                 private $var = 'created';
-
+            
                 function another()
                 {
                     $one = new One();
-
+            
                     echo $one->var;
                 }
             }
-
+            
             (new One)->another();
+            
         answers:
-            - {value: 'created', correct: true}
-            - {value: 'An error', correct: false}
-
-    -   question: Can interfaces contain constructors?
+            -
+                value: created
+                correct: true
+            -
+                value: 'An error'
+                correct: false
+    -
+        question: 'Can interfaces contain constructors?'
         answers:
-            - {value: 'Yes', correct: true}
-            - {value: 'No', correct: false}
-
-    -   question: Can a constant in an interface be overridden?
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: 'Can a constant in an interface be overridden?'
         answers:
-            - {value: 'Yes', correct: false}
-            - {value: 'No', correct: true}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: |
             What is the result of the following script?
-
+            
             class Base {
                 public function sayHello() {
                     echo 'Hello ';
                 }
             }
-
+            
             trait SayWorld {
                 public function sayHello() {
                     parent::sayHello();
                     echo 'World!';
                 }
             }
-
+            
             class MyHelloWorld extends Base {
                 use SayWorld;
             }
-
+            
             $o = new MyHelloWorld();
             $o->sayHello();
+            
         answers:
-            - {value: 'Hello World!', correct: true}
-            - {value: 'An Error', correct: false}
-            - {value: 'World!', correct: false}
-            - {value: 'Hello ', correct: false}
-
-    -   question: |
+            -
+                value: 'Hello World!'
+                correct: true
+            -
+                value: 'An Error'
+                correct: false
+            -
+                value: World!
+                correct: false
+            -
+                value: 'Hello '
+                correct: false
+    -
+        question: |
             What is the result of the following script?
-
+            
             trait Talker
             {
-
+            
                 public function test()
                 {
                     echo '1';
                 }
             }
-
+            
             trait Talker2 {
-
+            
                 public function test()
                 {
                     echo '2';
                 }
             }
-
+            
             class Talking {
                 use Talker, Talker2 {
                     Talker::test as another;
                 }
             }
             (new Talking)->another();
+            
         answers:
-            - {value: 'An Error', correct: true}
-            - {value: "'1'", correct: false}
-            - {value: "'2'", correct: false}
+            -
+                value: 'An Error'
+                correct: true
+            -
+                value: '''1'''
+                correct: false
+            -
+                value: '''2'''
+                correct: false
         help: |
             https://www.php.net/manual/en/language.oop5.traits.php#language.oop5.traits.conflict
-
+            
             Requires insteadof also
-
-    -   question: |
+            
+    -
+        question: |
             What is the result of the following script?
-
+            
             trait Talker
             {
-
+            
                 abstract public function test();
             }
-
+            
             class Talking {
                 use Talker;
-
+            
                 public function test(string $text) {
                     echo $text;
                 }
             }
-
+            
             (new Talking)->test('hello');
+            
         answers:
-            - {value: 'hello', correct: true}
-            - {value: 'An error', correct: false}
+            -
+                value: hello
+                correct: true
+            -
+                value: 'An error'
+                correct: false
         help: |
             https://www.php.net/manual/en/language.oop5.traits.php#language.oop5.traits.conflict
-
+            
             Requires insteadof also
-
-    -   question: |
+            
+    -
+        question: |
             What is the result of the following script in PHP 7.0.0?
-
+            
             <?php
-
+            
             trait Some
             {
                 public $var = 'hello';
             }
-
+            
             class SomeClass
             {
                 use Some;
-
+            
                 public $var = 'hello';
             }
-
+            
             echo (new SomeClass)->var;
+            
         answers:
-            - {value: 'hello', correct: true}
-            - {value: 'An error', correct: false}
+            -
+                value: hello
+                correct: true
+            -
+                value: 'An error'
+                correct: false
         help: |
             https://www.php.net/manual/en/language.oop5.traits.php#language.oop5.traits.properties
-
-
-    -   question: |
+            
+    -
+        question: |
             What is the result of the following script?
-
+            
             <?php
-
+            
             trait Some
             {
                 public $var = 'hello';
             }
-
+            
             class SomeClass
             {
                 use Some;
-
+            
                 public $var = 'other message';
             }
-
+            
             echo (new SomeClass)->var;
+            
         answers:
-            - {value: 'An error', correct: true}
-            - {value: 'hello', correct: false}
+            -
+                value: 'An error'
+                correct: true
+            -
+                value: hello
+                correct: false
         help: |
             https://www.php.net/manual/en/language.oop5.traits.php#language.oop5.traits.properties
-
-    -   question: |
+            
+    -
+        question: |
             What is the result of the following script?
-
+            
             <?php
             function anonymous_class()
             {
                 return new class {};
             }
-
+            
             if (get_class(anonymous_class()) === get_class(anonymous_class())) {
                 echo 'same class';
             } else {
                 echo 'different class';
             }
+            
         answers:
-            - {value: 'same class', correct: true}
-            - {value: 'different class', correct: false}
+            -
+                value: 'same class'
+                correct: true
+            -
+                value: 'different class'
+                correct: false
         help: |
             https://www.php.net/manual/en/language.oop5.traits.php#language.oop5.traits.properties
-
-    -   question: |
+            
+    -
+        question: |
             What is the result of the following script?
-
+            
             class MeClass
             {
                 protected function __invoke()
@@ -442,169 +622,250 @@ questions:
                     echo 'hi';
                 }
             }
-
+            
             (new MeClass())();
+            
         answers:
-            - {value: 'An error', correct: true}
-            - {value: 'No output', correct: false}
-            - {value: 'hi', correct: false}
+            -
+                value: 'An error'
+                correct: true
+            -
+                value: 'No output'
+                correct: false
+            -
+                value: hi
+                correct: false
         help: |
             https://www.php.net/manual/en/language.oop5.magic.php
-
-    -   question: When are the magic methods __sleep() and __wakeup() called?
+            
+    -
+        question: 'When are the magic methods __sleep() and __wakeup() called?'
         answers:
-            - {value: 'To modify the object on serialization and unserialization', correct: true}
-            - {value: 'To modify the object on start and delete', correct: false}
-            - {value: 'To modify the object when its stopped being used and when its restarted', correct: false}
+            -
+                value: 'To modify the object on serialization and unserialization'
+                correct: true
+            -
+                value: 'To modify the object on start and delete'
+                correct: false
+            -
+                value: 'To modify the object when its stopped being used and when its restarted'
+                correct: false
         help: |
             https://www.php.net/manual/en/language.oop5.magic.php#object.sleep
             https://www.php.net/manual/en/language.oop5.magic.php#object.wakeup
-
-    -   question: |
+            
+    -
+        question: |
             What is the result of the following script before PHP 7.4?
-
+            
             class MeClass
             {
-
+            
                 public function __toString()
                 {
                     throw new Exception('hi');
                 }
             }
-
+            
             try {
                 (string)new MeClass();
             } catch (Exception $exception) {
                 echo 'caught';
             }
+            
         answers:
-            - {value: 'A error', correct: true}
-            - {value: 'caught', correct: false}
-            - {value: 'hi', correct: false}
+            -
+                value: 'A error'
+                correct: true
+            -
+                value: caught
+                correct: false
+            -
+                value: hi
+                correct: false
         help: |
             https://www.php.net/manual/en/language.oop5.magic.php#object.tostring
-
-    -   question: When is the magic method __set_state() called?
+            
+    -
+        question: 'When is the magic method __set_state() called?'
         answers:
-            - {value: 'during var_export()', correct: true}
-            - {value: 'during var_dump()', correct: false}
-            - {value: 'during echo', correct: false}
-            - {value: 'during construction of the class', correct: false}
-            - {value: 'during unserialization of the class', correct: false}
-            - {value: 'during var_export() and var_dump()', correct: false}
+            -
+                value: 'during var_export()'
+                correct: true
+            -
+                value: 'during var_dump()'
+                correct: false
+            -
+                value: 'during echo'
+                correct: false
+            -
+                value: 'during construction of the class'
+                correct: false
+            -
+                value: 'during unserialization of the class'
+                correct: false
+            -
+                value: 'during var_export() and var_dump()'
+                correct: false
         help: |
             https://www.php.net/manual/en/language.oop5.magic.php#object.set-state
-
-    -   question: When is the magic method __debugInfo() called?
+            
+    -
+        question: 'When is the magic method __debugInfo() called?'
         answers:
-            - {value: 'during var_dump()', correct: true}
-            - {value: 'during var_export()', correct: false}
-            - {value: 'during echo', correct: false}
-            - {value: 'during var_export() and var_dump()', correct: false}
+            -
+                value: 'during var_dump()'
+                correct: true
+            -
+                value: 'during var_export()'
+                correct: false
+            -
+                value: 'during echo'
+                correct: false
+            -
+                value: 'during var_export() and var_dump()'
+                correct: false
         help: |
             https://www.php.net/manual/en/language.oop5.magic.php#object.debuginfo
-
-    -   question: Can class constants be final?
+            
+    -
+        question: 'Can class constants be final?'
         answers:
-            - {value: 'Yes', correct: false}
-            - {value: 'No', correct: true}
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: |
             What is the result of the following script?
-
+            
             <?php
-
+            
             class MyClass
             {
                 public $hi = '321';
-
+            
                 public function __clone()
                 {
                     $this->hi = '123';
                 }
             }
-
+            
             $original = new MyClass;
             $object = clone $original;
             echo $original->hi;
+            
         answers:
-            - {value: '321', correct: true}
-            - {value: '123', correct: false}
-
-    -   question: |
+            -
+                value: '321'
+                correct: true
+            -
+                value: '123'
+                correct: false
+    -
+        question: |
             What is the result of the following script in PHP 5.6?
-
+            
             <?php
-
+            
             class MyClass
             {
                 public $hi = '321';
             }
-
+            
             echo (clone (new MyClass))->hi;
+            
         answers:
-            - {value: 'An error', correct: true}
-            - {value: '321', correct: false}
-            - {value: 'null', correct: false}
-            - {value: 'object(MyClass)', correct: false}
-
-    -   question: |
+            -
+                value: 'An error'
+                correct: true
+            -
+                value: '321'
+                correct: false
+            -
+                value: 'null'
+                correct: false
+            -
+                value: object(MyClass)
+                correct: false
+    -
+        question: |
             What is the result of the following script in PHP?
-
+            
             <?php
-
+            
             class One
             {
-
+            
                 public function func()
                 {
                     echo static::class;
                 }
             }
-
+            
             class Two extends One
             {
-
+            
                 public function func()
                 {
                     parent::func();
                 }
             }
-
+            
             $class = new Two;
             $class->func();
+            
         answers:
-            - {value: 'Two', correct: true}
-            - {value: 'One', correct: false}
-
-    -   question: |
+            -
+                value: Two
+                correct: true
+            -
+                value: One
+                correct: false
+    -
+        question: |
             Consider the following class:
-
+            
             class User
             {
                 private $fullname;
-
+            
                 public function __construct($fullname)
                 {
                     $this->fullname = $fullname;
                 }
-
+            
                 public function getFullname()
                 {
                     return $this->fullname;
                 }
             }
-
+            
             And the following code snippet:
-
+            
             ???
             echo $user->getFullname();
-
+            
             Which of the following statements can successfully replace the ??? token in order to make this script display the string John Smith in the standard output?
+            
         answers:
-            - {value: "$user = User::getInstance('John Smith');", correct: false}
-            - {value: "$user = new User('John Smith');", correct: true}
-            - {value: "$user = new User(['$fullname' => 'John Smith']);", correct: false}
-            - {value: "$user = (new ReflectionClass('User'))->newInstanceWithoutConstructor();", correct: false}
-            - {value: "$user = (new ReflectionClass('User'))->newInstanceArgs(['John Smith']);", correct: true}
-            - {value: "$user = (new ReflectionClass(User::class))->newInstance('John Smith');", correct: true}
+            -
+                value: '$user = User::getInstance(''John Smith'');'
+                correct: false
+            -
+                value: '$user = new User(''John Smith'');'
+                correct: true
+            -
+                value: '$user = new User([''$fullname'' => ''John Smith'']);'
+                correct: false
+            -
+                value: '$user = (new ReflectionClass(''User''))->newInstanceWithoutConstructor();'
+                correct: false
+            -
+                value: '$user = (new ReflectionClass(''User''))->newInstanceArgs([''John Smith'']);'
+                correct: true
+            -
+                value: '$user = (new ReflectionClass(User::class))->newInstance(''John Smith'');'
+                correct: true

@@ -1,218 +1,461 @@
-category: Best practices
+category: 'Best practices'
 questions:
-    -   question: 'Which of these are correct ways to create a redirection response in a controller that extends Symfony\Bundle\FrameworkBundle\Controller\Controller?'
+    -
+        question: 'Which of these are correct ways to create a redirection response in a controller that extends Symfony\Bundle\FrameworkBundle\Controller\Controller?'
         answers:
-            - {value: $response = $this->redirect($this->generateUrl("homepage")), correct: true}
-            - {value: $response = $this->redirect($this->generate("homepage")), correct: false}
-            - {value: $response = new RedirectResponse("/"), correct: true}
-            - {value: $response = $this->redirectToRoute("homepage"), correct: true}
-            - {value: $response = $this->redirect("/"), correct: true}
-            - {value: $response = new RedirectionResponse("/"), correct: false}
-
-    -   question: 'According to the official Symfony Best Practices Guide and using the Symfony installer, which command allow you to create a blog application?'
+            -
+                value: '$response = $this->redirect($this->generateUrl("homepage"))'
+                correct: true
+            -
+                value: '$response = $this->redirect($this->generate("homepage"))'
+                correct: false
+            -
+                value: '$response = new RedirectResponse("/")'
+                correct: true
+            -
+                value: '$response = $this->redirectToRoute("homepage")'
+                correct: true
+            -
+                value: '$response = $this->redirect("/")'
+                correct: true
+            -
+                value: '$response = new RedirectionResponse("/")'
+                correct: false
+    -
+        question: 'According to the official Symfony Best Practices Guide and using the Symfony installer, which command allow you to create a blog application?'
         answers:
-            - {value: symfony create-project blog, correct: false}
-            - {value: symfony create blog, correct: false}
-            - {value: symfony install blog, correct: false}
-            - {value: symfony new --full blog, correct: true}
-
-    -   question: The default value of the opcache.max_accelerated_files PHP configuration option is 2,000. Is this setting correct for a typical Symfony application?
+            -
+                value: 'symfony create-project blog'
+                correct: false
+            -
+                value: 'symfony create blog'
+                correct: false
+            -
+                value: 'symfony install blog'
+                correct: false
+            -
+                value: 'symfony new --full blog'
+                correct: true
+    -
+        question: 'The default value of the opcache.max_accelerated_files PHP configuration option is 2,000. Is this setting correct for a typical Symfony application?'
         answers:
-            - {value: 'No, it is recommended to increase it at least to 20,000.', correct: true }
-            - {value: 'Yes, because PHP increases that limit dynamically when needed.', correct: false }
-            - {value: 'No, it is recommended to decrease it to 500 to limit the memory consumption in the server.', correct: false }
-            - {value: 'Yes, 2,000 is correct.', correct: false }
-
-    -   question: According to the official Symfony Best Practices Guide, which format do you need to use to configure routing, caching and security whenever possible?
+            -
+                value: 'No, it is recommended to increase it at least to 20,000.'
+                correct: true
+            -
+                value: 'Yes, because PHP increases that limit dynamically when needed.'
+                correct: false
+            -
+                value: 'No, it is recommended to decrease it to 500 to limit the memory consumption in the server.'
+                correct: false
+            -
+                value: 'Yes, 2,000 is correct.'
+                correct: false
+    -
+        question: 'According to the official Symfony Best Practices Guide, which format do you need to use to configure routing, caching and security whenever possible?'
         answers:
-            - {value: yaml, correct: false }
-            - {value: php, correct: false }
-            - {value: xml, correct: false }
-            - {value: annotations, correct: true }
-
-    -   question: 'According to the official Symfony Best Practices Guide, where should the application related configuration parameters be stored?'
+            -
+                value: yaml
+                correct: false
+            -
+                value: php
+                correct: false
+            -
+                value: xml
+                correct: false
+            -
+                value: annotations
+                correct: true
+    -
+        question: 'According to the official Symfony Best Practices Guide, where should the application related configuration parameters be stored?'
         answers:
-            - {value: In the src/Kernel.php file., correct: false}
-            - {value: In the config/parameters.yaml file., correct: false}
-            - {value: In the .app.yml file at the root of the project directory., correct: false}
-            - {value: In the config/services.yaml file., correct: true}
-            - {value: In global environment variables., correct: false}
-
-    -   question: 'Where should canonical environment variables be stored?'
+            -
+                value: 'In the src/Kernel.php file.'
+                correct: false
+            -
+                value: 'In the config/parameters.yaml file.'
+                correct: false
+            -
+                value: 'In the .app.yml file at the root of the project directory.'
+                correct: false
+            -
+                value: 'In the config/services.yaml file.'
+                correct: true
+            -
+                value: 'In global environment variables.'
+                correct: false
+    -
+        question: 'Where should canonical environment variables be stored?'
         answers:
-            - {value: .env.dist, correct: true}
-            - {value: .env, correct: false}
-            - {value: parameters.yaml, correct: false}
-            - {value: They should be configured by the host system, correct: false}
-
-    -   question: 'Which of the following parameters conventions are recommended?'
+            -
+                value: .env.dist
+                correct: true
+            -
+                value: .env
+                correct: false
+            -
+                value: parameters.yaml
+                correct: false
+            -
+                value: 'They should be configured by the host system'
+                correct: false
+    -
+        question: 'Which of the following parameters conventions are recommended?'
         answers:
-            - {value: app.my_parameter, correct: true}
-            - {value: my_parameter, correct: false}
-            - {value: parameter.my_parameter, correct: false}
-
-    -   question: 'What is the optimum convention for a service ID for a class that only has one usage?'
+            -
+                value: app.my_parameter
+                correct: true
+            -
+                value: my_parameter
+                correct: false
+            -
+                value: parameter.my_parameter
+                correct: false
+    -
+        question: 'What is the optimum convention for a service ID for a class that only has one usage?'
         answers:
-            - {value: AppBundle\Utils\Slugger, correct: true}
-            - {value: app.utils.slugger, correct: false}
-
-    -   question: 'What is the optimum convention for a service ID for a class that only has more than one usage?'
+            -
+                value: AppBundle\Utils\Slugger
+                correct: true
+            -
+                value: app.utils.slugger
+                correct: false
+    -
+        question: 'What is the optimum convention for a service ID for a class that only has more than one usage?'
         answers:
-            - {value: AppBundle\Utils\Slugger and AppBundle\Utils\Slugger.other, correct: false}
-            - {value: app.utils.slugger and app.utils.slugger_other, correct: true}
-
-    -   question: 'What is the optimum visibility for services?'
+            -
+                value: 'AppBundle\Utils\Slugger and AppBundle\Utils\Slugger.other'
+                correct: false
+            -
+                value: 'app.utils.slugger and app.utils.slugger_other'
+                correct: true
+    -
+        question: 'What is the optimum visibility for services?'
         answers:
-            - {value: public, correct: false}
-            - {value: private, correct: true}
-
-    -   question: 'What is the best format to define services in?'
+            -
+                value: public
+                correct: false
+            -
+                value: private
+                correct: true
+    -
+        question: 'What is the best format to define services in?'
         answers:
-            - {value: YAML, correct: true}
-            - {value: PHP, correct: false}
-            - {value: JSON, correct: false}
-            - {value: Annotations, correct: false}
-
-    -   question: What is the best format to configure Doctrine entities in?
+            -
+                value: YAML
+                correct: true
+            -
+                value: PHP
+                correct: false
+            -
+                value: JSON
+                correct: false
+            -
+                value: Annotations
+                correct: false
+    -
+        question: 'What is the best format to configure Doctrine entities in?'
         answers:
-            - {value: YAML, correct: false }
-            - {value: PHP, correct: false }
-            - {value: XML, correct: false }
-            - {value: Annotations, correct: true }
-
-    -   question: According to the official Symfony Best Practices Guide, where do you have to store your assets?
+            -
+                value: YAML
+                correct: false
+            -
+                value: PHP
+                correct: false
+            -
+                value: XML
+                correct: false
+            -
+                value: Annotations
+                correct: true
+    -
+        question: 'According to the official Symfony Best Practices Guide, where do you have to store your assets?'
         answers:
-            - {value: in the public/ directory, correct: false }
-            - {value: in the src/Resources/public/ directory, correct: false }
-            - {value: in the assets/ directory of each bundle, correct: true }
-
-    -   question: |
+            -
+                value: 'in the public/ directory'
+                correct: false
+            -
+                value: 'in the src/Resources/public/ directory'
+                correct: false
+            -
+                value: 'in the assets/ directory of each bundle'
+                correct: true
+    -
+        question: |
             According to the official Symfony Best Practices Guide, is it recommended to store the sensitive global parameters (ie. database credentials, etc.) outside of the project (ie. environment variables, external configuration file, etc.)?
+            
         answers:
-            - {value: No, correct: false }
-            - {value: Yes, correct: true }
-
-    -   question: What is business logic?
+            -
+                value: 'No'
+                correct: false
+            -
+                value: 'Yes'
+                correct: true
+    -
+        question: 'What is business logic?'
         answers:
-            - {value: 'Determines how data can be created, stored, and changed', correct: true }
-            - {value: 'It is your doctrine entities', correct: false }
-            - {value: 'It is your Symfony services', correct: false }
-
-    -   question: Does Symfony's best practices recommend you define class names as parameters?
+            -
+                value: 'Determines how data can be created, stored, and changed'
+                correct: true
+            -
+                value: 'It is your doctrine entities'
+                correct: false
+            -
+                value: 'It is your Symfony services'
+                correct: false
+    -
+        question: 'Does Symfony''s best practices recommend you define class names as parameters?'
         answers:
-            - {value: 'Yes', correct: true }
-            - {value: 'No', correct: false }
-
-    -   question: What is the most efficient format to store Doctrine entity configuration in?
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: 'What is the most efficient format to store Doctrine entity configuration in?'
         answers:
-            - {value: 'None', correct: true }
-            - {value: 'YAML', correct: false }
-            - {value: 'XML', correct: false }
-            - {value: 'Annotations', correct: false }
-
-    -   question: Which PSRs are followed by Symfony?
+            -
+                value: None
+                correct: true
+            -
+                value: YAML
+                correct: false
+            -
+                value: XML
+                correct: false
+            -
+                value: Annotations
+                correct: false
+    -
+        question: 'Which PSRs are followed by Symfony?'
         answers:
-            - {value: 'PSR-1', correct: true }
-            - {value: 'PSR-2', correct: false }
-            - {value: 'PSR-3', correct: false }
-            - {value: 'PSR-0', correct: false }
-
-    -   question: Does Symfony's best practices recommend you use the @Template annoation?
+            -
+                value: PSR-1
+                correct: true
+            -
+                value: PSR-2
+                correct: false
+            -
+                value: PSR-3
+                correct: false
+            -
+                value: PSR-0
+                correct: false
+    -
+        question: 'Does Symfony''s best practices recommend you use the @Template annoation?'
         answers:
-            - {value: 'Yes', correct: true }
-            - {value: 'No', correct: false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             What are some benefits of marking services as private?
+            
         answers:
-            - {value: "It allows the container to optimize to increase the container's performance", correct: true }
-            - {value: "It gives you clearer errors if you try to access non-existent service on any page", correct: true }
-            - {value: "It allows you to better control how developers access business logic", correct: false }
-
-    -   question: |
+            -
+                value: 'It allows the container to optimize to increase the container''s performance'
+                correct: true
+            -
+                value: 'It gives you clearer errors if you try to access non-existent service on any page'
+                correct: true
+            -
+                value: 'It allows you to better control how developers access business logic'
+                correct: false
+    -
+        question: |
             What is the recommend format to name your templates with?
+            
         answers:
-            - {value: "snake_case", correct: true }
-            - {value: "camelCase", correct:  false }
-            - {value: "PascalCase", correct: false }
-            - {value: "bbq-case", correct: false }
-            - {value: "bbq-case", correct: false }
-
-    -   question: |
+            -
+                value: snake_case
+                correct: true
+            -
+                value: camelCase
+                correct: false
+            -
+                value: PascalCase
+                correct: false
+            -
+                value: bbq-case
+                correct: false
+            -
+                value: bbq-case
+                correct: false
+    -
+        question: |
             Is it recommended to prefix partial templates with underscores?
+            
         answers:
-            - {value: "Yes", correct: true }
-            - {value: "No", correct:  false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Which namespace should you store your Twig extensions in Symfony 3.4?
+            
         answers:
-            - {value: "AppBundle/Twig/", correct: true }
-            - {value: "App/Twig/", correct:  false }
-            - {value: "App/Twig/Extension", correct:  false }
-            - {value: "AppBundle/Twig/Extension", correct:  false }
-            - {value: "App/TwigExtension", correct:  false }
-            - {value: "AppBundle/TwigExtension", correct:  false }
-
-    -   question: |
+            -
+                value: AppBundle/Twig/
+                correct: true
+            -
+                value: App/Twig/
+                correct: false
+            -
+                value: App/Twig/Extension
+                correct: false
+            -
+                value: AppBundle/Twig/Extension
+                correct: false
+            -
+                value: App/TwigExtension
+                correct: false
+            -
+                value: AppBundle/TwigExtension
+                correct: false
+    -
+        question: |
             Which namespace should you store your Form Types in Symfony 3.4?
+            
         answers:
-            - {value: "AppBundle/Form/", correct: true }
-            - {value: "App/Form/", correct:  false }
-            - {value: "App/Form/Type", correct:  false }
-            - {value: "AppBundle/Form/Type", correct:  false }
-            - {value: "App/FormType", correct:  false }
-            - {value: "AppBundle/FormType", correct:  false }
-
-    -   question: |
+            -
+                value: AppBundle/Form/
+                correct: true
+            -
+                value: App/Form/
+                correct: false
+            -
+                value: App/Form/Type
+                correct: false
+            -
+                value: AppBundle/Form/Type
+                correct: false
+            -
+                value: App/FormType
+                correct: false
+            -
+                value: AppBundle/FormType
+                correct: false
+    -
+        question: |
             Where does Symfony recommend you configure validation constraints?
+            
         answers:
-            - {value: "On the model", correct: true }
-            - {value: "In the form type", correct:  false }
-            - {value: "In the template", correct:  false }
-            - {value: "In the controller", correct:  false }
-
-    -   question: |
+            -
+                value: 'On the model'
+                correct: true
+            -
+                value: 'In the form type'
+                correct: false
+            -
+                value: 'In the template'
+                correct: false
+            -
+                value: 'In the controller'
+                correct: false
+    -
+        question: |
             How many actions does Symfony recommend you use to render and handle submits of a form?
+            
         answers:
-            - {value: "'1'", correct: true }
-            - {value: "'2'", correct:  false }
-            - {value: "'3'", correct:  false }
-
-    -   question: |
+            -
+                value: '''1'''
+                correct: true
+            -
+                value: '''2'''
+                correct: false
+            -
+                value: '''3'''
+                correct: false
+    -
+        question: |
             Which PHP version does Symfony 3.4 installed via the standard edition require?
+            
         answers:
-            - {value: "'5.5.9'", correct: true }
-            - {value: "'7.0.0'", correct:  false }
-            - {value: "'5.6.0'", correct:  false }
-            - {value: "'5.4.2'", correct:  false }
-            - {value: "'7.0.1'", correct:  false }
-            - {value: "'7.0.8'", correct:  false }
-
-    -   question: |
+            -
+                value: '''5.5.9'''
+                correct: true
+            -
+                value: '''7.0.0'''
+                correct: false
+            -
+                value: '''5.6.0'''
+                correct: false
+            -
+                value: '''5.4.2'''
+                correct: false
+            -
+                value: '''7.0.1'''
+                correct: false
+            -
+                value: '''7.0.8'''
+                correct: false
+    -
+        question: |
             Which PHP version does Symfony 3.4 installed via the skeleton require?
+            
         answers:
-            - {value: "'7.0.8'", correct: true }
-            - {value: "'7.0.0'", correct:  false }
-            - {value: "'5.6.0'", correct:  false }
-            - {value: "'5.4.2'", correct:  false }
-            - {value: "'7.0.1'", correct:  false }
-            - {value: "'5.5.9'", correct:  false }
-
-    -   question: |
+            -
+                value: '''7.0.8'''
+                correct: true
+            -
+                value: '''7.0.0'''
+                correct: false
+            -
+                value: '''5.6.0'''
+                correct: false
+            -
+                value: '''5.4.2'''
+                correct: false
+            -
+                value: '''7.0.1'''
+                correct: false
+            -
+                value: '''5.5.9'''
+                correct: false
+    -
+        question: |
             Which command can be run to check Symfony has the requirements?
+            
         answers:
-            - {value: "symfony check:requirements", correct: true }
-            - {value: "bin/console check:requirements", correct:  false }
-            - {value: "bin/console requirements:check", correct:  false }
-            - {value: "symfony requirements:check", correct:  false }
-            - {value: "symfony debug:requirements", correct:  false }
-            - {value: "bin/console debug:requirements", correct:  false }
-
-    -   question: |
+            -
+                value: 'symfony check:requirements'
+                correct: true
+            -
+                value: 'bin/console check:requirements'
+                correct: false
+            -
+                value: 'bin/console requirements:check'
+                correct: false
+            -
+                value: 'symfony requirements:check'
+                correct: false
+            -
+                value: 'symfony debug:requirements'
+                correct: false
+            -
+                value: 'bin/console debug:requirements'
+                correct: false
+    -
+        question: |
             Which composer.json key must one specify for autoloading test dependencies?
+            
         answers:
-            - {value: "autoload-dev", correct: true }
-            - {value: "autoload", correct:  false }
-            - {value: "autoload-test", correct:  false }
-            - {value: "autoload-test", correct: false }
+            -
+                value: autoload-dev
+                correct: true
+            -
+                value: autoload
+                correct: false
+            -
+                value: autoload-test
+                correct: false
+            -
+                value: autoload-test
+                correct: false

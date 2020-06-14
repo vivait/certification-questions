@@ -1,370 +1,793 @@
 category: Finder
 questions:
-    -   question: "What is the default value of the directory mode argument of the Symfony\\Component\\Filesystem\\Filesystem::mkdir method ?"
+    -
+        question: 'What is the default value of the directory mode argument of the Symfony\Component\Filesystem\Filesystem::mkdir method ?'
         answers:
-            - { value: 0777, correct: true }
-            - { value: 0700, correct: false }
-            - { value: 0755, correct: false }
-
-    -   question: "Which exception is thrown when a directory creation has failed ?"
+            -
+                value: 511
+                correct: true
+            -
+                value: 448
+                correct: false
+            -
+                value: 493
+                correct: false
+    -
+        question: 'Which exception is thrown when a directory creation has failed ?'
         answers:
-            - { value: InvalidFileException, correct: false }
-            - { value: DirectoryException, correct: false }
-            - { value: FileSystemException, correct: false }
-            - { value: FileException, correct: false }
-            - { value: IOException, correct: true }
-
-    -   question: "Which value a closure must return in order to exclude .txt files with Symfony\\Component\\Finder\\Finder::filter method?"
+            -
+                value: InvalidFileException
+                correct: false
+            -
+                value: DirectoryException
+                correct: false
+            -
+                value: FileSystemException
+                correct: false
+            -
+                value: FileException
+                correct: false
+            -
+                value: IOException
+                correct: true
+    -
+        question: 'Which value a closure must return in order to exclude .txt files with Symfony\Component\Finder\Finder::filter method?'
         answers:
-            - { value: 'true', correct: false }
-            - { value: 'null', correct: false }
-            - { value: 1, correct: false }
-            - { value: 'false', correct: true }
-
-    -   question: "What is the Symfony\\Component\\Filesystem\\Filesystem method to dump contents to a file?"
+            -
+                value: 'true'
+                correct: false
+            -
+                value: 'null'
+                correct: false
+            -
+                value: 1
+                correct: false
+            -
+                value: 'false'
+                correct: true
+    -
+        question: 'What is the Symfony\Component\Filesystem\Filesystem method to dump contents to a file?'
         answers:
-            - { value: "$fs->dumpFile('file.txt', 'Hello World');", correct: true }
-            - { value: "$fs->file('file.txt', 'Hello World');", correct: false }
-            - { value: "$fs->dump('file.txt', 'Hello World');", correct: false }
-            - { value: "$fs->dumpToFile('file.txt', 'Hello World');", correct: false }
-
-    -   question: "Which of the following are Filesystem methods?"
+            -
+                value: '$fs->dumpFile(''file.txt'', ''Hello World'');'
+                correct: true
+            -
+                value: '$fs->file(''file.txt'', ''Hello World'');'
+                correct: false
+            -
+                value: '$fs->dump(''file.txt'', ''Hello World'');'
+                correct: false
+            -
+                value: '$fs->dumpToFile(''file.txt'', ''Hello World'');'
+                correct: false
+    -
+        question: 'Which of the following are Filesystem methods?'
         answers:
-            - { value: "move", correct: false }
-            - { value: "exists", correct: true }
-            - { value: "symlink", correct: true }
-            - { value: "makePathRelative", correct: true }
-            - { value: "remove", correct: true }
-            - { value: "isAbsolutePath", correct: true }
-
-    -   question: |
+            -
+                value: move
+                correct: false
+            -
+                value: exists
+                correct: true
+            -
+                value: symlink
+                correct: true
+            -
+                value: makePathRelative
+                correct: true
+            -
+                value: remove
+                correct: true
+            -
+                value: isAbsolutePath
+                correct: true
+    -
+        question: |
             Which exception is thrown when the origin file does not exist when you use the Symfony\Component\Filesystem\Filesystem::copy method ?
+            
         answers:
-            - { value: "FileException", correct: false }
-            - { value: "FileNotExistException", correct: false }
-            - { value: "FileErrorException", correct: false }
-            - { value: "FilesystemException", correct: false }
-            - { value: "FileNotFoundException", correct: true }
-
-    -   question: |
+            -
+                value: FileException
+                correct: false
+            -
+                value: FileNotExistException
+                correct: false
+            -
+                value: FileErrorException
+                correct: false
+            -
+                value: FilesystemException
+                correct: false
+            -
+                value: FileNotFoundException
+                correct: true
+    -
+        question: |
             What is returned by the Symfony\Component\Filesystem\Filesystem::mkdir method if the directory has been successfully created ?
+            
         answers:
-            - { value: "Nothing", correct: true }
-            - { value: "The FileSystem object", correct: false }
-            - { value: "A string with the directory path", correct: false }
-            - { value: "A boolean", correct: false }
-
-    -   question: |
+            -
+                value: Nothing
+                correct: true
+            -
+                value: 'The FileSystem object'
+                correct: false
+            -
+                value: 'A string with the directory path'
+                correct: false
+            -
+                value: 'A boolean'
+                correct: false
+    -
+        question: |
             Which methods belong to Symfony\Component\Finder\Finder class ?
+            
         answers:
-            - { value: "path", correct: true }
-            - { value: "name", correct: true }
-            - { value: "size", correct: true }
-            - { value: "notPath", correct: true }
-            - { value: "notName", correct: true }
-            - { value: "owner", correct: false }
-            - { value: "type", correct: false }
-            - { value: "notSize", correct: false }
-
-    -   question: With the Finder, which method is correct to exclude a logs directory from matching ?
+            -
+                value: path
+                correct: true
+            -
+                value: name
+                correct: true
+            -
+                value: size
+                correct: true
+            -
+                value: notPath
+                correct: true
+            -
+                value: notName
+                correct: true
+            -
+                value: owner
+                correct: false
+            -
+                value: type
+                correct: false
+            -
+                value: notSize
+                correct: false
+    -
+        question: 'With the Finder, which method is correct to exclude a logs directory from matching ?'
         answers:
-            - { value: "$finder->in(__DIR__)->excludeDir('logs');", correct: false }
-            - { value: "$finder->in(__DIR__)->ignoreDir('logs');", correct: false }
-            - { value: "$finder->in(__DIR__)->notMatch('logs');", correct: false }
-            - { value: "$finder->in(__DIR__)->ignoreDirectory('logs');", correct: false }
-            - { value: "$finder->in(__DIR__)->ignoreFiles('logs');", correct: false }
-            - { value: "$finder->in(__DIR__)->ignore('logs');", correct: false }
-            - { value: "$finder->in(__DIR__)->exclude('logs');", correct: true }
-
-    -   question: What is the Symfony\Component\Filesystem\Filesystem method to check if the given path is absolute ?
+            -
+                value: '$finder->in(__DIR__)->excludeDir(''logs'');'
+                correct: false
+            -
+                value: '$finder->in(__DIR__)->ignoreDir(''logs'');'
+                correct: false
+            -
+                value: '$finder->in(__DIR__)->notMatch(''logs'');'
+                correct: false
+            -
+                value: '$finder->in(__DIR__)->ignoreDirectory(''logs'');'
+                correct: false
+            -
+                value: '$finder->in(__DIR__)->ignoreFiles(''logs'');'
+                correct: false
+            -
+                value: '$finder->in(__DIR__)->ignore(''logs'');'
+                correct: false
+            -
+                value: '$finder->in(__DIR__)->exclude(''logs'');'
+                correct: true
+    -
+        question: 'What is the Symfony\Component\Filesystem\Filesystem method to check if the given path is absolute ?'
         answers:
-            - { value: "$fs->checkAbsolutePath('/tmp');", correct: false }
-            - { value: "$fs->isAbsolute('/tmp');", correct: false }
-            - { value: "$fs->absolutePath('/tmp');", correct: false }
-            - { value: "$fs->isAbsolutePath('/tmp');", correct: true }
-
-
-    -   question: Which exception is thrown with the Symfony\Component\Finder\Finder::in method if one of the directories does not exist ?
+            -
+                value: '$fs->checkAbsolutePath(''/tmp'');'
+                correct: false
+            -
+                value: '$fs->isAbsolute(''/tmp'');'
+                correct: false
+            -
+                value: '$fs->absolutePath(''/tmp'');'
+                correct: false
+            -
+                value: '$fs->isAbsolutePath(''/tmp'');'
+                correct: true
+    -
+        question: 'Which exception is thrown with the Symfony\Component\Finder\Finder::in method if one of the directories does not exist ?'
         answers:
-            - { value: "InvalidArgumentException", correct: true }
-            - { value: "FileException", correct: false }
-            - { value: "FileNotFoundException", correct: false }
-            - { value: "invalidException", correct: false }
-            - { value: "InvalidOptionException", correct: false }
-
-    -   question: What is the result of calling getRealPath() on a file?
+            -
+                value: InvalidArgumentException
+                correct: true
+            -
+                value: FileException
+                correct: false
+            -
+                value: FileNotFoundException
+                correct: false
+            -
+                value: invalidException
+                correct: false
+            -
+                value: InvalidOptionException
+                correct: false
+    -
+        question: 'What is the result of calling getRealPath() on a file?'
         answers:
-            - { value: "The absolute path", correct: true }
-            - { value: "The relative path to the file, omitting the filename", correct: false }
-            - { value: "The relative path to the file", correct: false }
-
-    -   question: What is the result of calling getRelativePath() on a file?
+            -
+                value: 'The absolute path'
+                correct: true
+            -
+                value: 'The relative path to the file, omitting the filename'
+                correct: false
+            -
+                value: 'The relative path to the file'
+                correct: false
+    -
+        question: 'What is the result of calling getRelativePath() on a file?'
         answers:
-            - { value: "The absolute path", correct: false }
-            - { value: "The relative path to the file, omitting the filename", correct: true }
-            - { value: "The relative path to the file", correct: false }
-
-    -   question: What is the result of calling getRelativePathname() on a file?
+            -
+                value: 'The absolute path'
+                correct: false
+            -
+                value: 'The relative path to the file, omitting the filename'
+                correct: true
+            -
+                value: 'The relative path to the file'
+                correct: false
+    -
+        question: 'What is the result of calling getRelativePathname() on a file?'
         answers:
-            - { value: "The absolute path", correct: false }
-            - { value: "The relative path to the file, omitting the filename", correct: false }
-            - { value: "The relative path to the file", correct: true }
-
-    -   question: What is the result of calling getRelativePathname() on a file?
+            -
+                value: 'The absolute path'
+                correct: false
+            -
+                value: 'The relative path to the file, omitting the filename'
+                correct: false
+            -
+                value: 'The relative path to the file'
+                correct: true
+    -
+        question: 'What is the result of calling getRelativePathname() on a file?'
         answers:
-            - { value: "The absolute path", correct: false }
-            - { value: "The relative path to the file, omitting the filename", correct: false }
-            - { value: "The relative path to the file", correct: true }
-
-    -   question: Which criteria is mandatory for the finder?
+            -
+                value: 'The absolute path'
+                correct: false
+            -
+                value: 'The relative path to the file, omitting the filename'
+                correct: false
+            -
+                value: 'The relative path to the file'
+                correct: true
+    -
+        question: 'Which criteria is mandatory for the finder?'
         answers:
-            - { value: "Location", correct: true }
-            - { value: "Name", correct: false }
-            - { value: "Size", correct: true }
-
-    -   question: Which of the follow are valid usages of ->in()?
+            -
+                value: Location
+                correct: true
+            -
+                value: Name
+                correct: false
+            -
+                value: Size
+                correct: true
+    -
+        question: 'Which of the follow are valid usages of ->in()?'
         answers:
-            - { value: "$finder->in(__DIR__)->in('/elsewhere');", correct: true }
-            - { value: "$finder->in([__DIR__, '/elsewhere']);", correct: true }
-            - { value: "$finder->in(__DIR__, '/elsewhere');", correct: false }
-
-    -   question: |
+            -
+                value: '$finder->in(__DIR__)->in(''/elsewhere'');'
+                correct: true
+            -
+                value: '$finder->in([__DIR__, ''/elsewhere'']);'
+                correct: true
+            -
+                value: '$finder->in(__DIR__, ''/elsewhere'');'
+                correct: false
+    -
+        question: |
             Is the following usage of the finder correct:
-
+            
             $finder->in('ftp://example.com/');
+            
         answers:
-            - { value: "Yes", correct: true }
-            - { value: "No", correct: false }
-
-    -   question: What is the purpose of the ignoreVCS() method?
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: 'What is the purpose of the ignoreVCS() method?'
         answers:
-            - { value: "When enabled it ensures the finder does not include VCS metadata files", correct: true }
-            - { value: "When enabled it ensures that new files are not included in the VCS", correct: false }
-            - { value: "When enabled it ensures that VCS ignored files are not included", correct: false }
-
-    -   question: What is the purpose of the ignoreVCSIgnored() method?
+            -
+                value: 'When enabled it ensures the finder does not include VCS metadata files'
+                correct: true
+            -
+                value: 'When enabled it ensures that new files are not included in the VCS'
+                correct: false
+            -
+                value: 'When enabled it ensures that VCS ignored files are not included'
+                correct: false
+    -
+        question: 'What is the purpose of the ignoreVCSIgnored() method?'
         answers:
-            - { value: "When enabled it ensures the finder does not include VCS metadata files", correct: false }
-            - { value: "When enabled it ensures that new files are not included in the VCS", correct: false }
-            - { value: "When enabled it ensures that VCS ignored files are not included", correct: true }
-
-    -   question: |
+            -
+                value: 'When enabled it ensures the finder does not include VCS metadata files'
+                correct: false
+            -
+                value: 'When enabled it ensures that new files are not included in the VCS'
+                correct: false
+            -
+                value: 'When enabled it ensures that VCS ignored files are not included'
+                correct: true
+    -
+        question: |
             What would be the order of the following files after a call to sortByName() with no arguments?
-
+            
             file2.txt, file1.txt, file10.txt
+            
         answers:
-            - { value: "file1.txt, file2.txt, file10.txt", correct: false }
-            - { value: "file1.txt, file10.txt, file2.txt", correct: true }
-            - { value: "file10.txt, file2.txt, file1.txt", correct: false }
+            -
+                value: 'file1.txt, file2.txt, file10.txt'
+                correct: false
+            -
+                value: 'file1.txt, file10.txt, file2.txt'
+                correct: true
+            -
+                value: 'file10.txt, file2.txt, file1.txt'
+                correct: false
         help: |
             https://symfony.com/doc/current/components/finder.html#sorting-results
             https://www.php.net/manual/en/function.strcmp.php
-
+            
             By default, the sortByName() method uses the strcmp PHP function
-
-    -   question: |
+            
+    -
+        question: |
             What would be the order of the following files after a call to sortByName() with true as its first argument?
-
+            
             file2.txt, file1.txt, file10.txt
+            
         answers:
-            - { value: "file1.txt, file2.txt, file10.txt", correct: true }
-            - { value: "file1.txt, file10.txt, file2.txt", correct: false }
-            - { value: "file10.txt, file2.txt, file1.txt", correct: false }
-
-    -   question: |
+            -
+                value: 'file1.txt, file2.txt, file10.txt'
+                correct: true
+            -
+                value: 'file1.txt, file10.txt, file2.txt'
+                correct: false
+            -
+                value: 'file10.txt, file2.txt, file1.txt'
+                correct: false
+    -
+        question: |
             Which of the following are valid sorting methods on the finder?
+            
         answers:
-            - { value: "sortByName", correct: true }
-            - { value: "sortByType", correct: true }
-            - { value: "sortByAccessedTime", correct: true }
-            - { value: "sortByChangedTime", correct: true }
-            - { value: "sortByModifiedTime", correct: true }
-            - { value: "sortByLastOpen", correct: false }
-            - { value: "sortByDirectories", correct: false }
-            - { value: "sortByAlphabeticalOrder", correct: false }
-            - { value: "sortByLastTouch", correct: false }
-
-    -   question: |
+            -
+                value: sortByName
+                correct: true
+            -
+                value: sortByType
+                correct: true
+            -
+                value: sortByAccessedTime
+                correct: true
+            -
+                value: sortByChangedTime
+                correct: true
+            -
+                value: sortByModifiedTime
+                correct: true
+            -
+                value: sortByLastOpen
+                correct: false
+            -
+                value: sortByDirectories
+                correct: false
+            -
+                value: sortByAlphabeticalOrder
+                correct: false
+            -
+                value: sortByLastTouch
+                correct: false
+    -
+        question: |
             Which is the correct method to reverse the order of the finder?
+            
         answers:
-            - { value: "reverseSorting", correct: true }
-            - { value: "reverseOrder", correct: false }
-            - { value: "flipOrder", correct: false }
-            - { value: "flipSorting", correct: false }
-            - { value: "oppositeSorting", correct: false }
-            - { value: "oppositeSorting", correct: false }
-
-    -   question: |
+            -
+                value: reverseSorting
+                correct: true
+            -
+                value: reverseOrder
+                correct: false
+            -
+                value: flipOrder
+                correct: false
+            -
+                value: flipSorting
+                correct: false
+            -
+                value: oppositeSorting
+                correct: false
+            -
+                value: oppositeSorting
+                correct: false
+    -
+        question: |
             Which is the correct method to reverse the order of the finder?
+            
         answers:
-            - { value: "reverseSorting", correct: true }
-            - { value: "reverseOrder", correct: false }
-            - { value: "flipOrder", correct: false }
-            - { value: "flipSorting", correct: false }
-            - { value: "oppositeSorting", correct: false }
-            - { value: "oppositeSorting", correct: false }
-
-    -   question: |
+            -
+                value: reverseSorting
+                correct: true
+            -
+                value: reverseOrder
+                correct: false
+            -
+                value: flipOrder
+                correct: false
+            -
+                value: flipSorting
+                correct: false
+            -
+                value: oppositeSorting
+                correct: false
+            -
+                value: oppositeSorting
+                correct: false
+    -
+        question: |
             Which solution will match /home/me/myFile.txt file ?
+            
         answers:
-            - { value: "$finder->in('/home/me')->depth('== 0');", correct: true }
-            - { value: "$finder->in('/home/me');", correct: true }
-            - { value: "$finder->files()->in('/home');", correct: true }
-            - { value: "$finder->files()->in('/home')->depth('> 1');", correct: false }
-            - { value: "$finder->directories()->in('/home')->depth('== 1');", correct: false }
-            - { value: "$finder->files()->in('/home')->depth('< 1');", correct: false }
-
-    -   question: |
+            -
+                value: '$finder->in(''/home/me'')->depth(''== 0'');'
+                correct: true
+            -
+                value: '$finder->in(''/home/me'');'
+                correct: true
+            -
+                value: '$finder->files()->in(''/home'');'
+                correct: true
+            -
+                value: '$finder->files()->in(''/home'')->depth(''> 1'');'
+                correct: false
+            -
+                value: '$finder->directories()->in(''/home'')->depth(''== 1'');'
+                correct: false
+            -
+                value: '$finder->files()->in(''/home'')->depth(''< 1'');'
+                correct: false
+    -
+        question: |
             How can one represent finder result as an array?
+            
         answers:
-            - { value: "By calling the iterator_to_array function on the Finder instance", correct: true }
-            - { value: "By calling toArray on the Finder instance", correct: false }
-            - { value: "By calling asArray on the Finder instance", correct: false }
-            - { value: "You can't", correct: false }
-
-    -   question: |
+            -
+                value: 'By calling the iterator_to_array function on the Finder instance'
+                correct: true
+            -
+                value: 'By calling toArray on the Finder instance'
+                correct: false
+            -
+                value: 'By calling asArray on the Finder instance'
+                correct: false
+            -
+                value: 'You can''t'
+                correct: false
+    -
+        question: |
             How can one view the contents of a found file?
+            
         answers:
-            - { value: "By calling getContents on the File instance", correct: true }
-            - { value: "By calling asString on the File instance", correct: false }
-            - { value: "By calling getStream on the File instance", correct: false }
-            - { value: "You can't", correct: false }
-
-    -   question: |
+            -
+                value: 'By calling getContents on the File instance'
+                correct: true
+            -
+                value: 'By calling asString on the File instance'
+                correct: false
+            -
+                value: 'By calling getStream on the File instance'
+                correct: false
+            -
+                value: 'You can''t'
+                correct: false
+    -
+        question: |
             What is the type of the files?
+            
         answers:
-            - { value: "Symfony\\Component\\Finder\\SplFileInfo", correct: true }
-            - { value: "Symfony\\Component\\Finder\\File\\SplFileInfo", correct: false }
-            - { value: "\\SplFileInfo", correct: false }
-            - { value: "Symfony\\Component\\Finder\\File", correct: false }
-            - { value: "Symfony\\Component\\Finder\\File\\File", correct: false }
-
-    -   question: |
+            -
+                value: Symfony\Component\Finder\SplFileInfo
+                correct: true
+            -
+                value: Symfony\Component\Finder\File\SplFileInfo
+                correct: false
+            -
+                value: \SplFileInfo
+                correct: false
+            -
+                value: Symfony\Component\Finder\File
+                correct: false
+            -
+                value: Symfony\Component\Finder\File\File
+                correct: false
+    -
+        question: |
             Which method gets the absolute path for a file?
+            
         answers:
-            - { value: "getRealPath()", correct: true }
-            - { value: "getAbsolutePath()", correct: false }
-            - { value: "getRelativePathname()", correct: false }
-            - { value: "getPath()", correct: false }
-            - { value: "getRelativePath()", correct: false }
-
-    -   question: |
+            -
+                value: getRealPath()
+                correct: true
+            -
+                value: getAbsolutePath()
+                correct: false
+            -
+                value: getRelativePathname()
+                correct: false
+            -
+                value: getPath()
+                correct: false
+            -
+                value: getRelativePath()
+                correct: false
+    -
+        question: |
             Which method gets the relative path for a file omitting the filename?
+            
         answers:
-            - { value: "getRelativePath()", correct: true }
-            - { value: "getRealPath()", correct: false }
-            - { value: "getAbsolutePath()", correct: false }
-            - { value: "getRelativePathname()", correct: false }
-            - { value: "getPath()", correct: false }
-
-    -   question: |
+            -
+                value: getRelativePath()
+                correct: true
+            -
+                value: getRealPath()
+                correct: false
+            -
+                value: getAbsolutePath()
+                correct: false
+            -
+                value: getRelativePathname()
+                correct: false
+            -
+                value: getPath()
+                correct: false
+    -
+        question: |
             Which method gets the relative path for a file?
+            
         answers:
-            - { value: "getRelativePathname()", correct: true }
-            - { value: "getRelativePath()", correct: false }
-            - { value: "getRealPath()", correct: false }
-            - { value: "getAbsolutePath()", correct: false }
-            - { value: "getPath()", correct: false }
-
-    -   question: |
+            -
+                value: getRelativePathname()
+                correct: true
+            -
+                value: getRelativePath()
+                correct: false
+            -
+                value: getRealPath()
+                correct: false
+            -
+                value: getAbsolutePath()
+                correct: false
+            -
+                value: getPath()
+                correct: false
+    -
+        question: |
             What is the method to check if the finder matches any files or directories?
+            
         answers:
-            - { value: "hasResults()", correct: true }
-            - { value: "hasFound()", correct: false }
-            - { value: "hasFiltered()", correct: false }
-            - { value: "hasFoundResults()", correct: false }
-
-    -   question: |
+            -
+                value: hasResults()
+                correct: true
+            -
+                value: hasFound()
+                correct: false
+            -
+                value: hasFiltered()
+                correct: false
+            -
+                value: hasFoundResults()
+                correct: false
+    -
+        question: |
             Which of the following are mandatory criteria?
+            
         answers:
-            - { value: "in()", correct: true }
-            - { value: "files() or directories()", correct: false }
-            - { value: "name()", correct: false }
-            - { value: "size()", correct: false }
-
-    -   question: |
+            -
+                value: in()
+                correct: true
+            -
+                value: 'files() or directories()'
+                correct: false
+            -
+                value: name()
+                correct: false
+            -
+                value: size()
+                correct: false
+    -
+        question: |
             Is the following a valid call to in() for wildcard matching?
-
+            
             $finder->in('src/Symfony/*/*/Resources');
+            
         answers:
-            - { value: "Yes", correct: true }
-            - { value: "No", correct: false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             What is the method to call to excude a directory?
+            
         answers:
-            - { value: "exclude", correct: true }
-            - { value: "notIn", correct: false }
-            - { value: "ignoreDir", correct: false }
-            - { value: "notDir", correct: false }
-
-    -   question: |
+            -
+                value: exclude
+                correct: true
+            -
+                value: notIn
+                correct: false
+            -
+                value: ignoreDir
+                correct: false
+            -
+                value: notDir
+                correct: false
+    -
+        question: |
             Is it possible for the finder to exclude directories which it doesn't have permission for?
+            
         answers:
-            - { value: "Yes, call ignoreUnreadableDirs()", correct: true }
-            - { value: "No it is not possible", correct: false }
-            - { value: "No, but you've can check the permissions", correct: false }
-            - { value: "Yes, call ignoreUnreadable()", correct: false }
-            - { value: "Yes, call readable()", correct: false }
-
-    -   question: |
+            -
+                value: 'Yes, call ignoreUnreadableDirs()'
+                correct: true
+            -
+                value: 'No it is not possible'
+                correct: false
+            -
+                value: 'No, but you''ve can check the permissions'
+                correct: false
+            -
+                value: 'Yes, call ignoreUnreadable()'
+                correct: false
+            -
+                value: 'Yes, call readable()'
+                correct: false
+    -
+        question: |
             Which of the following is valid methods?
+            
         answers:
-            - { value: "name()", correct: true }
-            - { value: "notName()", correct: true }
-            - { value: "contains()", correct: true }
-            - { value: "notContains()", correct: true }
-            - { value: "path()", correct: true }
-            - { value: "size()", correct: true }
-            - { value: "date()", correct: true }
-            - { value: "notSize()", correct: false }
-            - { value: "notDepth()", correct: false }
-
-
-    -   question: |
+            -
+                value: name()
+                correct: true
+            -
+                value: notName()
+                correct: true
+            -
+                value: contains()
+                correct: true
+            -
+                value: notContains()
+                correct: true
+            -
+                value: path()
+                correct: true
+            -
+                value: size()
+                correct: true
+            -
+                value: date()
+                correct: true
+            -
+                value: notSize()
+                correct: false
+            -
+                value: notDepth()
+                correct: false
+    -
+        question: |
             Which of the following can the contain() method accept?
+            
         answers:
-            - { value: "Regex strings", correct: true }
-            - { value: "string", correct: true }
-            - { value: "integers", correct: false }
-            - { value: "booleans", correct: false }
-            - { value: "wildcard strings", correct: false }
-
-    -   question: |
+            -
+                value: 'Regex strings'
+                correct: true
+            -
+                value: string
+                correct: true
+            -
+                value: integers
+                correct: false
+            -
+                value: booleans
+                correct: false
+            -
+                value: 'wildcard strings'
+                correct: false
+    -
+        question: |
             Which of the following can the path() method accept?
+            
         answers:
-            - { value: "Regex strings", correct: true }
-            - { value: "string", correct: true }
-            - { value: "integers", correct: false }
-            - { value: "booleans", correct: false }
-            - { value: "wildcard strings", correct: true }
-
-    -   question: |
+            -
+                value: 'Regex strings'
+                correct: true
+            -
+                value: string
+                correct: true
+            -
+                value: integers
+                correct: false
+            -
+                value: booleans
+                correct: false
+            -
+                value: 'wildcard strings'
+                correct: true
+    -
+        question: |
             Which of the following are a valid operators to limit compare the size of files?
+            
         answers:
-            - { value: ">", correct: true }
-            - { value: ">=", correct: true }
-            - { value: "<", correct: true }
-            - { value: "<=", correct: true }
-            - { value: "==", correct: true }
-            - { value: "!=", correct: true }
-            - { value: "!==", correct: false }
-            - { value: "===", correct: false }
-            - { value: "contains", correct: false }
-            - { value: "not is", correct: false }
-            - { value: "is", correct: false }
-
-    -   question: |
+            -
+                value: '>'
+                correct: true
+            -
+                value: '>='
+                correct: true
+            -
+                value: '<'
+                correct: true
+            -
+                value: '<='
+                correct: true
+            -
+                value: '=='
+                correct: true
+            -
+                value: '!='
+                correct: true
+            -
+                value: '!=='
+                correct: false
+            -
+                value: '==='
+                correct: false
+            -
+                value: contains
+                correct: false
+            -
+                value: 'not is'
+                correct: false
+            -
+                value: is
+                correct: false
+    -
+        question: |
             Which method is correct for filtering based on callback?
+            
         answers:
-            - { value: "filter()", correct: true }
-            - { value: "callback()", correct: false }
-            - { value: "filterCallback()", correct: false }
-            - { value: "arrayFilter()", correct: false }
-
-    -   question: |
+            -
+                value: filter()
+                correct: true
+            -
+                value: callback()
+                correct: false
+            -
+                value: filterCallback()
+                correct: false
+            -
+                value: arrayFilter()
+                correct: false
+    -
+        question: |
             How can one get the content of a file?
+            
         answers:
-            - { value: "Call the getContents() method", correct: true }
-            - { value: "Cast the file to a string", correct: false }
-            - { value: "Call the toString() method", correct: false }
+            -
+                value: 'Call the getContents() method'
+                correct: true
+            -
+                value: 'Cast the file to a string'
+                correct: false
+            -
+                value: 'Call the toString() method'
+                correct: false

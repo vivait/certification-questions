@@ -1,185 +1,371 @@
-category: HTTP Cache
+category: 'HTTP Cache'
 questions:
-    -   question: 'Which Cache-Control directive disallows the browser and all intermediate caches from storing any version of the returned response?'
+    -
+        question: 'Which Cache-Control directive disallows the browser and all intermediate caches from storing any version of the returned response?'
         answers:
-            - { value: no-store, correct: true }
-            - { value: private, correct: false }
-            - { value: public, correct: false }
-            - { value: no-cache, correct: false }
-
-    -   question: 'Which of theses are the way to add the Cache-Control: public,s-maxage=900 HTTP response header on a Symfony\Component\HttpFoundation\Response object?'
+            -
+                value: no-store
+                correct: true
+            -
+                value: private
+                correct: false
+            -
+                value: public
+                correct: false
+            -
+                value: no-cache
+                correct: false
+    -
+        question: 'Which of theses are the way to add the Cache-Control: public,s-maxage=900 HTTP response header on a Symfony\Component\HttpFoundation\Response object?'
         answers:
-            - { value: $response->setShareMaxAge(900);, correct: false}
-            - { value: $response->setSharedMaxAge(900);, correct: true}
-            - { value: $response->setSMaxAge(900);, correct: false}
-            - { value: $response->setMaxAge(900, true);, correct: false}
-
-    -   question: 'What are browser caches especially useful for?'
+            -
+                value: $response->setShareMaxAge(900);
+                correct: false
+            -
+                value: $response->setSharedMaxAge(900);
+                correct: true
+            -
+                value: $response->setSMaxAge(900);
+                correct: false
+            -
+                value: $response->setMaxAge(900
+                'true);,': false
+    -
+        question: 'What are browser caches especially useful for?'
         answers:
-            - { value: Back/forward navigation, correct: true }
-            - { value: Sharing files with other clients, correct: false }
-
-    -   question: 'Are browser caches dedicated to a single user?'
+            -
+                value: 'Back/forward navigation'
+                correct: true
+            -
+                value: 'Sharing files with other clients'
+                correct: false
+    -
+        question: 'Are browser caches dedicated to a single user?'
         answers:
-            - { value: Yes, correct: true }
-            - { value: No, correct: false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Which are the valid ways of caching a Response based not only on the URI but also the value of the
             Accept-Encoding and User-Agent request headers?
+            
         answers:
-            - { value: This is default behaviour, correct: false }
-            - value: |
-                  $response->headers->set('Vary', 'Accept-Encoding');
-                  $response->headers->set('Vary', 'User-Agent');
-              correct: false
-            -   value: |
-                    $response->headers->set('Vary', ['Accept-Encoding', 'User-Agent']);
-                correct: true
-            -   value: |
-                    $response->setVary('Accept-Encoding, User-Agent');
+            -
+                value: 'This is default behaviour'
                 correct: false
-            -   value: |
+            -
+                value: |
+                    $response->headers->set('Vary', 'Accept-Encoding');
+                    $response->headers->set('Vary', 'User-Agent');
+                    
+                correct: false
+            -
+                value: |
+                    $response->headers->set('Vary', ['Accept-Encoding', 'User-Agent']);
+                    
+                correct: true
+            -
+                value: |
+                    $response->setVary('Accept-Encoding, User-Agent');
+                    
+                correct: false
+            -
+                value: |
                     $response->setVary('Accept-Encoding');
                     $response->setVary('User-Agent', false);
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     $response->headers->set('Vary', 'Accept-Encoding');
                     $response->headers->set('Vary', 'User-Agent', false);
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     $response->headers->set('Vary', 'Accept-Encoding, User-Agent');
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     $response->setVary('Accept-Encoding');
                     $response->setVary('User-Agent');
+                    
                 correct: false
-
-    -   question: 'Which are the directives that can be found in the Cache-Control header?'
+    -
+        question: 'Which are the directives that can be found in the Cache-Control header?'
         answers:
-            - { value: no-cache, correct: true }
-            - { value: no-store, correct: true }
-            - { value: max-age, correct: true }
-            - { value: no-limit, correct: false }
-            - { value: no-rule, correct: false }
-
-    -   question: 'Which of the following directives are used in the request?'
+            -
+                value: no-cache
+                correct: true
+            -
+                value: no-store
+                correct: true
+            -
+                value: max-age
+                correct: true
+            -
+                value: no-limit
+                correct: false
+            -
+                value: no-rule
+                correct: false
+    -
+        question: 'Which of the following directives are used in the request?'
         answers:
-            - { value: no-transform, correct: true }
-            - { value: max-age, correct: true }
-            - { value: min-fresh, correct: true }
-            - { value: only-if-cached, correct: true }
-            - { value: no-limit, correct: false }
-            - { value: no-rule, correct: false }
-            - { value: proxy-revalidate, correct: false }
-            - { value: public, correct: false }
-
-    -   question: 'Which of the following directives are used in the response?'
+            -
+                value: no-transform
+                correct: true
+            -
+                value: max-age
+                correct: true
+            -
+                value: min-fresh
+                correct: true
+            -
+                value: only-if-cached
+                correct: true
+            -
+                value: no-limit
+                correct: false
+            -
+                value: no-rule
+                correct: false
+            -
+                value: proxy-revalidate
+                correct: false
+            -
+                value: public
+                correct: false
+    -
+        question: 'Which of the following directives are used in the response?'
         answers:
-            - { value: must-revalidate, correct: true }
-            - { value: no-cache, correct: true }
-            - { value: no-store, correct: true }
-            - { value: no-transform, correct: true }
-            - { value: no-limit, correct: false }
-            - { value: no-rule, correct: false }
-            - { value: proxy-revalidate, correct: false }
-            - { value: public, correct: false }
-
-    -   question: 'What is the purpose of the public cache directive?'
+            -
+                value: must-revalidate
+                correct: true
+            -
+                value: no-cache
+                correct: true
+            -
+                value: no-store
+                correct: true
+            -
+                value: no-transform
+                correct: true
+            -
+                value: no-limit
+                correct: false
+            -
+                value: no-rule
+                correct: false
+            -
+                value: proxy-revalidate
+                correct: false
+            -
+                value: public
+                correct: false
+    -
+        question: 'What is the purpose of the public cache directive?'
         answers:
-            - { value: To indicate the response can be cached anywhere, correct: true }
-            - { value: To indicate the response as not containing private data, correct: false }
-            - { value: To indicate the response can be stored on a unsecure server, correct: false }
-
-    -   question: 'What is the purpose of the private cache directive?'
+            -
+                value: 'To indicate the response can be cached anywhere'
+                correct: true
+            -
+                value: 'To indicate the response as not containing private data'
+                correct: false
+            -
+                value: 'To indicate the response can be stored on a unsecure server'
+                correct: false
+    -
+        question: 'What is the purpose of the private cache directive?'
         answers:
-            - { value: To indicate that the response is intended for a single user, correct: true }
-            - { value: To indicate the response the resonse should never be cached, correct: false }
-            - { value: To indicate the response is only allowed to be stored in proxy caches, correct: false }
-
-    -   question: 'What is the purpose of the no-cache cache directive?'
+            -
+                value: 'To indicate that the response is intended for a single user'
+                correct: true
+            -
+                value: 'To indicate the response the resonse should never be cached'
+                correct: false
+            -
+                value: 'To indicate the response is only allowed to be stored in proxy caches'
+                correct: false
+    -
+        question: 'What is the purpose of the no-cache cache directive?'
         answers:
-            - { value: To force caches to submit the request to the origin server for validation, correct: true }
-            - { value: To force that the cache is never be stored, correct: false }
-            - { value: To delete all caches stored in proxys, correct: false }
-
-    -   question: 'What is the purpose of the no-store cache directive?'
+            -
+                value: 'To force caches to submit the request to the origin server for validation'
+                correct: true
+            -
+                value: 'To force that the cache is never be stored'
+                correct: false
+            -
+                value: 'To delete all caches stored in proxys'
+                correct: false
+    -
+        question: 'What is the purpose of the no-store cache directive?'
         answers:
-            - { value: To ensure that caches do not store anything about the request or response, correct: true }
-            - { value: To ensure that caches do not store anything about the request, correct: false }
-            - { value: To ensure that caches do not store anything about the response, correct: false }
-
-    -   question: 'What is the purpose of the max-age cache directive?'
+            -
+                value: 'To ensure that caches do not store anything about the request or response'
+                correct: true
+            -
+                value: 'To ensure that caches do not store anything about the request'
+                correct: false
+            -
+                value: 'To ensure that caches do not store anything about the response'
+                correct: false
+    -
+        question: 'What is the purpose of the max-age cache directive?'
         answers:
-            - { value: To indicate the amount of time the resource is fresh, correct: true }
-            - { value: To indicate the date that the cache must update its copy, correct: false }
-            - { value: To indicate the date when the resource is no longer available, correct: false }
-
-    -   question: 'What is the purpose of the s-maxage cache directive?'
+            -
+                value: 'To indicate the amount of time the resource is fresh'
+                correct: true
+            -
+                value: 'To indicate the date that the cache must update its copy'
+                correct: false
+            -
+                value: 'To indicate the date when the resource is no longer available'
+                correct: false
+    -
+        question: 'What is the purpose of the s-maxage cache directive?'
         answers:
-            - { value: To indicate the amount of time the resource is fresh for proxy caches only, correct: true }
-            - { value: To indicate the amount of time the resource is fresh, correct: false }
-            - { value: To indicate the date when the resource is no longer available, correct: false }
-
-    -   question: 'What is the purpose of the max-stale cache directive?'
+            -
+                value: 'To indicate the amount of time the resource is fresh for proxy caches only'
+                correct: true
+            -
+                value: 'To indicate the amount of time the resource is fresh'
+                correct: false
+            -
+                value: 'To indicate the date when the resource is no longer available'
+                correct: false
+    -
+        question: 'What is the purpose of the max-stale cache directive?'
         answers:
-            - { value: To indicate the amount of time the client will consider a resource fresh from its server expiry, correct: true }
-            - { value: To indicate the amount of time the client will not consider a resource fresh, correct: false }
-            - { value: To indicate the date when the resource is no longer fresh, correct: false }
-
-    -   question: 'What is the purpose of the min-fresh cache directive?'
+            -
+                value: 'To indicate the amount of time the client will consider a resource fresh from its server expiry'
+                correct: true
+            -
+                value: 'To indicate the amount of time the client will not consider a resource fresh'
+                correct: false
+            -
+                value: 'To indicate the date when the resource is no longer fresh'
+                correct: false
+    -
+        question: 'What is the purpose of the min-fresh cache directive?'
         answers:
-            - { value: To indicate the time that the client considers a response to still be fresh, correct: true }
-            - { value: To indicate the amount of time the client will not consider a resource fresh, correct: false }
-            - { value: To indicate the date when the resource is no longer fresh, correct: false }
-
-    -   question: 'What is the purpose of the must-revalidate cache directive?'
+            -
+                value: 'To indicate the time that the client considers a response to still be fresh'
+                correct: true
+            -
+                value: 'To indicate the amount of time the client will not consider a resource fresh'
+                correct: false
+            -
+                value: 'To indicate the date when the resource is no longer fresh'
+                correct: false
+    -
+        question: 'What is the purpose of the must-revalidate cache directive?'
         answers:
-            - { value: To indicate the resource has become stale, correct: true }
-            - { value: To indicate the resource might  become stale, correct: false }
-            - { value: To indicate the date when the resource is no longer fresh, correct: false }
-
-    -   question: 'What is the purpose of the proxy-revalidate cache directive?'
+            -
+                value: 'To indicate the resource has become stale'
+                correct: true
+            -
+                value: 'To indicate the resource might  become stale'
+                correct: false
+            -
+                value: 'To indicate the date when the resource is no longer fresh'
+                correct: false
+    -
+        question: 'What is the purpose of the proxy-revalidate cache directive?'
         answers:
-            - { value: To indicate the resource has become stale for the proxy, correct: true }
-            - { value: To indicate the resource might become stale, correct: false }
-            - { value: To indicate the date when the resource is no longer fresh for the proxy, correct: false }
-
-    -   question: 'What is the purpose of the immutable cache directive?'
+            -
+                value: 'To indicate the resource has become stale for the proxy'
+                correct: true
+            -
+                value: 'To indicate the resource might become stale'
+                correct: false
+            -
+                value: 'To indicate the date when the resource is no longer fresh for the proxy'
+                correct: false
+    -
+        question: 'What is the purpose of the immutable cache directive?'
         answers:
-            - { value: To indicate the response body will not change over time, correct: true }
-            - { value: To indicate the response body will never become stale, correct: false }
-            - { value: To indicate the resource is insecure, correct: false }
-
-    -   question: 'What is the purpose of the only-if-cached cache directive?'
+            -
+                value: 'To indicate the response body will not change over time'
+                correct: true
+            -
+                value: 'To indicate the response body will never become stale'
+                correct: false
+            -
+                value: 'To indicate the resource is insecure'
+                correct: false
+    -
+        question: 'What is the purpose of the only-if-cached cache directive?'
         answers:
-            - { value: To indicate that the response should not be fetched again, correct: true }
-            - { value: To indicate that proxies should return cached copies if a condition is matched, correct: false }
-            - { value: To indicate that this response should only be cached if a condition is matched, correct: false }
-
-    -   question: 'Which is a valid way to prevent all caching using the Cache-Control header?'
+            -
+                value: 'To indicate that the response should not be fetched again'
+                correct: true
+            -
+                value: 'To indicate that proxies should return cached copies if a condition is matched'
+                correct: false
+            -
+                value: 'To indicate that this response should only be cached if a condition is matched'
+                correct: false
+    -
+        question: 'Which is a valid way to prevent all caching using the Cache-Control header?'
         answers:
-            - { value: 'Cache-Control: no-store', correct: false }
-            - { value: 'Cache-Control: no-cache', correct: true }
-            - { value: 'Cache-Control: disable', correct: false }
-
-    -   question: 'Which is a valid way to prevent all caching using the Cache-Control header?'
+            -
+                value: 'Cache-Control: no-store'
+                correct: false
+            -
+                value: 'Cache-Control: no-cache'
+                correct: true
+            -
+                value: 'Cache-Control: disable'
+                correct: false
+    -
+        question: 'Which is a valid way to prevent all caching using the Cache-Control header?'
         answers:
-            - { value: 'Cache-Control: no-store', correct: false }
-            - { value: 'Cache-Control: no-cache', correct: true }
-            - { value: 'Cache-Control: disable', correct: false }
-
-    -   question: What happens for an HTTP response if it has both the Expires and Cache-Control headers set?
+            -
+                value: 'Cache-Control: no-store'
+                correct: false
+            -
+                value: 'Cache-Control: no-cache'
+                correct: true
+            -
+                value: 'Cache-Control: disable'
+                correct: false
+    -
+        question: 'What happens for an HTTP response if it has both the Expires and Cache-Control headers set?'
         answers:
-            - { value: 'Caching systems will favor the Cache-Control header field over the Expires field to cache the response.', correct: true }
-            - { value: 'Caching systems will use the Expires header field if the response is generated if the current day number is odd, otherwise they will use the Cache-Control header field.', correct: false }
-            - { value: 'The response wont be cachable and caching systems will simply ignore it.', correct: false }
-            - { value: 'Caching systems will favor the Expires header field over the Cache-Control field to cache the response.', correct: false }
-
-    -   question: What can happen to an HTTP response whose Cache-Control header value equals private, max-age=120?
+            -
+                value: 'Caching systems will favor the Cache-Control header field over the Expires field to cache the response.'
+                correct: true
+            -
+                value: 'Caching systems will use the Expires header field if the response is generated if the current day number is odd, otherwise they will use the Cache-Control header field.'
+                correct: false
+            -
+                value: 'The response wont be cachable and caching systems will simply ignore it.'
+                correct: false
+            -
+                value: 'Caching systems will favor the Expires header field over the Cache-Control field to cache the response.'
+                correct: false
+    -
+        question: 'What can happen to an HTTP response whose Cache-Control header value equals private, max-age=120?'
         answers:
-            - { value: 'It will be cached by any proxy server.', correct: false }
-            - { value: 'It will only be cached by any shared proxy servers including reverse proxies.', correct: false }
-            - { value: 'It will be cached by a reverse proxy cache like Varnish.', correct: false }
-            - { value: 'It will be cached by the web browser.', correct: true }
-            - { value: 'It prevents the response from being cached by the web browser or any shared proxies.', correct: false }
+            -
+                value: 'It will be cached by any proxy server.'
+                correct: false
+            -
+                value: 'It will only be cached by any shared proxy servers including reverse proxies.'
+                correct: false
+            -
+                value: 'It will be cached by a reverse proxy cache like Varnish.'
+                correct: false
+            -
+                value: 'It will be cached by the web browser.'
+                correct: true
+            -
+                value: 'It prevents the response from being cached by the web browser or any shared proxies.'
+                correct: false

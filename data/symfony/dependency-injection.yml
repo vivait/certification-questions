@@ -1,34 +1,59 @@
-category: Dependency Injection
+category: 'Dependency Injection'
 questions:
-    -   question: "What is the tag to register a custom service that loads translations?"
+    -
+        question: 'What is the tag to register a custom service that loads translations?'
         answers:
-            - {value: "translation_loader", correct: false}
-            - {value: 'translator_loader', correct: false}
-            - {value: 'translator.loader', correct: false}
-            - {value: 'translation.loader', correct: true}
-
-    -   question: "Which injection types are supported by the Symfony's DIC?"
+            -
+                value: translation_loader
+                correct: false
+            -
+                value: translator_loader
+                correct: false
+            -
+                value: translator.loader
+                correct: false
+            -
+                value: translation.loader
+                correct: true
+    -
+        question: 'Which injection types are supported by the Symfony''s DIC?'
         answers:
-            - {value: "setter", correct: true}
-            - {value: 'property', correct: true}
-            - {value: 'constructor', correct: true}
-            - {value: 'getter', correct: false}
-
-    -   question: "Do synthetic services require a class name?"
+            -
+                value: setter
+                correct: true
+            -
+                value: property
+                correct: true
+            -
+                value: constructor
+                correct: true
+            -
+                value: getter
+                correct: false
+    -
+        question: 'Do synthetic services require a class name?'
         answers:
-            - {value: "It is optional", correct: false}
-            - {value: 'They do not specify a class', correct: true}
-            - {value: 'A class is required for container validation', correct: false}
-
-    -   question: |
+            -
+                value: 'It is optional'
+                correct: false
+            -
+                value: 'They do not specify a class'
+                correct: true
+            -
+                value: 'A class is required for container validation'
+                correct: false
+    -
+        question: |
             On a default Symfony project using symfony/form, what solutions can successfully help us retrieve the
             FormFactory in the signup action?
+            
         answers:
-            -   value: |
+            -
+                value: |
                     class SecurityController
                     {
                         private $formFactory;
-
+                    
                         /**
                          * @required
                          */
@@ -36,36 +61,38 @@ questions:
                         {
                             $this->formFactory = $formFactory;
                         }
-
+                    
                         public function signup()
                         {
                             $formFactory = $this->formFactory;
                         }
                     }
+                    
                 correct: true
-
-            -   value: |
+            -
+                value: |
                     use Symfony\Component\Form\FormFactoryInterface;
-
+                    
                     class SecurityController
                     {
                         private $formFactory;
-
+                    
                         public function __construct(FormFactoryInterface $formfactory)
                         {
                             $this->formFactory = $formFactory;
                         }
-
+                    
                         public function signup()
                         {
                             $formFactory = $this->formFactory;
                         }
                     }
+                    
                 correct: true
-
-            -   value: |
+            -
+                value: |
                     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+                    
                     class SecurityController extends Controller
                     {
                         public function signup()
@@ -73,22 +100,24 @@ questions:
                             $formFactory = $this->get('form.factory');
                         }
                     }
+                    
                 correct: true
-
-            -   value: |
+            -
+                value: |
                     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+                    
                     class SecurityController extends Controller
                     {
                         public function signup(FormFactoryInterface $formfactory)
                         {
                         }
                     }
+                    
                 correct: true
-
-            -   value: |
+            -
+                value: |
                     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
+                    
                     class SecurityController extends AbstractController
                     {
                         public function signup()
@@ -96,594 +125,1020 @@ questions:
                             $formFactory = $this->getFormFactory();
                         }
                     }
+                    
                 correct: false
-
-    -   question: |
+    -
+        question: |
             What will be the value of the following configuration sample?
-
+            
             <parameter key="mailer.transport">
                 sendmail
             </parameter>
+            
         answers:
-            -   value: |
+            -
+                value: |
                     \n
                     sendmail\n
+                    
                 correct: true
-            - {value: 'sendmail', correct: false}
-            - {value: 'sendmail\n', correct: false}
-            - {value: 'sendmail\n', correct: false}
-
-    -   question: Which statements are true about the Symfony\Bundle\FrameworkBundle\Controller\AbstractController class?
+            -
+                value: sendmail
+                correct: false
+            -
+                value: sendmail\n
+                correct: false
+            -
+                value: sendmail\n
+                correct: false
+    -
+        question: 'Which statements are true about the Symfony\Bundle\FrameworkBundle\Controller\AbstractController class?'
         answers:
-            - {value: 'An AbstractController uses ControllerTrait.', correct: false}
-            - {value: 'An AbstractController replaces the former Controller.', correct: true}
-            - {value: 'An AbstractController behaves like a Controller, but provide a restricted access to services.', correct: true}
-            - {value: 'An AbstractController is ServiceSubscriberInterface.', correct: true}
-
-    -   question: What is the tag to use to register HTTP content rendering strategy?
+            -
+                value: 'An AbstractController uses ControllerTrait.'
+                correct: false
+            -
+                value: 'An AbstractController replaces the former Controller.'
+                correct: true
+            -
+                value: 'An AbstractController behaves like a Controller, but provide a restricted access to services.'
+                correct: true
+            -
+                value: 'An AbstractController is ServiceSubscriberInterface.'
+                correct: true
+    -
+        question: 'What is the tag to use to register HTTP content rendering strategy?'
         answers:
-            - {value: 'kernel.fragment_renderer', correct: true}
-            - {value: 'content_renderer', correct: false}
-            - {value: 'kernel.renderer', correct: false}
-            - {value: 'kernel.content_renderer', correct: false}
-            - {value: 'renderer', correct: false}
-            - {value: 'fragment_renderer', correct: false}
-
-    -   question: Which of the following sentences are true about synthetic services?
+            -
+                value: kernel.fragment_renderer
+                correct: true
+            -
+                value: content_renderer
+                correct: false
+            -
+                value: kernel.renderer
+                correct: false
+            -
+                value: kernel.content_renderer
+                correct: false
+            -
+                value: renderer
+                correct: false
+            -
+                value: fragment_renderer
+                correct: false
+    -
+        question: 'Which of the following sentences are true about synthetic services?'
         answers:
-            - {value: 'The kernel service is synthetic.', correct: true}
-            - {value: 'Third-party services cannot be registered as synthetic.', correct: false}
-            - {value: 'They are injected into the container instead of being created by the container.', correct: true}
-            - {value: 'They cannot be injected into another services.', correct: false}
-
-    -   question: What is the tag to register a provider for expression language functions in routing?
+            -
+                value: 'The kernel service is synthetic.'
+                correct: true
+            -
+                value: 'Third-party services cannot be registered as synthetic.'
+                correct: false
+            -
+                value: 'They are injected into the container instead of being created by the container.'
+                correct: true
+            -
+                value: 'They cannot be injected into another services.'
+                correct: false
+    -
+        question: 'What is the tag to register a provider for expression language functions in routing?'
         answers:
-            - {value: 'routing.route_provider', correct: false}
-            - {value: 'routing.expression_language_provider', correct: true}
-            - {value: 'routing.provider', correct: false}
-            - {value: 'router.route_provider', correct: false}
-            - {value: 'router.expression_language_provider', correct: false}
-            - {value: 'router.provider', correct: false}
-
-    -   question: |
+            -
+                value: routing.route_provider
+                correct: false
+            -
+                value: routing.expression_language_provider
+                correct: true
+            -
+                value: routing.provider
+                correct: false
+            -
+                value: router.route_provider
+                correct: false
+            -
+                value: router.expression_language_provider
+                correct: false
+            -
+                value: router.provider
+                correct: false
+    -
+        question: |
             What is the result of:
                 # config/services.yaml
                 Foo: ~
-
+            
                 Bar:
                     public: false
                     decorates: Foo
                     decoration_priority: 5
                     arguments: ['@Bar.inner']
-
+            
                 Baz:
                     public: false
                     decorates: Foo
                     decoration_priority: 1
                     arguments: ['@Baz.inner']
+            
         answers:
-            - {value: '$this->services[Foo::class] = new Baz(new Bar(new Foo()));', correct: true}
-            - {value: '$this->services[Foo::class] = new Bar(new Bar(new Foo()));', correct: false}
-            - {value: '$this->services[Foo::class] = new Baz(new Foo());', correct: false}
-            - {value: '$this->services[Foo::class] = new Bar(new Foo());', correct: false}
-            - {value: '$this->services[Foo::class] = new Foo();', correct: false}
-
-    -   question: "Which configuration format is the most efficient for the container when registering new services?"
+            -
+                value: '$this->services[Foo::class] = new Baz(new Bar(new Foo()));'
+                correct: true
+            -
+                value: '$this->services[Foo::class] = new Bar(new Bar(new Foo()));'
+                correct: false
+            -
+                value: '$this->services[Foo::class] = new Baz(new Foo());'
+                correct: false
+            -
+                value: '$this->services[Foo::class] = new Bar(new Foo());'
+                correct: false
+            -
+                value: '$this->services[Foo::class] = new Foo();'
+                correct: false
+    -
+        question: 'Which configuration format is the most efficient for the container when registering new services?'
         answers:
-            - {value: "YAML", correct: false}
-            - {value: "None of them (they're cached and compiled PHP before running).", correct: true}
-            - {value: 'XML', correct: false}
-            - {value: 'PHP', correct: false}
-
-    - question: "Which of the following is the correct way to decorate a service?"
-      answers:
-          - value: |
-                App\DecoratingMailer:
-                    decorates: App\Mailer
-            correct: true
-          - value: |
-                App\DecoratingMailer:
-                    decorates: @App\Mailer
-            correct: false
-          - value: |
-                App\DecoratingMailer:
-                    wrap: App\Mailer
-            correct: false
-          - value: |
-                App\DecoratingMailer:
-                    wrap: @App\Mailer
-            correct: false
-
-    - question: "What would be the default service alias when the App\\Mailer is decorated?"
-      answers:
-          - {value: "App\\Mailer.inner", correct: true}
-          - {value: "App\\Mailer", correct: false}
-          - {value: 'App\\Mailer.decorated', correct: false}
-
-    - question: "Which of the following is the valid way to change the decorated service's alias?"
-      answers:
-          - value: |
-                App\DecoratingMailer:
-                    decoration_inner_name: App\DecoratingMailer.changed
-            correct: true
-          - value: |
-                App\DecoratingMailer:
-                    decorated_service_alias: App\DecoratingMailer.changed
-            correct: false
-          - value: |
-                App\DecoratingMailer:
-                    original_service_alias: App\DecoratingMailer.changed
-            correct: false
-
-    - question: "Which of the following is the valid way to create a service using a static factory?"
-      answers:
-          - value: |
-                App\Email\NewsletterManager:
-                    factory: ['App\Email\NewsletterManagerStaticFactory', 'createNewsletterManager']
-            correct: true
-          - value: |
-                App\Email\NewsletterManager:
-                    factory_class: 'App\Email\NewsletterManagerStaticFactory',
-                    factory_method: 'createNewsletterManager'
-            correct: false
-          - value: |
-                App\Email\NewsletterManager: ['App\Email\NewsletterManagerStaticFactory', 'createNewsletterManager']
-            correct: false
-
-    - question: "Which of the following is the valid way to create a service using a static factory?"
-      answers:
-          - value: |
-                <services>
-                    <service id="App\Email\NewsletterManager">
-                        <factory class="App\Email\NewsletterManagerStaticFactory" method="createNewsletterManager"/>
-                    </service>
-                </services>
-            correct: true
-          - value: |
-                <services>
-                    <service id="App\Email\NewsletterManager">
-                        <factory value="App\Email\NewsletterManagerStaticFactory::createNewsletterManager"/>
-                    </service>
-                </services>
-            correct: false
-          - value: |
-                <services>
-                    <service id="App\Email\NewsletterManager" factory="App\Email\NewsletterManagerStaticFactory::createNewsletterManager">
-                    </service>
-                </services>
-            correct: false
-
-    - question: "Which of the following is the valid way to create a service using a static factory?"
-      answers:
-          - value: |
-                namespace Symfony\Component\DependencyInjection\Loader\Configurator;
-
-                use App\Email\NewsletterManager;
-                use App\Email\NewsletterManagerStaticFactory;
-
-                return function(ContainerConfigurator $configurator) {
-                    $services = $configurator->services();
-
-                    $services->set(NewsletterManager::class)
-                        ->factory([NewsletterManagerStaticFactory::class, 'createNewsletterManager']);
-                };
-            correct: true
-          - value: |
-                namespace Symfony\Component\DependencyInjection\Loader\Configurator;
-
-                use App\Email\NewsletterManager;
-                use App\Email\NewsletterManagerStaticFactory;
-
-                return function(ContainerConfigurator $configurator) {
-                    $services = $configurator->services();
-
-                    $services->set(NewsletterManager::class)
-                        ->factory(NewsletterManagerStaticFactory::createNewsletterManager());
-                };
-            correct: false
-          - value: |
-                namespace Symfony\Component\DependencyInjection\Loader\Configurator;
-
-                use App\Email\NewsletterManager;
-                use App\Email\NewsletterManagerStaticFactory;
-
-                return function(ContainerConfigurator $configurator) {
-                    $services = $configurator->services();
-
-                    $services->set(NewsletterManager::class)
-                        ->factory(function () {
-                            return NewsletterManagerStaticFactory::createNewsletterManager();
-                        });
-                };
-            correct: false
-
-    - question: "Which of the following is the valid way to create a service using a factory?"
-      answers:
-          - value: |
-                App\Email\NewsletterManager:
-                    factory: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager']
-            correct: true
-          - value: |
-                App\Email\NewsletterManager:
-                    factory_class: '@App\Email\NewsletterManagerFactory'
-                    factory_method: 'createNewsletterManager'
-            correct: false
-          - value: |
-                App\Email\NewsletterManager: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager']
-            correct: false
-
-    - question: "Which of the following is the valid way to create a service using a factory?"
-      answers:
-          - value: |
-                <services>
-                    <service id="App\Email\NewsletterManager">
-                        <factory service="App\Email\NewsletterManagerFactory" method="createNewsletterManager"/>
-                    </service>
-                </services>
-            correct: true
-          - value: |
-                <services>
-                    <service id="App\Email\NewsletterManager">
-                        <factory service="App\Email\NewsletterManagerFactory::createNewsletterManager"/>
-                    </service>
-                </services>
-            correct: false
-          - value: |
-                <services>
-                    <service id="App\Email\NewsletterManager" factory="@App\Email\NewsletterManagerFactory::createNewsletterManager">
-                    </service>
-                </services>
-            correct: false
-
-    - question: "Which of the following is the valid way to create a service using a factory?"
-      answers:
-          - value: |
-                return function(ContainerConfigurator $configurator) {
-                    $services = $configurator->services();
-
-                    $services->set(NewsletterManager::class)
-                         ->factory([ref(NewsletterManagerFactory::class), 'createNewsletterManager']);
-                };
-            correct: true
-          - value: |
-                return function(ContainerConfigurator $configurator) {
-                    $services = $configurator->services();
-
-                    $services->set(NewsletterManager::class)
-                        ->serviceFactory([NewsletterManagerFactory, 'createNewsletterManager']);
-                };
-            correct: false
-          - value: |
-                return function(ContainerConfigurator $configurator) {
-                    $services = $configurator->services();
-
-                    $services->set(NewsletterManager::class)
-                        ->factory(function ($container) {
-                            return $container->get(NewsletterManagerFactory::class)->createNewsletterManager();
-                        });
-                };
-            correct: false
-
-    - question: "Which of the following is the valid way to pass arguments to a factory?"
-      answers:
-          - value: |
-                App\Email\NewsletterManager:
-                    factory: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager']
-                    arguments: ['@templating']
-            correct: true
-          - value: |
-                App\Email\NewsletterManager:
-                    factory: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager']
-                    factory_arguments: ['@templating']
-            correct: false
-          - value: |
-                App\Email\NewsletterManager: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager', '@templating']
-            correct: false
-
-    -   question: "What is the tag to use to register your service to be called during the cache warming process?"
+            -
+                value: YAML
+                correct: false
+            -
+                value: 'None of them (they''re cached and compiled PHP before running).'
+                correct: true
+            -
+                value: XML
+                correct: false
+            -
+                value: PHP
+                correct: false
+    -
+        question: 'Which of the following is the correct way to decorate a service?'
         answers:
-            - {value: "cache.warmer", correct: false}
-            - {value: "cache_warmer", correct: false}
-            - {value: 'kernel.warmer', correct: false}
-            - {value: 'kernel.cache_warmer', correct: true}
-            - {value: 'command.cache_warmer', correct: false}
-
-    -   question: "What is the tag to use to create a custom form field type?"
+            -
+                value: |
+                    App\DecoratingMailer:
+                        decorates: App\Mailer
+                    
+                correct: true
+            -
+                value: |
+                    App\DecoratingMailer:
+                        decorates: @App\Mailer
+                    
+                correct: false
+            -
+                value: |
+                    App\DecoratingMailer:
+                        wrap: App\Mailer
+                    
+                correct: false
+            -
+                value: |
+                    App\DecoratingMailer:
+                        wrap: @App\Mailer
+                    
+                correct: false
+    -
+        question: 'What would be the default service alias when the App\Mailer is decorated?'
         answers:
-            - {value: "form.type_extension", correct: false}
-            - {value: 'form.type', correct: true}
-            - {value: 'form', correct: false}
-
-    -   question: "What is the tag to use to create a custom form type extension?"
+            -
+                value: App\Mailer.inner
+                correct: true
+            -
+                value: App\Mailer
+                correct: false
+            -
+                value: App\\Mailer.decorated
+                correct: false
+    -
+        question: 'Which of the following is the valid way to change the decorated service''s alias?'
         answers:
-            - {value: "form.type_extension", correct: true}
-            - {value: "type_extension", correct: false}
-            - {value: 'form.type.extension', correct: false}
-            - {value: 'form_extension', correct: false}
-
-    -   question: "Should a parent service be abstract?"
+            -
+                value: |
+                    App\DecoratingMailer:
+                        decoration_inner_name: App\DecoratingMailer.changed
+                    
+                correct: true
+            -
+                value: |
+                    App\DecoratingMailer:
+                        decorated_service_alias: App\DecoratingMailer.changed
+                    
+                correct: false
+            -
+                value: |
+                    App\DecoratingMailer:
+                        original_service_alias: App\DecoratingMailer.changed
+                    
+                correct: false
+    -
+        question: 'Which of the following is the valid way to create a service using a static factory?'
         answers:
-            - {value: "No", correct: true}
-            - {value: "Yes", correct: false}
-
-    -   question: |
+            -
+                value: |
+                    App\Email\NewsletterManager:
+                        factory: ['App\Email\NewsletterManagerStaticFactory', 'createNewsletterManager']
+                    
+                correct: true
+            -
+                value: |
+                    App\Email\NewsletterManager:
+                        factory_class: 'App\Email\NewsletterManagerStaticFactory',
+                        factory_method: 'createNewsletterManager'
+                    
+                correct: false
+            -
+                value: |
+                    App\Email\NewsletterManager: ['App\Email\NewsletterManagerStaticFactory', 'createNewsletterManager']
+                    
+                correct: false
+    -
+        question: 'Which of the following is the valid way to create a service using a static factory?'
+        answers:
+            -
+                value: |
+                    <services>
+                        <service id="App\Email\NewsletterManager">
+                            <factory class="App\Email\NewsletterManagerStaticFactory" method="createNewsletterManager"/>
+                        </service>
+                    </services>
+                    
+                correct: true
+            -
+                value: |
+                    <services>
+                        <service id="App\Email\NewsletterManager">
+                            <factory value="App\Email\NewsletterManagerStaticFactory::createNewsletterManager"/>
+                        </service>
+                    </services>
+                    
+                correct: false
+            -
+                value: |
+                    <services>
+                        <service id="App\Email\NewsletterManager" factory="App\Email\NewsletterManagerStaticFactory::createNewsletterManager">
+                        </service>
+                    </services>
+                    
+                correct: false
+    -
+        question: 'Which of the following is the valid way to create a service using a static factory?'
+        answers:
+            -
+                value: |
+                    namespace Symfony\Component\DependencyInjection\Loader\Configurator;
+                    
+                    use App\Email\NewsletterManager;
+                    use App\Email\NewsletterManagerStaticFactory;
+                    
+                    return function(ContainerConfigurator $configurator) {
+                        $services = $configurator->services();
+                    
+                        $services->set(NewsletterManager::class)
+                            ->factory([NewsletterManagerStaticFactory::class, 'createNewsletterManager']);
+                    };
+                    
+                correct: true
+            -
+                value: |
+                    namespace Symfony\Component\DependencyInjection\Loader\Configurator;
+                    
+                    use App\Email\NewsletterManager;
+                    use App\Email\NewsletterManagerStaticFactory;
+                    
+                    return function(ContainerConfigurator $configurator) {
+                        $services = $configurator->services();
+                    
+                        $services->set(NewsletterManager::class)
+                            ->factory(NewsletterManagerStaticFactory::createNewsletterManager());
+                    };
+                    
+                correct: false
+            -
+                value: |
+                    namespace Symfony\Component\DependencyInjection\Loader\Configurator;
+                    
+                    use App\Email\NewsletterManager;
+                    use App\Email\NewsletterManagerStaticFactory;
+                    
+                    return function(ContainerConfigurator $configurator) {
+                        $services = $configurator->services();
+                    
+                        $services->set(NewsletterManager::class)
+                            ->factory(function () {
+                                return NewsletterManagerStaticFactory::createNewsletterManager();
+                            });
+                    };
+                    
+                correct: false
+    -
+        question: 'Which of the following is the valid way to create a service using a factory?'
+        answers:
+            -
+                value: |
+                    App\Email\NewsletterManager:
+                        factory: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager']
+                    
+                correct: true
+            -
+                value: |
+                    App\Email\NewsletterManager:
+                        factory_class: '@App\Email\NewsletterManagerFactory'
+                        factory_method: 'createNewsletterManager'
+                    
+                correct: false
+            -
+                value: |
+                    App\Email\NewsletterManager: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager']
+                    
+                correct: false
+    -
+        question: 'Which of the following is the valid way to create a service using a factory?'
+        answers:
+            -
+                value: |
+                    <services>
+                        <service id="App\Email\NewsletterManager">
+                            <factory service="App\Email\NewsletterManagerFactory" method="createNewsletterManager"/>
+                        </service>
+                    </services>
+                    
+                correct: true
+            -
+                value: |
+                    <services>
+                        <service id="App\Email\NewsletterManager">
+                            <factory service="App\Email\NewsletterManagerFactory::createNewsletterManager"/>
+                        </service>
+                    </services>
+                    
+                correct: false
+            -
+                value: |
+                    <services>
+                        <service id="App\Email\NewsletterManager" factory="@App\Email\NewsletterManagerFactory::createNewsletterManager">
+                        </service>
+                    </services>
+                    
+                correct: false
+    -
+        question: 'Which of the following is the valid way to create a service using a factory?'
+        answers:
+            -
+                value: |
+                    return function(ContainerConfigurator $configurator) {
+                        $services = $configurator->services();
+                    
+                        $services->set(NewsletterManager::class)
+                             ->factory([ref(NewsletterManagerFactory::class), 'createNewsletterManager']);
+                    };
+                    
+                correct: true
+            -
+                value: |
+                    return function(ContainerConfigurator $configurator) {
+                        $services = $configurator->services();
+                    
+                        $services->set(NewsletterManager::class)
+                            ->serviceFactory([NewsletterManagerFactory, 'createNewsletterManager']);
+                    };
+                    
+                correct: false
+            -
+                value: |
+                    return function(ContainerConfigurator $configurator) {
+                        $services = $configurator->services();
+                    
+                        $services->set(NewsletterManager::class)
+                            ->factory(function ($container) {
+                                return $container->get(NewsletterManagerFactory::class)->createNewsletterManager();
+                            });
+                    };
+                    
+                correct: false
+    -
+        question: 'Which of the following is the valid way to pass arguments to a factory?'
+        answers:
+            -
+                value: |
+                    App\Email\NewsletterManager:
+                        factory: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager']
+                        arguments: ['@templating']
+                    
+                correct: true
+            -
+                value: |
+                    App\Email\NewsletterManager:
+                        factory: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager']
+                        factory_arguments: ['@templating']
+                    
+                correct: false
+            -
+                value: |
+                    App\Email\NewsletterManager: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager', '@templating']
+                    
+                correct: false
+    -
+        question: 'What is the tag to use to register your service to be called during the cache warming process?'
+        answers:
+            -
+                value: cache.warmer
+                correct: false
+            -
+                value: cache_warmer
+                correct: false
+            -
+                value: kernel.warmer
+                correct: false
+            -
+                value: kernel.cache_warmer
+                correct: true
+            -
+                value: command.cache_warmer
+                correct: false
+    -
+        question: 'What is the tag to use to create a custom form field type?'
+        answers:
+            -
+                value: form.type_extension
+                correct: false
+            -
+                value: form.type
+                correct: true
+            -
+                value: form
+                correct: false
+    -
+        question: 'What is the tag to use to create a custom form type extension?'
+        answers:
+            -
+                value: form.type_extension
+                correct: true
+            -
+                value: type_extension
+                correct: false
+            -
+                value: form.type.extension
+                correct: false
+            -
+                value: form_extension
+                correct: false
+    -
+        question: 'Should a parent service be abstract?'
+        answers:
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             With the following service definition how is it possible to access the mailer service?
-
+            
             services:
                 app.mailer.one:
                     class: App\OneMailer
                     arguments: [sendmail]
                     public: false
-
+            
                 app.mailer:
                     alias: app.mailer.one
                     public: true
+            
         answers:
-            - {value: "It is not possible.", correct: false}
-            - {value: "$container->get('app.mailer');", correct: true}
-            - {value: "$container->get('app.mailer.one');", correct: false}
-
-
-    -   question: "What is the tag to use to create a command?"
+            -
+                value: 'It is not possible.'
+                correct: false
+            -
+                value: '$container->get(''app.mailer'');'
+                correct: true
+            -
+                value: '$container->get(''app.mailer.one'');'
+                correct: false
+    -
+        question: 'What is the tag to use to create a command?'
         answers:
-            - {value: "console.command", correct: true}
-            - {value: "command", correct: false}
-            - {value: 'console_command', correct: false}
-            - {value: 'cli.command', correct: false}
-
-    -   question: "What is the tag to use to register a value resolver for controller arguments?"
+            -
+                value: console.command
+                correct: true
+            -
+                value: command
+                correct: false
+            -
+                value: console_command
+                correct: false
+            -
+                value: cli.command
+                correct: false
+    -
+        question: 'What is the tag to use to register a value resolver for controller arguments?'
         answers:
-            - {value: "controller.argument_value_resolver", correct: true}
-            - {value: "kernel.value_resolver", correct: false}
-            - {value: 'argument_resolver', correct: false}
-            - {value: 'controller.arguments', correct: false}
-
-    -   question: "What is the tag to use to create a class that collects custom data for the profiler?"
+            -
+                value: controller.argument_value_resolver
+                correct: true
+            -
+                value: kernel.value_resolver
+                correct: false
+            -
+                value: argument_resolver
+                correct: false
+            -
+                value: controller.arguments
+                correct: false
+    -
+        question: 'What is the tag to use to create a class that collects custom data for the profiler?'
         answers:
-            - {value: "data_collector", correct: true}
-            - {value: "kernel.data_collector", correct: false}
-            - {value: 'profiler.data_collector', correct: false}
-            - {value: 'data.collector', correct: false}
-        help: http://symfony.com/doc/current/reference/dic_tags.html#data-collector
-
-    -   question: "What is the tag to use to add a Doctrine event listener?"
+            -
+                value: data_collector
+                correct: true
+            -
+                value: kernel.data_collector
+                correct: false
+            -
+                value: profiler.data_collector
+                correct: false
+            -
+                value: data.collector
+                correct: false
+        help: 'http://symfony.com/doc/current/reference/dic_tags.html#data-collector'
+    -
+        question: 'What is the tag to use to add a Doctrine event listener?'
         answers:
-            - {value: "doctrine.event_listener", correct: true}
-            - {value: "event_listener", correct: false}
-            - {value: 'doctrine.listener', correct: false}
-            - {value: 'doctrine.event_listen', correct: false}
-
-    -   question: "What is the tag to use to add a Doctrine event subscriber?"
+            -
+                value: doctrine.event_listener
+                correct: true
+            -
+                value: event_listener
+                correct: false
+            -
+                value: doctrine.listener
+                correct: false
+            -
+                value: doctrine.event_listen
+                correct: false
+    -
+        question: 'What is the tag to use to add a Doctrine event subscriber?'
         answers:
-            - {value: "doctrine.event_subscriber", correct: true}
-            - {value: "event_subscriber", correct: false}
-            - {value: 'doctrine.subscriber', correct: false}
-            - {value: 'doctrine.event_listen', correct: false}
-
-    -   question: "What is the tag to use to add a Doctrine event subscriber?"
+            -
+                value: doctrine.event_subscriber
+                correct: true
+            -
+                value: event_subscriber
+                correct: false
+            -
+                value: doctrine.subscriber
+                correct: false
+            -
+                value: doctrine.event_listen
+                correct: false
+    -
+        question: 'What is the tag to use to add a Doctrine event subscriber?'
         answers:
-            - {value: "doctrine.event_subscriber", correct: true}
-            - {value: "event_subscriber", correct: false}
-            - {value: 'doctrine.subscriber', correct: false}
-            - {value: 'doctrine.event_subscribe', correct: false}
-
-    -   question: "What is the tag to use to add your own logic for 'form type guessing'?"
+            -
+                value: doctrine.event_subscriber
+                correct: true
+            -
+                value: event_subscriber
+                correct: false
+            -
+                value: doctrine.subscriber
+                correct: false
+            -
+                value: doctrine.event_subscribe
+                correct: false
+    -
+        question: 'What is the tag to use to add your own logic for ''form type guessing''?'
         answers:
-            - {value: "form.type_guesser", correct: true}
-            - {value: "kernel.type_guesser", correct: false}
-            - {value: 'type_guesser', correct: false}
-            - {value: 'kernel.guesser', correct: false}
-
-    -   question: "What is the tag to use to add your own logic for 'form type guessing'?"
+            -
+                value: form.type_guesser
+                correct: true
+            -
+                value: kernel.type_guesser
+                correct: false
+            -
+                value: type_guesser
+                correct: false
+            -
+                value: kernel.guesser
+                correct: false
+    -
+        question: 'What is the tag to use to add your own logic for ''form type guessing''?'
         answers:
-            - {value: "form.type_guesser", correct: true}
-            - {value: "kernel.type_guesser", correct: false}
-            - {value: 'type_guesser', correct: false}
-            - {value: 'kernel.guesser', correct: false}
-
-    -   question: "What is the tag to use to listen to different events/hooks in Symfony?"
+            -
+                value: form.type_guesser
+                correct: true
+            -
+                value: kernel.type_guesser
+                correct: false
+            -
+                value: type_guesser
+                correct: false
+            -
+                value: kernel.guesser
+                correct: false
+    -
+        question: 'What is the tag to use to listen to different events/hooks in Symfony?'
         answers:
-            - {value: "kernel.event_listener", correct: true}
-            - {value: "event_listener", correct: false}
-            - {value: 'event_dispatcher.event_listener', correct: false}
-            - {value: 'kernel.listener', correct: false}
-
-    -   question: "What is the tag to subscribe to a set of different events/hooks in Symfony?"
+            -
+                value: kernel.event_listener
+                correct: true
+            -
+                value: event_listener
+                correct: false
+            -
+                value: event_dispatcher.event_listener
+                correct: false
+            -
+                value: kernel.listener
+                correct: false
+    -
+        question: 'What is the tag to subscribe to a set of different events/hooks in Symfony?'
         answers:
-            - {value: "kernel.event_subscriber", correct: true}
-            - {value: "event_subscriber", correct: false}
-            - {value: 'event_dispatcher.event_subscriber', correct: false}
-            - {value: 'kernel.subscriber', correct: false}
-
-    -   question: "What is the tag to subscribe to clean up services between requests?"
+            -
+                value: kernel.event_subscriber
+                correct: true
+            -
+                value: event_subscriber
+                correct: false
+            -
+                value: event_dispatcher.event_subscriber
+                correct: false
+            -
+                value: kernel.subscriber
+                correct: false
+    -
+        question: 'What is the tag to subscribe to clean up services between requests?'
         answers:
-            - {value: "kernel.reset", correct: true}
-            - {value: "service_reset", correct: false}
-            - {value: 'service_container.reset', correct: false}
-            - {value: 'kernel.service_reset', correct: false}
-
-    -   question: "What is the tag to subscribe to add your own logic for guessing MIME types?"
+            -
+                value: kernel.reset
+                correct: true
+            -
+                value: service_reset
+                correct: false
+            -
+                value: service_container.reset
+                correct: false
+            -
+                value: kernel.service_reset
+                correct: false
+    -
+        question: 'What is the tag to subscribe to add your own logic for guessing MIME types?'
         answers:
-            - {value: "mime.mime_type_guesser", correct: true}
-            - {value: "mime_type_guesser", correct: false}
-            - {value: 'request.mime_type_guesser', correct: false}
-            - {value: 'kernel.mime_type_guesser', correct: false}
-
-    -   question: "What is the tag to subscribe to use a custom logging channel with Monolog?"
+            -
+                value: mime.mime_type_guesser
+                correct: true
+            -
+                value: mime_type_guesser
+                correct: false
+            -
+                value: request.mime_type_guesser
+                correct: false
+            -
+                value: kernel.mime_type_guesser
+                correct: false
+    -
+        question: 'What is the tag to subscribe to use a custom logging channel with Monolog?'
         answers:
-            - {value: "monolog.logger", correct: true}
-            - {value: "monolog.logger_channel", correct: false}
-            - {value: 'monolog.channel', correct: false}
-            - {value: 'monolog.logging_channel', correct: false}
-
-    -   question: "What is the tag to subscribe to add a custom processor for logging?"
+            -
+                value: monolog.logger
+                correct: true
+            -
+                value: monolog.logger_channel
+                correct: false
+            -
+                value: monolog.channel
+                correct: false
+            -
+                value: monolog.logging_channel
+                correct: false
+    -
+        question: 'What is the tag to subscribe to add a custom processor for logging?'
         answers:
-            - {value: "monolog.processor", correct: true}
-            - {value: "monolog.custom_processor", correct: false}
-            - {value: 'monolog.logs_processor', correct: false}
-            - {value: 'monolog.logging_processor', correct: false}
-
-    -   question: "What is the tag to register a custom service that loads routes?"
+            -
+                value: monolog.processor
+                correct: true
+            -
+                value: monolog.custom_processor
+                correct: false
+            -
+                value: monolog.logs_processor
+                correct: false
+            -
+                value: monolog.logging_processor
+                correct: false
+    -
+        question: 'What is the tag to register a custom service that loads routes?'
         answers:
-            - {value: "routing.loader", correct: true}
-            - {value: "route_loader", correct: false}
-            - {value: 'routing.route_loader', correct: false}
-            - {value: 'router.loader', correct: false}
-
-    -   question: "What is the tag to register a provider for expression language functions in security?"
+            -
+                value: routing.loader
+                correct: true
+            -
+                value: route_loader
+                correct: false
+            -
+                value: routing.route_loader
+                correct: false
+            -
+                value: router.loader
+                correct: false
+    -
+        question: 'What is the tag to register a provider for expression language functions in security?'
         answers:
-            - {value: "security.expression_language_provider", correct: true}
-            - {value: "security.provider", correct: false}
-            - {value: 'expression_language_provider', correct: false}
-            - {value: 'security.expression_language.provider', correct: false}
-
-    -   question: "What is the tag to allow remember me authentication?"
+            -
+                value: security.expression_language_provider
+                correct: true
+            -
+                value: security.provider
+                correct: false
+            -
+                value: expression_language_provider
+                correct: false
+            -
+                value: security.expression_language.provider
+                correct: false
+    -
+        question: 'What is the tag to allow remember me authentication?'
         answers:
-            - {value: "security.remember_me_aware", correct: true}
-            - {value: "security.remember_me", correct: false}
-            - {value: 'allow_remember_me', correct: false}
-            - {value: 'security.allow_remember_me', correct: false}
-
-    -   question: "What is the tag to add a custom voter to Symfony's authorization logic?"
+            -
+                value: security.remember_me_aware
+                correct: true
+            -
+                value: security.remember_me
+                correct: false
+            -
+                value: allow_remember_me
+                correct: false
+            -
+                value: security.allow_remember_me
+                correct: false
+    -
+        question: 'What is the tag to add a custom voter to Symfony''s authorization logic?'
         answers:
-            - {value: "security.voter", correct: true}
-            - {value: "voter", correct: false}
-            - {value: 'security.authorization_voter', correct: false}
-            - {value: 'authorization_voter', correct: false}
-
-    -   question: "What is the tag to register a new encoder in the serializer service?"
+            -
+                value: security.voter
+                correct: true
+            -
+                value: voter
+                correct: false
+            -
+                value: security.authorization_voter
+                correct: false
+            -
+                value: authorization_voter
+                correct: false
+    -
+        question: 'What is the tag to register a new encoder in the serializer service?'
         answers:
-            - {value: "serializer.encoder", correct: true}
-            - {value: "serializer.serialize_encoder", correct: false}
-            - {value: 'serializing.serialize_encoder', correct: false}
-            - {value: 'serializing.encoder', correct: false}
-
-    -   question: "What is the tag to register a new normalizer in the Serializer service?"
+            -
+                value: serializer.encoder
+                correct: true
+            -
+                value: serializer.serialize_encoder
+                correct: false
+            -
+                value: serializing.serialize_encoder
+                correct: false
+            -
+                value: serializing.encoder
+                correct: false
+    -
+        question: 'What is the tag to register a new normalizer in the Serializer service?'
         answers:
-            - {value: "serializer.normalizer", correct: true}
-            - {value: "serializer.serialize_normalizer", correct: false}
-            - {value: 'serializing.serialize_normalizer', correct: false}
-            - {value: 'serializing.normalizer', correct: false}
-
-    -   question: "What is the tag to register a custom SwiftMailer Plugin?"
+            -
+                value: serializer.normalizer
+                correct: true
+            -
+                value: serializer.serialize_normalizer
+                correct: false
+            -
+                value: serializing.serialize_normalizer
+                correct: false
+            -
+                value: serializing.normalizer
+                correct: false
+    -
+        question: 'What is the tag to register a custom SwiftMailer Plugin?'
         answers:
-            - {value: "swiftmailer.default.plugin", correct: true}
-            - {value: "swiftmailer.plugin", correct: false}
-            - {value: 'swiftmailer_plugin', correct: false}
-            - {value: 'swiftmailer.default_plugin', correct: false}
-
-    -   question: "What is the tag to register a custom service that extracts messages from a file?"
+            -
+                value: swiftmailer.default.plugin
+                correct: true
+            -
+                value: swiftmailer.plugin
+                correct: false
+            -
+                value: swiftmailer_plugin
+                correct: false
+            -
+                value: swiftmailer.default_plugin
+                correct: false
+    -
+        question: 'What is the tag to register a custom service that extracts messages from a file?'
         answers:
-            - {value: "translation.extractor", correct: true}
-            - {value: "translating.extractor", correct: false}
-            - {value: 'translator_extractor', correct: false}
-            - {value: 'translating_extractor', correct: false}
-
-    -   question: "What is the tag to register a custom service that dumps messages to a file?"
+            -
+                value: translation.extractor
+                correct: true
+            -
+                value: translating.extractor
+                correct: false
+            -
+                value: translator_extractor
+                correct: false
+            -
+                value: translating_extractor
+                correct: false
+    -
+        question: 'What is the tag to register a custom service that dumps messages to a file?'
         answers:
-            - {value: "translation.dumper", correct: true}
-            - {value: "translator.dumper", correct: false}
-            - {value: 'translator_dumper', correct: false}
-            - {value: 'dumper', correct: false}
-
-    -   question: "What is the tag to register a custom Twig Extension?"
+            -
+                value: translation.dumper
+                correct: true
+            -
+                value: translator.dumper
+                correct: false
+            -
+                value: translator_dumper
+                correct: false
+            -
+                value: dumper
+                correct: false
+    -
+        question: 'What is the tag to register a custom Twig Extension?'
         answers:
-            - {value: "twig.extension", correct: true}
-            - {value: "twig_extension", correct: false}
-            - {value: 'twig.extend', correct: false}
-            - {value: 'twig.default.extension', correct: false}
-
-    -   question: "What is the tag to register a custom service that loads Twig templates?"
+            -
+                value: twig.extension
+                correct: true
+            -
+                value: twig_extension
+                correct: false
+            -
+                value: twig.extend
+                correct: false
+            -
+                value: twig.default.extension
+                correct: false
+    -
+        question: 'What is the tag to register a custom service that loads Twig templates?'
         answers:
-            - {value: "twig.loader", correct: true}
-            - {value: "twig.runtime", correct: false}
-            - {value: 'twig.compile_time', correct: false}
-            - {value: 'twig.default.loader', correct: false}
-
-    -   question: "What is the tag to register a custom Lazy-Loaded Twig Extension?"
+            -
+                value: twig.loader
+                correct: true
+            -
+                value: twig.runtime
+                correct: false
+            -
+                value: twig.compile_time
+                correct: false
+            -
+                value: twig.default.loader
+                correct: false
+    -
+        question: 'What is the tag to register a custom Lazy-Loaded Twig Extension?'
         answers:
-            - {value: "twig.runtime", correct: true}
-            - {value: "twig.lazy_load_extension", correct: false}
-            - {value: 'twig.lazy_load.extension', correct: false}
-            - {value: 'twig.runtime_extension', correct: false}
-
-    -   question: "What is the tag to create your own custom validation constraint?"
+            -
+                value: twig.runtime
+                correct: true
+            -
+                value: twig.lazy_load_extension
+                correct: false
+            -
+                value: twig.lazy_load.extension
+                correct: false
+            -
+                value: twig.runtime_extension
+                correct: false
+    -
+        question: 'What is the tag to create your own custom validation constraint?'
         answers:
-            - {value: "validator.constraint_validator", correct: true}
-            - {value: "validator.validator", correct: false}
-            - {value: 'validator.validator_constraint', correct: false}
-            - {value: 'validator.constraint', correct: false}
-
-    -   question: "What is the tag to register a service that initializes objects before validation?"
+            -
+                value: validator.constraint_validator
+                correct: true
+            -
+                value: validator.validator
+                correct: false
+            -
+                value: validator.validator_constraint
+                correct: false
+            -
+                value: validator.constraint
+                correct: false
+    -
+        question: 'What is the tag to register a service that initializes objects before validation?'
         answers:
-            - {value: "validator.initializer", correct: true}
-            - {value: "validation.initializer", correct: false}
-            - {value: "validator.initializer_object", correct: false}
-            - {value: "validation.initializer_object", correct: false}
-            - {value: 'validator.object_initializer', correct: false}
-            - {value: 'validation.object_initializer', correct: false}
-
-    -   question: What is a "Service Configurator" in Symfony?
+            -
+                value: validator.initializer
+                correct: true
+            -
+                value: validation.initializer
+                correct: false
+            -
+                value: validator.initializer_object
+                correct: false
+            -
+                value: validation.initializer_object
+                correct: false
+            -
+                value: validator.object_initializer
+                correct: false
+            -
+                value: validation.object_initializer
+                correct: false
+    -
+        question: 'What is a "Service Configurator" in Symfony?'
         answers:
-            - {value: It's a feature of the Dependency Injection component that allows to apply some configuration logic to all the services that define a specific tag., correct: false}
-            - {value: There's no such a thing in Symfony's Dependency Injection component., correct: false}
-            - {value: It's a Symfony built-in service that can be obtained as $container->get('configurator'), correct: false}
-            - {value: It's a PHP callable that you can optionally execute to configure a Symfony service after its instantiation., correct: true}
-
-    -   question: "What is the tag to make your service available in PHP templates?"
+            -
+                value: 'It''s a feature of the Dependency Injection component that allows to apply some configuration logic to all the services that define a specific tag.'
+                correct: false
+            -
+                value: 'There''s no such a thing in Symfony''s Dependency Injection component.'
+                correct: false
+            -
+                value: 'It''s a Symfony built-in service that can be obtained as $container->get(''configurator'')'
+                correct: false
+            -
+                value: 'It''s a PHP callable that you can optionally execute to configure a Symfony service after its instantiation.'
+                correct: true
+    -
+        question: 'What is the tag to make your service available in PHP templates?'
         answers:
-            - {value: 'templating.helper', correct: true}
-            - {value: "twig.service", correct: false}
-            - {value: "twig.helper", correct: false}
-            - {value: "templating.service", correct: false}
-            - {value: 'template.service', correct: false}
-
-    -   question: "Which of the following statements are true about the so-called compiler passes?"
+            -
+                value: templating.helper
+                correct: true
+            -
+                value: twig.service
+                correct: false
+            -
+                value: twig.helper
+                correct: false
+            -
+                value: templating.service
+                correct: false
+            -
+                value: template.service
+                correct: false
+    -
+        question: 'Which of the following statements are true about the so-called compiler passes?'
         answers:
-            - {value: 'They allow to add, alter or remove any services definitions of a ContainerBuilder object.', correct: true}
-            - {value: "They prevent the ContainerBuilder object from being compiled if they detect any circular references in services definitions.", correct: true}
-            - {value: "They perform some optimization operations on a ContainerBuilder instance in order to generate the most efficient PHP code possible.", correct: true}
-            - {value: 'They check that all registered services definitions are valid and some required global parameters are not missing.', correct: false}
-            - {value: "They are always triggered on every HTTP requests made to the Symfony application.", correct: false}
-
-
-    -   question: "How can you mark a service as deprecated in XML?"
+            -
+                value: 'They allow to add, alter or remove any services definitions of a ContainerBuilder object.'
+                correct: true
+            -
+                value: 'They prevent the ContainerBuilder object from being compiled if they detect any circular references in services definitions.'
+                correct: true
+            -
+                value: 'They perform some optimization operations on a ContainerBuilder instance in order to generate the most efficient PHP code possible.'
+                correct: true
+            -
+                value: 'They check that all registered services definitions are valid and some required global parameters are not missing.'
+                correct: false
+            -
+                value: 'They are always triggered on every HTTP requests made to the Symfony application.'
+                correct: false
+    -
+        question: 'How can you mark a service as deprecated in XML?'
         answers:
-            - value: |
-                  <service id="app.markdown_parser" class="AppBundle\Markdown\Parser">
-                          <deprecated>Use "app.content_parser" instead</deprecated>
-                  </service>
-              correct: true
-
-            - value: |
-                  <service id="app.markdown_parser" class="AppBundle\Markdown\Parser">
-                          <deprecated />
-                  </service>
-              correct: true
-
-            - value: |
-                  <service id="app.markdown_parser" class="AppBundle\Markdown\Parser">
-                          <deprecated>The "%service_id%" service is deprecated. Use "app.content_parser" instead</deprecated>
-                  </service>
-              correct: true
-
-            - value: |
-                  <service id="app.markdown_parser" class="AppBundle\Markdown\Parser">
-                          <deprecated></deprecated>
-                  </service>
-              correct: true
-
-            - value: |
-                  <service id="app.markdown_parser" class="AppBundle\Markdown\Parser" deprecated=true></service>
-              correct: false
-
-    -   question: |
+            -
+                value: |
+                    <service id="app.markdown_parser" class="AppBundle\Markdown\Parser">
+                            <deprecated>Use "app.content_parser" instead</deprecated>
+                    </service>
+                    
+                correct: true
+            -
+                value: |
+                    <service id="app.markdown_parser" class="AppBundle\Markdown\Parser">
+                            <deprecated />
+                    </service>
+                    
+                correct: true
+            -
+                value: |
+                    <service id="app.markdown_parser" class="AppBundle\Markdown\Parser">
+                            <deprecated>The "%service_id%" service is deprecated. Use "app.content_parser" instead</deprecated>
+                    </service>
+                    
+                correct: true
+            -
+                value: |
+                    <service id="app.markdown_parser" class="AppBundle\Markdown\Parser">
+                            <deprecated></deprecated>
+                    </service>
+                    
+                correct: true
+            -
+                value: |
+                    <service id="app.markdown_parser" class="AppBundle\Markdown\Parser" deprecated=true></service>
+                    
+                correct: false
+    -
+        question: |
             Is the following a valid way to autowire the logger?
-
+            
             class Rot13Transformer
             {
                 private $logger;
-
+            
                 /**
                  * @required
                  */
@@ -692,159 +1147,263 @@ questions:
                     $this->logger = $logger;
                 }
             }
+            
         answers:
-            - { value: Yes, correct: true }
-            - { value: No, correct: false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Which formats support anonymous services?
+            
         answers:
-            - {value: "YAML", correct: true }
-            - {value: "XML", correct: true }
-            - {value: "Annotations", correct: false }
-            - {value: "Php", correct: false }
-
-    -   question: |
+            -
+                value: YAML
+                correct: true
+            -
+                value: XML
+                correct: true
+            -
+                value: Annotations
+                correct: false
+            -
+                value: Php
+                correct: false
+    -
+        question: |
             Which formats support anonymous services?
+            
         answers:
-            - {value: "YAML", correct: true }
-            - {value: "XML", correct: true }
-            - {value: "Annotations", correct: false }
-            - {value: "Php", correct: false }
-
-    -   question: |
+            -
+                value: YAML
+                correct: true
+            -
+                value: XML
+                correct: true
+            -
+                value: Annotations
+                correct: false
+            -
+                value: Php
+                correct: false
+    -
+        question: |
             What are anonymous services?
+            
         answers:
-            - {value: "Allows you to create define a service inline", correct: true }
-            - {value: "It allows you define a service that are ran at compile time", correct: false }
-            - {value: "It allows you define a service using a PHP anonymous class", correct: false }
-
-    -   question: |
+            -
+                value: 'Allows you to create define a service inline'
+                correct: true
+            -
+                value: 'It allows you define a service that are ran at compile time'
+                correct: false
+            -
+                value: 'It allows you define a service using a PHP anonymous class'
+                correct: false
+    -
+        question: |
             What is the tag to register a custom service that loads translations?
+            
         answers:
-            - {value: "translation.loader", correct: true }
-            - {value: "translator_loader", correct: false }
-            - {value: "translation_loader", correct: false }
-            - {value: "translator.loader", correct: false }
-
-    -   question: |
+            -
+                value: translation.loader
+                correct: true
+            -
+                value: translator_loader
+                correct: false
+            -
+                value: translation_loader
+                correct: false
+            -
+                value: translator.loader
+                correct: false
+    -
+        question: |
             Regarding the following code, will the calls directive of service_parent be overridden by the one from service_child ?
-
+            
                 logger_A:
                     class: Acme\Logger\TextLogger
                 logger_B:
                     class: Acme\Logger\EchoLogger
-
+            
                 service_parent:
                     abstract: true
                     calls:
                         - ['addLogger', ['@logger_A']]
-
+            
                 service_child:
                     parent: @service_parent
                     class: Acme\Transformer\TextTransformer
                     calls:
                         - ['addLogger', ['@logger_B']]
+            
         answers:
-            - {value: "No", correct: true }
-            - {value: "Yes", correct: false }
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             Which attributes are inhertited by child service definitions?
+            
         answers:
-            - {value: "calls", correct: true }
-            - {value: "arguments", correct: true }
-            - {value: "shared", correct: false }
-            - {value: "abstract", correct: false }
-            - {value: "tags", correct: false }
-
-    -   question: |
+            -
+                value: calls
+                correct: true
+            -
+                value: arguments
+                correct: true
+            -
+                value: shared
+                correct: false
+            -
+                value: abstract
+                correct: false
+            -
+                value: tags
+                correct: false
+    -
+        question: |
             Is the following config valid?
-
+            
             AppBundle\Repository\DoctrineUserRepository:
                   parent: AppBundle\Repository\BaseDoctrineRepository
                   public: false
                   arguments: ['@app.username_checker']
-
+            
             AppBundle\Repository\DoctrinePostRepository:
                 parent: AppBundle\Repository\BaseDoctrineRepository
                 arguments:
                     index_0: '@doctrine.custom_entity_manager'
+            
         answers:
-            - {value: "Yes", correct: true }
-            - {value: "No", correct: false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Is the following config valid?
-
+            
             AppBundle\Repository\DoctrineUserRepository:
                   parent: AppBundle\Repository\BaseDoctrineRepository
                   public: false
                   arguments: ['@app.username_checker']
-
+            
             AppBundle\Repository\DoctrinePostRepository:
                 parent: AppBundle\Repository\BaseDoctrineRepository
                 arguments:
                     index_0: '@doctrine.custom_entity_manager'
+            
         answers:
-            - {value: "No", correct: true }
-            - {value: "Yes", correct: false }
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             How can you mark a service as deprecated in YAML?
+            
         answers:
-            - value: |
-                  app.markdown_parser:
-                      class: AppBundle\Markdown\Parser
-                      deprecated: 'The "%service_id%" service is deprecated. Use "app.content_parser" instead'
-              correct: true
-            - value: |
-                  app.markdown_parser:
-                      class: AppBundle\Markdown\Parser
-                      deprecated: ~
-              correct: true
-            - value: |
+            -
+                value: |
+                    app.markdown_parser:
+                        class: AppBundle\Markdown\Parser
+                        deprecated: 'The "%service_id%" service is deprecated. Use "app.content_parser" instead'
+                    
+                correct: true
+            -
+                value: |
+                    app.markdown_parser:
+                        class: AppBundle\Markdown\Parser
+                        deprecated: ~
+                    
+                correct: true
+            -
+                value: |
                     app.markdown_parser:
                         class: AppBundle\Markdown\Parser
                         deprecated: 'Use "app.content_parser" instead'
-              correct: false
-            - value: |
+                    
+                correct: false
+            -
+                value: |
                     app.markdown_parser:
                         class: AppBundle\Markdown\Parser
                         deprecated: true
-              correct: false
-    -   question: |
+                    
+                correct: false
+    -
+        question: |
             What is the exact meaning of DIC?
+            
         answers:
-            - {value: "Dependency Injection Container", correct: true }
-            - {value: "Dependencies Injected Continuously.", correct: false }
-            - {value: "Dependencies Injection Component", correct: false }
-
-    -   question: |
+            -
+                value: 'Dependency Injection Container'
+                correct: true
+            -
+                value: 'Dependencies Injected Continuously.'
+                correct: false
+            -
+                value: 'Dependencies Injection Component'
+                correct: false
+    -
+        question: |
             What does the following parameter change in Symfony 3.4?
-
+            
             parameters:
                 container.autowiring.strict_mode: true
+            
         answers:
-            - { value: "It ensures the container doesn't match dependencies by their type, but instead only by their alias or id", correct: true }
-            - { value: "It ensures that the container errors if there is it is ambiguous which service matches", correct: false }
-            - { value: "Nothing, it's just a parameter with no special behaviour", correct: false }
-
-    -   question: |
+            -
+                value: 'It ensures the container doesn''t match dependencies by their type, but instead only by their alias or id'
+                correct: true
+            -
+                value: 'It ensures that the container errors if there is it is ambiguous which service matches'
+                correct: false
+            -
+                value: 'Nothing, it''s just a parameter with no special behaviour'
+                correct: false
+    -
+        question: |
             What does the following parameter change in Symfony 4.0?
-
+            
             parameters:
                 container.autowiring.strict_mode: true
+            
         answers:
-            - { value: "Nothing, it's just a parameter with no special behaviour", correct: true }
-            - { value: "It ensures the container doesn't match dependencies by their type, but instead only by their alias or id", correct: false }
-            - { value: "It ensures that the container errors if there is it is ambiguous which service matches", correct: false }
-
-    -   question: |
+            -
+                value: 'Nothing, it''s just a parameter with no special behaviour'
+                correct: true
+            -
+                value: 'It ensures the container doesn''t match dependencies by their type, but instead only by their alias or id'
+                correct: false
+            -
+                value: 'It ensures that the container errors if there is it is ambiguous which service matches'
+                correct: false
+    -
+        question: |
             What does the following parameter change in Symfony 4.0?
-
+            
             parameters:
                 container.autowiring.strict_mode: true
+            
         answers:
-            - { value: "Nothing, it's just a parameter with no special behaviour", correct: true }
-            - { value: "It ensures the container doesn't match dependencies by their type, but instead only by their alias or id", correct: false }
-            - { value: "It ensures that the container errors if there is it is ambiguous which service matches", correct: false }
+            -
+                value: 'Nothing, it''s just a parameter with no special behaviour'
+                correct: true
+            -
+                value: 'It ensures the container doesn''t match dependencies by their type, but instead only by their alias or id'
+                correct: false
+            -
+                value: 'It ensures that the container errors if there is it is ambiguous which service matches'
+                correct: false

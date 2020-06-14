@@ -1,285 +1,591 @@
 category: Filesystem
 questions:
-    -   question: |
+    -
+        question: |
             Will the following code trigger an error if the /tmp/photos directory already exists ?
-
+            
             $fs = new Filesystem();
             $fs->mkdir('/tmp/photos', 0700);
+            
         answers:
-            - { value: No, correct: true }
-            - { value: Yes, correct: false }
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             What will the following script return if rabbit.jpg does not exist ?
-
+            
             $filesystem->exists(['rabbit.jpg', 'bottle.png']);
+            
         answers:
-            - { value: Nothing, correct: false }
-            - { value: "True", correct: false }
-            - { value: "False", correct: true }
-
-    -   question: Can FileSystem::copy copy directories?
+            -
+                value: Nothing
+                correct: false
+            -
+                value: 'True'
+                correct: false
+            -
+                value: 'False'
+                correct: true
+    -
+        question: 'Can FileSystem::copy copy directories?'
         answers:
-            - { value: Yes, correct: false }
-            - { value: No, correct: true }
-
-    -   question:
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: |
             Will the following override image.jpg when it's is older than image-ICC.jpg?
-
             $filesystem->copy('image-ICC.jpg', 'image.jpg', true);
+            
         answers:
-            - { value: Yes, correct: true }
-            - { value: No, correct: false }
-
-    -   question:
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Will the following override image.jpg when it's is newer than image-ICC.jpg?
-
             $filesystem->copy('image-ICC.jpg', 'image.jpg', false);
+            
         answers:
-            - { value: Yes, correct: false }
-            - { value: No, correct: true }
-
-    -   question: What is the purpose of FileSystem::touch?
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: 'What is the purpose of FileSystem::touch?'
         answers:
-            - { value: It sets access and modification time for a file, correct: true }
-            - { value: It creates a new file, correct: false }
-            - { value: It clears the contents of a file, correct: false }
-
-    -   question: Which of the following will change the owner of all files in a directory?
+            -
+                value: 'It sets access and modification time for a file'
+                correct: true
+            -
+                value: 'It creates a new file'
+                correct: false
+            -
+                value: 'It clears the contents of a file'
+                correct: false
+    -
+        question: 'Which of the following will change the owner of all files in a directory?'
         answers:
-            - { value: "$filesystem->chown('/video', 'www-data', true);", correct: true }
-            - { value: "$filesystem->chown('/video', 'www-data');", correct: false }
-            - { value: "$filesystem->chown('/video', 'www-data', false);", correct: false }
-
-    -   question: |
+            -
+                value: '$filesystem->chown(''/video'', ''www-data'', true);'
+                correct: true
+            -
+                value: '$filesystem->chown(''/video'', ''www-data'');'
+                correct: false
+            -
+                value: '$filesystem->chown(''/video'', ''www-data'', false);'
+                correct: false
+    -
+        question: |
             Which of the following are valid methods?
+            
         answers:
-            - { value: "mkdir", correct: true }
-            - { value: "exists", correct: true }
-            - { value: "copy", correct: true }
-            - { value: "touch", correct: true }
-            - { value: "chown", correct: true }
-            - { value: "chgrp", correct: true }
-            - { value: "chmod", correct: true }
-            - { value: "remove", correct: true }
-            - { value: "delete", correct: false }
-            - { value: "change", correct: false }
-            - { value: "createDir", correct: false }
-            - { value: "makePathAbsolute", correct: false }
-            - { value: "rem", correct: false }
-            - { value: "isValid", correct: false }
-            - { value: "changeOwner", correct: false }
-
-    -   question: |
+            -
+                value: mkdir
+                correct: true
+            -
+                value: exists
+                correct: true
+            -
+                value: copy
+                correct: true
+            -
+                value: touch
+                correct: true
+            -
+                value: chown
+                correct: true
+            -
+                value: chgrp
+                correct: true
+            -
+                value: chmod
+                correct: true
+            -
+                value: remove
+                correct: true
+            -
+                value: delete
+                correct: false
+            -
+                value: change
+                correct: false
+            -
+                value: createDir
+                correct: false
+            -
+                value: makePathAbsolute
+                correct: false
+            -
+                value: rem
+                correct: false
+            -
+                value: isValid
+                correct: false
+            -
+                value: changeOwner
+                correct: false
+    -
+        question: |
             Which of the following are valid methods?
+            
         answers:
-            - { value: "rename", correct: true }
-            - { value: "symlink", correct: true }
-            - { value: "readlink", correct: true }
-            - { value: "makePathRelative", correct: true }
-            - { value: "mirror", correct: true }
-            - { value: "isAbsolutePath", correct: true }
-            - { value: "tempnam", correct: true }
-            - { value: "dumpFile", correct: true }
-            - { value: "appendToFile", correct: true }
-            - { value: "createDir", correct: false }
-            - { value: "isValid", correct: false }
-            - { value: "makePathAbsolute", correct: false }
-            - { value: "rem", correct: false }
-            - { value: "doesExist", correct: false }
-            - { value: "changeOwner", correct: false }
-
-
-    -   question: |
+            -
+                value: rename
+                correct: true
+            -
+                value: symlink
+                correct: true
+            -
+                value: readlink
+                correct: true
+            -
+                value: makePathRelative
+                correct: true
+            -
+                value: mirror
+                correct: true
+            -
+                value: isAbsolutePath
+                correct: true
+            -
+                value: tempnam
+                correct: true
+            -
+                value: dumpFile
+                correct: true
+            -
+                value: appendToFile
+                correct: true
+            -
+                value: createDir
+                correct: false
+            -
+                value: isValid
+                correct: false
+            -
+                value: makePathAbsolute
+                correct: false
+            -
+                value: rem
+                correct: false
+            -
+                value: doesExist
+                correct: false
+            -
+                value: changeOwner
+                correct: false
+    -
+        question: |
             Which of the following are Filesystem methods?
+            
         answers:
-            - { value: "chown", correct: true }
-            - { value: "rename", correct: true }
-            - { value: "touch", correct: true }
-            - { value: "tempnam", correct: true }
-            - { value: "dumpFile", correct: true }
-            - { value: "isAbsolutePath", correct: true }
-            - { value: "duplicate", correct: false }
-            - { value: "move", correct: false }
-
-    -   question: |
+            -
+                value: chown
+                correct: true
+            -
+                value: rename
+                correct: true
+            -
+                value: touch
+                correct: true
+            -
+                value: tempnam
+                correct: true
+            -
+                value: dumpFile
+                correct: true
+            -
+                value: isAbsolutePath
+                correct: true
+            -
+                value: duplicate
+                correct: false
+            -
+                value: move
+                correct: false
+    -
+        question: |
             What is the second argument of the mkDir() method?
+            
         answers:
-            - { value: "The mode to create the dir with", correct: true }
-            - { value: "A callback for after the method finishes", correct: false }
-            - { value: "A flag for if it should overwrite existing directories", correct: false }
-            - { value: "A flag for if it should ignore existing directories", correct: false }
-
-    -   question: |
+            -
+                value: 'The mode to create the dir with'
+                correct: true
+            -
+                value: 'A callback for after the method finishes'
+                correct: false
+            -
+                value: 'A flag for if it should overwrite existing directories'
+                correct: false
+            -
+                value: 'A flag for if it should ignore existing directories'
+                correct: false
+    -
+        question: |
             Which are valid arguments for the exists() method?
+            
         answers:
-            - { value: "array", correct: true }
-            - { value: "Traversable", correct: true }
-            - { value: "string", correct: true }
-            - { value: "int", correct: false }
-            - { value: "bool", correct: false }
-            - { value: "float", correct: false }
-            - { value: "Iterator", correct: false }
-
-    -   question: |
+            -
+                value: array
+                correct: true
+            -
+                value: Traversable
+                correct: true
+            -
+                value: string
+                correct: true
+            -
+                value: int
+                correct: false
+            -
+                value: bool
+                correct: false
+            -
+                value: float
+                correct: false
+            -
+                value: Iterator
+                correct: false
+    -
+        question: |
             Which is the purpose of the exists() method?
+            
         answers:
-            - { value: "Checks for the presence of one or more files or directories", correct: true }
-            - { value: "Checks for the presence of one or more files", correct: false }
-            - { value: "Checks for the presence of one or more directories", correct: false }
-            - { value: "Checks for the presence of one file or directory", correct: false }
-            - { value: "Checks for the presence of one file", correct: false }
-            - { value: "Checks for the presence of one directory", correct: false }
-
-    -   question: |
+            -
+                value: 'Checks for the presence of one or more files or directories'
+                correct: true
+            -
+                value: 'Checks for the presence of one or more files'
+                correct: false
+            -
+                value: 'Checks for the presence of one or more directories'
+                correct: false
+            -
+                value: 'Checks for the presence of one file or directory'
+                correct: false
+            -
+                value: 'Checks for the presence of one file'
+                correct: false
+            -
+                value: 'Checks for the presence of one directory'
+                correct: false
+    -
+        question: |
             What is the purpose of the copy() method?
+            
         answers:
-            - { value: "Makes a copy of a single file", correct: true }
-            - { value: "Makes a copy of multiple files", correct: false }
-            - { value: "Makes a copy of multiple files or directories", correct: false }
-            - { value: "Makes a copy of a single file or directory", correct: false }
-
-    -   question: |
+            -
+                value: 'Makes a copy of a single file'
+                correct: true
+            -
+                value: 'Makes a copy of multiple files'
+                correct: false
+            -
+                value: 'Makes a copy of multiple files or directories'
+                correct: false
+            -
+                value: 'Makes a copy of a single file or directory'
+                correct: false
+    -
+        question: |
             Which of the following will change the group of all files in a directory?
+            
         answers:
-            - { value: "$filesystem->chgrp('/video', 'nginx', true);", correct: true }
-            - { value: "$filesystem->chgrp('/video', 'nginx', false);", correct: false }
-            - { value: "$filesystem->chgrp('/video', 'nginx');", correct: false }
-
-    -   question: |
+            -
+                value: '$filesystem->chgrp(''/video'', ''nginx'', true);'
+                correct: true
+            -
+                value: '$filesystem->chgrp(''/video'', ''nginx'', false);'
+                correct: false
+            -
+                value: '$filesystem->chgrp(''/video'', ''nginx'');'
+                correct: false
+    -
+        question: |
             What is the purpose of the chmod() method?
+            
         answers:
-            - { value: "Changes the mode or permissions of a file", correct: true }
-            - { value: "Changes access and modification time for a file", correct: false }
-            - { value: "Changes the mode of a file", correct: false }
-            - { value: "Changes the permissions of a file", correct: false }
-
-    -   question: |
+            -
+                value: 'Changes the mode or permissions of a file'
+                correct: true
+            -
+                value: 'Changes access and modification time for a file'
+                correct: false
+            -
+                value: 'Changes the mode of a file'
+                correct: false
+            -
+                value: 'Changes the permissions of a file'
+                correct: false
+    -
+        question: |
             Which exception is thrown when the origin file does not exist when you use the Symfony\Component\Filesystem\Filesystem::copy method ?
+            
         answers:
-            - { value: "FileErrorException", correct: false }
-            - { value: "FileNotExistException", correct: false }
-            - { value: "FileNotFoundException", correct: true }
-            - { value: "FilesystemException", correct: false }
-            - { value: "FileException", correct: false }
-
-    -   question: |
+            -
+                value: FileErrorException
+                correct: false
+            -
+                value: FileNotExistException
+                correct: false
+            -
+                value: FileNotFoundException
+                correct: true
+            -
+                value: FilesystemException
+                correct: false
+            -
+                value: FileException
+                correct: false
+    -
+        question: |
             What is the signature of the chmod method?
+            
         answers:
-            - { value: "chmod($files, $mode, $umask = 0000, $recursive = false)", correct: true }
-            - { value: "chmod($files, $umask = 0000, $mode, $recursive = false)", correct: false }
-            - { value: "chmod($files, $mode, $umask, $recursive = false)", correct: false }
-            - { value: "chmod($files, $mode, $recursive = false)", correct: false }
-            - { value: "chmod($files, $recursive = false)", correct: false }
-            - { value: "chmod($files, $recursive = false)", correct: false }
-
-
-    -   question: |
+            -
+                value: 'chmod($files, $mode, $umask = 0000, $recursive = false)'
+                correct: true
+            -
+                value: 'chmod($files, $umask = 0000, $mode, $recursive = false)'
+                correct: false
+            -
+                value: 'chmod($files, $mode, $umask, $recursive = false)'
+                correct: false
+            -
+                value: 'chmod($files, $mode, $recursive = false)'
+                correct: false
+            -
+                value: 'chmod($files, $recursive = false)'
+                correct: false
+            -
+                value: 'chmod($files, $recursive = false)'
+                correct: false
+    -
+        question: |
             Does the rename() method accept multiple files to rename?
+            
         answers:
-            - { value: "No", correct: true }
-            - { value: "Yes", correct: false }
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             What facilities does the symlink() method provide for file systems that don't support symlinks?
+            
         answers:
-            - { value: "The third argument is a flag to copy the file instead if the filesystem does not support symlinks", correct: true }
-            - { value: "The third argument is a flag to copy the file instead", correct: false }
-            - { value: "It throws an exception which can be caught and used to manually copy the files", correct: false }
-            - { value: "If the FileSystem object is configured correctly it will copy the files instead", correct: false }
-
-    -   question: |
+            -
+                value: 'The third argument is a flag to copy the file instead if the filesystem does not support symlinks'
+                correct: true
+            -
+                value: 'The third argument is a flag to copy the file instead'
+                correct: false
+            -
+                value: 'It throws an exception which can be caught and used to manually copy the files'
+                correct: false
+            -
+                value: 'If the FileSystem object is configured correctly it will copy the files instead'
+                correct: false
+    -
+        question: |
             How many arguments does the makePathRelative() method accept?
+            
         answers:
-            - { value: "2", correct: true }
-            - { value: "1", correct: false }
-            - { value: "3", correct: false }
-
-    -   question: |
+            -
+                value: '2'
+                correct: true
+            -
+                value: '1'
+                correct: false
+            -
+                value: '3'
+                correct: false
+    -
+        question: |
             What is the signature of the readlink() method?
+            
         answers:
-            - { value: "public function readlink($path, $canonicalize = false)", correct: true }
-            - { value: "public function readlink($path, $canonicalize = true)", correct: false }
-            - { value: "public function readlink($path, $canonicalize)", correct: false }
-            - { value: "public function readlink($path)", correct: false }
-
-    -   question: |
+            -
+                value: 'public function readlink($path, $canonicalize = false)'
+                correct: true
+            -
+                value: 'public function readlink($path, $canonicalize = true)'
+                correct: false
+            -
+                value: 'public function readlink($path, $canonicalize)'
+                correct: false
+            -
+                value: 'public function readlink($path)'
+                correct: false
+    -
+        question: |
             What is the purpose of the $canonicalize parameter on the readlink() method?
+            
         answers:
-            - { value: "If true, it will return the absolute fully resolved final version of the link", correct: true }
-            - { value: "If false, it will return the absolute fully resolved final version of the link", correct: false }
-            - { value: "If true, it will return the absolute version of the link", correct: false }
-            - { value: "If false, it will return the absolute version of the link", correct: false }
-
-    -   question: |
+            -
+                value: 'If true, it will return the absolute fully resolved final version of the link'
+                correct: true
+            -
+                value: 'If false, it will return the absolute fully resolved final version of the link'
+                correct: false
+            -
+                value: 'If true, it will return the absolute version of the link'
+                correct: false
+            -
+                value: 'If false, it will return the absolute version of the link'
+                correct: false
+    -
+        question: |
             What is the purpose of the mirror() method?
+            
         answers:
-            - { value: "copies all the contents of the source directory into the target one", correct: true }
-            - { value: "create a symlink between the two directories", correct: false }
-
-    -   question: |
+            -
+                value: 'copies all the contents of the source directory into the target one'
+                correct: true
+            -
+                value: 'create a symlink between the two directories'
+                correct: false
+    -
+        question: |
             What will the following code return?
-
+            
             $filesystem->isAbsolutePath('/tmp');
+            
         answers:
-            - { value: "True", correct: true }
-            - { value: "False", correct: false }
-
-    -   question: |
+            -
+                value: 'True'
+                correct: true
+            -
+                value: 'False'
+                correct: false
+    -
+        question: |
             What will the following code return?
-
+            
             $filesystem->isAbsolutePath('c:\\Windows');
+            
         answers:
-            - { value: "True", correct: true }
-            - { value: "False", correct: false }
-
-    -   question: |
+            -
+                value: 'True'
+                correct: true
+            -
+                value: 'False'
+                correct: false
+    -
+        question: |
             What will the following code return?
-
+            
             $filesystem->isAbsolutePath('tmp');
+            
         answers:
-            - { value: "False", correct: true }
-            - { value: "True", correct: false }
-
-    -   question: |
+            -
+                value: 'False'
+                correct: true
+            -
+                value: 'True'
+                correct: false
+    -
+        question: |
             What will the following code return?
-
+            
             $filesystem->isAbsolutePath('../dir');
+            
         answers:
-            - { value: "False", correct: true }
-            - { value: "True", correct: false }
-
-    -   question: |
+            -
+                value: 'False'
+                correct: true
+            -
+                value: 'True'
+                correct: false
+    -
+        question: |
             What method can be used to check if a path is absolute?
+            
         answers:
-            - { value: "isAbsolutePath", correct: true }
-            - { value: "isPathAbsolute", correct: false }
-            - { value: "checkPathAbsolute", correct: false }
-
-    -   question: |
+            -
+                value: isAbsolutePath
+                correct: true
+            -
+                value: isPathAbsolute
+                correct: false
+            -
+                value: checkPathAbsolute
+                correct: false
+    -
+        question: |
             What is the signature of the tempnam() method?
+            
         answers:
-            - { value: "public function tempnam($dir, $prefix)", correct: true }
-            - { value: "public function tempnam($dir)", correct: false }
-            - { value: "public function tempnam($dir, $prefix, $extension = null)", correct: false }
-            - { value: "public function tempnam($dir, $prefix, $extension)", correct: false }
-
-    -   question: |
+            -
+                value: 'public function tempnam($dir, $prefix)'
+                correct: true
+            -
+                value: 'public function tempnam($dir)'
+                correct: false
+            -
+                value: 'public function tempnam($dir, $prefix, $extension = null)'
+                correct: false
+            -
+                value: 'public function tempnam($dir, $prefix, $extension)'
+                correct: false
+    -
+        question: |
             Which methods allow the saving of text to a file?
+            
         answers:
-            - { value: "dumpFile", correct: true }
-            - { value: "dumpToFile", correct: false }
-            - { value: "fileDump", correct: false }
-            - { value: "appendToFile", correct: true }
-            - { value: "appendFile", correct: false }
-            - { value: "pushContents", correct: false }
-            - { value: "contentsPush", correct: false }
-
-    -   question: |
+            -
+                value: dumpFile
+                correct: true
+            -
+                value: dumpToFile
+                correct: false
+            -
+                value: fileDump
+                correct: false
+            -
+                value: appendToFile
+                correct: true
+            -
+                value: appendFile
+                correct: false
+            -
+                value: pushContents
+                correct: false
+            -
+                value: contentsPush
+                correct: false
+    -
+        question: |
             Which interfaces are the implemented by all exceptions thrown by the FileSystem?
+            
         answers:
-            - { value: "Symfony\\Component\\Filesystem\\Exception\\ExceptionInterface", correct: true }
-            - { value: "Symfony\\Component\\Filesystem\\Exception\\Exception", correct: false }
-            - { value: "\\ExceptionInterface", correct: false }
-            - { value: "Symfony\\Component\\Filesystem\\Exception", correct: true }
-            - { value: "Symfony\\Component\\Filesystem\\ExceptionInterface", correct: false }
+            -
+                value: Symfony\Component\Filesystem\Exception\ExceptionInterface
+                correct: true
+            -
+                value: Symfony\Component\Filesystem\Exception\Exception
+                correct: false
+            -
+                value: \ExceptionInterface
+                correct: false
+            -
+                value: Symfony\Component\Filesystem\Exception
+                correct: true
+            -
+                value: Symfony\Component\Filesystem\ExceptionInterface
+                correct: false

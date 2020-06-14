@@ -1,289 +1,611 @@
 category: HTTP
 questions:
-    -   question: 'Which HTTP verbs are idempotent ?'
+    -
+        question: 'Which HTTP verbs are idempotent ?'
         answers:
-            - { value: GET, correct: true }
-            - { value: HEAD, correct: true }
-            - { value: PUT, correct: true }
-            - { value: DELETE, correct: true }
-            - { value: POST, correct: false }
-            - { value: PATCH, correct: false }
-            - { value: TRACE, correct: true }
-            - { value: OPTIONS, correct: true }
-            - { value: CONNECT, correct: false }
-
-    -   question: 'What does the 308 HTTP status code stand for?'
-        answers:
-            - { value: Found (moved temporarily), correct: false }
-            - { value: Temporary redirect, correct: false }
-            - { value: Moved permanently, correct: false }
-            - { value: Permanent redirect, correct: true }
-
-    -   question: 'How does the browser communicate to the server what is the preferred language of the user?'
-        answers:
-            - { value: The main language is sent using the Locale header, while secondary languages are usually included in the X-Locale-Alternate header., correct: false }
-            - { value: The browser doesn’t communicate the language of the user, it’s inferred from the user IP., correct: false }
-            - { value: User language preferences are sent using the Accept-Language header, correct: true }
-            - { value: The main language is included in the User-Agent header, correct: false }
-
-    -   question: 'What does the 308 HTTP status code stand for?'
-        answers:
-            - { value: Permanent redirect, correct: true }
-            - { value: Moved permanently, correct: false }
-            - { value: Temporary redirect, correct: false }
-            - { value: Found (moved temporarily), correct: false }
-
-    -   question: "Which of these headers don't belong to the Request ?"
-        answers:
-            - { value: Accept-Charset, correct: false }
-            - { value: Accept-Language, correct: false }
-            - { value: Encoding, correct: true }
-            - { value: Vary, correct: true }
-            - { value: Accept, correct: false }
-
-    -   question: "What is the purpose of the Vary header in the response?"
-        answers:
-            -   value: To inform the client about request headers that will affect the result for caching
+            -
+                value: GET
                 correct: true
-            -   value: To ensure the client changes their headers between requests
+            -
+                value: HEAD
+                correct: true
+            -
+                value: PUT
+                correct: true
+            -
+                value: DELETE
+                correct: true
+            -
+                value: POST
                 correct: false
-            -   value: To ensure the client uses the response for a different purpose
+            -
+                value: PATCH
                 correct: false
-    -   question: 'For a request to http://example.com/blog/index.php/post/hello-world what will be the value of $pathInfo in the following code?'
+            -
+                value: TRACE
+                correct: true
+            -
+                value: OPTIONS
+                correct: true
+            -
+                value: CONNECT
+                correct: false
+    -
+        question: 'What does the 308 HTTP status code stand for?'
         answers:
-            - { value: /post/hello-world, correct: true }
-            - { value: /blog/index.php/post/hello-world, correct: false }
-            - { value: example.com/blog/index.php/post/hello-world, correct: false }
-            - { value: /index.php/post/hello-world, correct: false }
-
-    -   question: "Which of these methods aren't mentioned in the RFC2616?"
+            -
+                value: 'Found (moved temporarily)'
+                correct: false
+            -
+                value: 'Temporary redirect'
+                correct: false
+            -
+                value: 'Moved permanently'
+                correct: false
+            -
+                value: 'Permanent redirect'
+                correct: true
+    -
+        question: 'How does the browser communicate to the server what is the preferred language of the user?'
         answers:
-            - { value: LINK, correct: true }
-            - { value: CONNECT, correct: false }
-            - { value: TRACE, correct: false }
-            - { value: PATCH, correct: true }
-
-    -   question: "Which of these methods are mentioned in the RFC2616?"
+            -
+                value: 'The main language is sent using the Locale header'
+                while: false
+            -
+                value: 'The browser doesn’t communicate the language of the user'
+                it’s: false
+            -
+                value: 'User language preferences are sent using the Accept-Language header'
+                correct: true
+            -
+                value: 'The main language is included in the User-Agent header'
+                correct: false
+    -
+        question: 'What does the 308 HTTP status code stand for?'
         answers:
-            - { value: "OPTIONS", correct: true }
-            - { value: "GET", correct: true }
-            - { value: "HEAD", correct: true }
-            - { value: "POST", correct: true }
-            - { value: "PUT", correct: true }
-            - { value: "DELETE", correct: true }
-            - { value: "TRACE", correct: true }
-            - { value: "CONNECT", correct: true }
-            - { value: LINK, correct: false }
-            - { value: PATCH, correct: false }
-
-    -   question: "Is there any required header in the request ?"
+            -
+                value: 'Permanent redirect'
+                correct: true
+            -
+                value: 'Moved permanently'
+                correct: false
+            -
+                value: 'Temporary redirect'
+                correct: false
+            -
+                value: 'Found (moved temporarily)'
+                correct: false
+    -
+        question: 'Which of these headers don''t belong to the Request ?'
         answers:
-            - { value: No, correct: false }
-            - { value: Yes, correct: true }
-
-    -   question: "Which of the following is a required header in a HTTP 1.1 request ?"
+            -
+                value: Accept-Charset
+                correct: false
+            -
+                value: Accept-Language
+                correct: false
+            -
+                value: Encoding
+                correct: true
+            -
+                value: Vary
+                correct: true
+            -
+                value: Accept
+                correct: false
+    -
+        question: 'What is the purpose of the Vary header in the response?'
         answers:
-            - { value: Host, correct: true }
-            - { value: Content-Length, correct: false }
-            - { value: Connection, correct: false }
-            - { value: Cache-Control, correct: false }
-            - { value: Accept, correct: false }
-
-    -   question: What is content negotiation?
+            -
+                value: 'To inform the client about request headers that will affect the result for caching'
+                correct: true
+            -
+                value: 'To ensure the client changes their headers between requests'
+                correct: false
+            -
+                value: 'To ensure the client uses the response for a different purpose'
+                correct: false
+    -
+        question: 'For a request to http://example.com/blog/index.php/post/hello-world what will be the value of $pathInfo in the following code?'
         answers:
-            - { value: 'The process of choosing specific representation when the resource is called', correct: true }
-            - { value: 'The process of requesting JS and CSS files from the HTML file.', correct: false }
-            - { value: 'The process of requesting the HTML document', correct: false }
-
-    -   question: What is server driven content negotiation?
+            -
+                value: /post/hello-world
+                correct: true
+            -
+                value: /blog/index.php/post/hello-world
+                correct: false
+            -
+                value: example.com/blog/index.php/post/hello-world
+                correct: false
+            -
+                value: /index.php/post/hello-world
+                correct: false
+    -
+        question: 'Which of these methods aren''t mentioned in the RFC2616?'
         answers:
-            - { value: 'The process of choosing specific representation when the resource is called', correct: true }
-            - { value: 'The process of requesting JS and CSS files from the HTML file.', correct: false }
-            - { value: 'The process of requesting the HTML document', correct: false }
-
-    -   question: What is proactive content negotiation?
+            -
+                value: LINK
+                correct: true
+            -
+                value: CONNECT
+                correct: false
+            -
+                value: TRACE
+                correct: false
+            -
+                value: PATCH
+                correct: true
+    -
+        question: 'Which of these methods are mentioned in the RFC2616?'
         answers:
-            - { value: 'The process of choosing specific representation when the resource is called', correct: true }
-            - { value: 'The process of requesting JS and CSS files from the HTML file.', correct: false }
-            - { value: 'The process of requesting the HTML document', correct: false }
-
-    -   question: During proative content negotiation how is the user agent's preferred content calculated?
+            -
+                value: OPTIONS
+                correct: true
+            -
+                value: GET
+                correct: true
+            -
+                value: HEAD
+                correct: true
+            -
+                value: POST
+                correct: true
+            -
+                value: PUT
+                correct: true
+            -
+                value: DELETE
+                correct: true
+            -
+                value: TRACE
+                correct: true
+            -
+                value: CONNECT
+                correct: true
+            -
+                value: LINK
+                correct: false
+            -
+                value: PATCH
+                correct: false
+    -
+        question: 'Is there any required header in the request ?'
         answers:
-            - { value: The user agent sends headers and they're used to calculate their preference, correct: true }
-            - { value: The extension of the document in URL, correct: false }
-            - { value: The status code of the response is used by the client to request the result, correct: false }
-
-    -   question: |
+            -
+                value: 'No'
+                correct: false
+            -
+                value: 'Yes'
+                correct: true
+    -
+        question: 'Which of the following is a required header in a HTTP 1.1 request ?'
+        answers:
+            -
+                value: Host
+                correct: true
+            -
+                value: Content-Length
+                correct: false
+            -
+                value: Connection
+                correct: false
+            -
+                value: Cache-Control
+                correct: false
+            -
+                value: Accept
+                correct: false
+    -
+        question: 'What is content negotiation?'
+        answers:
+            -
+                value: 'The process of choosing specific representation when the resource is called'
+                correct: true
+            -
+                value: 'The process of requesting JS and CSS files from the HTML file.'
+                correct: false
+            -
+                value: 'The process of requesting the HTML document'
+                correct: false
+    -
+        question: 'What is server driven content negotiation?'
+        answers:
+            -
+                value: 'The process of choosing specific representation when the resource is called'
+                correct: true
+            -
+                value: 'The process of requesting JS and CSS files from the HTML file.'
+                correct: false
+            -
+                value: 'The process of requesting the HTML document'
+                correct: false
+    -
+        question: 'What is proactive content negotiation?'
+        answers:
+            -
+                value: 'The process of choosing specific representation when the resource is called'
+                correct: true
+            -
+                value: 'The process of requesting JS and CSS files from the HTML file.'
+                correct: false
+            -
+                value: 'The process of requesting the HTML document'
+                correct: false
+    -
+        question: 'During proative content negotiation how is the user agent''s preferred content calculated?'
+        answers:
+            -
+                value: 'The user agent sends headers and they''re used to calculate their preference'
+                correct: true
+            -
+                value: 'The extension of the document in URL'
+                correct: false
+            -
+                value: 'The status code of the response is used by the client to request the result'
+                correct: false
+    -
+        question: |
             According the HTTP/1.1 standard which of the following headers are used to start server-driven content
             negotiation?
+            
         answers:
-            - { value: Accept, correct: true }
-            - { value: Accept-Charset, correct: true }
-            - { value: Accept-Encoding, correct: true }
-            - { value: Accept-Language, correct: true }
-            - { value: Accept-Type, correct: false }
-            - { value: User-Agent, correct: false }
-            - { value: Acceptable, correct: false }
-            - { value: Is-HTML, correct: false }
-
-    -   question: |
+            -
+                value: Accept
+                correct: true
+            -
+                value: Accept-Charset
+                correct: true
+            -
+                value: Accept-Encoding
+                correct: true
+            -
+                value: Accept-Language
+                correct: true
+            -
+                value: Accept-Type
+                correct: false
+            -
+                value: User-Agent
+                correct: false
+            -
+                value: Acceptable
+                correct: false
+            -
+                value: Is-HTML
+                correct: false
+    -
+        question: |
             Which header can the server use to indicate which headers are used for content negotiation in order
             to allow caches to work optimally
+            
         answers:
-            - { value: Vary, correct: true }
-            - { value: Encoding, correct: false }
-            - { value: Content, correct: false }
-            - { value: Transfer-Encoding, correct: false }
-            - { value: Cache-Control, correct: false }
-
-    -   question: |
+            -
+                value: Vary
+                correct: true
+            -
+                value: Encoding
+                correct: false
+            -
+                value: Content
+                correct: false
+            -
+                value: Transfer-Encoding
+                correct: false
+            -
+                value: Cache-Control
+                correct: false
+    -
+        question: |
             Which header can the server use to indicate which headers are used for content negotiation in order
             to allow caches to work optimally
+            
         answers:
-            - { value: Vary, correct: true }
-            - { value: Encoding, correct: false }
-            - { value: Content, correct: false }
-            - { value: Transfer-Encoding, correct: false }
-            - { value: Cache-Control, correct: false }
-
-    -   question: Which header lists MIME types the user agent can accept?
+            -
+                value: Vary
+                correct: true
+            -
+                value: Encoding
+                correct: false
+            -
+                value: Content
+                correct: false
+            -
+                value: Transfer-Encoding
+                correct: false
+            -
+                value: Cache-Control
+                correct: false
+    -
+        question: 'Which header lists MIME types the user agent can accept?'
         answers:
-            - { value: Accept, correct: true }
-            - { value: Accept-Type, correct: false }
-            - { value: Accept-Content, correct: false }
-            - { value: Cache-Control, correct: false }
-
-    -   question: Which header lists character encodings the user agent can accept?
+            -
+                value: Accept
+                correct: true
+            -
+                value: Accept-Type
+                correct: false
+            -
+                value: Accept-Content
+                correct: false
+            -
+                value: Cache-Control
+                correct: false
+    -
+        question: 'Which header lists character encodings the user agent can accept?'
         answers:
-            - { value: Accept-Charset, correct: true }
-            - { value: Accept-Char, correct: false }
-            - { value: Char, correct: false }
-            - { value: Accept-UTF, correct: false }
-
-    -   question: Which header lists compression formats the user agent can accept?
+            -
+                value: Accept-Charset
+                correct: true
+            -
+                value: Accept-Char
+                correct: false
+            -
+                value: Char
+                correct: false
+            -
+                value: Accept-UTF
+                correct: false
+    -
+        question: 'Which header lists compression formats the user agent can accept?'
         answers:
-            - { value: Accept-Encoding, correct: true }
-            - { value: Accept-Charset, correct: false }
-            - { value: Accept-Content, correct: false }
-            - { value: Vary, correct: false }
-
-    -   question: What is agent-driven negotiation?
+            -
+                value: Accept-Encoding
+                correct: true
+            -
+                value: Accept-Charset
+                correct: false
+            -
+                value: Accept-Content
+                correct: false
+            -
+                value: Vary
+                correct: false
+    -
+        question: 'What is agent-driven negotiation?'
         answers:
-            - value: The client chooses their preferred resource
-              correct: true
-            - { value: The user agent sends headers and they're used to calculate their preference, correct: false }
-            - { value: Accept-Content, correct: false }
-            - { value: Vary, correct: false }
-
-    -   question: Which of these headers don't belong to the Response?
+            -
+                value: 'The client chooses their preferred resource'
+                correct: true
+            -
+                value: 'The user agent sends headers and they''re used to calculate their preference'
+                correct: false
+            -
+                value: Accept-Content
+                correct: false
+            -
+                value: Vary
+                correct: false
+    -
+        question: 'Which of these headers don''t belong to the Response?'
         answers:
-            - { value: Proxy-Authenticate, correct: false }
-            - { value: WWW-Authenticate, correct: false }
-            - { value: User-Agent, correct: true }
-            - { value: Referer, correct: true }
+            -
+                value: Proxy-Authenticate
+                correct: false
+            -
+                value: WWW-Authenticate
+                correct: false
+            -
+                value: User-Agent
+                correct: true
+            -
+                value: Referer
+                correct: true
         help: |
             https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate
             https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authenticate
             https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent
             https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer
-
-    -   question: Which headers/directives will be ignored by a proxy if Expires, s-maxage and max-age are all present in a response ?
+            
+    -
+        question: 'Which headers/directives will be ignored by a proxy if Expires, s-maxage and max-age are all present in a response ?'
         answers:
-            - { value: s-maxage, correct: false }
-            - { value: Expires, correct: true }
-            - { value: max-age, correct: true }
-
-    -   question: Which of the following is a valid first line for the request?
+            -
+                value: s-maxage
+                correct: false
+            -
+                value: Expires
+                correct: true
+            -
+                value: max-age
+                correct: true
+    -
+        question: 'Which of the following is a valid first line for the request?'
         answers:
-            - { value: GET /route HTTP/1.1, correct: true }
-            - { value: HTTP/1.1 GET /route, correct: false }
-            - { value: HTTP/1.1 /route GET, correct: false }
+            -
+                value: 'GET /route HTTP/1.1'
+                correct: true
+            -
+                value: 'HTTP/1.1 GET /route'
+                correct: false
+            -
+                value: 'HTTP/1.1 /route GET'
+                correct: false
         help: |
             https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html
-
-    -   question: Which of the following is a valid first line for the response?
+            
+    -
+        question: 'Which of the following is a valid first line for the response?'
         answers:
-            - { value: HTTP/1.1 200 OK, correct: true }
-            - { value: 200 OK HTTP/1.1, correct: false }
-            - { value: OK 200 HTTP/1.1, correct: false }
-
-    -   question: Which of the following is a valid first line for the response?
+            -
+                value: 'HTTP/1.1 200 OK'
+                correct: true
+            -
+                value: '200 OK HTTP/1.1'
+                correct: false
+            -
+                value: 'OK 200 HTTP/1.1'
+                correct: false
+    -
+        question: 'Which of the following is a valid first line for the response?'
         answers:
-            - { value: Request-Line Headers CRLF Body, correct: false }
-            - { value: Request-Line CRLF Headers CRLF CRLF Body, correct: false }
-            - { value: Request-Line Headers CRLF CRLF Body, correct: true }
-            - { value: Request-Line CRLF Headers CRLF CRLF Body, correct: false }
+            -
+                value: 'Request-Line Headers CRLF Body'
+                correct: false
+            -
+                value: 'Request-Line CRLF Headers CRLF CRLF Body'
+                correct: false
+            -
+                value: 'Request-Line Headers CRLF CRLF Body'
+                correct: true
+            -
+                value: 'Request-Line CRLF Headers CRLF CRLF Body'
+                correct: false
         help: |
             https://en.wikipedia.org/wiki/HTTP_message_body
-
-    -   question: Which Request header is used to check the ETag validity ?
+            
+    -
+        question: 'Which Request header is used to check the ETag validity ?'
         answers:
-            - { value: If-None-Match, correct: true }
-            - { value: Etag, correct: false }
-            - { value: Last-Modified, correct: false }
-            - { value: Cache-Control, correct: false }
+            -
+                value: If-None-Match
+                correct: true
+            -
+                value: Etag
+                correct: false
+            -
+                value: Last-Modified
+                correct: false
+            -
+                value: Cache-Control
+                correct: false
         help: |
             https://symfony.com/doc/current/http_cache/validation.html#validation-with-the-etag-header
-
-    -   question: Which Cache-Control directive disallows the browser and all intermediate caches from storing any version of the returned response ?
+            
+    -
+        question: 'Which Cache-Control directive disallows the browser and all intermediate caches from storing any version of the returned response ?'
         answers:
-            - { value: public, correct: false }
-            - { value: no-cache, correct: false }
-            - { value: no-store, correct: true }
-            - { value: private, correct: false }
-
-    -   question: Which one of the following HTTP verbs is not cacheable ?
+            -
+                value: public
+                correct: false
+            -
+                value: no-cache
+                correct: false
+            -
+                value: no-store
+                correct: true
+            -
+                value: private
+                correct: false
+    -
+        question: 'Which one of the following HTTP verbs is not cacheable ?'
         answers:
-            - { value: POST, correct: false }
-            - { value: PUT, correct: true }
-            - { value: HEAD, correct: false }
-            - { value: GET, correct: false }
+            -
+                value: POST
+                correct: false
+            -
+                value: PUT
+                correct: true
+            -
+                value: HEAD
+                correct: false
+            -
+                value: GET
+                correct: false
         help: |
             https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
-
-    -   question: What returned HTTP call using the method HEAD?
+            
+    -
+        question: 'What returned HTTP call using the method HEAD?'
         answers:
-            - { value: The exact same as GET except without a message body, correct: true }
-            - { value: A formatted list of all headers which the server returns, correct: false }
-            - { value: A specified number of bytes of the message body, correct: false }
-            - { value: GET, correct: false }
-
-    -   question: What is the aim of the Symfony\Component\HttpKernel\EventListener\ResponseListener::onKernelResponse() listener on kernel.response event?
+            -
+                value: 'The exact same as GET except without a message body'
+                correct: true
+            -
+                value: 'A formatted list of all headers which the server returns'
+                correct: false
+            -
+                value: 'A specified number of bytes of the message body'
+                correct: false
+            -
+                value: GET
+                correct: false
+    -
+        question: 'What is the aim of the Symfony\Component\HttpKernel\EventListener\ResponseListener::onKernelResponse() listener on kernel.response event?'
         answers:
-            - { value: Fixes the Response headers based on the Request., correct: true }
-            - { value: Checks if the Response headers match the HTTP RFC requirements., correct: false }
-            - { value: Checks if the Response has a body., correct: false }
-
-    -   question: What is the default status code of a Symfony\Component\HttpFoundation\RedirectResponse object?
+            -
+                value: 'Fixes the Response headers based on the Request.'
+                correct: true
+            -
+                value: 'Checks if the Response headers match the HTTP RFC requirements.'
+                correct: false
+            -
+                value: 'Checks if the Response has a body.'
+                correct: false
+    -
+        question: 'What is the default status code of a Symfony\Component\HttpFoundation\RedirectResponse object?'
         answers:
-            - { value: 302, correct: true }
-            - { value: 301, correct: false }
-            - { value: 300, correct: false }
-            - { value: 304, correct: false }
-
-    -   question: Which of the following are valid status code to create a Symfony\Component\HttpFoundation\RedirectResponse?
+            -
+                value: 302
+                correct: true
+            -
+                value: 301
+                correct: false
+            -
+                value: 300
+                correct: false
+            -
+                value: 304
+                correct: false
+    -
+        question: 'Which of the following are valid status code to create a Symfony\Component\HttpFoundation\RedirectResponse?'
         answers:
-            - { value: 307, correct: true }
-            - { value: 303, correct: true }
-            - { value: 201, correct: true }
-            - { value: 308, correct: true }
-            - { value: 301, correct: true }
-            - { value: 302, correct: true }
-            - { value: 304, correct: false }
-
-    -   question: Which of the following are valid status code to create a Symfony\Component\HttpFoundation\RedirectResponse?
+            -
+                value: 307
+                correct: true
+            -
+                value: 303
+                correct: true
+            -
+                value: 201
+                correct: true
+            -
+                value: 308
+                correct: true
+            -
+                value: 301
+                correct: true
+            -
+                value: 302
+                correct: true
+            -
+                value: 304
+                correct: false
+    -
+        question: 'Which of the following are valid status code to create a Symfony\Component\HttpFoundation\RedirectResponse?'
         answers:
-            - { value: 307, correct: true }
-            - { value: 303, correct: true }
-            - { value: 201, correct: true }
-            - { value: 308, correct: true }
-            - { value: 301, correct: true }
-            - { value: 302, correct: true }
-            - { value: 304, correct: false }
-
-    -   question: What are the HTTP status codes involved by the caching models?
+            -
+                value: 307
+                correct: true
+            -
+                value: 303
+                correct: true
+            -
+                value: 201
+                correct: true
+            -
+                value: 308
+                correct: true
+            -
+                value: 301
+                correct: true
+            -
+                value: 302
+                correct: true
+            -
+                value: 304
+                correct: false
+    -
+        question: 'What are the HTTP status codes involved by the caching models?'
         answers:
-            - { value: 304, correct: true }
-            - { value: 300, correct: false }
-            - { value: 200, correct: false }
-            - { value: 204, correct: false }
+            -
+                value: 304
+                correct: true
+            -
+                value: 300
+                correct: false
+            -
+                value: 200
+                correct: false
+            -
+                value: 204
+                correct: false

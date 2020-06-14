@@ -1,11 +1,12 @@
 category: Routing
 questions:
-    -   question: |
+    -
+        question: |
             Considering the following definition of route:
             ```
             use Symfony\Component\Routing\RouteCollection;
             use Symfony\Component\Routing\Route;
-
+            
             $collection = new RouteCollection();
             $collection->add('_hello', new Route('/hello/{username}', array(
                 '_controller' => 'App\Controller\DemoController:hello',
@@ -14,36 +15,60 @@ questions:
             )));
             ```
             Will the /hello/John/Doe URI match this route?
+            
         answers:
-            - {value: No, correct: false}
-            - {value: Yes, correct: true}
-
-    -   question: |
+            -
+                value: 'No'
+                correct: false
+            -
+                value: 'Yes'
+                correct: true
+    -
+        question: |
             According to the following definition of route, which ones are matching?
-
+            
             app:
                 path: /blog/{page}
                 requirements:
                     page: \d+
                 defaults:
                     page: 1
+            
         answers:
-            - {value: /blog, correct: true}
-            - {value: /blog/, correct: false}
-            - {value: /blog/1, correct: true}
-            - {value: /blog/page-1, correct: false}
-
-    -   question: "Which attributes are reserved special routing parameters?"
+            -
+                value: /blog
+                correct: true
+            -
+                value: /blog/
+                correct: false
+            -
+                value: /blog/1
+                correct: true
+            -
+                value: /blog/page-1
+                correct: false
+    -
+        question: 'Which attributes are reserved special routing parameters?'
         answers:
-            - {value: _controller, correct: true}
-            - {value: _type, correct: false}
-            - {value: _locale, correct: true}
-            - {value: _format, correct: true}
-            - {value: _response, correct: false}
-
-    -   question: |
+            -
+                value: _controller
+                correct: true
+            -
+                value: _type
+                correct: false
+            -
+                value: _locale
+                correct: true
+            -
+                value: _format
+                correct: true
+            -
+                value: _response
+                correct: false
+    -
+        question: |
             Given the following routes, what controller will be executed for /book/123 ?
-
+            
             # config/routes.yaml
             book_list:
                 path:       /books
@@ -54,15 +79,24 @@ questions:
             book_download:
                 path:       /books/{slug}/download
                 controller: 'App\Controller\BookController::download'
+            
         answers:
-            - {value: 'Error: No route found', correct: true}
-            - {value: App\Controller\BookController::detail, correct: false}
-            - {value: App\Controller\BookController::download, correct: false}
-            - {value: App\Controller\BookController::list, correct: false}
-
-    -   question: |
+            -
+                value: 'Error: No route found'
+                correct: true
+            -
+                value: 'App\Controller\BookController::detail'
+                correct: false
+            -
+                value: 'App\Controller\BookController::download'
+                correct: false
+            -
+                value: 'App\Controller\BookController::list'
+                correct: false
+    -
+        question: |
             Given the following routes, what controller will be executed for /books/123 ?
-
+            
             # config/routes.yaml
             book_list:
                 path:       /books
@@ -73,322 +107,624 @@ questions:
             book_download:
                 path:       /books/{slug}/download
                 controller: 'App\Controller\BookController::download'
+            
         answers:
-            - {value: App\Controller\BookController::detail, correct: true}
-            - {value: 'Error: No route found', correct: false}
-            - {value: App\Controller\BookController::download, correct: false}
-            - {value: App\Controller\BookController::list, correct: false}
-
-    -   question: |
+            -
+                value: 'App\Controller\BookController::detail'
+                correct: true
+            -
+                value: 'Error: No route found'
+                correct: false
+            -
+                value: 'App\Controller\BookController::download'
+                correct: false
+            -
+                value: 'App\Controller\BookController::list'
+                correct: false
+    -
+        question: |
             blog_page:
                 path: /blog/{page}
                 requirements:
                     page: \d*
                 defaults:
                     page: 1
+            
         answers:
-            - {value: /blog/page1, correct: false}
-            - {value: /blog/, correct: true}
-            - {value: /blog/1, correct: true}
-            - {value: /blog, correct: true}
-            - {value: /blog/page, correct: false}
-            - {value: /blog/page-1, correct: false}
-
-    -   question: How do you add a Route to a RouteCollection?
+            -
+                value: /blog/page1
+                correct: false
+            -
+                value: /blog/
+                correct: true
+            -
+                value: /blog/1
+                correct: true
+            -
+                value: /blog
+                correct: true
+            -
+                value: /blog/page
+                correct: false
+            -
+                value: /blog/page-1
+                correct: false
+    -
+        question: 'How do you add a Route to a RouteCollection?'
         answers:
-            - {value: "$routes->add('route_name', $route);", correct: true}
-            - {value: "$routes->addRoute('route_name', $route);", correct: false}
-            - {value: "$routes->routes->add('route_name', $route);", correct: false}
-            - {value: "$routes->add($route);", correct: false}
-            - {value: "$routes->routes->add($route);", correct: false}
-            - {value: "$routes->addRoute($route);", correct: false}
-
-    -   question: Which of the following are a valid part of the routing component?
+            -
+                value: '$routes->add(''route_name'', $route);'
+                correct: true
+            -
+                value: '$routes->addRoute(''route_name'', $route);'
+                correct: false
+            -
+                value: '$routes->routes->add(''route_name'', $route);'
+                correct: false
+            -
+                value: $routes->add($route);
+                correct: false
+            -
+                value: $routes->routes->add($route);
+                correct: false
+            -
+                value: $routes->addRoute($route);
+                correct: false
+    -
+        question: 'Which of the following are a valid part of the routing component?'
         answers:
-            - {value: RouteCollection, correct: true}
-            - {value: RequestContext, correct: true}
-            - {value: UrlMatcher, correct: true}
-            - {value: RouteMatcher, correct: false}
-            - {value: RouteFinder, correct: false}
-            - {value: RequestGenerator, correct: false}
-
-    -   question: Which of the following are a valid route definition?
+            -
+                value: RouteCollection
+                correct: true
+            -
+                value: RequestContext
+                correct: true
+            -
+                value: UrlMatcher
+                correct: true
+            -
+                value: RouteMatcher
+                correct: false
+            -
+                value: RouteFinder
+                correct: false
+            -
+                value: RequestGenerator
+                correct: false
+    -
+        question: 'Which of the following are a valid route definition?'
         answers:
-            - {value: "new Route('/blog/{slug}', ['_controller' => BlogController::class])", correct: true}
-            - {value: "new Route(['_controller' => BlogController::class], '/blog/{slug}')", correct: false}
-            - {value: "new Route('/blog/{slug}')", correct: true}
-
-    -   question: What is the purpose of the RequestContext object?
+            -
+                value: 'new Route(''/blog/{slug}'', [''_controller'' => BlogController::class])'
+                correct: true
+            -
+                value: 'new Route([''_controller'' => BlogController::class], ''/blog/{slug}'')'
+                correct: false
+            -
+                value: 'new Route(''/blog/{slug}'')'
+                correct: true
+    -
+        question: 'What is the purpose of the RequestContext object?'
         answers:
-            - {value: To provide route information about the user's current route to the UrlMatcher, correct: true}
-            - {value: To provide route information about the configured route to the UrlMatcher, correct: false}
-            - {value: To provide route information about the both configured and the current to the UrlMatcher, correct: false}
-
-    -   question: What is the purpose of the UrlMatcher object?
+            -
+                value: 'To provide route information about the user''s current route to the UrlMatcher'
+                correct: true
+            -
+                value: 'To provide route information about the configured route to the UrlMatcher'
+                correct: false
+            -
+                value: 'To provide route information about the both configured and the current to the UrlMatcher'
+                correct: false
+    -
+        question: 'What is the purpose of the UrlMatcher object?'
         answers:
-            - {value: Matches a passed route string and returns the parameters configured for the matched configured route, correct: true}
-            - {value: Matches the RequestContext to a configured route, correct: false}
-
-    -   question: What is the purpose of the UrlMatcher object?
+            -
+                value: 'Matches a passed route string and returns the parameters configured for the matched configured route'
+                correct: true
+            -
+                value: 'Matches the RequestContext to a configured route'
+                correct: false
+    -
+        question: 'What is the purpose of the UrlMatcher object?'
         answers:
-            - {value: Matches a passed route string and returns the parameters configured for the matched configured route, correct: true}
-            - {value: Matches the RequestContext to a configured route, correct: false}
-
-    -   question: What is the exception thrown when a route can not be matched?
+            -
+                value: 'Matches a passed route string and returns the parameters configured for the matched configured route'
+                correct: true
+            -
+                value: 'Matches the RequestContext to a configured route'
+                correct: false
+    -
+        question: 'What is the exception thrown when a route can not be matched?'
         answers:
-            - {value: Symfony\Component\Routing\Exception\ResourceNotFoundException, correct: true}
-            - {value: Symfony\Component\Routing\Exception\RuntimeException, correct: false}
-            - {value: Symfony\Component\Routing\Exception\RouteNotFoundException, correct: false}
-            - {value: Symfony\Component\Routing\RouteNotFoundException, correct: false}
-            - {value: Symfony\Component\Routing\RuntimeException, correct: false}
-            - {value: Symfony\Component\Routing\ResourceNotFoundException, correct: false}
-
-    -   question: How many arguments does the Route class contructor accept?
+            -
+                value: Symfony\Component\Routing\Exception\ResourceNotFoundException
+                correct: true
+            -
+                value: Symfony\Component\Routing\Exception\RuntimeException
+                correct: false
+            -
+                value: Symfony\Component\Routing\Exception\RouteNotFoundException
+                correct: false
+            -
+                value: Symfony\Component\Routing\RouteNotFoundException
+                correct: false
+            -
+                value: Symfony\Component\Routing\RuntimeException
+                correct: false
+            -
+                value: Symfony\Component\Routing\ResourceNotFoundException
+                correct: false
+    -
+        question: 'How many arguments does the Route class contructor accept?'
         answers:
-            - {value: "'8'", correct: true}
-            - {value: "'6'", correct: false}
-            - {value: "'10'", correct: false}
-            - {value: "'5'", correct: false}
-            - {value: "'2'", correct: false}
-
-    -   question: Can a Regex string be passed to the first argument of Route's contructor?
+            -
+                value: '''8'''
+                correct: true
+            -
+                value: '''6'''
+                correct: false
+            -
+                value: '''10'''
+                correct: false
+            -
+                value: '''5'''
+                correct: false
+            -
+                value: '''2'''
+                correct: false
+    -
+        question: 'Can a Regex string be passed to the first argument of Route''s contructor?'
         answers:
-            - {value: No, correct: true}
-            - {value: Yes, correct: false}
-
-    -   question: What is the format for wild cards in a Route's pattern?
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: 'What is the format for wild cards in a Route''s pattern?'
         answers:
-            - {value: '/archive/{month}', correct: true}
-            - {value: '/archive/${month}', correct: false}
-            - {value: '/archive/%month%', correct: false}
-
-    -   question: |
+            -
+                value: '/archive/{month}'
+                correct: true
+            -
+                value: '/archive/${month}'
+                correct: false
+            -
+                value: /archive/%month%
+                correct: false
+    -
+        question: |
             What is the value of $var after running the following?
-
+            
             use Symfony\Component\Routing\Matcher\UrlMatcher;
             use Symfony\Component\Routing\RequestContext;
             use Symfony\Component\Routing\Route;
             use Symfony\Component\Routing\RouteCollection;
-
+            
             $route = new Route('/foo', ['_controller' => 'MyController']);
             $routes = new RouteCollection();
             $routes->add('route_name', $route);
-
+            
             $context = new RequestContext('/');
-
+            
             $matcher = new UrlMatcher($routes, $context);
-
+            
             $var = $matcher->match('/foo');
+            
         answers:
-            - {value: "['_controller' => 'MyController', '_route' => 'route_name']", correct: true}
-            - {value: "MyController", correct: false}
-            - {value: "['_controller' => 'MyController']", correct: false}
-            - {value: "null", correct: false}
-            - {value: "The route object", correct: false}
-
-    -   question: How can one define path requirements with a Route object?
+            -
+                value: '[''_controller'' => ''MyController'', ''_route'' => ''route_name'']'
+                correct: true
+            -
+                value: MyController
+                correct: false
+            -
+                value: '[''_controller'' => ''MyController'']'
+                correct: false
+            -
+                value: 'null'
+                correct: false
+            -
+                value: 'The route object'
+                correct: false
+    -
+        question: 'How can one define path requirements with a Route object?'
         answers:
-            - {value: "Pass an array with them as the third constructor argument", correct: true}
-            - {value: "Pass an array with them as the second constructor argument", correct: false}
-            - {value: "call the setRequirements() method on the object", correct: false}
-
-    -   question: What is the purpose of the 4th constructor argument of the Route class?
+            -
+                value: 'Pass an array with them as the third constructor argument'
+                correct: true
+            -
+                value: 'Pass an array with them as the second constructor argument'
+                correct: false
+            -
+                value: 'call the setRequirements() method on the object'
+                correct: false
+    -
+        question: 'What is the purpose of the 4th constructor argument of the Route class?'
         answers:
-            - {value: "To specify advanced configuration options for the Route", correct: true}
-            - {value: "To specify requirements of the route path", correct: false}
-            - {value: "To specify schemes which the route will support", correct: false}
-
-    -   question: Which of the following are valid Route options?
+            -
+                value: 'To specify advanced configuration options for the Route'
+                correct: true
+            -
+                value: 'To specify requirements of the route path'
+                correct: false
+            -
+                value: 'To specify schemes which the route will support'
+                correct: false
+    -
+        question: 'Which of the following are valid Route options?'
         answers:
-            - {value: compiler_class, correct: true}
-            - {value: utf8, correct: true}
-            - {value: hosts, correct: false}
-            - {value: methods, correct: false}
-            - {value: route_requirements, correct: false}
-
-    -   question: What is the purpose of a RouteCompiler?
+            -
+                value: compiler_class
+                correct: true
+            -
+                value: utf8
+                correct: true
+            -
+                value: hosts
+                correct: false
+            -
+                value: methods
+                correct: false
+            -
+                value: route_requirements
+                correct: false
+    -
+        question: 'What is the purpose of a RouteCompiler?'
         answers:
-            - {value: It generates an immutable serializable representation of the Route for caching, correct: true}
-            - {value: It generates a static map of routes for storage in caches, correct: false}
-            - {value: It creates a PHP file with directs routes the correct options based on your config, correct: false}
-
-    -   question: What is the purpose of the 5th argument to the Route class?
+            -
+                value: 'It generates an immutable serializable representation of the Route for caching'
+                correct: true
+            -
+                value: 'It generates a static map of routes for storage in caches'
+                correct: false
+            -
+                value: 'It creates a PHP file with directs routes the correct options based on your config'
+                correct: false
+    -
+        question: 'What is the purpose of the 5th argument to the Route class?'
         answers:
-            - {value: The host to match against, correct: true}
-            - {value: The methods supported by the Route, correct: false}
-            - {value: Array of schemes supported by the Route, correct: false}
-            - {value: A expression language conditional to enable the route, correct: false}
-
-    -   question: What is the purpose of the 6th argument to the Route class?
+            -
+                value: 'The host to match against'
+                correct: true
+            -
+                value: 'The methods supported by the Route'
+                correct: false
+            -
+                value: 'Array of schemes supported by the Route'
+                correct: false
+            -
+                value: 'A expression language conditional to enable the route'
+                correct: false
+    -
+        question: 'What is the purpose of the 6th argument to the Route class?'
         answers:
-            - {value: The host to match against, correct: false}
-            - {value: The methods supported by the Route, correct: false}
-            - {value: Array of schemes supported by the Route, correct: true}
-            - {value: A expression language conditional to enable the route, correct: false}
-
-    -   question: What is the purpose of the 7th argument to the Route class?
+            -
+                value: 'The host to match against'
+                correct: false
+            -
+                value: 'The methods supported by the Route'
+                correct: false
+            -
+                value: 'Array of schemes supported by the Route'
+                correct: true
+            -
+                value: 'A expression language conditional to enable the route'
+                correct: false
+    -
+        question: 'What is the purpose of the 7th argument to the Route class?'
         answers:
-            - {value: The host to match against, correct: false}
-            - {value: The methods supported by the Route, correct: true}
-            - {value: Array of schemes supported by the Route, correct: false}
-            - {value: A expression language conditional to enable the route, correct: false}
-
-    -   question: What is the purpose of the 8th argument to the Route class?
+            -
+                value: 'The host to match against'
+                correct: false
+            -
+                value: 'The methods supported by the Route'
+                correct: true
+            -
+                value: 'Array of schemes supported by the Route'
+                correct: false
+            -
+                value: 'A expression language conditional to enable the route'
+                correct: false
+    -
+        question: 'What is the purpose of the 8th argument to the Route class?'
         answers:
-            - {value: A expression language conditional to enable the route, correct: true}
-            - {value: The host to match against, correct: false}
-            - {value: The methods supported by the Route, correct: false}
-            - {value: Array of schemes supported by the Route, correct: false}
-
-    -   question: What are the variables available in the Route expression language condition?
+            -
+                value: 'A expression language conditional to enable the route'
+                correct: true
+            -
+                value: 'The host to match against'
+                correct: false
+            -
+                value: 'The methods supported by the Route'
+                correct: false
+            -
+                value: 'Array of schemes supported by the Route'
+                correct: false
+    -
+        question: 'What are the variables available in the Route expression language condition?'
         answers:
-            - {value: context, correct: true}
-            - {value: request, correct: true}
-            - {value: routeName, correct: false}
-            - {value: route, correct: false}
-
-    -   question: |
+            -
+                value: context
+                correct: true
+            -
+                value: request
+                correct: true
+            -
+                value: routeName
+                correct: false
+            -
+                value: route
+                correct: false
+    -
+        question: |
             Which paths will the following Route match?
-
+            
             $route = new Route(
                 '/start/{required}/{anything}',
                 ['required' => 'default'],
                 ['anything' => '.*']
             );
+            
         answers:
-            - {value: /start/default/hi, correct: true}
-            - {value: /start/default/hi/world, correct: true}
-            - {value: /start/default/, correct: false}
-            - {value: /start/, correct: false}
-
-    -   question: |
+            -
+                value: /start/default/hi
+                correct: true
+            -
+                value: /start/default/hi/world
+                correct: true
+            -
+                value: /start/default/
+                correct: false
+            -
+                value: /start/
+                correct: false
+    -
+        question: |
             Which paths will the following Route match?
-
+            
             $route = new Route(
                 '/start/{required}/{anything}',
                 ['required' => 'default'],
                 ['anything' => '.*']
             );
+            
         answers:
-            - {value: /start/default/hi, correct: true}
-            - {value: /start/default/hi/world, correct: true}
-            - {value: /start/default/, correct: false}
-            - {value: /start/, correct: false}
-
-    -   question: |
+            -
+                value: /start/default/hi
+                correct: true
+            -
+                value: /start/default/hi/world
+                correct: true
+            -
+                value: /start/default/
+                correct: false
+            -
+                value: /start/
+                correct: false
+    -
+        question: |
             How can one prefix to all routes in a collection?
+            
         answers:
-            - {value: $collection->addPrefix('/prefix');, correct: true}
-            - {value: $collection->add('/prefix');, correct: false}
-            - {value: $collection->prefix('/prefix');, correct: false}
-
-    -   question: |
+            -
+                value: '$collection->addPrefix(''/prefix'');'
+                correct: true
+            -
+                value: '$collection->add(''/prefix'');'
+                correct: false
+            -
+                value: '$collection->prefix(''/prefix'');'
+                correct: false
+    -
+        question: |
             Which object stores requirements, options and the prefix of a RouteCollection?
+            
         answers:
-            - {value: They are stored all the routes within the Collection, correct: true}
-            - {value: They are stored within the collection, correct: false}
-            - {value: They are stored in an auxiliary object, correct: false}
-
-    -   question: |
+            -
+                value: 'They are stored all the routes within the Collection'
+                correct: true
+            -
+                value: 'They are stored within the collection'
+                correct: false
+            -
+                value: 'They are stored in an auxiliary object'
+                correct: false
+    -
+        question: |
             When using the HttpFoundation component how can one quickly populate the RequestContext using a HttpFoundcation request object?
+            
         answers:
-            - {value: "$context->fromRequest($request);", correct: true}
-            - {value: RequestContext::fromRequest($request);, correct: false}
-            - {value: $request->getRoutingContext(), correct: false}
-
-    -   question: |
+            -
+                value: $context->fromRequest($request);
+                correct: true
+            -
+                value: 'RequestContext::fromRequest($request);'
+                correct: false
+            -
+                value: $request->getRoutingContext()
+                correct: false
+    -
+        question: |
             What will be the value of $var in after executing the following statement?
-
+            
             use Symfony\Component\Routing\Generator\UrlGenerator;
             use Symfony\Component\Routing\RequestContext;
             use Symfony\Component\Routing\Route;
             use Symfony\Component\Routing\RouteCollection;
-
+            
             $routes = new RouteCollection();
             $routes->add('show_post', new Route('/show/{slug}', [], [], [], '', ['https']));
-
+            
             $context = new RequestContext('/');
-
+            
             $generator = new UrlGenerator($routes, $context);
-
+            
             $url = $generator->generate('show_post', [
                 'slug' => 'my-blog-post',
             ]);
+            
         answers:
-            - {value: "https://localhost/show/my-blog-post", correct: true}
-            - {value: "/show/my-blog-post", correct: false}
-            - {value: "No value, there will be an error", correct: false}
-
-    -   question: |
+            -
+                value: 'https://localhost/show/my-blog-post'
+                correct: true
+            -
+                value: /show/my-blog-post
+                correct: false
+            -
+                value: 'No value, there will be an error'
+                correct: false
+    -
+        question: |
             How can one check if a Route exists for the generator?
+            
         answers:
-            - {value: "By catching the Symfony/Component/Routing/Exception/RouteNotFoundException exception", correct: true}
-            - {value: "By calling doesRouteExist() on the generator", correct: false}
-
-    -   question: |
+            -
+                value: 'By catching the Symfony/Component/Routing/Exception/RouteNotFoundException exception'
+                correct: true
+            -
+                value: 'By calling doesRouteExist() on the generator'
+                correct: false
+    -
+        question: |
             Which of the following are valid RouteLoaders?
+            
         answers:
-            - {value: "ClosureLoader", correct: true}
-            - {value: "PhpFileLoader", correct: true}
-            - {value: "GlobFileLoader", correct: true}
-            - {value: "AnnotationClassLoader", correct: true}
-            - {value: "YamlFileLoader", correct: true}
-            - {value: "DynamicLoader", correct: false}
-            - {value: "PhpLoader", correct: false}
-            - {value: "CacheLoader", correct: false}
-
-    -   question: |
+            -
+                value: ClosureLoader
+                correct: true
+            -
+                value: PhpFileLoader
+                correct: true
+            -
+                value: GlobFileLoader
+                correct: true
+            -
+                value: AnnotationClassLoader
+                correct: true
+            -
+                value: YamlFileLoader
+                correct: true
+            -
+                value: DynamicLoader
+                correct: false
+            -
+                value: PhpLoader
+                correct: false
+            -
+                value: CacheLoader
+                correct: false
+    -
+        question: |
             Which of the following are valid RouteLoaders?
+            
         answers:
-            - {value: "ObjectRouteLoader", correct: true}
-            - {value: "DirectoryLoader", correct: true}
-            - {value: "AnnotationFileLoader", correct: true}
-            - {value: "XmlFileLoader", correct: true}
-            - {value: "AnnotationDirectoryLoader", correct: true}
-            - {value: "DynamicLoader", correct: false}
-            - {value: "PhpLoader", correct: false}
-            - {value: "CacheLoader", correct: false}
-
-    -   question: |
+            -
+                value: ObjectRouteLoader
+                correct: true
+            -
+                value: DirectoryLoader
+                correct: true
+            -
+                value: AnnotationFileLoader
+                correct: true
+            -
+                value: XmlFileLoader
+                correct: true
+            -
+                value: AnnotationDirectoryLoader
+                correct: true
+            -
+                value: DynamicLoader
+                correct: false
+            -
+                value: PhpLoader
+                correct: false
+            -
+                value: CacheLoader
+                correct: false
+    -
+        question: |
             How would one load routes from YAML files using the Router?
+            
         answers:
-            - {value: "new Router(new YamlFileLoader($fileLocator), 'routes.yml')", correct: true}
-            - {value: "new Router(null, new YamlFileLoader($fileLocator), 'routes.yml')", correct: false}
-            - {value: "new Router(new YamlFileLoader($fileLocator))", correct: false}
-
-    -   question: |
+            -
+                value: 'new Router(new YamlFileLoader($fileLocator), ''routes.yml'')'
+                correct: true
+            -
+                value: 'new Router(null, new YamlFileLoader($fileLocator), ''routes.yml'')'
+                correct: false
+            -
+                value: 'new Router(new YamlFileLoader($fileLocator))'
+                correct: false
+    -
+        question: |
             How would one change the directory in which the Router cache is stored?
+            
         answers:
-            - {value: "new Router($loader, 'route.yml', ['cache_dir' => '/somedir'])", correct: true}
-            - {value: "new Router($loader, 'route.yml', ['cache' => '/somedir'])", correct: false}
-            - {value: "new Router($loader, 'route.yml', ['cache' => ['dir' => '/somedir']])", correct: false}
-
-    -   question: |
+            -
+                value: 'new Router($loader, ''route.yml'', [''cache_dir'' => ''/somedir''])'
+                correct: true
+            -
+                value: 'new Router($loader, ''route.yml'', [''cache'' => ''/somedir''])'
+                correct: false
+            -
+                value: 'new Router($loader, ''route.yml'', [''cache'' => [''dir'' => ''/somedir'']])'
+                correct: false
+    -
+        question: |
             How can one ensure a route can respect UTF8 characters?
+            
         answers:
-            - {value: "new Route('/show/{slug}', $defaults, ['utf8' => true,])", correct: true}
-            - {value: "new Route('/show/{slug}', $defaults, true)", correct: false}
-            - {value: "new Route('/show/{slug}', ['utf8' => true])", correct: false}
-
-    -   question: |
+            -
+                value: 'new Route(''/show/{slug}'', $defaults, [''utf8'' => true,])'
+                correct: true
+            -
+                value: 'new Route(''/show/{slug}'', $defaults, true)'
+                correct: false
+            -
+                value: 'new Route(''/show/{slug}'', [''utf8'' => true])'
+                correct: false
+    -
+        question: |
             How is it possible to generate absolute URLs from the Console?
+            
         answers:
-            - {value: "By specifying the host parameter in the Twig function url().", correct: false}
-            - {value: "By overloading the parameter router.request_context.host in the configuration.", correct: true}
-            - {value: "$this->getContainer()->get('router')->getContext()->setHost('example.org');", correct: true}
-            - {value: "The host is automatically known by Symfony, there is no need to specify it in CLI.", correct: false}
-
-    -   question: |
+            -
+                value: 'By specifying the host parameter in the Twig function url().'
+                correct: false
+            -
+                value: 'By overloading the parameter router.request_context.host in the configuration.'
+                correct: true
+            -
+                value: '$this->getContainer()->get(''router'')->getContext()->setHost(''example.org'');'
+                correct: true
+            -
+                value: 'The host is automatically known by Symfony, there is no need to specify it in CLI.'
+                correct: false
+    -
+        question: |
             Which of the following are valid patterns for importing resources?
+            
         answers:
-            - { value: "*.yml", correct: true }
-            - { value: "../common/", correct: true }
-            - { value: "bundles/*/{xml,yaml}/services.{yml,xml}", correct: true }
-            - { value: "%kernel.root_dir%/route.yml", correct: false }
-            - { value: "App/Service/Routes::loadRoutes()", correct: false }
-
-
-    -   question: |
+            -
+                value: '*.yml'
+                correct: true
+            -
+                value: ../common/
+                correct: true
+            -
+                value: 'bundles/*/{xml,yaml}/services.{yml,xml}'
+                correct: true
+            -
+                value: '%kernel.root_dir%/route.yml'
+                correct: false
+            -
+                value: 'App/Service/Routes::loadRoutes()'
+                correct: false
+    -
+        question: |
             /**
              * @Route("/article/{id}", name="article", requirements={"id":"\d+"}, defaults={"id":"toto"})
              */
@@ -396,35 +732,69 @@ questions:
             {
                 return new Response($id);
             }
+            
         answers:
-            - { value: 'Unable to find the controller for path "article". The route is wrongly configured.', correct: true }
-            - { value: 'Parameter "id" for route "article" must match "\d+" ("toto" given)', correct: false }
-            - { value: 'toto', correct: false }
-
-    -   question: |
+            -
+                value: 'Unable to find the controller for path "article". The route is wrongly configured.'
+                correct: true
+            -
+                value: 'Parameter "id" for route "article" must match "\d+" ("toto" given)'
+                correct: false
+            -
+                value: toto
+                correct: false
+    -
+        question: |
             What is the command to find a path associated route ?
+            
         answers:
-            - { value: 'php bin/console router:match /blog/my-latest-post', correct: true }
-            - { value: 'php bin/console debug:router:match /blog/my-latest-post', correct: false }
-            - { value: 'php bin/console debug:router-match /blog/my-latest-post', correct: false }
-            - { value: "it's not possible", correct: false }
-
-    -   question: |
+            -
+                value: 'php bin/console router:match /blog/my-latest-post'
+                correct: true
+            -
+                value: 'php bin/console debug:router:match /blog/my-latest-post'
+                correct: false
+            -
+                value: 'php bin/console debug:router-match /blog/my-latest-post'
+                correct: false
+            -
+                value: 'it''s not possible'
+                correct: false
+    -
+        question: |
             Given the following route path: /score-50%%, what URLs will be matched?
+            
         answers:
-            - { value: '/score-50%25', correct: true }
-            - { value: '/score-50%', correct: true }
-            - { value: '/score-50%%', correct: false }
-            - { value: "/score-50", correct: false }
-
-    -   question: |
+            -
+                value: /score-50%25
+                correct: true
+            -
+                value: /score-50%
+                correct: true
+            -
+                value: /score-50%%
+                correct: false
+            -
+                value: /score-50
+                correct: false
+    -
+        question: |
             Is the following route valid (assuming that the app.route_prefix parameter is defined)?
-
+            
             some_route:
                 path:     /%app.route_prefix%/contact
                 defaults: { _controller: AppBundle:Main:contact }
+            
         answers:
-            - { value: '/score-50%25', correct: true }
-            - { value: '/score-50%', correct: true }
-            - { value: '/score-50%%', correct: false }
-            - { value: "/score-50", correct: false }
+            -
+                value: /score-50%25
+                correct: true
+            -
+                value: /score-50%
+                correct: true
+            -
+                value: /score-50%%
+                correct: false
+            -
+                value: /score-50
+                correct: false

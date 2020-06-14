@@ -1,40 +1,77 @@
 category: Architecture
 questions:
-    -   question: 'Does the MIT license grant the software free of charge?'
+    -
+        question: 'Does the MIT license grant the software free of charge?'
         answers:
-            - { value: Yes, correct: true}
-            - { value: No, correct: false}
-
-    -   question: 'What is the condition of the use of software licensed under MIT?'
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: 'What is the condition of the use of software licensed under MIT?'
         answers:
-            - { value: Any copies of the software shall include the original license, correct: true}
-            - { value: There is no conditions, correct: false}
-            - { value: The software must not be resold, correct: false}
-            - { value: The software must not be resold, correct: false}
-            - { value: The software must not be sublicensed, correct: false}
-
-    -   question: 'Does the MIT license include a warranty of any sort?'
+            -
+                value: 'Any copies of the software shall include the original license'
+                correct: true
+            -
+                value: 'There is no conditions'
+                correct: false
+            -
+                value: 'The software must not be resold'
+                correct: false
+            -
+                value: 'The software must not be resold'
+                correct: false
+            -
+                value: 'The software must not be sublicensed'
+                correct: false
+    -
+        question: 'Does the MIT license include a warranty of any sort?'
         answers:
-            - { value: Yes, correct: false}
-            - { value: No, correct: true}
-
-    -   question: 'What is the purpose of a bridge?'
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: 'What is the purpose of a bridge?'
         answers:
-            - { value: It intergrates a third-party component into Symfony componenents, correct: true}
-            - { value: It connects the classes of two bundles in a decoupled way, correct: false}
-            - { value: It is a bundle which is for a thrd-party component, correct: false}
-
-    -   question: 'Are new services public by default with Symfony full-stack?'
+            -
+                value: 'It intergrates a third-party component into Symfony componenents'
+                correct: true
+            -
+                value: 'It connects the classes of two bundles in a decoupled way'
+                correct: false
+            -
+                value: 'It is a bundle which is for a thrd-party component'
+                correct: false
+    -
+        question: 'Are new services public by default with Symfony full-stack?'
         answers:
-            - { value: No, correct: true}
-            - { value: Yes, correct: false}
-
-    -   question: 'Are services autowired by default with Symfony full-stack?'
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: 'Are services autowired by default with Symfony full-stack?'
         answers:
-            - { value: Yes, correct: true}
-            - { value: No, correct: false}
-
-    -   question: 'Are services autoconfigured by default with Symfony full-stack?'
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: 'Are services autoconfigured by default with Symfony full-stack?'
         answers:
-            - { value: Yes, correct: true}
-            - { value: No, correct: false}
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false

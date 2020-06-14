@@ -1,417 +1,626 @@
 category: Forms
 questions:
-    -   question: |
+    -
+        question: |
             Which types are allowed for the choice_attr option of the
             Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType form type ?"
+            
         answers:
-            - { value: array, correct: true }
-            - { value: callable, correct: true }
-            - { value: string, correct: true }
-            - { value: integer, correct: false }
-            - { value: boolean, correct: false }
-    -   question: "How to customize the validation error message of the validation error caused by a TransformationFailedException ?"
+            -
+                value: array
+                correct: true
+            -
+                value: callable
+                correct: true
+            -
+                value: string
+                correct: true
+            -
+                value: integer
+                correct: false
+            -
+                value: boolean
+                correct: false
+    -
+        question: 'How to customize the validation error message of the validation error caused by a TransformationFailedException ?'
         answers:
-            - {value: "It's not possible", correct: false}
-            - {value: 'The exception message will be used as the validation error message', correct: false}
-            - {value: 'By using the invalid_message option', correct: true}
-    -   question: 'Are Data Transformers applied on a form field which has the inherit_data option set ?'
+            -
+                value: 'It''s not possible'
+                correct: false
+            -
+                value: 'The exception message will be used as the validation error message'
+                correct: false
+            -
+                value: 'By using the invalid_message option'
+                correct: true
+    -
+        question: 'Are Data Transformers applied on a form field which has the inherit_data option set ?'
         answers:
-            - {value: 'Yes', correct: false}
-            - {value: 'No', correct: true}
-
-    -   question: "If you need to modify the data given during pre-population or modify a form depending on the pre-populated data (adding or removing fields dynamically), to which event your code should be hooked?"
+            -
+                value: 'Yes'
+                correct: false
+            -
+                value: 'No'
+                correct: true
+    -
+        question: 'If you need to modify the data given during pre-population or modify a form depending on the pre-populated data (adding or removing fields dynamically), to which event your code should be hooked?'
         answers:
-            - {value: 'FormEvents::PRE_SET_DATA', correct: true}
-            - {value: "FormEvents::POST_SET_DATA", correct: false}
-            - {value: 'FormEvents::SUBMIT', correct: false}
-            - {value: 'FormEvents::PRE_SUBMIT', correct: false}
-            - {value: 'FormEvents::POST_SUBMIT', correct: false}
-
-    -   question: "Which of theses are not options available in every FormType?"
+            -
+                value: 'FormEvents::PRE_SET_DATA'
+                correct: true
+            -
+                value: 'FormEvents::POST_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::POST_SUBMIT'
+                correct: false
+    -
+        question: 'Which of theses are not options available in every FormType?'
         answers:
-            - {value: "is_required", correct: true}
-            - {value: "compound", correct: false}
-            - {value: 'by_reference', correct: false}
-            - {value: 'action', correct: false}
-            - {value: 'trim', correct: false}
-            - {value: 'attributes', correct: true}
-
-    -   question: "Which of the following are built-in Symfony form events?"
+            -
+                value: is_required
+                correct: true
+            -
+                value: compound
+                correct: false
+            -
+                value: by_reference
+                correct: false
+            -
+                value: action
+                correct: false
+            -
+                value: trim
+                correct: false
+            -
+                value: attributes
+                correct: true
+    -
+        question: 'Which of the following are built-in Symfony form events?'
         answers:
-            - {value: "FormEvents::PRE_SET_DATA", correct: true}
-            - {value: "FormEvents::POST_SET_DATA", correct: true}
-            - {value: 'FormEvents::SUBMIT_DATA', correct: false}
-            - {value: 'FormEvents::PRE_SUBMIT', correct: true}
-            - {value: 'FormEvents::SUBMIT', correct: true}
-            - {value: 'FormEvents::POST', correct: false}
-            - {value: 'FormEvents::POST_SUBMIT', correct: true}
-            - {value: 'FormEvents::POST_DATA', correct: false}
-
-    -   question: "Which of the following snipets is valid to set the maximum and minimum value for a Symfony\\Component\\Form\\Extension\\Core\\Type\\RangeType form type ?"
+            -
+                value: 'FormEvents::PRE_SET_DATA'
+                correct: true
+            -
+                value: 'FormEvents::POST_SET_DATA'
+                correct: true
+            -
+                value: 'FormEvents::SUBMIT_DATA'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SUBMIT'
+                correct: true
+            -
+                value: 'FormEvents::SUBMIT'
+                correct: true
+            -
+                value: 'FormEvents::POST'
+                correct: false
+            -
+                value: 'FormEvents::POST_SUBMIT'
+                correct: true
+            -
+                value: 'FormEvents::POST_DATA'
+                correct: false
+    -
+        question: 'Which of the following snipets is valid to set the maximum and minimum value for a Symfony\Component\Form\Extension\Core\Type\RangeType form type ?'
         answers:
-            -   value: |
+            -
+                value: |
                     $formBuilder->add('name', RangeType::class, [
                         'min' => 5,
                         'max' => 50
                     ]);
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     $formBuilder->add('name', RangeType::class, [
                         'attr' => [
                             'minimum' => 5,
                             'maximum' => 50
                         ]
                     ]);
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     $formBuilder->add('name', RangeType::class, [
                         'attr' => [
                             'min' => 5,
                             'max' => 50
                         ]
                     ]);
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     $formBuilder->add('name', RangeType::class, [
                         'minimum' => 5,
                         'maximum' => 50
                     ]);
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     $formBuilder->add('name', RangeType::class, [
                         'min' => 5,
                         'max' => 50
                     ]);
+                    
                 correct: false
-
-    -   question: "How to get the value of title set in a form?"
+    -
+        question: 'How to get the value of title set in a form?'
         answers:
-            -   value: |
+            -
+                value: |
                     {{ form.title.vars.value }}
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     {{ form.vars.title }}
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     {{ form.vars.title.value }}
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     {{ form.title }}
+                    
                 correct: false
-    -   question: |
+    -
+        question: |
             By default, which function provides the choices of the Symfony\Component\Form\Extension\Core\Type\LanguageType form type ?
+            
         answers:
-            - { value: Symfony\Component\Intl\Intl::getLanguageBundle()->getLanguageNames(), correct: true }
-            - { value: Intl::getLanguages(), correct: false }
-            - { value: Symfony\Component\Locale\getDisplayLanguages(), correct: false }
-            - { value: Symfony\Component\Form\Extension\Core\Type\LanguageType::getChoices(), correct: false }
-
-    -   question: "According to the official Symfony Best Practices Guide, in which namespace do you need to put the form type classes?"
+            -
+                value: 'Symfony\Component\Intl\Intl::getLanguageBundle()->getLanguageNames()'
+                correct: true
+            -
+                value: 'Intl::getLanguages()'
+                correct: false
+            -
+                value: Symfony\Component\Locale\getDisplayLanguages()
+                correct: false
+            -
+                value: 'Symfony\Component\Form\Extension\Core\Type\LanguageType::getChoices()'
+                correct: false
+    -
+        question: 'According to the official Symfony Best Practices Guide, in which namespace do you need to put the form type classes?'
         answers:
-            - { value: AppBundle\FormType\Form, correct: false }
-            - { value: AppBundle\Form, correct: true }
-            - { value: AppBundle\Form\Type, correct: false }
-            - { value: AppBundle\FormType, correct: false }
-
-    -   question: "Which is the correct way to add an extension MyForm to the Form component?"
+            -
+                value: AppBundle\FormType\Form
+                correct: false
+            -
+                value: AppBundle\Form
+                correct: true
+            -
+                value: AppBundle\Form\Type
+                correct: false
+            -
+                value: AppBundle\FormType
+                correct: false
+    -
+        question: 'Which is the correct way to add an extension MyForm to the Form component?'
         answers:
-            -   value: |
+            -
+                value: |
                     use Symfony\Component\Form\Forms;
-
+                    
                     $formFactory = Forms::createFormFactoryBuilder()
                     ->addExtension(new MyFormExtension())
                     ->getFormFactory();
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     use Symfony\Component\Form\Forms;
-
+                    
                     $formFactory = Forms::createFormFactoryBuilder()
                     ->registerExtension(new MyFormExtension())
                     ->getFormFactory();
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     use Symfony\Component\Form\Forms;
-
+                    
                     $formFactory = Forms::createFormFactoryBuilder()
                     ->addExtension('text', new MyFormExtension())
                     ->getFormFactory();
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     use Symfony\Component\Form\Forms;
-
+                    
                     $formFactory = Forms::createFormFactoryBuilder()
                     ->add(new MyFormExtension())
                     ->getFormFactory();
+                    
                 correct: false
-
-    -   question: "What are prerequisites to create a FormExtension in a Symfony Fullstack project using FrameworkBundle?"
+    -
+        question: 'What are prerequisites to create a FormExtension in a Symfony Fullstack project using FrameworkBundle?'
         answers:
-            -   value: |
+            -
+                value: |
                     Extending the Symfony\Component\Form\AbstractTypeExtension
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     Creating a service with the form.type_extension tag
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     Putting the new MyFormExtension class in the Form\Extension namespace
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     Implementing the interface Symfony\Component\Form\FormTypeExtensionInterface
+                    
                 correct: true
-
-    -   question: "Which interface should be implemented when you want to set the choice_loader option of the Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType form type ?"
+    -
+        question: 'Which interface should be implemented when you want to set the choice_loader option of the Symfony\Component\Form\Extension\Core\Type\ChoiceType form type ?'
         answers:
-            -   value: |
+            -
+                value: |
                     Symfony\Component\Form\Extension\Core\ChoiceLoaderInterface
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     Symfony\Component\Form\ChoiceLoaderInterface
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     Symfony\Component\Form\ChoiceList\Loader\ChoiceLoaderInterface
+                    
                 correct: true
-
-    -   question: "How do you prevent form_end from rendering the rest of the fields?"
+    -
+        question: 'How do you prevent form_end from rendering the rest of the fields?'
         answers:
-            -   value: |
+            -
+                value: |
                     {{ form_end(form, {'render_rest': false}) }}
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     This is not possible
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     {{ form_end(form, false) }}
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     {{ form_end(form, 0, false) }}
+                    
                 correct: false
-
-    -   question: "What will a call to {{ form(form) }} result in?"
+    -
+        question: 'What will a call to {{ form(form) }} result in?'
         answers:
-            -   value: "The rendering of the FormView into a whole HTML form"
+            -
+                value: 'The rendering of the FormView into a whole HTML form'
                 correct: true
-            -   value: "An error"
+            -
+                value: 'An error'
                 correct: false
-            -   value: "The rendering of the first field in the form"
+            -
+                value: 'The rendering of the first field in the form'
                 correct: false
-
-    -   question: "Which of the following are valid form functions for rendering the FormView?"
+    -
+        question: 'Which of the following are valid form functions for rendering the FormView?'
         answers:
-            -   value: "{{ form_start(form) }}"
+            -
+                value: '{{ form_start(form) }}'
                 correct: true
-            -   value: "{{ form_errors(form) }}"
+            -
+                value: '{{ form_errors(form) }}'
                 correct: true
-            -   value: "{{ form_row(form.field) }}"
+            -
+                value: '{{ form_row(form.field) }}'
                 correct: true
-            -   value: "{{ form_end(form) }}"
+            -
+                value: '{{ form_end(form) }}'
                 correct: true
-            -   value: "{{ form_widget(form.field) }}"
+            -
+                value: '{{ form_widget(form.field) }}'
                 correct: true
-            -   value: "{{ form_help(form.field) }}"
+            -
+                value: '{{ form_help(form.field) }}'
                 correct: true
-            -   value: "{{ form_errors(form.field) }}"
+            -
+                value: '{{ form_errors(form.field) }}'
                 correct: true
-            -   value: "{{ form_validation(form.field) }}"
+            -
+                value: '{{ form_validation(form.field) }}'
                 correct: false
-            -   value: "{{ form_begin(form) }}"
+            -
+                value: '{{ form_begin(form) }}'
                 correct: false
-            -   value: "{{ form_close(form) }}"
+            -
+                value: '{{ form_close(form) }}'
                 correct: false
-            -   value: "{{ form_field(form.field) }}"
+            -
+                value: '{{ form_field(form.field) }}'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             What will be the value of form.field.vars.attr.class after running:
-
+            
             {{ form_widget(form, { 'attr': {'class': 'foo'} }) }}
+            
         answers:
-            -   value: "foo"
+            -
+                value: foo
                 correct: false
-            -   value: "It will not contain a valid, or it will contain the value configured earlier"
+            -
+                value: 'It will not contain a valid, or it will contain the value configured earlier'
                 correct: true
-
-    -   question: 'How would the id of the task field be accessed in Twig?'
+    -
+        question: 'How would the id of the task field be accessed in Twig?'
         answers:
-            -   value: "{{ form.task.vars.id }}"
+            -
+                value: '{{ form.task.vars.id }}'
                 correct: true
-            -   value: "{{ form.task.id }}"
+            -
+                value: '{{ form.task.id }}'
                 correct: false
-            -   value: "{{ form.task.vars.fields.id }}"
+            -
+                value: '{{ form.task.vars.fields.id }}'
                 correct: false
-            -   value: "{{ form.fields.task.vars.id }}"
+            -
+                value: '{{ form.fields.task.vars.id }}'
                 correct: false
-
-    -   question: 'What is the recommended way to customise the rendering of all usages of a field in an application?'
+    -
+        question: 'What is the recommended way to customise the rendering of all usages of a field in an application?'
         answers:
-            -   value: "Using a form theme"
+            -
+                value: 'Using a form theme'
                 correct: true
-            -   value: "Using functions in Twig templates were the forms are used"
+            -
+                value: 'Using functions in Twig templates were the forms are used'
                 correct: false
-
-    -   question: 'How could you adjust the HTTP method of a form is rendered in a Twig template?'
+    -
+        question: 'How could you adjust the HTTP method of a form is rendered in a Twig template?'
         answers:
-            -   value: "{{ form(form, {'method': 'GET'}) }}"
+            -
+                value: '{{ form(form, {''method'': ''GET''}) }}'
                 correct: true
-            -   value: "{{ form(form, {'http_method': 'GET'}) }}"
+            -
+                value: '{{ form(form, {''http_method'': ''GET''}) }}'
                 correct: false
-            -   value: "{{ form(form, 'GET') }}"
+            -
+                value: '{{ form(form, ''GET'') }}'
                 correct: false
-            -   value: "{{ form(form, false, 'GET') }}"
+            -
+                value: '{{ form(form, false, ''GET'') }}'
                 correct: false
-
-    -   question: 'Which Twig form function handles only rendering the first <form> tag?'
+    -
+        question: 'Which Twig form function handles only rendering the first <form> tag?'
         answers:
-            -   value: "{{ form_start(form) }}"
+            -
+                value: '{{ form_start(form) }}'
                 correct: true
-            -   value: "{{ form_tag(form) }}"
+            -
+                value: '{{ form_tag(form) }}'
                 correct: false
-            -   value: "{{ form_first(form) }}"
+            -
+                value: '{{ form_first(form) }}'
                 correct: false
-
-    -   question: 'How could you adjust the HTTP method of a form is rendered in a Twig template?'
+    -
+        question: 'How could you adjust the HTTP method of a form is rendered in a Twig template?'
         answers:
-            -   value: "{{ form_start(form, {'method': 'GET'}) }}"
+            -
+                value: '{{ form_start(form, {''method'': ''GET''}) }}'
                 correct: true
-            -   value: "{{ form_start(form, {'http_method': 'GET'}) }}"
+            -
+                value: '{{ form_start(form, {''http_method'': ''GET''}) }}'
                 correct: false
-            -   value: "{{ form_start(form, 'GET') }}"
+            -
+                value: '{{ form_start(form, ''GET'') }}'
                 correct: false
-            -   value: "{{ form_start(form, false, 'GET') }}"
+            -
+                value: '{{ form_start(form, false, ''GET'') }}'
                 correct: false
-
-    -   question: 'Which Twig form function handles only rendering the last </form> tag?'
+    -
+        question: 'Which Twig form function handles only rendering the last </form> tag?'
         answers:
-            -   value: "{{ form_end(form) }}"
+            -
+                value: '{{ form_end(form) }}'
                 correct: true
-            -   value: "{{ form_close(form) }}"
+            -
+                value: '{{ form_close(form) }}'
                 correct: false
-            -   value: "{{ form_tag_end(form) }}"
+            -
+                value: '{{ form_tag_end(form) }}'
                 correct: false
-
-    -   question: 'Which Twig form function handles only rendering the label for a form field?'
+    -
+        question: 'Which Twig form function handles only rendering the label for a form field?'
         answers:
-            -   value: "{{ form_label(form) }}"
+            -
+                value: '{{ form_label(form) }}'
                 correct: true
-            -   value: "{{ form_widget(form) }}"
+            -
+                value: '{{ form_widget(form) }}'
                 correct: false
-            -   value: "{{ label_form(form) }}"
+            -
+                value: '{{ label_form(form) }}'
                 correct: false
-
-    -   question: 'Which of the following are valid ways to customise the label of a form field within a Twig template?'
+    -
+        question: 'Which of the following are valid ways to customise the label of a form field within a Twig template?'
         answers:
-            -   value: "{{ form_label(form.name, 'Updated field') }}"
+            -
+                value: '{{ form_label(form.name, ''Updated field'') }}'
                 correct: true
-            -   value: "{{ form_label(form.name, null, 'Updated field') }}"
+            -
+                value: '{{ form_label(form.name, null, ''Updated field'') }}'
                 correct: false
-            -   value: "{{ label_form(form, 'Updated field') }}"
+            -
+                value: '{{ label_form(form, ''Updated field'') }}'
                 correct: false
-            -   value: "{{ label_form(form, null, 'Updated field') }}"
+            -
+                value: '{{ label_form(form, null, ''Updated field'') }}'
                 correct: false
-            -   value: "{{ form_label(form.name, null, {'label': 'Updated field'}) }}"
+            -
+                value: '{{ form_label(form.name, null, {''label'': ''Updated field''}) }}'
                 correct: true
-            -   value: "{{ form_label(form.name, {'label': 'Updated field'}) }}"
+            -
+                value: '{{ form_label(form.name, {''label'': ''Updated field''}) }}'
                 correct: false
-            -   value: "{{ label_form(form.name, {'label': 'Updated field'}) }}"
+            -
+                value: '{{ label_form(form.name, {''label'': ''Updated field''}) }}'
                 correct: false
-
-    -   question: 'How would you add the HTML class foo to the form.name field?'
+    -
+        question: 'How would you add the HTML class foo to the form.name field?'
         answers:
-            -   value: "{{ form_label(form.name, null, {'label_attr': {'class': 'foo'}}) }}"
+            -
+                value: '{{ form_label(form.name, null, {''label_attr'': {''class'': ''foo''}}) }}'
                 correct: true
-            -   value: "{{ form_label(form.name, null, {'class': 'foo'}) }}"
+            -
+                value: '{{ form_label(form.name, null, {''class'': ''foo''}) }}'
                 correct: false
-            -   value: "{{ form_label(form.name, {'class': 'foo'}) }}"
+            -
+                value: '{{ form_label(form.name, {''class'': ''foo''}) }}'
                 correct: false
-            -   value: "{{ form_label(form.name, {'label_attr': {'class': 'foo'}}) }}"
+            -
+                value: '{{ form_label(form.name, {''label_attr'': {''class'': ''foo''}}) }}'
                 correct: false
-
-    -   question: 'Which Twig form function handles only rendering the help text for a form field?'
+    -
+        question: 'Which Twig form function handles only rendering the help text for a form field?'
         answers:
-            -   value: "{{ form_help(form.name) }}"
+            -
+                value: '{{ form_help(form.name) }}'
                 correct: true
-            -   value: "{{ help_form(form.name) }}"
+            -
+                value: '{{ help_form(form.name) }}'
                 correct: false
-            -   value: "{{ form_help_text(form.name) }}"
+            -
+                value: '{{ form_help_text(form.name) }}'
                 correct: false
-            -   value: "{{ form_help(form) }}"
+            -
+                value: '{{ form_help(form) }}'
                 correct: false
-
-    -   question: 'Which Twig form function handles only rendering the form errors for a form field?'
+    -
+        question: 'Which Twig form function handles only rendering the form errors for a form field?'
         answers:
-            -   value: "{{ form_errors(form.name) }}"
+            -
+                value: '{{ form_errors(form.name) }}'
                 correct: true
-            -   value: "{{ form_errors(form) }}"
+            -
+                value: '{{ form_errors(form) }}'
                 correct: false
-            -   value: "{{ errors_form(form.name) }}"
+            -
+                value: '{{ errors_form(form.name) }}'
                 correct: false
-            -   value: "{{ form_errors_text(form.name) }}"
+            -
+                value: '{{ form_errors_text(form.name) }}'
                 correct: false
-
-    -   question: 'Which Twig form function handles rendering the HTML tag for the field?'
+    -
+        question: 'Which Twig form function handles rendering the HTML tag for the field?'
         answers:
-            -   value: "{{ form_widget(form.name) }}"
+            -
+                value: '{{ form_widget(form.name) }}'
                 correct: false
-            -   value: "{{ form_widget(form) }}"
+            -
+                value: '{{ form_widget(form) }}'
                 correct: true
-            -   value: "{{ widget_form(form.name) }}"
+            -
+                value: '{{ widget_form(form.name) }}'
                 correct: false
-            -   value: "{{ form_html_widget(form.name) }}"
+            -
+                value: '{{ form_html_widget(form.name) }}'
                 correct: false
-            -   value: "{{ form_html_widget(form) }}"
+            -
+                value: '{{ form_html_widget(form) }}'
                 correct: false
-
-    -   question: "Which Twig form function handles returning a forms view's parent?"
+    -
+        question: 'Which Twig form function handles returning a forms view''s parent?'
         answers:
-            -   value: "{{ form_parent(form) }}"
+            -
+                value: '{{ form_parent(form) }}'
                 correct: true
-            -   value: "{{ parent_form_form(form) }}"
+            -
+                value: '{{ parent_form_form(form) }}'
                 correct: false
-            -   value: "{{ form_get_parent(form) }}"
+            -
+                value: '{{ form_get_parent(form) }}'
                 correct: false
-            -   value: "{{ form_parent_or_null(form) }}"
+            -
+                value: '{{ form_parent_or_null(form) }}'
                 correct: false
-            -   value: "{{ parent(form) }}"
+            -
+                value: '{{ parent(form) }}'
                 correct: false
-
-    -   question: "If you need to change request data before binding them to the form, which event should you use?"
+    -
+        question: 'If you need to change request data before binding them to the form, which event should you use?'
         answers:
-            -   value: "FormEvents::POST_SET_DATA"
+            -
+                value: 'FormEvents::POST_SET_DATA'
                 correct: false
-            -   value: "FormEvents::PRE_SET_DATA"
+            -
+                value: 'FormEvents::PRE_SET_DATA'
                 correct: false
-            -   value: "FormEvents::PRE_SUBMIT"
+            -
+                value: 'FormEvents::PRE_SUBMIT'
                 correct: true
-            -   value: "FormEvents::POST_SUBMIT"
+            -
+                value: 'FormEvents::POST_SUBMIT'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             Does a Symfony\Component\Form\Exception\TransformationFailedException thrown in a DataTransformer cause a validation error ?
+            
         answers:
-            -   value: "Yes"
+            -
+                value: 'Yes'
                 correct: true
-            -   value: "No"
+            -
+                value: 'No'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             Which of these form types does not inherit from the Symfony\Component\Form\Extension\Core\Type\TextType type ?
+            
         answers:
-            -   value: Symfony\Component\Form\Extension\Core\Type\SearchType
+            -
+                value: Symfony\Component\Form\Extension\Core\Type\SearchType
                 correct: false
-            -   value: Symfony\Component\Form\Extension\Core\Type\RangeType
+            -
+                value: Symfony\Component\Form\Extension\Core\Type\RangeType
                 correct: false
-            -   value: Symfony\Component\Form\Extension\Core\Type\LocaleType
+            -
+                value: Symfony\Component\Form\Extension\Core\Type\LocaleType
                 correct: true
-            -   value: Symfony\Component\Form\Extension\Core\Type\PasswordType
+            -
+                value: Symfony\Component\Form\Extension\Core\Type\PasswordType
                 correct: false
-            -   value: Symfony\Component\Form\Extension\Core\Type\HiddenType
+            -
+                value: Symfony\Component\Form\Extension\Core\Type\HiddenType
                 correct: true
-        help:
-            https://symfony.com/doc/current/reference/forms/types/range.html
-
-    -   question: |
+        help: 'https://symfony.com/doc/current/reference/forms/types/range.html'
+    -
+        question: |
             With the following code, what can be set as the value of the choice_label option to display the name
             property of each choice ?
-
+            
             class Post
             {
                 private $name;
@@ -424,542 +633,1128 @@ questions:
                     return $this->name;
                 }
             }
-
+            
             $formBuilder->add('posts', ChoiceType::class, [
                 'choices' => [new Post('foo'), new Post('bar')]
                 'choice_label' => /* ... */
             ]);
+            
         answers:
-            -   value: |
+            -
+                value: |
                     false
+                    
                 correct: false
-            -   value: Post::getName
+            -
+                value: 'Post::getName'
                 correct: false
-            -   value: 'name'
+            -
+                value: name
                 correct: true
-            -   value: |
+            -
+                value: |
                     function ($value, $key, $index) {
                         return $value->getName();
                     }
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     function ($values, $key, $index) {
                         return $values[$key];
                     }
+                    
                 correct: false
         help: |
             http://symfony.com/doc/current/reference/forms/types/choice.html#choice-label
-
-    -   question: |
+            
+    -
+        question: |
             Which of these options are valid for a Symfony\Component\Form\Extension\Core\Type\CollectionType form type ?
+            
         answers:
-            - { value: allow_add, correct: true }
-            - { value: allow_delete, correct: true }
-            - { value: allow_remove, correct: false }
-            - { value: allow_create, correct: false }
-            - { value: allow_update, correct: false }
-
-    -   question: |
+            -
+                value: allow_add
+                correct: true
+            -
+                value: allow_delete
+                correct: true
+            -
+                value: allow_remove
+                correct: false
+            -
+                value: allow_create
+                correct: false
+            -
+                value: allow_update
+                correct: false
+    -
+        question: |
             Which of these options are valid for a Symfony\Component\Form\Extension\Core\Type\CollectionType form type ?
+            
         answers:
-            - { value: entry_options, correct: true }
-            - { value: delete_empty, correct: true }
-            - { value: allow_delete, correct: true }
-            - { value: entry_type, correct: true }
-            - { value: allow_remove, correct: false }
-            - { value: allow_create, correct: false }
-            - { value: allow_update, correct: false }
-
-    -   question: |
+            -
+                value: entry_options
+                correct: true
+            -
+                value: delete_empty
+                correct: true
+            -
+                value: allow_delete
+                correct: true
+            -
+                value: entry_type
+                correct: true
+            -
+                value: allow_remove
+                correct: false
+            -
+                value: allow_create
+                correct: false
+            -
+                value: allow_update
+                correct: false
+    -
+        question: |
             Which of the following snipets is valid to set the maximum and minimum value for a
             Symfony\Component\Form\Extension\Core\Type\RangeType form type ?
+            
         answers:
-            -   value: |
+            -
+                value: |
                     $formBuilder->add('name', RangeType::class, [
                         'attr' => [
                             'minimum' => 5,
                             'maximum' => 50
                         ]
                     ]);
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     $formBuilder->add('name', RangeType::class, [
                         'attr' => [
                             'min' => 5,
                             'max' => 50
                         ]
                     ]);
+                    
                 correct: true
-            -   value: |
+            -
+                value: |
                     $formBuilder->add('name', RangeType::class, [
                         'min' => 5,
                         'max' => 50
                     ]);
+                    
                 correct: false
-            -   value: |
+            -
+                value: |
                     $formBuilder->add('name', RangeType::class, [
                         'minimum' => 5,
                         'maximum' => 50
                     ]);
+                    
                 correct: false
-
-    -   question: |
+    -
+        question: |
             Which of the following form types is the parent of the Symfony\Component\Form\Extension\Core\Type\BirthdayType form type ?
+            
         answers:
-            - { value: Symfony\Component\Form\Extension\Core\Type\DateType, correct: true }
-            - { value: Symfony\Component\Form\Extension\Core\Type\DateTimeType, correct: false }
-            - { value: Symfony\Component\Form\Extension\Core\Type\TimeType, correct: false }
-
-    -   question: Among the following, which one is not a built-in type?
+            -
+                value: Symfony\Component\Form\Extension\Core\Type\DateType
+                correct: true
+            -
+                value: Symfony\Component\Form\Extension\Core\Type\DateTimeType
+                correct: false
+            -
+                value: Symfony\Component\Form\Extension\Core\Type\TimeType
+                correct: false
+    -
+        question: 'Among the following, which one is not a built-in type?'
         answers:
-            - { value: PasswordType, correct: false }
-            - { value: MoneyType, correct: false }
-            - { value: NumberType, correct: false }
-            - { value: IbanType, correct: true }
-
-    -   question: Which of these extensions are a built-in ones ?
+            -
+                value: PasswordType
+                correct: false
+            -
+                value: MoneyType
+                correct: false
+            -
+                value: NumberType
+                correct: false
+            -
+                value: IbanType
+                correct: true
+    -
+        question: 'Which of these extensions are a built-in ones ?'
         answers:
-            - { value: HttpFoundationRequestHandler, correct: true }
-            - { value: HttpFoundationExtension, correct: true }
-            - { value: DependencyInjectionExtension, correct: true }
-            - { value: DataCollectorExtension, correct: true }
-
-    -   question: What is the use of the default_protocol option of the Symfony\Component\Form\Extension\Core\Type\UrlType form type ?
+            -
+                value: HttpFoundationRequestHandler
+                correct: true
+            -
+                value: HttpFoundationExtension
+                correct: true
+            -
+                value: DependencyInjectionExtension
+                correct: true
+            -
+                value: DataCollectorExtension
+                correct: true
+    -
+        question: 'What is the use of the default_protocol option of the Symfony\Component\Form\Extension\Core\Type\UrlType form type ?'
         answers:
-            - { value: To prepend the submitted value with an URI scheme (eg. http://) if it does not begin with one., correct: true }
-            - { value: To render the input with the placeholder property containing the value of the option., correct: false }
-            - { value: To force the submitted value to begin with a given URI scheme (eg. http://)., correct: false }
-
-    -   question: Which FormConfigBuilderInterface method should be called to attach a model transformer to a form?
+            -
+                value: 'To prepend the submitted value with an URI scheme (eg. http://) if it does not begin with one.'
+                correct: true
+            -
+                value: 'To render the input with the placeholder property containing the value of the option.'
+                correct: false
+            -
+                value: 'To force the submitted value to begin with a given URI scheme (eg. http://).'
+                correct: false
+    -
+        question: 'Which FormConfigBuilderInterface method should be called to attach a model transformer to a form?'
         answers:
-            - { value: addModelTransformer, correct: true }
-            - { value: newModelTransformer, correct: false }
-            - { value: attachModelTransformer, correct: false }
-            - { value: appendModelTransformer, correct: false }
-
-    -   question: Which of the following are component built in model transformers?
+            -
+                value: addModelTransformer
+                correct: true
+            -
+                value: newModelTransformer
+                correct: false
+            -
+                value: attachModelTransformer
+                correct: false
+            -
+                value: appendModelTransformer
+                correct: false
+    -
+        question: 'Which of the following are component built in model transformers?'
         answers:
-            - { value: CallbackTransformer, correct: true }
-            - { value: ReverseTransformer, correct: false }
-            - { value: DateTimeTransformer, correct: false }
-            - { value: StringTransformer, correct: false }
-            - { value: EntityTransformer, correct: false }
-            - { value: ObjectTransformer, correct: false }
-            - { value: BooleanTransformer, correct: false }
-
-    -   question: Which type does not correspond to a button?
+            -
+                value: CallbackTransformer
+                correct: true
+            -
+                value: ReverseTransformer
+                correct: false
+            -
+                value: DateTimeTransformer
+                correct: false
+            -
+                value: StringTransformer
+                correct: false
+            -
+                value: EntityTransformer
+                correct: false
+            -
+                value: ObjectTransformer
+                correct: false
+            -
+                value: BooleanTransformer
+                correct: false
+    -
+        question: 'Which type does not correspond to a button?'
         answers:
-            - { value: reset, correct: false }
-            - { value: input, correct: true }
-            - { value: button, correct: false }
-            - { value: submit, correct: false }
-
-    -   question: |
+            -
+                value: reset
+                correct: false
+            -
+                value: input
+                correct: true
+            -
+                value: button
+                correct: false
+            -
+                value: submit
+                correct: false
+    -
+        question: |
             Assuming an application that stores money amounts multiplied by 100 (eg. 1.23 is stored 123).
-
+            
             What option should you set on the Symfony\Component\Form\Extension\Core\Type\MoneyType form type in order to display the correct value to the user ?
+            
         answers:
-            - { value: scale, correct: false }
-            - { value: by_reference, correct: false }
-            - { value: multiply, correct: false }
-            - { value: divisor, correct: true }
-
-    -   question: |
+            -
+                value: scale
+                correct: false
+            -
+                value: by_reference
+                correct: false
+            -
+                value: multiply
+                correct: false
+            -
+                value: divisor
+                correct: true
+    -
+        question: |
             If the expanded and multiple options are set to true on a Symfony\Component\Form\Extension\Core\Type\ChoiceType form type, what is displayed when rendering the form ?
+            
         answers:
-            - { value: Select tag., correct: false }
-            - { value: Radio buttons., correct: false }
-            - { value: Select tag (with multiple attribute)., correct: false }
-            - { value: Checkboxes., correct: true }
-
-    -   question: |
+            -
+                value: 'Select tag.'
+                correct: false
+            -
+                value: 'Radio buttons.'
+                correct: false
+            -
+                value: 'Select tag (with multiple attribute).'
+                correct: false
+            -
+                value: Checkboxes.
+                correct: true
+    -
+        question: |
             What are the prerequisites to creating a form type extension?
+            
         answers:
-            - { value: Extending AbstractTypeExtension, correct: true }
-            - { value: Implementing FormTypeExtensionInterface., correct: true }
-            - { value: Implementing the getExtendedTypes() method, correct: true }
-            - { value: using the tag form.type_extension, correct: true }
-            - { value: using the tag form.extension, correct: false }
-            - { value: Implementing the getExtendedType() method, correct: false }
-            - { value: Extending TypeExtension, correct: false }
-
-    -   question: |
+            -
+                value: 'Extending AbstractTypeExtension'
+                correct: true
+            -
+                value: 'Implementing FormTypeExtensionInterface.'
+                correct: true
+            -
+                value: 'Implementing the getExtendedTypes() method'
+                correct: true
+            -
+                value: 'using the tag form.type_extension'
+                correct: true
+            -
+                value: 'using the tag form.extension'
+                correct: false
+            -
+                value: 'Implementing the getExtendedType() method'
+                correct: false
+            -
+                value: 'Extending TypeExtension'
+                correct: false
+    -
+        question: |
             How could one use the CLI to verify the configuration of their new type extension?
+            
         answers:
-            - { value: php bin/console debug:form, correct: true }
-            - { value: php bin/console form:debug, correct: false }
-            - { value: php bin/console form:type-extensions:view, correct: false }
-            - { value: php bin/console debug:services, correct: false }
-            - { value: php bin/console services:debug, correct: false }
-
-    -   question: |
+            -
+                value: 'php bin/console debug:form'
+                correct: true
+            -
+                value: 'php bin/console form:debug'
+                correct: false
+            -
+                value: 'php bin/console form:type-extensions:view'
+                correct: false
+            -
+                value: 'php bin/console debug:services'
+                correct: false
+            -
+                value: 'php bin/console services:debug'
+                correct: false
+    -
+        question: |
             What method of a type extension allow one to override the options of a form type?
+            
         answers:
-            - { value: configureOptions(OptionsResolver $resolver), correct: true }
-            - { value: overrideOptions(OptionsResolver $resolver), correct: false }
-            - { value: configureOptionResolver(OptionsResolver $resolver), correct: false }
-            - { value: overrideOptionResolver(OptionsResolver $resolver), correct: false }
-
-    -   question: |
+            -
+                value: 'configureOptions(OptionsResolver $resolver)'
+                correct: true
+            -
+                value: 'overrideOptions(OptionsResolver $resolver)'
+                correct: false
+            -
+                value: 'configureOptionResolver(OptionsResolver $resolver)'
+                correct: false
+            -
+                value: 'overrideOptionResolver(OptionsResolver $resolver)'
+                correct: false
+    -
+        question: |
             What method of a type extension allow one to override the generated form view?
+            
         answers:
-            - { value: "buildView(FormView $view, FormInterface $form, array $options)", correct: true }
-            - { value: "buildView(FormInterface $form, FormView $view, array $options)", correct: false }
-            - { value: "overrideView(FormInterface $form, FormView $view, array $options)", correct: false }
-            - { value: "overrideView(FormView $view, FormInterface $form, array $options)", correct: false }
-
-    -   question: |
+            -
+                value: 'buildView(FormView $view, FormInterface $form, array $options)'
+                correct: true
+            -
+                value: 'buildView(FormInterface $form, FormView $view, array $options)'
+                correct: false
+            -
+                value: 'overrideView(FormInterface $form, FormView $view, array $options)'
+                correct: false
+            -
+                value: 'overrideView(FormView $view, FormInterface $form, array $options)'
+                correct: false
+    -
+        question: |
             What is the block one must override to change the markup of the FileType?
+            
         answers:
-            - { value: "file_widget", correct: true }
-            - { value: "files_widget", correct: false }
-            - { value: "file_type_widget", correct: false }
-            - { value: "_form_file_type_widget", correct: false }
-
-    -   question: |
+            -
+                value: file_widget
+                correct: true
+            -
+                value: files_widget
+                correct: false
+            -
+                value: file_type_widget
+                correct: false
+            -
+                value: _form_file_type_widget
+                correct: false
+    -
+        question: |
             Do form types extended in a form extension respect parent values of types?
+            
         answers:
-            - { value: "Yes", correct: true }
-            - { value: "No", correct: false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             Which of the following are valid method on the FormTypeExtensionInterface in Symfony 3.4?
+            
         answers:
-            - { value: "public function buildForm(FormBuilderInterface $builder, array $options);", correct: true }
-            - { value: "public function buildForm(FormBuilder $builder, array $options);", correct: false }
-            - { value: "public function buildView(FormView $view, FormInterface $form, array $options);", correct: true }
-            - { value: "public function buildView(FormInterface $form, FormView $view, array $options);", correct: false }
-            - { value: "public function finishView(FormView $view, FormInterface $form, array $options);", correct: true }
-            - { value: "public function finishView(FormInterface $form, FormView $view, array $options);", correct: false }
-            - { value: "public function configureOptions(OptionsResolver $resolver);", correct: true }
-            - { value: "public function configureOptionResolver(OptionsResolver $resolver);", correct: false }
-            - { value: "public function getExtendedType();", correct: true }
-            - { value: "public function getExtendedTypes();", correct: false }
-
-    -   question: |
+            -
+                value: 'public function buildForm(FormBuilderInterface $builder, array $options);'
+                correct: true
+            -
+                value: 'public function buildForm(FormBuilder $builder, array $options);'
+                correct: false
+            -
+                value: 'public function buildView(FormView $view, FormInterface $form, array $options);'
+                correct: true
+            -
+                value: 'public function buildView(FormInterface $form, FormView $view, array $options);'
+                correct: false
+            -
+                value: 'public function finishView(FormView $view, FormInterface $form, array $options);'
+                correct: true
+            -
+                value: 'public function finishView(FormInterface $form, FormView $view, array $options);'
+                correct: false
+            -
+                value: 'public function configureOptions(OptionsResolver $resolver);'
+                correct: true
+            -
+                value: 'public function configureOptionResolver(OptionsResolver $resolver);'
+                correct: false
+            -
+                value: 'public function getExtendedType();'
+                correct: true
+            -
+                value: 'public function getExtendedTypes();'
+                correct: false
+    -
+        question: |
             What is the difference between data mappers and data transformers?
+            
         answers:
-            - { value: "Data transformers change the representation of a value", correct: true }
-            - { value: "Data mappers copy values into and out of form fields", correct: true }
-            - { value: "Data mappers change the representation of a value", correct: false }
-            - { value: "Data mappers map a data between two non-form representations for normalisation", correct: false }
-
-    -   question: |
+            -
+                value: 'Data transformers change the representation of a value'
+                correct: true
+            -
+                value: 'Data mappers copy values into and out of form fields'
+                correct: true
+            -
+                value: 'Data mappers change the representation of a value'
+                correct: false
+            -
+                value: 'Data mappers map a data between two non-form representations for normalisation'
+                correct: false
+    -
+        question: |
             What interface must be implemented to create a data mapper?
+            
         answers:
-            - { value: "Symfony\\Component\\Form\\DataMapperInterface", correct: true }
-            - { value: "Symfony\\Component\\Form\\DataMapper", correct: false }
-            - { value: "Symfony\\Component\\Form\\Mappers\\DataMapper", correct: false }
-            - { value: "Symfony\\Component\\Form\\Mappers\\DataMapperInterface", correct: false }
-            - { value: "Symfony\\Bundle\\FormBundle\\DataMapperInterface", correct: false }
-            - { value: "Symfony\\Bundle\\FormBundle\\DataMapper", correct: false }
-            - { value: "Symfony\\Bundle\\FormBundle\\Mappers\\DataMapper", correct: false }
-            - { value: "Symfony\\Bundle\\FormBundle\\Mappers\\DataMapperInterface", correct: false }
-
-    -   question: |
+            -
+                value: Symfony\Component\Form\DataMapperInterface
+                correct: true
+            -
+                value: Symfony\Component\Form\DataMapper
+                correct: false
+            -
+                value: Symfony\Component\Form\Mappers\DataMapper
+                correct: false
+            -
+                value: Symfony\Component\Form\Mappers\DataMapperInterface
+                correct: false
+            -
+                value: Symfony\Bundle\FormBundle\DataMapperInterface
+                correct: false
+            -
+                value: Symfony\Bundle\FormBundle\DataMapper
+                correct: false
+            -
+                value: Symfony\Bundle\FormBundle\Mappers\DataMapper
+                correct: false
+            -
+                value: Symfony\Bundle\FormBundle\Mappers\DataMapperInterface
+                correct: false
+    -
+        question: |
             What must be done to create a attach a data mapper to a form?
+            
         answers:
-            - { value: "By calling setDataMapper() on the form", correct: true }
-            - { value: "By calling setMapper() on the form", correct: false }
-            - { value: "By calling settings the option data_mapper on the from with an object", correct: false }
-            - { value: "By calling settings the option data_mapper on the from with a class name", correct: false }
-
-
-    -   question: |
+            -
+                value: 'By calling setDataMapper() on the form'
+                correct: true
+            -
+                value: 'By calling setMapper() on the form'
+                correct: false
+            -
+                value: 'By calling settings the option data_mapper on the from with an object'
+                correct: false
+            -
+                value: 'By calling settings the option data_mapper on the from with a class name'
+                correct: false
+    -
+        question: |
             Are data mappers called on forms which have inherit_data set to true?
+            
         answers:
-            - { value: "No", correct: true }
-            - { value: "Yes", correct: false }
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             Are data mappers called on forms which have inherit_data set to false?
+            
         answers:
-            - { value: "Yes", correct: true }
-            - { value: "No", correct: false }
-
-    -   question: |
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
             What is an easier alternative to implementing a data mapper for a mutable object with constructor arguments?
+            
         answers:
-            - { value: "Configure the empty_data option with a closure which constructs the object", correct: true }
-            - { value: "Set the empty_data option to true", correct: false }
-            - { value: "Configure the constructor option with a closure which constructs the object", correct: false }
-            - { value: "Set the constructor option to true", correct: false }
-            - { value: "Configure the initializer option with a closure which constructs the object", correct: false }
-            - { value: "Set the initializer option to true", correct: false }
-
-    -   question: |
+            -
+                value: 'Configure the empty_data option with a closure which constructs the object'
+                correct: true
+            -
+                value: 'Set the empty_data option to true'
+                correct: false
+            -
+                value: 'Configure the constructor option with a closure which constructs the object'
+                correct: false
+            -
+                value: 'Set the constructor option to true'
+                correct: false
+            -
+                value: 'Configure the initializer option with a closure which constructs the object'
+                correct: false
+            -
+                value: 'Set the initializer option to true'
+                correct: false
+    -
+        question: |
             Which other Symfony component does the built-in data mapper rely on?
+            
         answers:
-            - { value: "PropertyAccess component", correct: true }
-            - { value: "OptionsResolver component", correct: false }
-            - { value: "Inflector component", correct: false }
-
-    -   question: |
+            -
+                value: 'PropertyAccess component'
+                correct: true
+            -
+                value: 'OptionsResolver component'
+                correct: false
+            -
+                value: 'Inflector component'
+                correct: false
+    -
+        question: |
             Why would one want to redirect a user after a form submission?
+            
         answers:
-            - { value: "It stops their refresh button from resubmitting the form.", correct: true }
-            - { value: "It stops it from displaying error messages saying it wasn't completed", correct: false }
-            - { value: "It stops it from displaying error messages about CRSF token invalidation", correct: false }
-
-    -   question: |
+            -
+                value: 'It stops their refresh button from resubmitting the form.'
+                correct: true
+            -
+                value: 'It stops it from displaying error messages saying it wasn''t completed'
+                correct: false
+            -
+                value: 'It stops it from displaying error messages about CRSF token invalidation'
+                correct: false
+    -
+        question: |
             Which form event would be event for modifying data given during pre-population?
+            
         answers:
-            - { value: "FormEvents::PRE_SET_DATA", correct: true }
-            - { value: "FormEvents::POST_SET_DATA", correct: false }
-            - { value: "FormEvents::PRE_SUBMIT", correct: false }
-            - { value: "FormEvents::SUBMIT", correct: false }
-            - { value: "FormEvents::POST_SUBMIT", correct: false }
-
-    -   question: |
+            -
+                value: 'FormEvents::PRE_SET_DATA'
+                correct: true
+            -
+                value: 'FormEvents::POST_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::POST_SUBMIT'
+                correct: false
+    -
+        question: |
             Which form event would be best for modifying the form depending on the pre-populated data?
+            
         answers:
-            - { value: "FormEvents::PRE_SET_DATA", correct: true }
-            - { value: "FormEvents::POST_SET_DATA", correct: false }
-            - { value: "FormEvents::PRE_SUBMIT", correct: false }
-            - { value: "FormEvents::SUBMIT", correct: false }
-            - { value: "FormEvents::POST_SUBMIT", correct: false }
-
-    -   question: |
+            -
+                value: 'FormEvents::PRE_SET_DATA'
+                correct: true
+            -
+                value: 'FormEvents::POST_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::POST_SUBMIT'
+                correct: false
+    -
+        question: |
             What is the result of calling Form::setData() in a FormEvents::PRE_SET_DATA event?
+            
         answers:
-            - { value: "It will throw a Symfony\\Component\\Form\\Exception\\RuntimeException", correct: true }
-            - { value: "It will throw a \\RuntimeException", correct: false }
-            - { value: "It will set the data and return nothing", correct: false }
-            - { value: "It will set the data and return the set data", correct: false }
-            - { value: "It will set the data and return the form", correct: false }
-
-    -   question: |
+            -
+                value: 'It will throw a Symfony\Component\Form\Exception\RuntimeException'
+                correct: true
+            -
+                value: 'It will throw a \RuntimeException'
+                correct: false
+            -
+                value: 'It will set the data and return nothing'
+                correct: false
+            -
+                value: 'It will set the data and return the set data'
+                correct: false
+            -
+                value: 'It will set the data and return the form'
+                correct: false
+    -
+        question: |
             What is the purpose of the Symfony\Component\Form\Extension\Core\EventListener\ResizeFormListener?
+            
         answers:
-            - { value: "It reorders CollectionType forms based on pre-populated data", correct: true }
-            - { value: "It ensures the form's view has the correct embedded CSS", correct: false }
-            - { value: "It reorders all forms based on pre-populated data", correct: false }
-            - { value: "It ensures the view is correctly sized for the user agent", correct: false }
-
-    -   question: |
+            -
+                value: 'It reorders CollectionType forms based on pre-populated data'
+                correct: true
+            -
+                value: 'It ensures the form''s view has the correct embedded CSS'
+                correct: false
+            -
+                value: 'It reorders all forms based on pre-populated data'
+                correct: false
+            -
+                value: 'It ensures the view is correctly sized for the user agent'
+                correct: false
+    -
+        question: |
             What is the purpose of the Symfony\Component\Form\Extension\Core\EventListener\ResizeFormListener?
+            
         answers:
-            - { value: "It reorders CollectionType forms based on pre-populated data", correct: true }
-            - { value: "It ensures the form's view has the correct embedded CSS", correct: false }
-            - { value: "It reorders all forms based on pre-populated data", correct: false }
-            - { value: "It ensures the view is correctly sized for the user agent", correct: false }
-
-    -   question: |
+            -
+                value: 'It reorders CollectionType forms based on pre-populated data'
+                correct: true
+            -
+                value: 'It ensures the form''s view has the correct embedded CSS'
+                correct: false
+            -
+                value: 'It reorders all forms based on pre-populated data'
+                correct: false
+            -
+                value: 'It ensures the view is correctly sized for the user agent'
+                correct: false
+    -
+        question: |
             Which form event would be best for reading data after having pre-populated the form?
+            
         answers:
-            - { value: "FormEvents::POST_SET_DATA", correct: true }
-            - { value: "FormEvents::PRE_SET_DATA", correct: false }
-            - { value: "FormEvents::PRE_SUBMIT", correct: false }
-            - { value: "FormEvents::SUBMIT", correct: false }
-            - { value: "FormEvents::POST_SUBMIT", correct: false }
-
-    -   question: |
+            -
+                value: 'FormEvents::POST_SET_DATA'
+                correct: true
+            -
+                value: 'FormEvents::PRE_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::POST_SUBMIT'
+                correct: false
+    -
+        question: |
             Which event is Symfony\Component\Form\Extension\DataCollector\EventListener\DataCollectorListener subscribed to?
+            
         answers:
-            - { value: "FormEvents::POST_SET_DATA", correct: true }
-            - { value: "FormEvents::PRE_SET_DATA", correct: false }
-            - { value: "FormEvents::PRE_SUBMIT", correct: false }
-            - { value: "FormEvents::SUBMIT", correct: false }
-            - { value: "FormEvents::POST_SUBMIT", correct: false }
-
-    -   question: |
-             Which form event would be best for changing data from the request before submission?
+            -
+                value: 'FormEvents::POST_SET_DATA'
+                correct: true
+            -
+                value: 'FormEvents::PRE_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::POST_SUBMIT'
+                correct: false
+    -
+        question: |
+            Which form event would be best for changing data from the request before submission?
+            
         answers:
-            - { value: "FormEvents::PRE_SUBMIT", correct: true }
-            - { value: "FormEvents::POST_SET_DATA", correct: false }
-            - { value: "FormEvents::PRE_SET_DATA", correct: false }
-            - { value: "FormEvents::SUBMIT", correct: false }
-            - { value: "FormEvents::POST_SUBMIT", correct: false }
-
-    -   question: |
+            -
+                value: 'FormEvents::PRE_SUBMIT'
+                correct: true
+            -
+                value: 'FormEvents::POST_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::POST_SUBMIT'
+                correct: false
+    -
+        question: |
             Which form event would be best for adding or removing form fields before submitting the data to the form?
+            
         answers:
-            - { value: "FormEvents::PRE_SUBMIT", correct: true }
-            - { value: "FormEvents::POST_SET_DATA", correct: false }
-            - { value: "FormEvents::PRE_SET_DATA", correct: false }
-            - { value: "FormEvents::SUBMIT", correct: false }
-            - { value: "FormEvents::POST_SUBMIT", correct: false }
-
-    -   question: |
+            -
+                value: 'FormEvents::PRE_SUBMIT'
+                correct: true
+            -
+                value: 'FormEvents::POST_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::POST_SUBMIT'
+                correct: false
+    -
+        question: |
             Which form event would be best for adding or removing form fields before submitting the data to the form?
+            
         answers:
-            - { value: "FormEvents::PRE_SUBMIT", correct: true }
-            - { value: "FormEvents::POST_SET_DATA", correct: false }
-            - { value: "FormEvents::PRE_SET_DATA", correct: false }
-            - { value: "FormEvents::SUBMIT", correct: false }
-            - { value: "FormEvents::POST_SUBMIT", correct: false }
-
-    -   question: |
+            -
+                value: 'FormEvents::PRE_SUBMIT'
+                correct: true
+            -
+                value: 'FormEvents::POST_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::POST_SUBMIT'
+                correct: false
+    -
+        question: |
             Which event is Symfony\Component\Form\Extension\Core\EventListener\TrimListener subscribed to?
+            
         answers:
-            - { value: "FormEvents::PRE_SUBMIT", correct: true }
-            - { value: "FormEvents::POST_SET_DATA", correct: false }
-            - { value: "FormEvents::PRE_SET_DATA", correct: false }
-            - { value: "FormEvents::SUBMIT", correct: false }
-            - { value: "FormEvents::POST_SUBMIT", correct: false }
-
-    -   question: |
+            -
+                value: 'FormEvents::PRE_SUBMIT'
+                correct: true
+            -
+                value: 'FormEvents::POST_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::POST_SUBMIT'
+                correct: false
+    -
+        question: |
             Which is the purpose of Symfony\Component\Form\Extension\Core\EventListener\TrimListener?
+            
         answers:
-            - { value: "It trims the request's data", correct: true }
-            - { value: "It trims internal form keys", correct: false }
-            - { value: "It doesn't exist", correct: false }
-            - { value: "It trims pre-populated data", correct: false }
-
-    -   question: |
+            -
+                value: 'It trims the request''s data'
+                correct: true
+            -
+                value: 'It trims internal form keys'
+                correct: false
+            -
+                value: 'It doesn''t exist'
+                correct: false
+            -
+                value: 'It trims pre-populated data'
+                correct: false
+    -
+        question: |
             Which event is Symfony\Component\Form\Extension\Csrf\EventListener\CsrfValidationListener subscribed to?
+            
         answers:
-            - { value: "FormEvents::PRE_SUBMIT", correct: true }
-            - { value: "FormEvents::POST_SET_DATA", correct: false }
-            - { value: "FormEvents::PRE_SET_DATA", correct: false }
-            - { value: "FormEvents::SUBMIT", correct: false }
-            - { value: "FormEvents::POST_SUBMIT", correct: false }
-
-    -   question: |
+            -
+                value: 'FormEvents::PRE_SUBMIT'
+                correct: true
+            -
+                value: 'FormEvents::POST_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::POST_SUBMIT'
+                correct: false
+    -
+        question: |
             Which form event can be used to change data from the normalized representation of the data?
+            
         answers:
-            - { value: "FormEvents::SUBMIT", correct: true }
-            - { value: "FormEvents::PRE_SUBMIT", correct: false }
-            - { value: "FormEvents::POST_SET_DATA", correct: false }
-            - { value: "FormEvents::PRE_SET_DATA", correct: false }
-            - { value: "FormEvents::POST_SUBMIT", correct: false }
-
-    -   question: |
+            -
+                value: 'FormEvents::SUBMIT'
+                correct: true
+            -
+                value: 'FormEvents::PRE_SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::POST_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::POST_SUBMIT'
+                correct: false
+    -
+        question: |
             Which form event does Symfony\Component\Form\Extension\Core\EventListener\FixUrlProtocolListener listen to?
+            
         answers:
-            - { value: "FormEvents::SUBMIT", correct: true }
-            - { value: "FormEvents::PRE_SUBMIT", correct: false }
-            - { value: "FormEvents::POST_SET_DATA", correct: false }
-            - { value: "FormEvents::PRE_SET_DATA", correct: false }
-            - { value: "FormEvents::POST_SUBMIT", correct: false }
-
-    -   question: |
+            -
+                value: 'FormEvents::SUBMIT'
+                correct: true
+            -
+                value: 'FormEvents::PRE_SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::POST_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::POST_SUBMIT'
+                correct: false
+    -
+        question: |
             Which form event can be used to fetch data after denormalization?
+            
         answers:
-            - { value: "FormEvents::POST_SUBMIT", correct: true }
-            - { value: "FormEvents::SUBMIT", correct: false }
-            - { value: "FormEvents::PRE_SUBMIT", correct: false }
-            - { value: "FormEvents::POST_SET_DATA", correct: false }
-            - { value: "FormEvents::PRE_SET_DATA", correct: false }
-
-    -   question: |
+            -
+                value: 'FormEvents::POST_SUBMIT'
+                correct: true
+            -
+                value: 'FormEvents::SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SUBMIT'
+                correct: false
+            -
+                value: 'FormEvents::POST_SET_DATA'
+                correct: false
+            -
+                value: 'FormEvents::PRE_SET_DATA'
+                correct: false
+    -
+        question: |
             What are the benefits of creating a seperate event class for Form Events?
+            
         answers:
-            - { value: "Improves readability", correct: true }
-            - { value: "Allows listening to multiple events", correct: true }
-            - { value: "Runs quicker", correct: false }
-            - { value: "It allows you to subscribe different types of events", correct: false }
-
-    -   question: |
+            -
+                value: 'Improves readability'
+                correct: true
+            -
+                value: 'Allows listening to multiple events'
+                correct: true
+            -
+                value: 'Runs quicker'
+                correct: false
+            -
+                value: 'It allows you to subscribe different types of events'
+                correct: false
+    -
+        question: |
             What are the benefits of creating a seperate event class for Form Events?
+            
         answers:
-            - { value: "Improves readability", correct: true }
-            - { value: "Allows listening to multiple events", correct: true }
-            - { value: "Runs quicker", correct: false }
-            - { value: "It allows you to subscribe different types of events", correct: false }
-
-    -   question: |
+            -
+                value: 'Improves readability'
+                correct: true
+            -
+                value: 'Allows listening to multiple events'
+                correct: true
+            -
+                value: 'Runs quicker'
+                correct: false
+            -
+                value: 'It allows you to subscribe different types of events'
+                correct: false
+    -
+        question: |
             What are the benefits of creating a seperate event class for Form Events?
+            
         answers:
-            - { value: "Improves readability", correct: true }
-            - { value: "Allows listening to multiple events", correct: true }
-            - { value: "Runs quicker", correct: false }
-            - { value: "It allows you to subscribe different types of events", correct: false }
-
-    -   question: |
+            -
+                value: 'Improves readability'
+                correct: true
+            -
+                value: 'Allows listening to multiple events'
+                correct: true
+            -
+                value: 'Runs quicker'
+                correct: false
+            -
+                value: 'It allows you to subscribe different types of events'
+                correct: false
+    -
+        question: |
             Which interface must one implement to subscribe to events in a form event subscriber?
+            
         answers:
-            - { value: "EventSubscriberInterface::getSubscribedEvents", correct: true }
-            - { value: "EventSubscriberInterface::getSubscribedEvent", correct: false }
-            - { value: "EventSubscriberInterface::getFormEvents", correct: false }
-            - { value: "EventSubscriberInterface::getFormEvent", correct: false }
-
-    -   question: |
+            -
+                value: 'EventSubscriberInterface::getSubscribedEvents'
+                correct: true
+            -
+                value: 'EventSubscriberInterface::getSubscribedEvent'
+                correct: false
+            -
+                value: 'EventSubscriberInterface::getFormEvents'
+                correct: false
+            -
+                value: 'EventSubscriberInterface::getFormEvent'
+                correct: false
+    -
+        question: |
             Does the Symfony/form component support Twig?
+            
         answers:
-            - {value: 'No', correct: true}
-            - {value: 'Yes', correct: false}
-
-    -   question: |
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
             What component must be installed to render forms using Twig?
+            
         answers:
-            - {value: 'symfony/twig-bridge', correct: true}
-            - {value: 'symfony/twig-form-bridge', correct: false}
-            - {value: 'symfony/twig-form-component', correct: false}
-            - {value: 'symfony/twig-form-component', correct: false}
-
-    -   question: |
+            -
+                value: symfony/twig-bridge
+                correct: true
+            -
+                value: symfony/twig-form-bridge
+                correct: false
+            -
+                value: symfony/twig-form-component
+                correct: false
+            -
+                value: symfony/twig-form-component
+                correct: false
+    -
+        question: |
             What component must be installed to render forms using Twig?
+            
         answers:
-            - {value: 'symfony/twig-bridge', correct: true}
-            - {value: 'symfony/twig-form-bridge', correct: false}
-            - {value: 'symfony/twig-form-component', correct: false}
-            - {value: 'symfony/twig-form-component', correct: false}
-
-    -   question: |
+            -
+                value: symfony/twig-bridge
+                correct: true
+            -
+                value: symfony/twig-form-bridge
+                correct: false
+            -
+                value: symfony/twig-form-component
+                correct: false
+            -
+                value: symfony/twig-form-component
+                correct: false
+    -
+        question: |
             Which of the following are Symfony built-in field types?
+            
         answers:
-            - {value: 'NumberType', correct: true}
-            - {value: 'MoneyType', correct: true}
-            - {value: 'RangeType', correct: true}
-            - {value: 'IntegerType', correct: true}
-            - {value: 'PercentType', correct: true}
-            - {value: 'DecimalType', correct: false}
-            - {value: 'IntervalType', correct: false}
-
-    -   question: |
+            -
+                value: NumberType
+                correct: true
+            -
+                value: MoneyType
+                correct: true
+            -
+                value: RangeType
+                correct: true
+            -
+                value: IntegerType
+                correct: true
+            -
+                value: PercentType
+                correct: true
+            -
+                value: DecimalType
+                correct: false
+            -
+                value: IntervalType
+                correct: false
+    -
+        question: |
             What are the benefits of using the PercentType over the NumberType?
+            
         answers:
-            - {value: 'It appends a percentage side after in the input box', correct: true}
-            - {value: 'It allows one to easily convert decimal stored values into whole numbers', correct: true}
-            - {value: 'It ensures that the number is displayed whole number', correct: false}
-            - {value: 'It ensures that values are stored as whole numbers', correct: false}
-
-    -   question: |
+            -
+                value: 'It appends a percentage side after in the input box'
+                correct: true
+            -
+                value: 'It allows one to easily convert decimal stored values into whole numbers'
+                correct: true
+            -
+                value: 'It ensures that the number is displayed whole number'
+                correct: false
+            -
+                value: 'It ensures that values are stored as whole numbers'
+                correct: false
+    -
+        question: |
             What are valid options passed to the PercentType?
+            
         answers:
-            - {value: 'scale', correct: true}
-            - {value: 'type', correct: true}
-            - {value: 'multiplier', correct: false}
-            - {value: 'divisor', correct: false}
-            - {value: 'value', correct: false}
-
-    -   question: |
+            -
+                value: scale
+                correct: true
+            -
+                value: type
+                correct: true
+            -
+                value: multiplier
+                correct: false
+            -
+                value: divisor
+                correct: false
+            -
+                value: value
+                correct: false
+    -
+        question: |
             What is the valid order to call the submission methods on the form instance?
+            
         answers:
-            - {value: 'form->isSubmitted() && $form->isValid()', correct: true}
-            - {value: '$form->isValid() && form->isSubmitted()', correct: false}
-
-    -   question: |
+            -
+                value: 'form->isSubmitted() && $form->isValid()'
+                correct: true
+            -
+                value: '$form->isValid() && form->isSubmitted()'
+                correct: false
+    -
+        question: |
             What is the difference between the IntegerType and NumberType?
+            
         answers:
-            - { value: 'The IntegerType always rounds to whole numbers', correct: true}
-            - { value: 'The IntegerType allows the user to enter decimal numbers', correct: true }
-            - { value: 'The NumberType always rounds to whole numbers', correct: false }
-            - { value: 'The NumberType allows the user to use decimal numbers', correct: false }
-    -   question: |
+            -
+                value: 'The IntegerType always rounds to whole numbers'
+                correct: true
+            -
+                value: 'The IntegerType allows the user to enter decimal numbers'
+                correct: true
+            -
+                value: 'The NumberType always rounds to whole numbers'
+                correct: false
+            -
+                value: 'The NumberType allows the user to use decimal numbers'
+                correct: false
+    -
+        question: |
             What are the valid values of the type option of the Symfony\Component\Form\Extension\Core\Type\PercentType form type.
+            
         answers:
-            - { value: 'fractional', correct: true }
-            - { value: 'integer', correct: true }
-            - { value: 'rounded', correct: false}
-            - { value: 'decimal', correct: false }
-            - { value: 'raw', correct: false }
-    -   question: |
+            -
+                value: fractional
+                correct: true
+            -
+                value: integer
+                correct: true
+            -
+                value: rounded
+                correct: false
+            -
+                value: decimal
+                correct: false
+            -
+                value: raw
+                correct: false
+    -
+        question: |
             What is the purpose of the fractional value for the type option of the Symfony\Component\Form\Extension\Core\Type\PercentType form type?
+            
         answers:
-            - { value: 'It ensures that data is multiplied by 100 before being displayed', correct: true }
-            - { value: 'It displays the raw data', correct: false }
-            - { value: 'It does not exist', correct: false }
-    -   question: |
+            -
+                value: 'It ensures that data is multiplied by 100 before being displayed'
+                correct: true
+            -
+                value: 'It displays the raw data'
+                correct: false
+            -
+                value: 'It does not exist'
+                correct: false
+    -
+        question: |
             What is the purpose of the integer value for the type option of the Symfony\Component\Form\Extension\Core\Type\PercentType form type?
+            
         answers:
-            - { value: 'It displays the raw data', correct: true }
-            - { value: 'It ensures that data is multiplied by 100 before being displayed', correct: false }
-            - { value: 'It does not exist', correct: false }
-    -   question: |
+            -
+                value: 'It displays the raw data'
+                correct: true
+            -
+                value: 'It ensures that data is multiplied by 100 before being displayed'
+                correct: false
+            -
+                value: 'It does not exist'
+                correct: false
+    -
+        question: |
             What is the purpose of the decimal value for the type option of the Symfony\Component\Form\Extension\Core\Type\PercentType form type?
+            
         answers:
-            - { value: 'It does not exist', correct: true }
-            - { value: 'It displays the raw data', correct: false }
-            - { value: 'It ensures that data is multiplied by 100 before being displayed', correct: false }
+            -
+                value: 'It does not exist'
+                correct: true
+            -
+                value: 'It displays the raw data'
+                correct: false
+            -
+                value: 'It ensures that data is multiplied by 100 before being displayed'
+                correct: false

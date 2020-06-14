@@ -1,419 +1,484 @@
 category: VarDumper
 questions:
-    -   question: "Which method should you call to customize the behavior of the global dump() function?"
+    -
+        question: 'Which method should you call to customize the behavior of the global dump() function?'
         answers:
-            - { value: VarDumper::setHandler($callable);, correct: true }
-            - { value: set_error_handler($callable);, correct: false }
-            - { value: trigger_error($callable);, correct: false }
-            - { value: VarDumper::setDumper($callable);, correct: false }
-
-    -   question: "How do you enable the ErrorHandler?"
-        answers:
-            -   value: |
-                    use Symfony\Component\Debug\Debug;
-                    use Symfony\Component\Debug\ErrorHandler;
-
-                    Debug::addErrorHandler(new ErrorHandler());
-                correct: false
-
-            -   value: |
-                    use Symfony\Component\Debug\Debug;
-
-                    Debug::enableErrorHandler();
-                correct: false
-
-            -   value: |
-                    use Symfony\Component\Debug\ErrorHandler;
-
-                    ErrorHandler::register();
+            -
+                value: 'VarDumper::setHandler($callable);'
                 correct: true
-
-            -   value: |
+            -
+                value: set_error_handler($callable);
+                correct: false
+            -
+                value: trigger_error($callable);
+                correct: false
+            -
+                value: 'VarDumper::setDumper($callable);'
+                correct: false
+    -
+        question: 'How do you enable the ErrorHandler?'
+        answers:
+            -
+                value: |
                     use Symfony\Component\Debug\Debug;
                     use Symfony\Component\Debug\ErrorHandler;
-
-                    Debug::setErrorHandler(new ErrorHandler());
+                    
+                    Debug::addErrorHandler(new ErrorHandler());
+                    
                 correct: false
-
-            -   value: |
+            -
+                value: |
+                    use Symfony\Component\Debug\Debug;
+                    
+                    Debug::enableErrorHandler();
+                    
+                correct: false
+            -
+                value: |
                     use Symfony\Component\Debug\ErrorHandler;
-
-                    ErrorHandler::enable();
+                    
+                    ErrorHandler::register();
+                    
+                correct: true
+            -
+                value: |
+                    use Symfony\Component\Debug\Debug;
+                    use Symfony\Component\Debug\ErrorHandler;
+                    
+                    Debug::setErrorHandler(new ErrorHandler());
+                    
                 correct: false
-
-    -   question: |
+            -
+                value: |
+                    use Symfony\Component\Debug\ErrorHandler;
+                    
+                    ErrorHandler::enable();
+                    
+                correct: false
+    -
+        question: |
             What will be in $result with the following code?
-
+            
             use Symfony\Component\VarDumper\Cloner\VarCloner;
-
+            
             $cloner = new VarCloner();
             $result = $cloner->cloneVar($myVar);
+            
         answers:
-            -   value: 'An array.'
+            -
+                value: 'An array.'
                 correct: false
-
-            -   value: 'A Symfony\\Component\\VarDumper\\Cloner\\Clone object'
+            -
+                value: 'A Symfony\\Component\\VarDumper\\Cloner\\Clone object'
                 correct: false
-
-            -   value: 'A Symfony\\Component\\VarDumper\\Data object'
+            -
+                value: 'A Symfony\\Component\\VarDumper\\Data object'
                 correct: false
-
-            -   value: 'A Symfony\\Component\\VarDumper\\Cloner\\CloneData object'
+            -
+                value: 'A Symfony\\Component\\VarDumper\\Cloner\\CloneData object'
                 correct: false
-
-            -   value: 'A Symfony\\Component\\VarDumper\\Cloner\\Data object'
+            -
+                value: 'A Symfony\\Component\\VarDumper\\Cloner\\Data object'
                 correct: true
-
-            -   value: 'An object of the same class of $myVar.'
+            -
+                value: 'An object of the same class of $myVar.'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             What is the second optional parameter of the Symfony\Component\VarDumper\VarDumper::dump method ?
+            
         answers:
-            -   value: 'An optional $return boolean variable to return the information rather than print it.'
+            -
+                value: 'An optional $return boolean variable to return the information rather than print it.'
                 correct: false
-
-            -   value: 'Nothing, the Symfony\Component\VarDumper\VarDumper::dump has just one parameter.'
+            -
+                value: 'Nothing, the Symfony\Component\VarDumper\VarDumper::dump has just one parameter.'
                 correct: true
-
-    -   question: |
+    -
+        question: |
             What are the benefits of using the dumper component over \var_dump()?
+            
         answers:
-            -   value: 'Repeated occurrences of the same object/array/resource will not appear again'
+            -
+                value: 'Repeated occurrences of the same object/array/resource will not appear again'
                 correct: true
-
-            -   value: 'Configurable output formats'
+            -
+                value: 'Configurable output formats'
                 correct: true
-
-            -   value: 'Per object and resource types specialized view'
+            -
+                value: 'Per object and resource types specialized view'
                 correct: true
-
-            -   value: 'It is faster'
+            -
+                value: 'It is faster'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             What is the value of the $var variable?
-
+            
             $var = dump('hi')
+            
         answers:
-            -   value: 'String hi'
+            -
+                value: 'String hi'
                 correct: true
-
-            -   value: 'Int 2'
+            -
+                value: 'Int 2'
                 correct: false
-
-            -   value: 'A Dump object'
+            -
+                value: 'A Dump object'
                 correct: false
-
-            -   value: 'null'
+            -
+                value: 'null'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             What is the default output format of the dumper?
+            
         answers:
-            -   value: 'Depends on your PHP SAPI'
+            -
+                value: 'Depends on your PHP SAPI'
                 correct: true
-
-            -   value: 'plain text'
+            -
+                value: 'plain text'
                 correct: false
-
-            -   value: 'HTML'
+            -
+                value: HTML
                 correct: false
-
-            -   value: 'CLI'
+            -
+                value: CLI
                 correct: false
-
-    -   question: |
+    -
+        question: |
             How does one set the output format of the var dumper ?
+            
         answers:
-            -   value: 'Setting the VAR_DUMPER_FORMAT environment variable'
+            -
+                value: 'Setting the VAR_DUMPER_FORMAT environment variable'
                 correct: true
-
-            -   value: 'Calling Dumper::setOutputFormat($format)'
+            -
+                value: 'Calling Dumper::setOutputFormat($format)'
                 correct: false
-
-            -   value: 'The second argument of dump()'
+            -
+                value: 'The second argument of dump()'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             What is the equivalent of calling dd($value)?
+            
         answers:
-            -   value: 'dump($value); exit();'
+            -
+                value: 'dump($value); exit();'
                 correct: true
-
-            -   value: 'dump($value); die();'
+            -
+                value: 'dump($value); die();'
                 correct: false
-
-            -   value: 'dump($value);'
+            -
+                value: dump($value);
                 correct: false
-
-    -   question: |
+    -
+        question: |
             What is the purpose of the dump server?
+            
         answers:
-            -   value: 'It allows the display of calls to dumps() on a console'
+            -
+                value: 'It allows the display of calls to dumps() on a console'
                 correct: true
-
-            -   value: 'It wraps the existing server to allow dumps'
+            -
+                value: 'It wraps the existing server to allow dumps'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             How would one configure the target of dumps?
+            
         answers:
-            -   value: 'debug.dump_destination'
+            -
+                value: debug.dump_destination
                 correct: true
-
-            -   value: 'var_dumper.dump_destination'
+            -
+                value: var_dumper.dump_destination
                 correct: false
-
-            -   value: 'debug.var_dumper.dump_destination'
+            -
+                value: debug.var_dumper.dump_destination
                 correct: false
-
-    -   question: |
+    -
+        question: |
             How would one configure the target of dumps?
+            
         answers:
-            -   value: 'debug.dump_destination'
+            -
+                value: debug.dump_destination
                 correct: true
-
-            -   value: 'var_dumper.dump_destination'
+            -
+                value: var_dumper.dump_destination
                 correct: false
-
-            -   value: 'var_dumper.destination'
+            -
+                value: var_dumper.destination
                 correct: false
-
-            -   value: 'debug.var_dumper.dump_destination'
+            -
+                value: debug.var_dumper.dump_destination
                 correct: false
-
-    -   question: |
+    -
+        question: |
             How would one configure the target of dumps?
+            
         answers:
-            -   value: 'debug.dump_destination'
+            -
+                value: debug.dump_destination
                 correct: true
-
-            -   value: 'var_dumper.dump_destination'
+            -
+                value: var_dumper.dump_destination
                 correct: false
-
-            -   value: 'debug.var_dumper.dump_destination'
+            -
+                value: debug.var_dumper.dump_destination
                 correct: false
-
-    -   question: |
+    -
+        question: |
             How would one configure the target of dumps?
+            
         answers:
-            -   value: 'debug.dump_destination'
+            -
+                value: debug.dump_destination
                 correct: true
-
-            -   value: 'var_dumper.dump_destination'
+            -
+                value: var_dumper.dump_destination
                 correct: false
-
-            -   value: 'debug.var_dumper.dump_destination'
+            -
+                value: debug.var_dumper.dump_destination
                 correct: false
-
-
-    -   question: |
+    -
+        question: |
             What is the purpose of cloners?
+            
         answers:
-            -   value: 'To create an intermediate representation of any PHP variable'
+            -
+                value: 'To create an intermediate representation of any PHP variable'
                 correct: true
-
-            -   value: 'To create a copy of a PHP object for dumping'
+            -
+                value: 'To create a copy of a PHP object for dumping'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             Which of the following are methods that allow you to apply limits when creating representations?
+            
         answers:
-            -   value: 'setMaxItems()'
+            -
+                value: setMaxItems()
                 correct: true
-
-            -   value: 'setMinDepth()'
+            -
+                value: setMinDepth()
                 correct: true
-
-            -   value: 'setMaxString()'
+            -
+                value: setMaxString()
                 correct: true
-
-            -   value: 'withMaxDepth()'
+            -
+                value: withMaxDepth()
                 correct: true
-
-            -   value: 'withMaxItemsPerDepth()'
+            -
+                value: withMaxItemsPerDepth()
                 correct: true
-
-            -   value: 'withRefHandles()'
+            -
+                value: withRefHandles()
                 correct: true
-
-            -   value: 'seek()'
+            -
+                value: seek()
                 correct: true
-
-            -   value: 'setMinString()'
+            -
+                value: setMinString()
                 correct: false
-
-            -   value: 'setMinItems()'
+            -
+                value: setMinItems()
                 correct: false
-
-            -   value: 'setMaxLength()'
+            -
+                value: setMaxLength()
                 correct: false
-
-            -   value: 'setMaxOffset()'
+            -
+                value: setMaxOffset()
                 correct: false
-
-            -   value: 'withoutRefHandles()'
+            -
+                value: withoutRefHandles()
                 correct: false
-
-    -   question: |
+    -
+        question: |
             Which of the following are built-in Dumpers?
+            
         answers:
-            -   value: 'HtmlDumper'
+            -
+                value: HtmlDumper
                 correct: true
-
-            -   value: 'CliDumper'
+            -
+                value: CliDumper
                 correct: true
-
-            -   value: 'ProfilerDumper'
+            -
+                value: ProfilerDumper
                 correct: false
-
-            -   value: 'CmdDumper'
+            -
+                value: CmdDumper
                 correct: false
-
-    -   question: |
+    -
+        question: |
             Which of the following are built-in Dumpers?
+            
         answers:
-            -   value: 'HtmlDumper'
+            -
+                value: HtmlDumper
                 correct: true
-
-            -   value: 'CliDumper'
+            -
+                value: CliDumper
                 correct: true
-
-            -   value: 'ProfilerDumper'
+            -
+                value: ProfilerDumper
                 correct: false
-
-            -   value: 'CmdDumper'
+            -
+                value: CmdDumper
                 correct: false
-
-
-    -   question: |
+    -
+        question: |
             What is the purpose of the second argument $dumper->dump($cloner->cloneVar($variable), true);?
+            
         answers:
-            -   value: 'Makes it return the dump as a string'
+            -
+                value: 'Makes it return the dump as a string'
                 correct: true
-
-            -   value: 'Makes it throw an exception if it fails to dump'
+            -
+                value: 'Makes it throw an exception if it fails to dump'
                 correct: false
-
-            -   value: 'Makes it clear the output before the dump'
+            -
+                value: 'Makes it clear the output before the dump'
                 correct: false
-
-            -   value: 'Makes it dump to the profiler'
+            -
+                value: 'Makes it dump to the profiler'
                 correct: false
-
-
-    -   question: |
+    -
+        question: |
             How can one change the output theme of the HtmlDumper?
+            
         answers:
-            -   value: 'HtmlDumper::setTheme()'
+            -
+                value: 'HtmlDumper::setTheme()'
                 correct: true
-
-            -   value: 'HtmlDumper::setColor()'
+            -
+                value: 'HtmlDumper::setColor()'
                 correct: false
-
-            -   value: 'HtmlDumper::setOutputTheme()'
+            -
+                value: 'HtmlDumper::setOutputTheme()'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             How the max string length of dump on HtmlDumper be set to 160?
+            
         answers:
-            -   value: |
+            -
+                value: |
                     $dumper = new HtmlDumper();
                     $dumper->dump($var, $output, 160);
+                    
                 correct: true
-
-            -   value: |
+            -
+                value: |
                     $dumper = new HtmlDumper();
                     $dumper->dump($var, $output, ['maxStringLength' => 160]);
+                    
                 correct: false
-
-            -   value: |
+            -
+                value: |
                     $dumper = new HtmlDumper();
                     $dumper->setMaxStringLength(160);
                     $dumper->dump($var, $output);
+                    
                 correct: false
-
-    -   question: |
+    -
+        question: |
             What is the purpose of Casters?
+            
         answers:
-            -   value: "casts PHP variables to arrays"
+            -
+                value: 'casts PHP variables to arrays'
                 correct: true
-
-            -   value: "casts PHP variables to Data objects"
+            -
+                value: 'casts PHP variables to Data objects'
                 correct: false
-
-            -   value: "casts PHP variables to the required format for dumping"
+            -
+                value: 'casts PHP variables to the required format for dumping'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             How can the casters of the VarCloner be set?
+            
         answers:
-            -   value: |
+            -
+                value: |
                     new VarCloner(
                         [
                           'FooClass' =>  $myCaster
                          ]
                     )
+                    
                 correct: true
-
-            -   value: (new VarCloner())->setCasters(['FooClass' =>  $myCaster])
+            -
+                value: '(new VarCloner())->setCasters([''FooClass'' =>  $myCaster])'
                 correct: false
-
-            -   value: (new VarCloner())->addCaster('FooClass', $myCaster)
+            -
+                value: '(new VarCloner())->addCaster(''FooClass'', $myCaster)'
                 correct: false
-
-
-    -   question: |
+    -
+        question: |
             Which methods are available when using the Symfony\Component\VarDumper\Test\VarDumperTestTrait?
+            
         answers:
-            -   value: 'assertDumpEquals'
+            -
+                value: assertDumpEquals
                 correct: true
-
-            -   value: 'assertDumpMatchesFormat'
+            -
+                value: assertDumpMatchesFormat
                 correct: true
-
-            -   value: 'assertDumpNotEmpty'
+            -
+                value: assertDumpNotEmpty
                 correct: false
-
-            -   value: 'assertDumpSameAs'
+            -
+                value: assertDumpSameAs
                 correct: false
-
-    -   question: |
+    -
+        question: |
             What is a valid caster key for a resource named bar?
+            
         answers:
-            -   value: ":bar resource"
+            -
+                value: ':bar resource'
                 correct: true
-
-            -   value: "//:bar"
+            -
+                value: '//:bar'
                 correct: false
-
-            -   value: "://bar"
+            -
+                value: '://bar'
                 correct: false
-
-            -   value: "bar://"
+            -
+                value: 'bar://'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             What order are casters called on an object when multiple can run?
+            
         answers:
-            -   value: "interfaces -> parents -> main"
+            -
+                value: 'interfaces -> parents -> main'
                 correct: true
-
-            -   value: "main -> parents -> interfaces"
+            -
+                value: 'main -> parents -> interfaces'
                 correct: false
-
-            -   value: "parents -> main -> interfaces"
+            -
+                value: 'parents -> main -> interfaces'
                 correct: false
-
-    -   question: |
+    -
+        question: |
             What is the purpose of caster stubs?
+            
         answers:
-            -   value: "To add semantics to casted objects"
+            -
+                value: 'To add semantics to casted objects'
                 correct: true
-
-            -   value: "To ensure an item isn't displayed in the view"
+            -
+                value: 'To ensure an item isn''t displayed in the view'
                 correct: false
-
-            -   value: "To stop large objects from displaying"
+            -
+                value: 'To stop large objects from displaying'
                 correct: false

@@ -1,147 +1,321 @@
 category: Cache
 questions:
-    -   question: 'What is the 2nd argument of Symfony\Component\Config\ConfigCacheFactory::cache method ?'
+    -
+        question: 'What is the 2nd argument of Symfony\Component\Config\ConfigCacheFactory::cache method ?'
         answers:
-            - { value: An array of options, correct: false}
-            - { value: A boolean to set the debug mode, correct: false}
-            - { value: The resource filename, correct: false}
-            - { value: A callback executed if the cache has to be refreshed, correct: true}
-
-    -   question: |
+            -
+                value: 'An array of options'
+                correct: false
+            -
+                value: 'A boolean to set the debug mode'
+                correct: false
+            -
+                value: 'The resource filename'
+                correct: false
+            -
+                value: 'A callback executed if the cache has to be refreshed'
+                correct: true
+    -
+        question: |
             Sometimes you may prefer to not save the objects immediately in order to increase the application
             performance. Which method would you call to mark cache items as "ready to be persisted" and then call to
             commit() method when you are ready to persist them all?
+            
         answers:
-            - { value: persistDeferred(), correct: false}
-            - { value: save(), correct: false}
-            - { value: saveDeferred(), correct: true}
-            - { value: defer(), correct: false}
-
-    -   question: "Which methods can be used for expiration caching?"
+            -
+                value: persistDeferred()
+                correct: false
+            -
+                value: save()
+                correct: false
+            -
+                value: saveDeferred()
+                correct: true
+            -
+                value: defer()
+                correct: false
+    -
+        question: 'Which methods can be used for expiration caching?'
         answers:
-            - {value: setExpires, correct: true}
-            - {value: setMaxAge, correct: false}
-            - {value: setEtag, correct: false}
-            - {value: setCache, correct: false}
-            - {value: setSharedMaxAge, correct: true}
-            - {value: setLastModified, correct: false}
-
-    -   question: "Which HTTP response headers are involved in the validation caching model?"
+            -
+                value: setExpires
+                correct: true
+            -
+                value: setMaxAge
+                correct: false
+            -
+                value: setEtag
+                correct: false
+            -
+                value: setCache
+                correct: false
+            -
+                value: setSharedMaxAge
+                correct: true
+            -
+                value: setLastModified
+                correct: false
+    -
+        question: 'Which HTTP response headers are involved in the validation caching model?'
         answers:
-            - {value: 'Cache-Control: max-age', correct: false}
-            - {value: 'Etag', correct: true}
-            - {value: 'Last-Modified', correct: true}
-            - {value: 'Cache-Control: s-max-age', correct: false}
-
-    -   question: Which methods can be used for expiration caching ?
+            -
+                value: 'Cache-Control: max-age'
+                correct: false
+            -
+                value: Etag
+                correct: true
+            -
+                value: Last-Modified
+                correct: true
+            -
+                value: 'Cache-Control: s-max-age'
+                correct: false
+    -
+        question: 'Which methods can be used for expiration caching ?'
         answers:
-            - { value: 'setMaxAge', correct: false }
-            - { value: 'setExpires', correct: true }
-            - { value: 'setLastModified', correct: false }
-            - { value: 'setSharedMaxAge', correct: true }
-            - { value: 'setEtag', correct: false }
-            - { value: 'setCache', correct: false }
-
-    -   question: How can one enable the caching in a Symfony application?
+            -
+                value: setMaxAge
+                correct: false
+            -
+                value: setExpires
+                correct: true
+            -
+                value: setLastModified
+                correct: false
+            -
+                value: setSharedMaxAge
+                correct: true
+            -
+                value: setEtag
+                correct: false
+            -
+                value: setCache
+                correct: false
+    -
+        question: 'How can one enable the caching in a Symfony application?'
         answers:
-            - { value: 'In the front controller wrap the Kernel with a new kernel that extends Symfony\Bundle\FrameworkBundle\HttpCache\HttpCache', correct: true }
-            - { value: 'In the front controller wrap the Kernel with a new kernel that extends Symfony\Bundle\FrameworkBundle\\HttpCache\HttpCacheKernel', correct: false }
-            - { value: 'Set the option framework.caching to true', correct: false }
-            - { value: 'Set the option framework.http_caching to true', correct: false }
-            - { value: 'Set the option framework.cache to true', correct: false }
-
-    -   question: How can one alter the configuration option of the HttpCache Kernel?
+            -
+                value: 'In the front controller wrap the Kernel with a new kernel that extends Symfony\Bundle\FrameworkBundle\HttpCache\HttpCache'
+                correct: true
+            -
+                value: 'In the front controller wrap the Kernel with a new kernel that extends Symfony\Bundle\FrameworkBundle\\HttpCache\HttpCacheKernel'
+                correct: false
+            -
+                value: 'Set the option framework.caching to true'
+                correct: false
+            -
+                value: 'Set the option framework.http_caching to true'
+                correct: false
+            -
+                value: 'Set the option framework.cache to true'
+                correct: false
+    -
+        question: 'How can one alter the configuration option of the HttpCache Kernel?'
         answers:
-            - { value: 'By implementing the getOptions() method and returning the config', correct: true }
-            - { value: 'Options can be changed using the options argument of the constructor', correct: true }
-            - { value: 'By calling the setOptions() method on Kernel', correct: false }
-            - { value: 'Each option has its own method for changing the option', correct: false }
-
-    -   question: How can one alter the configuration option of the HttpCache Kernel?
+            -
+                value: 'By implementing the getOptions() method and returning the config'
+                correct: true
+            -
+                value: 'Options can be changed using the options argument of the constructor'
+                correct: true
+            -
+                value: 'By calling the setOptions() method on Kernel'
+                correct: false
+            -
+                value: 'Each option has its own method for changing the option'
+                correct: false
+    -
+        question: 'How can one alter the configuration option of the HttpCache Kernel?'
         answers:
-            - { value: 'By implementing the getOptions() method and returning the config', correct: true }
-            - { value: 'Options can be changed using the options argument of the constructor', correct: true }
-            - { value: 'By calling the setOptions() method on Kernel', correct: false }
-            - { value: 'Each option has its own method for changing the option', correct: false }
-
-    -   question: What is the purpose of the debug option for the HttpCache Kernel?
+            -
+                value: 'By implementing the getOptions() method and returning the config'
+                correct: true
+            -
+                value: 'Options can be changed using the options argument of the constructor'
+                correct: true
+            -
+                value: 'By calling the setOptions() method on Kernel'
+                correct: false
+            -
+                value: 'Each option has its own method for changing the option'
+                correct: false
+    -
+        question: 'What is the purpose of the debug option for the HttpCache Kernel?'
         answers:
-            - { value: 'When enabled exceptions are thrown when things go wrong', correct: true }
-            - { value: 'When enabled the cache is refreshed every request', correct: true }
-            - { value: 'When disabled the cache is never refreshed', correct: false }
-            - { value: 'Each option has its own method for changing the option', correct: false }
-
-    -   question: What is the purpose of the private_headers option for the HttpCache Kernel?
+            -
+                value: 'When enabled exceptions are thrown when things go wrong'
+                correct: true
+            -
+                value: 'When enabled the cache is refreshed every request'
+                correct: true
+            -
+                value: 'When disabled the cache is never refreshed'
+                correct: false
+            -
+                value: 'Each option has its own method for changing the option'
+                correct: false
+    -
+        question: 'What is the purpose of the private_headers option for the HttpCache Kernel?'
         answers:
-            - { value: 'It contains a list of headers that force the responses to be private', correct: true }
-            - { value: 'It contains a list of headers that should be hidden from caches', correct: false }
-            - { value: 'When enabled the cache is marked as private', correct: false }
-            - { value: 'When enabled the cache is marked as private', correct: false }
-
-    -   question: What is the purpose of the allow_reload option for the HttpCache Kernel?
+            -
+                value: 'It contains a list of headers that force the responses to be private'
+                correct: true
+            -
+                value: 'It contains a list of headers that should be hidden from caches'
+                correct: false
+            -
+                value: 'When enabled the cache is marked as private'
+                correct: false
+            -
+                value: 'When enabled the cache is marked as private'
+                correct: false
+    -
+        question: 'What is the purpose of the allow_reload option for the HttpCache Kernel?'
         answers:
-            - { value: 'When enabled it makes the no-cache directive reload caches', correct: true }
-            - { value: 'When enabled it makes the max-age=0 directive reload caches', correct: false }
-            - { value: 'When enabled it makes the cache reload on every request to the kernel', correct: false }
-            - { value: 'When disabled it stops cache from ever being reloaded', correct: false }
-            - { value: 'When disabled it sends the no-store cache directive in every response', correct: false }
-
-    -   question: What is the purpose of the allow_revalidate option for the HttpCache Kernel?
+            -
+                value: 'When enabled it makes the no-cache directive reload caches'
+                correct: true
+            -
+                value: 'When enabled it makes the max-age=0 directive reload caches'
+                correct: false
+            -
+                value: 'When enabled it makes the cache reload on every request to the kernel'
+                correct: false
+            -
+                value: 'When disabled it stops cache from ever being reloaded'
+                correct: false
+            -
+                value: 'When disabled it sends the no-store cache directive in every response'
+                correct: false
+    -
+        question: 'What is the purpose of the allow_revalidate option for the HttpCache Kernel?'
         answers:
-            - { value: 'When enabled it makes the max-age=0 directive revalidate caches', correct: true }
-            - { value: 'When enabled it makes the no-cache directive revalidate caches', correct: false }
-            - { value: 'When enabled it makes the cache revalidate on every request to the kernel', correct: false }
-            - { value: 'When disabled it stops cache from ever being revalidated', correct: false }
-            - { value: 'When disabled it sends the no-transform cache directive in every response', correct: false }
-
-    -   question: What is the purpose of the stale_while_revalidate option for the HttpCache Kernel?
+            -
+                value: 'When enabled it makes the max-age=0 directive revalidate caches'
+                correct: true
+            -
+                value: 'When enabled it makes the no-cache directive revalidate caches'
+                correct: false
+            -
+                value: 'When enabled it makes the cache revalidate on every request to the kernel'
+                correct: false
+            -
+                value: 'When disabled it stops cache from ever being revalidated'
+                correct: false
+            -
+                value: 'When disabled it sends the no-transform cache directive in every response'
+                correct: false
+    -
+        question: 'What is the purpose of the stale_while_revalidate option for the HttpCache Kernel?'
         answers:
-            - { value: 'When enabled it makes the max-age=0 directive revalidate caches', correct: true }
-            - { value: 'When enabled it makes the no-cache directive revalidate caches', correct: false }
-            - { value: 'When enabled it makes the cache revalidate on every request to the kernel', correct: false }
-            - { value: 'When disabled it stops cache from ever being revalidated', correct: false }
-            - { value: 'When disabled it sends the no-transform cache directive in every response', correct: false }
-
-    -   question: What is the purpose of the getLogs() method on the HttpCache Kernel?
+            -
+                value: 'When enabled it makes the max-age=0 directive revalidate caches'
+                correct: true
+            -
+                value: 'When enabled it makes the no-cache directive revalidate caches'
+                correct: false
+            -
+                value: 'When enabled it makes the cache revalidate on every request to the kernel'
+                correct: false
+            -
+                value: 'When disabled it stops cache from ever being revalidated'
+                correct: false
+            -
+                value: 'When disabled it sends the no-transform cache directive in every response'
+                correct: false
+    -
+        question: 'What is the purpose of the getLogs() method on the HttpCache Kernel?'
         answers:
-            - { value: 'Gets a string representation of what happened in the cache layer', correct: true }
-            - { value: 'Gets list of objects representing what happened in the cache layer', correct: false }
-            - { value: 'Output the kernels logs to provided logs system', correct: false }
-
-    -   question: What scenarios are a good use for Symfony's Reverse Proxy?
+            -
+                value: 'Gets a string representation of what happened in the cache layer'
+                correct: true
+            -
+                value: 'Gets list of objects representing what happened in the cache layer'
+                correct: false
+            -
+                value: 'Output the kernels logs to provided logs system'
+                correct: false
+    -
+        question: 'What scenarios are a good use for Symfony''s Reverse Proxy?'
         answers:
-            - { value: 'A shared host where you cannot install anything beyond PHP code', correct: true }
-            - { value: 'During development', correct: true }
-            - { value: 'For when you want your application to perform the best', correct: false }
-            - { value: 'When your website is serving lots of static content', correct: false }
-
-    -   question: |
+            -
+                value: 'A shared host where you cannot install anything beyond PHP code'
+                correct: true
+            -
+                value: 'During development'
+                correct: true
+            -
+                value: 'For when you want your application to perform the best'
+                correct: false
+            -
+                value: 'When your website is serving lots of static content'
+                correct: false
+    -
+        question: |
             How can one add the must-revalidate cache directive to a response object?
+            
         answers:
-            - { value: "$response->headers->addCacheControlDirective('must-revalidate', true);", correct: true }
-            - { value: "$response->addCacheControlDirective('must-revalidate', true);", correct: false }
-            - { value: "$response->addControlDirective('must-revalidate', true);", correct: false }
-            - { value: "$response->headers->addControlDirective('must-revalidate', true);", correct: false }
-
-    -   question: |
+            -
+                value: '$response->headers->addCacheControlDirective(''must-revalidate'', true);'
+                correct: true
+            -
+                value: '$response->addCacheControlDirective(''must-revalidate'', true);'
+                correct: false
+            -
+                value: '$response->addControlDirective(''must-revalidate'', true);'
+                correct: false
+            -
+                value: '$response->headers->addControlDirective(''must-revalidate'', true);'
+                correct: false
+    -
+        question: |
             Which HTTP methods are recommended to cache?
+            
         answers:
-            - { value: "GET", correct: true }
-            - { value: "HEAD", correct: false }
-            - { value: "PUT", correct: false }
-            - { value: "POST", correct: false }
-            - { value: "PATCH", correct: false }
+            -
+                value: GET
+                correct: true
+            -
+                value: HEAD
+                correct: false
+            -
+                value: PUT
+                correct: false
+            -
+                value: POST
+                correct: false
+            -
+                value: PATCH
+                correct: false
         help: |
             https://symfony.com/doc/current/http_cache.html#safe-methods-only-caching-get-or-head-requests
-
-    -   question: |
+            
+    -
+        question: |
             How can one stop Symfony from marking a response as private when there's user details present?
+            
         answers:
-            - { value: "$response->headers->set(AbstractSessionListener::NO_AUTO_CACHE_CONTROL_HEADER, 'true');", correct: true }
-            - { value: "$response->headers->set(AbstractSessionListener::NO_AUTO_PRIVATE_CONTROL_DIRECTIVE, 'true');", correct: false }
-            - { value: "$response->headers->set(AbstractSessionListener::NO_AUTO_CACHE_CONTROL_HEADER, 'false');", correct: false }
-            - { value: "$response->headers->set(AbstractSessionListener::NO_AUTO_PRIVATE_CONTROL_DIRECTIVE, 'false');", correct: false }
-            - { value: "$response->setAutoCache(true);", correct: false }
-            - { value: "$response->setPrivateControl(true);", correct: false }
-            - { value: "$response->setAutoCache(false);", correct: false }
-            - { value: "$response->setPrivateControl(false);", correct: false }
+            -
+                value: '$response->headers->set(AbstractSessionListener::NO_AUTO_CACHE_CONTROL_HEADER, ''true'');'
+                correct: true
+            -
+                value: '$response->headers->set(AbstractSessionListener::NO_AUTO_PRIVATE_CONTROL_DIRECTIVE, ''true'');'
+                correct: false
+            -
+                value: '$response->headers->set(AbstractSessionListener::NO_AUTO_CACHE_CONTROL_HEADER, ''false'');'
+                correct: false
+            -
+                value: '$response->headers->set(AbstractSessionListener::NO_AUTO_PRIVATE_CONTROL_DIRECTIVE, ''false'');'
+                correct: false
+            -
+                value: $response->setAutoCache(true);
+                correct: false
+            -
+                value: $response->setPrivateControl(true);
+                correct: false
+            -
+                value: $response->setAutoCache(false);
+                correct: false
+            -
+                value: $response->setPrivateControl(false);
+                correct: false
