@@ -107,3 +107,50 @@ questions:
         answers:
             - { value: No, correct: true }
             - { value: Yes, correct: false }
+
+    -   question: How often does Symfony remove deprecated code?
+        answers:
+            - { value: Every 2 years, correct: true }
+            - { value: Every year, correct: false }
+            - { value: Every 6 months, correct: false }
+            - { value: Every 3 months, correct: false }
+
+    -   question: How does Symfony recommend you name abstract classes?
+        answers:
+            - { value: Prefix with the class name with Abstract, correct: true }
+            - { value: Suffix with the class name with Abstract, correct: false }
+            - { value: There is no required naming convention, correct: false }
+
+    -   question: How does Symfony recommend you name web assets?
+        answers:
+            - { value: snake_case, correct: true }
+            - { value: camelCase, correct: false }
+            - { value: PascalCase, correct: false }
+
+    -   question: How does Symfony recommend you name interfaces?
+        answers:
+            - { value: Prefix with the class name with Interface, correct: true }
+            - { value: Suffix with the class name with Interface, correct: false }
+            - { value: There is no required naming convention, correct: false }
+
+    -   question: How does Symfony recommend you name classes that extend Exception?
+        answers:
+            - { value: Prefix with the class name with Exception, correct: true }
+            - { value: Suffix with the class name with Exception, correct: false }
+            - { value: There is no required naming convention, correct: false }
+
+    -   question: |
+            What is the output of the following?
+
+            <?php
+
+            echo strlen('😄');
+        answers:
+            - { value: bool, correct: true }
+            - { value: int, correct: true }
+            - { value: float, correct: true }
+            - { value: boolean, correct: false }
+            - { value: Boolean, correct: false }
+            - { value: integer, correct: false }
+            - { value: double, correct: false }
+            - { value: real, correct: false }

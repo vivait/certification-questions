@@ -387,3 +387,10 @@ questions:
             - {value: 'public function start(Request $request, AuthenticationException $authException = null);', correct: false}
             - {value: 'public function handle(GetResponseEvent $event);', correct: false}
             - {value: 'private function executeGuardAuthenticator($uniqueGuardKey, GuardAuthenticatorInterface $guardAuthenticator, GetResponseEvent $event);', correct: false}
+
+    -   question: |
+            What is the purpose of the AuthenticationProviderInterface::authenticate() method?
+        answers:
+            - {value: 'It authenticates the token if the credentials provided are correct', correct: true}
+            - {value: 'It creates a token with credentials in the request if the credentials provided are correct', correct: false}
+            - {value: 'It creates a user matching credentials in the request if the credentials provided are correct', correct: false}

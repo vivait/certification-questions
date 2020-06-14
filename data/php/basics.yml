@@ -2342,3 +2342,57 @@ questions:
             - { value: "It manages configuration for distributed systems", correct: true }
             - { value: "It manages multiple running processes", correct: false }
             - { value: "It a messaging library", correct: false }
+
+    -   question: |
+            What is the output of the following?
+
+            <?php
+
+            echo strlen('🦒');
+        answers:
+            - { value: 4, correct: true }
+            - { value: 3, correct: false }
+            - { value: 2, correct: false }
+            - { value: 1, correct: false }
+            - { value: 0, correct: false }
+
+    -   question: |
+            What is the output of the following?
+
+            <?php
+
+            echo mb_strlen('🦒');
+        answers:
+            - { value: 1, correct: true }
+            - { value: 4, correct: false }
+            - { value: 3, correct: false }
+            - { value: 2, correct: false }
+            - { value: 0, correct: false }
+
+    -   question: |
+            What is the output of the following?
+
+            <?php
+
+            echo strlen('Υειά σας');
+        answers:
+            - { value: 15, correct: true }
+            - { value: 8, correct: false }
+            - { value: 14, correct: false }
+            - { value: 16, correct: false }
+            - { value: 9, correct: false }
+            - { value: 0, correct: false }
+
+    -   question: |
+            What is the output of the following?
+
+            <?php
+
+            echo mb_strlen('Υειά σας');
+        answers:
+            - { value: 8, correct: true }
+            - { value: 15, correct: false }
+            - { value: 14, correct: false }
+            - { value: 16, correct: false }
+            - { value: 9, correct: false }
+            - { value: 0, correct: false }

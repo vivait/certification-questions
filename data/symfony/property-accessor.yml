@@ -225,7 +225,7 @@ questions:
 
             echo $propertyAccessor->getValue($person, '[first_name]');
         answers:
-            - { value: Null, correct: true}
+            - { value: "Null", correct: true}
             - { value: Wouter, correct: false }
             - { value: 12, correct: false}
             - { value: An Exception, correct: false}
