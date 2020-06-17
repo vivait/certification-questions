@@ -3965,3 +3965,32 @@ questions:
             -
                 value: 0
                 correct: false
+    -
+        question: 'Which of these headers don''t belong to the Response ?'
+        answers:
+            -
+                value: Referer
+                correct: true
+            -
+                value: User-Agent
+                correct: true
+            -
+                value: Proxy-Authenticate
+                correct: false
+            -
+                value: WWW-Authenticate
+                correct: false
+    -
+        question: |
+            What is the purpose of the WWW-Authenticate header?
+            
+        answers:
+            -
+                value: 'It defines the method to authenicate in the response'
+                correct: true
+            -
+                value: 'It contains credentials for authenication in the request'
+                correct: false
+            -
+                value: 'It defines the method to authenicate in the request'
+                correct: true

@@ -3,13 +3,13 @@ questions:
     -
         question: |
             Is the following code correct?
-
+            
             use Symfony\Component\EventDispatcher\EventDispatcher;
-
+            
             $dispatcher = new EventDispatcher();
-
+            
             $dispatcher->dispatch('article.published');
-
+            
         answers:
             -
                 value: 'Yes'
@@ -20,7 +20,7 @@ questions:
     -
         question: |
             What is the argument passed to listeners of kernel.exception?
-
+            
         answers:
             -
                 value: ResponseEvent
@@ -43,7 +43,7 @@ questions:
     -
         question: |
             What is the argument passed to listeners of kernel.exception prior to Symfony 4.3?
-
+            
         answers:
             -
                 value: GetResponseForExceptionEvent
@@ -66,10 +66,10 @@ questions:
     -
         question: |
             What is returned by $dispatcher->dispatch('bar.event', $event) in the following code?
-
+            
             $event = new OrderPlacedEvent($order);
             $dispatcher->dispatch('bar.event', $event);
-
+            
         answers:
             -
                 value: $dispatcher
@@ -265,7 +265,7 @@ questions:
                 correct: true
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#event-name-introspection
-
+            
     -
         question: 'What happens if two listeners have the same priority?'
         answers:
@@ -280,7 +280,7 @@ questions:
                 correct: false
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#event-name-introspection
-
+            
     -
         question: 'How does one connect a listener?'
         answers:
@@ -298,7 +298,7 @@ questions:
                 correct: false
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#connecting-listeners
-
+            
     -
         question: 'How does one connect a listener with a priority of 3?'
         answers:
@@ -316,7 +316,7 @@ questions:
                 correct: false
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#connecting-listeners
-
+            
     -
         question: 'Which of the following is a valid way to connect a listener?'
         answers:
@@ -343,7 +343,7 @@ questions:
                 correct: false
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#connecting-listeners
-
+            
     -
         question: 'Which service container mechanisms could one use to connect event listeners registered as services?'
         answers:
@@ -361,7 +361,7 @@ questions:
                 correct: false
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#connecting-listeners
-
+            
     -
         question: 'What class must one extend to create an event?'
         answers:
@@ -379,7 +379,7 @@ questions:
                 correct: false
         help: |
             https://symfony.com/doc/3.4/components/event_dispatcher.html#creating-an-event-class
-
+            
     -
         question: 'What interface must an EventSubscriber extend?'
         answers:
@@ -400,7 +400,7 @@ questions:
                 correct: false
         help: |
             https://symfony.com/doc/3.4/components/event_dispatcher.html#using-event-subscribers
-
+            
     -
         question: 'What method must one use in order to attach a subscriber to the dispatcher?'
         answers:
@@ -418,18 +418,18 @@ questions:
                 correct: false
         help: |
             https://symfony.com/doc/3.4/components/event_dispatcher.html#using-event-subscribers
-
+            
     -
         question: |
             Is the following class correct to be used as an event subscriber?
-
+            
             namespace Acme\Store\Event;
-
+            
             use Symfony\Component\EventDispatcher\EventSubscriberInterface;
             use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
             use Symfony\Component\HttpKernel\KernelEvents;
             use Acme\Store\Event\OrderPlacedEvent;
-
+            
             class StoreSubscriber implements EventSubscriberInterface
             {
                 public static function getSubscribedEvents()
@@ -442,31 +442,33 @@ questions:
                         OrderPlacedEvent::NAME => 'onStoreOrder',
                     );
                 }
-
+            
                 public function onKernelResponsePre(FilterResponseEvent $event)
                 {
                     // ...
                 }
-
+            
                 public function onKernelResponsePost(FilterResponseEvent $event)
                 {
                     // ...
                 }
-
+            
                 public function onStoreOrder(OrderPlacedEvent $event)
                 {
                     // ...
                 }
             }
+            
         answers:
             -
-                value: Yes
+                value: 'Yes'
                 correct: true
             -
-                value: No
+                value: 'No'
                 correct: false
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#using-event-subscribers
+            
     -
         question: 'What method must one use in order to attach a subscriber to the dispatcher?'
         answers:
@@ -482,15 +484,16 @@ questions:
     -
         question: |
             Which translations will be loaded for the es_AR locale if the following files are available?
-
+            
             messages.es_419.yaml
             messages.es.yaml
+            
         answers:
             -
                 correct: true
                 value: es_419
             -
-                value: A fallback language will be loaded
+                value: 'A fallback language will be loaded'
                 correct: false
             -
                 value: es
@@ -501,11 +504,12 @@ questions:
     -
         question: |
             Which translations will be loaded for the es_AR locale if the following files are available?
-
+            
             messages.el_GR.yaml
+            
         answers:
             -
-                value: A fallback language will be loaded
+                value: 'A fallback language will be loaded'
                 correct: true
             -
                 correct: false
@@ -519,13 +523,14 @@ questions:
     -
         question: |
             Which language code schema does Symfony use?
+            
         answers:
             -
-                value: ISO 3166-1
+                value: 'ISO 3166-1'
                 correct: true
             -
                 value: Glottolog
                 correct: false
             -
-                value: SO 639‑2
+                value: 'SO 639‑2'
                 correct: false
