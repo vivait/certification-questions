@@ -3986,11 +3986,25 @@ questions:
             
         answers:
             -
-                value: 'It defines the method to authenicate in the response'
+                value: 'It defines the method to authenticate in the response'
                 correct: true
             -
-                value: 'It contains credentials for authenication in the request'
+                value: 'It contains credentials for authentication in the request'
                 correct: false
             -
-                value: 'It defines the method to authenicate in the request'
+                value: 'It defines the method to authenticate in the request'
+                correct: false
+    -
+        question: |
+            What is the purpose of the realm directive in WWW-Authenticate?
+            
+        answers:
+            -
+                value: 'Text that explains what the credentials authenticate'
                 correct: true
+            -
+                value: 'A domain which the credentials authenticate to'
+                correct: false
+            -
+                value: 'A header which can be used to authenticate'
+                correct: false

@@ -459,3 +459,20 @@ questions:
             -
                 value: autoload-test
                 correct: false
+    -
+        question: |
+            Following best practices, where should the Bundle documentation be stored?
+            
+        answers:
+            -
+                value: Acme/Bundle/DemoBundle/Resources/documentation/
+                correct: false
+            -
+                value: Acme/Bundle/DemoBundle/Resources/doc/
+                correct: true
+            -
+                value: Acme/Bundle/DemoBundle/README.md
+                correct: false
+            -
+                value: Acme/Bundle/DemoBundle/Resources/meta/
+                correct: false

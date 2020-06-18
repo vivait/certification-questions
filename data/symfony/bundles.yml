@@ -292,3 +292,20 @@ questions:
             -
                 value: '@Cache'
                 correct: true
+    -
+        question: |
+            Which of the following statements are true about the base Controller class located in the FrameworkBundle bundle?
+            
+        answers:
+            -
+                value: 'It provides lots of useful shortcut methods.'
+                correct: true
+            -
+                value: 'It implements the Symfony\Component\DependencyInjection\ContainerAwareInterface interface.'
+                correct: true
+            -
+                value: 'It has access to the Symfony service container, thus allowing to retrieve any public services or global parameters.'
+                correct: true
+            -
+                value: 'It must always be the parent class for every single controller of your application.'
+                correct: false

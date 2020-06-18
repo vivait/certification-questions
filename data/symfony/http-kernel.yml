@@ -1000,3 +1000,33 @@ questions:
             -
                 value: 'Whether to activate the debug or not'
                 correct: false
+    -
+        question: |
+            Which options are available in the Symfony\Component\HttpFoundation\Response::setCache(array $options)
+            method in Symfony 3.4?
+            
+        answers:
+            -
+                value: s_maxage
+                correct: true
+            -
+                value: last_modified
+                correct: true
+            -
+                value: max_age
+                correct: true
+            -
+                value: public
+                correct: true
+            -
+                value: etag
+                correct: true
+            -
+                value: private
+                correct: true
+            -
+                value: not_modified
+                correct: false
+            -
+                value: expires
+                correct: false

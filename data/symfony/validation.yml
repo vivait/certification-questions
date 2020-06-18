@@ -1176,3 +1176,39 @@ questions:
             -
                 value: False.
                 correct: false
+    -
+        question: 'What is the purpose of Constraints?'
+        answers:
+            -
+                value: 'They define the rules to be validated.'
+                correct: true
+            -
+                value: 'They are the classes that contain the actual validation logic.'
+                correct: false
+            -
+                value: 'They don''t exist.'
+                correct: false
+    -
+        question: 'What is the purpose of Validators?'
+        answers:
+            -
+                value: 'They are the classes that contain the actual validation logic.'
+                correct: true
+            -
+                value: 'They define the rules to be validated.'
+                correct: false
+            -
+                value: 'They don''t exist.'
+                correct: false
+    -
+        question: 'What is the purpose of ValidationSetting?'
+        answers:
+            -
+                value: 'They define the rules to be validated.'
+                correct: true
+            -
+                value: 'They are the classes that contain the actual validation logic.'
+                correct: false
+            -
+                value: 'They don''t exist.'
+                correct: false
