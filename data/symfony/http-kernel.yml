@@ -1030,3 +1030,19 @@ questions:
             -
                 value: expires
                 correct: false
+    -
+        question: |
+            What is the signature of the kernel handle method
+        answers:
+            -
+                value: handle(Request $request, int $type = HttpKernelInterface::MASTER_REQUEST, bool $catch = true)
+                correct: true
+            -
+                value: handle(Request $request)
+                correct: false
+            -
+                value: handle(Request $request, int $type, bool $catch = true)
+                correct: false
+            -
+                value: handle(Request $request, int $type, bool $catch = true, bool $output = true)
+                correct: false
