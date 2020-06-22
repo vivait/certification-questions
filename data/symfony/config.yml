@@ -436,7 +436,7 @@ questions:
                 value: 4.4
                 correct: false
             -
-                value: !!float 4
+                value: '4'
                 correct: false
             -
                 value: 3.2

@@ -306,7 +306,7 @@ questions:
         answers:
             -
                 value: 'The operation that will performed on the database (e.g SELECT'
-                DELETE: true
+                correct: true
             -
                 value: 'It represents if there is an entity attached'
                 correct: false

@@ -265,7 +265,7 @@ questions:
         answers:
             -
                 value: None
-                there: false
+                correct: false
             -
                 value: '%a%%'
                 correct: false

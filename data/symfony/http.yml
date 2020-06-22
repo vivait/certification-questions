@@ -50,10 +50,10 @@ questions:
         answers:
             -
                 value: 'The main language is sent using the Locale header'
-                while: false
+                correct: false
             -
                 value: 'The browser doesn’t communicate the language of the user'
-                it’s: false
+                correct: false
             -
                 value: 'User language preferences are sent using the Accept-Language header'
                 correct: true

@@ -994,7 +994,7 @@ questions:
                 correct: false
             -
                 value: 'PHP is a strongly-typed'
-                functionnal: false
+                correct: false
             -
                 value: 'PHP is a loosely-typed functionnal language.'
                 correct: false
@@ -3997,7 +3997,7 @@ questions:
     -
         question: |
             What is the purpose of the realm directive in WWW-Authenticate?
-
+            
         answers:
             -
                 value: 'Text that explains what the credentials authenticate'
@@ -4008,22 +4008,3 @@ questions:
             -
                 value: 'A header which can be used to authenticate'
                 correct: false
-    - question: |
-        Which of the following is not a predefined PHP variable?
-
-        answers:
-        -
-            value: $php_errormsg
-            correct: false
-        -
-            value: $http_response_header
-            correct: false
-        -
-            value: $_POST
-            correct: false
-        -
-            value: $_GLOBALS
-            correct: true
-        -
-            value: $argc
-            correct: false

@@ -29,7 +29,7 @@ questions:
                 correct: false
             -
                 value: $response->setMaxAge(900
-                'true);,': false
+                correct: false
     -
         question: 'What are browser caches especially useful for?'
         answers:

@@ -799,16 +799,17 @@ questions:
     -
         question: |
             What is the name of the service that check authorization?
+            
         answers:
             -
-                value: 'security.authorization_checker'
+                value: security.authorization_checker
                 correct: true
             -
-                value: 'security.checker'
+                value: security.checker
                 correct: false
             -
-                value: 'security.authorization_manager'
+                value: security.authorization_manager
                 correct: false
             -
-                value: 'security.decision_checker'
+                value: security.decision_checker
                 correct: false

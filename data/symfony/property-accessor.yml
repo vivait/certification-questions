@@ -196,7 +196,7 @@ questions:
                 value: Wouter
                 correct: false
             -
-                value: null
+                value: 'null'
                 correct: false
             -
                 value: 'An Exception'
@@ -225,7 +225,7 @@ questions:
             
         answers:
             -
-                value: null
+                value: 'null'
                 correct: true
             -
                 value: 12
@@ -265,7 +265,7 @@ questions:
                 value: 12
                 correct: true
             -
-                value: null
+                value: 'null'
                 correct: false
             -
                 value: Wouter
@@ -295,7 +295,7 @@ questions:
                 value: 12
                 correct: false
             -
-                value: null
+                value: 'null'
                 correct: false
             -
                 value: 'An Exception'
@@ -354,7 +354,7 @@ questions:
                 value: Wouter
                 correct: true
             -
-                value: null
+                value: 'null'
                 correct: false
             -
                 value: 12
@@ -394,7 +394,7 @@ questions:
                 value: Wouter
                 correct: true
             -
-                value: null
+                value: 'null'
                 correct: false
             -
                 value: 12
@@ -443,7 +443,7 @@ questions:
                 value: 'An Exception'
                 correct: false
             -
-                value: null
+                value: 'null'
                 correct: false
     -
         question: |

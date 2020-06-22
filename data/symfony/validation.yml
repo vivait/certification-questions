@@ -819,7 +819,7 @@ questions:
                 value: IsNull
                 correct: true
             -
-                value: null
+                value: 'null'
                 correct: false
             -
                 value: IsBlank

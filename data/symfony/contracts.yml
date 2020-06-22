@@ -4,23 +4,23 @@ questions:
         question: 'What is the purpose of Symfony\Contracts\Service\ServiceSubscriberInterface?'
         answers:
             -
-                value: It allows a service to define a list of services it (optionally or explicitly) requires
+                value: 'It allows a service to define a list of services it (optionally or explicitly) requires'
                 correct: true
             -
-                value: It doesn't exist
+                value: 'It doesn''t exist'
                 correct: false
             -
-                value: It allows a service to subscribe to Symfony events
+                value: 'It allows a service to subscribe to Symfony events'
                 correct: false
     -
         question: 'What is the purpose of Symfony\Contracts\Service\ServiceContainerInterface?'
         answers:
             -
-                value: It doesn't exist
+                value: 'It doesn''t exist'
                 correct: true
             -
-                value: It allows a service to define a list of services it (optionally or explicitly) requires
+                value: 'It allows a service to define a list of services it (optionally or explicitly) requires'
                 correct: false
             -
-                value: It allows a service to subscribe to Symfony events
+                value: 'It allows a service to subscribe to Symfony events'
                 correct: false
