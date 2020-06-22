@@ -1407,3 +1407,17 @@ questions:
             -
                 value: 'It ensures that the container errors if there is it is ambiguous which service matches'
                 correct: false
+    -
+        question: |
+            What is
+
+        answers:
+            -
+                value: 'Nothing, it''s just a parameter with no special behaviour'
+                correct: true
+            -
+                value: 'It ensures the container doesn''t match dependencies by their type, but instead only by their alias or id'
+                correct: false
+            -
+                value: 'It ensures that the container errors if there is it is ambiguous which service matches'
+                correct: false

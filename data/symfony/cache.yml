@@ -74,22 +74,22 @@ questions:
         question: 'Which methods can be used for expiration caching ?'
         answers:
             -
-                value: setMaxAge
-                correct: false
+                value: setSharedMaxAge
+                correct: true
             -
                 value: setExpires
+                correct: true
+            -
+                value: setCache
+                correct: true
+            -
+                value: setMaxAge
                 correct: true
             -
                 value: setLastModified
                 correct: false
             -
-                value: setSharedMaxAge
-                correct: true
-            -
                 value: setEtag
-                correct: false
-            -
-                value: setCache
                 correct: false
     -
         question: 'How can one enable the caching in a Symfony application?'
