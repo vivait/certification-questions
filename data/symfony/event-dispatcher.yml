@@ -554,3 +554,134 @@ questions:
             -
                 value: 'Defaults to 100'
                 correct: false
+    -
+        question: |
+            Where should one call a method to stop an event from calling a the next listener?
+            
+        answers:
+            -
+                value: 'On the event'
+                correct: true
+            -
+                value: 'On the listener'
+                correct: false
+            -
+                value: 'On the subscriber'
+                correct: false
+            -
+                value: 'On the subscriber or listener'
+                correct: false
+    -
+        question: 'What order are listeners called in if they''re the same priority?'
+        answers:
+            -
+                value: 'The order they were added to the listener'
+                correct: true
+            -
+                value: 'By the alphabetic order of the class names of the listeners'
+                correct: false
+            -
+                value: 'By the alphabetic order of the method names of the listeners'
+                correct: false
+    -
+        question: 'Which of the following are valid arguments for $listener to the addListener method?'
+        answers:
+            -
+                value: 'A \Closure instance'
+                correct: true
+            -
+                value: 'A class implementing __invoke()'
+                correct: true
+            -
+                value: '[$myListener, ''listen'']'
+                correct: true
+            -
+                value: 'A class implementing Symfony\Component\EventDispatcher\EventListenerInterface'
+                correct: false
+            -
+                value: 'A class implementing Symfony\Component\EventDispatcher\EventSubscriberInterface'
+                correct: false
+    -
+        question: 'What is the purpose of Symfony\Component\EventDispatcher\ImmutableEventDispatcher?'
+        answers:
+            -
+                value: 'It''s a decorator that stops new listeners from being added to the dispatcher'
+                correct: true
+            -
+                value: |
+                    It's a decorator that stops new listeners from being added to the dispatch after the dispatch of an
+                    event
+                    
+                correct: false
+            -
+                value: 'It doesn''t exist'
+                correct: false
+    -
+        question: 'What is the purpose of Symfony\Component\EventDispatcher\FixedEventDispatcher?'
+        answers:
+            -
+                value: 'It doesn''t exist'
+                correct: true
+            -
+                value: 'It''s a decorator that stops new listeners from being added to the dispatcher'
+                correct: false
+            -
+                value: |
+                    It's a decorator that stops new listeners from being added to the dispatch after the dispatch of an
+                    event
+                    
+                correct: false
+    -
+        question: 'Which methods exist on Symfony\Component\EventDispatcher\EventDispatcherInterface?'
+        answers:
+            -
+                value: dispatch
+                correct: true
+            -
+                value: addListener
+                correct: true
+            -
+                value: addSubscriber
+                correct: true
+            -
+                value: removeListener
+                correct: true
+            -
+                value: deleteListener
+                correct: false
+            -
+                value: getLastEvent
+                correct: false
+    -
+        question: 'Which methods exist on Symfony\Component\EventDispatcher\EventDispatcherInterface?'
+        answers:
+            -
+                value: removeSubscriber
+                correct: true
+            -
+                value: getListeners
+                correct: true
+            -
+                value: getListenerPriority
+                correct: true
+            -
+                value: hasListeners
+                correct: true
+            -
+                value: deleteListener
+                correct: false
+            -
+                value: getLastEvent
+                correct: false
+    -
+        question: 'What is the purpose of Symfony\Component\EventDispatcher\TraceableEventDispatcher?'
+        answers:
+            -
+                value: 'It''s a decorator that stores listener that were called or not called'
+                correct: true
+            -
+                value: 'It doesn''t exist'
+                correct: true
+            -
+                value: 'It''s a decorator that stores listener that were called'
+                correct: false
