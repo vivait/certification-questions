@@ -3320,16 +3320,36 @@ questions:
                 value: '<?php echo ''Hello World''; ?>'
                 correct: true
             -
-                value: '<? echo ''Hello World''; ?> '
+                value: '<?= ''Hello World''; ?> '
                 correct: true
             -
-                value: '<?= ''Hello World''; ?> '
+                value: '<? echo ''Hello World''; ?> '
                 correct: false
             -
                 value: '<% echo ''Hello World''; %>'
                 correct: false
             -
                 value: '<script language="php">echo ''Hello World'';</script>'
+                correct: false
+    -
+        question: |
+            What is the php open to enable short open tags?
+            
+        answers:
+            -
+                value: short_open_tag
+                correct: true
+            -
+                value: enable_short_open_tags
+                correct: false
+            -
+                value: short_open_tags
+                correct: false
+            -
+                value: enable_short_open_tag
+                correct: false
+            -
+                value: xml_compatible_mode
                 correct: false
     -
         question: |

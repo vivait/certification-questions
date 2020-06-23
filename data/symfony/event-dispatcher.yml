@@ -534,3 +534,23 @@ questions:
             -
                 value: 'SO 639‑2'
                 correct: false
+    -
+        question: |
+            What's true about the addListener()'s $priority value from Symfony\Component\EventDispatcher\EventDIspatcherInterface?
+            
+        answers:
+            -
+                value: 'The higher this value, the earlier an event listener will be triggered in the chain'
+                correct: true
+            -
+                value: 'Defaults to 0'
+                correct: true
+            -
+                value: 'The higher this value, the later an event listener will be triggered in the chain'
+                correct: false
+            -
+                value: 'Defaults to 1'
+                correct: false
+            -
+                value: 'Defaults to 100'
+                correct: false
