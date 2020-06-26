@@ -1758,3 +1758,19 @@ questions:
             -
                 value: 'It ensures that data is multiplied by 100 before being displayed'
                 correct: false
+    -
+        question: |
+            What option should you use with the Symfony\Component\Form\Extension\Core\Type\DateTimeType form type in order to have the form rendered without an input capturing minutes ?
+        answers:
+            -
+                value: The with_minutes option set to false.
+                correct: true
+            -
+                value: The minutes option set to false.
+                correct: false
+            -
+                value: The without_minutes option set to true.
+                correct: false
+            -
+                value: The hide_minutes option set to true.
+                correct: false

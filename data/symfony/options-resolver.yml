@@ -57,13 +57,13 @@ questions:
             
         answers:
             -
-                value: 'A Symfony\Component\OptionsResolver\Exception\InvalidOptionsException.'
+                value: 'A Symfony\Component\OptionsResolver\Exception\UndefinedOptionsException.'
                 correct: true
             -
-                value: 'A Symfony\Component\OptionsResolver\Exception\NoSuchOptionException.'
+                value: 'A Symfony\Component\OptionsResolver\Exception\InvalidOptionsException.'
                 correct: false
             -
-                value: 'A Symfony\Component\OptionsResolver\Exception\UndefinedOptionsException.'
+                value: 'A Symfony\Component\OptionsResolver\Exception\NoSuchOptionException.'
                 correct: false
             -
                 value: 'A Symfony\Component\OptionsResolver\Exception\OptionDefinitionException.'
@@ -405,4 +405,151 @@ questions:
                 correct: false
             -
                 value: 'One could create a single option resolver and configure it within each class'
+                correct: false
+    -
+        question: |
+            Which of the following are true about Symfony\Component\OptionsResolver\Options?
+
+        answers:
+            -
+                value: 'It is an interface.'
+                correct: true
+            -
+                value: 'It extends \Countable.'
+                correct: true
+            -
+                value: 'It extends \ArrayAccess.'
+                correct: true
+            -
+                value: 'The OptionsResolver class implements Options.'
+                correct: true
+            -
+                value: 'It has a method called getOptions.'
+                correct: false
+            -
+                value: 'It is an abstract class.'
+                correct: false
+            -
+                value: 'The OptionsResolver class extends Options.'
+                correct: false
+    -
+        question: |
+            Which of the following methods does Symfony\Component\OptionsResolver\OptionsResolver contain?
+
+        answers:
+            -
+                value: 'setDefault($option, $value)'
+                correct: true
+            -
+                value: 'setDefaults(array $defaults)'
+                correct: true
+            -
+                value: 'hasDefault($option)'
+                correct: true
+            -
+                value: 'setRequired($optionNames)'
+                correct: true
+            -
+                value: 'hasRequired($option)'
+                correct: false
+            -
+                value: 'setRequiredOption($option).'
+                correct: false
+            -
+                value: 'addDefined($option)'
+                correct: false
+    -
+        question: |
+            Which of the following methods does Symfony\Component\OptionsResolver\OptionsResolver contain?
+
+        answers:
+            -
+                value: 'getMissingOptions()'
+                correct: true
+            -
+                value: 'setDefined($optionNames)'
+                correct: true
+            -
+                value: 'isDefined($option)'
+                correct: true
+            -
+                value: 'getMissingOptions()'
+                correct: true
+            -
+                value: 'getDefined()'
+                correct: false
+            -
+                value: 'addDefined($option)'
+                correct: false
+    -
+        question: |
+            Which of the following methods does Symfony\Component\OptionsResolver\OptionsResolver contain?
+
+        answers:
+            -
+                value: 'getMissingOptions()'
+                correct: true
+            -
+                value: 'setDefined($optionNames)'
+                correct: true
+            -
+                value: 'isDefined($option)'
+                correct: true
+            -
+                value: 'getMissingOptions()'
+                correct: true
+            -
+                value: 'getDefined()'
+                correct: false
+            -
+                value: 'addDefined($option)'
+                correct: false
+    -
+        question: |
+            Which of the following methods does Symfony\Component\OptionsResolver\OptionsResolver contain?
+
+        answers:
+            -
+                value: 'getDefinedOptions()'
+                correct: true
+            -
+                value: 'setNormalizer($option, \Closure $normalizer)'
+                correct: true
+            -
+                value: 'setAllowedValues($option, $allowedValues)'
+                correct: true
+            -
+                value: 'addAllowedValues($option, $allowedValues)'
+                correct: true
+            -
+                value: 'getAllowedValues($option)'
+                correct: false
+            -
+                value: 'setNormalizer(\Closure $normalizer)'
+                correct: false
+    -
+        question: |
+            Which of the following methods does Symfony\Component\OptionsResolver\OptionsResolver contain?
+
+        answers:
+            -
+                value: 'setAllowedTypes($option, $allowedTypes)'
+                correct: true
+            -
+                value: 'addAllowedTypes($option, $allowedTypes)'
+                correct: true
+            -
+                value: 'remove($optionNames)'
+                correct: true
+            -
+                value: 'clear()'
+                correct: true
+            -
+                value: 'resolve(array $options = array())'
+                correct: true
+            -
+                value: 'getAllowedTypes($option)'
+                correct: false
+            -
+                value: 'setNormalizer(\Closure $normalizer)'
                 correct: false
