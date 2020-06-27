@@ -476,16 +476,17 @@ questions:
     -
         question: |
             What will be the result of the following code?
-
+            
             use Symfony\Component\PropertyAccess\PropertyAccess;
-
+            
             $accessor = PropertyAccess::createPropertyAccessor();
-
+            
             $person = array(
                 'first_name' => 'Wouter',
             );
-
+            
             $age = $accessor->getValue($person, 'age');
+            
         answers:
             -
                 value: '$accessor->isWritable($object, ''property'');'

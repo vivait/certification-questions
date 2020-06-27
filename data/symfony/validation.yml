@@ -1215,18 +1215,19 @@ questions:
     -
         question: |
             Which constraint should be used to assert that a collection contains exactly 2 items?
-
+            
             We assume that Assert is an Alias to Symfony\Component\Validator\Constraints namespace.
+            
         answers:
             -
-                value: "@Assert\Count(min=2, max=2)"
+                value: '@Assert\Count(min=2, max=2)'
                 correct: true
             -
-                value: "@Assert\Count(min=2)"
+                value: '@Assert\Count(min=2)'
                 correct: false
             -
-                value: "@Assert\Length(2)"
+                value: '@Assert\Length(2)'
                 correct: false
             -
-                value: "@Assert\Length(min=2, max=2)"
+                value: '@Assert\Length(min=2, max=2)'
                 correct: false

@@ -479,11 +479,11 @@ questions:
     -
         question: |
             Is the BC promise guaranteed when adding a new property to a custom class that extends a Symfony class ?
-
+            
         answers:
             -
-                value: No
+                value: 'No'
                 correct: true
             -
-                value: Yes
+                value: 'Yes'
                 correct: false

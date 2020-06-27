@@ -1355,6 +1355,20 @@ questions:
                 correct: false
     -
         question: |
+            What is the purpose of $_php_errormsg?
+            
+        answers:
+            -
+                value: 'It has no special meaning it''s just a variable'
+                correct: true
+            -
+                value: 'It contains the previous error message'
+                correct: false
+            -
+                value: 'It contains an object of the last error'
+                correct: false
+    -
+        question: |
             What is the purpose of $argc?
             
         answers:
@@ -4027,4 +4041,104 @@ questions:
                 correct: false
             -
                 value: 'A header which can be used to authenticate'
+                correct: false
+            -
+                value: A
+                correct: true
+            -
+                value: B
+                correct: false
+            -
+                value: 'An error'
+                correct: false
+    -
+        question: |
+            What will be the output of the following code?
+            
+            <?php
+            
+            function myRange($min, $max)
+            {
+                for ($index = $min; $index <= $max; $index++) {
+                    yield $index;
+                }
+            }
+            
+            var_dump(myRange(1, 3));
+            
+        answers:
+            -
+                value: |
+                    object(Generator)#1 (0) {
+                    }
+                    
+                correct: true
+            -
+                value: |
+                    object(Generator)#1 (3) {
+                      0 => 1,
+                      0 => 2,
+                      0 => 3,
+                    }
+                    
+                correct: false
+            -
+                value: |
+                    array(3) {
+                      [0]=>
+                      int(1)
+                      [1]=>
+                      int(2)
+                      [2]=>
+                      int(3)
+                    }
+                    
+                correct: false
+    -
+        question: |
+            Is the following code valid?
+            
+            <?php
+            
+            function myRange($min, $max): iterable
+              {
+                  for ($index = $min; $index <= $max; $index++) {
+                      yield $index;
+                  }
+              }
+            
+              foreach (myRange(1,10) as $value) {
+                  echo $value;
+              }
+            
+        answers:
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
+            Is the following code valid?
+            
+            <?php
+            
+            function myRange($min, $max): IteratorAggregate
+            {
+                for ($index = $min; $index <= $max; $index++) {
+                    yield $index;
+                }
+            }
+            
+            foreach (myRange(1,10) as $value) {
+                echo $value;
+            }
+            
+        answers:
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
                 correct: false

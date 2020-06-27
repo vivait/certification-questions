@@ -409,7 +409,7 @@ questions:
     -
         question: |
             Which of the following are true about Symfony\Component\OptionsResolver\Options?
-
+            
         answers:
             -
                 value: 'It is an interface.'
@@ -435,7 +435,7 @@ questions:
     -
         question: |
             Which of the following methods does Symfony\Component\OptionsResolver\OptionsResolver contain?
-
+            
         answers:
             -
                 value: 'setDefault($option, $value)'
@@ -444,73 +444,73 @@ questions:
                 value: 'setDefaults(array $defaults)'
                 correct: true
             -
-                value: 'hasDefault($option)'
+                value: hasDefault($option)
                 correct: true
             -
-                value: 'setRequired($optionNames)'
+                value: setRequired($optionNames)
                 correct: true
             -
-                value: 'hasRequired($option)'
+                value: hasRequired($option)
                 correct: false
             -
-                value: 'setRequiredOption($option).'
+                value: setRequiredOption($option).
                 correct: false
             -
-                value: 'addDefined($option)'
-                correct: false
-    -
-        question: |
-            Which of the following methods does Symfony\Component\OptionsResolver\OptionsResolver contain?
-
-        answers:
-            -
-                value: 'getMissingOptions()'
-                correct: true
-            -
-                value: 'setDefined($optionNames)'
-                correct: true
-            -
-                value: 'isDefined($option)'
-                correct: true
-            -
-                value: 'getMissingOptions()'
-                correct: true
-            -
-                value: 'getDefined()'
-                correct: false
-            -
-                value: 'addDefined($option)'
+                value: addDefined($option)
                 correct: false
     -
         question: |
             Which of the following methods does Symfony\Component\OptionsResolver\OptionsResolver contain?
-
+            
         answers:
             -
-                value: 'getMissingOptions()'
+                value: getMissingOptions()
                 correct: true
             -
-                value: 'setDefined($optionNames)'
+                value: setDefined($optionNames)
                 correct: true
             -
-                value: 'isDefined($option)'
+                value: isDefined($option)
                 correct: true
             -
-                value: 'getMissingOptions()'
+                value: getMissingOptions()
                 correct: true
             -
-                value: 'getDefined()'
+                value: getDefined()
                 correct: false
             -
-                value: 'addDefined($option)'
+                value: addDefined($option)
                 correct: false
     -
         question: |
             Which of the following methods does Symfony\Component\OptionsResolver\OptionsResolver contain?
-
+            
         answers:
             -
-                value: 'getDefinedOptions()'
+                value: getMissingOptions()
+                correct: true
+            -
+                value: setDefined($optionNames)
+                correct: true
+            -
+                value: isDefined($option)
+                correct: true
+            -
+                value: getMissingOptions()
+                correct: true
+            -
+                value: getDefined()
+                correct: false
+            -
+                value: addDefined($option)
+                correct: false
+    -
+        question: |
+            Which of the following methods does Symfony\Component\OptionsResolver\OptionsResolver contain?
+            
+        answers:
+            -
+                value: getDefinedOptions()
                 correct: true
             -
                 value: 'setNormalizer($option, \Closure $normalizer)'
@@ -522,7 +522,7 @@ questions:
                 value: 'addAllowedValues($option, $allowedValues)'
                 correct: true
             -
-                value: 'getAllowedValues($option)'
+                value: getAllowedValues($option)
                 correct: false
             -
                 value: 'setNormalizer(\Closure $normalizer)'
@@ -530,7 +530,7 @@ questions:
     -
         question: |
             Which of the following methods does Symfony\Component\OptionsResolver\OptionsResolver contain?
-
+            
         answers:
             -
                 value: 'setAllowedTypes($option, $allowedTypes)'
@@ -539,16 +539,16 @@ questions:
                 value: 'addAllowedTypes($option, $allowedTypes)'
                 correct: true
             -
-                value: 'remove($optionNames)'
+                value: remove($optionNames)
                 correct: true
             -
-                value: 'clear()'
+                value: clear()
                 correct: true
             -
                 value: 'resolve(array $options = array())'
                 correct: true
             -
-                value: 'getAllowedTypes($option)'
+                value: getAllowedTypes($option)
                 correct: false
             -
                 value: 'setNormalizer(\Closure $normalizer)'
