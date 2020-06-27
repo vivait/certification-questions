@@ -152,13 +152,10 @@ questions:
                 value: sendmail\n
                 correct: false
     -
-        question: 'Which statements are true about the Symfony\Bundle\FrameworkBundle\Controller\AbstractController class?'
+        question: 'Which statements are true about the Symfony\Bundle\FrameworkBundle\Controller\AbstractController class in Symfony 4.4?'
         answers:
             -
                 value: 'An AbstractController uses ControllerTrait.'
-                correct: false
-            -
-                value: 'An AbstractController replaces the former Controller.'
                 correct: true
             -
                 value: 'An AbstractController behaves like a Controller, but provide a restricted access to services.'
@@ -166,6 +163,24 @@ questions:
             -
                 value: 'An AbstractController is ServiceSubscriberInterface.'
                 correct: true
+            -
+                value: 'An AbstractController replaces the former Controller.'
+                correct: false
+    -
+        question: 'Which statements are true about the Symfony\Bundle\FrameworkBundle\Controller\AbstractController class in Symfony 5+?'
+        answers:
+            -
+                value: 'An AbstractController uses ControllerTrait.'
+                correct: false
+            -
+                value: 'An AbstractController behaves like a Controller, but provide a restricted access to services.'
+                correct: true
+            -
+                value: 'An AbstractController is ServiceSubscriberInterface.'
+                correct: true
+            -
+                value: 'An AbstractController replaces the former Controller.'
+                correct: false
     -
         question: 'What is the tag to use to register HTTP content rendering strategy?'
         answers:
@@ -1406,4 +1421,21 @@ questions:
                 correct: false
             -
                 value: 'It ensures that the container errors if there is it is ambiguous which service matches'
+                correct: false
+    -
+        question: |
+            Which of these are built-in directives?
+
+        answers:
+            -
+                value: imports
+                correct: true
+            -
+                value: services
+                correct: true
+            -
+                value: parameters
+                correct: true
+            -
+                value: security
                 correct: false

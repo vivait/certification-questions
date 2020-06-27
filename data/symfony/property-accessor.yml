@@ -473,3 +473,26 @@ questions:
             -
                 value: '$accessor->isSafe($object, ''property'');'
                 correct: false
+    -
+        question: |
+            What will be the result of the following code?
+
+            use Symfony\Component\PropertyAccess\PropertyAccess;
+
+            $accessor = PropertyAccess::createPropertyAccessor();
+
+            $person = array(
+                'first_name' => 'Wouter',
+            );
+
+            $age = $accessor->getValue($person, 'age');
+        answers:
+            -
+                value: '$accessor->isWritable($object, ''property'');'
+                correct: true
+            -
+                value: '$accessor->exists($object, ''property'');'
+                correct: false
+            -
+                value: '$accessor->isSafe($object, ''property'');'
+                correct: false
