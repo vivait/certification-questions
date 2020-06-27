@@ -263,10 +263,10 @@ questions:
                 value: Classes
                 correct: true
             -
-                value: 'Private and protected properties'
-                correct: false
-            -
                 value: 'Public properties'
+                correct: true
+            -
+                value: 'Private and protected properties'
                 correct: true
             -
                 value: 'Private and protected getters/issers'

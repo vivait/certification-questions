@@ -553,3 +553,228 @@ questions:
             -
                 value: 'setNormalizer(\Closure $normalizer)'
                 correct: false
+    -
+        question: |
+            Which types does setRequired accept?
+            
+        answers:
+            -
+                value: string
+                correct: true
+            -
+                value: 'string[]'
+                correct: true
+            -
+                value: 'Option[]'
+                correct: false
+            -
+                value: Option
+                correct: false
+            -
+                value: 'int[]'
+                correct: false
+            -
+                value: int
+                correct: false
+    -
+        question: |
+            Which methods could one use to view the option that must be provided?
+            
+        answers:
+            -
+                value: getRequired()
+                correct: true
+            -
+                value: isRequired()
+                correct: true
+            -
+                value: getRequiredOptions()
+                correct: false
+            -
+                value: getOptions()
+                correct: false
+            -
+                value: isRequiredOptions()
+                correct: false
+    -
+        question: |
+            What is the purpose of the isMissing method?
+            
+        answers:
+            -
+                value: 'It checks if an option has a default value'
+                correct: true
+            -
+                value: 'It checks if an option has been provided by the caller'
+                correct: false
+    -
+        question: |
+            Which methods could one use to check for options which don't have default values?
+            
+        answers:
+            -
+                value: getMissingOptions()
+                correct: true
+            -
+                value: isMissing()
+                correct: true
+            -
+                value: hasDefaultValue()
+                correct: false
+            -
+                value: hasDefaultValue()
+                correct: false
+            -
+                value: getDefaultValueMissing()
+                correct: false
+            -
+                value: hasDefaultValueMissing()
+                correct: false
+    -
+        question: |
+            Which of the following are valid types for the option resolver?
+            
+        answers:
+            -
+                value: string
+                correct: true
+            -
+                value: 'null'
+                correct: true
+            -
+                value: int
+                correct: true
+            -
+                value: real
+                correct: true
+            -
+                value: boolean
+                correct: false
+            -
+                value: floating
+                correct: false
+    -
+        question: |
+            Which method could one use to specify an enumeration of values for an option?
+            
+        answers:
+            -
+                value: setAllowedValues
+                correct: true
+            -
+                value: setEnum
+                correct: false
+            -
+                value: setValues
+                correct: false
+    -
+        question: |
+            What types can the second argument of the setAllowedValues method accept?
+            
+        answers:
+            -
+                value: closure
+                correct: true
+            -
+                value: 'string[]'
+                correct: true
+            -
+                value: string
+                correct: false
+            -
+                value: int
+                correct: false
+            -
+                value: OptionValue
+                correct: false
+    -
+        question: |
+            Does the option resolver provide a facility to canonicalise option values?
+            
+        answers:
+            -
+                value: 'Yes, using setNormalizer'
+                correct: true
+            -
+                value: 'Yes, using setCanonicalForm'
+                correct: false
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
+            What is the purpose of the setDefined method?
+            
+        answers:
+            -
+                value: 'It allows one to set if an argument will included if not set by the caller'
+                correct: true
+            -
+                value: 'It allows one to set if an argument is required'
+                correct: false
+            -
+                value: 'It allows one to mark an argument as always present for data'
+                correct: false
+    -
+        question: |
+            Is the following a valid way to define a subordinate option resolver?
+            
+            $resolver->setDefault('spool', function (OptionsResolver $spoolResolver) {
+                $spoolResolver->setDefaults([
+                    'type' => 'file',
+                    'path' => '/path/to/spool',
+                ]);
+                $spoolResolver->setAllowedValues('type', ['file', 'memory']);
+                $spoolResolver->setAllowedTypes('path', 'string');
+            });
+            
+        answers:
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
+            Is the following a valid way to define a subordinate option resolver?
+            
+            $spoolResolver = new OptionResolver();
+            $spoolResolver->setDefaults([
+                'type' => 'file',
+                'path' => '/path/to/spool',
+            ]);
+            $spoolResolver->setAllowedValues('type', ['file', 'memory']);
+            $spoolResolver->setAllowedTypes('path', 'string');
+            
+            $resolver->setDefault('spool', $spoolResolver);
+            
+        answers:
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
+            What is the behaviour of the setDeprecated method?
+            
+        answers:
+            -
+                value: 'It will trigger an error when options passed to it are used elsewhere'
+                correct: true
+            -
+                value: 'It will throw an exception when an option is used which is passed to it'
+                correct: false
+    -
+        question: |
+            Is it possible to define a custom deprecation message for an option?
+            
+        answers:
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: true
