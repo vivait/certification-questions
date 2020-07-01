@@ -4142,3 +4142,20 @@ questions:
             -
                 value: 'Yes'
                 correct: false
+    -
+        question: |
+            How would you use the SHA-512 hash algorithm in PHP?
+            
+        answers:
+            -
+                value: 'Using the hash() function'
+                correct: true
+            -
+                value: 'Create my own function'
+                correct: true
+            -
+                value: 'Using the crypt() function'
+                correct: false
+            -
+                value: 'Using the sha512() function'
+                correct: false

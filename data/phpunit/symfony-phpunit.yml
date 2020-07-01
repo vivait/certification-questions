@@ -1,0 +1,161 @@
+category: 'Symfony PHPUnit'
+questions:
+    -
+        question: 'Is the following a valid assertion?'
+        answers:
+            -
+                value: $this->assertSelectorTextContains
+                correct: true
+            -
+                value: 'self::assertSelectorTextContains'
+                correct: false
+            -
+                value: $this->assertSelectorText
+                correct: false
+            -
+                value: 'self::assertSelectorText'
+                correct: false
+    -
+        question: 'In which version of Symfony were assertions added to WebTestCase?'
+        answers:
+            -
+                value: '4.3'
+                correct: true
+            -
+                value: '4.4'
+                correct: false
+            -
+                value: '4.0'
+                correct: false
+            -
+                value: '3.4'
+                correct: false
+            -
+                value: '3.3'
+                correct: false
+            -
+                value: '3.0'
+                correct: false
+    -
+        question: 'Which method does one have to call to get the contents of the page?'
+        answers:
+            -
+                value: $client->getResponse()->getContent()
+                correct: true
+            -
+                value: $client->getContent()
+                correct: false
+            -
+                value: $client->getPage()->getContent()
+                correct: false
+            -
+                value: $client->getText()
+                correct: false
+    -
+        question: 'Which of the following are valid assertions?'
+        answers:
+            -
+                value: assertResponseHeaderSame
+                correct: true
+            -
+                value: assertResponseIsSuccessful
+                correct: true
+            -
+                value: assertResponseRedirects
+                correct: true
+            -
+                value: assertResponseRedirects
+                correct: false
+            -
+                value: assertResponseSize
+                correct: false
+            -
+                value: assertResponseTime
+                correct: false
+            -
+                value: assertContentsContains
+                correct: false
+    -
+        question: |
+            Is the following a valid method?
+            
+            request(
+                $method,
+                $uri,
+                array $parameters = [],
+                array $files = [],
+                array $server = [],
+                $content = null,
+                $changeHistory = true
+            )
+            
+        answers:
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
+            Is the following a valid method?
+            
+            request(
+                $uri,
+                $method,
+                array $parameters = [],
+                array $files = [],
+                array $server = [],
+                $content = null,
+                $changeHistory = true
+            )
+            
+        answers:
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
+            Is the following a valid way to set the referer header?
+            
+            $client->request(
+                'GET',
+                '/post/hello-world',
+                [],
+                [],
+                [
+                    'HTTP_REFERER' => '/foo/bar',
+                ]
+            );
+            
+        answers:
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
+            Is the following a valid way to set the referer header?
+            
+            $client->request(
+                'GET',
+                '/post/hello-world',
+                [],
+                [],
+                [
+                    'referer' => '/foo/bar',
+                ]
+            );
+            
+        answers:
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false

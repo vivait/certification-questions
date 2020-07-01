@@ -436,7 +436,7 @@ questions:
                 value: 'OK 200 HTTP/1.1'
                 correct: false
     -
-        question: 'Which of the following is a valid first line for the response?'
+        question: 'Which of the following is a valid response body?'
         answers:
             -
                 value: 'Request-Line Headers CRLF Body'
@@ -446,9 +446,6 @@ questions:
                 correct: true
             -
                 value: 'Request-Line Headers CRLF CRLF Body'
-                correct: false
-            -
-                value: 'Request-Line CRLF Headers CRLF CRLF Body'
                 correct: false
         help: |
             https://en.wikipedia.org/wiki/HTTP_message_body

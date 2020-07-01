@@ -531,3 +531,23 @@ questions:
         help: |
             https://github.com/symfony/symfony/blob/3.4/src/Symfony/Component/Translation/Translator.php#L192
             
+    -
+        question: |
+            Which of the following are XML formats?
+            
+        answers:
+            -
+                value: .xlf
+                correct: true
+            -
+                value: .php
+                correct: false
+            -
+                value: .mo
+                correct: false
+            -
+                value: 'second argument of trans()'
+                correct: false
+        help: |
+            https://github.com/symfony/symfony/blob/3.4/src/Symfony/Component/Translation/Translator.php#L192
+            

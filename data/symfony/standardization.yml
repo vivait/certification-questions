@@ -271,10 +271,10 @@ questions:
         question: 'How does Symfony recommend you name classes that extend Exception?'
         answers:
             -
-                value: 'Prefix with the class name with Exception'
+                value: 'Suffix with the class name with Exception'
                 correct: true
             -
-                value: 'Suffix with the class name with Exception'
+                value: 'Prefix with the class name with Exception'
                 correct: false
             -
                 value: 'There is no required naming convention'
