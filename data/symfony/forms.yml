@@ -1775,3 +1775,71 @@ questions:
             -
                 value: 'The hide_minutes option set to true.'
                 correct: false
+    -
+        question: |
+            Is JS required for client-side support of the allow_add option in PHP?
+        answers:
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
+            Which of the following are valid options on the collection type?
+        answers:
+            -
+                value: 'allow_add'
+                correct: true
+            -
+                value: 'allow_delete'
+                correct: true
+            -
+                value: 'delete_empty'
+                correct: true
+            -
+                value: 'entry_options'
+                correct: true
+            -
+                value: 'entry_type'
+                correct: true
+            -
+                value: 'allow_remove'
+                correct: false
+            -
+                value: 'allow_new'
+                correct: false
+    -
+        question: |
+            What is the purpose of prototype option on the collection type?
+        answers:
+            -
+                value: 'When enabled it will provide a new collection item to the template'
+                correct: true
+            -
+                value: 'It allows one to specify markup for a new collection item'
+                correct: false
+    -
+        question: |
+            What is the purpose of prototype_data option on the collection type?
+        answers:
+            -
+                value: 'It allows one to specify the initial data for a new item in the collection'
+                correct: true
+            -
+                value: 'It allows the passing of arbitrary domain specific data to the template'
+                correct: false
+            -
+                value: 'It is the data that will be populated into the specified collection item'
+                correct: false
+    -
+        question: |
+            What is the purpose of prototype_name option on the collection type?
+        answers:
+            -
+                value: 'It allows you to override the name set in the new item for JS'
+                correct: true
+            -
+                value: 'It allows you to override the name set for the form name'
+                correct: false

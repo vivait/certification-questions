@@ -585,7 +585,7 @@ questions:
                 correct: false
             -
                 value: Symfony\Component\Filesystem\Exception
-                correct: true
+                correct: false
             -
                 value: Symfony\Component\Filesystem\ExceptionInterface
                 correct: false

@@ -361,7 +361,7 @@ questions:
                 correct: false
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#connecting-listeners
-            
+
     -
         question: 'What class must one extend to create an event?'
         answers:
@@ -684,4 +684,25 @@ questions:
                 correct: true
             -
                 value: 'It''s a decorator that stores listener that were called'
+                correct: false
+    -
+        question: 'What is the argument passed to listeners of kernel.controller_arguments after Symfony 4.3?'
+        answers:
+            -
+                value: FilterResponseEvent
+                correct: true
+            -
+                value: FilterControllerArgumentsEvent
+                correct: false
+            -
+                value: GetResponseEvent
+                correct: false
+            -
+                value: ViewEvent
+                correct: false
+            -
+                value: GetResponseForControllerResultEvent
+                correct: false
+            -
+                value: RequestViewEvent
                 correct: false

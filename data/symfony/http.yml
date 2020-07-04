@@ -127,14 +127,14 @@ questions:
                 value: LINK
                 correct: true
             -
+                value: PATCH
+                correct: true
+            -
                 value: CONNECT
                 correct: false
             -
                 value: TRACE
                 correct: false
-            -
-                value: PATCH
-                correct: true
     -
         question: 'Which of these methods are mentioned in the RFC2616?'
         answers:
