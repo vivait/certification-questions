@@ -1050,6 +1050,7 @@ questions:
     -
         question: |
             What is the constructor of the Symfony\Component\HttpKernel\HttpKernel?
+            
         answers:
             -
                 value: |
@@ -1059,10 +1060,12 @@ questions:
                         RequestStack $requestStack = null,
                         ArgumentResolverInterface $argumentResolver = null
                     )
+                    
                 correct: true
             -
                 value: |
                     public function __construct()
+                    
                 correct: false
             -
                 value: |
@@ -1072,6 +1075,7 @@ questions:
                         RequestStack $requestStack,
                         ArgumentResolverInterface $argumentResolver
                     )
+                    
                 correct: false
             -
                 value: |
@@ -1079,54 +1083,66 @@ questions:
                         ControllerResolverInterface $resolver,
                         ArgumentResolverInterface $argumentResolver
                     )
+                    
                 correct: false
             -
                 value: |
                     public function __construct(HttpExceptionInterface $exception)
+                    
                 correct: false
     -
         question: |
             What is the Symfony\Component\Debug\Exception\FlattenException?
+            
         answers:
             -
                 value: |
                     It wraps PHP Exception to be able to serialize them.
+                    
                 correct: true
             -
                 value: |
                     It an exception thrown by the kernel when the response fails format the response correctly
+                    
                 correct: false
             -
                 value: |
                     It's an exception which contains exception metadata in a flat format
+                    
                 correct: false
     -
         question: |
             What is a sub-request?
+            
         answers:
             -
                 value: |
                     It is a request which works the same as a conventional one it's just it's spawned by another request
+                    
                 correct: true
             -
                 value: |
                     It is only a request triggered by a template to render a sub-part of an application.
+                    
                 correct: false
             -
                 value: |
                     It a request which is sent to the kernel when there is a PATCH or TRACE request
+                    
                 correct: false
             -
                 value: |
                     They don't exist
+                    
                 correct: false
     -
         question: |
             Is the HTTP Kernel responsible for loading bundles?
+            
         answers:
             -
-                value: Yes
+                value: 'Yes'
                 correct: true
             -
-                value: No
+                value: 'No'
                 correct: false

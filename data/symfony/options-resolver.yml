@@ -781,14 +781,14 @@ questions:
     -
         question: |
             With the following class:
-
+            
             <?php
             use Symfony\Component\OptionsResolver\OptionsResolver;
-
+            
             class Mailer
             {
                 private $options;
-
+            
                 public function __construct(array $options = array())
                 {
                     $resolver = new OptionsResolver();
@@ -798,16 +798,17 @@ questions:
                         'password' => 'pa$$word',
                         'port'     => 25,
                     ));
-
+            
                     $this->options = $resolver->resolve($options);
                 }
             }
-
+            
             what exception will be thrown while executing the code:
-
+            
             $mailer = new Mailer(array(
                 'usernme' => 'johndoe',
             ));
+            
         answers:
             -
                 value: 'A Symfony\Component\OptionsResolver\Exception\UndefinedOptionsException.'
@@ -827,29 +828,30 @@ questions:
     -
         question: |
             With the following class:
-
+            
             <?php
             use Symfony\Component\OptionsResolver\OptionsResolver;
-
+            
             class Mailer
             {
                 public function __construct(array $options)
                 {
                     $resolver = new OptionsResolver();
                     $this->configureOptions($resolver);
-
+            
                     $this->options = $resolver->resolve($options);
                 }
-
+            
                 public function configureOptions(OptionsResolver $resolver)
                 {
                     $resolver->setRequired('host');
                 }
             }
-
+            
             what exception will be thrown while executing the code:
-
+            
             $mailer = new Mailer();
+            
         answers:
             -
                 value: 'A Symfony\Component\OptionsResolver\Exception\MissingOptionsException.'
@@ -866,32 +868,33 @@ questions:
     -
         question: |
             With the following class:
-
+            
             <?php
             use Symfony\Component\OptionsResolver\OptionsResolver;
-
+            
             class Mailer
             {
                 public function __construct(array $options)
                 {
                     $resolver = new OptionsResolver();
                     $this->configureOptions($resolver);
-
+            
                     $this->options = $resolver->resolve($options);
                 }
-
+            
                 public function configureOptions(OptionsResolver $resolver)
                 {
                     $resolver->setDefault('transport', 'sendmail');
                     $resolver->setAllowedValues('transport', ['sendmail', 'mail', 'smtp']
                 }
             }
-
+            
             what exception will be thrown while executing the code:
-
+            
             $mailer = new Mailer([
                 'transport' => 'send-mail',
             ]);
+            
         answers:
             -
                 value: 'A Symfony\Component\OptionsResolver\Exception\InvalidOptionsException.'

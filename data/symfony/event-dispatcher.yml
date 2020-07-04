@@ -361,7 +361,7 @@ questions:
                 correct: false
         help: |
             https://symfony.com/doc/current/components/event_dispatcher.html#connecting-listeners
-
+            
     -
         question: 'What class must one extend to create an event?'
         answers:
