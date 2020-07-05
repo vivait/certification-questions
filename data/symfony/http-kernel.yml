@@ -1146,3 +1146,45 @@ questions:
             -
                 value: 'No'
                 correct: false
+    -
+        question: |
+            Which of the following components are required for formatting exceptions in a different format?
+
+        answers:
+            -
+                value: 'Serializer Component'
+                correct: true
+            -
+                value: 'Property Accessor'
+                correct: false
+            -
+                value: 'Twig Bridge'
+                correct: false
+    -
+        question: |
+            Which interface is required to serialize a exception into a different format?
+
+        answers:
+            -
+                value: 'Symfony\Component\Serializer\Normalizer\NormalizerInterface'
+                correct: true
+            -
+                value: 'Symfony\Component\HttpKernel\ExceptionSerializer'
+                correct: false
+            -
+                value: 'Symfony\Component\HttpKernel\ExceptionHandler'
+                correct: false
+    -
+        question: |
+            Which config option would one use under framework to render exceptions using a different controller?
+
+        answers:
+            -
+                value: 'error_controller'
+                correct: true
+            -
+                value: 'controller'
+                correct: false
+            -
+                value: 'exception_controller'
+                correct: false
