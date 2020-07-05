@@ -67,6 +67,9 @@ questions:
                 value: is_required
                 correct: true
             -
+                value: attributes
+                correct: true
+            -
                 value: compound
                 correct: false
             -
@@ -78,9 +81,6 @@ questions:
             -
                 value: trim
                 correct: false
-            -
-                value: attributes
-                correct: true
     -
         question: 'Which of the following are built-in Symfony form events?'
         answers:

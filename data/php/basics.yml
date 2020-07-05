@@ -4159,3 +4159,19 @@ questions:
             -
                 value: 'Using the sha512() function'
                 correct: false
+    -
+        question: |
+            Which function is used to remove and return the first element of an array?
+        answers:
+            -
+                value: 'array_shift'
+                correct: true
+            -
+                value: 'array_pop'
+                correct: false
+            -
+                value: 'array_grab'
+                correct: false
+            -
+                value: 'array_pull'
+                correct: false
