@@ -686,6 +686,24 @@ questions:
                 value: 'It''s a decorator that stores listener that were called'
                 correct: false
     -
+        question: 'Which methods exist on the Symfony\Component\EventDispatcher\TraceableEventDispatcher?'
+        answers:
+            -
+                value: getCalledListeners()
+                correct: true
+            -
+                value: getNotCalledListeners()
+                correct: true
+            -
+                value: addListener()
+                correct: true
+            -
+                value: trace()
+                correct: false
+            -
+                value: getCalls()
+                correct: false
+    -
         question: 'What is the argument passed to listeners of kernel.controller_arguments after Symfony 4.3?'
         answers:
             -

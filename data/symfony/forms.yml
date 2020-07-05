@@ -1777,6 +1777,29 @@ questions:
                 correct: false
     -
         question: |
+            What can be achieved using the prototype_name of the Symfony\Component\Form\Extension\Core\Type\CollectionType form type ?
+            
+        answers:
+            -
+                value: |
+                    When one has a prototype embedding other prototypes, it allows to replace each one with a specific
+                    value.
+                    
+                correct: true
+            -
+                value: |
+                    When one wants to customize the rendering of the field, it allows to override the form prototype
+                    block prefix.
+                    
+                correct: false
+            -
+                value: |
+                    When one uses some third-party javascript library to handle the collection, it allows to wire the
+                    prototype to it.
+                    
+                correct: false
+    -
+        question: |
             Is JS required for client-side support of the allow_add option in PHP?
             
         answers:

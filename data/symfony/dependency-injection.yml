@@ -1439,3 +1439,131 @@ questions:
             -
                 value: security
                 correct: false
+    -
+        question: |
+            In which version of Symfony were all classes made private by default?
+            
+        answers:
+            -
+                value: !!float 4
+                correct: true
+            -
+                value: !!float 3
+                correct: false
+            -
+                value: 3.4
+                correct: false
+            -
+                value: !!float 5
+                correct: false
+            -
+                value: 4.4
+                correct: false
+    -
+        question: |
+            Which of the following are reserved service names after Symfony 4.0?
+            
+        answers:
+            -
+                value: _my.service
+                correct: true
+            -
+                value: my_service
+                correct: false
+            -
+                value: 'my .service_'
+                correct: false
+    -
+        question: |
+            Are service and parameter names case sensitive in Symfony 4?
+            
+        answers:
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
+            Are service and parameter names case sensitive in Symfony 3?
+            
+        answers:
+            -
+                value: 'No'
+                correct: true
+            -
+                value: 'Yes'
+                correct: false
+    -
+        question: |
+            From Symfony 4 which types of services can set using Container::set()?
+            
+        answers:
+            -
+                value: Synthetic
+                correct: true
+            -
+                value: Concrete
+                correct: false
+            -
+                value: Anonymous
+                correct: false
+    -
+        question: |
+            What will the Container::has() return when called on a private service or alias in Symfony 4?
+            
+        answers:
+            -
+                value: 'false'
+                correct: true
+            -
+                value: 'true'
+                correct: false
+    -
+        question: |
+            What will the Container::has() return when called on a private service or alias in Symfony 3?
+            
+        answers:
+            -
+                value: 'true'
+                correct: true
+            -
+                value: 'false'
+                correct: false
+    -
+        question: |
+            What will the Container::has() return when called on a private service or alias in Symfony 2?
+            
+        answers:
+            -
+                value: 'true'
+                correct: true
+            -
+                value: 'false'
+                correct: false
+    -
+        question: |
+            What is the purpose of container.dumper.inline_class_loader parameter?
+            
+        answers:
+            -
+                value: 'It reduces the time to load when using the DebugClassLoader'
+                correct: true
+            -
+                value: 'It ensures the container dumps to a single file'
+                correct: false
+            -
+                value: 'It makes the dumped container have the dependencies of services be instantiated'
+                correct: false
+    -
+        question: |
+            Which env is it recommended to enable the container.dumper.inline_class_loader parameter?
+            
+        answers:
+            -
+                value: dev
+                correct: true
+            -
+                value: prod
+                correct: false

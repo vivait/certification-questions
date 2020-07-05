@@ -558,3 +558,18 @@ questions:
             -
                 value: '=Hello'
                 correct: false
+    -
+        question: 'What is the value of the option new InputOption(''foo'', ''f'') when the command --bar=Hello is ran?'
+        answers:
+            -
+                value: 'false'
+                correct: true
+            -
+                value: '"0"'
+                correct: false
+            -
+                value: Hello
+                correct: false
+            -
+                value: '=Hello'
+                correct: false
