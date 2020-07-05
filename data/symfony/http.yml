@@ -607,55 +607,55 @@ questions:
                 value: 204
                 correct: false
     -
-        question: What is the purpose the TRACE method?
+        question: 'What is the purpose the TRACE method?'
         answers:
             -
-                value: It performs a message loop-back test along the path to the target resource
+                value: 'It performs a message loop-back test along the path to the target resource'
                 correct: true
             -
-                value: It is used to describe the communication options for the target resource
+                value: 'It is used to describe the communication options for the target resource'
                 correct: false
             -
-                value: It displays redirections for a given route
+                value: 'It displays redirections for a given route'
                 correct: false
     -
-        question: What is the purpose the HEAD method?
+        question: 'What is the purpose the HEAD method?'
         answers:
             -
-                value: It asks for a response identical to that of a GET request, but without the response body
+                value: 'It asks for a response identical to that of a GET request, but without the response body'
                 correct: true
             -
-                value: It is used to describe the communication options for the target resource
+                value: 'It is used to describe the communication options for the target resource'
                 correct: false
             -
-                value: It displays redirections for a given route
+                value: 'It displays redirections for a given route'
                 correct: false
     -
-        question: What is the purpose the HEAD method?
+        question: 'What is the purpose the HEAD method?'
         answers:
             -
-                value: It asks for a response identical to that of a GET request, but without the response body
+                value: 'It asks for a response identical to that of a GET request, but without the response body'
                 correct: true
             -
-                value: It is used to describe the communication options for the target resource
+                value: 'It is used to describe the communication options for the target resource'
                 correct: false
             -
-                value: It displays redirections for a given route
+                value: 'It displays redirections for a given route'
                 correct: false
     -
-        question: What is the purpose the CONNECT method?
+        question: 'What is the purpose the CONNECT method?'
         answers:
             -
-                value: It establishes a tunnel to the server identified by the target resource
+                value: 'It establishes a tunnel to the server identified by the target resource'
                 correct: true
             -
-                value: It is used to describe the communication options for the target resource
+                value: 'It is used to describe the communication options for the target resource'
                 correct: false
             -
-                value: It displays redirections for a given route
+                value: 'It displays redirections for a given route'
                 correct: false
     -
-        question: Which header must one use to set a cookie on a client?
+        question: 'Which header must one use to set a cookie on a client?'
         answers:
             -
                 value: Set-Cookie
@@ -667,7 +667,7 @@ questions:
                 value: Alter-Cookie
                 correct: false
     -
-        question: Which header does the client use to send back stored cookies?
+        question: 'Which header does the client use to send back stored cookies?'
         answers:
             -
                 value: Cookie
@@ -679,26 +679,26 @@ questions:
                 value: Cookie-data
                 correct: false
     -
-        question: Which of the following are valid cookie data?
+        question: 'Which of the following are valid cookie data?'
         answers:
             -
-                value: "Cookie: yummy_cookie=choco; tasty_cookie=strawberry"
+                value: 'Cookie: yummy_cookie=choco; tasty_cookie=strawberry'
                 correct: true
             -
-                value: "Cookie: yummy_cookie=choco; Expires=Wed, 31 Oct 2021 07:28:00 GMT"
+                value: 'Cookie: yummy_cookie=choco; Expires=Wed, 31 Oct 2021 07:28:00 GMT'
                 correct: true
             -
-                value: "Cookie: yummy_cookie=choco"
+                value: 'Cookie: yummy_cookie=choco'
                 correct: true
             -
-                value: "Cookie: yummy_cookie=choco&Expires=Wed, 31 Oct 2021 07:28:00 GMT"
+                value: 'Cookie: yummy_cookie=choco&Expires=Wed, 31 Oct 2021 07:28:00 GMT'
                 correct: false
             -
-                value: "Cookie: ?yummy_cookie=choco&tasty_cookie=strawberry"
+                value: 'Cookie: ?yummy_cookie=choco&tasty_cookie=strawberry'
                 correct: false
             -
-                value: "Cookie: ?yummy_cookie=choco"
+                value: 'Cookie: ?yummy_cookie=choco'
                 correct: false
             -
-                value: "Cookie: yummy_cookie=choco&tasty_cookie=strawberry"
+                value: 'Cookie: yummy_cookie=choco&tasty_cookie=strawberry'
                 correct: false

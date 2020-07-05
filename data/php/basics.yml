@@ -4162,16 +4162,17 @@ questions:
     -
         question: |
             Which function is used to remove and return the first element of an array?
+            
         answers:
             -
-                value: 'array_shift'
+                value: array_shift
                 correct: true
             -
-                value: 'array_pop'
+                value: array_pop
                 correct: false
             -
-                value: 'array_grab'
+                value: array_grab
                 correct: false
             -
-                value: 'array_pull'
+                value: array_pull
                 correct: false
