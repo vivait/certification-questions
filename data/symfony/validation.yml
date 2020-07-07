@@ -573,7 +573,7 @@ questions:
                 correct: false
     -
         question: |
-            What method should be called on the validator builder to allow a class to be validated by annotations?
+            What method should be called on the validator builder to not allow a class to be validated by annotations?
             
         answers:
             -
