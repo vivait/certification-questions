@@ -816,39 +816,40 @@ questions:
     -
         question: |
             Which of the following methods exist in Symfony\Component\Security\Http\Authentication\AuthenticationUtils?
-
+            
         answers:
             -
-                value: public function getLastAuthenticationError($clearSession = true)
+                value: 'public function getLastAuthenticationError($clearSession = true)'
                 correct: true
             -
-                value: public function getLastUsername()
+                value: 'public function getLastUsername()'
                 correct: true
             -
-                value: private function getRequest()
+                value: 'private function getRequest()'
                 correct: true
             -
-                value: private function getPasswordEncoder()
+                value: 'private function getPasswordEncoder()'
                 correct: false
             -
-                value: private function getCheckPathRoute()
+                value: 'private function getCheckPathRoute()'
                 correct: false
     -
         question: |
             What does Symfony\Component\Security\Http\Authentication\AuthenticationUtils::getLastAuthenticationError() return?
+            
         answers:
             -
-                value: public function getLastAuthenticationError($clearSession = true)
+                value: 'public function getLastAuthenticationError($clearSession = true)'
                 correct: true
             -
-                value: public function getLastUsername()
+                value: 'public function getLastUsername()'
                 correct: true
             -
-                value: private function getRequest()
+                value: 'private function getRequest()'
                 correct: true
             -
-                value: private function getPasswordEncoder()
+                value: 'private function getPasswordEncoder()'
                 correct: false
             -
-                value: private function getCheckPathRoute()
+                value: 'private function getCheckPathRoute()'
                 correct: false
