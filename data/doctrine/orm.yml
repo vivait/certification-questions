@@ -407,20 +407,17 @@ questions:
         question: 'Which methods exist in the QueryBuilder?'
         answers:
             -
-                value: 'public function rightJoin($join, $alias, $conditionType = null, $condition = null, $indexBy = null)'
-                correct: true
-            -
                 value: 'public function addGroupBy($groupBy)'
                 correct: true
             -
                 value: 'public function having($having)'
                 correct: true
             -
-                value: 'public function having($having)'
+                value: 'public function addOrderBy($sort, $order = null)'
                 correct: true
             -
-                value: 'public function addSet($delete = null, $alias = null)'
+                value: 'public function rightJoin($join, $alias, $conditionType = null, $condition = null, $indexBy = null)'
                 correct: false
             -
-                value: 'public function addOrderBy($sort, $order = null)'
+                value: 'public function addSet($delete = null, $alias = null)'
                 correct: false
