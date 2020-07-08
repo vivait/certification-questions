@@ -702,3 +702,18 @@ questions:
             -
                 value: 'Cookie: yummy_cookie=choco&tasty_cookie=strawberry'
                 correct: false
+    -
+        question: 'Which status codes are involved in content negotiation?'
+        answers:
+            -
+                value: '300'
+                correct: true
+            -
+                value: '406'
+                correct: true
+            -
+                value: '200'
+                correct: false
+            -
+                value: '400'
+                correct: false

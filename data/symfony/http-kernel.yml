@@ -1188,3 +1188,187 @@ questions:
             -
                 value: exception_controller
                 correct: false
+    -
+        question: |
+            Which of the following are valid methods on the response?
+            
+        answers:
+            -
+                value: setPublic()
+                correct: true
+            -
+                value: setPrivate()
+                correct: true
+            -
+                value: expire()
+                correct: true
+            -
+                value: setShared()
+                correct: false
+            -
+                value: setExpired()
+                correct: false
+    -
+        question: |
+            Which of the following are valid methods on the response?
+            
+        answers:
+            -
+                value: setExpires()
+                correct: true
+            -
+                value: setMaxAge()
+                correct: true
+            -
+                value: setSharedMaxAge()
+                correct: true
+            -
+                value: setCacheInformation()
+                correct: false
+            -
+                value: cache()
+                correct: false
+    -
+        question: |
+            Which of the following are valid methods on the response?
+            
+        answers:
+            -
+                value: setTtl()
+                correct: true
+            -
+                value: setClientTtl()
+                correct: true
+            -
+                value: setLastModified()
+                correct: true
+            -
+                value: setEtag()
+                correct: true
+            -
+                value: setExpired()
+                correct: false
+    -
+        question: |
+            What kindof information does the HTTP Accept-Language header contain?
+            
+        answers:
+            -
+                value: 'What numeric formats does the user expect'
+                correct: true
+            -
+                value: setClientTtl()
+                correct: true
+            -
+                value: setLastModified()
+                correct: true
+            -
+                value: setEtag()
+                correct: true
+            -
+                value: setExpired()
+                correct: false
+    -
+        question: |
+            What header must be present on a 405 status code response?
+            
+        answers:
+            -
+                value: Allow
+                correct: true
+            -
+                value: www-authenticate
+                correct: false
+            -
+                value: vary
+                correct: false
+            -
+                value: authorization
+                correct: false
+    -
+        question: |
+            If a response contains a max-age directive and Expires header, which must be respected?
+            
+        answers:
+            -
+                value: max-age
+                correct: true
+            -
+                value: Expires
+                correct: false
+    -
+        question: |
+            Is it posibile for a client server to reject a cache reload?
+            
+        answers:
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
+            Which mechanism can a server use to reject a cache reload with the directive only-if-cached?
+            
+        answers:
+            -
+                value: 'Respond with a 504'
+                correct: true
+            -
+                value: 'There are none'
+                correct: false
+            -
+                value: 'Respond with a 204'
+                correct: false
+            -
+                value: 'Respond with the header directive no-store'
+                correct: false
+    -
+        question: |
+            What mechanism is used by the server to indicate the language of the response?
+            
+        answers:
+            -
+                value: 'Content-Language header'
+                correct: true
+            -
+                value: 'Language header'
+                correct: false
+            -
+                value: 'Locale header'
+                correct: false
+            -
+                value: 'The HTML tag attribute lang'
+                correct: false
+    -
+        question: |
+            What is the purpose of the Content-MD5 header?
+            
+        answers:
+            -
+                value: 'Detecting accidental modification of the entity-body in transit'
+                correct: true
+            -
+                value: 'Proof against malicious attacks'
+                correct: false
+            -
+                value: 'As a caching mechanism'
+                correct: false
+    -
+        question: |
+            What data does the From header contain?
+            
+        answers:
+            -
+                value: 'An email address'
+                correct: true
+            -
+                value: 'A domain'
+                correct: false
+            -
+                value: 'An IP address'
+                correct: false
+            -
+                value: 'The current route of the user'
+                correct: false
