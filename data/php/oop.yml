@@ -520,11 +520,6 @@ questions:
             -
                 value: 'An error'
                 correct: false
-        help: |
-            https://www.php.net/manual/en/language.oop5.traits.php#language.oop5.traits.conflict
-            
-            Requires insteadof also
-            
     -
         question: |
             What is the result of the following script in PHP 7.0.0?

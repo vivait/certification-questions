@@ -461,31 +461,7 @@ questions:
                 correct: false
     -
         question: |
-            What method must one call to check if a value can be safely wrote to?
-            
-        answers:
-            -
-                value: '$accessor->isWritable($object, ''property'');'
-                correct: true
-            -
-                value: '$accessor->exists($object, ''property'');'
-                correct: false
-            -
-                value: '$accessor->isSafe($object, ''property'');'
-                correct: false
-    -
-        question: |
-            What will be the result of the following code?
-            
-            use Symfony\Component\PropertyAccess\PropertyAccess;
-            
-            $accessor = PropertyAccess::createPropertyAccessor();
-            
-            $person = array(
-                'first_name' => 'Wouter',
-            );
-            
-            $age = $accessor->getValue($person, 'age');
+            What method must one call to check if a value can be safely writt to?
             
         answers:
             -

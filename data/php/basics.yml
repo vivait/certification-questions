@@ -4042,15 +4042,6 @@ questions:
             -
                 value: 'A header which can be used to authenticate'
                 correct: false
-            -
-                value: A
-                correct: true
-            -
-                value: B
-                correct: false
-            -
-                value: 'An error'
-                correct: false
     -
         question: |
             What will be the output of the following code?

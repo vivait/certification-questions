@@ -37,11 +37,13 @@ questions:
             
         answers:
             -
-                value: 'Yes'
-                correct: false
-            -
                 value: 'No'
                 correct: true
+            -
+                value: 'Yes'
+                correct: false
+        help: |
+            http://symfony.com/doc/current/validation/sequence_provider.html
     -
         question: |
             Assuming that the validate() method detects no violations, what will the Response object contain?

@@ -103,26 +103,26 @@ questions:
         question: 'Which of the following "roles" are built-in ?'
         answers:
             -
-                value: IS_FULLY_AUTHENTICATED
-                correct: false
-            -
                 value: IS_AUTHENTICATED_REMEMBERED
                 correct: true
             -
-                value: IS_AUTHENTICATED_INTERACTIVE
-                correct: false
+                value: IS_AUTHENTICATED_FULLY
+                correct: true
             -
                 value: IS_AUTHENTICATED_ANONYMOUSLY
                 correct: true
+            -
+                value: IS_FULLY_AUTHENTICATED
+                correct: false
+            -
+                value: IS_AUTHENTICATED_INTERACTIVE
+                correct: false
             -
                 value: IS_ANONYMOUS
                 correct: false
             -
                 value: IS_NOT_AUTHENTICATED
                 correct: false
-            -
-                value: IS_AUTHENTICATED_FULLY
-                correct: true
     -
         question: 'Can the check_path route be behind another firewall than the main one?'
         answers:
@@ -812,4 +812,43 @@ questions:
                 correct: false
             -
                 value: security.decision_checker
+                correct: false
+    -
+        question: |
+            Which of the following methods exist in Symfony\Component\Security\Http\Authentication\AuthenticationUtils?
+
+        answers:
+            -
+                value: public function getLastAuthenticationError($clearSession = true)
+                correct: true
+            -
+                value: public function getLastUsername()
+                correct: true
+            -
+                value: private function getRequest()
+                correct: true
+            -
+                value: private function getPasswordEncoder()
+                correct: false
+            -
+                value: private function getCheckPathRoute()
+                correct: false
+    -
+        question: |
+            What does Symfony\Component\Security\Http\Authentication\AuthenticationUtils::getLastAuthenticationError() return?
+        answers:
+            -
+                value: public function getLastAuthenticationError($clearSession = true)
+                correct: true
+            -
+                value: public function getLastUsername()
+                correct: true
+            -
+                value: private function getRequest()
+                correct: true
+            -
+                value: private function getPasswordEncoder()
+                correct: false
+            -
+                value: private function getCheckPathRoute()
                 correct: false
