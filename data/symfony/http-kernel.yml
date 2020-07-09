@@ -1375,6 +1375,7 @@ questions:
     -
         question: |
             Is it possible to view a flash message more than once?
+            
         answers:
             -
                 value: 'Yes'
@@ -1385,6 +1386,7 @@ questions:
     -
         question: |
             How can one view a flash message more than once?
+            
         answers:
             -
                 value: 'Using the peak() method'
@@ -1401,15 +1403,16 @@ questions:
     -
         question: |
             Which method can one use to generate a JsonResponse?
+            
         answers:
             -
-                value: 'json()'
+                value: json()
                 correct: true
             -
-                value: 'jsonResponse()'
+                value: jsonResponse()
                 correct: false
             -
-                value: 'createJsonResponse()'
+                value: createJsonResponse()
                 correct: false
             -
                 value: 'There aren''t any'
@@ -1417,16 +1420,17 @@ questions:
     -
         question: |
             Which method can one use to generate a BinaryFileResponse?
+            
         answers:
             -
-                value: 'file()'
+                value: file()
                 correct: true
             -
-                value: 'fileResponse()'
+                value: fileResponse()
                 correct: false
             -
-                value: 'binaryFileResponse()'
+                value: binaryFileResponse()
                 correct: false
             -
-                value: 'createBinaryFileResponse()'
+                value: createBinaryFileResponse()
                 correct: false
