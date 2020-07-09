@@ -1372,3 +1372,61 @@ questions:
             -
                 value: 'The current route of the user'
                 correct: false
+    -
+        question: |
+            Is it possible to view a flash message more than once?
+        answers:
+            -
+                value: 'Yes'
+                correct: true
+            -
+                value: 'No'
+                correct: false
+    -
+        question: |
+            How can one view a flash message more than once?
+        answers:
+            -
+                value: 'Using the peak() method'
+                correct: true
+            -
+                value: 'Using the get() method'
+                correct: false
+            -
+                value: 'Using the extend() method'
+                correct: false
+            -
+                value: 'You can''t'
+                correct: false
+    -
+        question: |
+            Which method can one use to generate a JsonResponse?
+        answers:
+            -
+                value: 'json()'
+                correct: true
+            -
+                value: 'jsonResponse()'
+                correct: false
+            -
+                value: 'createJsonResponse()'
+                correct: false
+            -
+                value: 'There aren''t any'
+                correct: false
+    -
+        question: |
+            Which method can one use to generate a BinaryFileResponse?
+        answers:
+            -
+                value: 'file()'
+                correct: true
+            -
+                value: 'fileResponse()'
+                correct: false
+            -
+                value: 'binaryFileResponse()'
+                correct: false
+            -
+                value: 'createBinaryFileResponse()'
+                correct: false
